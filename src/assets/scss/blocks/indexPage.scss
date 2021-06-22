@@ -1,4 +1,4 @@
-@import "../main.scss";
+@import "../modules/utilities/_variables.scss";
 .mainSlier {
     &__content {
         display: flex;
@@ -10,8 +10,8 @@
         height: 535px;
     }
     &__item {
-        width: 100%;
-        height: 100%;
+        width: 1045px;
+        height: 535px;
         background: {
             size: cover;
             position: center;
@@ -20,6 +20,52 @@
         border-radius: 30px;
         overflow: hidden;
     }
+    &__next, &__prev {
+        padding-left: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        width: 50px;
+        height: 50px;
+        background: rgba(51, 51, 51, .3);
+        border-radius: 50%;
+        overflow: hidden;
+        z-index: 10;
+        cursor: pointer;
+        svg {
+            display: block;
+        }
+    }
+    &__next {
+        right: 25px
+    }
+    &__prev {
+        left: 25px;
+        transform: rotate(180deg);
+    }
+    &__dots {
+        margin-top: 16px;
+        display: flex;
+        justify-content: center;
+        li {
+            margin: 0 5px;
+            width: 12px;
+            height: 12px;
+            background: #C8DAD0;
+            border-radius: 50%;
+            overflow: hidden;
+            cursor: pointer;
+            &.slick-active {
+                background: #1E7243;
+            }
+            button {
+                display: none;
+            }
+        }
+    }
 }
 .mainSlierInfo {
     margin-left: 20px;
@@ -27,4 +73,88 @@
     width: 355px;
     background: $lightGreen;
     border-radius: 30px 0px;
+    &__item {
+        padding: 20px 0;
+        border-bottom: 1px dashed #A1C19F;
+        &:first-child {
+            padding-top: 0;
+        }
+        &:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+    }
+    &__img {
+        svg {
+            display: block;
+        }
+    }
+    &__title {
+        margin-left: 12px;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 500;
+        color: $textColor;
+    }
+    &__description {
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 22px;
+        color: $textColor;
+    }
+}
+.productSection {
+    margin-top: 90px;
+    &__title {
+        font-size: 56px;
+        line-height: 50px;
+        font-weight: 900;
+        font-family: 'Rubik';
+        text-align: center;
+    }
+    &__content {
+        margin-top: 36px;
+    }
+}
+.productPopular {
+    &__content {
+        margin-top: 26px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    &__item {
+        margin: 10px;
+        padding: 10px 5px 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 335px;
+        height: 254px;
+        border: 1px solid $border;
+        border-radius: 10px;
+        text-align: center;
+    }
+    &__img {
+        margin: 0 auto;
+        max-width: 90%;
+        max-height: 90%;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+    }
+    &__name {
+        margin-top: 8px;
+        font-size: 18px;
+        line-height: 13px;
+        color: $textColor;
+        font-family: 'Rubik';
+    }
 }
