@@ -7,10 +7,14 @@ $lg: 1024px;
 $xs: 540px;
 
 // Colors
+$white: #FFFFFF;
 $textColor: #333;
 $green: #1E7243;
 $lightGreen: #DEEDDD;
+$darkGreen: #005827;
 $border: #CAD4DB;
+
+$transition: all .3s;
 
 %center {
 	position:relative;

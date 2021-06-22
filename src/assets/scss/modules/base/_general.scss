@@ -12,3 +12,18 @@ body {
 .container {
     @extend %center;
 }
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 22px;
+	line-height: 24px;
+	color: $white;
+	font-family: 'Rubik';
+	background: $green;
+	border-radius: 10px;
+	transition: $transition;
+	&:hover {
+		background: $darkGreen;
+	}
+}
