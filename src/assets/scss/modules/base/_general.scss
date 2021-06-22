@@ -5,3 +5,9 @@ body {
 	}
 	color: $textColor;
 }
+.main {
+    padding-top: 210px;
+}
+.container {
+    @extend %center;
+}

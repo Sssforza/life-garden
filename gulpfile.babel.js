@@ -8,7 +8,7 @@ const requireDir = require("require-dir"),
             src: [
                 "./src/assets/scss/**/*.{scss,sass}",
                 "!./src/assets/scss/modules/*.{scss,sass}",
-                "!./src/assets/scss/blocks/*.{scss,sass}"
+                "./src/assets/scss/blocks/**/*.{scss,sass}"
             ],
             dist: "./public_html/dist/css/",
             watch: [
