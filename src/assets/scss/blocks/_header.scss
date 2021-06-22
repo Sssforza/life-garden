@@ -1,0 +1,76 @@
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position:relative;
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 0 245px;
+    }
+    &__top{
+        background-color: #1E7243;
+        height: 45px;
+        color: #FFFFFF;
+        line-height: 12px;
+        font: {
+            size: 16px;
+            style: normal;
+        }
+    }
+    &__top-menu{
+        width: 695px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__top-newspapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 182px;
+        text-decoration: underline;
+    }
+    &__top-icon{
+        width: 25px;
+        height: 25px;
+    }
+    &__top-telephone{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font: {
+            family: Rubik;
+            style: normal;
+            weight: 500;
+            size: 20px;
+        };
+        line-height: 15px;
+    }
+    &__top-enter{
+        margin-left: 40px;
+        display: flex;
+        align-items: center;
+    }
+    &__top-end{
+        display: flex;
+    }
+    &__mid{
+        height: 82px;
+        border-bottom: 1px solid #000;
+    }
+    &__mid-search{
+        width: 866px;
+        height: 50px;
+        border: 1px solid grey;
+        border-radius: 50px;
+    }
+}
+.logo{
+    width: 252px;
+    height: 39px;
+}
+
