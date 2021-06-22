@@ -9,6 +9,8 @@
 			<div class="mainSlier__content">
 				<div class="mainSlier__slider mainSlier_js">
 					<div class="mainSlier__item" style="background-image:url(/dist/img/mainSlierImg1.jpg)"></div>
+					<div class="mainSlier__item" style="background-image:url(/dist/img/mainSlierImg1.jpg)"></div>
+					<div class="mainSlier__item" style="background-image:url(/dist/img/mainSlierImg1.jpg)"></div>
 				</div>
 				<div class="mainSlier__info mainSlierInfo">
 					<div class="mainSlierInfo__list">
