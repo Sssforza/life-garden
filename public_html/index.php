@@ -1,3 +1,4 @@
+
 <?
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 ?>
@@ -11,7 +12,7 @@
 				</div>
 				<div class="mainSlier__info mainSlierInfo">
 					<div class="mainSlierInfo__list">
-						<div class="mainSlierInfo__item">
+						<div class="mainSlierInfo__item mainSlierInfoItem_js">
 							<div class="mainSlierInfo__top">
 								<div class="mainSlierInfo__img">
 									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/mainSlierInfoImg1.svg';?>
