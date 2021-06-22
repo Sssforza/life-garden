@@ -49,6 +49,59 @@
 				</div>
 			</div>
 		</section>
+		<section class="productSection productPopular container">
+			<div class="productSection__title">Популярные категории</div>
+			<div class="productSection__content productPopular__content">
+				<a class="productPopular__item" href="#">
+					<div class="productPopular__img">
+						<img src="/dist/img/productPopularImg1.png" alt="">
+					</div>
+					<div class="productPopular__name">Саженцы</div>
+				</a>
+				<a class="productPopular__item" href="#">
+					<div class="productPopular__img">
+						<img src="/dist/img/productPopularImg2.png" alt="">
+					</div>
+					<div class="productPopular__name">Семена</div>
+				</a>
+				<a class="productPopular__item" href="#">
+					<div class="productPopular__img">
+						<img src="/dist/img/productPopularImg3.png" alt="">
+					</div>
+					<div class="productPopular__name">Наборы для рассады</div>
+				</a>
+				<a class="productPopular__item" href="#">
+					<div class="productPopular__img">
+						<img src="/dist/img/productPopularImg4.png" alt="">
+					</div>
+					<div class="productPopular__name">Украшение сада</div>
+				</a>
+				<a class="productPopular__item" href="#">
+					<div class="productPopular__img">
+						<img src="/dist/img/productPopularImg5.png" alt="">
+					</div>
+					<div class="productPopular__name">Инструменты</div>
+				</a>
+				<a class="productPopular__item" href="#">
+					<div class="productPopular__img">
+						<img src="/dist/img/productPopularImg6.png" alt="">
+					</div>
+					<div class="productPopular__name">Хвойные</div>
+				</a>
+				<a class="productPopular__item" href="#">
+					<div class="productPopular__img">
+						<img src="/dist/img/productPopularImg7.png" alt="">
+					</div>
+					<div class="productPopular__name">Теплица</div>
+				</a>
+				<a class="productPopular__item" href="#">
+					<div class="productPopular__img">
+						<img src="/dist/img/productPopularImg8.png" alt="">
+					</div>
+					<div class="productPopular__name">Здоровое питание</div>
+				</a>
+			</div>
+		</section>
 	</section>
 </main>
 

@@ -2,4 +2,5 @@
 import $ from 'jquery';
 global.jQuery = global.$ = $;
 
+
 document.addEventListener("DOMContentLoaded", function(){});

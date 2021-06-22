@@ -95,7 +95,9 @@ __webpack_require__.r(__webpack_exports__);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a;
-document.addEventListener("DOMContentLoaded", function () {});
+document.addEventListener("DOMContentLoaded", function () {
+  console.log(jquery__WEBPACK_IMPORTED_MODULE_0___default()('.productSection__title'));
+});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(1)))
 
 /***/ }),
