@@ -11,19 +11,15 @@ $textColor: #333;
 
 %center {
 	position:relative;
-	max-width: 1140px;
+	max-width: 1430px;
 	margin: 0 auto;
 	padding: 0px 15px;
 	@media (max-width:$lg) {
-		max-width: 994px;
-	}
-	@media (max-width:$md) {
-		padding: 0px 30px;
-		max-width: 768px;
+		max-width: 990px;
 	}
 	@media (max-width:$xs) {
 		padding: 0px 20px;
-		max-width: 320px;
+		max-width: 580px;
 	}
 }
 
