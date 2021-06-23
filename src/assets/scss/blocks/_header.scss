@@ -2,6 +2,7 @@
   width: 100%;
   position: fixed;
   top: 0;
+  right: 0;
   left: 0;
   z-index: 10;
   &__container {
@@ -12,9 +13,8 @@
 }
 .headerTop {
   padding: 10px 0;
-  background-color: #1e7243;
-  height: 45px;
-  color: #ffffff;
+  background-color: $green;
+  color: $white;
   line-height: 12px;
   font: {
     size: 16px;
@@ -23,21 +23,29 @@
   &__text {
     margin-left: 6px;
   }
-  &__text_underline{
+  &__text_underline {
     line-height: 1;
-    border-bottom: 1px solid currentColor;
+    border-bottom: 1px solid $white;
   }
   &__menu {
     display: flex;
     justify-content: space-between;
-  }
-  &__menu li:not(:first-child) {
-    margin-left: 25px;
+    li:not(:first-child) {
+      margin-left: 25px;
+    }
+    :hover {
+      color: #c9d200;
+    }
   }
   &__newspapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-sizing: border-box;
+    :hover {
+      color: #c9d200;
+      border-color: $green;
+    }
   }
   &__icon {
     width: 25px;
@@ -47,6 +55,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    pointer-events: none;
     font: {
       family: Rubik;
       style: normal;
@@ -59,16 +68,17 @@
     margin-left: 40px;
     display: flex;
     align-items: center;
+    :hover {
+      color: #c9d200;
+    }
   }
   &__end {
     display: flex;
   }
 }
-
 .headerMiddle {
-  background-color: #fff;
+  background-color: $white;
   padding: 16px 0;
-  height: 82px;
   border-bottom: 1px solid #c7d0d9;
   &__search {
     display: flex;
@@ -91,45 +101,54 @@
   &__catalog span {
     font-size: 18px;
     line-height: 13px;
-    color: #005827;
+    color: $darkGreen;
+  }
+  &__form {
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
   &__input {
+    height: 30px;
     outline: none;
     border: none;
     border-left: 1px solid #c6c9d7;
     min-width: 674px;
-    height: 30px;
     padding-left: 21px;
     font-size: 18px;
     line-height: 13px;
-  }
-  &__input::placeholder {
-    color: #9196a9;
+    ::placeholder {
+      color: #9196a9;
+    }
   }
   &__button {
     width: 20px;
     height: 20px;
-    margin-top: 5px;
   }
   &__icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-}
-.headerMiddleCatalog__svg {
-  margin-left: 7px;
+  &__iconsBasket {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    .iconSelected {
+      margin-right: 13px;
+    }
+  }
+  &__catalogSvg {
+    margin-left: 7px;
+  }
 }
 .iconSelected {
   display: flex;
   width: 30px;
   height: 30px;
   position: relative;
-  text-align: center;
-  vertical-align: middle;
   cursor: pointer;
-  &__svg {
-  }
+  margin-right: 30px;
   &__count {
     position: absolute;
     top: -10px;
@@ -138,40 +157,51 @@
     height: 20px;
     background: #c7d0d9;
     border-radius: 50%;
-    text-align: center;
-    padding: 7px 0;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: {
+      weight: 500;
+      size: 10px;
+    }
     line-height: 7px;
-    color: #333333;
+    color: $textColor;
   }
   &__count_choice {
-    background: #1e7243;
-    color: #ffffff;
+    background: $green;
+    color: $lightGreen;
   }
   &__garbage {
-  }
-  &__garbage span:first-child {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 12px;
-    color: #333333;
-  }
-  &__garbage {
-    cursor: pointer;
-    margin-left: -20px;
+    display: flex;
+    flex-direction: column;
+    span:first-child {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 12px;
+      color: $textColor;
+    }
+    span:last-child {
+      margin-top: 8px;
+      font-size: 12px;
+      line-height: 9px;
+      color: #9196a9;
+    }
   }
 }
 .headerBottom {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 13px;
-  color: #333333;
-  background-color: #fff;
+  background-color: $white;
   padding: 19px 0;
   height: 53px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  li {
+    height: 35px;
+    font-size: 18px;
+    line-height: 13px;
+    color: $textColor;
+  }
+  li:hover {
+    border-bottom: 4px solid $green;
+  }
 }
