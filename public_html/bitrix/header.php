@@ -1,57 +1,112 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel='stylesheet' href="/dist/css/main.css">
-    <script type="text/javascript" src="/dist/js/main.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel='stylesheet' href="/dist/css/main.css">
+  <script type="text/javascript" src="/dist/js/main.js"></script>
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="header">
-               <div class="header__container header__top">
-                    <ul class="header__top-menu">
-                      <li>Доставка и оплата</li>  
-                      <li>Семинары</li>  
-                      <li>Блог огородника</li>  
-                      <li>О компании</li>  
-                      <li>Новости</li>  
-                      <li>Контакты</li>  
-                    </ul>
-                    <a class="header__top-newspapper" href="#">
-                      <div class="header__top-icon">
-					    <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/newspapper.svg';?>
-				      </div>
-                      Газета "Живой сад"
-                    </a>
-                    <div class="header__top-end">
-                      <a class="header__top-telephone" href="tel: +73812349341">
-                         <div class="header__top-icon">
-					       <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/telephone.svg';?>
-				         </div>
-                          + 7 3812 34-93-41</a>
-                      <a class="header__top-enter" href="#">
-                         <div class="header__top-icon">
-					       <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/enter.svg';?>
-				         </div>
-                          Вход
-                      </a>
-                    </div>
-               </div>
-               <div class="header__container header__mid">
-                 <div class="logo">
-					<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/logo.svg';?>
-				 </div>
-                 <div class="header__mid-search">
-                     <div class="header__mid-catalog"></div>
-                     <form action="">
-                        <input type="text" placeholder="Поиск">
-                        <button class="header__mid-button">
-                            <?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search.svg';?>
-                        </button>
-                     </form>
-                 </div>
-               </div>
-               <div class="header__container header__bot"></div>
-        </header>
+  <div class="wrapper">
+    <header class="header">
+      <div class="headerTop">
+        <div class="container">
+          <div class="header__container">
+            <ul class="headerTop__menu">
+              <li><a href="#">Доставка и оплата</a></li>
+              <li><a href="#">Семинары</a></li>
+              <li><a href="#">Блог огородника</a></li>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+            <a class="headerTop__newspapper" href="#">
+              <div class="headerTop__icon">
+                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/newspapper.svg'; ?>
+              </div>
+              <span class="headerTop__text headerTop__text_underline">Газета "Живой сад"</span>
+            </a>
+            <div class="headerTop__end">
+              <a class="headerTop__telephone" href="tel: +73812349341">
+                <div class="headerTop__icon">
+                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/telephone.svg'; ?>
+                </div>
+                <span>+ 7 3812 34-93-41</span>
+              </a>
+              <a class="headerTop__enter" href="#">
+                <div class="headerTop__icon">
+                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/enter.svg'; ?>
+                </div>
+                <span class="headerTop__text">Вход</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="headerMiddle">
+        <div class="container">
+          <div class="header__container">
+            <div class="headerMiddle__logo">
+              <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/logo.svg'; ?>
+            </div>
+            <div class="headerMiddle__search">
+              <a class="headerMiddle__catalog" href="">
+                <span>Каталог</span>
+                <div class="headerMiddleCatalog__svg">
+                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/catalog.svg'; ?>
+                </div>
+              </a>
+              <form>
+                <input class="headerMiddle__input" type="text" placeholder="Поиск">
+                <button class="headerMiddle__button" type="submit">
+                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search.svg'; ?>
+                </button>
+              </form>
+            </div>
+            <!--             <div class="headerMiddle__icons"> -->
+            <div class="iconSelected">
+              <div class="iconSelected__svg">
+                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/like.svg'; ?>
+              </div>
+              <span class="iconSelected__count">0</span>
+            </div>
+            <div class="iconSelected">
+              <div class="iconSelected__svg">
+                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/date.svg'; ?>
+              </div>
+              <span class="iconSelected__count">0</span>
+            </div>
+            <div class="iconSelected">
+              <div class="iconSelected__svg">
+                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/garbage.svg'; ?>
+              </div>
+              <span class="iconSelected__count iconSelected__count">100</span>
+
+            </div>
+            <div class="iconSelected__garbage">
+              <span>Корзина<br></span>
+              <span>6570 р</span>
+            </div>
+            <!--             </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="headerBottom">
+        <div class="container">
+            <ul class="header__container">
+              <li><a href="#">Акции</a></li>
+              <li><a href="#">Теплица</a></li>
+              <li><a href="#">Семена</a></li>
+              <li><a href="#">Саженцы</a></li>
+              <li><a href="#">Биозащита сада</a></li>
+              <li><a href="#">Биопрепараты</a></li>
+              <li><a href="#">Грунты для растений</a></li>
+              <li><a href="#">Пленка</a></li>
+              <li><a href="#">Горшки</a></li>
+              <li><a href="#">Украшение сада</a></li>
+            </ul>
+        </div>
+      </div>
+    </header>
