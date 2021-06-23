@@ -4,7 +4,7 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 10;
+  z-index: 100;
   &__container {
     display: flex;
     justify-content: space-between;
@@ -33,9 +33,16 @@
     li:not(:first-child) {
       margin-left: 25px;
     }
-    :hover {
+    li:hover {
       color: #c9d200;
     }
+  }
+  &__menuElse {
+    display: none;
+  }
+  &__menuHide {
+    display: flex;
+    margin-left: 25px;
   }
   &__newspapper {
     display: flex;
@@ -203,5 +210,74 @@
   }
   li:hover {
     border-bottom: 4px solid $green;
+  }
+}
+.catalog {
+
+  padding-top: 40px;
+  padding-bottom: 55px;
+  background-color: $white;
+  color: $textColor;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: -100%;
+    background: rgba(0, 0, 0, 0.65);
+  }
+  &__title {
+    font: {
+      family: Rubik;
+      style: normal;
+      weight: 900;
+      size: 40px;
+    }
+    line-height: 50px;
+  }
+}
+.catalogСategories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 44px;
+  margin-top: 36px;
+  &__item {
+    display: flex;
+    width: 100%;
+  }
+  &__img {
+    width: 90px;
+    height: 90px;
+  }
+  &__text {
+    margin: 25px 0 0 30px;
+    ul {
+      margin-top: 13px;
+    }
+    li {
+      font: {
+        family: Rubik;
+        style: normal;
+        size: 16px;
+      }
+      line-height: 19px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      :hover {
+        color: $green;
+      }
+    }
+  }
+  &__title {
+    font: {
+      family: Rubik;
+      style: normal;
+      weight: bold;
+      size: 24px;
+    }
+    line-height: 28px;
   }
 }

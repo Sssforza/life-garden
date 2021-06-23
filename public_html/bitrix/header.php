@@ -18,9 +18,13 @@
               <li><a href="#">Доставка и оплата</a></li>
               <li><a href="#">Семинары</a></li>
               <li><a href="#">Блог огородника</a></li>
+              <li class="headerTop__menuElse"><a href="#">Еще 	
+              &#8226;&#8226;&#8226;</a></li>
+              <div class="headerTop__menuHide">
               <li><a href="#">О компании</a></li>
               <li><a href="#">Новости</a></li>
               <li><a href="#">Контакты</a></li>
+              </div>
             </ul>
             <a class="headerTop__newspapper" href="#">
               <div class="headerTop__icon">
@@ -109,6 +113,87 @@
             <li><a href="#">Горшки</a></li>
             <li><a href="#">Украшение сада</a></li>
           </ul>
+        </div>
+      </div>
+      <div class="catalog">
+        <div class="container">
+          <h2 class="catalog__title">Каталог</h2>
+          <div class="catalogСategories">
+            <div class="catalogСategories__item">
+              <img class="catalogСategories__img" src="/dist/img/productPopularImg7.png" alt="">
+              <div class="catalogСategories__text">
+                <h3 class="catalogСategories__title">Для сада</h3>
+                <ul>
+                  <li><a href="#">Средства защиты</a></li>
+                  <li><a href="#">Капельный полив</a></li>
+                  <li><a href="#">Украшение сада</a></li>
+                  <li><a href="#">Теплица</a></li>
+                  <li><a href="#">Украшение сада</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="catalogСategories__item">
+              <img class="catalogСategories__img" src="/dist/img/productPopularImg5.png" alt="">
+              <div class="catalogСategories__text">
+                <h3 class="catalogСategories__title">Инструменты</h3>
+                <ul>
+                  <li><a href="#">Садовый инвентарь</a></li>
+                  <li><a href="#">Опрыскиватели</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="catalogСategories__item">
+              <img class="catalogСategories__img" src="/dist/img/forHome.png" alt="">
+              <div class="catalogСategories__text">
+                <h3 class="catalogСategories__title">Для дома</h3>
+                <ul>
+                  <li><a href="#">Здоровое питание</a></li>
+                  <li><a href="#">Выращивание рассады</a></li>
+                  <li><a href="#">Пакеты</a></li>
+                  <li><a href="#">Фитолампы для растений</a></li>
+                  <li><a href="#">ЭМ товары для дома</a></li>
+                  <li><a href="#">Сушилка</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="catalogСategories__item">
+              <img class="catalogСategories__img" src="/dist/img/plants.png" alt="">
+              <div class="catalogСategories__text">
+                <h3 class="catalogСategories__title">Растения</h3>
+                <ul>
+                  <li><a href="#">Газон</a></li>
+                  <li><a href="#">Лук-севок</a></li>
+                  <li><a href="#">Чеснок</a></li>
+                  <li><a href="#">Уценка</a></li>
+                  <li><a href="#">Семена</a></li>
+                  <li><a href="#">Саженцы</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="catalogСategories__item">
+              <img class="catalogСategories__img" src="/dist/img/forPlants.png" alt="">
+              <div class="catalogСategories__text">
+                <h3 class="catalogСategories__title">Для растений</h3>
+                <ul>
+                  <li><a href="#">БиоЗащита сада</a></li>
+                  <li><a href="#">Биопрепараты, органические удобрения</a></li>
+                  <li><a href="#">Сидераты</a></li>
+                  <li><a href="#">Грунт для растений</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="catalogСategories__item">
+              <img class="catalogСategories__img" src="/dist/img/other.png" alt="">
+              <div class="catalogСategories__text">
+                <h3 class="catalogСategories__title">Прочее</h3>
+                <ul>
+                  <li><a href="#">Хозяйственные товары</a></li>
+                  <li><a href="#">Расходные материалы</a></li>
+                  <li><a href="#">Книги</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
