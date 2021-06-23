@@ -106,6 +106,90 @@
 				</div>
 			</div>
 		</section>
+		<section class="productSection productSpecial">
+			<div class="productSection__wrapper container">
+				<div class="productSection__title">Специальное предложение</div>
+				<div class="productSection__content">
+					<div class="productSpecial__sample specialSample">
+						<div class="specialSample__content">
+							<div class="specialSample__item active">
+								<div class="specialSample__img">
+									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg1.svg';?>
+								</div>
+								<div class="specialSample__name">Новинки</div>
+							</div>
+							<div class="specialSample__item">
+								<div class="specialSample__img">
+									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg2.svg';?>
+								</div>
+								<div class="specialSample__name">Товары по акции</div>
+							</div>
+							<div class="specialSample__item">
+								<div class="specialSample__img">
+									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg3.svg';?>
+								</div>
+								<div class="specialSample__name">Хит продаж</div>
+							</div>
+							<div class="specialSample__item">
+								<div class="specialSample__img">
+									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg4.svg';?>
+								</div>
+								<div class="specialSample__name">Для подарков</div>
+							</div>
+						</div>
+					</div>
+					<div class="productSpecial__productBlock productBlock">
+						<div class="productBlock__content">
+							<div class="productBlock__item cardProduct">
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__title">
+										<a class="cardProduct__a" href="#">
+											Горшок цветочный Ingreen Ajur 16 h14.5 см v 1.6 л пластик английская роза
+										</a>
+									</div>
+									<div class="availability">
+										<div class="availability__text has">
+											<span>Есть в наличии</span>
+										</div>
+										<div class="availability__text not hidden">
+											<span>Нет в наличии</span>
+										</div>
+									</div>
+									<div class="review">
+										<div class="review__list">
+											<div class="review__item active">
+												<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+											</div>
+											<div class="review__item active">
+												<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+											</div>
+											<div class="review__item active">
+												<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+											</div>
+											<div class="review__item active">
+												<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+											</div>
+											<div class="review__item">
+												<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+											</div>
+										</div>
+										<div class="review__how">1 отзыв</div>
+									</div>
+									<div class="cost">
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section class="mainNews">
 			<div class="mainNews__wrapper container">
 				<div class="mainNews__header">
