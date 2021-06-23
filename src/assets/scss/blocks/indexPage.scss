@@ -139,6 +139,11 @@
         border: 1px solid $border;
         border-radius: 10px;
         text-align: center;
+        transition: $transition;
+        &:hover {
+            border: 1px solid transparent;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+        }
     }
     &__img {
         margin: 0 auto;
@@ -156,5 +161,184 @@
         line-height: 13px;
         color: $textColor;
         font-family: 'Rubik';
+    }
+}
+.mainNews {
+    margin-top: 117px;
+    &__header {
+        display: flex;
+        align-items: flex-end;
+        color: $textColor;
+        font-family: 'Rubik';
+    }
+    &__title {
+        font-size: 60px;
+        line-height: 50px;
+        font-weight: 900;
+    }
+    &__subtitle {
+        margin-left: 26px;
+        font-size: 20px;
+        line-height: 24px;
+        transition: $transition;
+        &:hover {
+            color: $green;
+        }
+    }
+    &__content {
+        margin-top: 42px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__general {
+        flex: none;
+        width: 670px;
+        img {
+            display: block;
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+    }
+    &__box {
+        margin-top: 27px;
+        .mainNews__name {
+            margin-top: 4px;
+            font-size: 26px;
+            line-height: 34px;
+        }
+    }
+    &__all {
+        margin-left: 40px;
+    }
+    &__item {
+        padding-top: 21px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid $border;
+    }
+    &__date {
+        font-size: 16px;
+        line-height: 24px;
+        color: $green;
+        text-transform: uppercase;
+    }
+    &__name {
+        margin-top: 2px;
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 500;
+        color: $textColor;
+        font-family: 'Rubik';
+        transition: $transition;
+        &:hover {
+            color: $green;
+        }
+    }
+}
+.clubCard {
+    position: relative;
+    margin-top: 111px;
+    padding: 95px 0 93px;
+    background: #CFE7D7;
+    border-top: 3px dashed #FFFFFF;
+    border-bottom: 3px dashed #FFFFFF;
+    &:after {
+        content:'';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 962px;
+        height: 638px;
+        background: {
+            image: url($imgUrl + "clubCardImgBg.png");
+            position: bottom;
+            repeat: no-repeat;
+        }
+    }
+    &:before {
+        content:'';
+        position: absolute;
+        right: 190px;
+        bottom: 0;
+        width: 748px;
+        height: 100%;
+        background: {
+            image: url($imgUrl + "clubCardImgBg2.png");
+            position: center;
+            repeat: no-repeat;
+        }
+    }
+    &__title {
+        font-size: 56px;
+        line-height: 66px;
+        font-weight: 900;
+        color: $textColor;
+        font-family: 'Rubik';
+    }
+    &__description {
+        margin-top: 49px;
+        width: 46%;
+    }
+    &__item {
+        display: flex;
+        &:last-child {
+            margin-top: 115px;
+        }
+        &:first-child {
+            .clubCard__text {
+                position: relative;
+                top: -8px;
+            }
+        }
+    }
+    &__percent {
+        flex:none;
+        width: 144px;
+        font-size: 100px;
+        line-height: 80px;
+        font-weight: 300;
+        color: $textColor;
+        font-family: 'Rubik';
+    }
+    &__text {
+        margin-left: 20px;
+    }
+    &__img {
+        img {
+            display: block;
+        }
+    }
+    &__li {
+        display: flex;
+        margin-top: 22px;
+        font-size: 20px;
+        line-height: 28px;
+        color: $textColor;
+        &:before {
+            content:'';
+            margin-right: 14px;
+            width: 10px;
+            height: 10px;
+            background: $green;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            top: 8px;
+            flex:none;
+        }
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    &__btn {
+        margin-top: 39px;
+        width: 300px;
+        height: 68px;
+    }
+    &__minInfo {
+        margin-top: 44px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #7D8E84;
     }
 }
