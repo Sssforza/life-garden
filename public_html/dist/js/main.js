@@ -99,6 +99,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var nouislider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
 /* harmony import */ var nouislider__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(nouislider__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _blocks_sliders_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
+/* harmony import */ var _blocks_header_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁 /node_modules/  slick 1.8.1
@@ -111,9 +112,11 @@ global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁
 global.noUiSlider = nouislider__WEBPACK_IMPORTED_MODULE_3___default.a; //📁 /assets/js/blocks  _sliders.js
 
 
+
 document.addEventListener("DOMContentLoaded", function () {
   // slick slider main
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_4__["sliderMain"])();
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_5__["headerCatalog"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(1)))
 
@@ -18118,6 +18121,27 @@ function sliderMain() {
       dotsClass: "mainSlier__dots"
     });
   }
+}
+;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerCatalog", function() { return headerCatalog; });
+function headerCatalog() {
+  var buttonCatalog = document.querySelector('.headerMiddleCatalog__js');
+  var headerBottom = document.querySelector('.headerBottom__js');
+  var headerCatalog = document.querySelector('.headerCatalog__js');
+  var hamburger = document.querySelector('.hamburger__js');
+  buttonCatalog.addEventListener("click", function () {
+    headerCatalog.classList.toggle("headerCatalog__go");
+    /*  headerBottom.classList.toggle("hidden") */
+
+    hamburger.classList.toggle("is-active");
+  });
 }
 ;
 
