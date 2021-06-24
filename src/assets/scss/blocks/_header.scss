@@ -106,7 +106,10 @@
     align-items: center;
   }
   &__catalog span {
-    font-size: 18px;
+    font: {
+      size: 18px;
+      weight: 500;
+    }
     line-height: 13px;
     color: $darkGreen;
   }
@@ -124,9 +127,7 @@
     padding-left: 21px;
     font-size: 18px;
     line-height: 13px;
-    ::placeholder {
-      color: #9196a9;
-    }
+    @include placeholder(18px, #9196a9, "FiraSans", $opacity: 1);
   }
   &__button {
     width: 20px;
@@ -213,7 +214,6 @@
   }
 }
 .catalog {
-
   padding-top: 40px;
   padding-bottom: 55px;
   background-color: $white;
@@ -238,14 +238,15 @@
   }
 }
 .catalogСategories {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 44px;
   margin-top: 36px;
+  display: grid;
+  grid: {
+    template-columns: 33% 37% 1fr;
+    template-rows: 1fr 1fr;
+    gap: 44px;
+  }
   &__item {
     display: flex;
-    width: 100%;
   }
   &__img {
     width: 90px;
