@@ -10,7 +10,7 @@
 
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header class="header header__js">
       <div class="headerTop">
         <div class="container">
           <div class="header__container">
@@ -30,7 +30,7 @@
               <div class="headerTop__icon">
                 <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/newspapper.svg'; ?>
               </div>
-              <span class="headerTop__text headerTop__text_underline">Газета &#171; Живой сад &#187;</span>
+              <span class="headerTop__text">Газета &#171; Живой сад &#187;</span>
             </a>
             <div class="headerTop__end">
               <a class="headerTop__telephone" href="tel: +73812349341">
@@ -103,20 +103,20 @@
       <div class="headerBottom headerBottom__js">
         <div class="container">
           <ul class="header__container">
-            <li class="headerBottom__li"><a href="#">Акции</a></li>
-            <li class="headerBottom__li"><a href="#">Теплица</a></li>
-            <li class="headerBottom__li"><a href="#">Семена</a></li>
-            <li class="headerBottom__li"><a href="#">Саженцы</a></li>
-            <li class="headerBottom__li"><a href="#">Биозащита сада</a></li>
-            <li class="headerBottom__li"><a href="#">Биопрепараты</a></li>
-            <li class="headerBottom__li"><a href="#">Грунты для растений</a></li>
-            <li class="headerBottom__li"><a href="#">Пленка</a></li>
-            <li class="headerBottom__li"><a href="#">Горшки</a></li>
-            <li class="headerBottom__li"><a href="#">Украшение сада</a></li>
+            <li><a class="headerBottom__link" href="#">Акции</a></li>
+            <li><a class="headerBottom__link" href="#">Теплица</a></li>
+            <li><a class="headerBottom__link" href="#">Семена</a></li>
+            <li><a class="headerBottom__link" href="#">Саженцы</a></li>
+            <li><a class="headerBottom__link" href="#">Биозащита сада</a></li>
+            <li><a class="headerBottom__link" href="#">Биопрепараты</a></li>
+            <li><a class="headerBottom__link" href="#">Грунты для растений</a></li>
+            <li><a class="headerBottom__link" href="#">Пленка</a></li>
+            <li><a class="headerBottom__link" href="#">Горшки</a></li>
+            <li><a class="headerBottom__link" href="#">Украшение сада</a></li>
           </ul>
         </div>
       </div>
-      <div class="headerCatalog headerCatalog__js">
+      <div class="headerCatalog headerCatalog__js ">
         <div class="container">
           <div class="headerCatalog__title">Каталог</div>
           <div class="headerCatalog__categories">

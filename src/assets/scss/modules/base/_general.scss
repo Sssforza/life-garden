@@ -4,361 +4,374 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 input[type="number"] {
-	-moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
 input[type="number"]:hover,
 input[type="number"]:focus {
-	-moz-appearance: number-input;
+  -moz-appearance: number-input;
 }
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 body {
-    font: {
-		family: "Firasans";
-		weight: 400;
-	}
-	color: $textColor;
-	&.overflowHidden {
-        overflow: hidden;
-    }
+  font: {
+    family: "Firasans";
+    weight: 400;
+  }
+  color: $textColor;
+  &.overflowHidden {
+    overflow: hidden;
+  }
 }
 .main {
-    padding-top: 210px;
-	padding-bottom: 88px;
+  padding-top: 210px;
+  padding-bottom: 88px;
 }
 .container {
-    @extend %center;
+  @extend %center;
 }
 .btn {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 22px;
-	line-height: 24px;
-	color: $white;
-	font-family: 'Rubik';
-	background: $green;
-	border-radius: 10px;
-	transition: $transition;
-	&:hover {
-		background: $darkGreen;
-	}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  line-height: 24px;
+  color: $white;
+  font-family: "Rubik";
+  background: $green;
+  border-radius: 10px;
+  transition: $transition;
+  &:hover {
+    background: $darkGreen;
+  }
 }
 .btnJaundiced {
-	padding-top: 2px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 14px;
-	line-height: 20px;
-	font-family: 'Rubik';
-	color: $white;
-	border: 2px solid $jaundiced;
-	border-radius: 10px;
-	background: transparent;
-	transition: $transition;
-	&:hover {
-		color: $textColor;
-		background: $jaundiced;
-	}
+  padding-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Rubik";
+  color: $white;
+  border: 2px solid $jaundiced;
+  border-radius: 10px;
+  background: transparent;
+  transition: $transition;
+  &:hover {
+    color: $textColor;
+    background: $jaundiced;
+  }
 }
 .btnJaundicedFull {
-	padding-top: 2px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 16px;
-	line-height: 24px;
-	font-family: 'Rubik';
-	color: $textColor;
-	border-radius: 25px 5px;
-	background: $jaundiced;
-	transition: $transition;
-	cursor: pointer;
-	&:hover {
-		color: $white;
-		background: $green;
-	}
+  padding-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Rubik";
+  color: $textColor;
+  border-radius: 25px 5px;
+  background: $jaundiced;
+  transition: $transition;
+  cursor: pointer;
+  &:hover {
+    color: $white;
+    background: $green;
+  }
 }
 .productBlock {
-	margin-top: 37px;
-	&__content {
-		display: flex;
-	}
+  margin-top: 37px;
+  &__content {
+    display: flex;
+  }
 }
 .cardProduct {
-	width: 335px;
-	height: 485px;
-	border: 1px solid $border;
-	border-radius: 10px;
-	overflow: hidden;
-	&__img {
-		width: 100%;
-		height: 200px;
-	}
-	&__picture {
-		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-		background: {
-            size: cover;
-            position: center;
-            repeat: no-repeat;
-        }
-		&:after {
-			content:'';
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			background: rgba(32, 32, 32, 0.6);
-			opacity: 0;
-			pointer-events: none;
-			transition: $transition;
-		}
-		&:hover {
-			&:after {
-				opacity: 1;
-			}
-			.cardProduct__quickView {
-				opacity: 1;
-				pointer-events: auto;
-			}
-		}
-	}
-	&__quickView {
-		opacity: 0;
-		width: 178px;
-		height: 50px;
-		cursor: pointer;
-		pointer-events: none;
-		z-index: 1;
-	}
-	&__info {
-		padding: 18px 25px 33px;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		height: 285px;
-	}
-	&__title {
-		max-height: 72px;
-		overflow: hidden;
-	}
-	&__a {
-		font-size: 18px;
-		line-height: 24px;
-		font-weight: 500;
-		color: $textColor;
-		font-family: 'Rubik';
-		transition: $transition;
-		&:hover {
-			color: $green;
-		}
-	}
-	&__bottom {
-		margin-top: 14px;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	&__elements {
-		display: flex;
-		align-items: center;
-		.addBasket {
-			margin-left: 12px;
-			width: 105px;
-			height: 42px;
-		}
-	}
+  width: 335px;
+  height: 485px;
+  border: 1px solid $border;
+  border-radius: 10px;
+  overflow: hidden;
+  &__img {
+    width: 100%;
+    height: 200px;
+  }
+  &__picture {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: {
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(32, 32, 32, 0.6);
+      opacity: 0;
+      pointer-events: none;
+      transition: $transition;
+    }
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+      .cardProduct__quickView {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+  &__quickView {
+    opacity: 0;
+    width: 178px;
+    height: 50px;
+    cursor: pointer;
+    pointer-events: none;
+    z-index: 1;
+  }
+  &__info {
+    padding: 18px 25px 33px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 285px;
+  }
+  &__title {
+    max-height: 72px;
+    overflow: hidden;
+  }
+  &__a {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    color: $textColor;
+    font-family: "Rubik";
+    transition: $transition;
+    &:hover {
+      color: $green;
+    }
+  }
+  &__bottom {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__elements {
+    display: flex;
+    align-items: center;
+    .addBasket {
+      margin-left: 12px;
+      width: 105px;
+      height: 42px;
+    }
+  }
 }
 .availability {
-	margin-top: 11px;
-	&__text {
-		display: flex;
-		align-items: center;
-		font-size: 14px;
-		line-height: 10px;
-		color: $gray1;
-		&:before {
-			content:'';
-			margin-right: 3px;
-			flex: none;
-			background-repeat: no-repeat;
-		}
-		&.has {
-			&:before {
-				width: 10px;
-				height: 8px;
-				background-image: url($imgUrl + "svg/availabilityHas.svg");
-			}
-		}
-		&.not {
-			&:before {
-				width: 11px;
-				height: 11px;
-				background-image: url($imgUrl + "svg/availabilityNot.svg");
-			}
-		}
-	}
+  margin-top: 11px;
+  &__text {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 10px;
+    color: $gray1;
+    &:before {
+      content: "";
+      margin-right: 3px;
+      flex: none;
+      background-repeat: no-repeat;
+    }
+    &.has {
+      &:before {
+        width: 10px;
+        height: 8px;
+        background-image: url($imgUrl + "svg/availabilityHas.svg");
+      }
+    }
+    &.not {
+      &:before {
+        width: 11px;
+        height: 11px;
+        background-image: url($imgUrl + "svg/availabilityNot.svg");
+      }
+    }
+  }
 }
 .review {
-	margin-top: 8px;
-	display: flex;
-	align-items: baseline;
-	&__list {
-		display: flex;
-	}
-	&__item {
-		margin-right: 2px;
-		svg {
-			display: block;
-		}
-		&.active {
-			svg {
-				path {
-					fill: #FED047;
-				}
-			}
-		}
-	}
-	&__how {
-		margin-left: 2px;
-		position: relative;
-		top: -1px;
-		font-size: 14px;
-		line-height: 10px;
-		color: #5B6168;
-	}
+  margin-top: 8px;
+  display: flex;
+  align-items: baseline;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    margin-right: 2px;
+    svg {
+      display: block;
+    }
+    &.active {
+      svg {
+        path {
+          fill: #fed047;
+        }
+      }
+    }
+  }
+  &__how {
+    margin-left: 2px;
+    position: relative;
+    top: -1px;
+    font-size: 14px;
+    line-height: 10px;
+    color: #5b6168;
+  }
 }
 .cost {
-    margin-top: 17px;
-    display: flex;
-    justify-content: space-between;
-    &__info {
-        font-size: 12px;
-        line-height: 9px;
-        color: #98A6B4;
-		text-transform: uppercase;
+  margin-top: 17px;
+  display: flex;
+  justify-content: space-between;
+  &__info {
+    font-size: 12px;
+    line-height: 9px;
+    color: #98a6b4;
+    text-transform: uppercase;
+  }
+  &__price {
+    margin-top: 7px;
+    &_card {
+      &:before {
+        content: "";
+        display: inline-block;
+        margin-right: 6px;
+        width: 24px;
+        height: 17px;
+        background-image: url($imgUrl + "svg/costPriceCard.svg");
+      }
     }
-    &__price {
-        margin-top: 7px;
-        &_card {
-			&:before {
-				content:'';
-				display: inline-block;
-				margin-right: 6px;
-				width: 24px;
-				height: 17px;
-				background-image: url($imgUrl + "svg/costPriceCard.svg");
-			}
-        }
-        &_common {
-            .cost__totalPrice, .cost__ruble {
-                color: #919EAB;
-            }
-        }
+    &_common {
+      .cost__totalPrice,
+      .cost__ruble {
+        color: #919eab;
+      }
     }
-    &__totalPrice {
-        font-size: 24px;
-        line-height: 24px;
-        font-weight: 500;
-        color: $textColor;
-        font-family: 'Rubik';
-    }
-    &__ruble {
-        font-size: 18px;
-        line-height: 24px;
-        font-weight: 600;
-        color: $textColor;
-        font-family: 'Roboto';
-    }
+  }
+  &__totalPrice {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 500;
+    color: $textColor;
+    font-family: "Rubik";
+  }
+  &__ruble {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: $textColor;
+    font-family: "Roboto";
+  }
 }
 .counter {
-	display: flex;
-	height: 35px;
-	width: 108px;
-	border: 1px solid #C7D0D9;
-	border-radius: 5px;
-	overflow: hidden;
-	&__minus, &__plus {
-		padding-top: 1px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 35px;
-		height: 100%;
-		cursor: pointer;
-		background: transparent;
-		transition: $transition;
-		svg {
-			path {
-				transition: $transition;
-			}
-		}
-		&:hover {
-			cursor: pointer;
-			background: $green;
-			svg {
-				path {
-					fill: $white;
-				}
-			}
-		}
-	}
-	&__input {
-		width: 40px;
-		input {
-			padding-top: 2px;
-			width: 100%;
-			height: 100%;
-			text-align: center;
-			border: {
-				top:none;
-				bottom:none;
-				right:1px solid #C7D0D9;
-				left:1px solid #C7D0D9;
-			}
-			font-size: 14px;
-			line-height: 17px;
-			color: $textColor;
-			font-family: 'Rubik';
-		}
-	}
+  display: flex;
+  height: 35px;
+  width: 108px;
+  border: 1px solid #c7d0d9;
+  border-radius: 5px;
+  overflow: hidden;
+  &__minus,
+  &__plus {
+    padding-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 100%;
+    cursor: pointer;
+    background: transparent;
+    transition: $transition;
+    svg {
+      path {
+        transition: $transition;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      background: $green;
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+    }
+  }
+  &__input {
+    width: 40px;
+    input {
+      padding-top: 2px;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      border: {
+        top: none;
+        bottom: none;
+        right: 1px solid #c7d0d9;
+        left: 1px solid #c7d0d9;
+      }
+      font-size: 14px;
+      line-height: 17px;
+      color: $textColor;
+      font-family: "Rubik";
+    }
+  }
 }
 .likeProduct {
-	svg {
-		display: block;
-		path {
-			&.bg {
-				fill: transparent;
-				transition: $transition;
-			}
-		}
-		&:hover {
-			cursor: pointer;
-			path {
-				&.bg {
-					fill: $textColor;
-				}
-			}
-		}
-	}
-	&.active {
-		svg {
-			path {
-				&.bg {
-					fill: $textColor;
-				}
-			}
-		}
-	}
+  svg {
+    display: block;
+    path {
+      &.bg {
+        fill: transparent;
+        transition: $transition;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      path {
+        &.bg {
+          fill: $textColor;
+        }
+      }
+    }
+  }
+  &.active {
+    svg {
+      path {
+        &.bg {
+          fill: $textColor;
+        }
+      }
+    }
+  }
+}
+.bgWindow {
+  content: "";
+  position: absolute;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
 }

@@ -18133,13 +18133,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerCatalog", function() { return headerCatalog; });
 function headerCatalog() {
   var buttonCatalog = document.querySelector('.headerMiddleCatalog__js');
-  var headerBottom = document.querySelector('.headerBottom__js');
   var headerCatalog = document.querySelector('.headerCatalog__js');
   var hamburger = document.querySelector('.hamburger__js');
   buttonCatalog.addEventListener("click", function () {
     headerCatalog.classList.toggle("headerCatalog__go");
-    /*  headerBottom.classList.toggle("hidden") */
-
     hamburger.classList.toggle("is-active");
   });
 }
