@@ -406,6 +406,23 @@
             }
         }
     }
+    .productBlock {
+        &__content {
+            &.show {
+                position: relative;
+                opacity: 1;
+                pointer-events: auto;
+            }
+            &.hide {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+    }
 }
 .specialSample {
     position: relative;
