@@ -113,6 +113,14 @@
     line-height: 13px;
     color: $darkGreen;
   }
+  &__catalogSvg{
+    display: none;
+    margin-left: 7px;
+  }
+  &__catalogSvgEsc{
+
+    margin-left: 7px;
+  }
   &__form {
     height: 100%;
     display: flex;
@@ -145,9 +153,6 @@
     .iconSelected {
       margin-right: 13px;
     }
-  }
-  &__catalogSvg {
-    margin-left: 7px;
   }
 }
 .iconSelected {

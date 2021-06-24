@@ -61,6 +61,9 @@
                 <div class="headerMiddle__catalogSvg">
                   <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/catalog.svg'; ?>
                 </div>
+                <div class="headerMiddle__catalogSvgEsc">
+                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/catalog-esc.svg'; ?>
+                </div>
               </a>
               <form class="headerMiddle__form">
                 <input class="headerMiddle__input" type="text" placeholder="Поиск">
