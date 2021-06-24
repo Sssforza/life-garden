@@ -64,12 +64,101 @@
                   </span>
                 </div>
               </a>
-              <form class="headerMiddle__form">
-                <input class="headerMiddle__input" type="text" placeholder="Поиск">
-                <button class="headerMiddle__button" type="submit">
-                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search.svg'; ?>
-                </button>
-              </form>
+              <div class="headerMiddle__formContainer">
+                <div class="headerHelp">
+                  <div class="headerHelp__item">
+                    <div class="headerHelp__svg">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search-mini.svg'; ?>
+                    </div>
+                    <span class="headerHelp__text">
+                      Газонная трава семена
+                    </span>
+                    <a href="#" class="headerHelp__svgArrow">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrow-right.svg'; ?>
+                    </a>
+                  </div>
+                  <div class="headerHelp__item">
+                    <div class="headerHelp__svg">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search-mini.svg'; ?>
+                    </div>
+                    <span class="headerHelp__text">
+                      Газонокосилка электрическая
+                    </span>
+                    <a href="#" class="headerHelp__svgArrow">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrow-right.svg'; ?>
+                    </a>
+                  </div>
+                  <div class="headerHelp__item">
+                    <div class="headerHelp__svg">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search-mini.svg'; ?>
+                    </div>
+                    <span class="headerHelp__text">
+                      Газон
+                    </span>
+                    <a href="#" class="headerHelp__svgArrow">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrow-right.svg'; ?>
+                    </a>
+                  </div>
+                  <div class="headerHelp__item">
+                    <div class="headerHelp__svg">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search-mini.svg'; ?>
+                    </div>
+                    <div class="headerHelp__itemGroup">
+                      <span class="headerHelp__text">
+                        Семена газона
+                      </span>
+                      <span class="headerHelp__category">
+                        Дом и сад / Семена
+                      </span>
+                    </div>
+
+                    <a href="#" class="headerHelp__svgArrow">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrow-right.svg'; ?>
+                    </a>
+                  </div>
+                  <div class="headerHelp__itemSale">
+                    <img class="headerHelp__img" src="/dist/img/oligarh.png" alt="">
+                    <div class="headerHelp__itemGroup">
+                      <span class="headerHelp__text">Газон «Олигарх» 0,8 кг</span>
+                      <div class="headerHelp__price">
+                        <div class="headerHelp__svg">
+                          <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/card.svg'; ?>
+                        </div>
+                        <span class="headerHelp__priceSale">240р</span>
+                        <span class="headerHelp__priceNotsale">325р</span>
+                      </div>
+                    </div>
+                    <a href="#" class="headerHelp__svgArrow">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrow-right.svg'; ?>
+                    </a>
+                  </div>
+                  <div class="headerHelp__item">
+                    <div class="headerHelp__svg">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search-mini.svg'; ?>
+                    </div>
+                    <div class="headerHelp__itemGroup">
+                      <span class="headerHelp__text">
+                        Как поливать Газон
+                      </span>
+                      <span class="headerHelp__category">
+                        Статья
+                      </span>
+                    </div>
+
+                    <a href="#" class="headerHelp__svgArrow">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrow-right.svg'; ?>
+                    </a>
+                  </div>
+                  <div class="headerHelp__btn">Все результаты</div>
+                </div>
+                <form class="headerMiddle__form">
+                  <input class="headerMiddle__input headerMiddleInput__js" type="text" placeholder="Поиск">
+                  <button class="headerMiddle__button" type="submit">
+                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search.svg'; ?>
+                  </button>
+                </form>
+              </div>
+
             </div>
             <div class="headerMiddle__icons">
               <div class="iconSelected">

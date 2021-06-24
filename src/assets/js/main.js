@@ -15,11 +15,12 @@ global.noUiSlider = noUiSlider;
 //📁 /assets/js/blocks  _sliders.js
 import {sliderMain} from './blocks/sliders.js';
 
-import {headerCatalog} from './blocks/_header.js';
+import {headerCatalog, headerSearchelp} from './blocks/_header.js';
 
 document.addEventListener("DOMContentLoaded", function(){
     // slick slider main
     sliderMain();
     headerCatalog();
+    headerSearchelp()
 });
 
