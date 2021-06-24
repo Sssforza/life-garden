@@ -115,7 +115,7 @@
           </ul>
         </div>
       </div>
-      <div class="catalog">
+      <div class="catalog hidden">
         <div class="container">
           <h2 class="catalog__title">Каталог</h2>
           <div class="catalogСategories">

@@ -1,3 +1,21 @@
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+	-moz-appearance: number-input;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 body {
     font: {
 		family: "Firasans";
@@ -45,8 +63,29 @@ body {
 		background: $jaundiced;
 	}
 }
+.btnJaundicedFull {
+	padding-top: 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	line-height: 24px;
+	font-family: 'Rubik';
+	color: $textColor;
+	border-radius: 25px 5px;
+	background: $jaundiced;
+	transition: $transition;
+	cursor: pointer;
+	&:hover {
+		color: $white;
+		background: $green;
+	}
+}
 .productBlock {
 	margin-top: 37px;
+	&__content {
+		display: flex;
+	}
 }
 .cardProduct {
 	width: 335px;
@@ -102,9 +141,13 @@ body {
 	}
 	&__info {
 		padding: 18px 25px 33px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 285px;
 	}
 	&__title {
-		height: 72px;
+		max-height: 72px;
 		overflow: hidden;
 	}
 	&__a {
@@ -116,6 +159,21 @@ body {
 		transition: $transition;
 		&:hover {
 			color: $green;
+		}
+	}
+	&__bottom {
+		margin-top: 14px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__elements {
+		display: flex;
+		align-items: center;
+		.addBasket {
+			margin-left: 12px;
+			width: 105px;
+			height: 42px;
 		}
 	}
 }
@@ -176,5 +234,128 @@ body {
 		font-size: 14px;
 		line-height: 10px;
 		color: #5B6168;
+	}
+}
+.cost {
+    margin-top: 17px;
+    display: flex;
+    justify-content: space-between;
+    &__info {
+        font-size: 12px;
+        line-height: 9px;
+        color: #98A6B4;
+		text-transform: uppercase;
+    }
+    &__price {
+        margin-top: 7px;
+        &_card {
+			&:before {
+				content:'';
+				display: inline-block;
+				margin-right: 6px;
+				width: 24px;
+				height: 17px;
+				background-image: url($imgUrl + "svg/costPriceCard.svg");
+			}
+        }
+        &_common {
+            .cost__totalPrice, .cost__ruble {
+                color: #919EAB;
+            }
+        }
+    }
+    &__totalPrice {
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 500;
+        color: $textColor;
+        font-family: 'Rubik';
+    }
+    &__ruble {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 600;
+        color: $textColor;
+        font-family: 'Roboto';
+    }
+}
+.counter {
+	display: flex;
+	height: 35px;
+	width: 108px;
+	border: 1px solid #C7D0D9;
+	border-radius: 5px;
+	overflow: hidden;
+	&__minus, &__plus {
+		padding-top: 1px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 35px;
+		height: 100%;
+		cursor: pointer;
+		background: transparent;
+		transition: $transition;
+		svg {
+			path {
+				transition: $transition;
+			}
+		}
+		&:hover {
+			cursor: pointer;
+			background: $green;
+			svg {
+				path {
+					fill: $white;
+				}
+			}
+		}
+	}
+	&__input {
+		width: 40px;
+		input {
+			padding-top: 2px;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			border: {
+				top:none;
+				bottom:none;
+				right:1px solid #C7D0D9;
+				left:1px solid #C7D0D9;
+			}
+			font-size: 14px;
+			line-height: 17px;
+			color: $textColor;
+			font-family: 'Rubik';
+		}
+	}
+}
+.likeProduct {
+	svg {
+		display: block;
+		path {
+			&.bg {
+				fill: transparent;
+				transition: $transition;
+			}
+		}
+		&:hover {
+			cursor: pointer;
+			path {
+				&.bg {
+					fill: $textColor;
+				}
+			}
+		}
+	}
+	&.active {
+		svg {
+			path {
+				&.bg {
+					fill: $textColor;
+				}
+			}
+		}
 	}
 }
