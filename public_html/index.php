@@ -106,6 +106,197 @@
 				</div>
 			</div>
 		</section>
+		<section class="productSection productSpecial">
+			<div class="productSection__wrapper container">
+				<div class="productSection__title">Специальное предложение</div>
+				<div class="productSection__content">
+					<div class="productSpecial__sample specialSample">
+						<div class="specialSample__content">
+							<div class="specialSample__item active">
+								<div class="specialSample__img">
+									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg1.svg';?>
+								</div>
+								<div class="specialSample__name">Новинки</div>
+							</div>
+							<div class="specialSample__item">
+								<div class="specialSample__img">
+									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg2.svg';?>
+								</div>
+								<div class="specialSample__name">Товары по акции</div>
+							</div>
+							<div class="specialSample__item">
+								<div class="specialSample__img">
+									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg3.svg';?>
+								</div>
+								<div class="specialSample__name">Хит продаж</div>
+							</div>
+							<div class="specialSample__item">
+								<div class="specialSample__img">
+									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg4.svg';?>
+								</div>
+								<div class="specialSample__name">Для подарков</div>
+							</div>
+						</div>
+						<a class="productSpecial__all" href="#">Показать все</a>
+					</div>
+					<div class="productSpecial__productBlock productBlock">
+						<div class="productBlock__content productBlock_js">
+							<div class="productBlock__item cardProduct">
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__wrapper">
+										<div class="cardProduct__title">
+											<a class="cardProduct__a" href="#">
+												Горшок цветочный Ingreen Ajur 16 h14.5 см v 1.6 л пластик английская роза
+											</a>
+										</div>
+										<div class="availability">
+											<div class="availability__text has">
+												<span>Есть в наличии</span>
+											</div>
+											<div class="availability__text not hidden">
+												<span>Нет в наличии</span>
+											</div>
+										</div>
+										<div class="review">
+											<div class="review__list">
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+											</div>
+											<div class="review__how">1 отзыв</div>
+										</div>
+									</div>
+									<div class="cardProduct__wrapper">
+										<div class="cost">
+											<div class="cost__left">
+												<div class="cost__info">с картой живой сад</div>
+												<div class="cost__price cost__price_card">
+													<span class="cost__totalPrice">240</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+											<div class="cost__right">
+												<div class="cost__info">обычная цена</div>
+												<div class="cost__price cost__price_common">
+													<span class="cost__totalPrice">240</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="cardProduct__bottom">
+											<div class="counter">
+												<div class="counter__minus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+												</div>
+												<div class="counter__input">
+													<input type="number" value="1">
+												</div>
+												<div class="counter__plus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+												</div>
+											</div>
+											<div class="cardProduct__elements">
+												<div class="likeProduct">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+												</div>
+												<div class="btnJaundicedFull addBasket">В корзину</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="productBlock__item cardProduct">
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__wrapper">
+										<div class="cardProduct__title">
+											<a class="cardProduct__a" href="#">
+												Комплект фонтанный «Принц-лягушка», 40 см
+											</a>
+										</div>
+										<div class="availability">
+											<div class="availability__text has">
+												<span>Есть в наличии</span>
+											</div>
+										</div>
+										<div class="review">
+											<div class="review__list">
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+											</div>
+											<div class="review__how">25 отзывов</div>
+										</div>
+									</div>
+									<div class="cardProduct__wrapper">
+										<div class="cost">
+											<div class="cost__left">
+												<div class="cost__price">
+													<span class="cost__totalPrice">14 702</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="cardProduct__bottom">
+											<div class="counter">
+												<div class="counter__minus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+												</div>
+												<div class="counter__input">
+													<input type="number" value="1">
+												</div>
+												<div class="counter__plus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+												</div>
+											</div>
+											<div class="cardProduct__elements">
+												<div class="likeProduct active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+												</div>
+												<div class="btnJaundicedFull addBasket">В корзину</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section class="mainNews">
 			<div class="mainNews__wrapper container">
 				<div class="mainNews__header">
