@@ -46,19 +46,27 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-sizing: border-box;
     transition: $transition;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 3px;
+      left: 47%;
+      width: 83%;
+      height: 1px;
+      margin-left: -30%;
+      background: $white;
+    }
     &:hover {
       color: #c9d200;
-      border-color: $green;
+      &:after {
+        background: $green;
+      }
     }
   }
   &__text {
     margin-left: 6px;
-  }
-  &__text_underline {
-    line-height: 1;
-    border-bottom: 1px solid $white;
   }
   &__icon {
     width: 25px;
@@ -122,11 +130,15 @@
       color: $darkGreen;
     }
   }
-   &__form {
+  &__form {
     height: 100%;
     display: flex;
     align-items: center;
     margin-left: 29px;
+  }
+  &__formContainer{
+    position: relative;
+    height: 50px;
   }
   &__input {
     height: 30px;
@@ -209,17 +221,28 @@
 .headerBottom {
   background-color: $white;
   padding: 19px 0;
-  height: 53px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
   z-index: 50;
-  &__li {
-    height: 35px;
+  &__link {
+    position: relative;
     font-size: 18px;
     line-height: 13px;
     color: $textColor;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -19px;
+      right: 0;
+      height: 4px;
+      background: $green;
+      opacity: 0;
+    }
     &:hover {
-      border-bottom: 4px solid $green;
+      &:after {
+        opacity: 1;
+      }
     }
   }
 }
@@ -229,26 +252,14 @@
   width: 100%;
   top: -100%;
   z-index: 75;
-  transition: top 0.5s 0.5s;
-
+  transition: top 0.5s ease-in-out;
   padding-top: 40px;
   padding-bottom: 55px;
   background-color: $white;
   color: $textColor;
-  transition: $transition;
-
   &__go {
     top: 129px;
     transition: top 0.5s;
-    &:after {
-/*    content: "";
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      bottom: -100%;
-      background: rgba(0, 0, 0, 0.65); */
-    }
   }
   &__title {
     font: {
@@ -304,6 +315,116 @@
       size: 24px;
     }
     line-height: 28px;
+  }
+}
+
+.headerHelp {
+  padding: 26px 41px 34px 36px;
+  width: 716px;
+  background-color: $white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 30px;
+  z-index: 100;
+  transition: top 0.5s ease-in-out;
+  background-color: $white;
+  color: $textColor;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid $border;
+    position: relative;
+  }
+  &__svg {
+    width: 18px;
+    height: 13px;
+    display: flex;
+    align-items: center;
+  }
+  &__svgArrow {
+    position: absolute;
+    right: 0;
+  }
+  &__text {
+    margin-left: 20px;
+    font: {
+      family: Rubik;
+      weight: 500;
+      size: 16px;
+    }
+    line-height: 24px;
+  }
+  &__itemSale {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid $border;
+    position: relative;
+  }
+  &__itemGroup {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    .headerHelp__text {
+      margin: 0;
+    }
+  }
+  &__img {
+    width: 54px;
+    height: 47px;
+  }
+  &__category {
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 10px;
+    color: #8c949b;
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    height: 24px;
+  }
+  &__priceSale {
+    margin-left: 6px;
+    font: {
+      family: Rubik;
+      weight: 500;
+      size: 16px;
+    }
+    line-height: 24px;
+  }
+  &__priceNotsale {
+    margin-left: 15px;
+    color: #919eab;
+    font: {
+      family: Rubik;
+      weight: 500;
+      size: 16px;
+    }
+    line-height: 24px;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    width: 178px;
+    height: 46px;
+    color: $textColor;
+    background-color: $white;
+    border: 2px solid $green;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font: {
+      family: Rubik;
+      size: 16px;
+    }
+    line-height: 24px;
   }
 }
 

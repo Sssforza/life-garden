@@ -10,7 +10,7 @@
 
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header class="header header__js">
       <div class="headerTop">
         <div class="container">
           <div class="header__container">
@@ -30,7 +30,7 @@
               <div class="headerTop__icon">
                 <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/newspapper.svg'; ?>
               </div>
-              <span class="headerTop__text headerTop__text_underline">Газета &#171; Живой сад &#187;</span>
+              <span class="headerTop__text">Газета &#171; Живой сад &#187;</span>
             </a>
             <div class="headerTop__end">
               <a class="headerTop__telephone" href="tel: +73812349341">
@@ -64,12 +64,101 @@
                   </span>
                 </div>
               </a>
-              <form class="headerMiddle__form">
-                <input class="headerMiddle__input" type="text" placeholder="Поиск">
-                <button class="headerMiddle__button" type="submit">
-                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search.svg'; ?>
-                </button>
-              </form>
+              <div class="headerMiddle__formContainer">
+                <div class="headerHelp">
+                  <div class="headerHelp__item">
+                    <div class="headerHelp__svg">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search-mini.svg'; ?>
+                    </div>
+                    <span class="headerHelp__text">
+                      Газонная трава семена
+                    </span>
+                    <a href="#" class="headerHelp__svgArrow">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrow-right.svg'; ?>
+                    </a>
+                  </div>
+                  <div class="headerHelp__item">
+                    <div class="headerHelp__svg">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search-mini.svg'; ?>
+                    </div>
+                    <span class="headerHelp__text">
+                      Газонокосилка электрическая
+                    </span>
+                    <a href="#" class="headerHelp__svgArrow">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrow-right.svg'; ?>
+                    </a>
+                  </div>
+                  <div class="headerHelp__item">
+                    <div class="headerHelp__svg">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search-mini.svg'; ?>
+                    </div>
+                    <span class="headerHelp__text">
+                      Газон
+                    </span>
+                    <a href="#" class="headerHelp__svgArrow">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrow-right.svg'; ?>
+                    </a>
+                  </div>
+                  <div class="headerHelp__item">
+                    <div class="headerHelp__svg">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search-mini.svg'; ?>
+                    </div>
+                    <div class="headerHelp__itemGroup">
+                      <span class="headerHelp__text">
+                        Семена газона
+                      </span>
+                      <span class="headerHelp__category">
+                        Дом и сад / Семена
+                      </span>
+                    </div>
+
+                    <a href="#" class="headerHelp__svgArrow">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrow-right.svg'; ?>
+                    </a>
+                  </div>
+                  <div class="headerHelp__itemSale">
+                    <img class="headerHelp__img" src="/dist/img/oligarh.png" alt="">
+                    <div class="headerHelp__itemGroup">
+                      <span class="headerHelp__text">Газон «Олигарх» 0,8 кг</span>
+                      <div class="headerHelp__price">
+                        <div class="headerHelp__svg">
+                          <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/card.svg'; ?>
+                        </div>
+                        <span class="headerHelp__priceSale">240р</span>
+                        <span class="headerHelp__priceNotsale">325р</span>
+                      </div>
+                    </div>
+                    <a href="#" class="headerHelp__svgArrow">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrow-right.svg'; ?>
+                    </a>
+                  </div>
+                  <div class="headerHelp__item">
+                    <div class="headerHelp__svg">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search-mini.svg'; ?>
+                    </div>
+                    <div class="headerHelp__itemGroup">
+                      <span class="headerHelp__text">
+                        Как поливать Газон
+                      </span>
+                      <span class="headerHelp__category">
+                        Статья
+                      </span>
+                    </div>
+
+                    <a href="#" class="headerHelp__svgArrow">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrow-right.svg'; ?>
+                    </a>
+                  </div>
+                  <div class="headerHelp__btn">Все результаты</div>
+                </div>
+                <form class="headerMiddle__form">
+                  <input class="headerMiddle__input headerMiddleInput__js" type="text" placeholder="Поиск">
+                  <button class="headerMiddle__button" type="submit">
+                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search.svg'; ?>
+                  </button>
+                </form>
+              </div>
+
             </div>
             <div class="headerMiddle__icons">
               <div class="iconSelected">
@@ -103,20 +192,20 @@
       <div class="headerBottom headerBottom__js">
         <div class="container">
           <ul class="header__container">
-            <li class="headerBottom__li"><a href="#">Акции</a></li>
-            <li class="headerBottom__li"><a href="#">Теплица</a></li>
-            <li class="headerBottom__li"><a href="#">Семена</a></li>
-            <li class="headerBottom__li"><a href="#">Саженцы</a></li>
-            <li class="headerBottom__li"><a href="#">Биозащита сада</a></li>
-            <li class="headerBottom__li"><a href="#">Биопрепараты</a></li>
-            <li class="headerBottom__li"><a href="#">Грунты для растений</a></li>
-            <li class="headerBottom__li"><a href="#">Пленка</a></li>
-            <li class="headerBottom__li"><a href="#">Горшки</a></li>
-            <li class="headerBottom__li"><a href="#">Украшение сада</a></li>
+            <li><a class="headerBottom__link" href="#">Акции</a></li>
+            <li><a class="headerBottom__link" href="#">Теплица</a></li>
+            <li><a class="headerBottom__link" href="#">Семена</a></li>
+            <li><a class="headerBottom__link" href="#">Саженцы</a></li>
+            <li><a class="headerBottom__link" href="#">Биозащита сада</a></li>
+            <li><a class="headerBottom__link" href="#">Биопрепараты</a></li>
+            <li><a class="headerBottom__link" href="#">Грунты для растений</a></li>
+            <li><a class="headerBottom__link" href="#">Пленка</a></li>
+            <li><a class="headerBottom__link" href="#">Горшки</a></li>
+            <li><a class="headerBottom__link" href="#">Украшение сада</a></li>
           </ul>
         </div>
       </div>
-      <div class="headerCatalog headerCatalog__js">
+      <div class="headerCatalog headerCatalog__js ">
         <div class="container">
           <div class="headerCatalog__title">Каталог</div>
           <div class="headerCatalog__categories">

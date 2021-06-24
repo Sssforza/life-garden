@@ -118,12 +118,14 @@ global.noUiSlider = nouislider__WEBPACK_IMPORTED_MODULE_3___default.a; //📁 /a
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  // slick slider main
+  // open catalog in the header
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerCatalog"])(); // open contextual hint
+
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerSearchelp"])(); // slick slider main
+
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_5__["sliderMain"])(); // slick slider main page special product
 
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_5__["sliderProductSpecial"])(); // open catalog in the header
-
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerCatalog"])(); // tabs sliders special sample
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_5__["sliderProductSpecial"])(); // tabs sliders in the main page section specialSample
 
   Object(_blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_6__["specialSampleTabs"])();
 });
@@ -18111,17 +18113,20 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerCatalog", function() { return headerCatalog; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerSearchelp", function() { return headerSearchelp; });
 function headerCatalog() {
   var buttonCatalog = document.querySelector('.headerMiddleCatalog__js');
-  var headerBottom = document.querySelector('.headerBottom__js');
   var headerCatalog = document.querySelector('.headerCatalog__js');
   var hamburger = document.querySelector('.hamburger__js');
   buttonCatalog.addEventListener("click", function () {
     headerCatalog.classList.toggle("headerCatalog__go");
-    /*  headerBottom.classList.toggle("hidden") */
-
     hamburger.classList.toggle("is-active");
   });
+}
+;
+function headerSearchelp() {
+  var headerInput = document.querySelector('.headerMiddleInput__js');
+  console.log(headerInput);
 }
 ;
 
