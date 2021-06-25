@@ -65,7 +65,7 @@
                 </div>
               </a>
               <div class="headerMiddle__formContainer">
-                <div class="headerHelp hidden">
+                <div class="headerHelp">
                   <div class="headerHelp__item">
                     <div class="headerHelp__svg">
                       <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search-mini.svg'; ?>
