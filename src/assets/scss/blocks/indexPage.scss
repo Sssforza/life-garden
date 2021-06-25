@@ -54,7 +54,7 @@
             margin: 0 5px;
             width: 12px;
             height: 12px;
-            background: #C8DAD0;
+            background: $gray2;
             border-radius: 50%;
             overflow: hidden;
             cursor: pointer;
@@ -460,5 +460,82 @@
         font-size: 20px;
         line-height: 24px;
         color: $textColor;
+    }
+}
+.mainGarden {
+    margin-top: 113px;
+    &__title {
+        font-size: 60px;
+        line-height: 50px;
+        font-weight: 900;
+        color: $textColor;
+        font-family: 'Rubik';
+        text-align: center;
+    }
+    &__subTitle {
+        margin-top: 33px;
+        font-size: 30px;
+        line-height: 26px;
+        color: $darkGreen;
+        font-family: 'Rubik';
+        text-align: center;
+    }
+    &__info {
+        margin-top: 60px;
+        &.show {
+            .mainGarden__hide {
+                display: inline-block;
+            }
+            .mainGarden__show {
+                display: none;
+            }
+            svg {
+                transform: rotate(180deg);
+            }
+            .mainGarden__text {
+                max-height: 100%;
+            }
+        }
+    }
+    &__text {
+        display: flex;
+        max-height: 286px;
+        overflow: hidden;
+    }
+    &__column {
+        font-size: 18px;
+        line-height: 26px;
+        color: $textColor;
+        width: 50%;
+        &:first-child {
+            padding-right: 73px;
+        }
+        &:last-child {
+            padding-left: 85px;
+            border-left: 1px solid $gray2;
+        }
+    }
+    &__all {
+        margin-top: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__btn {
+        font-size: 18px;
+        line-height: 26px;
+        color: $textColor;
+        text-align: center;
+        cursor: pointer;
+        span {
+            margin-right: 6px;
+            border-bottom: 2px dashed #98A79F;
+        }
+        svg {
+            display: inline-block;
+        }
+    }
+    &__hide {
+        display: none;
     }
 }
