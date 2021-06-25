@@ -144,12 +144,11 @@
                         Статья
                       </span>
                     </div>
-
                     <div class="headerHelp__svgArrow">
                       <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrow-right.svg'; ?>
                     </div>
                   </a>
-                  <div class="headerHelp__btn">Все результаты</div>
+                  <a class="btnWhite headerHelp__btn" href="#">Все результаты</a>
                 </div>
                 <form class="headerMiddle__form headerMiddleForm__js">
                   <input class="headerMiddle__input headerMiddleInput__js" type="text" placeholder="Поиск">
@@ -162,9 +161,9 @@
             </div>
             <div class="headerMiddle__icons">
               <div class="iconSelected">
-                <div class="iconSelected__svg">
+                <a class="iconSelected__svg" href="#">
                   <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/like.svg'; ?>
-                </div>
+                </a>
                 <span class="iconSelected__count">0</span>
               </div>
               <div class="iconSelected">
@@ -213,12 +212,12 @@
               <img class="headerCatalog__img" src="/dist/img/productPopularImg7.png" alt="">
               <div class="headerCatalog__text">
                 <div class="headerCatalog__itemTitle">Для сада</div>
-                <ul class="headerCatalog__textUl class=" headerBottom__li"">
-                  <li class="headerCatalog__textLi"><a href="#">Украшение сада</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">Капельный полив</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">Теплица</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">Средства защиты</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">Украшение сада</a></li>
+                <ul class="headerCatalog__textUl">
+                  <li><a class="headerCatalog__textLink" href="#">Украшение сада</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">Капельный полив</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">Теплица</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">Средства защиты</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">Украшение сада</a></li>
                 </ul>
               </div>
             </div>
@@ -226,9 +225,9 @@
               <img class="headerCatalog__img" src="/dist/img/productPopularImg5.png" alt="">
               <div class="headerCatalog__text">
                 <div class="headerCatalog__itemTitle">Инструменты</div>
-                <ul class="headerCatalog__textUl class=" headerBottom__li"">
-                  <li class="headerCatalog__textLi"><a href="#">Садовый инвентарь</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">Опрыскиватели</a></li>
+                <ul class="headerCatalog__textUl">
+                  <li><a class="headerCatalog__textLink" href="#">Садовый инвентарь</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">Опрыскиватели</a></li>
                 </ul>
               </div>
             </div>
@@ -236,13 +235,13 @@
               <img class="headerCatalog__img" src="/dist/img/forHome.png" alt="">
               <div class="headerCatalog__text">
                 <div class="headerCatalog__itemTitle">Для дома</div>
-                <ul class="headerCatalog__textUl class=" headerBottom__li"">
-                  <li class="headerCatalog__textLi"><a href="#">Здоровое питание</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">Выращивание рассады</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">Пакеты</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">Фитолампы для растений</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">ЭМ товары для дома</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">Сушилка</a></li>
+                <ul class="headerCatalog__textUl">
+                  <li><a class="headerCatalog__textLink" href="#">Здоровое питание</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">Выращивание рассады</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">Пакеты</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">Фитолампы для растений</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">ЭМ товары для дома</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">Сушилка</a></li>
                 </ul>
               </div>
             </div>
@@ -250,13 +249,13 @@
               <img class="headerCatalog__img" src="/dist/img/plants.png" alt="">
               <div class="headerCatalog__text">
                 <div class="headerCatalog__itemTitle">Растения</div>
-                <ul class="headerCatalog__textUl class=" headerBottom__li"">
-                  <li class="headerCatalog__textLi"><a href="#">Газон</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">Лук-севок</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">Чеснок</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">Уценка</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">Семена</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">Саженцы</a></li>
+                <ul class="headerCatalog__textUl">
+                  <li><a class="headerCatalog__textLink" href="#">Газон</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">Лук-севок</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">Чеснок</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">Уценка</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">Семена</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">Саженцы</a></li>
                 </ul>
               </div>
             </div>
@@ -264,11 +263,11 @@
               <img class="headerCatalog__img" src="/dist/img/forPlants.png" alt="">
               <div class="headerCatalog__text">
                 <div class="headerCatalog__itemTitle">Для растений</div>
-                <ul class="headerCatalog__textUl class=" headerBottom__li"">
-                  <li class="headerCatalog__textLi"><a href="#">БиоЗащита сада</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">Биопрепараты, органические удобрения</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">Сидераты</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">Грунт для растений</a></li>
+                <ul class="headerCatalog__textUl">
+                  <li><a class="headerCatalog__textLink" href="#">БиоЗащита сада</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">Биопрепараты, органические удобрения</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">Сидераты</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">Грунт для растений</a></li>
                 </ul>
               </div>
             </div>
@@ -276,10 +275,10 @@
               <img class="headerCatalog__img" src="/dist/img/other.png" alt="">
               <div class="headerCatalog__text">
                 <div class="headerCatalog__itemTitle">Прочее</div>
-                <ul class="headerCatalog__textUl class=" headerBottom__li"">
-                  <li class="headerCatalog__textLi"><a href="#">Хозяйственные товары</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">Расходные материалы</a></li>
-                  <li class="headerCatalog__textLi"><a href="#">Книги</a></li>
+                <ul class="headerCatalog__textUl">
+                  <li><a class="headerCatalog__textLink" href="#">Хозяйственные товары</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">Расходные материалы</a></li>
+                  <li><a class="headerCatalog__textLink" href="#">Книги</a></li>
                 </ul>
               </div>
             </div>

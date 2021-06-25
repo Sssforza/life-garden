@@ -22,10 +22,19 @@ body {
     weight: 400;
   }
   color: $textColor;
-  &.overflowHidden {
-    overflow: hidden;
+
+}
+.overflowHidden {
+  overflow: hidden;
+}
+.hiddenHeaderCatalog {
+  overflow: hidden;
+  padding-right: 17px;
+  .headerTop, .headerMiddle, .headerBottom, .headerCatalog{
+    padding-right: 17px;
   }
 }
+
 .main {
   padding-top: 210px;
   padding-bottom: 88px;
@@ -82,6 +91,26 @@ body {
   &:hover {
     color: $white;
     background: $green;
+  }
+}
+.btnWhite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $textColor;
+  background-color: $white;
+  border: 2px solid $green;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: $transition;
+  font: {
+    family: Rubik;
+    size: 16px;
+  }
+  line-height: 24px;
+  &:hover {
+    color: $white;
+    background: #1b643b;
   }
 }
 .productBlock {
