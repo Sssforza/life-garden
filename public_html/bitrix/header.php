@@ -65,41 +65,41 @@
                 </div>
               </a>
               <div class="headerMiddle__formContainer">
-                <div class="headerHelp">
-                  <div class="headerHelp__item">
+                <div class="headerHelp hidden headerHelp__js">
+                  <a href="#" class="headerHelp__item">
                     <div class="headerHelp__svg">
                       <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search-mini.svg'; ?>
                     </div>
                     <span class="headerHelp__text">
                       Газонная трава семена
                     </span>
-                    <a href="#" class="headerHelp__svgArrow">
+                    <div class="headerHelp__svgArrow">
                       <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrow-right.svg'; ?>
-                    </a>
-                  </div>
-                  <div class="headerHelp__item">
+                    </div>
+                  </a>
+                  <a href="#" class="headerHelp__item">
                     <div class="headerHelp__svg">
                       <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search-mini.svg'; ?>
                     </div>
                     <span class="headerHelp__text">
                       Газонокосилка электрическая
                     </span>
-                    <a href="#" class="headerHelp__svgArrow">
+                    <div class="headerHelp__svgArrow">
                       <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrow-right.svg'; ?>
-                    </a>
-                  </div>
-                  <div class="headerHelp__item">
+                    </div>
+                  </a>
+                  <a href="#" class="headerHelp__item">
                     <div class="headerHelp__svg">
                       <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search-mini.svg'; ?>
                     </div>
                     <span class="headerHelp__text">
                       Газон
                     </span>
-                    <a href="#" class="headerHelp__svgArrow">
+                    <div class="headerHelp__svgArrow">
                       <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrow-right.svg'; ?>
-                    </a>
-                  </div>
-                  <div class="headerHelp__item">
+                    </div>
+                  </a>
+                  <a href="#" class="headerHelp__item">
                     <div class="headerHelp__svg">
                       <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search-mini.svg'; ?>
                     </div>
@@ -112,11 +112,11 @@
                       </span>
                     </div>
 
-                    <a href="#" class="headerHelp__svgArrow">
+                    <div class="headerHelp__svgArrow">
                       <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrow-right.svg'; ?>
-                    </a>
-                  </div>
-                  <div class="headerHelp__itemSale">
+                    </div>
+                  </a>
+                  <a href='#' class="headerHelp__itemSale">
                     <img class="headerHelp__img" src="/dist/img/oligarh.png" alt="">
                     <div class="headerHelp__itemGroup">
                       <span class="headerHelp__text">Газон «Олигарх» 0,8 кг</span>
@@ -128,11 +128,11 @@
                         <span class="headerHelp__priceNotsale">325р</span>
                       </div>
                     </div>
-                    <a href="#" class="headerHelp__svgArrow">
+                    <div class="headerHelp__svgArrow">
                       <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrow-right.svg'; ?>
-                    </a>
-                  </div>
-                  <div class="headerHelp__item">
+                    </div>
+                  </a>
+                  <a href="#" class="headerHelp__item">
                     <div class="headerHelp__svg">
                       <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search-mini.svg'; ?>
                     </div>
@@ -145,13 +145,13 @@
                       </span>
                     </div>
 
-                    <a href="#" class="headerHelp__svgArrow">
+                    <div class="headerHelp__svgArrow">
                       <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrow-right.svg'; ?>
-                    </a>
-                  </div>
+                    </div>
+                  </a>
                   <div class="headerHelp__btn">Все результаты</div>
                 </div>
-                <form class="headerMiddle__form">
+                <form class="headerMiddle__form headerMiddleForm__js">
                   <input class="headerMiddle__input headerMiddleInput__js" type="text" placeholder="Поиск">
                   <button class="headerMiddle__button" type="submit">
                     <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search.svg'; ?>
