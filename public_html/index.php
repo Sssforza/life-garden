@@ -106,31 +106,31 @@
 				</div>
 			</div>
 		</section>
-		<section class="productSection productSpecial">
+		<section class="productSection productSpecial productSpecial_js">
 			<div class="productSection__wrapper container">
 				<div class="productSection__title">Специальное предложение</div>
 				<div class="productSection__content">
 					<div class="productSpecial__sample specialSample">
 						<div class="specialSample__content">
-							<div class="specialSample__item active">
+							<div class="specialSample__item specialSampleItem_js active" data-sample="novelty">
 								<div class="specialSample__img">
 									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg1.svg';?>
 								</div>
 								<div class="specialSample__name">Новинки</div>
 							</div>
-							<div class="specialSample__item">
+							<div class="specialSample__item specialSampleItem_js" data-sample="promotions">
 								<div class="specialSample__img">
 									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg2.svg';?>
 								</div>
 								<div class="specialSample__name">Товары по акции</div>
 							</div>
-							<div class="specialSample__item">
+							<div class="specialSample__item specialSampleItem_js" data-sample="hit">
 								<div class="specialSample__img">
 									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg3.svg';?>
 								</div>
 								<div class="specialSample__name">Хит продаж</div>
 							</div>
-							<div class="specialSample__item">
+							<div class="specialSample__item specialSampleItem_js" data-sample="presents">
 								<div class="specialSample__img">
 									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg4.svg';?>
 								</div>
@@ -140,7 +140,7 @@
 						<a class="productSpecial__all" href="#">Показать все</a>
 					</div>
 					<div class="productSpecial__productBlock productBlock">
-						<div class="productBlock__content productBlock_js">
+						<div class="productBlock__content sliderProductSpecial_js productBlockBox_js show" data-slider="novelty">
 							<div class="productBlock__item cardProduct">
 								<div class="cardProduct__img">
 									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)">
@@ -224,7 +224,7 @@
 							</div>
 							<div class="productBlock__item cardProduct">
 								<div class="cardProduct__img">
-									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg2.jpg)">
 										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
 									</div>
 								</div>
@@ -284,6 +284,882 @@
 											</div>
 											<div class="cardProduct__elements">
 												<div class="likeProduct active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+												</div>
+												<div class="btnJaundicedFull addBasket">В корзину</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="productBlock__item cardProduct">
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg3.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__wrapper">
+										<div class="cardProduct__title">
+											<a class="cardProduct__a" href="#">
+												Ножницы универсальные Finland
+											</a>
+										</div>
+										<div class="availability">
+											<div class="availability__text has">
+												<span>Есть в наличии</span>
+											</div>
+										</div>
+										<div class="review">
+											<div class="review__list">
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+											</div>
+											<div class="review__how">25 отзывов</div>
+										</div>
+									</div>
+									<div class="cardProduct__wrapper">
+										<div class="cost">
+											<div class="cost__left">
+												<div class="cost__info">с картой живой сад</div>
+												<div class="cost__price cost__price_card">
+													<span class="cost__totalPrice">1 723</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+											<div class="cost__right">
+												<div class="cost__info">обычная цена</div>
+												<div class="cost__price cost__price_common">
+													<span class="cost__totalPrice">1 900</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="cardProduct__bottom">
+											<div class="counter">
+												<div class="counter__minus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+												</div>
+												<div class="counter__input">
+													<input type="number" value="1">
+												</div>
+												<div class="counter__plus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+												</div>
+											</div>
+											<div class="cardProduct__elements">
+												<div class="likeProduct">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+												</div>
+												<div class="btnJaundicedFull addBasket">В корзину</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="productBlock__item cardProduct">
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg4.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__wrapper">
+										<div class="cardProduct__title">
+											<a class="cardProduct__a" href="#">
+												Декоративная скульптура для сада гнома
+											</a>
+										</div>
+										<div class="availability">
+											<div class="availability__text has">
+												<span>Есть в наличии</span>
+											</div>
+										</div>
+										<div class="review">
+											<div class="review__list">
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+											</div>
+											<div class="review__how">1 отзыв</div>
+										</div>
+									</div>
+									<div class="cardProduct__wrapper">
+										<div class="cost">
+											<div class="cost__left">
+												<div class="cost__price">
+													<span class="cost__totalPrice">1 240</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="cardProduct__bottom">
+											<div class="counter">
+												<div class="counter__minus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+												</div>
+												<div class="counter__input">
+													<input type="number" value="1">
+												</div>
+												<div class="counter__plus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+												</div>
+											</div>
+											<div class="cardProduct__elements">
+												<div class="likeProduct">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+												</div>
+												<div class="btnJaundicedFull addBasket">В корзину</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="productBlock__item cardProduct">
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg2.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__wrapper">
+										<div class="cardProduct__title">
+											<a class="cardProduct__a" href="#">
+												Комплект фонтанный «Принц-лягушка», 40 см
+											</a>
+										</div>
+										<div class="availability">
+											<div class="availability__text has">
+												<span>Есть в наличии</span>
+											</div>
+										</div>
+										<div class="review">
+											<div class="review__list">
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+											</div>
+											<div class="review__how">25 отзывов</div>
+										</div>
+									</div>
+									<div class="cardProduct__wrapper">
+										<div class="cost">
+											<div class="cost__left">
+												<div class="cost__price">
+													<span class="cost__totalPrice">14 702</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="cardProduct__bottom">
+											<div class="counter">
+												<div class="counter__minus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+												</div>
+												<div class="counter__input">
+													<input type="number" value="1">
+												</div>
+												<div class="counter__plus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+												</div>
+											</div>
+											<div class="cardProduct__elements">
+												<div class="likeProduct active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+												</div>
+												<div class="btnJaundicedFull addBasket">В корзину</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="productBlock__item cardProduct">
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg4.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__wrapper">
+										<div class="cardProduct__title">
+											<a class="cardProduct__a" href="#">
+												Декоративная скульптура для сада гнома
+											</a>
+										</div>
+										<div class="availability">
+											<div class="availability__text has">
+												<span>Есть в наличии</span>
+											</div>
+										</div>
+										<div class="review">
+											<div class="review__list">
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+											</div>
+											<div class="review__how">1 отзыв</div>
+										</div>
+									</div>
+									<div class="cardProduct__wrapper">
+										<div class="cost">
+											<div class="cost__left">
+												<div class="cost__price">
+													<span class="cost__totalPrice">1 240</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="cardProduct__bottom">
+											<div class="counter">
+												<div class="counter__minus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+												</div>
+												<div class="counter__input">
+													<input type="number" value="1">
+												</div>
+												<div class="counter__plus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+												</div>
+											</div>
+											<div class="cardProduct__elements">
+												<div class="likeProduct">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+												</div>
+												<div class="btnJaundicedFull addBasket">В корзину</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="productBlock__content sliderProductSpecial_js hide" data-slider="promotions">
+							<div class="productBlock__item cardProduct">
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg5.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__wrapper">
+										<div class="cardProduct__title">
+											<a class="cardProduct__a" href="#">
+												Декоративная скульптура для сада гнома
+											</a>
+										</div>
+										<div class="availability">
+											<div class="availability__text has">
+												<span>Есть в наличии</span>
+											</div>
+										</div>
+										<div class="review">
+											<div class="review__list">
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+											</div>
+											<div class="review__how">1 отзыв</div>
+										</div>
+									</div>
+									<div class="cardProduct__wrapper">
+										<div class="cost">
+											<div class="cost__left">
+												<div class="cost__price">
+													<span class="cost__totalPrice">1 240</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="cardProduct__bottom">
+											<div class="counter">
+												<div class="counter__minus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+												</div>
+												<div class="counter__input">
+													<input type="number" value="1">
+												</div>
+												<div class="counter__plus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+												</div>
+											</div>
+											<div class="cardProduct__elements">
+												<div class="likeProduct">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+												</div>
+												<div class="btnJaundicedFull addBasket">В корзину</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="productBlock__item cardProduct">
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__wrapper">
+										<div class="cardProduct__title">
+											<a class="cardProduct__a" href="#">
+												Горшок цветочный Ingreen Ajur 16 h14.5 см v 1.6 л пластик английская роза
+											</a>
+										</div>
+										<div class="availability">
+											<div class="availability__text has">
+												<span>Есть в наличии</span>
+											</div>
+											<div class="availability__text not hidden">
+												<span>Нет в наличии</span>
+											</div>
+										</div>
+										<div class="review">
+											<div class="review__list">
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+											</div>
+											<div class="review__how">1 отзыв</div>
+										</div>
+									</div>
+									<div class="cardProduct__wrapper">
+										<div class="cost">
+											<div class="cost__left">
+												<div class="cost__info">с картой живой сад</div>
+												<div class="cost__price cost__price_card">
+													<span class="cost__totalPrice">240</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+											<div class="cost__right">
+												<div class="cost__info">обычная цена</div>
+												<div class="cost__price cost__price_common">
+													<span class="cost__totalPrice">240</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="cardProduct__bottom">
+											<div class="counter">
+												<div class="counter__minus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+												</div>
+												<div class="counter__input">
+													<input type="number" value="1">
+												</div>
+												<div class="counter__plus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+												</div>
+											</div>
+											<div class="cardProduct__elements">
+												<div class="likeProduct">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+												</div>
+												<div class="btnJaundicedFull addBasket">В корзину</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="productBlock__item cardProduct">
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg4.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__wrapper">
+										<div class="cardProduct__title">
+											<a class="cardProduct__a" href="#">
+												Декоративная скульптура для сада гнома
+											</a>
+										</div>
+										<div class="availability">
+											<div class="availability__text has">
+												<span>Есть в наличии</span>
+											</div>
+										</div>
+										<div class="review">
+											<div class="review__list">
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+											</div>
+											<div class="review__how">1 отзыв</div>
+										</div>
+									</div>
+									<div class="cardProduct__wrapper">
+										<div class="cost">
+											<div class="cost__left">
+												<div class="cost__price">
+													<span class="cost__totalPrice">1 240</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="cardProduct__bottom">
+											<div class="counter">
+												<div class="counter__minus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+												</div>
+												<div class="counter__input">
+													<input type="number" value="1">
+												</div>
+												<div class="counter__plus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+												</div>
+											</div>
+											<div class="cardProduct__elements">
+												<div class="likeProduct">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+												</div>
+												<div class="btnJaundicedFull addBasket">В корзину</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="productBlock__content sliderProductSpecial_js hide" data-slider="hit">
+							<div class="productBlock__item cardProduct">
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg5.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__wrapper">
+										<div class="cardProduct__title">
+											<a class="cardProduct__a" href="#">
+												Декоративная скульптура для сада гнома
+											</a>
+										</div>
+										<div class="availability">
+											<div class="availability__text has">
+												<span>Есть в наличии</span>
+											</div>
+										</div>
+										<div class="review">
+											<div class="review__list">
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+											</div>
+											<div class="review__how">1 отзыв</div>
+										</div>
+									</div>
+									<div class="cardProduct__wrapper">
+										<div class="cost">
+											<div class="cost__left">
+												<div class="cost__price">
+													<span class="cost__totalPrice">1 240</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="cardProduct__bottom">
+											<div class="counter">
+												<div class="counter__minus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+												</div>
+												<div class="counter__input">
+													<input type="number" value="1">
+												</div>
+												<div class="counter__plus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+												</div>
+											</div>
+											<div class="cardProduct__elements">
+												<div class="likeProduct">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+												</div>
+												<div class="btnJaundicedFull addBasket">В корзину</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="productBlock__item cardProduct">
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg2.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__wrapper">
+										<div class="cardProduct__title">
+											<a class="cardProduct__a" href="#">
+												Комплект фонтанный «Принц-лягушка», 40 см
+											</a>
+										</div>
+										<div class="availability">
+											<div class="availability__text has">
+												<span>Есть в наличии</span>
+											</div>
+										</div>
+										<div class="review">
+											<div class="review__list">
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+											</div>
+											<div class="review__how">25 отзывов</div>
+										</div>
+									</div>
+									<div class="cardProduct__wrapper">
+										<div class="cost">
+											<div class="cost__left">
+												<div class="cost__price">
+													<span class="cost__totalPrice">14 702</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="cardProduct__bottom">
+											<div class="counter">
+												<div class="counter__minus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+												</div>
+												<div class="counter__input">
+													<input type="number" value="1">
+												</div>
+												<div class="counter__plus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+												</div>
+											</div>
+											<div class="cardProduct__elements">
+												<div class="likeProduct active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+												</div>
+												<div class="btnJaundicedFull addBasket">В корзину</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="productBlock__item cardProduct">
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg4.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__wrapper">
+										<div class="cardProduct__title">
+											<a class="cardProduct__a" href="#">
+												Декоративная скульптура для сада гнома
+											</a>
+										</div>
+										<div class="availability">
+											<div class="availability__text has">
+												<span>Есть в наличии</span>
+											</div>
+										</div>
+										<div class="review">
+											<div class="review__list">
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+											</div>
+											<div class="review__how">1 отзыв</div>
+										</div>
+									</div>
+									<div class="cardProduct__wrapper">
+										<div class="cost">
+											<div class="cost__left">
+												<div class="cost__price">
+													<span class="cost__totalPrice">1 240</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="cardProduct__bottom">
+											<div class="counter">
+												<div class="counter__minus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+												</div>
+												<div class="counter__input">
+													<input type="number" value="1">
+												</div>
+												<div class="counter__plus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+												</div>
+											</div>
+											<div class="cardProduct__elements">
+												<div class="likeProduct">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+												</div>
+												<div class="btnJaundicedFull addBasket">В корзину</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="productBlock__content sliderProductSpecial_js hide" data-slider="presents">
+							<div class="productBlock__item cardProduct">
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__wrapper">
+										<div class="cardProduct__title">
+											<a class="cardProduct__a" href="#">
+												Горшок цветочный Ingreen Ajur 16 h14.5 см v 1.6 л пластик английская роза
+											</a>
+										</div>
+										<div class="availability">
+											<div class="availability__text has">
+												<span>Есть в наличии</span>
+											</div>
+											<div class="availability__text not hidden">
+												<span>Нет в наличии</span>
+											</div>
+										</div>
+										<div class="review">
+											<div class="review__list">
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+											</div>
+											<div class="review__how">1 отзыв</div>
+										</div>
+									</div>
+									<div class="cardProduct__wrapper">
+										<div class="cost">
+											<div class="cost__left">
+												<div class="cost__info">с картой живой сад</div>
+												<div class="cost__price cost__price_card">
+													<span class="cost__totalPrice">240</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+											<div class="cost__right">
+												<div class="cost__info">обычная цена</div>
+												<div class="cost__price cost__price_common">
+													<span class="cost__totalPrice">240</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="cardProduct__bottom">
+											<div class="counter">
+												<div class="counter__minus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+												</div>
+												<div class="counter__input">
+													<input type="number" value="1">
+												</div>
+												<div class="counter__plus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+												</div>
+											</div>
+											<div class="cardProduct__elements">
+												<div class="likeProduct">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+												</div>
+												<div class="btnJaundicedFull addBasket">В корзину</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="productBlock__item cardProduct">
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg4.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__wrapper">
+										<div class="cardProduct__title">
+											<a class="cardProduct__a" href="#">
+												Декоративная скульптура для сада гнома
+											</a>
+										</div>
+										<div class="availability">
+											<div class="availability__text has">
+												<span>Есть в наличии</span>
+											</div>
+										</div>
+										<div class="review">
+											<div class="review__list">
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item active">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+												<div class="review__item">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+												</div>
+											</div>
+											<div class="review__how">1 отзыв</div>
+										</div>
+									</div>
+									<div class="cardProduct__wrapper">
+										<div class="cost">
+											<div class="cost__left">
+												<div class="cost__price">
+													<span class="cost__totalPrice">1 240</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="cardProduct__bottom">
+											<div class="counter">
+												<div class="counter__minus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+												</div>
+												<div class="counter__input">
+													<input type="number" value="1">
+												</div>
+												<div class="counter__plus">
+													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+												</div>
+											</div>
+											<div class="cardProduct__elements">
+												<div class="likeProduct">
 													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
 												</div>
 												<div class="btnJaundicedFull addBasket">В корзину</div>
@@ -380,6 +1256,63 @@
 					<div class="clubCard__minInfo">
 						* Скидка не&nbsp;распространяется на&nbsp;товары по&nbsp;акции. Скидка в&nbsp;период &laquo;Дня&nbsp;рождения&raquo; предоставляется только самому клиенту по&nbsp;предъявлении документа 
 						(паспорт, пенсионное удостоверение, водительские права).
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="mainGarden">
+			<div class="mainGarden__content container">
+				<div class="mainGarden__title">Живой сад</div>
+				<div class="mainGarden__subTitle">«Живи экологично. Живи дольше»</div>
+				<div class="mainGarden__info">
+					<div class="mainGarden__text">
+						<div class="mainGarden__column">
+							Омский центр экологического садоводства &laquo;Живой сад&raquo;. Работаем с&nbsp;2006&nbsp;года.
+							Предлагаем только проверенные товары для экологического ЗемлеДелия и&nbsp;декоративного садоводства.
+							ЭМ&nbsp;&mdash; товары для сада и&nbsp;дома. Знаменитая Сушилка Изидри. 
+							Новости о&nbsp;природном мировом земледелии, новинки, поступления товаров в&nbsp;магазины.
+							Помогаем садоводам, огородникам, дачникам, владельцам приусадебных участков выращивать экологически чистые 
+							урожаи,восстанавливать и&nbsp;повышать плодородие почвы, облегчать труд 
+							на&nbsp;земле, создавать красивые сады, в&nbsp;которых они отдыхают семьей 
+							и&nbsp;делать их&nbsp;по&nbsp;возможности малоуходными, гармоничными и&nbsp;живыми!
+							Живи экологично! Живи дольше!
+							Омский центр экологического садоводства &laquo;Живой сад&raquo;. Работаем с&nbsp;2006&nbsp;года.
+							Предлагаем только проверенные товары для экологического ЗемлеДелия и&nbsp;декоративного садоводства.
+							ЭМ&nbsp;&mdash; товары для сада и&nbsp;дома. Знаменитая Сушилка Изидри. 
+							Новости о&nbsp;природном мировом земледелии, новинки, поступления товаров в&nbsp;магазины.
+							Помогаем садоводам, огородникам, дачникам, владельцам приусадебных участков выращивать экологически чистые 
+							урожаи,восстанавливать и&nbsp;повышать плодородие почвы, облегчать труд 
+							на&nbsp;земле, создавать красивые сады, в&nbsp;которых они отдыхают семьей 
+							и&nbsp;делать их&nbsp;по&nbsp;возможности малоуходными, гармоничными и&nbsp;живыми!
+							Живи экологично! Живи дольше!
+						</div>
+						<div class="mainGarden__column">
+							Интернет-магазин семена почтой предлагает Вам купить семена 
+							от&nbsp;самых надежных, лидирующих в&nbsp;своем сегменте агрофирм 
+							&laquo;Поиск&raquo;, &laquo;Гавриш&raquo;, &laquo;Русский огород&raquo;, &laquo;Марс&raquo;, &laquo;Аэлита&raquo;. 
+							Это крупнейшие российские селекционно-семеноводческие 
+							компании, работающие на&nbsp;рынке от&nbsp;15&nbsp;до&nbsp;25-ти лет. Вся продукция
+							проходит контроль качества и&nbsp;снабжается сертификатами соответствия.
+							Работая с&nbsp;1990&nbsp;г., мы&nbsp;отправляем более 100&nbsp;000 
+							посылок в&nbsp;год. При отменном качестве семян наши цены 
+							значительно ниже, чем в&nbsp;других интернет-магазинах.
+							Интернет-магазин семена почтой предлагает Вам купить семена 
+							от&nbsp;самых надежных, лидирующих в&nbsp;своем сегменте агрофирм 
+							&laquo;Поиск&raquo;, &laquo;Гавриш&raquo;, &laquo;Русский огород&raquo;, &laquo;Марс&raquo;, &laquo;Аэлита&raquo;. 
+							Это крупнейшие российские селекционно-семеноводческие 
+							компании, работающие на&nbsp;рынке от&nbsp;15&nbsp;до&nbsp;25-ти лет. Вся продукция
+							проходит контроль качества и&nbsp;снабжается сертификатами соответствия.
+							Работая с&nbsp;1990&nbsp;г., мы&nbsp;отправляем более 100&nbsp;000 
+							посылок в&nbsp;год. При отменном качестве семян наши цены 
+							значительно ниже, чем в&nbsp;других интернет-магазинах.
+						</div>
+					</div>
+					<div class="mainGarden__all">
+						<div class="mainGarden__btn mainGardenBtn_js">
+							<span class="mainGarden__show">Показать целиком</span>
+							<span class="mainGarden__hide">Свернуть</span>
+							<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/mainGardenAll.svg';?>
+						</div>
 					</div>
 				</div>
 			</div>

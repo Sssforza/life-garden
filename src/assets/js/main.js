@@ -12,15 +12,31 @@ import 'magnific-popup';
 import noUiSlider from 'nouislider';
 global.noUiSlider = noUiSlider;
 
-//📁 /assets/js/blocks  _sliders.js
-import {sliderMain} from './blocks/sliders.js';
-
+//📁 /assets/js/blocks  _header.js
 import {headerCatalog, headerSearchelp} from './blocks/_header.js';
 
+//📁 /assets/js/blocks  sliders.js
+import {sliderMain, sliderProductSpecial} from './blocks/sliders.js';
+
+//📁 /assets/js/blocks  specialSample.js
+import {specialSampleTabs} from './blocks/specialSample.js';
+
 document.addEventListener("DOMContentLoaded", function(){
+
+    // open catalog in the header
+    headerCatalog();
+
+    // open contextual hint
+    headerSearchelp()
+
     // slick slider main
     sliderMain();
-    headerCatalog();
-    headerSearchelp()
+
+    // slick slider main page special product
+    sliderProductSpecial();
+
+    // tabs sliders in the main page section specialSample
+    specialSampleTabs();
+
 });
 

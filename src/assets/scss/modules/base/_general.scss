@@ -85,10 +85,43 @@ body {
   }
 }
 .productBlock {
-  margin-top: 37px;
-  &__content {
-    display: flex;
-  }
+	margin-top: 37px;
+	&__content {
+		margin: 0 -10px;
+	}
+	.slick-slide {
+		margin: 0 10px;
+	}
+	&__next, &__prev {
+        padding-left: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        width: 50px;
+        height: 50px;
+        background: $white;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 50%;
+        overflow: hidden;
+        z-index: 10;
+        cursor: pointer;
+        svg {
+            display: block;
+            path {
+                stroke: $green;
+            }
+        }
+    }
+    &__next {
+        right: -25px
+    }
+    &__prev {
+        left: -25px;
+        transform: rotate(180deg);
+    }
 }
 .cardProduct {
   width: 335px;
