@@ -15,6 +15,9 @@ global.noUiSlider = noUiSlider;
 //📁 /assets/js/blocks  _header.js
 import {headerCatalog, headerSearchelp} from './blocks/_header.js';
 
+//📁 /assets/js/blocks  _footer.js
+import {footerScrollUp, footerValidationEmail} from './blocks/_footer.js';
+
 //📁 /assets/js/blocks  sliders.js
 import {sliderMain, sliderProductSpecial} from './blocks/sliders.js';
 
@@ -38,5 +41,10 @@ document.addEventListener("DOMContentLoaded", function(){
     // tabs sliders in the main page section specialSample
     specialSampleTabs();
 
+    // sroll page on top
+    footerScrollUp();
+
+    // validation e-mail
+    footerValidationEmail();
 });
 

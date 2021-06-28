@@ -1,0 +1,368 @@
+.footer {
+  background-color: #0f283e;
+  position: relative;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 52px 0 58px 0;
+    color: $white;
+  }
+
+  &__social {
+    margin-top: 46px;
+  }
+  &__socialSvg {
+    fill: #0f283e;
+    transition: $transition;
+    &:hover {
+      fill: $jaundiced;
+    }
+  }
+
+  &__company {
+    margin-left: 20px;
+  }
+
+  &__companyTitle {
+    font: {
+      family: Rubik;
+      weight: bold;
+      size: 28px;
+    }
+    line-height: 50px;
+  }
+  &__companyContainer {
+    margin-top: 10px;
+    & li:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+  &__companyLinks {
+    font-size: 18px;
+    line-height: 26px;
+    transition: $transition;
+    &:hover {
+      color: $jaundiced;
+    }
+  }
+
+  &__buyers {
+    margin-left: 20px;
+  }
+  &__buyersTitle {
+    font: {
+      family: Rubik;
+      weight: bold;
+      size: 28px;
+    }
+    line-height: 50px;
+  }
+  &__buyersContainer {
+    margin-top: 10px;
+    & li:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+  &__buyersLinks {
+    font-size: 18px;
+    line-height: 26px;
+    transition: $transition;
+    &:hover {
+      color: $jaundiced;
+    }
+  }
+
+  &__contacts {
+    margin-left: 20px;
+  }
+  &__contactsTitle {
+    font: {
+      family: Rubik;
+      weight: bold;
+      size: 28px;
+    }
+    line-height: 50px;
+  }
+  &__contactsTel {
+    pointer-events: none;
+  }
+  &__contactsTelContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  &__contactsTelText {
+    font: {
+      family: Rubik;
+      size: 20px;
+    }
+    line-height: 24px;
+    margin-left: 10px;
+  }
+  &__contactsTelCenter {
+    font-size: 14px;
+    line-height: 20px;
+    color: #abd2bc;
+    margin-top: 7px;
+    margin-left: 32px;
+  }
+  &__contactsEmail {
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    margin-top: 19px;
+  }
+  &__contactsEmailText {
+    margin-left: 10px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &__contactsAddress {
+    pointer-events: none;
+    margin-top: 19px;
+  }
+  &__contactsAddressContainer {
+    display: flex;
+    align-items: center;
+  }
+  &__contactsAddressText {
+    margin-left: 10px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  &__contactsButton {
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 55px;
+    border-radius: 10px;
+    margin-top: 21px;
+    color: $textColor;
+    background-color: $jaundiced;
+    transition: $transition;
+    &:hover {
+      background: #b3bb00;
+    }
+  }
+
+  &__subscribe {
+    margin-top: 27px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  &__subscribeTitle {
+    font: {
+      family: Rubik;
+      size: 24px;
+    }
+    line-height: 24px;
+  }
+  &__subscribeLabel {
+    width: 340px;
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 17px;
+  }
+  &__subscribeForm {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    justify-content: space-between;
+    border-bottom: 1px solid $white;
+    width: 450px;
+    height: 42px;
+  }
+
+  &__subscribeInput {
+    font-size: 18px;
+    line-height: 32px;
+    color: #ffffff;
+    background-color: #0f283e;
+    width: 418px;
+    height: 30px;
+    outline: none;
+    border: none;
+    @include placeholder(18px, #889097, "FiraSans", $opacity: 1);
+  }
+  &__subscribeButton {
+    display: block;
+    fill: $white;
+    height: 30px;
+    transition: $transition;
+    &:hover {
+      fill: $jaundiced;
+    }
+  }
+  &__subscribeError {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 464px;
+    height: 69px;
+    left: 110%;
+    bottom: -12px;
+    background: &white;
+    border-radius: 5px;
+    padding: 15px 13px 14px 19px;
+    color: $textColor;
+    &:after {
+      content: "";
+      position: absolute;
+      left: -35px;
+      border: 15px solid transparent;
+      border-right: 32px solid $white;
+    }
+  }
+  &__subscribeErrorImg {
+    padding: 5px 0;
+    text-align: center;
+    font-size: 24px;
+    line-height: 22px;
+    width: 30px;
+    height: 30px;
+    background: $jaundiced;
+    border-radius: 5px;
+  }
+  &__subscribeErrorText {
+    margin-left: 11px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__accept {
+    margin-top: 27px;
+  }
+  &__acceptTitle {
+    font: {
+      family: Rubik;
+      size: 24px;
+    }
+    line-height: 24px;
+  }
+  &__acceptCards {
+    display: flex;
+    align-items: center;
+  }
+  &__acceptMasterImg {
+    width: 67px;
+    height: 42px;
+  }
+  &__acceptVisaImg {
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+  &__acceptMirImg {
+    margin-left: 15px;
+  }
+
+  &__end {
+    margin-top: 30px;
+    width: 330px;
+  }
+  &__ferma {
+  }
+  &__fermaLogo {
+    display: flex;
+    align-items: start;
+    transition: $transition;
+    & span {
+      margin-top: 5px;
+      margin-left: 16px;
+      font: {
+        family: Montserrat;
+        size: 15px;
+      }
+      line-height: 15px;
+      
+      border-bottom: 1px solid $white;
+    }
+    &:hover {
+      & span {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__policy {
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+    width: 220px;
+    font: {
+      family: Rubik;
+      size: 14px;
+    }
+    line-height: 20px;
+    border-bottom: 1px solid #98a79f;
+    transition: $transition;
+    &:hover {
+      border-bottom: none;
+    }
+  }
+
+  &__buttonUp {
+    position: absolute;
+    padding: 19px 21px;
+    width: 60.22px;
+    height: 62.85px;
+    top: 20px;
+    right: 0;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  &__wrap {
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.65);
+    color: $textColor;
+  }
+  &__popap {
+    position: absolute;
+    width: 689px;
+    height: 240px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: $white;
+    border-radius: 10px;
+    padding: 45px 105px 70px;
+  }
+  &__popapClose {
+    position: absolute;
+    top: 37px;
+    right: 52px;
+    cursor: pointer;
+  }
+  &__popapTitle {
+    font: {
+      family: Rubik;
+      weight: bold;
+      size: 30px;
+    }
+    line-height: 36px;
+    text-align: center;
+  }
+  &__popapText {
+    margin-top: 20px;
+    font: {
+      family: Rubik;
+      size: 16px;
+    }
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+  }
+}

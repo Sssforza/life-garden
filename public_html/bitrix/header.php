@@ -10,7 +10,7 @@
 
 <body>
   <div class="wrapper">
-    <header class="header header__js">
+    <header class="header">
       <div class="headerTop">
         <div class="container">
           <div class="header__container">
@@ -65,6 +65,13 @@
                 </div>
               </a>
               <div class="headerMiddle__formContainer">
+
+                <form class="headerMiddle__form headerMiddleForm__js">
+                  <input class="headerMiddle__input headerMiddleInput__js" type="text" placeholder="Поиск">
+                  <button class="headerMiddle__button" type="submit">
+                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search.svg'; ?>
+                  </button>
+                </form>
                 <div class="headerHelp hidden headerHelp__js">
                   <a href="#" class="headerHelp__item">
                     <div class="headerHelp__svg">
@@ -150,12 +157,6 @@
                   </a>
                   <a class="btnWhite headerHelp__btn" href="#">Все результаты</a>
                 </div>
-                <form class="headerMiddle__form headerMiddleForm__js">
-                  <input class="headerMiddle__input headerMiddleInput__js" type="text" placeholder="Поиск">
-                  <button class="headerMiddle__button" type="submit">
-                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search.svg'; ?>
-                  </button>
-                </form>
               </div>
 
             </div>

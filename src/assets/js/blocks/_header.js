@@ -1,9 +1,7 @@
 export function headerCatalog() {
-  const header = document.querySelector(".header");
   const buttonCatalog = document.querySelector(".headerMiddleCatalog__js");
   const headerCatalog = document.querySelector(".headerCatalog__js");
   const hamburger = document.querySelector(".hamburger__js");
-  const wrapper = document.querySelector(".wrapper");
 
   buttonCatalog.addEventListener("click", () => {
     headerCatalog.classList.toggle("headerCatalog__go");
