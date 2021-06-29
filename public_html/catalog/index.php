@@ -142,7 +142,6 @@
 					<div class="productSpecial__productBlock productBlock">
 						<div class="productBlock__content sliderProductSpecial_js productBlockBox_js show" data-slider="novelty">
 							<div class="productBlock__item cardProduct">
-								<div class="cardProduct__new">Новинка</div>
 								<div class="cardProduct__img">
 									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)">
 										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
