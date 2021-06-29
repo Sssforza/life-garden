@@ -19,29 +19,29 @@
                         </a>
                     </div>
                 </div>
-                <div class="footer__company footerCompany">
-                    <div class="footerCompany__title">Компания</div>
-                    <ul class="footerCompany__container">
-                        <li><a class="footerCompany__links" href="#">О нас</a></li>
-                        <li><a class="footerCompany__links" href="#">Новости</a></li>
-                        <li><a class="footerCompany__links" href="#">Блог огородника</a></li>
-                        <li><a class="footerCompany__links" href="#">Семинар</a></li>
-                        <li><a class="footerCompany__links" href="#">Контакты</a></li>
+                <div class="footer__column">
+                    <div class="footer__title">Компания</div>
+                    <ul class="footer__ul">
+                        <li><a class="footer__point" href="#">О нас</a></li>
+                        <li><a class="footer__point" href="#">Новости</a></li>
+                        <li><a class="footer__point" href="#">Блог огородника</a></li>
+                        <li><a class="footer__point" href="#">Семинар</a></li>
+                        <li><a class="footer__point" href="#">Контакты</a></li>
                     </ul>
                 </div>
-                <div class="footer__buyers footerBuyers">
-                    <div class="footerBuyers__title">Покупателям</div>
-                    <ul class="footerBuyers__container">
-                        <li><a class="footerBuyers__links" href="#">Клубная карта</a></li>
-                        <li><a class="footerBuyers__links" href="#">Акции</a></li>
-                        <li><a class="footerBuyers__links" href="#">Доставка и оплата</a></li>
+                <div class="footer__column footer__column_margin">
+                    <div class="footer__title">Покупателям</div>
+                    <ul class="footer__ul">
+                        <li><a class="footer__point" href="#">Клубная карта</a></li>
+                        <li><a class="footer__point" href="#">Акции</a></li>
+                        <li><a class="footer__point" href="#">Доставка и оплата</a></li>
                     </ul>
                 </div>
-                <div class="footer__contacts footerContacts">
-                    <div class="footerContacts__title">Наши контакты</div>
+                <div class="footer__column footer__column_margin footerContacts">
+                    <div class="footer__title">Наши контакты</div>
                     <div class="footerContacts__tel">
                         <a class="footerContacts__telContainer" href="tel: +73812349341">
-                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/telephone.svg'; ?>
+                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/tel-footer.svg'; ?>
 
                             <span class="footerContacts__telText">+ 7 3812 34-93-41</span>
                         </a>
@@ -62,7 +62,7 @@
                     </div>
                 </div>
                 <div class="footer__subscribe footerSubscribe">
-                    <div class="footerSubscribe__title">Подпишитесь</div>
+                    <div class="footer__title footer__title_small">Подпишитесь</div>
                     <span class="footerSubscribe__label">Оставьте свой e-mail, и мы будем сообщать
                         вам об акциях и новинках</span>
                     <form class="footerSubscribe__form" action="">
@@ -73,12 +73,12 @@
                     </form>
                     <div class="footerSubscribe__error footerSubscribeError__js hidden">
                         <div class="footerSubscribe__errorImg">!</div>
-                        <span class="footerSubscribe__errorText">Адрес электронной почты введён некорректно. Пример: example@mail.ru
+                        <span class="footerSubscribe__errorText">Адрес электронной почты введён некорректно. <br> Пример: example@mail.ru
                         </span>
                     </div>
                 </div>
                 <div class="footer__accept footerAccept">
-                    <div class="footerAccept__title">Мы принимаем</div>
+                    <div class="footer__title footer__title_small">Мы принимаем</div>
                     <div class="footerAccept__cards">
                         <img class="footerAccept__masterImg" src="/dist/img/mastercard.png" alt="">
                         <img class="footerAccept__visaImg" src="/dist/img/visa.png" alt="">
@@ -87,7 +87,7 @@
                 </div>
                 <div class="footer__end footerEnd">
                     <div class="footerEnd__ferma">
-                        <a class="footerEnd__logo" href="#">
+                        <a class="footerEnd__logo" href="https://fermastudio.com/" target="_blank">
                             <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/ferma.svg'; ?>
                             <span>создание сайта</span>
                         </a>
