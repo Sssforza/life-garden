@@ -28,11 +28,12 @@ body {
 }
 .hiddenHeaderCatalog {
   overflow: hidden;
-  padding-right: 17px;
+  .main,
   .headerTop,
   .headerMiddle,
   .headerBottom,
-  .headerCatalog {
+  .headerCatalog,
+  .footer {
     padding-right: 17px;
   }
 }

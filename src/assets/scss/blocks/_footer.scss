@@ -5,8 +5,41 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 52px 0 58px 0;
+    padding-top: 50px;
+    padding-bottom: 58px;
     color: $white;
+  }
+  &__column {
+    &_margin {
+      margin-left: 45px;
+    }
+  }
+  &__ul {
+    margin-top: 5px;
+    & li:not(:first-child) {
+      margin-top: 14px;
+    }
+  }
+  &__point {
+    font-size: 18px;
+    line-height: 22px;
+    transition: $transition;
+    &:hover {
+      color: $jaundiced;
+    }
+  }
+  &__title {
+    font: {
+      family: Rubik;
+      weight: bold;
+      size: 28px;
+    }
+    line-height: 50px;
+    &_small {
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: normal;
+    }
   }
   &__buttonUp {
     position: absolute;
@@ -19,71 +52,48 @@
     border-radius: 10px;
     cursor: pointer;
     &:hover {
-      .footer__buttonUpArrow {
-        stroke: $jaundiced;
+      & svg {
+        path {
+          stroke: $jaundiced;
+        }
       }
     }
-  }
-  &__buttonUpArrow {
-    display: block;
-    stroke: $textColor;
-    transition: $transition;
+    & svg {
+      display: block;
+      path {
+        transition: $transition;
+        stroke: $textColor;
+      }
+    }
   }
 }
 .footerIcons {
   &__logo {
     display: block;
-  }
-  &__social {
-    margin-top: 46px;
-  }
-  &__socialSvg {
-    fill: #0f283e;
-    transition: $transition;
-    display: inline-block;
-    &:hover {
-      fill: $jaundiced;
-    }
     & svg {
       display: block;
     }
   }
-}
-.footerCompany {
-  margin-left: 20px;
-  &__title {
-    font: {
-      family: Rubik;
-      weight: bold;
-      size: 28px;
-    }
-    line-height: 50px;
-  }
-  &__container {
-    margin-top: 10px;
-    & li:not(:first-child) {
-      margin-top: 15px;
+  &__social {
+    margin-top: 38px;
+    & a:not(:first-child) {
+      margin-left: 9px;
     }
   }
-  &__links {
-    font-size: 18px;
-    line-height: 26px;
-    transition: $transition;
-    &:hover {
-      color: $jaundiced;
+  &__socialSvg {
+    & svg {
+      display: block;
+      fill: #0f283e;
+      transition: $transition;
+      &:hover {
+        fill: $jaundiced;
+      }
     }
+    display: inline-block;
   }
 }
 .footerBuyers {
   margin-left: 20px;
-  &__title {
-    font: {
-      family: Rubik;
-      weight: bold;
-      size: 28px;
-    }
-    line-height: 50px;
-  }
   &__container {
     margin-top: 10px;
     & li:not(:first-child) {
@@ -100,19 +110,10 @@
   }
 }
 .footerContacts {
-  margin-left: 20px;
-  &__title {
-    font: {
-      family: Rubik;
-      weight: bold;
-      size: 28px;
-    }
-    line-height: 50px;
-  }
   &__telContainer {
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 7px;
     pointer-events: none;
   }
   &__telText {
@@ -134,7 +135,7 @@
     pointer-events: none;
     display: flex;
     align-items: center;
-    margin-top: 19px;
+    margin-top: 14px;
   }
   &__emailText {
     margin-left: 10px;
@@ -156,7 +157,7 @@
   &__button {
     width: 230px;
     height: 55px;
-    margin-top: 21px;
+    margin-top: 20px;
     &:hover {
       background: #b3bb00;
     }
@@ -183,11 +184,11 @@
   &__form {
     display: flex;
     align-items: center;
-    margin-top: 16px;
+    margin-top: 10px;
     justify-content: space-between;
     border-bottom: 1px solid $white;
     width: 450px;
-    height: 42px;
+    height: 47px;
   }
 
   &__input {
@@ -202,22 +203,27 @@
     @include placeholder(18px, #889097, "FiraSans", $opacity: 1);
   }
   &__button {
-    display: block;
-    fill: $white;
-    height: 30px;
-    transition: $transition;
-    &:hover {
-      fill: $jaundiced;
+    & svg {
+      display: block;
+      path {
+        fill: $white;
+        transition: $transition;
+      }
+      &:hover {
+        path {
+          fill: $jaundiced;
+        }
+      }
     }
   }
   &__error {
     display: flex;
     position: absolute;
     align-items: center;
-    min-width: 464px;
+    min-width: 414px;
     height: 69px;
     left: 110%;
-    bottom: -12px;
+    bottom: -10px;
     background: &white;
     border-radius: 5px;
     padding: 15px 13px 14px 19px;
@@ -280,26 +286,25 @@
   &__logo {
     display: flex;
     align-items: start;
-    transition: $transition;
     & span {
-      margin-top: 5px;
+      margin-top: 9px;
       margin-left: 16px;
       font: {
         family: Montserrat;
         size: 15px;
       }
       line-height: 15px;
-
       border-bottom: 1px solid $white;
+      transition: $transition;
     }
     &:hover {
       & span {
-        border-bottom: none;
+        border-bottom: none ;
       }
     }
   }
   &__policy {
-    margin-top: 45px;
+    margin-top: 47px;
     font: {
       family: Rubik;
       size: 14px;
