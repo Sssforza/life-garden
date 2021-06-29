@@ -8,23 +8,50 @@
     padding: 52px 0 58px 0;
     color: $white;
   }
-
+  &__buttonUp {
+    position: absolute;
+    padding: 19px 21px;
+    width: 60.22px;
+    height: 62.85px;
+    top: 20px;
+    right: 0;
+    background: $white;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover {
+      .footer__buttonUpArrow {
+        stroke: $jaundiced;
+      }
+    }
+  }
+  &__buttonUpArrow {
+    display: block;
+    stroke: $textColor;
+    transition: $transition;
+  }
+}
+.footerIcons {
+  &__logo {
+    display: block;
+  }
   &__social {
     margin-top: 46px;
   }
   &__socialSvg {
     fill: #0f283e;
     transition: $transition;
+    display: inline-block;
     &:hover {
       fill: $jaundiced;
     }
+    & svg {
+      display: block;
+    }
   }
-
-  &__company {
-    margin-left: 20px;
-  }
-
-  &__companyTitle {
+}
+.footerCompany {
+  margin-left: 20px;
+  &__title {
     font: {
       family: Rubik;
       weight: bold;
@@ -32,13 +59,13 @@
     }
     line-height: 50px;
   }
-  &__companyContainer {
+  &__container {
     margin-top: 10px;
     & li:not(:first-child) {
       margin-top: 15px;
     }
   }
-  &__companyLinks {
+  &__links {
     font-size: 18px;
     line-height: 26px;
     transition: $transition;
@@ -46,11 +73,10 @@
       color: $jaundiced;
     }
   }
-
-  &__buyers {
-    margin-left: 20px;
-  }
-  &__buyersTitle {
+}
+.footerBuyers {
+  margin-left: 20px;
+  &__title {
     font: {
       family: Rubik;
       weight: bold;
@@ -58,13 +84,13 @@
     }
     line-height: 50px;
   }
-  &__buyersContainer {
+  &__container {
     margin-top: 10px;
     & li:not(:first-child) {
       margin-top: 15px;
     }
   }
-  &__buyersLinks {
+  &__links {
     font-size: 18px;
     line-height: 26px;
     transition: $transition;
@@ -72,11 +98,10 @@
       color: $jaundiced;
     }
   }
-
-  &__contacts {
-    margin-left: 20px;
-  }
-  &__contactsTitle {
+}
+.footerContacts {
+  margin-left: 20px;
+  &__title {
     font: {
       family: Rubik;
       weight: bold;
@@ -84,15 +109,13 @@
     }
     line-height: 50px;
   }
-  &__contactsTel {
-    pointer-events: none;
-  }
-  &__contactsTelContainer {
+  &__telContainer {
     display: flex;
     align-items: center;
     margin-top: 10px;
+    pointer-events: none;
   }
-  &__contactsTelText {
+  &__telText {
     font: {
       family: Rubik;
       size: 20px;
@@ -100,75 +123,64 @@
     line-height: 24px;
     margin-left: 10px;
   }
-  &__contactsTelCenter {
+  &__telCenter {
     font-size: 14px;
     line-height: 20px;
     color: #abd2bc;
     margin-top: 7px;
     margin-left: 32px;
   }
-  &__contactsEmail {
+  &__email {
     pointer-events: none;
     display: flex;
     align-items: center;
     margin-top: 19px;
   }
-  &__contactsEmailText {
+  &__emailText {
     margin-left: 10px;
     font-size: 18px;
     line-height: 30px;
   }
-
-  &__contactsAddress {
-    pointer-events: none;
+  &__address {
     margin-top: 19px;
   }
-  &__contactsAddressContainer {
+  &__addressContainer {
     display: flex;
     align-items: center;
   }
-  &__contactsAddressText {
+  &__addressText {
     margin-left: 10px;
     font-size: 18px;
     line-height: 30px;
   }
-  &__contactsButton {
-    pointer-events: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  &__button {
     width: 230px;
     height: 55px;
-    border-radius: 10px;
     margin-top: 21px;
-    color: $textColor;
-    background-color: $jaundiced;
-    transition: $transition;
     &:hover {
       background: #b3bb00;
     }
   }
-
-  &__subscribe {
-    margin-top: 27px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-  &__subscribeTitle {
+}
+.footerSubscribe {
+  margin-top: 27px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &__title {
     font: {
       family: Rubik;
       size: 24px;
     }
     line-height: 24px;
   }
-  &__subscribeLabel {
+  &__label {
     width: 340px;
     font-size: 16px;
     line-height: 22px;
     margin-top: 17px;
   }
-  &__subscribeForm {
+  &__form {
     display: flex;
     align-items: center;
     margin-top: 16px;
@@ -178,7 +190,7 @@
     height: 42px;
   }
 
-  &__subscribeInput {
+  &__input {
     font-size: 18px;
     line-height: 32px;
     color: #ffffff;
@@ -189,7 +201,7 @@
     border: none;
     @include placeholder(18px, #889097, "FiraSans", $opacity: 1);
   }
-  &__subscribeButton {
+  &__button {
     display: block;
     fill: $white;
     height: 30px;
@@ -198,11 +210,11 @@
       fill: $jaundiced;
     }
   }
-  &__subscribeError {
+  &__error {
     display: flex;
     position: absolute;
     align-items: center;
-    width: 464px;
+    min-width: 464px;
     height: 69px;
     left: 110%;
     bottom: -12px;
@@ -218,55 +230,54 @@
       border-right: 32px solid $white;
     }
   }
-  &__subscribeErrorImg {
-    padding: 5px 0;
+  &__errorImg {
+    padding: 4px 0;
     text-align: center;
     font-size: 24px;
     line-height: 22px;
-    width: 30px;
-    height: 30px;
+    min-width: 30px;
     background: $jaundiced;
     border-radius: 5px;
   }
-  &__subscribeErrorText {
+  &__errorText {
     margin-left: 11px;
     font-size: 14px;
     line-height: 20px;
   }
-
-  &__accept {
-    margin-top: 27px;
-  }
-  &__acceptTitle {
+}
+.footerAccept {
+  margin-top: 27px;
+  &__title {
     font: {
       family: Rubik;
       size: 24px;
     }
     line-height: 24px;
   }
-  &__acceptCards {
+  &__cards {
     display: flex;
     align-items: center;
   }
-  &__acceptMasterImg {
-    width: 67px;
-    height: 42px;
+  &__masterImg {
+    max-width: 100px;
+    max-height: 100px;
   }
-  &__acceptVisaImg {
+  &__visaImg {
     margin-top: 15px;
     margin-left: 15px;
+    max-width: 100px;
+    max-height: 100px;
   }
-  &__acceptMirImg {
+  &__mirImg {
     margin-left: 15px;
+    max-width: 100px;
+    max-height: 100px;
   }
-
-  &__end {
-    margin-top: 30px;
-    width: 330px;
-  }
-  &__ferma {
-  }
-  &__fermaLogo {
+}
+.footerEnd {
+  margin-top: 30px;
+  width: 330px;
+  &__logo {
     display: flex;
     align-items: start;
     transition: $transition;
@@ -278,7 +289,7 @@
         size: 15px;
       }
       line-height: 15px;
-      
+
       border-bottom: 1px solid $white;
     }
     &:hover {
@@ -287,82 +298,19 @@
       }
     }
   }
-
   &__policy {
-    display: flex;
-    flex-direction: column;
     margin-top: 45px;
-    width: 220px;
     font: {
       family: Rubik;
       size: 14px;
     }
     line-height: 20px;
+  }
+  &__policyLine {
     border-bottom: 1px solid #98a79f;
     transition: $transition;
     &:hover {
       border-bottom: none;
     }
-  }
-
-  &__buttonUp {
-    position: absolute;
-    padding: 19px 21px;
-    width: 60.22px;
-    height: 62.85px;
-    top: 20px;
-    right: 0;
-    background: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    cursor: pointer;
-  }
-  &__wrap {
-    z-index: 1000;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.65);
-    color: $textColor;
-  }
-  &__popap {
-    position: absolute;
-    width: 689px;
-    height: 240px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: $white;
-    border-radius: 10px;
-    padding: 45px 105px 70px;
-  }
-  &__popapClose {
-    position: absolute;
-    top: 37px;
-    right: 52px;
-    cursor: pointer;
-  }
-  &__popapTitle {
-    font: {
-      family: Rubik;
-      weight: bold;
-      size: 30px;
-    }
-    line-height: 36px;
-    text-align: center;
-  }
-  &__popapText {
-    margin-top: 20px;
-    font: {
-      family: Rubik;
-      size: 16px;
-    }
-    line-height: 24px;
-    align-items: center;
-    text-align: center;
   }
 }

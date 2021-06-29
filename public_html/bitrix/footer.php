@@ -1,121 +1,106 @@
         <footer class="footer">
             <div class="container footer__container">
-                <div class="footer__icons">
-                    <a class="footer__logo" href="#">
-                        <img src="/dist/img/logo.png" alt="">
+                <div class="footer__icons footerIcons">
+                    <a class="footerIcons__logo" href="#">
+                        <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/logo-white.svg'; ?>
                     </a>
-                    <div class="footer__social">
-                        <a class="footer__socialSvg" href="#">
+                    <div class="footerIcons__social">
+                        <a class="footerIcons__socialSvg" href="#">
                             <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/youtube.svg'; ?>
                         </a>
-                        <a class="footer__socialSvg" href="#">
+                        <a class="footerIcons__socialSvg" href="#">
                             <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/vk.svg'; ?>
                         </a>
-                        <a class="footer__socialSvg" href="#">
+                        <a class="footerIcons__socialSvg" href="#">
                             <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/insta.svg'; ?>
                         </a>
-                        <a class="footer__socialSvg" href="#">
+                        <a class="footerIcons__socialSvg" href="#">
                             <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/ok.svg'; ?>
                         </a>
                     </div>
                 </div>
-                <div class="footer__company">
-                    <div class="footer__companyTitle">Компания</div>
-                    <ul class="footer__companyContainer">
-                        <li><a class="footer__companyLinks" href="#">О нас</a></li>
-                        <li><a class="footer__companyLinks" href="#">Новости</a></li>
-                        <li><a class="footer__companyLinks" href="#">Блог огородника</a></li>
-                        <li><a class="footer__companyLinks" href="#">Семинар</a></li>
-                        <li><a class="footer__companyLinks" href="#">Контакты</a></li>
+                <div class="footer__company footerCompany">
+                    <div class="footerCompany__title">Компания</div>
+                    <ul class="footerCompany__container">
+                        <li><a class="footerCompany__links" href="#">О нас</a></li>
+                        <li><a class="footerCompany__links" href="#">Новости</a></li>
+                        <li><a class="footerCompany__links" href="#">Блог огородника</a></li>
+                        <li><a class="footerCompany__links" href="#">Семинар</a></li>
+                        <li><a class="footerCompany__links" href="#">Контакты</a></li>
                     </ul>
                 </div>
-                <div class="footer__buyers">
-                    <div class="footer__buyersTitle">Покупателям</div>
-                    <ul class="footer__buyersContainer">
-                        <li><a class="footer__buyersLinks" href="#">Клубная карта</a></li>
-                        <li><a class="footer__buyersLinks" href="#">Акции</a></li>
-                        <li><a class="footer__buyersLinks" href="#">Доставка и оплата</a></li>
+                <div class="footer__buyers footerBuyers">
+                    <div class="footerBuyers__title">Покупателям</div>
+                    <ul class="footerBuyers__container">
+                        <li><a class="footerBuyers__links" href="#">Клубная карта</a></li>
+                        <li><a class="footerBuyers__links" href="#">Акции</a></li>
+                        <li><a class="footerBuyers__links" href="#">Доставка и оплата</a></li>
                     </ul>
                 </div>
-                <div class="footer__contacts">
-                    <div class="footer__contactsTitle">Наши контакты</div>
-                    <a class="footer__contactsTel" href="tel: +73812349341">
-                        <div class="footer__contactsTelContainer">
-                            <div class="footer__contactsSvg">
-                                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/telephone.svg'; ?>
-                            </div>
-                            <span class="footer__contactsTelText">+ 7 3812 34-93-41</span>
-                        </div>
-                        <div class="footer__contactsTelCenter">Центр информационной поддержки клиента</div>
-                    </a>
-                    <a class="footer__contactsEmail" href="#">
-                        <div class="footer__contactsSvg">
-                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/email.svg'; ?>
-                        </div>
-                        <span class="footer__contactsEmailText"> zhivoy-sad.@mail.ru
+                <div class="footer__contacts footerContacts">
+                    <div class="footerContacts__title">Наши контакты</div>
+                    <div class="footerContacts__tel">
+                        <a class="footerContacts__telContainer" href="tel: +73812349341">
+                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/telephone.svg'; ?>
+
+                            <span class="footerContacts__telText">+ 7 3812 34-93-41</span>
+                        </a>
+                        <div class="footerContacts__telCenter">Центр информационной поддержки клиента</div>
+                    </div>
+                    <a class="footerContacts__email" href="#">
+                        <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/email.svg'; ?>
+                        <span class="footerContacts__emailText"> zhivoy-sad.@mail.ru
                         </span>
                     </a>
-                    <div class="footer__contactsAddress">
-                        <a class="footer__contactsAddressContainer" href="#">
-                            <div class="footer__contactsSvg">
-                                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/address.svg'; ?>
-                            </div>
-                            <span class="footer__contactsAddressText"> ул. Сакена Сейфуллина, 27, Омск
+                    <div class="footerContacts__address">
+                        <div class="footerContacts__addressContainer">
+                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/address.svg'; ?>
+                            <span class="footerContacts__addressText"> ул. Сакена Сейфуллина, 27, Омск
                             </span>
-
-                        </a>
-                        <a class="footer__contactsButton" href="#">Найти магазин рядом</a>
+                        </div>
+                        <a class="btnJaundicedGreenHover footerContacts__button" href="#">Найти магазин рядом</a>
                     </div>
                 </div>
-                <div class="footer__subscribe">
-                    <div class="footer__subscribeTitle">Подпишитесь</div>
-                    <span class="footer__subscribeLabel">Оставьте свой e-mail, и мы будем сообщать 
+                <div class="footer__subscribe footerSubscribe">
+                    <div class="footerSubscribe__title">Подпишитесь</div>
+                    <span class="footerSubscribe__label">Оставьте свой e-mail, и мы будем сообщать
                         вам об акциях и новинках</span>
-                    <form class="footer__subscribeForm" action="">
-                        <input class="footer__subscribeInput" type="text" placeholder="Укажите ваш e-mail" value="">
-                        <button class="footer__subscribeButton" type="submit">
+                    <form class="footerSubscribe__form" action="">
+                        <input class="footerSubscribe__input footerSubscribeInput__js" type="text" placeholder="Укажите ваш e-mail" value="">
+                        <button class="footerSubscribe__button footerSubscribeButton__js" type="submit">
                             <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
                         </button>
                     </form>
-                    <div class="footer__subscribeError hidden">
-                        <div class="footer__subscribeErrorImg">!</div>
-                        <span class="footer__subscribeErrorText">Введите коректный e-mail</span>
+                    <div class="footerSubscribe__error footerSubscribeError__js hidden">
+                        <div class="footerSubscribe__errorImg">!</div>
+                        <span class="footerSubscribe__errorText">Адрес электронной почты введён некорректно. Пример: example@mail.ru
+                        </span>
                     </div>
                 </div>
-                <div class="footer__accept">
-                    <div class="footer__acceptTitle">Мы принимаем</div>
-                    <div class="footer__acceptCards">
-                        <img class="footer__acceptMasterImg" src="/dist/img/mastercard.png" alt="">
-                        <img class="footer__acceptVisaImg" src="/dist/img/visa.png" alt="">
-                        <img class="footer__acceptMirImg" src="/dist/img/mir.png" alt="">
+                <div class="footer__accept footerAccept">
+                    <div class="footerAccept__title">Мы принимаем</div>
+                    <div class="footerAccept__cards">
+                        <img class="footerAccept__masterImg" src="/dist/img/mastercard.png" alt="">
+                        <img class="footerAccept__visaImg" src="/dist/img/visa.png" alt="">
+                        <img class="footerAccept__mirImg" src="/dist/img/mir.png" alt="">
                     </div>
                 </div>
-                <div class="footer__end">
-                    <div class="footer__ferma">
-                        <a class="footer__fermaLogo" href="#">
+                <div class="footer__end footerEnd">
+                    <div class="footerEnd__ferma">
+                        <a class="footerEnd__logo" href="#">
                             <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/ferma.svg'; ?>
                             <span>создание сайта</span>
                         </a>
                     </div>
-                    <a class="footer__policy" href="#">
-                        <span>&copy; 2021 Живой сад</span>
-                        <span>Политика конфиденциальности</span>
-                    </a>
+                    <div class="footerEnd__policy">
+                        <div>&copy; 2021 Живой сад</div>
+                        <a class="footerEnd__policyLine" href="#">Политика конфиденциальности</a>
+                    </div>
                 </div>
 
-                <div class="footer__buttonUp">
-                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/top-arrow.svg'; ?>
-                </div>
-
-                <div class="footer__wrap hidden">
-                    <div class="footer__popap">
-                        <div class="footer__popapClose">
-                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
-                        </div>
-                        <div class="footer__popapTitle">Вы успешно подписались</div>
-                        <div class="footer__popapText">Благодарим за то, что подписались на нашу email-рассылку.
-                            Теперь Вы будете получать актуальные новости и акции
-                            примерно один раз в неделю. </div>
+                <div class="footer__buttonUp footerButtonUp__js">
+                    <div class="footer__buttonUpArrow">
+                        <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/top-arrow.svg'; ?>
                     </div>
                 </div>
             </div>

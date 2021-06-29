@@ -1,5 +1,5 @@
 export function footerScrollUp() {
-  const buttonUp = document.querySelector(".footer__buttonUp");
+  const buttonUp = document.querySelector(".footerButtonUp__js");
 
   buttonUp.addEventListener("click", function backToTop() {
     if (window.pageYOffset > 0) {
@@ -10,18 +10,22 @@ export function footerScrollUp() {
 }
 
 export function footerValidationEmail() {
-  const footerInput = document.querySelector(".footer__subscribeInput");
-  const footerButtonEmail = document.querySelector(".footer__subscribeButton");
-  const footerError = document.querySelector(".footer__subscribeError");
-  const footerPopap = document.querySelector(".footer__wrap");
-  const footerPopapWindow = document.querySelector(".footer__popap");
-  const footerPopapClose = document.querySelector(".footer__popapClose");
+  const footerInput = document.querySelector(".footerSubscribeInput__js");
+  const footerButtonEmail = document.querySelector(".footerSubscribeButton__js");
+  const footerError = document.querySelector(".footerSubscribeError__js");
+  const footerPopap = document.querySelector(".windowsMessage__js");
+  const footerPopapWindow = document.querySelector(".windowsMessagePopap__js");
+  const footerPopapClose = document.querySelector(".windowsMessageClose__js");
 
   function validateEmail(value) {
     const re =
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(value);
   }
+
+function scrollOffOn(){
+  return document.body.classList.toggle("hiddenHeaderCatalog");
+}
 
   function closePopap(e) {
     if (
@@ -30,6 +34,7 @@ export function footerValidationEmail() {
       !footerPopapWindow.contains(e.target)
     ) {
       footerPopap.classList.add("hidden");
+      scrollOffOn()
       document.removeEventListener("click", closePopap);
     }
     
@@ -40,8 +45,8 @@ export function footerValidationEmail() {
 
   footerButtonEmail.addEventListener("click", (event) => {
     event.preventDefault();
-
     if (validateEmail(footerInput.value)) {
+      scrollOffOn()
       footerError.classList.add("hidden");
       footerPopap.classList.remove("hidden");
       setTimeout(() => {
@@ -55,6 +60,7 @@ export function footerValidationEmail() {
 
   footerPopapClose.addEventListener("click", () => {
     footerPopap.classList.add("hidden");
+    scrollOffOn()
     document.removeEventListener("click", closePopap);
   });
 }

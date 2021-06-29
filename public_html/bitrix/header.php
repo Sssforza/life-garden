@@ -286,4 +286,15 @@
           </div>
         </div>
       </div>
+      <div class="windowsMessage__wrap windowsMessage__js hidden">
+        <div class="windowsMessage__popap windowsMessagePopap__js">
+          <div class="windowsMessage__close windowsMessageClose__js">
+            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
+          </div>
+          <div class="windowsMessage__title">Вы успешно подписались</div>
+          <div class="windowsMessage__text">Благодарим за то, что подписались на нашу email-рассылку.
+            Теперь Вы будете получать актуальные новости и акции
+            примерно один раз в неделю. </div>
+        </div>
+      </div>
     </header>

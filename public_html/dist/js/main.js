@@ -18157,7 +18157,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "footerScrollUp", function() { return footerScrollUp; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "footerValidationEmail", function() { return footerValidationEmail; });
 function footerScrollUp() {
-  var buttonUp = document.querySelector(".footer__buttonUp");
+  var buttonUp = document.querySelector(".footerButtonUp__js");
   buttonUp.addEventListener("click", function backToTop() {
     if (window.pageYOffset > 0) {
       window.scrollBy(0, -80);
@@ -18166,21 +18166,26 @@ function footerScrollUp() {
   });
 }
 function footerValidationEmail() {
-  var footerInput = document.querySelector(".footer__subscribeInput");
-  var footerButtonEmail = document.querySelector(".footer__subscribeButton");
-  var footerError = document.querySelector(".footer__subscribeError");
-  var footerPopap = document.querySelector(".footer__wrap");
-  var footerPopapWindow = document.querySelector(".footer__popap");
-  var footerPopapClose = document.querySelector(".footer__popapClose");
+  var footerInput = document.querySelector(".footerSubscribeInput__js");
+  var footerButtonEmail = document.querySelector(".footerSubscribeButton__js");
+  var footerError = document.querySelector(".footerSubscribeError__js");
+  var footerPopap = document.querySelector(".windowsMessage__js");
+  var footerPopapWindow = document.querySelector(".windowsMessagePopap__js");
+  var footerPopapClose = document.querySelector(".windowsMessageClose__js");
 
   function validateEmail(value) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(value);
   }
 
+  function scrollOffOn() {
+    return document.body.classList.toggle("hiddenHeaderCatalog");
+  }
+
   function closePopap(e) {
     if (footerPopapWindow && e.target !== footerPopapWindow && !footerPopapWindow.contains(e.target)) {
       footerPopap.classList.add("hidden");
+      scrollOffOn();
       document.removeEventListener("click", closePopap);
     }
   }
@@ -18192,6 +18197,7 @@ function footerValidationEmail() {
     event.preventDefault();
 
     if (validateEmail(footerInput.value)) {
+      scrollOffOn();
       footerError.classList.add("hidden");
       footerPopap.classList.remove("hidden");
       setTimeout(function () {
@@ -18203,6 +18209,7 @@ function footerValidationEmail() {
   });
   footerPopapClose.addEventListener("click", function () {
     footerPopap.classList.add("hidden");
+    scrollOffOn();
     document.removeEventListener("click", closePopap);
   });
 }
