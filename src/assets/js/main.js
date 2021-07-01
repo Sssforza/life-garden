@@ -24,6 +24,9 @@ import {sliderMain, sliderProductSpecial} from './blocks/sliders.js';
 //📁 /assets/js/blocks  specialSample.js
 import {specialSampleTabs} from './blocks/specialSample.js';
 
+//📁 /assets/js/blocks  specialSample.js
+import {mainGardenShow} from './blocks/showFull.js';
+
 document.addEventListener("DOMContentLoaded", function(){
 
     // open catalog in the header
@@ -40,6 +43,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
     // tabs sliders in the main page section specialSample
     //specialSampleTabs();
+
+    // main garden show all
+    mainGardenShow();
 
     // sroll page on top
     footerScrollUp();

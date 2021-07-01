@@ -102,6 +102,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
 /* harmony import */ var _blocks_sliders_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8);
 /* harmony import */ var _blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9);
+/* harmony import */ var _blocks_showFull_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(10);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁 /node_modules/  slick 1.8.1
@@ -119,6 +120,8 @@ global.noUiSlider = nouislider__WEBPACK_IMPORTED_MODULE_3___default.a; //📁 /a
 
  //📁 /assets/js/blocks  specialSample.js
 
+ //📁 /assets/js/blocks  specialSample.js
+
 
 document.addEventListener("DOMContentLoaded", function () {
   // open catalog in the header
@@ -129,8 +132,15 @@ document.addEventListener("DOMContentLoaded", function () {
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_6__["sliderMain"])(); // slick slider main page special product
 
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_6__["sliderProductSpecial"])(); // tabs sliders in the main page section specialSample
+<<<<<<< HEAD
   //specialSampleTabs();
   // sroll page on top
+=======
+
+  Object(_blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_7__["specialSampleTabs"])(); // main garden show all
+
+  Object(_blocks_showFull_js__WEBPACK_IMPORTED_MODULE_8__["mainGardenShow"])(); // sroll page on top
+>>>>>>> 5b9c141801beb5c75f673ef317339c5d80193e0d
 
   Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerScrollUp"])(); // validation e-mail
 
@@ -18288,6 +18298,23 @@ function specialSampleTabs() {
         }
       });
     });
+  });
+}
+;
+
+/***/ }),
+/* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mainGardenShow", function() { return mainGardenShow; });
+// main garden show all
+function mainGardenShow() {
+  var buttonGarden = document.querySelector(".mainGardenBtn_js");
+  var infoGarden = document.querySelector(".mainGarden__info");
+  buttonGarden.addEventListener("click", function () {
+    infoGarden.classList.toggle("show");
   });
 }
 ;
