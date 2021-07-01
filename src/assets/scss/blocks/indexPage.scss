@@ -527,9 +527,28 @@
         color: $textColor;
         text-align: center;
         cursor: pointer;
+        &:hover {
+            span {
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
         span {
+            position: relative;
             margin-right: 6px;
             border-bottom: 2px dashed #98A79F;
+            transition: $transition;
+            &:after {
+                content:'';
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                width: 0;
+                height: 2px;
+                background: #98A79F;
+                transition: width 0.3s ease-out;
+            }
         }
         svg {
             display: inline-block;
