@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function(){
     sliderProductSpecial();
 
     // tabs sliders in the main page section specialSample
-    //specialSampleTabs();
+    specialSampleTabs();
 
     // main garden show all
     mainGardenShow();

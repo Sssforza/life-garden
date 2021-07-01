@@ -270,14 +270,14 @@ body {
     padding: 8px 16px 8px 11px;
     display: flex;
     align-items: center;
-    background: #F27820;
+    background: #f27820;
     border-radius: 0px 10px 0px 15px;
     z-index: 5;
     font-size: 13px;
     line-height: 24px;
     color: $white;
     &:before {
-      content:'';
+      content: "";
       margin-right: 6px;
       position: relative;
       display: block;
@@ -505,8 +505,8 @@ body {
     right: 52px;
     cursor: pointer;
     transition: $transition;
-    fill: #919EAB;
-    &:hover{
+    fill: #919eab;
+    &:hover {
       fill: $textColor;
     }
   }
@@ -530,8 +530,24 @@ body {
     text-align: center;
   }
 }
-.chain{
-font-size: 14px;
-line-height: 10px;
-color:$gray1;
+.breadCrumbs {
+  font-size: 14px;
+  line-height: 10px;
+  color: $gray1;
+  &__ul {
+    display: flex;
+  }
+  & li:not(:first-child){
+    margin-left: 37px;
+  }
+  &__link {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: url("../img/bread.png");
+      top: 3px;
+      right: -19px;
+      pointer-events: none;
+    }
+  }
 }

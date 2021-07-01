@@ -16,7 +16,7 @@
 }
 .headerTop {
   position: relative;
-  padding: 10px 0;
+  padding: 8px 0;
   background-color: $green;
   color: $white;
   line-height: 12px;
@@ -177,6 +177,18 @@
   position: relative;
   cursor: pointer;
   margin-right: 30px;
+  & svg {
+    path {
+      fill: $textColor;
+      transition: $transition;
+    }
+    display: block;
+    &:hover {
+      path {
+        fill: $green;
+      }
+    }
+  }
   &__count {
     position: absolute;
     top: -10px;
@@ -200,7 +212,13 @@
     color: $lightGreen;
   }
   &__svg {
-    display: block;
+/*     & svg{
+      transition: $transition;
+      fill: $textColor;
+      path{
+        display: block;
+      }
+    } */
   }
   &__garbage {
     display: flex;
@@ -224,7 +242,7 @@
 }
 .headerBottom {
   background-color: $white;
-  padding: 19px 0;
+  padding: 17px 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
   z-index: 50;
@@ -474,7 +492,7 @@
     position: relative;
   }
   &__inner {
-    display: block;
+
   }
 }
 .hamburger.is-active .hamburger__inner,
@@ -508,7 +526,7 @@
   top: 0px;
 }
 .hamburger__collapse .hamburger__inner {
-  bottom: 0;
+  bottom: 0px;
   transition-duration: 0.13s;
   transition-delay: 0.13s;
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);

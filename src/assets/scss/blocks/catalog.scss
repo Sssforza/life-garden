@@ -1,0 +1,80 @@
+@import "../modules/utilities/_variables.scss";
+@import "../modules/utilities/_mixins.scss";
+.catalog {
+  &__title {
+    margin-top: 41px;
+    display: flex;
+
+    font: {
+      family: Rubik;
+      weight: 900;
+      size: 56px;
+    }
+    line-height: 50px;
+    & span {
+      margin-top: 10px;
+      margin-left: 10px;
+      font: {
+        family: FiraSans;
+        size: 20px;
+        weight: normal;
+      }
+      line-height: 24px;
+      color: #98a6b4;
+    }
+  }
+}
+.catalogEvent {
+  margin-top: 35px;
+  display: flex;
+  align-items: flex-end;
+  background-image: url("../../img/bgEvent.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1400px;
+  height: 350px;
+  border-radius: 20px;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(32, 32, 32, 0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: $transition;
+    border-radius: 20px;
+  }
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+  &__textContainer {
+    padding: 32px 107px 38px 41px;
+    background-color: #feb322;
+    border-radius: 0 20px;
+    color: $white;
+    max-width: 600px;
+  }
+  &__title {
+    font: {
+      family: Rubik;
+      weight: 500;
+      size: 36px;
+    }
+    line-height: 42px;
+  }
+  &__description {
+    margin-top: 20px;
+    font: {
+      family: Rubik;
+      size: 18px;
+    }
+    line-height: 24px;
+  }
+}
