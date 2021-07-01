@@ -5,8 +5,8 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-top: 50px;
-    padding-bottom: 58px;
+    padding-top: 50px !important;
+    padding-bottom: 58px !important;
     color: $white;
   }
   &__column {

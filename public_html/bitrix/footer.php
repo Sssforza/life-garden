@@ -1,5 +1,5 @@
         <footer class="footer">
-            <div class="container footer__container">
+            <div class="footer__container container">
                 <div class="footer__icons footerIcons">
                     <a class="footerIcons__logo" href="#">
                         <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/logo-white.svg'; ?>

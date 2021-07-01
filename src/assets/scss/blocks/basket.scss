@@ -1,3 +1,5 @@
+@import "../modules/utilities/_variables.scss";
+@import "../modules/utilities/_mixins.scss";
 .basket {
   display: flex;
   color: $textColor;
@@ -14,9 +16,10 @@
   &__free {
     display: flex;
     align-items: center;
+    margin-top: 33px;
     padding: 0 20px;
     border-radius: 10px;
-    background-color: #F2F3F4;
+    background-color: #f2f3f4;
     & span {
       font: {
         family: Rubik;
@@ -26,9 +29,444 @@
       text-transform: uppercase;
       margin-left: 9px;
     }
-    & img{
-        width: 31px;
-        height: 25px;
+    & img {
+      width: 31px;
+      height: 25px;
     }
   }
+  &__cards {
+  }
+  &__order {
+  }
+  &__radio {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    & input {
+    }
+    & span {
+      margin-left: 9px;
+      font: {
+        family: Rubik;
+        weight: 500;
+        size: 18px;
+      }
+      line-height: 21px;
+    }
+  }
+  &__radioBtn {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #cad4db;
+    border-radius: 50%;
+    &_active {
+      &::after {
+        content: "";
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        background: #1e7243;
+        top: 3px;
+        left: 3px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+.basketCard {
+  display: flex;
+  padding: 26px 0;
+  border-bottom: 1px solid $border;
+  &__image {
+    background-image: url(../../dist/img/tree.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    border-radius: 10px;
+    width: 101px;
+    height: 90px;
+  }
+  &__description {
+    margin-left: 25px;
+    width: 395px;
+  }
+  &__title {
+    font: {
+      family: Rubik;
+      size: 18px;
+    }
+    line-height: 20px;
+  }
+  &__article {
+    font-size: 14px;
+    line-height: 10px;
+    color: #8c949b;
+    margin-top: 15px;
+  }
+  &__action {
+    display: flex;
+  }
+  &__count {
+    margin-left: 90px;
+  }
+  &__price {
+    margin-left: 73px;
+    width: 100px;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 10px;
+  }
+  &__priceValue {
+    display: inline-block;
+    margin-top: 22px;
+    font: {
+      family: Rubik;
+      size: 24px;
+      weight: 500;
+    }
+    line-height: 24px;
+  }
+  &__icons {
+    display: flex;
+    margin-top: 32px;
+    margin-left: 70px;
+  }
+  &__iconLike {
+    & svg {
+      display: block;
+      cursor: pointer;
+      fill: #98a6b4;
+      transition: $transition;
+      .bg {
+        fill: $white;
+        transition: all 0.1s;
+      }
+      &:hover {
+        fill: $textColor;
+        & .bg {
+          fill: $textColor;
+        }
+      }
+    }
+  }
+  &__iconBasket {
+    margin-left: 19px;
+    & svg {
+      path {
+        fill: #98a6b4;
+        transition: $transition;
+      }
+      display: block;
+      cursor: pointer;
+      &:hover {
+        path {
+          fill: $textColor;
+        }
+      }
+    }
+  }
+}
+.basketOrder {
+  margin-top: 125px;
+  margin-left: 75px;
+  color: $textColor;
+  &__info {
+    background: #deeddd;
+    border-radius: 30px;
+    padding: 37px 30px 43px;
+  }
+  &__title {
+    font: {
+      family: Rubik;
+      weight: 500;
+      size: 30px;
+    }
+    line-height: 36px;
+    &_small {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 32px;
+    padding-top: 10px;
+    &_bold {
+    }
+    &_green {
+      color: $green;
+    }
+  }
+  &__price {
+    font-weight: 500;
+    text-align: right;
+    &_big {
+      font: {
+        family: Rubik;
+        weight: 500;
+        size: 28px;
+      }
+      line-height: 56px;
+    }
+  }
+  &__payment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__paymentTitle {
+    font: {
+      family: Rubik;
+      size: 18px;
+    }
+    line-height: 36px;
+  }
+  &__btn {
+    cursor: pointer;
+    width: 295px;
+    height: 55px;
+    margin-top: 25px;
+  }
+  &__policy {
+    margin-top: 20px;
+    font: {
+      family: Rubik;
+      size: 13px;
+    }
+    line-height: 20px;
+  }
+  &__policyLink {
+    text-decoration: underline;
+    transition: $transition;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &__club{
+    margin-top: 30px;
+  
+  }
+  &__send {
+    margin-top: 32px;
+  }
+  &__sendText {
+    margin-top: 13px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #6f7982;
+  }
+  &__sendLink {
+    border-bottom: 1px solid #1e7243;
+    transition: $transition;
+    &:hover {
+      border-bottom: none;
+    }
+  }
+}
+
+.basketForm {
+  margin-top: 20px;
+  &__title {
+    font: {
+      family: Rubik;
+      weight: bold;
+      size: 35px;
+    }
+    line-height: 50px;
+  }
+  &__contact {
+    margin-top: 20px;
+  }
+  &__denomination {
+    display: flex;
+    align-items: center;
+  }
+  &__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #deeddd;
+    font: {
+      family: Rubik;
+      weight: 500;
+      size: 20px;
+    }
+    line-height: 24px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+  &__name {
+    margin-left: 11px;
+    font: {
+      family: Rubik;
+      weight: 500;
+      size: 30px;
+    }
+    line-height: 36px;
+  }
+  &__inputContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__inputItem {
+    margin-top: 20px;
+  }
+  &__inputName {
+    font: {
+      family: Rubik;
+      size: 16px;
+    }
+    line-height: 19px;
+  }
+  &__input {
+    margin-top: 10px;
+    font: {
+      family: FiraSans;
+      size: 16px;
+    }
+    line-height: 19px;
+    width: 450px;
+    border: 1px solid #c7d0d9;
+    border-radius: 5px;
+    padding: 16px 18px;
+    @include placeholder(16px, #8c949b, "FiraSans", $opacity: 1);
+    &_margin {
+      margin-top: 17px;
+    }
+  }
+  &__city {
+    margin-top: 64px;
+  }
+  &__receiving {
+    margin-top: 65px;
+  }
+  &__choice {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 23px;
+    padding: 16px 60px;
+    width: 450px;
+    height: 55px;
+    font: {
+      family: Rubik;
+      weight: 500;
+      size: 18px;
+    }
+    line-height: 21px;
+    background: #f2f3f4;
+    border-radius: 50px;
+    &_active {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      width: 221px;
+      height: 49px;
+
+      background: #c9d200;
+      border-radius: 50px;
+    }
+  }
+  &__courier {
+  }
+
+  &__waypay {
+    margin-top: 66px;
+  }
+  &__waypayContainer {
+    margin-top: 35px;
+  }
+  &__waypayDescription {
+    margin-top: 10px;
+    margin-left: 35px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6f7982;
+  }
+}
+.basketPickup {
+  margin-top: 41px;
+  &__shop {
+    display: flex;
+    margin-top: 14px;
+  }
+  &__map {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    & svg {
+      path {
+        display: block;
+      }
+    }
+    & span {
+      margin-left: 10px;
+      font: {
+        family: Rubik;
+        weight: 500;
+        size: 16px;
+      }
+      line-height: 30px;
+    }
+  }
+  &__info {
+    display: flex;
+    margin-top: 28px;
+    & div:not(:first-child) {
+      margin-left: 54px;
+    }
+    & span {
+      &:first-child {
+        font: {
+          weight: 500;
+          size: 14px;
+        }
+        line-height: 21px;
+        color: $green;
+      }
+      &:last-child {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+  &__infoItem {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.basketClub {
+  margin-top: 58px;
+  &__checked {
+    display: flex;
+    margin-top: 30px;
+    & div:last-child {
+      margin-left: 43px;
+    }
+  }
+  &__text {
+    margin-top: 32px;
+    font-size: 16px;
+    line-height: 24px;
+    & a {
+      border-bottom: 2px solid #1e7243;
+    }
+  }
+}
+
+.availability_margin {
+  margin-top: 20px;
+}
+
+.counter_margin {
+  margin-top: 17px;
 }

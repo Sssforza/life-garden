@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function(){
     sliderProductSpecial();
 
     // tabs sliders in the main page section specialSample
-    specialSampleTabs();
+    //specialSampleTabs();
 
     // sroll page on top
     footerScrollUp();

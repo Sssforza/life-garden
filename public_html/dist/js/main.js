@@ -129,8 +129,8 @@ document.addEventListener("DOMContentLoaded", function () {
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_6__["sliderMain"])(); // slick slider main page special product
 
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_6__["sliderProductSpecial"])(); // tabs sliders in the main page section specialSample
-
-  Object(_blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_7__["specialSampleTabs"])(); // sroll page on top
+  //specialSampleTabs();
+  // sroll page on top
 
   Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerScrollUp"])(); // validation e-mail
 
