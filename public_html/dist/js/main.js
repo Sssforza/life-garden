@@ -100,9 +100,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var nouislider__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(nouislider__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _blocks_header_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
 /* harmony import */ var _blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
-/* harmony import */ var _blocks_sliders_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8);
-/* harmony import */ var _blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9);
-/* harmony import */ var _blocks_showFull_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(10);
+/* harmony import */ var _blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8);
+/* harmony import */ var _blocks_sliders_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9);
+/* harmony import */ var _blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(10);
+/* harmony import */ var _blocks_showFull_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(11);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁 /node_modules/  slick 1.8.1
@@ -115,6 +116,8 @@ global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁
 global.noUiSlider = nouislider__WEBPACK_IMPORTED_MODULE_3___default.a; //📁 /assets/js/blocks  _header.js
 
  //📁 /assets/js/blocks  _footer.js
+
+ //📁 /assets/js/blocks  catalog.js
 
  //📁 /assets/js/blocks  sliders.js
 
@@ -129,17 +132,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerSearchelp"])(); // slick slider main
 
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_6__["sliderMain"])(); // slick slider main page special product
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_7__["sliderMain"])(); // slick slider main page special product
 
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_6__["sliderProductSpecial"])(); // tabs sliders in the main page section specialSample
-
-  Object(_blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_7__["specialSampleTabs"])(); // main garden show all
-
-  Object(_blocks_showFull_js__WEBPACK_IMPORTED_MODULE_8__["mainGardenShow"])(); // sroll page on top
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_7__["sliderProductSpecial"])(); // tabs sliders in the main page section specialSample
+  //specialSampleTabs();
+  // main garden show all
+  //mainGardenShow();
+  // sroll page on top
 
   Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerScrollUp"])(); // validation e-mail
 
-  Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerValidationEmail"])();
+  Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerValidationEmail"])(); //open popups in catalog
+
+  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["catalogPopups"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(1)))
 
@@ -18225,6 +18230,27 @@ function footerValidationEmail() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "catalogPopups", function() { return catalogPopups; });
+function catalogPopups() {
+  var btnPopular = document.querySelector(".catalogCardsPopularLink__js");
+  var btnAlphabet = document.querySelector(".catalogCardsAlphabetLink__js");
+  var popupPopular = document.querySelector(".catalogCardsPopularPopup__js");
+  var popupAlphabet = document.querySelector(".catalogCardsAlphabetPopup__js");
+  btnPopular.addEventListener("click", function () {
+    popupPopular.classList.toggle("hidden");
+    btnPopular.classList.toggle("catalogCardsPopular__link_black");
+  });
+  btnAlphabet.addEventListener("click", function () {
+    popupAlphabet.classList.toggle("hidden");
+  });
+}
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderMain", function() { return sliderMain; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderProductSpecial", function() { return sliderProductSpecial; });
 // SliderMain
@@ -18265,7 +18291,7 @@ function sliderProductSpecial() {
 ;
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18298,7 +18324,7 @@ function specialSampleTabs() {
 ;
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

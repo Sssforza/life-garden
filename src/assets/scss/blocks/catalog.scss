@@ -23,9 +23,12 @@
       color: #98a6b4;
     }
   }
+  &__body {
+    display: flex;
+    margin-top: 30px;
+  }
 }
 .catalogEvent {
-  margin-top: 35px;
   display: flex;
   align-items: flex-end;
   background-image: url("../../img/bgEvent.png");
@@ -54,7 +57,7 @@
       opacity: 1;
     }
   }
-  &__textContainer {
+  &__box {
     padding: 32px 107px 38px 41px;
     background-color: #feb322;
     border-radius: 0 20px;
@@ -76,5 +79,217 @@
       size: 18px;
     }
     line-height: 24px;
+  }
+}
+
+.catalogMenu {
+  width: 310px;
+}
+
+.catalogCards {
+  margin-left: 40px;
+  width: 1043px;
+  &__filters {
+    display: flex;
+    align-items: center;
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    row-gap: 30px;
+    column-gap: 19px;
+    margin-top: 10px;
+  }
+  &__item {
+  }
+  &__still {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 48px;
+    border: 1px solid $border;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-top: 35px;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+      border-color: $textColor;
+    }
+    & span {
+      margin-left: 13px;
+      font: {
+        family: Rubik;
+        size: 16px;
+      }
+      line-height: 24px;
+    }
+  }
+  &__pagination {
+    margin: 29px auto 0;
+    width: 265px;
+    height: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__paginationNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    font: {
+      family: Rubik;
+      size: 16px;
+    }
+    line-height: 21px;
+    transition: $transition;
+    &:hover {
+      color: $green;
+    }
+
+    &_checked {
+      color: $white;
+      background: #1e7243;
+      border-radius: 30px;
+      pointer-events: none;
+    }
+  }
+}
+.catalogCardsPopular {
+  position: relative;
+  &__link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 19px;
+    transition: $transition;
+    & svg {
+      display: block;
+      margin-left: 6px;
+      path {
+        transition: $transition;
+      }
+    }
+    &:hover {
+      color: $green;
+      & svg {
+        path {
+          stroke: $green;
+        }
+      }
+    }
+  }
+  &__popup {
+    z-index: 10;
+    width: 255px;
+    height: 152px;
+    position: absolute;
+    top: 29px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 26px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+  & input[type="radio"] {
+    margin: 0px;
+    width: 25px;
+    height: 25px;
+    background-color: $green;
+    position: relative;
+  }
+  & input[type="radio"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid $border;
+  }
+  & input[type="radio"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: $green;
+    transform: translate(-50%, -50%);
+  }
+  &__label {
+    margin-left: 9px;
+  }
+}
+.catalogCardsAlphabet {
+  margin-left: 22px;
+  position: relative;
+  &__link {
+    display: flex;
+    align-items: center;
+    margin-left: 22px;
+    position: relative;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+    transition: $transition;
+    &_black{
+      &:hover {
+        color: $textColor;
+        & svg {
+          path {
+            stroke: $textColor;
+          }
+        }
+      }
+    }
+    & svg {
+      display: block;
+      margin-left: 6px;
+      path {
+        transition: $transition;
+      }
+    }
+    &:hover {
+      color: $green;
+      & svg {
+        path {
+          stroke: $green;
+        }
+      }
+    }
+  }
+
+  &__popup {
+    z-index: 10;
+    width: 520px;
+    height: 140px;
+    position: absolute;
+    top: 29px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 26px;
   }
 }

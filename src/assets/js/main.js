@@ -18,6 +18,9 @@ import {headerCatalog, headerSearchelp} from './blocks/_header.js';
 //📁 /assets/js/blocks  _footer.js
 import {footerScrollUp, footerValidationEmail} from './blocks/_footer.js';
 
+//📁 /assets/js/blocks  catalog.js
+import {catalogPopups} from './blocks/catalog.js';
+
 //📁 /assets/js/blocks  sliders.js
 import {sliderMain, sliderProductSpecial} from './blocks/sliders.js';
 
@@ -42,15 +45,18 @@ document.addEventListener("DOMContentLoaded", function(){
     sliderProductSpecial();
 
     // tabs sliders in the main page section specialSample
-    specialSampleTabs();
+    //specialSampleTabs();
 
     // main garden show all
-    mainGardenShow();
+    //mainGardenShow();
 
     // sroll page on top
     footerScrollUp();
 
     // validation e-mail
     footerValidationEmail();
+
+    //open popups in catalog
+    catalogPopups();
 });
 
