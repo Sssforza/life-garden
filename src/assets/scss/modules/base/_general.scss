@@ -133,6 +133,29 @@ body {
     background: #1b643b;
   }
 }
+.btnShow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid $border;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+      border-color: $textColor;
+    }
+    & span {
+      margin-left: 13px;
+      font: {
+        family: Rubik;
+        size: 16px;
+      }
+      line-height: 24px;
+    }
+}
 .productBlock {
   margin-top: 37px;
   &__content {
@@ -636,4 +659,71 @@ body {
 }
 .page {
   margin-top: 35px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__prev {
+    cursor: pointer;
+    & svg {
+      path {
+        display: block;
+        transition: $transition;
+      }
+    }
+    &:hover {
+      & svg {
+        path {
+          stroke: $green;
+        }
+      }
+    }
+  }
+  &__next {
+    cursor: pointer;
+    & svg {
+      path {
+        display: block;
+        transition: $transition;
+      }
+    }
+    &:hover {
+      & svg {
+        path {
+          stroke: $green;
+        }
+      }
+    }
+  }
+  &__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    font: {
+      family: Rubik;
+      size: 16px;
+    }
+    line-height: 21px;
+    transition: $transition;
+    &:hover {
+      color: $green;
+    }
+  }
+  &__points {
+  }
+  &_checked {
+    pointer-events: none;
+    color: $white;
+    background: $green;
+    border-radius: 30px;
+    &:hover {
+      color: $white;
+
+    }
+  }
 }

@@ -11,7 +11,9 @@ export function footerScrollUp() {
 
 export function footerValidationEmail() {
   const footerInput = document.querySelector(".footerSubscribeInput__js");
-  const footerButtonEmail = document.querySelector(".footerSubscribeButton__js");
+  const footerButtonEmail = document.querySelector(
+    ".footerSubscribeButton__js"
+  );
   const footerError = document.querySelector(".footerSubscribeError__js");
   const footerPopap = document.querySelector(".windowsMessage__js");
   const footerPopapWindow = document.querySelector(".windowsMessagePopap__js");
@@ -23,9 +25,9 @@ export function footerValidationEmail() {
     return re.test(value);
   }
 
-function scrollOffOn(){
-  return document.body.classList.toggle("hiddenHeaderCatalog");
-}
+  function scrollOffOn() {
+    return document.body.classList.toggle("hiddenHeaderCatalog");
+  }
 
   function closePopap(e) {
     if (
@@ -34,25 +36,23 @@ function scrollOffOn(){
       !footerPopapWindow.contains(e.target)
     ) {
       footerPopap.classList.add("hidden");
-      scrollOffOn()
+      scrollOffOn();
       document.removeEventListener("click", closePopap);
     }
-    
   }
-  footerInput.addEventListener("click", () =>{
+  footerInput.addEventListener("click", () => {
     footerError.classList.add("hidden");
-  })
+  });
 
   footerButtonEmail.addEventListener("click", (event) => {
     event.preventDefault();
     if (validateEmail(footerInput.value)) {
-      scrollOffOn()
+      scrollOffOn();
       footerError.classList.add("hidden");
       footerPopap.classList.remove("hidden");
       setTimeout(() => {
         document.addEventListener("click", closePopap);
-      }, 0)
-
+      }, 0);
     } else {
       footerError.classList.remove("hidden");
     }
@@ -60,7 +60,7 @@ function scrollOffOn(){
 
   footerPopapClose.addEventListener("click", () => {
     footerPopap.classList.add("hidden");
-    scrollOffOn()
+    scrollOffOn();
     document.removeEventListener("click", closePopap);
   });
 }

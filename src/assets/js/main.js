@@ -19,7 +19,7 @@ import {headerCatalog, headerSearchelp} from './blocks/_header.js';
 import {footerScrollUp, footerValidationEmail} from './blocks/_footer.js';
 
 //📁 /assets/js/blocks  catalog.js
-import {catalogPopups} from './blocks/catalog.js';
+import {catalogPopups, checkNum} from './blocks/catalog.js';
 
 //📁 /assets/js/blocks  sliders.js
 import {sliderMain, sliderProductSpecial} from './blocks/sliders.js';
@@ -58,5 +58,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
     //open popups in catalog
     catalogPopups();
+
+    //
+    checkNum();
 });
 

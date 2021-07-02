@@ -29,32 +29,142 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				</div>
 				<div class="catalog__body">
 					<aside class="catalog__menu catalogMenu">
+						<form action="">
+							<div class="catalogMenu__links">
+								<ul>
+									<li><a class="catalogMenu__link catalogMenu__link_checked" href="#">Анис</a></li>
+									<li><a class="catalogMenu__link" href="#">Базилик</a></li>
+									<li><a class="catalogMenu__link" href="#">Валериана</a></li>
+									<li><a class="catalogMenu__link" href="#">Горчица</a></li>
+									<li><a class="catalogMenu__link" href="#">Душица</a></li>
+									<li><a class="catalogMenu__link" href="#">Зверобой</a></li>
+								</ul>
+								<div class="catalogMenu__show"> <span>Показать еще</span>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/alphabet.svg'; ?>
+								</div>
+							</div>
+							<div class="catalogMenu__price">
+								<div class="catalogMenu__title">Цена</div>
+
+							</div>
+							<div class="catalogMenu__sort">
+								<div class="catalogMenu__down">
+									<span class="catalogMenu__title">Сорт</span>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/alphabet.svg'; ?>
+								</div>
+								<div class="catalogMenu__container">
+									<div class="catalogMenu__labelSort"> 
+										<label class="catalogMenu__labelSort">
+											<input class="catalogMenu__check" type="checkbox" />
+											<span>Бонсай</span> 
+										</label>
+									</div>
+									<div class="catalogMenu__labelSort"> 
+										<label class="catalogMenu__labelSort">
+											<input class="catalogMenu__check" type="checkbox" />
+											<span>Бонсай</span> 
+										</label>
+									</div>
+									<div class="catalogMenu__labelSort"> 
+										<label class="catalogMenu__labelSort">
+											<input class="catalogMenu__check" type="checkbox" />
+											<span>Бонсай</span> 
+										</label>
+									</div>
+									<div class="catalogMenu__labelSort"> 
+										<label class="catalogMenu__labelSort">
+											<input class="catalogMenu__check" type="checkbox" />
+											<span>Бонсай</span> 
+										</label>
+									</div>
+									<div class="catalogMenu__labelSort"> 
+										<label class="catalogMenu__labelSort">
+											<input class="catalogMenu__check" type="checkbox" />
+											<span>Бонсай</span> 
+										</label>
+									</div>
+								
+									<div class="catalogMenu__show catalogMenu__show_small">
+										<span>Показать еще</span>
+										<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/alphabet.svg'; ?>
+									</div>
+								</div>
+							</div>
+							<div class="catalogMenu__stock">
+								<div class="catalogMenu__title">В наличии</div>
+
+							</div>
+							<div class="catalogMenu__new">
+								<div class="catalogMenu__title">Новинки</div>
+
+							</div>
+							<div class="catalogMenu__discount">
+								<div class="catalogMenu__title">Товары со скидкой</div>
+
+							</div>
+						</form>
 
 					</aside>
 					<div class="catalog__cards catalogCards">
 						<div class="catalogCards__filters">
 							<div class="catalogCards__popular catalogCardsPopular ">
-								<div class="catalogCardsPopular__link catalogCardsPopularLink__js"> <span>Сначала популярные</span>
-									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pop1.svg'; ?></div>
+								<div class="catalogCardsPopular__link catalogCardsPopularLink__js">
+									<div class="catalogCardsPopular__linkText catalogCardsPopularLinkText__js">Сначала популярные</div>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pop1.svg'; ?>
+								</div>
 
 								<div class="catalogCardsPopular__popup catalogCardsPopularPopup__js hidden">
-									<div class="catalogCardsPopular__item"> <input type="radio" id="contactChoice1" name="popular" checked>
-										<label class="catalogCardsPopular__label" for="contactChoice1">сначала популярные</label>
+									<div class="catalogCardsPopular__item catalogCardsPopularItem__js"> <input type="radio" id="contactChoice1" name="popular" checked>
+										<label class="catalogCardsPopular__label catalogCardsPopularLabel__js" for="contactChoice1">Сначала популярные</label>
 									</div>
-									<div class="catalogCardsPopular__item"><input type="radio" id="contactChoice2" name="popular">
-										<label class="catalogCardsPopular__label" for="contactChoice2">сначала дешевле</label>
+									<div class="catalogCardsPopular__item catalogCardsPopularItem__js"><input type="radio" id="contactChoice2" name="popular">
+										<label class="catalogCardsPopular__label catalogCardsPopularLabel__js" for="contactChoice2">Сначала дешевле</label>
 									</div>
-									<div class="catalogCardsPopular__item"><input type="radio" id="contactChoice3" name="popular">
-										<label class="catalogCardsPopular__label" for="contactChoice3">сначала дороже</label>
+									<div class="catalogCardsPopular__item catalogCardsPopularItem__js"><input type="radio" id="contactChoice3" name="popular">
+										<label class="catalogCardsPopular__label catalogCardsPopularLabel__js" for="contactChoice3">Сначала дороже</label>
 									</div>
 								</div>
 							</div>
 							<div class="catalogCards__alphabet catalogCardsAlphabet">
-								<div class="catalogCardsAlphabet__link catalogCardsAlphabetLink__js"> <span>По алфавиту <span class="catalogCardsAlphabet__textChecked">все</span></span>
+								<div class="catalogCardsAlphabet__link catalogCardsAlphabetLink__js"> <span>По алфавиту <span class="catalogCardsAlphabet__textChecked catalogCardsAlphabetTextChecked__js">все</span></span>
+
 									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/alphabet.svg'; ?></div>
 								<div class="catalogCardsAlphabet__popup catalogCardsAlphabetPopup__js hidden">
-									<div class="catalogCardsAlphabet__letter">А</div>
-									<div class="catalogCardsAlphabet__all">Показать все</div>
+									<div class="catalogCardsAlphabet__container">
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">А</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Б</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">В</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Г</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Д</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Е</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ё</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ж</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">З</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">И</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Й</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">К</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Л</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">М</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Н</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">О</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">П</div>
+									</div>
+									<div class="catalogCardsAlphabet__containerNext">
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Р</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">С</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Т</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">У</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ф</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Х</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ц</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ч</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ш</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Щ</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Э</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ю</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Я</div>
+									</div>
+									<div class="catalogCardsAlphabet__all catalogCardsAlphabetAll__js">Показать все</div>
 								</div>
 							</div>
 						</div>
@@ -446,7 +556,8 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								</div>
 							</div>
 							<div class="cardArticle">
-								<div class="cardArticle__title">Ароматный садовый
+								<div class="cardArticle__title">
+									Ароматный садовый
 									жасмин — скромный
 									чубушник</div>
 								<div class="cardArticle__btn">
@@ -455,19 +566,24 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								</div>
 							</div>
 						</div>
-						<div class="catalogCards__still">
+						<div class="catalogCards__show btnShow">
 							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/look.svg'; ?>
 							<span>Показать еще</span>
 						</div>
-						<div class="catalogCards__pagination">
-							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pagiLeft.svg'; ?>
-							<div class="catalogCards__paginationNumber catalogCards__paginationNumber_checked">1</div>
-							<div class="catalogCards__paginationNumber">2</div>
-							<div class="catalogCards__paginationNumber">3</div>
-							<div class="catalogCards__paginationNumber">4</div>
-							<div class="catalogCards__paginationNumber">5</div>
-							<div class="catalogCards__paginationNumber">....10</div>
-							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pagiRight.svg'; ?>
+						<div class="catalogCards__pagination pagination">
+							<div class="pagination__prev">
+								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pagiLeft.svg'; ?>
+							</div>
+							<div class="pagination__number paginationNumber__js pagination_checked">1</div>
+							<div class="pagination__number paginationNumber__js">2</div>
+							<div class="pagination__number paginationNumber__js">3</div>
+							<div class="pagination__number paginationNumber__js">4</div>
+							<div class="pagination__number paginationNumber__js">5</div>
+							<div class="pagination__points">....</div>
+							<div class="pagination__number paginationNumber__js">10</div>
+							<div class="pagination__next">
+								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pagiRight.svg'; ?>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -144,7 +144,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerValidationEmail"])(); //open popups in catalog
 
-  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["catalogPopups"])();
+  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["catalogPopups"])(); //
+
+  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["checkNum"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(1)))
 
@@ -18231,17 +18233,119 @@ function footerValidationEmail() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "catalogPopups", function() { return catalogPopups; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkNum", function() { return checkNum; });
 function catalogPopups() {
   var btnPopular = document.querySelector(".catalogCardsPopularLink__js");
-  var btnAlphabet = document.querySelector(".catalogCardsAlphabetLink__js");
+  var popularItem = document.querySelectorAll(".catalogCardsPopularItem__js");
   var popupPopular = document.querySelector(".catalogCardsPopularPopup__js");
-  var popupAlphabet = document.querySelector(".catalogCardsAlphabetPopup__js");
+  var btnText = document.querySelector(".catalogCardsPopularLinkText__js");
+  var label = document.querySelectorAll(".catalogCardsPopularLabel__js");
+
+  function closePopapPopular(e) {
+    if (popupPopular && e.target !== popupPopular && !popupPopular.contains(e.target)) {
+      popupPopular.classList.add("hidden");
+      document.removeEventListener("click", closePopapPopular);
+    }
+  }
+
   btnPopular.addEventListener("click", function () {
+    if (popupPopular.classList.contains("hidden")) {
+      document.removeEventListener("click", closePopapPopular);
+    }
+
     popupPopular.classList.toggle("hidden");
-    btnPopular.classList.toggle("catalogCardsPopular__link_black");
+    setTimeout(function () {
+      document.addEventListener("click", closePopapPopular);
+    }, 0);
   });
+  popularItem.forEach(function (item) {
+    item.addEventListener("click", function () {
+      setTimeout(function () {
+        popupPopular.classList.toggle("hidden");
+        document.removeEventListener("click", closePopapPopular);
+      }, 300);
+    });
+  });
+  label.forEach(function (item) {
+    item.addEventListener("click", function () {
+      setTimeout(function () {
+        btnText.textContent = item.textContent;
+        popupPopular.classList.toggle("hidden");
+        document.removeEventListener("click", closePopapPopular);
+      }, 300);
+    });
+  });
+  var btnAlphabet = document.querySelector(".catalogCardsAlphabetLink__js");
+  var popupAlphabet = document.querySelector(".catalogCardsAlphabetPopup__js");
+  var letter = document.querySelectorAll(".catalogCardsAlphabetLetter__js");
+  var linkText = document.querySelector(".catalogCardsAlphabetTextChecked__js");
+  var btnAll = document.querySelector(".catalogCardsAlphabetAll__js");
+  var arrowOpen = document.querySelector(".open");
+  var arrowClose = document.querySelector(".close");
+
+  function closePopapAlph(e) {
+    if (popupAlphabet && e.target !== popupAlphabet && !popupAlphabet.contains(e.target)) {
+      popupAlphabet.classList.add("hidden");
+      document.removeEventListener("click", closePopapAlph);
+    }
+  }
+
+  function arrowChange() {
+    if (popupAlphabet.classList.contains("hidden")) {
+      arrowClose.classList.add("hidden");
+      arrowOpen.classList.remove("hidden");
+    } else {
+      arrowOpen.classList.add("hidden");
+      arrowClose.classList.remove("hidden");
+    }
+  }
+
   btnAlphabet.addEventListener("click", function () {
+    arrowChange();
+
+    if (popupAlphabet.classList.contains("hidden")) {
+      document.removeEventListener("click", closePopapAlph);
+    }
+
     popupAlphabet.classList.toggle("hidden");
+    setTimeout(function () {
+      document.addEventListener("click", closePopapAlph);
+    }, 0);
+  });
+  btnAll.addEventListener("click", function () {
+    setTimeout(function () {
+      arrowChange();
+      linkText.textContent = "все";
+      popupAlphabet.classList.toggle("hidden");
+    }, 300);
+  });
+  letter.forEach(function (element) {
+    element.addEventListener("click", function () {
+      letter.forEach(function (item) {
+        if (item.classList.contains("catalogCardsAlphabet__letter_checked")) {
+          item.classList.remove("catalogCardsAlphabet__letter_checked");
+        }
+      });
+      element.classList.add("catalogCardsAlphabet__letter_checked");
+      setTimeout(function () {
+        arrowChange();
+        linkText.textContent = element.textContent;
+        popupAlphabet.classList.toggle("hidden");
+      }, 300);
+    });
+  });
+}
+function checkNum() {
+  var numbers = document.querySelectorAll(".paginationNumber__js");
+  numbers.forEach(function (element) {
+    element.addEventListener("click", function () {
+      numbers.forEach(function (item) {
+        if (item.classList.contains("pagination_checked")) {
+          item.classList.remove("pagination_checked");
+        }
+      });
+      element.classList.add("pagination_checked");
+    });
   });
 }
 
