@@ -33,6 +33,9 @@ import {mainGardenShow} from './blocks/showFull.js';
 //📁 /assets/js/blocks  specialSample.js
 import {mapInit} from './blocks/map.js';
 
+//📁 /assets/js/blocks  scrollbar.js
+import {mapAsideScroll} from './blocks/scrollbar.js';
+
 document.addEventListener("DOMContentLoaded", function(){
 
     // open catalog in the header
@@ -51,10 +54,10 @@ document.addEventListener("DOMContentLoaded", function(){
     mapInit();
 
     // tabs sliders in the main page section specialSample
-    //specialSampleTabs();
+    specialSampleTabs();
 
     // main garden show all
-    //mainGardenShow();
+    mainGardenShow();
 
     // sroll page on top
     footerScrollUp();
@@ -67,5 +70,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
     //
     checkNum();
+
+    // map aside scroll
+    mapAsideScroll();
 });
 

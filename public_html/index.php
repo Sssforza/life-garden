@@ -1266,7 +1266,7 @@
 				<div class="map__title">Ждём в гости</div>
 				<div class="map__description">Найдите ближайший магазин и&nbsp;отправляйтесь за&nbsp;покупками</div>
 				<div class="map__content">
-					<aside class="map__aside">
+					<aside class="map__aside scrollbar-inner">
 						<div class="map__item mapItem_js" data-coord1="54.970231" data-coord2="73.392044" data-id="0">
 							<div class="map__unit address">ул. Маяковского, 20</div>
 							<div class="map__unit tel">

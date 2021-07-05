@@ -1,7 +1,7 @@
 // map
 export function mapInit () {
 
-    if ($('#map').length > 0) {
+    if(document.querySelector('#map')) {
         var myMap;
 		var bigMap = false;
         var groups = [];
