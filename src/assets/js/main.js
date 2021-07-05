@@ -18,6 +18,9 @@ import {headerCatalog, headerSearchelp} from './blocks/_header.js';
 //📁 /assets/js/blocks  _footer.js
 import {footerScrollUp, footerValidationEmail} from './blocks/_footer.js';
 
+//📁 /assets/js/blocks  catalog.js
+import {catalogPopups, checkNum} from './blocks/catalog.js';
+
 //📁 /assets/js/blocks  sliders.js
 import {sliderMain, sliderProductSpecial} from './blocks/sliders.js';
 
@@ -44,11 +47,14 @@ document.addEventListener("DOMContentLoaded", function(){
     // slick slider main page special product
     sliderProductSpecial();
 
+    // map
+    mapInit();
+
     // tabs sliders in the main page section specialSample
-    specialSampleTabs();
+    //specialSampleTabs();
 
     // main garden show all
-    mainGardenShow();
+    //mainGardenShow();
 
     // sroll page on top
     footerScrollUp();
@@ -56,7 +62,10 @@ document.addEventListener("DOMContentLoaded", function(){
     // validation e-mail
     footerValidationEmail();
 
-    // map
-    mapInit();
+    //open popups in catalog
+    catalogPopups();
+
+    //
+    checkNum();
 });
 

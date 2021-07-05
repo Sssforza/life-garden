@@ -1,0 +1,604 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+?>
+<link rel='stylesheet' href="/dist/css/blocks/catalog.css">
+<main class="main">
+	<section class="catalog container">
+		<div class="breadCrumbs">
+			<ul class="breadCrumbs__ul">
+				<li><a class="breadCrumbs__link" href="">Главная</a></li>
+				<li><a class="breadCrumbs__link" href="">Каталог</a></li>
+				<li><a class="breadCrumbs__link" href="">Растения</a></li>
+				<li><a class="breadCrumbs__link" href="">Семена</a></li>
+				<li><span>Пряные и лекарственные травы</span></li>
+			</ul>
+		</div>
+		<div class="page">
+			<section class="catalog__border">
+				<a class="catalog__event catalogEvent" href="#">
+					<div class="catalogEvent__box">
+						<div class="catalogEvent__title">Весенняя акция: три
+							растения по цене двух</div>
+						<div class="catalogEvent__description">С 20 марта по 1 мая у нас действует акция: каждое третье растение В ПОДАРОК!</div>
+					</div>
+				</a>
+			</section>
+			<section class="catalog__content">
+				<div class="catalog__title">Пряные и лекарственные травы
+					<span>180 товаров</span>
+				</div>
+				<div class="catalog__body">
+					<aside class="catalog__menu catalogMenu">
+						<form action="">
+							<div class="catalogMenu__links">
+								<ul>
+									<li><a class="catalogMenu__link catalogMenu__link_checked" href="#">Анис</a></li>
+									<li><a class="catalogMenu__link" href="#">Базилик</a></li>
+									<li><a class="catalogMenu__link" href="#">Валериана</a></li>
+									<li><a class="catalogMenu__link" href="#">Горчица</a></li>
+									<li><a class="catalogMenu__link" href="#">Душица</a></li>
+									<li><a class="catalogMenu__link" href="#">Зверобой</a></li>
+								</ul>
+								<div class="catalogMenu__show"> <span>Показать еще</span>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/alphabet.svg'; ?>
+								</div>
+							</div>
+							<div class="catalogMenu__price">
+								<div class="catalogMenu__title">Цена</div>
+
+							</div>
+							<div class="catalogMenu__sort">
+								<div class="catalogMenu__down">
+									<span class="catalogMenu__title">Сорт</span>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/alphabet.svg'; ?>
+								</div>
+								<div class="catalogMenu__container">
+									<div class="catalogMenu__labelSort"> 
+										<label class="catalogMenu__labelSort">
+											<input class="catalogMenu__check" type="checkbox" />
+											<span>Бонсай</span> 
+										</label>
+									</div>
+									<div class="catalogMenu__labelSort"> 
+										<label class="catalogMenu__labelSort">
+											<input class="catalogMenu__check" type="checkbox" />
+											<span>Бонсай</span> 
+										</label>
+									</div>
+									<div class="catalogMenu__labelSort"> 
+										<label class="catalogMenu__labelSort">
+											<input class="catalogMenu__check" type="checkbox" />
+											<span>Бонсай</span> 
+										</label>
+									</div>
+									<div class="catalogMenu__labelSort"> 
+										<label class="catalogMenu__labelSort">
+											<input class="catalogMenu__check" type="checkbox" />
+											<span>Бонсай</span> 
+										</label>
+									</div>
+									<div class="catalogMenu__labelSort"> 
+										<label class="catalogMenu__labelSort">
+											<input class="catalogMenu__check" type="checkbox" />
+											<span>Бонсай</span> 
+										</label>
+									</div>
+								
+									<div class="catalogMenu__show catalogMenu__show_small">
+										<span>Показать еще</span>
+										<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/alphabet.svg'; ?>
+									</div>
+								</div>
+							</div>
+							<div class="catalogMenu__stock">
+								<div class="catalogMenu__title">В наличии</div>
+
+							</div>
+							<div class="catalogMenu__new">
+								<div class="catalogMenu__title">Новинки</div>
+
+							</div>
+							<div class="catalogMenu__discount">
+								<div class="catalogMenu__title">Товары со скидкой</div>
+
+							</div>
+						</form>
+
+					</aside>
+					<div class="catalog__cards catalogCards">
+						<div class="catalogCards__filters">
+							<div class="catalogCards__popular catalogCardsPopular ">
+								<div class="catalogCardsPopular__link catalogCardsPopularLink__js">
+									<div class="catalogCardsPopular__linkText catalogCardsPopularLinkText__js">Сначала популярные</div>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pop1.svg'; ?>
+								</div>
+
+								<div class="catalogCardsPopular__popup catalogCardsPopularPopup__js hidden">
+									<div class="catalogCardsPopular__item catalogCardsPopularItem__js"> <input type="radio" id="contactChoice1" name="popular" checked>
+										<label class="catalogCardsPopular__label catalogCardsPopularLabel__js" for="contactChoice1">Сначала популярные</label>
+									</div>
+									<div class="catalogCardsPopular__item catalogCardsPopularItem__js"><input type="radio" id="contactChoice2" name="popular">
+										<label class="catalogCardsPopular__label catalogCardsPopularLabel__js" for="contactChoice2">Сначала дешевле</label>
+									</div>
+									<div class="catalogCardsPopular__item catalogCardsPopularItem__js"><input type="radio" id="contactChoice3" name="popular">
+										<label class="catalogCardsPopular__label catalogCardsPopularLabel__js" for="contactChoice3">Сначала дороже</label>
+									</div>
+								</div>
+							</div>
+							<div class="catalogCards__alphabet catalogCardsAlphabet">
+								<div class="catalogCardsAlphabet__link catalogCardsAlphabetLink__js"> <span>По алфавиту <span class="catalogCardsAlphabet__textChecked catalogCardsAlphabetTextChecked__js">все</span></span>
+
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/alphabet.svg'; ?></div>
+								<div class="catalogCardsAlphabet__popup catalogCardsAlphabetPopup__js hidden">
+									<div class="catalogCardsAlphabet__container">
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">А</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Б</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">В</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Г</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Д</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Е</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ё</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ж</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">З</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">И</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Й</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">К</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Л</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">М</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Н</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">О</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">П</div>
+									</div>
+									<div class="catalogCardsAlphabet__containerNext">
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Р</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">С</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Т</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">У</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ф</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Х</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ц</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ч</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ш</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Щ</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Э</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ю</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Я</div>
+									</div>
+									<div class="catalogCardsAlphabet__all catalogCardsAlphabetAll__js">Показать все</div>
+								</div>
+							</div>
+						</div>
+						<div class="catalogCards__container">
+							<div class="cardProduct">
+								<div class="cardProduct__new">Новинка</div>
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__wrapper">
+										<div class="cardProduct__title">
+											<a class="cardProduct__a" href="#">
+												Горшок цветочный Ingreen Ajur 16 h14.5 см v 1.6 л пластик английская роза
+											</a>
+										</div>
+										<div class="availability">
+											<div class="availability__text has">
+												<span>Есть в наличии</span>
+											</div>
+											<div class="availability__text not hidden">
+												<span>Нет в наличии</span>
+											</div>
+										</div>
+										<div class="review">
+											<div class="review__list">
+												<div class="review__item active">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item active">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item active">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item active">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+											</div>
+											<div class="review__how">1 отзыв</div>
+										</div>
+									</div>
+									<div class="cardProduct__wrapper">
+										<div class="cost">
+											<div class="cost__left">
+												<div class="cost__info">с картой живой сад</div>
+												<div class="cost__price cost__price_card">
+													<span class="cost__totalPrice">240</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+											<div class="cost__right">
+												<div class="cost__info">обычная цена</div>
+												<div class="cost__price cost__price_common">
+													<span class="cost__totalPrice">240</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="cardProduct__bottom">
+											<div class="counter">
+												<div class="counter__minus">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
+												</div>
+												<div class="counter__input">
+													<input type="number" value="1">
+												</div>
+												<div class="counter__plus">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
+												</div>
+											</div>
+											<div class="cardProduct__elements">
+												<div class="likeProduct">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
+												</div>
+												<div class="btnJaundicedFull addBasket">В корзину</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cardProduct">
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg2.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__wrapper">
+										<div class="cardProduct__title">
+											<a class="cardProduct__a" href="#">
+												Комплект фонтанный «Принц-лягушка», 40 см
+											</a>
+										</div>
+										<div class="availability">
+											<div class="availability__text has">
+												<span>Есть в наличии</span>
+											</div>
+										</div>
+										<div class="review">
+											<div class="review__list">
+												<div class="review__item active">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item active">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item active">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item active">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+											</div>
+											<div class="review__how">25 отзывов</div>
+										</div>
+									</div>
+									<div class="cardProduct__wrapper">
+										<div class="cost">
+											<div class="cost__left">
+												<div class="cost__price">
+													<span class="cost__totalPrice">14 702</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="cardProduct__bottom">
+											<div class="counter">
+												<div class="counter__minus">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
+												</div>
+												<div class="counter__input">
+													<input type="number" value="1">
+												</div>
+												<div class="counter__plus">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
+												</div>
+											</div>
+											<div class="cardProduct__elements">
+												<div class="likeProduct active">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
+												</div>
+												<div class="btnJaundicedFull addBasket">В корзину</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cardProduct">
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg3.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__wrapper">
+										<div class="cardProduct__title">
+											<a class="cardProduct__a" href="#">
+												Ножницы универсальные Finland
+											</a>
+										</div>
+										<div class="availability">
+											<div class="availability__text has">
+												<span>Есть в наличии</span>
+											</div>
+										</div>
+										<div class="review">
+											<div class="review__list">
+												<div class="review__item active">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item active">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item active">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+											</div>
+											<div class="review__how">25 отзывов</div>
+										</div>
+									</div>
+									<div class="cardProduct__wrapper">
+										<div class="cost">
+											<div class="cost__left">
+												<div class="cost__info">с картой живой сад</div>
+												<div class="cost__price cost__price_card">
+													<span class="cost__totalPrice">1 723</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+											<div class="cost__right">
+												<div class="cost__info">обычная цена</div>
+												<div class="cost__price cost__price_common">
+													<span class="cost__totalPrice">1 900</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="cardProduct__bottom">
+											<div class="counter">
+												<div class="counter__minus">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
+												</div>
+												<div class="counter__input">
+													<input type="number" value="1">
+												</div>
+												<div class="counter__plus">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
+												</div>
+											</div>
+											<div class="cardProduct__elements">
+												<div class="likeProduct">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
+												</div>
+												<div class="btnJaundicedFull addBasket">В корзину</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cardProduct">
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg3.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__wrapper">
+										<div class="cardProduct__title">
+											<a class="cardProduct__a" href="#">
+												Ножницы универсальные Finland
+											</a>
+										</div>
+										<div class="availability">
+											<div class="availability__text has">
+												<span>Есть в наличии</span>
+											</div>
+										</div>
+										<div class="review">
+											<div class="review__list">
+												<div class="review__item active">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item active">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item active">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+											</div>
+											<div class="review__how">25 отзывов</div>
+										</div>
+									</div>
+									<div class="cardProduct__wrapper">
+										<div class="cost">
+											<div class="cost__left">
+												<div class="cost__info">с картой живой сад</div>
+												<div class="cost__price cost__price_card">
+													<span class="cost__totalPrice">1 723</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+											<div class="cost__right">
+												<div class="cost__info">обычная цена</div>
+												<div class="cost__price cost__price_common">
+													<span class="cost__totalPrice">1 900</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="cardProduct__bottom">
+											<div class="counter">
+												<div class="counter__minus">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
+												</div>
+												<div class="counter__input">
+													<input type="number" value="1">
+												</div>
+												<div class="counter__plus">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
+												</div>
+											</div>
+											<div class="cardProduct__elements">
+												<div class="likeProduct">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
+												</div>
+												<div class="btnJaundicedFull addBasket">В корзину</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cardProduct">
+								<div class="cardProduct__img">
+									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg3.jpg)">
+										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+									</div>
+								</div>
+								<div class="cardProduct__info">
+									<div class="cardProduct__wrapper">
+										<div class="cardProduct__title">
+											<a class="cardProduct__a" href="#">
+												Ножницы универсальные Finland
+											</a>
+										</div>
+										<div class="availability">
+											<div class="availability__text has">
+												<span>Есть в наличии</span>
+											</div>
+										</div>
+										<div class="review">
+											<div class="review__list">
+												<div class="review__item active">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item active">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item active">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+												<div class="review__item">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+												</div>
+											</div>
+											<div class="review__how">25 отзывов</div>
+										</div>
+									</div>
+									<div class="cardProduct__wrapper">
+										<div class="cost">
+											<div class="cost__left">
+												<div class="cost__info">с картой живой сад</div>
+												<div class="cost__price cost__price_card">
+													<span class="cost__totalPrice">1 723</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+											<div class="cost__right">
+												<div class="cost__info">обычная цена</div>
+												<div class="cost__price cost__price_common">
+													<span class="cost__totalPrice">1 900</span>
+													<span class="cost__ruble">₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="cardProduct__bottom">
+											<div class="counter">
+												<div class="counter__minus">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
+												</div>
+												<div class="counter__input">
+													<input type="number" value="1">
+												</div>
+												<div class="counter__plus">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
+												</div>
+											</div>
+											<div class="cardProduct__elements">
+												<div class="likeProduct">
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
+												</div>
+												<div class="btnJaundicedFull addBasket">В корзину</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cardArticle">
+								<div class="cardArticle__title">
+									Ароматный садовый
+									жасмин — скромный
+									чубушник</div>
+								<div class="cardArticle__btn">
+									<span>Читать дальше</span>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
+								</div>
+							</div>
+						</div>
+						<div class="catalogCards__show btnShow">
+							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/look.svg'; ?>
+							<span>Показать еще</span>
+						</div>
+						<div class="catalogCards__pagination pagination">
+							<div class="pagination__prev">
+								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pagiLeft.svg'; ?>
+							</div>
+							<div class="pagination__number paginationNumber__js pagination_checked">1</div>
+							<div class="pagination__number paginationNumber__js">2</div>
+							<div class="pagination__number paginationNumber__js">3</div>
+							<div class="pagination__number paginationNumber__js">4</div>
+							<div class="pagination__number paginationNumber__js">5</div>
+							<div class="pagination__points">....</div>
+							<div class="pagination__number paginationNumber__js">10</div>
+							<div class="pagination__next">
+								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pagiRight.svg'; ?>
+							</div>
+						</div>
+					</div>
+				</div>
+
+		</div>
+	</section>
+	<section class="catalog__helpful">
+		<div class=""></div>
+		<div class=""></div>
+	</section>
+	</div>
+
+	</section>
+</main>
+
+<?
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");
+?>

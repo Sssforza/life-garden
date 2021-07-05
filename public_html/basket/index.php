@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 ?>
-<link rel='stylesheet' href="/dist/css/blocks/catalog.css">
+<link rel='stylesheet' href="/dist/css/blocks/basket.css">
 <main class="main">
 	<section class="basket container">
 		<section class="basket__main">

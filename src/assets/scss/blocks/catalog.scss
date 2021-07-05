@@ -23,9 +23,12 @@
       color: #98a6b4;
     }
   }
+  &__body {
+    display: flex;
+    margin-top: 30px;
+  }
 }
 .catalogEvent {
-  margin-top: 35px;
   display: flex;
   align-items: flex-end;
   background-image: url("../../img/bgEvent.png");
@@ -54,7 +57,7 @@
       opacity: 1;
     }
   }
-  &__textContainer {
+  &__box {
     padding: 32px 107px 38px 41px;
     background-color: #feb322;
     border-radius: 0 20px;
@@ -76,5 +79,354 @@
       size: 18px;
     }
     line-height: 24px;
+  }
+}
+
+.catalogMenu {
+  width: 310px;
+}
+
+.catalogCards {
+  margin-left: 40px;
+  width: 1043px;
+  &__filters {
+    display: flex;
+    align-items: center;
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    row-gap: 30px;
+    column-gap: 19px;
+    margin-top: 10px;
+  }
+  &__item {
+  }
+  &__show {
+    width: 100%;
+    height: 48px;
+    margin-top: 35px;
+  }
+  &__pagination {
+    margin: 29px auto 0;
+    width: 265px;
+    height: 28px;
+  }
+}
+.catalogCardsPopular {
+  position: relative;
+  &__link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 19px;
+    transition: $transition;
+    & svg {
+      display: block;
+      margin-left: 6px;
+      path {
+        transition: $transition;
+      }
+    }
+    &:hover {
+      color: $green;
+      & svg {
+        path {
+          stroke: $green;
+        }
+      }
+    }
+  }
+  &__linkText {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &__popup {
+    z-index: 10;
+    width: 255px;
+    height: 152px;
+    position: absolute;
+    top: 29px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 26px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+  & input[type="radio"] {
+    margin: 0px;
+    width: 25px;
+    height: 25px;
+    background-color: $green;
+    position: relative;
+  }
+  & input[type="radio"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid $border;
+  }
+  & input[type="radio"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: $green;
+    transform: translate(-50%, -50%);
+  }
+  &__label {
+    margin-left: 9px;
+  }
+}
+.catalogCardsAlphabet {
+  margin-left: 22px;
+  position: relative;
+  &__link {
+    display: flex;
+    align-items: center;
+    margin-left: 22px;
+    position: relative;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+    transition: $transition;
+    & svg {
+      margin-left: 6px;
+      path {
+        display: block;
+        transition: $transition;
+      }
+    }
+    &:hover {
+      color: $green;
+      & svg {
+        path {
+          stroke: $green;
+        }
+      }
+    }
+  }
+
+  &__popup {
+    z-index: 10;
+    width: 520px;
+    height: 140px;
+    position: absolute;
+    top: 29px;
+    left: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 25px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__containerNext {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 364px;
+  }
+  &__letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 24px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+      color: $green;
+    }
+    &_checked {
+      pointer-events: none;
+      background: #deeddd;
+      border-radius: 30px;
+      pointer-events: none;
+      &:hover {
+        color: $textColor;
+      }
+    }
+  }
+  &__all {
+    font-size: 16px;
+    line-height: 27px;
+    color: $green;
+    transition: $transition;
+    cursor: pointer;
+    &:hover {
+      color: $textColor;
+    }
+  }
+  &__textChecked {
+    color: $green;
+    border-bottom: 1px dashed $green;
+  }
+}
+
+.catalogMenu {
+  color: $textColor;
+  &__title {
+    font: {
+      family: Rubik;
+      weight: 500;
+      size: 20px;
+    }
+    line-height: 42px;
+  }
+  &__links {
+    & li:not(:first-child) {
+      margin-top: 12px;
+    }
+  }
+  &__link {
+    font-size: 18px;
+    line-height: 24px;
+    color: $gray1;
+    transition: $transition;
+    &:hover {
+      color: $green;
+    }
+    &_checked {
+      color: $darkGreen;
+    }
+  }
+  &__show {
+    margin-top: 12px;
+    font-size: 18px;
+    line-height: 24px;
+    color: $textColor;
+    cursor: pointer;
+    transition: $transition;
+    & span {
+      margin: 0;
+    }
+    & svg {
+      path {
+        display: block;
+        stroke: $green;
+      }
+    }
+    &:hover {
+      color: $green;
+    }
+    &_small {
+      font-size: 14px;
+      line-height: 32px;
+      margin: 0;
+    }
+  }
+  &__price {
+  }
+
+  &__sort {
+    &:hover {
+      .catalogMenu__container {
+        max-height: 264px;
+      }
+    }
+  }
+  &__down {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:hover {
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 32px;
+    max-height: 264px;
+    overflow: hidden;
+    transition: $transition;
+    & span {
+      margin-left: 9px;
+    }
+    & input[type="checkbox"] {
+      position: relative;
+      cursor: pointer;
+    }
+    & input[type="checkbox"]:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 0;
+      left: 0;
+      background-color: $white;
+      border: 1px solid $border;
+      border-radius: 2px;
+    }
+    & input[type="checkbox"]:checked:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 0;
+      left: 0;
+      background-color: $green;
+      border-radius: 2px;
+      border: 1px solid $green;
+    }
+    & input[type="checkbox"]:checked:after {
+      content: "";
+      display: block;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      position: absolute;
+      top: 1px;
+      left: 6px;
+    }
+  }
+  &__check{
+  }
+  &__labelSort{
+    display: flex;
+    align-items: center;
+
+  }
+  &__sort {
+  }
+  &__stock {
+  }
+  &__new {
+  }
+  &__discount {
   }
 }

@@ -100,10 +100,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var nouislider__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(nouislider__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _blocks_header_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
 /* harmony import */ var _blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
-/* harmony import */ var _blocks_sliders_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8);
-/* harmony import */ var _blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9);
-/* harmony import */ var _blocks_showFull_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(10);
-/* harmony import */ var _blocks_map_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(11);
+/* harmony import */ var _blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8);
+/* harmony import */ var _blocks_sliders_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9);
+/* harmony import */ var _blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(10);
+/* harmony import */ var _blocks_showFull_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(11);
+/* harmony import */ var _blocks_map_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(12);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁 /node_modules/  slick 1.8.1
@@ -116,6 +117,8 @@ global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁
 global.noUiSlider = nouislider__WEBPACK_IMPORTED_MODULE_3___default.a; //📁 /assets/js/blocks  _header.js
 
  //📁 /assets/js/blocks  _footer.js
+
+ //📁 /assets/js/blocks  catalog.js
 
  //📁 /assets/js/blocks  sliders.js
 
@@ -132,19 +135,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerSearchelp"])(); // slick slider main
 
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_6__["sliderMain"])(); // slick slider main page special product
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_7__["sliderMain"])(); // slick slider main page special product
 
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_6__["sliderProductSpecial"])(); // tabs sliders in the main page section specialSample
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_7__["sliderProductSpecial"])(); // map
 
-  Object(_blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_7__["specialSampleTabs"])(); // main garden show all
-
-  Object(_blocks_showFull_js__WEBPACK_IMPORTED_MODULE_8__["mainGardenShow"])(); // sroll page on top
+  Object(_blocks_map_js__WEBPACK_IMPORTED_MODULE_10__["mapInit"])(); // tabs sliders in the main page section specialSample
+  //specialSampleTabs();
+  // main garden show all
+  //mainGardenShow();
+  // sroll page on top
 
   Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerScrollUp"])(); // validation e-mail
 
-  Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerValidationEmail"])(); // map
+  Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerValidationEmail"])(); //open popups in catalog
 
-  Object(_blocks_map_js__WEBPACK_IMPORTED_MODULE_9__["mapInit"])();
+  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["catalogPopups"])(); //
+
+  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["checkNum"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(1)))
 
@@ -18230,6 +18237,129 @@ function footerValidationEmail() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "catalogPopups", function() { return catalogPopups; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkNum", function() { return checkNum; });
+function catalogPopups() {
+  var btnPopular = document.querySelector(".catalogCardsPopularLink__js");
+  var popularItem = document.querySelectorAll(".catalogCardsPopularItem__js");
+  var popupPopular = document.querySelector(".catalogCardsPopularPopup__js");
+  var btnText = document.querySelector(".catalogCardsPopularLinkText__js");
+  var label = document.querySelectorAll(".catalogCardsPopularLabel__js");
+
+  function closePopapPopular(e) {
+    if (popupPopular && e.target !== popupPopular && !popupPopular.contains(e.target)) {
+      popupPopular.classList.add("hidden");
+      document.removeEventListener("click", closePopapPopular);
+    }
+  }
+
+  btnPopular.addEventListener("click", function () {
+    if (popupPopular.classList.contains("hidden")) {
+      document.removeEventListener("click", closePopapPopular);
+    }
+
+    popupPopular.classList.toggle("hidden");
+    setTimeout(function () {
+      document.addEventListener("click", closePopapPopular);
+    }, 0);
+  });
+  popularItem.forEach(function (item) {
+    item.addEventListener("click", function () {
+      setTimeout(function () {
+        popupPopular.classList.toggle("hidden");
+        document.removeEventListener("click", closePopapPopular);
+      }, 300);
+    });
+  });
+  label.forEach(function (item) {
+    item.addEventListener("click", function () {
+      setTimeout(function () {
+        btnText.textContent = item.textContent;
+        popupPopular.classList.toggle("hidden");
+        document.removeEventListener("click", closePopapPopular);
+      }, 300);
+    });
+  });
+  var btnAlphabet = document.querySelector(".catalogCardsAlphabetLink__js");
+  var popupAlphabet = document.querySelector(".catalogCardsAlphabetPopup__js");
+  var letter = document.querySelectorAll(".catalogCardsAlphabetLetter__js");
+  var linkText = document.querySelector(".catalogCardsAlphabetTextChecked__js");
+  var btnAll = document.querySelector(".catalogCardsAlphabetAll__js");
+  var arrowOpen = document.querySelector(".open");
+  var arrowClose = document.querySelector(".close");
+
+  function closePopapAlph(e) {
+    if (popupAlphabet && e.target !== popupAlphabet && !popupAlphabet.contains(e.target)) {
+      popupAlphabet.classList.add("hidden");
+      document.removeEventListener("click", closePopapAlph);
+    }
+  }
+
+  function arrowChange() {
+    if (popupAlphabet.classList.contains("hidden")) {
+      arrowClose.classList.add("hidden");
+      arrowOpen.classList.remove("hidden");
+    } else {
+      arrowOpen.classList.add("hidden");
+      arrowClose.classList.remove("hidden");
+    }
+  }
+
+  btnAlphabet.addEventListener("click", function () {
+    arrowChange();
+
+    if (popupAlphabet.classList.contains("hidden")) {
+      document.removeEventListener("click", closePopapAlph);
+    }
+
+    popupAlphabet.classList.toggle("hidden");
+    setTimeout(function () {
+      document.addEventListener("click", closePopapAlph);
+    }, 0);
+  });
+  btnAll.addEventListener("click", function () {
+    setTimeout(function () {
+      arrowChange();
+      linkText.textContent = "все";
+      popupAlphabet.classList.toggle("hidden");
+    }, 300);
+  });
+  letter.forEach(function (element) {
+    element.addEventListener("click", function () {
+      letter.forEach(function (item) {
+        if (item.classList.contains("catalogCardsAlphabet__letter_checked")) {
+          item.classList.remove("catalogCardsAlphabet__letter_checked");
+        }
+      });
+      element.classList.add("catalogCardsAlphabet__letter_checked");
+      setTimeout(function () {
+        arrowChange();
+        linkText.textContent = element.textContent;
+        popupAlphabet.classList.toggle("hidden");
+      }, 300);
+    });
+  });
+}
+function checkNum() {
+  var numbers = document.querySelectorAll(".paginationNumber__js");
+  numbers.forEach(function (element) {
+    element.addEventListener("click", function () {
+      numbers.forEach(function (item) {
+        if (item.classList.contains("pagination_checked")) {
+          item.classList.remove("pagination_checked");
+        }
+      });
+      element.classList.add("pagination_checked");
+    });
+  });
+}
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderMain", function() { return sliderMain; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderProductSpecial", function() { return sliderProductSpecial; });
 // SliderMain
@@ -18270,7 +18400,7 @@ function sliderProductSpecial() {
 ;
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18303,7 +18433,7 @@ function specialSampleTabs() {
 ;
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18320,7 +18450,7 @@ function mainGardenShow() {
 ;
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
