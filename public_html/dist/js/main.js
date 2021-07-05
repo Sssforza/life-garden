@@ -103,6 +103,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_sliders_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8);
 /* harmony import */ var _blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9);
 /* harmony import */ var _blocks_showFull_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(10);
+/* harmony import */ var _blocks_map_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(11);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁 /node_modules/  slick 1.8.1
@@ -117,6 +118,8 @@ global.noUiSlider = nouislider__WEBPACK_IMPORTED_MODULE_3___default.a; //📁 /a
  //📁 /assets/js/blocks  _footer.js
 
  //📁 /assets/js/blocks  sliders.js
+
+ //📁 /assets/js/blocks  specialSample.js
 
  //📁 /assets/js/blocks  specialSample.js
 
@@ -139,7 +142,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerScrollUp"])(); // validation e-mail
 
-  Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerValidationEmail"])();
+  Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerValidationEmail"])(); // map
+
+  Object(_blocks_map_js__WEBPACK_IMPORTED_MODULE_9__["mapInit"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(1)))
 
@@ -18313,6 +18318,105 @@ function mainGardenShow() {
   });
 }
 ;
+
+/***/ }),
+/* 11 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapInit", function() { return mapInit; });
+// map
+function mapInit() {
+  if ($('#map').length > 0) {
+    var init = function init() {
+      $("#map").empty();
+      myMap = null;
+      var myMap = new ymaps.Map('map', {
+        center: center,
+        zoom: zoom,
+        controls: []
+      }, {
+        searchControlProvider: 'yandex#search'
+      }),
+          objectManager = new ymaps.ObjectManager({
+        clusterize: true,
+        gridSize: 32,
+        clusterDisableClickZoom: true,
+        hasBalloon: false
+      });
+      objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
+      var objects = [];
+      objectManager.objects.options.set({
+        iconLayout: 'default#image',
+        iconImageHref: '/dist/img/mapIcon.png',
+        iconImageSize: [40, 52]
+      });
+      var size = Object.keys(groups).length;
+      size - 1;
+
+      for (var i = 0, l = size; i < l; i++) {
+        var groupsId = groups[i].id;
+        var centerGroups = groups[i].center;
+        objects.push({
+          type: 'Feature',
+          id: groupsId,
+          geometry: {
+            type: 'Point',
+            coordinates: centerGroups
+          }
+        });
+      }
+
+      objectManager.add(objects);
+      myMap.geoObjects.add(objectManager);
+      myMap.options.set('dragCursor', 'arrow');
+    };
+
+    var myMap;
+    var bigMap = false;
+    var groups = [];
+    $('.mapItem_js').each(function (item, i) {
+      groups.push({
+        id: item,
+        center: [$(this).attr('data-coord1'), $(this).attr('data-coord2')]
+      });
+    });
+    ymaps.ready(init);
+    var center = [54.9924400, 73.3685900]; //омск
+
+    var zoom = 12;
+    $('.mapItem_js').on('click', function () {
+      $('.map__aside .mapItem_js').not($(this)).removeClass('show');
+
+      if ($(this).hasClass('show')) {
+        $(this).removeClass('show');
+        groups = [];
+        $('.mapItem_js').each(function (item, i) {
+          groups.push({
+            id: item,
+            center: [$(this).attr('data-coord1'), $(this).attr('data-coord2')]
+          });
+        });
+        center = [54.9924400, 73.3685900]; //омск
+
+        zoom = 12;
+        var myMap;
+        ymaps.ready(init);
+      } else {
+        $(this).addClass('show');
+        groups = [{
+          id: $(this).data("id"),
+          center: [$(this).data("coord1"), $(this).data("coord2")]
+        }];
+        center = [$(this).data("coord1"), $(this).data("coord2")];
+        zoom = 15;
+        var myMap;
+        ymaps.ready(init);
+      }
+    });
+  }
+}
 
 /***/ })
 /******/ ]);

@@ -27,6 +27,9 @@ import {specialSampleTabs} from './blocks/specialSample.js';
 //📁 /assets/js/blocks  specialSample.js
 import {mainGardenShow} from './blocks/showFull.js';
 
+//📁 /assets/js/blocks  specialSample.js
+import {mapInit} from './blocks/map.js';
+
 document.addEventListener("DOMContentLoaded", function(){
 
     // open catalog in the header
@@ -52,5 +55,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
     // validation e-mail
     footerValidationEmail();
+
+    // map
+    mapInit();
 });
 

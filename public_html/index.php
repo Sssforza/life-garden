@@ -1261,6 +1261,67 @@
 				</div>
 			</div>
 		</section>
+		<section class="map">
+			<div class="container">
+				<div class="map__title">Ждём в гости</div>
+				<div class="map__description">Найдите ближайший магазин и&nbsp;отправляйтесь за&nbsp;покупками</div>
+				<div class="map__content">
+					<aside class="map__aside">
+						<div class="map__item mapItem_js" data-coord1="54.970231" data-coord2="73.392044" data-id="0">
+							<div class="map__unit address">ул. Маяковского, 20</div>
+							<div class="map__unit tel">
+								<a class="map__tel" href="tel:+79083104807">+7 (908) 310-48-07</a>
+							</div>
+							<div class="map__schedule">
+								<span>График работы:</span>
+								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
+							</div>
+						</div>
+						<div class="map__item mapItem_js" data-coord1="54.973993" data-coord2="73.273727" data-id="1">
+							<div class="map__unit address">ул. Сакена Сейфуллина, 27</div>
+							<div class="map__unit tel">
+								<a class="map__tel" href="tel:+79083104807">+7 (908) 310-94-77</a>
+							</div>
+							<div class="map__schedule">
+								<span>График работы:</span>
+								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
+							</div>
+						</div>
+						<div class="map__item mapItem_js" data-coord1="55.029399" data-coord2="73.273754" data-id="3">
+							<div class="map__unit address">ул. пр. Мира, 64</div>
+							<div class="map__unit tel">
+								<a class="map__tel" href="tel:+79083104807">+7 (908) 310-35-69</a>
+							</div>
+							<div class="map__schedule">
+								<span>График работы:</span>
+								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
+							</div>
+						</div>
+						<div class="map__item mapItem_js" data-coord1="54.985772" data-coord2="73.405312" data-id="4">
+							<div class="map__unit address">ул. ​10 лет Октября, 113</div>
+							<div class="map__unit tel">
+								<a class="map__tel" href="tel:+79083104807">+7 (908) 310-35-69</a>
+							</div>
+							<div class="map__schedule">
+								<span>График работы:</span>
+								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
+							</div>
+						</div>
+						<div class="map__item mapItem_js" data-coord1="54.944228" data-coord2="73.385621" data-id="5">
+							<div class="map__unit address">​проспект Карла Маркса, 83</div>
+							<div class="map__unit tel">
+								<a class="map__tel" href="tel:+79083104807">+7 (908) 310-92-55</a>
+							</div>
+							<div class="map__schedule">
+								<span>График работы:</span>
+								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
+							</div>
+						</div>
+					</aside>
+					<div id="map"></div>
+				</div>
+			</div>
+		</section>
 		<section class="mainGarden">
 			<div class="mainGarden__content container">
 				<div class="mainGarden__title">Живой сад</div>

@@ -558,3 +558,78 @@
         display: none;
     }
 }
+.map {
+    margin-top: 108px;
+    &__title {
+        font-size: 56px;
+        line-height: 70px;
+        font-weight: 900;
+        color: $textColor;
+        font-family: 'Rubik';
+    }
+    &__description {
+        margin-top: 21px;
+        font-size: 20px;
+        line-height: 32px;
+    }
+    &__content {
+        margin-top: 33px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        padding: 27px 28px 23px;
+        width: 100%;
+        font-size: 18px;
+        line-height: 24px;
+        color: $textColor;
+        font-family: 'Rubik';
+        border: 1px solid $gray2;
+        &:not(:first-child) {
+            margin-top: 15px;
+        }
+    }
+    &__unit {
+        display: flex;
+        align-items: center;
+        margin-bottom: 18px;
+        &:before {
+            content:'';
+            margin-right: 8px;
+            width: 24px;
+            height: 24px;
+            background: {
+                repeat: no-repeat;
+                position: center left;
+            }
+        }
+        &.address {
+            &:before {
+                height: 25px;
+                background-image: url($imgUrl + "svg/mapUnitAddress.svg");
+            }
+        }
+        &.tel {
+            &:before {
+                background-image: url($imgUrl + "svg/mapUnitTel.svg");
+            }
+        }
+    }
+    &__schedule {
+        span {
+            display: block;
+            font-size: 16px;
+            color: #7D8E84;
+        }
+    }
+    &__tel {
+        pointer-events: none;
+    }
+    &__aside {
+        width: 520px;
+    }
+    #map {
+        width: 848.82px;
+        height: 585px;
+    }
+}
