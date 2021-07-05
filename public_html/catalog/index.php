@@ -30,77 +30,198 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				<div class="catalog__body">
 					<aside class="catalog__menu catalogMenu">
 						<form action="">
-							<div class="catalogMenu__links">
-								<ul>
+							<div class="catalogMenu__box">
+								<ul class="catalogMenu__links catalogMenuLinks__js">
 									<li><a class="catalogMenu__link catalogMenu__link_checked" href="#">Анис</a></li>
 									<li><a class="catalogMenu__link" href="#">Базилик</a></li>
 									<li><a class="catalogMenu__link" href="#">Валериана</a></li>
 									<li><a class="catalogMenu__link" href="#">Горчица</a></li>
 									<li><a class="catalogMenu__link" href="#">Душица</a></li>
 									<li><a class="catalogMenu__link" href="#">Зверобой</a></li>
+									<li><a class="catalogMenu__link" href="#">Базилик</a></li>
+									<li><a class="catalogMenu__link" href="#">Валериана</a></li>
+									<li><a class="catalogMenu__link" href="#">Горчица</a></li>
+									<li><a class="catalogMenu__link" href="#">Душица</a></li>
+									<li><a class="catalogMenu__link" href="#">Зверобой</a></li>
+									<li><a class="catalogMenu__link" href="#">Базилик</a></li>
+									<li><a class="catalogMenu__link" href="#">Валериана</a></li>
+									<li><a class="catalogMenu__link" href="#">Горчица</a></li>
+									<li><a class="catalogMenu__link" href="#">Душица</a></li>
+									<li><a class="catalogMenu__link" href="#">Горчица</a></li>
+									<li><a class="catalogMenu__link" href="#">Душица</a></li>
+									<li><a class="catalogMenu__link" href="#">Зверобой</a></li>
+									<li><a class="catalogMenu__link" href="#">Базилик</a></li>
+									<li><a class="catalogMenu__link" href="#">Валериана</a></li>
+									<li><a class="catalogMenu__link" href="#">Горчица</a></li>
+									<li><a class="catalogMenu__link" href="#">Душица</a></li>
 								</ul>
-								<div class="catalogMenu__show"> <span>Показать еще</span>
-									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/alphabet.svg'; ?>
+								<div class="catalogMenu__show catalogMenuShow__js"> <span  class="catalogMenuText__js">Показать еще</span>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowLink.svg'; ?>
 								</div>
 							</div>
-							<div class="catalogMenu__price">
-								<div class="catalogMenu__title">Цена</div>
+							<div class="catalogMenu__price catalogMenuPrice">
+								<span class="catalogMenu__title">Цена</span>
+								<div id="catalogMenuPrice__slider">
+									<div class="catalogMenuPrice__inputs">
+										<input class="catalogMenuPrice__input" id="input-0" min="1000" max="30000" placeholder="1000" type="number">
+										<span></span>
+										<input class="catalogMenuPrice__input" id="input-1" min="1000" max="30000" placeholder="30000" type="number">
+									</div>
+									<div id="slider"></div>
+									<div class="catalogMenuPrice__values">
+										<div class="catalogMenuPrice__min">1 000 ₽</div>
+										<div class="catalogMenuPrice__max">30 000 ₽</div>
+									</div>
 
+								</div>
 							</div>
 							<div class="catalogMenu__sort">
-								<div class="catalogMenu__down">
+								<div class="catalogMenu__down catalogMenuDown__js">
 									<span class="catalogMenu__title">Сорт</span>
-									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/alphabet.svg'; ?>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowSort.svg'; ?>
 								</div>
-								<div class="catalogMenu__container">
-									<div class="catalogMenu__labelSort"> 
-										<label class="catalogMenu__labelSort">
-											<input class="catalogMenu__check" type="checkbox" />
-											<span>Бонсай</span> 
-										</label>
+								<div class="catalogMenu__container catalogMenuContainer__js">
+									<div class="scrollGreen catalogMenu__items catalogMenuItems_js">
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
 									</div>
-									<div class="catalogMenu__labelSort"> 
-										<label class="catalogMenu__labelSort">
-											<input class="catalogMenu__check" type="checkbox" />
-											<span>Бонсай</span> 
-										</label>
-									</div>
-									<div class="catalogMenu__labelSort"> 
-										<label class="catalogMenu__labelSort">
-											<input class="catalogMenu__check" type="checkbox" />
-											<span>Бонсай</span> 
-										</label>
-									</div>
-									<div class="catalogMenu__labelSort"> 
-										<label class="catalogMenu__labelSort">
-											<input class="catalogMenu__check" type="checkbox" />
-											<span>Бонсай</span> 
-										</label>
-									</div>
-									<div class="catalogMenu__labelSort"> 
-										<label class="catalogMenu__labelSort">
-											<input class="catalogMenu__check" type="checkbox" />
-											<span>Бонсай</span> 
-										</label>
-									</div>
-								
-									<div class="catalogMenu__show catalogMenu__show_small">
-										<span>Показать еще</span>
-										<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/alphabet.svg'; ?>
+
+									<div class="catalogMenu__show catalogMenu__show_small catalogMenuSmall__js">
+										<span class="catalogMenuTextSmall__js">Показать еще</span>
+										<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShow.svg'; ?>
 									</div>
 								</div>
 							</div>
 							<div class="catalogMenu__stock">
-								<div class="catalogMenu__title">В наличии</div>
+								<div class="catalogMenu__down catalogStockDown__js">
+									<span class="catalogMenu__title">В наличии</span>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowStock.svg'; ?>
+								</div>
+								<div class="catalogMenu__container catalogStockContainer__js">
+									<div class="catalogMenu__items">
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Да</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Нет</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="catalogMenu__color">
+								<div class="catalogMenu__down catalogColorDown__js">
+									<span class="catalogMenu__title">Окрас хвои</span>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowColor.svg'; ?>
+								</div>
+								<div class="catalogMenu__container catalogColorContainer__js">
+									<div class="catalogMenu__items">
+										<div class="catalogMenu__label">
+											<input type="radio" id="ColorChoice1" name="color" checked>
+											<label class="catalogMenu__label" for="ColorChoice1"><span>Желтая</span></label>
+										</div>
+										<div class="catalogMenu__label">
+											<input type="radio" id="ColorChoice2" name="color">
+											<label class="catalogMenu__label" for="ColorChoice2"><span>Желтая</span></label>
+										</div>
+										<div class="catalogMenu__label">
+											<input type="radio" id="ColorChoice3" name="color">
+											<label class="catalogMenu__label" for="ColorChoice3"><span>Желтая</span></label>
+										</div>
+										<div class="catalogMenu__label">
+											<input type="radio" id="ColorChoice4" name="color">
+											<label class="catalogMenu__label" for="ColorChoice4"><span>Желтая</span></label>
+										</div>
 
+									</div>
+								</div>
 							</div>
 							<div class="catalogMenu__new">
 								<div class="catalogMenu__title">Новинки</div>
-
+								<label class="catalogMenu__switch">
+									<input class="catalogMenu__checkbox" type="checkbox" checked>
+									<span class="catalogMenu__sliding catalogMenu__round"></span>
+								</label>
 							</div>
 							<div class="catalogMenu__discount">
 								<div class="catalogMenu__title">Товары со скидкой</div>
-
+								<label class="catalogMenu__switch">
+									<input class="catalogMenu__checkbox" type="checkbox" checked>
+									<span class="catalogMenu__sliding catalogMenu__round"></span>
+								</label>
+							</div>
+							<div class="catalogMenu__buttons">
+								<button class="btnShow catalogMenu__buttonResset" type='reset'>Сбросить</button>
+								<button class="btn catalogMenu__buttonApply" type='submit'>Применить</button>
 							</div>
 						</form>
 
