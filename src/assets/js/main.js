@@ -30,9 +30,19 @@ import { specialSampleTabs } from "./blocks/specialSample.js";
 //📁 /assets/js/blocks  specialSample.js
 import { mainGardenShow } from "./blocks/showFull.js";
 
+<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", function () {
   // open catalog in the header
   headerCatalog();
+=======
+//📁 /assets/js/blocks  specialSample.js
+import {mapInit} from './blocks/map.js';
+
+//📁 /assets/js/blocks  scrollbar.js
+import {mapAsideScroll} from './blocks/scrollbar.js';
+
+document.addEventListener("DOMContentLoaded", function(){
+>>>>>>> 4228fd71ee508d917140d558cc86a8dd2f83b893
 
   // open contextual hint
   headerSearchelp();
@@ -46,11 +56,22 @@ document.addEventListener("DOMContentLoaded", function () {
   // tabs sliders in the main page section specialSample
   //specialSampleTabs();
 
+<<<<<<< HEAD
   // main garden show all
   //mainGardenShow();
 
   // sroll page on top
   footerScrollUp();
+=======
+    // map
+    mapInit();
+
+    // tabs sliders in the main page section specialSample
+    specialSampleTabs();
+
+    // main garden show all
+    mainGardenShow();
+>>>>>>> 4228fd71ee508d917140d558cc86a8dd2f83b893
 
   // validation e-mail
   footerValidationEmail();
@@ -62,8 +83,17 @@ document.addEventListener("DOMContentLoaded", function () {
   checkNum();
   
 
+<<<<<<< HEAD
   //slider for price
   priceSlider();
+=======
+    //
+    checkNum();
+
+    // map aside scroll
+    mapAsideScroll();
+});
+>>>>>>> 4228fd71ee508d917140d558cc86a8dd2f83b893
 
   //all filters
   filters()

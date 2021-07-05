@@ -1,4 +1,7 @@
 @import "../modules/utilities/_variables.scss";
+// Scrollbar
+@import "../blocks/_jquery.scrollbar.scss";
+
 .mainSlier {
     &__content {
         display: flex;
@@ -8,6 +11,13 @@
         flex: none;
         width: 1045px;
         height: 535px;
+        &:hover {
+            .mainSlier__prev, 
+            .mainSlier__next {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
     }
     &__item {
         width: 1045px;
@@ -35,8 +45,26 @@
         overflow: hidden;
         z-index: 10;
         cursor: pointer;
+        opacity: 0;
+        pointer-events: none;
+        transition: $transition;
+        &:hover {
+            background: $white;
+            svg {
+                path {
+                    stroke:$textColor;
+                }
+            }
+        }
+        &.slick-disabled {
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
         svg {
             display: block;
+            path {
+                transition: $transition;
+            }
         }
     }
     &__next {
@@ -47,6 +75,8 @@
         transform: rotate(180deg);
     }
     &__dots {
+        position: absolute;
+        left: 50%;
         margin-top: 16px;
         display: flex;
         justify-content: center;
@@ -58,6 +88,7 @@
             border-radius: 50%;
             overflow: hidden;
             cursor: pointer;
+            transition: $transition;
             &.slick-active {
                 background: #1E7243;
             }
@@ -108,7 +139,7 @@
     }
 }
 .productSection {
-    margin-top: 90px;
+    margin-top: 120px;
     &__title {
         font-size: 56px;
         line-height: 50px;
@@ -359,7 +390,7 @@
     &:after {
         content:'';
         position: absolute;
-        top: -420px;
+        top: -418px;
         right: 0;
         width: 422px;
         height: 850px;
@@ -372,7 +403,7 @@
     &:before {
         content:'';
         position: absolute;
-        top: -320px;
+        top: -315px;
         left: 0;
         width: 380px;
         height: 705px;
@@ -556,5 +587,88 @@
     }
     &__hide {
         display: none;
+    }
+}
+.map {
+    margin-top: 108px;
+    &__title {
+        font-size: 56px;
+        line-height: 70px;
+        font-weight: 900;
+        color: $textColor;
+        font-family: 'Rubik';
+    }
+    &__description {
+        margin-top: 21px;
+        font-size: 20px;
+        line-height: 32px;
+    }
+    &__content {
+        margin-top: 33px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        padding: 27px 28px 23px;
+        width: 520px;
+        font-size: 18px;
+        line-height: 24px;
+        color: $textColor;
+        font-family: 'Rubik';
+        border: 1px solid $gray2;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: $transition;
+        &:not(:first-child) {
+            margin-top: 15px;
+        }
+        &.show {
+            border: 1px solid #9BB5A8;
+        }
+    }
+    &__unit {
+        display: flex;
+        align-items: center;
+        margin-bottom: 18px;
+        &:before {
+            content:'';
+            margin-right: 8px;
+            width: 24px;
+            height: 24px;
+            background: {
+                repeat: no-repeat;
+                position: center left;
+            }
+        }
+        &.address {
+            &:before {
+                height: 25px;
+                background-image: url($imgUrl + "svg/mapUnitAddress.svg");
+            }
+        }
+        &.tel {
+            &:before {
+                background-image: url($imgUrl + "svg/mapUnitTel.svg");
+            }
+        }
+    }
+    &__schedule {
+        span {
+            display: block;
+            font-size: 16px;
+            color: #7D8E84;
+        }
+    }
+    &__tel {
+        pointer-events: none;
+    }
+    &__aside {
+        width: 538px;
+        height: 585px;
+        overflow: hidden;
+    }
+    #map {
+        width: 848.82px;
+        height: 585px;
     }
 }
