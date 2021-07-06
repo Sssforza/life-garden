@@ -1,0 +1,22 @@
+@import "../modules/utilities/_variables.scss";
+
+.lk {
+    display: flex;
+    justify-content: space-between;
+    &__content {
+        width: calc(100% - 355px);
+    }
+    &__list {
+        margin-top: 35px;
+    }
+    &__cardProduct {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -10px;
+        margin-left: -10px;
+    }
+    .cardProduct {
+        margin: 0 10px 35px 10px;
+    }
+}
+
