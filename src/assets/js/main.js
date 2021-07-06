@@ -30,19 +30,15 @@ import { specialSampleTabs } from "./blocks/specialSample.js";
 //📁 /assets/js/blocks  specialSample.js
 import { mainGardenShow } from "./blocks/showFull.js";
 
-<<<<<<< HEAD
-document.addEventListener("DOMContentLoaded", function () {
-  // open catalog in the header
-  headerCatalog();
-=======
 //📁 /assets/js/blocks  specialSample.js
 import {mapInit} from './blocks/map.js';
 
 //📁 /assets/js/blocks  scrollbar.js
 import {mapAsideScroll} from './blocks/scrollbar.js';
 
-document.addEventListener("DOMContentLoaded", function(){
->>>>>>> 4228fd71ee508d917140d558cc86a8dd2f83b893
+document.addEventListener("DOMContentLoaded", function () {
+  // open catalog in the header
+  headerCatalog();
 
   // open contextual hint
   headerSearchelp();
@@ -54,24 +50,19 @@ document.addEventListener("DOMContentLoaded", function(){
   sliderProductSpecial();
 
   // tabs sliders in the main page section specialSample
-  //specialSampleTabs();
+  specialSampleTabs();
 
-<<<<<<< HEAD
-  // main garden show all
-  //mainGardenShow();
+  // map
+  mapInit();
+
+  // tabs sliders in the main page section specialSample
+  specialSampleTabs();
 
   // sroll page on top
   footerScrollUp();
-=======
-    // map
-    mapInit();
 
-    // tabs sliders in the main page section specialSample
-    specialSampleTabs();
-
-    // main garden show all
-    mainGardenShow();
->>>>>>> 4228fd71ee508d917140d558cc86a8dd2f83b893
+  // main garden show all
+  mainGardenShow();
 
   // validation e-mail
   footerValidationEmail();
@@ -81,20 +72,17 @@ document.addEventListener("DOMContentLoaded", function(){
 
   //check numbers in pagination
   checkNum();
-  
 
-<<<<<<< HEAD
   //slider for price
   priceSlider();
-=======
-    //
-    checkNum();
 
-    // map aside scroll
-    mapAsideScroll();
-});
->>>>>>> 4228fd71ee508d917140d558cc86a8dd2f83b893
+  //
+  checkNum();
+
+  // map aside scroll
+  mapAsideScroll();
 
   //all filters
   filters()
+
 });
