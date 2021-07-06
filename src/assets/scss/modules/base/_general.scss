@@ -971,3 +971,156 @@ body {
       }
   }
 }
+.envelopeInput {
+  &__title {
+    font-size: 16px;
+    line-height: 19px;
+    color: $textColor;
+    font-family: 'Rubik'
+  }
+  &__input,
+  &__textarea {
+    margin-top: 10px;
+    padding: 0 18px;
+    font-size: 16px;
+    line-height: 19px;
+    color: $textColor;
+    border: 1px solid #C7D0D9;
+    border-radius: 5px;
+    transition: $transition;
+    @include placeholder(16px, #8C949B, "FiraSans", $opacity: 1);
+    &:focus {
+      border: 1px solid #1E7243;
+    }
+  }
+  &__textarea {
+    padding: 15px 18px;
+  }
+}
+.agreement {
+  display: flex;
+  &__label {
+		.check {
+      flex: none;
+      display: block;
+      width: 25px;
+      height: 25px;
+      border: 1px solid #C7D0D9;
+      border-radius: 2px;
+      cursor: pointer;
+      background: {
+        image: url($imgUrl + "svg/checkAgreement.svg");
+        repeat: no-repeat;
+        position: center;
+      }
+      overflow: hidden;
+      transition: $transition;
+    }
+		input {
+      display: none;
+      &:checked + .check {
+        background-color: $green;
+      }
+		}
+  }
+	&__consent {
+    margin-left: 15px;
+		font-size: 14px;
+    line-height: 20px;
+    color: #6F7982;
+	}
+  &__link {
+    color: $green;
+    border-bottom: 1px solid $green;
+    transition: $transition;
+    &:hover {
+      color: $darkGreen;
+      border-bottom: 1px solid transparent;
+    }
+  }
+}
+
+// map
+.map {
+  margin-top: 108px;
+  &__title {
+      font-size: 56px;
+      line-height: 70px;
+      font-weight: 900;
+      color: $textColor;
+      font-family: 'Rubik';
+  }
+  &__description {
+      margin-top: 21px;
+      font-size: 20px;
+      line-height: 32px;
+  }
+  &__content {
+      margin-top: 33px;
+      display: flex;
+      justify-content: space-between;
+  }
+  &__item {
+      padding: 27px 28px 23px;
+      width: 520px;
+      font-size: 18px;
+      line-height: 24px;
+      color: $textColor;
+      font-family: 'Rubik';
+      border: 1px solid $gray2;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: $transition;
+      &:not(:first-child) {
+          margin-top: 15px;
+      }
+      &.show {
+          border: 1px solid #9BB5A8;
+      }
+  }
+  &__unit {
+      display: flex;
+      align-items: center;
+      margin-bottom: 18px;
+      &:before {
+          content:'';
+          margin-right: 8px;
+          width: 24px;
+          height: 24px;
+          background: {
+              repeat: no-repeat;
+              position: center left;
+          }
+      }
+      &.address {
+          &:before {
+              height: 25px;
+              background-image: url($imgUrl + "svg/mapUnitAddress.svg");
+          }
+      }
+      &.tel {
+          &:before {
+              background-image: url($imgUrl + "svg/mapUnitTel.svg");
+          }
+      }
+  }
+  &__schedule {
+      span {
+          display: block;
+          font-size: 16px;
+          color: #7D8E84;
+      }
+  }
+  &__tel {
+      pointer-events: none;
+  }
+  &__aside {
+      width: 538px;
+      height: 585px;
+      overflow: hidden;
+  }
+  #map {
+      width: 848.82px;
+      height: 585px;
+  }
+}
