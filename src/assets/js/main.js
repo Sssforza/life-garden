@@ -41,6 +41,7 @@ import { mapInit } from "./blocks/map.js";
 //📁 /assets/js/blocks  scrollbar.js
 import { mapAsideScroll } from "./blocks/scrollbar.js";
 
+
 document.addEventListener("DOMContentLoaded", function () {
   // open contextual hint
   headerSearchelp();
@@ -58,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // tabs sliders in the main page section specialSample
   specialSampleTabs();
+
 
   // main garden show all
   mainGardenShow();
