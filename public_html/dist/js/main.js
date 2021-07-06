@@ -11401,12 +11401,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var nouislider__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(nouislider__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _blocks_header_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8);
 /* harmony import */ var _blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(9);
-/* harmony import */ var _blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(10);
-/* harmony import */ var _blocks_sliders_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(11);
-/* harmony import */ var _blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(12);
-/* harmony import */ var _blocks_showFull_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(13);
-/* harmony import */ var _blocks_map_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(14);
-/* harmony import */ var _blocks_scrollbar_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(15);
+/* harmony import */ var _blocks_sliders_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(10);
+/* harmony import */ var _blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(11);
+/* harmony import */ var _blocks_showFull_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(12);
+/* harmony import */ var _blocks_map_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(13);
+/* harmony import */ var _blocks_scrollbar_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(14);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁 /node_modules/  slick 1.8.1
@@ -11420,9 +11419,14 @@ global.noUiSlider = nouislider__WEBPACK_IMPORTED_MODULE_3___default.a; //📁 /a
 
  //📁 /assets/js/blocks  _footer.js
 
- //📁 /assets/js/blocks  catalog.js
-
- //📁 /assets/js/blocks  sliders.js
+ // //📁 /assets/js/blocks  catalog.js
+// import {
+//   catalogPopups,
+//   checkNum,
+//   priceSlider,
+//   filters,
+// } from "./blocks/catalog.js";
+//📁 /assets/js/blocks  sliders.js
 
  //📁 /assets/js/blocks  specialSample.js
 
@@ -11437,42 +11441,30 @@ document.addEventListener("DOMContentLoaded", function () {
   // open contextual hint
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerSearchelp"])(); // slick slider main
 
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_7__["sliderMain"])(); // slick slider main page special product
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_6__["sliderMain"])(); // slick slider main page special product
 
-<<<<<<< HEAD
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_7__["sliderProductSpecial"])(); // sroll page on top
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_6__["sliderProductSpecial"])(); // sroll page on top
 
   Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerScrollUp"])(); // map
-=======
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_7__["sliderProductSpecial"])(); // tabs sliders in the main page section specialSample
 
-  Object(_blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_8__["specialSampleTabs"])(); // map
->>>>>>> a0bcb7c7721d2898b614b9f41e9022b0c387285d
+  Object(_blocks_map_js__WEBPACK_IMPORTED_MODULE_9__["mapInit"])(); // map aside scroll
 
-  Object(_blocks_map_js__WEBPACK_IMPORTED_MODULE_10__["mapInit"])(); // tabs sliders in the main page section specialSample
+  Object(_blocks_scrollbar_js__WEBPACK_IMPORTED_MODULE_10__["mapAsideScroll"])(); // tabs sliders in the main page section specialSample
 
-  Object(_blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_8__["specialSampleTabs"])(); // sroll page on top
+  Object(_blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_7__["specialSampleTabs"])(); // main garden show all
 
-<<<<<<< HEAD
-=======
-  Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerScrollUp"])(); // main garden show all
+  Object(_blocks_showFull_js__WEBPACK_IMPORTED_MODULE_8__["mainGardenShow"])(); // validation e-mail
 
->>>>>>> a0bcb7c7721d2898b614b9f41e9022b0c387285d
-  Object(_blocks_showFull_js__WEBPACK_IMPORTED_MODULE_9__["mainGardenShow"])(); // validation e-mail
-
-  Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerValidationEmail"])(); //open popups in catalog
-
-  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["catalogPopups"])(); //check numbers in pagination
-
-  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["checkNum"])(); //slider for price
-
-  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["priceSlider"])(); //
-
-  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["checkNum"])(); // map aside scroll
-
-  Object(_blocks_scrollbar_js__WEBPACK_IMPORTED_MODULE_11__["mapAsideScroll"])(); //all filters
-
-  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["filters"])();
+  Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerValidationEmail"])(); // //open popups in catalog
+  // catalogPopups();
+  // //check numbers in pagination
+  // checkNum();
+  // //slider for price
+  // priceSlider();
+  // //
+  // checkNum();
+  // //all filters
+  // filters();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
@@ -18670,268 +18662,6 @@ function footerValidationEmail() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "priceSlider", function() { return priceSlider; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "catalogPopups", function() { return catalogPopups; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkNum", function() { return checkNum; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "filters", function() { return filters; });
-function priceSlider() {
-  var slider = document.getElementById("slider");
-  var input0 = document.getElementById("input-0");
-  var input1 = document.getElementById("input-1");
-  var inputs = [input0, input1];
-  noUiSlider.create(slider, {
-    start: [500, 99999],
-    connect: true,
-    step: 1,
-    range: {
-      min: 1000,
-      max: 30000
-    }
-  });
-  slider.noUiSlider.on("update", function (values, handle) {
-    inputs[handle].value = Math.round(values[handle]);
-  });
-
-  var setSlider = function setSlider(i, value) {
-    var arr = [null, null];
-    arr[i] = value;
-    slider.noUiSlider.set(arr);
-  };
-
-  inputs.forEach(function (el, index) {
-    el.addEventListener("change", function (e) {
-      setSlider(index, e.currentTarget.value);
-    });
-  });
-}
-function catalogPopups() {
-  var btnPopular = document.querySelector(".catalogCardsPopularLink__js");
-  var popularItem = document.querySelectorAll(".catalogCardsPopularItem__js");
-  var popupPopular = document.querySelector(".catalogCardsPopularPopup__js");
-  var btnText = document.querySelector(".catalogCardsPopularLinkText__js");
-  var label = document.querySelectorAll(".catalogCardsPopularLabel__js");
-
-  function closePopapPopular(e) {
-    if (popupPopular && e.target !== popupPopular && !popupPopular.contains(e.target)) {
-      popupPopular.classList.add("hidden");
-      document.removeEventListener("click", closePopapPopular);
-    }
-  }
-
-  btnPopular.addEventListener("click", function () {
-    if (popupPopular.classList.contains("hidden")) {
-      document.removeEventListener("click", closePopapPopular);
-    }
-
-    popupPopular.classList.toggle("hidden");
-    setTimeout(function () {
-      document.addEventListener("click", closePopapPopular);
-    }, 0);
-  });
-  popularItem.forEach(function (item) {
-    item.addEventListener("click", function () {
-      setTimeout(function () {
-        popupPopular.classList.toggle("hidden");
-        document.removeEventListener("click", closePopapPopular);
-      }, 300);
-    });
-  });
-  label.forEach(function (item) {
-    item.addEventListener("click", function () {
-      setTimeout(function () {
-        btnText.textContent = item.textContent;
-        popupPopular.classList.toggle("hidden");
-        document.removeEventListener("click", closePopapPopular);
-      }, 300);
-    });
-  });
-  var btnAlphabet = document.querySelector(".catalogCardsAlphabetLink__js");
-  var popupAlphabet = document.querySelector(".catalogCardsAlphabetPopup__js");
-  var letter = document.querySelectorAll(".catalogCardsAlphabetLetter__js");
-  var linkText = document.querySelector(".catalogCardsAlphabetTextChecked__js");
-  var btnAll = document.querySelector(".catalogCardsAlphabetAll__js");
-  var arrowOpen = document.querySelector(".open");
-  var arrowClose = document.querySelector(".close");
-
-  function closePopapAlph(e) {
-    if (popupAlphabet && e.target !== popupAlphabet && !popupAlphabet.contains(e.target)) {
-      popupAlphabet.classList.add("hidden");
-      document.removeEventListener("click", closePopapAlph);
-    }
-  }
-
-  function arrowChange() {
-    if (popupAlphabet.classList.contains("hidden")) {
-      arrowClose.classList.add("hidden");
-      arrowOpen.classList.remove("hidden");
-    } else {
-      arrowOpen.classList.add("hidden");
-      arrowClose.classList.remove("hidden");
-    }
-  }
-
-  btnAlphabet.addEventListener("click", function () {
-    arrowChange();
-
-    if (popupAlphabet.classList.contains("hidden")) {
-      document.removeEventListener("click", closePopapAlph);
-    }
-
-    popupAlphabet.classList.toggle("hidden");
-    setTimeout(function () {
-      document.addEventListener("click", closePopapAlph);
-    }, 0);
-  });
-  btnAll.addEventListener("click", function () {
-    setTimeout(function () {
-      arrowChange();
-      linkText.textContent = "все";
-      popupAlphabet.classList.toggle("hidden");
-    }, 300);
-  });
-  letter.forEach(function (element) {
-    element.addEventListener("click", function () {
-      letter.forEach(function (item) {
-        if (item.classList.contains("catalogCardsAlphabet__letter_checked")) {
-          item.classList.remove("catalogCardsAlphabet__letter_checked");
-        }
-      });
-      element.classList.add("catalogCardsAlphabet__letter_checked");
-      setTimeout(function () {
-        arrowChange();
-        linkText.textContent = element.textContent;
-        popupAlphabet.classList.toggle("hidden");
-      }, 300);
-    });
-  });
-}
-function checkNum() {
-  var numbers = document.querySelectorAll(".paginationNumber__js");
-  numbers.forEach(function (element) {
-    element.addEventListener("click", function () {
-      numbers.forEach(function (item) {
-        if (item.classList.contains("pagination_checked")) {
-          item.classList.remove("pagination_checked");
-        }
-      });
-      element.classList.add("pagination_checked");
-    });
-  });
-}
-function filters() {
-  var arrowLinkOpen = document.querySelector(".arrowLink-open");
-  var arrowLinkClose = document.querySelector(".arrowLink-close");
-  var arrowColorOpen = document.querySelector(".arrowColor-open");
-  var arrowColorClose = document.querySelector(".arrowColor-close");
-  var arrowSortOpen = document.querySelector(".arrowSort-open");
-  var arrowSortClose = document.querySelector(".arrowSort-close");
-  var arrowStockOpen = document.querySelector(".arrowStock-open");
-  var arrowStockClose = document.querySelector(".arrowStock-close");
-  var arrowShowOpen = document.querySelector(".arrowShow-open");
-  var arrowShowClose = document.querySelector(".arrowShow-close"); //функция изменения стрелки при открытии
-
-  function arrowOpen(open, close) {
-    open.classList.remove("hidden");
-    close.classList.add("hidden");
-  }
-
-  function arrowClose(open, close) {
-    open.classList.add("hidden");
-    close.classList.remove("hidden");
-  }
-
-  var link = document.querySelectorAll(".catalogMenu__link");
-  link.forEach(function (element) {
-    element.addEventListener("click", function () {
-      link.forEach(function (item) {
-        if (item.classList.contains("catalogMenu__link_checked")) {
-          item.classList.remove("catalogMenu__link_checked");
-        }
-      });
-      element.classList.add("catalogMenu__link_checked");
-    });
-  });
-  var showMore = document.querySelector(".catalogMenuShow__js");
-  var showMoreLinks = document.querySelector(".catalogMenuLinks__js");
-  var showMoreText = document.querySelector(".catalogMenuText__js");
-  showMore.addEventListener("click", function () {
-    showMoreLinks.classList.toggle("catalogMenu__links_open");
-
-    if (showMoreLinks.classList.contains("catalogMenu__links_open")) {
-      showMoreText.textContent = "Свернуть";
-      arrowOpen(arrowLinkOpen, arrowLinkClose);
-    } else {
-      showMoreText.textContent = "Показать еще";
-      arrowClose(arrowLinkOpen, arrowLinkClose);
-    }
-  });
-  var down = document.querySelector(".catalogMenuDown__js");
-  var container = document.querySelector(".catalogMenuContainer__js");
-  var stockDown = document.querySelector(".catalogStockDown__js");
-  var stockContainer = document.querySelector(".catalogStockContainer__js");
-  var colorDown = document.querySelector(".catalogColorDown__js");
-  var colorContainer = document.querySelector(".catalogColorContainer__js");
-  var showMoreSmall = document.querySelector(".catalogMenuSmall__js");
-  var showTextSmall = document.querySelector(".catalogMenuTextSmall__js");
-  var items = document.querySelector(".catalogMenuItems_js");
-  down.addEventListener("click", function () {
-    arrowClose(arrowStockOpen, arrowStockClose);
-    arrowClose(arrowColorOpen, arrowColorClose);
-    container.classList.toggle("catalogMenu__container_open");
-    stockContainer.classList.remove("catalogMenu__container_open");
-    colorContainer.classList.remove("catalogMenu__container_open");
-
-    if (container.classList.contains("catalogMenu__container_open")) {
-      arrowOpen(arrowSortOpen, arrowSortClose);
-    } else {
-      arrowClose(arrowSortOpen, arrowSortClose);
-    }
-  });
-  stockDown.addEventListener("click", function () {
-    arrowClose(arrowSortOpen, arrowSortClose);
-    arrowClose(arrowColorOpen, arrowColorClose);
-    stockContainer.classList.toggle("catalogMenu__container_open");
-    colorContainer.classList.remove("catalogMenu__container_open");
-    container.classList.remove("catalogMenu__container_open");
-
-    if (stockContainer.classList.contains("catalogMenu__container_open")) {
-      arrowOpen(arrowStockOpen, arrowStockClose);
-    } else {
-      arrowClose(arrowStockOpen, arrowStockClose);
-    }
-  });
-  colorDown.addEventListener("click", function () {
-    arrowClose(arrowStockOpen, arrowStockClose);
-    arrowClose(arrowSortOpen, arrowSortClose);
-    colorContainer.classList.toggle("catalogMenu__container_open");
-    container.classList.remove("catalogMenu__container_open");
-    stockContainer.classList.remove("catalogMenu__container_open");
-
-    if (colorContainer.classList.contains("catalogMenu__container_open")) {
-      arrowOpen(arrowColorOpen, arrowColorClose);
-    } else {
-      arrowClose(arrowColorOpen, arrowColorClose);
-    }
-  });
-  showMoreSmall.addEventListener("click", function () {
-    items.classList.toggle("catalogMenu__items_big");
-
-    if (items.classList.contains("catalogMenu__items_big")) {
-      showTextSmall.textContent = "Свернуть";
-      arrowOpen(arrowShowOpen, arrowShowClose);
-    } else {
-      showTextSmall.textContent = "Показать еще";
-      arrowClose(arrowShowOpen, arrowShowClose);
-    }
-  });
-}
-
-/***/ }),
-/* 11 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderMain", function() { return sliderMain; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderProductSpecial", function() { return sliderProductSpecial; });
 // SliderMain
@@ -18977,7 +18707,7 @@ function sliderProductSpecial() {
 ;
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19012,7 +18742,7 @@ function specialSampleTabs() {
 ;
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19031,7 +18761,7 @@ function mainGardenShow() {
 ;
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19130,7 +18860,7 @@ function mapInit() {
 }
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
