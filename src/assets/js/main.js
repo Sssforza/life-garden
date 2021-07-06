@@ -19,7 +19,12 @@ import { headerCatalog, headerSearchelp } from "./blocks/_header.js";
 import { footerScrollUp, footerValidationEmail } from "./blocks/_footer.js";
 
 //📁 /assets/js/blocks  catalog.js
-import { catalogPopups, checkNum, priceSlider, filters } from "./blocks/catalog.js";
+import {
+  catalogPopups,
+  checkNum,
+  priceSlider,
+  filters,
+} from "./blocks/catalog.js";
 
 //📁 /assets/js/blocks  sliders.js
 import { sliderMain, sliderProductSpecial } from "./blocks/sliders.js";
@@ -30,20 +35,13 @@ import { specialSampleTabs } from "./blocks/specialSample.js";
 //📁 /assets/js/blocks  specialSample.js
 import { mainGardenShow } from "./blocks/showFull.js";
 
-<<<<<<< HEAD
-document.addEventListener("DOMContentLoaded", function () {
-  // open catalog in the header
-  headerCatalog();
-=======
 //📁 /assets/js/blocks  specialSample.js
-import {mapInit} from './blocks/map.js';
+import { mapInit } from "./blocks/map.js";
 
 //📁 /assets/js/blocks  scrollbar.js
-import {mapAsideScroll} from './blocks/scrollbar.js';
+import { mapAsideScroll } from "./blocks/scrollbar.js";
 
-document.addEventListener("DOMContentLoaded", function(){
->>>>>>> 4228fd71ee508d917140d558cc86a8dd2f83b893
-
+document.addEventListener("DOMContentLoaded", function () {
   // open contextual hint
   headerSearchelp();
 
@@ -53,25 +51,16 @@ document.addEventListener("DOMContentLoaded", function(){
   // slick slider main page special product
   sliderProductSpecial();
 
-  // tabs sliders in the main page section specialSample
-  //specialSampleTabs();
-
-<<<<<<< HEAD
-  // main garden show all
-  //mainGardenShow();
-
   // sroll page on top
   footerScrollUp();
-=======
-    // map
-    mapInit();
+  // map
+  mapInit();
 
-    // tabs sliders in the main page section specialSample
-    specialSampleTabs();
+  // tabs sliders in the main page section specialSample
+  specialSampleTabs();
 
-    // main garden show all
-    mainGardenShow();
->>>>>>> 4228fd71ee508d917140d558cc86a8dd2f83b893
+  // main garden show all
+  mainGardenShow();
 
   // validation e-mail
   footerValidationEmail();
@@ -81,20 +70,16 @@ document.addEventListener("DOMContentLoaded", function(){
 
   //check numbers in pagination
   checkNum();
-  
 
-<<<<<<< HEAD
   //slider for price
   priceSlider();
-=======
-    //
-    checkNum();
+  
+  //
+  checkNum();
 
-    // map aside scroll
-    mapAsideScroll();
-});
->>>>>>> 4228fd71ee508d917140d558cc86a8dd2f83b893
+  // map aside scroll
+  mapAsideScroll();
 
   //all filters
-  filters()
+  filters();
 });

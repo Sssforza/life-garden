@@ -55,13 +55,13 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<li><a class="catalogMenu__link" href="#">Горчица</a></li>
 									<li><a class="catalogMenu__link" href="#">Душица</a></li>
 								</ul>
-								<div class="catalogMenu__show catalogMenuShow__js"> <span  class="catalogMenuText__js">Показать еще</span>
+								<div class="catalogMenu__show catalogMenuShow__js"> <span class="catalogMenuText__js">Показать еще</span>
 									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowLink.svg'; ?>
 								</div>
 							</div>
 							<div class="catalogMenu__price catalogMenuPrice">
 								<span class="catalogMenu__title">Цена</span>
-								<div id="catalogMenuPrice__slider">
+								<div class="catalogMenuPrice__slider">
 									<div class="catalogMenuPrice__inputs">
 										<input class="catalogMenuPrice__input" id="input-0" min="1000" max="30000" placeholder="1000" type="number">
 										<span></span>
@@ -72,7 +72,6 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 										<div class="catalogMenuPrice__min">1 000 ₽</div>
 										<div class="catalogMenuPrice__max">30 000 ₽</div>
 									</div>
-
 								</div>
 							</div>
 							<div class="catalogMenu__sort">
@@ -163,13 +162,13 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								</div>
 								<div class="catalogMenu__container catalogStockContainer__js">
 									<div class="catalogMenu__items">
-										<div>
+										<div class="catalogLabel__container">
 											<label class="catalogMenu__label">
 												<input class="catalogMenu__check" type="checkbox" />
 												<span>Да</span>
 											</label>
 										</div>
-										<div>
+										<div class="catalogLabel__container">
 											<label class="catalogMenu__label">
 												<input class="catalogMenu__check" type="checkbox" />
 												<span>Нет</span>
@@ -185,23 +184,30 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								</div>
 								<div class="catalogMenu__container catalogColorContainer__js">
 									<div class="catalogMenu__items">
-										<div class="catalogMenu__label">
-											<input type="radio" id="ColorChoice1" name="color" checked>
-											<label class="catalogMenu__label" for="ColorChoice1"><span>Желтая</span></label>
+										<div class="catalogLabel__container">
+											<label class="catalogMenu__label">
+												<input type="radio" name="color" checked>
+												<span>Желтая</span>
+											</label>
 										</div>
-										<div class="catalogMenu__label">
-											<input type="radio" id="ColorChoice2" name="color">
-											<label class="catalogMenu__label" for="ColorChoice2"><span>Желтая</span></label>
+										<div class="catalogLabel__container">
+											<label class="catalogMenu__label">
+												<input type="radio" name="color">
+												<span>Желтая</span>
+											</label>
 										</div>
-										<div class="catalogMenu__label">
-											<input type="radio" id="ColorChoice3" name="color">
-											<label class="catalogMenu__label" for="ColorChoice3"><span>Желтая</span></label>
+										<div class="catalogLabel__container">
+											<label class="catalogMenu__label">
+												<input type="radio" name="color">
+												<span>Желтая</span>
+											</label>
 										</div>
-										<div class="catalogMenu__label">
-											<input type="radio" id="ColorChoice4" name="color">
-											<label class="catalogMenu__label" for="ColorChoice4"><span>Желтая</span></label>
+										<div class="catalogLabel__container">
+											<label class="catalogMenu__label">
+												<input type="radio" name="color">
+												<span>Желтая</span>
+											</label>
 										</div>
-
 									</div>
 								</div>
 							</div>
@@ -711,9 +717,17 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 
 		</div>
 	</section>
-	<section class="catalog__helpful">
-		<div class=""></div>
-		<div class=""></div>
+	<section class="catalog__helpful container catalogHelpful">
+		<div class="catalogHelpful__head">
+			<div class="catalogHelpful__title"></div>
+			<div class="catalogHelpful__link"></div>
+		</div>
+		<div class="catalogHelpful__container">
+			<div class="card">
+				<img src="" alt="">
+				<div class="catalogHelpful__date"></div>
+			</div>
+		</div>
 	</section>
 	</div>
 

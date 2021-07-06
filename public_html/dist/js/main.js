@@ -181,15 +181,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       this.splice(a.inArray(b, this), 1);
     }
 
-<<<<<<< HEAD
-  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["catalogPopups"])(); //check numbers in pagination
-
-  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["checkNum"])(); //slider for price
-
-  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["priceSlider"])(); //all filters
-
-  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["filters"])();
-=======
     return this;
   };
 
@@ -504,7 +495,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       };
     }]);
   }(window.angular);
->>>>>>> 4228fd71ee508d917140d558cc86a8dd2f83b893
 });
 
 /***/ }),
@@ -11444,30 +11434,34 @@ global.noUiSlider = nouislider__WEBPACK_IMPORTED_MODULE_3___default.a; //📁 /a
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  // open catalog in the header
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerCatalog"])(); // open contextual hint
-
+  // open contextual hint
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerSearchelp"])(); // slick slider main
 
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_7__["sliderMain"])(); // slick slider main page special product
 
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_7__["sliderProductSpecial"])(); // map
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_7__["sliderProductSpecial"])(); // sroll page on top
+
+  Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerScrollUp"])(); // map
 
   Object(_blocks_map_js__WEBPACK_IMPORTED_MODULE_10__["mapInit"])(); // tabs sliders in the main page section specialSample
 
   Object(_blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_8__["specialSampleTabs"])(); // main garden show all
 
-  Object(_blocks_showFull_js__WEBPACK_IMPORTED_MODULE_9__["mainGardenShow"])(); // sroll page on top
-
-  Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerScrollUp"])(); // validation e-mail
+  Object(_blocks_showFull_js__WEBPACK_IMPORTED_MODULE_9__["mainGardenShow"])(); // validation e-mail
 
   Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerValidationEmail"])(); //open popups in catalog
 
-  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["catalogPopups"])(); //
+  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["catalogPopups"])(); //check numbers in pagination
+
+  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["checkNum"])(); //slider for price
+
+  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["priceSlider"])(); //
 
   Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["checkNum"])(); // map aside scroll
 
-  Object(_blocks_scrollbar_js__WEBPACK_IMPORTED_MODULE_11__["mapAsideScroll"])();
+  Object(_blocks_scrollbar_js__WEBPACK_IMPORTED_MODULE_11__["mapAsideScroll"])(); //all filters
+
+  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["filters"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
