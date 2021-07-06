@@ -1,10 +1,11 @@
 @import "../modules/utilities/_variables.scss";
 @import "../modules/utilities/_mixins.scss";
 .catalog {
-  &__title {
+  &__content {
     margin-top: 41px;
+  }
+  &__title {
     display: flex;
-
     font: {
       family: Rubik;
       weight: 900;
@@ -31,7 +32,6 @@
 .catalogEvent {
   display: flex;
   align-items: flex-end;
-  background-image: url("../../img/bgEvent.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -84,7 +84,6 @@
 
 .catalogMenu {
 }
-
 .catalogCards {
   margin-left: 40px;
   width: 1043px;
@@ -225,6 +224,7 @@
   }
 
   &__popup {
+    display: none;
     z-index: 10;
     width: 520px;
     height: 140px;
@@ -354,13 +354,6 @@
       margin: 0;
     }
   }
-  &__price {
-  }
-
-  &__sort {
-    &:hover {
-    }
-  }
   &__down {
     display: flex;
     justify-content: space-between;
@@ -383,54 +376,19 @@
       height: auto;
       max-height: 1000px;
     }
-    & input[type="radio"] {
-      margin: 0px;
-      margin-left: 2px;
-      width: 16px;
-      height: 16px;
-      background-color: $green;
-      position: relative;
-    }
-    & input[type="radio"]::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      background-color: white;
-      border: 1px solid $border;
-    }
-    & input[type="radio"]:checked::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: $green;
-      transform: translate(-50%, -50%);
-    }
   }
   &__check {
   }
   &__label {
     cursor: pointer;
     display: inline-block;
-
     & span {
       margin-left: 9px;
+      font-size: 14px;
+      line-height: 32px;
     }
   }
   &__items {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: 14px;
-    line-height: 32px;
     width: 99%;
     max-height: 162px;
     overflow: hidden;
@@ -482,6 +440,36 @@
       position: absolute;
       top: 1px;
       left: 6px;
+    }
+    & input[type="radio"] {
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      background-color: $green;
+      position: relative;
+    }
+    & input[type="radio"]::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      border: 1px solid $border;
+    }
+    & input[type="radio"]:checked::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $green;
+      transform: translate(-50%, -50%);
     }
   }
 
@@ -668,8 +656,4 @@
   border: 2px solid $green;
   box-sizing: border-box;
   border-radius: 50%;
-}
-.catalogLabel__container {
-  display: flex;
-  align-items: center;
 }

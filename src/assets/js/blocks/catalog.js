@@ -1,4 +1,5 @@
 export function priceSlider() {
+  if(document.getElementById("slider")){
   const slider = document.getElementById("slider");
   const input0 = document.getElementById("input-0");
   const input1 = document.getElementById("input-1");
@@ -29,10 +30,11 @@ export function priceSlider() {
     el.addEventListener("change", (e) => {
       setSlider(index, e.currentTarget.value);
     });
-  });
+  });}
 }
 
 export function catalogPopups() {
+  if(document.querySelector(".catalogCardsPopularLink__js")){
   const btnPopular = document.querySelector(".catalogCardsPopularLink__js");
   const popularItem = document.querySelectorAll(".catalogCardsPopularItem__js");
   const popupPopular = document.querySelector(".catalogCardsPopularPopup__js");
@@ -68,6 +70,7 @@ export function catalogPopups() {
       }, 300);
     });
   });
+  
   label.forEach((item) => {
     item.addEventListener("click", () => {
       setTimeout(() => {
@@ -144,7 +147,7 @@ export function catalogPopups() {
         popupAlphabet.classList.toggle("hidden");
       }, 300);
     });
-  });
+  });}
 }
 
 export function checkNum() {
@@ -162,6 +165,7 @@ export function checkNum() {
 }
 
 export function filters() {
+  if(document.querySelector(".arrowLink-open")){
   const arrowLinkOpen = document.querySelector(".arrowLink-open");
   const arrowLinkClose = document.querySelector(".arrowLink-close");
   const arrowColorOpen = document.querySelector(".arrowColor-open");
@@ -266,5 +270,5 @@ export function filters() {
       showTextSmall.textContent = "Показать еще";
       arrowClose(arrowShowOpen, arrowShowClose);
     }
-  });
+  });}
 }

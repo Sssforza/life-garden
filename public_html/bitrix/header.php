@@ -52,7 +52,7 @@
       <div class="headerMiddle">
         <div class="container">
           <div class="header__container">
-            <a class="headerMiddle__logo" href="#">
+            <a class="headerMiddle__logo" href="/">
               <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/logo.svg'; ?>
             </a>
             <div class="headerMiddle__search">
