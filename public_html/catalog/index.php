@@ -15,11 +15,11 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 		</div>
 		<div class="page">
 			<section class="catalog__border">
-				<a class="catalog__event catalogEvent" href="#">
+				<a class="catalog__event catalogEvent" style="background-image:url(/dist/img/bgEvent.png)" href="#">
 					<div class="catalogEvent__box">
 						<div class="catalogEvent__title">Весенняя акция: три
 							растения по цене двух</div>
-						<div class="catalogEvent__description">С 20 марта по 1 мая у нас действует акция: каждое третье растение В ПОДАРОК!</div>
+						<div class="catalogEvent__description">С 20 МАРТА по 1 мая у нас действует акция: каждое третье растение В ПОДАРОК!</div>
 					</div>
 				</a>
 			</section>
@@ -186,7 +186,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<div class="catalogMenu__items">
 										<div class="catalogLabel__container">
 											<label class="catalogMenu__label">
-												<input type="radio" name="color" checked>
+												<input class="radio" type="radio" name="color" checked>
 												<span>Желтая</span>
 											</label>
 										</div>
@@ -701,33 +701,87 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="pagination__prev">
 								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pagiLeft.svg'; ?>
 							</div>
-							<div class="pagination__number paginationNumber__js pagination_checked">1</div>
-							<div class="pagination__number paginationNumber__js">2</div>
-							<div class="pagination__number paginationNumber__js">3</div>
-							<div class="pagination__number paginationNumber__js">4</div>
-							<div class="pagination__number paginationNumber__js">5</div>
-							<div class="pagination__points">....</div>
-							<div class="pagination__number paginationNumber__js">10</div>
-							<div class="pagination__next">
+							<a href="#" class="pagination__number paginationNumber__js pagination_checked">1</a>
+							<a href="#" class="pagination__number paginationNumber__js">2</a>
+							<a href="#" class="pagination__number paginationNumber__js">3</a>
+							<a href="#" class="pagination__number paginationNumber__js">4</a>
+							<a href="#" class="pagination__number paginationNumber__js">5</a>
+							<a href="#" class="pagination__points">....</a>
+							<a href="#" class="pagination__number paginationNumber__js">10</a>
+							<a href="#" class="pagination__next">
 								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pagiRight.svg'; ?>
-							</div>
+							</a>
 						</div>
 					</div>
 				</div>
 
 		</div>
 	</section>
-	<section class="catalog__helpful container catalogHelpful">
-		<div class="catalogHelpful__head">
-			<div class="catalogHelpful__title"></div>
-			<div class="catalogHelpful__link"></div>
-		</div>
-		<div class="catalogHelpful__container">
-			<div class="card">
-				<img src="" alt="">
-				<div class="catalogHelpful__date"></div>
+	<section class="helpful">
+		<div class="helpful__content container">
+			<div class="helpful__head">
+				<div class="helpful__title">Полезные статьи</div>
+				<a class="helpful__link" href="#">Все статьи</a>
+			</div>
+			<div class="helpful__container">
+				<div class="helpfulCard">
+					<div class="helpfulCard__img" style="background-image:url(/dist/img/trash/friendly.png)"></div>
+					<div class="helpfulCard__text">
+						<div class="helpfulCard__date">16 МАРТА 2021</div>
+						<div class="helpfulCard__title">Как добиться дружных всходов сельдерея</div>
+						<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.</div>
+
+					</div>
+					<div class="cardArticle__btn helpfulCard__btn">
+						<span>Читать дальше</span>
+						<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
+					</div>
+				</div>
+				<div class="helpfulCard">
+					<div class="helpfulCard__img" style="background-image:url(/dist/img/trash/friendly.png)"></div>
+					<div class="helpfulCard__text">
+						<div class="helpfulCard__date">16 МАРТА 2021</div>
+						<div class="helpfulCard__title">Как добиться дружных всходов</div>
+						<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.</div>
+
+					</div>
+					<div class="cardArticle__btn helpfulCard__btn">
+						<span>Читать дальше</span>
+						<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
+					</div>
+				</div>
+				<div class="helpfulCard">
+					<div class="helpfulCard__img" style="background-image:url(/dist/img/trash/friendly.png)"></div>
+					<div class="helpfulCard__text">
+						<div class="helpfulCard__date">16 МАРТА 2021</div>
+						<div class="helpfulCard__title">Как добиться дружных всходов сельдерея</div>
+						<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.</div>
+
+					</div>
+					<div class="cardArticle__btn helpfulCard__btn">
+						<span>Читать дальше</span>
+						<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
+					</div>
+				</div>
+				<div class="helpfulCard">
+					<div class="helpfulCard__video">
+						<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/video.svg'; ?>
+					</div>
+					<div class="helpfulCard__img" style="background-image:url(/dist/img/trash/friendly.png)"></div>
+					<div class="helpfulCard__text">
+						<div class="helpfulCard__date">16 МАРТА 2021</div>
+						<div class="helpfulCard__title">Как добиться дружных всходов сельдерея</div>
+						<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый</div>
+
+					</div>
+					<div class="cardArticle__btn helpfulCard__btn">
+						<span>Читать дальше</span>
+						<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
+					</div>
+				</div>
 			</div>
 		</div>
+
 	</section>
 	</div>
 

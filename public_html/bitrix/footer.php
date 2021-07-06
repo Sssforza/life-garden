@@ -1,7 +1,7 @@
         <footer class="footer">
             <div class="footer__container container">
                 <div class="footer__icons footerIcons">
-                    <a class="footerIcons__logo" href="#">
+                    <a class="footerIcons__logo" href="/">
                         <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/logo-white.svg'; ?>
                     </a>
                     <div class="footerIcons__social">
@@ -47,7 +47,7 @@
                         </a>
                         <div class="footerContacts__telCenter">Центр информационной поддержки клиента</div>
                     </div>
-                    <a class="footerContacts__email" href="#">
+                    <a class="footerContacts__email" href="mailto:zhivoy-sad.@mail.ru">
                         <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/email.svg'; ?>
                         <span class="footerContacts__emailText"> zhivoy-sad.@mail.ru
                         </span>

@@ -54,12 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // sroll page on top
   footerScrollUp();
+
   // map
   mapInit();
 
   // tabs sliders in the main page section specialSample
   specialSampleTabs();
-
 
   // main garden show all
   mainGardenShow();
