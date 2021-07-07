@@ -2,7 +2,7 @@
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 ?>
 <link rel='stylesheet' href="/dist/css/blocks/basket.css">
-<main class="main">
+<main class="page">
 	<section class="basket container">
 		<section class="basket__main">
 			<div class="chain">
@@ -15,7 +15,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 			</div>
 			<section class="basket__cards">
 				<div class="basket__card basketCard">
-					<div class="basketCard__image"></div>
+					<div class="basketCard__image" style="background-image:url(/dist/img/trash/tree.png)"></div>
 					<div class="basketCard__description">
 						<div class="basketCard__title">Ель обыкновенная Инверса на штамбе</div>
 						<div class="basketCard__article">Артикул: 456789</div>
@@ -59,7 +59,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 					</div>
 				</div>
 				<div class="basket__card basketCard">
-					<div class="basketCard__image"></div>
+					<div class="basketCard__image" style="background-image:url(/dist/img/trash/tree.png)"></div>
 					<div class="basketCard__description">
 						<div class="basketCard__title">Ель обыкновенная Акрокона Пуш</div>
 						<div class="basketCard__article">Артикул: 456789</div>
@@ -103,7 +103,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 					</div>
 				</div>
 				<div class="basket__card basketCard">
-					<div class="basketCard__image"></div>
+					<div class="basketCard__image" style="background-image:url(/dist/img/trash/tree.png)"></div>
 					<div class="basketCard__description">
 						<div class="basketCard__title">Дизельма Арчера Халсдонк</div>
 						<div class="basketCard__article">Артикул: 456789</div>

@@ -25,3 +25,64 @@ export function headerSearchelp() {
     }
   });
 }
+
+export function headerClick() {
+  const basketClick = document.querySelector(".headerBasket__js");
+  const basketPop = document.querySelector(".headerClickBasket__js");
+  const preorderClick = document.querySelector(".headerPreorder__js");
+  const preorderPop = document.querySelector(".headerClickPreorder__js");
+
+  function closeBasket(e) {
+    if (
+      basketPop &&
+      e.target !== basketPop &&
+      !basketPop.contains(e.target)
+    ) {
+      basketPop.classList.add("hidden");
+      }
+  }
+  function closePreorder(e) {
+    if (
+      preorderPop &&
+      e.target !== preorderPop &&
+      !preorderPop.contains(e.target)
+    ) {
+      preorderPop.classList.add("hidden");
+      }
+  }
+
+  basketClick.addEventListener('click', (e) => {
+    
+    if (basketPop.classList.contains("hidden")) {
+      document.removeEventListener("click", closeBasket);
+    }
+    basketPop.classList.toggle("hidden");
+    setTimeout(() => {
+      document.addEventListener("click", closeBasket);
+    }, 0);
+  })
+
+
+  preorderClick.addEventListener('click', () => {
+    if (preorderPop.classList.contains("hidden")) {
+      document.removeEventListener("click", closePreorder);
+    }
+    preorderPop.classList.toggle("hidden");
+    setTimeout(() => {
+      document.addEventListener("click", closePreorder);
+    }, 0);
+  })
+
+}
+
+export function headerScroll() {
+  const headerTop = document.querySelector('.headerTop')
+  window.onscroll = function() {
+    if (window.pageYOffset > 1) {
+      headerTop.classList.add('hidden');
+    } else {
+      headerTop.classList.remove('hidden');
+    }
+
+  }
+}

@@ -167,22 +167,317 @@
                 </a>
                 <span class="iconSelected__count">0</span>
               </div>
-              <div class="iconSelected">
-                <div class="iconSelected__svg">
-                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/date.svg'; ?>
-                </div>
-                <span class="iconSelected__count">0</span>
-              </div>
-              <div class="headerMiddle__iconsBasket">
-                <div class="iconSelected">
+              <div class="headerMiddle__preorder">
+                <div class="iconSelected headerPreorder__js">
                   <div class="iconSelected__svg">
-                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/garbage.svg'; ?>
+                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/date.svg'; ?>
                   </div>
-                  <span class="iconSelected__count iconSelected__count_choice">100</span>
+                  <span class="iconSelected__count">0</span>
                 </div>
-                <div class="iconSelected__garbage">
-                  <span>Корзина</span>
-                  <span>6570 р</span>
+                <div class="headerClick headerClickPreorder__js hidden">
+                  <div class="headerClick__top">
+                    <div class="headerClick__title">Товары для предзаказа</div>
+                    <div class="headerClick__clear">Очистить все</div>
+                  </div>
+                  <div class="headerClick__container">
+                    <div class="basketCard headerClick__card">
+                      <div class="basketCard__image" style="background-image:url(/dist/img/trash/tree.png)"></div>
+                      <div class="basketCard__description">
+                        <div class="basketCard__title">Дизельма Арчера Халсдонк Дизельма Арчера Халсдонк</div>
+                        <div class="basketCard__article">Артикул: 456789</div>
+                        <div class="availability  availability_margin">
+                          <div class="availability__text has hidden">
+                            <span>Есть в наличии</span>
+                          </div>
+                          <div class="availability__text not">
+                            <span>Нет в наличии</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="basketCard__action">
+                        <div class="basketCard__count">
+                          <div class="basketCard__text">Количество</div>
+                          <div class="counter counter_margin">
+                            <div class="counter__minus">
+                              <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
+                            </div>
+                            <div class="counter__input">
+                              <input type="number" value="5">
+                            </div>
+                            <div class="counter__plus">
+                              <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="basketCard__price">
+                          <div class="basketCard__text">Цена</div>
+                          <span class="basketCard__priceValue">11223222</span>
+                          <span class="basketCard__priceValue">₽</span>
+                        </div>
+                        <div class="basketCard__icons">
+                          <div class="basketCard__iconLike">
+                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeBasket.svg'; ?>
+                          </div>
+                          <div class="basketCard__iconBasket">
+                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/basket.svg'; ?>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="basketCard headerClick__card">
+                      <div class="basketCard__image" style="background-image:url(/dist/img/trash/tree.png)"></div>
+                      <div class="basketCard__description">
+                        <div class="basketCard__title">Дизельма Арчера Халсдонк</div>
+                        <div class="basketCard__article">Артикул: 456789</div>
+                        <div class="availability  availability_margin">
+                          <div class="availability__text has">
+                            <span>Есть в наличии</span>
+                          </div>
+                          <div class="availability__text not hidden">
+                            <span>Нет в наличии</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="basketCard__action">
+                        <div class="basketCard__count">
+                          <div class="basketCard__text">Количество</div>
+                          <div class="counter counter_margin">
+                            <div class="counter__minus">
+                              <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
+                            </div>
+                            <div class="counter__input">
+                              <input type="number" value="5">
+                            </div>
+                            <div class="counter__plus">
+                              <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="basketCard__price">
+                          <div class="basketCard__text">Цена</div>
+                          <span class="basketCard__priceValue">1122</span>
+                          <span class="basketCard__priceValue">₽</span>
+                        </div>
+                        <div class="basketCard__icons">
+                          <div class="basketCard__iconLike">
+                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeBasket.svg'; ?>
+                          </div>
+                          <div class="basketCard__iconBasket">
+                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/basket.svg'; ?>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="basketCard headerClick__card">
+                      <div class="basketCard__image" style="background-image:url(/dist/img/trash/tree.png)"></div>
+                      <div class="basketCard__description">
+                        <div class="basketCard__title">Дизельма Арчера Халсдонк</div>
+                        <div class="basketCard__article">Артикул: 456789</div>
+                        <div class="availability  availability_margin">
+                          <div class="availability__text has">
+                            <span>Есть в наличии</span>
+                          </div>
+                          <div class="availability__text not hidden">
+                            <span>Нет в наличии</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="basketCard__action">
+                        <div class="basketCard__count">
+                          <div class="basketCard__text">Количество</div>
+                          <div class="counter counter_margin">
+                            <div class="counter__minus">
+                              <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
+                            </div>
+                            <div class="counter__input">
+                              <input type="number" value="5">
+                            </div>
+                            <div class="counter__plus">
+                              <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="basketCard__price">
+                          <div class="basketCard__text">Цена</div>
+                          <span class="basketCard__priceValue">1122</span>
+                          <span class="basketCard__priceValue">₽</span>
+                        </div>
+                        <div class="basketCard__icons">
+                          <div class="basketCard__iconLike">
+                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeBasket.svg'; ?>
+                          </div>
+                          <div class="basketCard__iconBasket">
+                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/basket.svg'; ?>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="headerClick__price">
+                    <div class="headerClick__all">Всего</div>
+                    <div class="headerClick__sum">53232380 ₽</div>
+                  </div>
+                  <div class="btn headerClick__btn">Оформить предзаказ</div>
+                </div>
+              </div>
+
+              <div class="headerMiddle__basket">
+                <div class="headerMiddle__iconsBasket headerBasket__js">
+                  <div class="iconSelected">
+                    <div class="iconSelected__svg">
+                      <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/garbage.svg'; ?>
+                    </div>
+                    <span class="iconSelected__count iconSelected__count_choice">100</span>
+                  </div>
+                  <div class="iconSelected__garbage">
+                    <span>Корзина</span>
+                    <span>6570 р</span>
+                  </div>
+                </div>
+                <div class="headerClick headerClickBasket__js hidden">
+                  <div class="headerClick__top">
+                    <div class="headerClick__title">Корзина</div>
+                    <div class="headerClick__clear">Очистить все</div>
+                  </div>
+                  <div class="headerClick__container">
+                    <div class="basketCard headerClick__card">
+                      <div class="basketCard__image" style="background-image:url(/dist/img/trash/tree.png)"></div>
+                      <div class="basketCard__description">
+                        <div class="basketCard__title">Дизельма Арчера Халсдонк Дизельма Арчера Халсдонк</div>
+                        <div class="basketCard__article">Артикул: 456789</div>
+                        <div class="availability  availability_margin">
+                          <div class="availability__text has hidden">
+                            <span>Есть в наличии</span>
+                          </div>
+                          <div class="availability__text not">
+                            <span>Нет в наличии</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="basketCard__action">
+                        <div class="basketCard__count">
+                          <div class="basketCard__text">Количество</div>
+                          <div class="counter counter_margin">
+                            <div class="counter__minus">
+                              <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
+                            </div>
+                            <div class="counter__input">
+                              <input type="number" value="5">
+                            </div>
+                            <div class="counter__plus">
+                              <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="basketCard__price">
+                          <div class="basketCard__text">Цена</div>
+                          <span class="basketCard__priceValue">11223222</span>
+                          <span class="basketCard__priceValue">₽</span>
+                        </div>
+                        <div class="basketCard__icons">
+                          <div class="basketCard__iconLike">
+                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeBasket.svg'; ?>
+                          </div>
+                          <div class="basketCard__iconBasket">
+                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/basket.svg'; ?>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="basketCard headerClick__card">
+                      <div class="basketCard__image" style="background-image:url(/dist/img/trash/tree.png)"></div>
+                      <div class="basketCard__description">
+                        <div class="basketCard__title">Дизельма Арчера Халсдонк</div>
+                        <div class="basketCard__article">Артикул: 456789</div>
+                        <div class="availability  availability_margin">
+                          <div class="availability__text has">
+                            <span>Есть в наличии</span>
+                          </div>
+                          <div class="availability__text not hidden">
+                            <span>Нет в наличии</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="basketCard__action">
+                        <div class="basketCard__count">
+                          <div class="basketCard__text">Количество</div>
+                          <div class="counter counter_margin">
+                            <div class="counter__minus">
+                              <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
+                            </div>
+                            <div class="counter__input">
+                              <input type="number" value="5">
+                            </div>
+                            <div class="counter__plus">
+                              <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="basketCard__price">
+                          <div class="basketCard__text">Цена</div>
+                          <span class="basketCard__priceValue">1122</span>
+                          <span class="basketCard__priceValue">₽</span>
+                        </div>
+                        <div class="basketCard__icons">
+                          <div class="basketCard__iconLike">
+                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeBasket.svg'; ?>
+                          </div>
+                          <div class="basketCard__iconBasket">
+                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/basket.svg'; ?>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="basketCard headerClick__card">
+                      <div class="basketCard__image" style="background-image:url(/dist/img/trash/tree.png)"></div>
+                      <div class="basketCard__description">
+                        <div class="basketCard__title">Дизельма Арчера Халсдонк</div>
+                        <div class="basketCard__article">Артикул: 456789</div>
+                        <div class="availability  availability_margin">
+                          <div class="availability__text has">
+                            <span>Есть в наличии</span>
+                          </div>
+                          <div class="availability__text not hidden">
+                            <span>Нет в наличии</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="basketCard__action">
+                        <div class="basketCard__count">
+                          <div class="basketCard__text">Количество</div>
+                          <div class="counter counter_margin">
+                            <div class="counter__minus">
+                              <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
+                            </div>
+                            <div class="counter__input">
+                              <input type="number" value="5">
+                            </div>
+                            <div class="counter__plus">
+                              <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="basketCard__price">
+                          <div class="basketCard__text">Цена</div>
+                          <span class="basketCard__priceValue">1122</span>
+                          <span class="basketCard__priceValue">₽</span>
+                        </div>
+                        <div class="basketCard__icons">
+                          <div class="basketCard__iconLike">
+                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeBasket.svg'; ?>
+                          </div>
+                          <div class="basketCard__iconBasket">
+                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/basket.svg'; ?>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="headerClick__price">
+                    <div class="headerClick__all">Всего</div>
+                    <div class="headerClick__sum">53232380 ₽</div>
+                  </div>
+                  <div class="btn headerClick__btn">Перейти в корзину</div>
                 </div>
               </div>
             </div>

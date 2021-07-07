@@ -161,10 +161,23 @@
     justify-content: space-between;
     align-items: center;
   }
+  &__preorder{
+    position: relative;
+  }
+  &__basket {
+    position: relative;
+  }
   &__iconsBasket {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    &:hover{
+      & svg {
+        path {
+          fill: $green;
+        }
+      }
+    }
     .iconSelected {
       margin-right: 13px;
     }
@@ -212,7 +225,7 @@
     color: $lightGreen;
   }
   &__svg {
-/*     & svg{
+    /*     & svg{
       transition: $transition;
       fill: $textColor;
       path{
@@ -344,7 +357,6 @@
     line-height: 28px;
   }
 }
-
 .headerHelp {
   padding: 26px 0 34px 0;
   width: 716px;
@@ -396,7 +408,7 @@
   }
   &__text {
     margin-left: 20px;
-    padding-right: 20px;  
+    padding-right: 20px;
     font: {
       family: Rubik;
       weight: 500;
@@ -479,6 +491,155 @@
     height: 46px;
   }
 }
+.headerClick {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: space-between;
+  max-width: 450px;
+  top: calc(130% + 16px);
+  right: -1em;
+  background: $white;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 22px 30px 33px;
+  color: $textColor;
+  &:after {
+    content: "";
+    position: absolute;
+    top: -13px;
+    right: 50px;
+    border: 17px solid $white;
+    border-top: 17px solid $white;
+    box-shadow: -2px 3px 5px -3px rgba(0, 0, 0, 0.15);
+    transform: rotate(135deg);
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font: {
+      family: Rubik;
+      weight: 500;
+      size: 20px;
+    }
+    line-height: 20px;
+  }
+
+  &__clear {
+    font: {
+      family: Rubik;
+      size: 14px;
+    }
+    line-height: 20px;
+    color: #8c949b;
+  }
+
+  &__container {
+    margin-top: 20px;
+  }
+
+  &__card {
+    flex-wrap: wrap;
+    border-top: 1px solid #cad4db;
+    border-bottom: none;
+    position: relative;
+    .basketCard {
+      &__image {
+        width: 75px;
+        height: 70px;
+        border-radius: 10px;
+      }
+      &__description {
+        width: 197px;
+      }
+      &__title {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+      }
+      &__article {
+        font-size: 12px;
+        line-height: 9px;
+      }
+      &__action {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        padding-left: 100px;
+        padding-top: 17px;
+      }
+      &__count {
+        margin-left: 0px;
+      }
+      &__text {
+        display: none;
+      }
+      &__price {
+        width: auto;
+        margin-left:0px;
+      }
+      &__priceValue {
+        font-size: 18px;
+        margin: 0;
+      }
+      &__icons {
+        position: absolute;
+        top: -5px;
+        right: 0;
+      }
+      &__iconLike {
+        display: none;
+      }
+
+      &__iconBasket {
+        margin: 0;
+        & svg {
+          width: 15px;
+          height: 17px;
+        }
+      }
+    }
+    .availability__text {
+      font-size: 12px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #cad4db;
+    padding: 22px 0;
+  }
+
+  &__all {
+    font: {
+      family: Rubik;
+      size: 18px;
+    }
+    line-height: 20px;
+  }
+
+  &__sum {
+    font: {
+      family: Rubik;
+      size: 24px;
+      weight: 500;
+    }
+    line-height: 24px;
+  }
+
+  &__btn {
+    width: 390px;
+    height: 46px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
 
 .hamburger {
   padding-left: 7px;
@@ -492,7 +653,6 @@
     position: relative;
   }
   &__inner {
-
   }
 }
 .hamburger.is-active .hamburger__inner,

@@ -46,7 +46,7 @@ body {
   &__title {
     display: flex;
     font: {
-      family: 'Rubik';
+      family: "Rubik";
       weight: 900;
       size: 56px;
     }
@@ -55,7 +55,7 @@ body {
       margin-top: 10px;
       margin-left: 10px;
       font: {
-        family: 'FiraSans';
+        family: "FiraSans";
         size: 20px;
         weight: normal;
       }
@@ -440,17 +440,9 @@ body {
 }
 .helpful {
   margin-top: 47px;
-  padding: 54px 0 0;
+  padding: 54px 0 88px;
   position: relative;
-  &::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    background-color: $lightGreen;
-    width: 100%;
-    height: 120%;
-  }
+  background-color: $lightGreen;
   &__head {
     display: flex;
     align-items: center;
@@ -464,14 +456,14 @@ body {
     line-height: 50px;
   }
   &__link {
-    border-bottom: 1px solid #9BB5A8;
+    border-bottom: 1px solid #9bb5a8;
     margin-left: 29px;
     transition: $transition;
     font: {
       size: 18px;
     }
     line-height: 22px;
-    &:hover{
+    &:hover {
       border-bottom: none;
     }
   }
@@ -508,10 +500,9 @@ body {
     background-repeat: no-repeat;
   }
   &__text {
-    padding: 0px 20px 0 24px;
-    margin-top: 10px;
+    padding: 10px 20px 0 24px;
     overflow: hidden;
-    max-height: 185px;
+    max-height: 195px;
   }
   &__date {
     font-size: 14px;
@@ -535,10 +526,13 @@ body {
   }
   &__btn {
     position: absolute;
+    margin: 0;
     bottom: 0;
     left: 0;
     right: 0;
     padding: 0 20px 0 24px;
+    color: $textColor;
+    transition: $transition;
     &:before {
       border-top: 1px solid $border;
     }
@@ -662,6 +656,101 @@ body {
     font-family: "Roboto";
   }
 }
+
+.basketCard {
+  display: flex;
+  padding: 26px 0;
+  border-bottom: 1px solid $border;
+  &__image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    border-radius: 10px;
+    width: 101px;
+    height: 90px;
+  }
+  &__description {
+    margin-left: 25px;
+    width: 395px;
+  }
+  &__title {
+    font: {
+      family: Rubik;
+      size: 18px;
+    }
+    line-height: 20px;
+  }
+  &__article {
+    font-size: 14px;
+    line-height: 10px;
+    color: #8c949b;
+    margin-top: 15px;
+  }
+  &__action {
+    display: flex;
+  }
+  &__count {
+    margin-left: 90px;
+  }
+  &__price {
+    margin-left: 73px;
+    width: 100px;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 10px;
+  }
+  &__priceValue {
+    display: inline-block;
+    margin-top: 22px;
+    font: {
+      family: Rubik;
+      size: 24px;
+      weight: 500;
+    }
+    line-height: 24px;
+  }
+  &__icons {
+    display: flex;
+    margin-top: 32px;
+    margin-left: 70px;
+  }
+  &__iconLike {
+    & svg {
+      display: block;
+      cursor: pointer;
+      fill: #98a6b4;
+      transition: $transition;
+      .bg {
+        fill: $white;
+        transition: all 0.1s;
+      }
+      &:hover {
+        fill: $textColor;
+        & .bg {
+          fill: $textColor;
+        }
+      }
+    }
+  }
+  &__iconBasket {
+    margin-left: 19px;
+    & svg {
+      path {
+        fill: #98a6b4;
+        transition: $transition;
+      }
+      display: block;
+      cursor: pointer;
+      &:hover {
+        path {
+          fill: $textColor;
+        }
+      }
+    }
+  }
+}
+
 .counter {
   display: flex;
   height: 35px;
@@ -925,50 +1014,50 @@ body {
 .sidebar {
   width: 306px;
   &__list {
-      margin-top: 3px;
+    margin-top: 3px;
   }
   &__link {
-      position: relative;
-      display: flex;
-      align-items: center;
-      padding-left: 27px;
-      height: 59px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 27px;
+    height: 59px;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 5px;
+      transition: $transition;
+    }
+    &:hover {
+      background: #f0f0f0;
       &:before {
-          content:'';
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          width: 5px;
-          transition: $transition;
+        background: #c7d0d9;
       }
-      &:hover {
-          background: #F0F0F0;
-          &:before {
-              background: #C7D0D9;
-          }
-      }
-      &.active {
-          background: $lightGreen;
-          pointer-events: none;
-          &:before {
-              background: $green;
-          }
-          span {
-              color: $green;
-          }
+    }
+    &.active {
+      background: $lightGreen;
+      pointer-events: none;
+      &:before {
+        background: $green;
       }
       span {
-          font-size: 18px;
-          line-height: 18px;
-          color: $textColor;
-          font-family: 'Rubik';
-          transition: $transition;
+        color: $green;
       }
-      svg {
-          display: block;
-          margin-right: 10px;
-      }
+    }
+    span {
+      font-size: 18px;
+      line-height: 18px;
+      color: $textColor;
+      font-family: "Rubik";
+      transition: $transition;
+    }
+    svg {
+      display: block;
+      margin-right: 10px;
+    }
   }
 }
 .envelopeInput {
@@ -976,7 +1065,7 @@ body {
     font-size: 16px;
     line-height: 19px;
     color: $textColor;
-    font-family: 'Rubik'
+    font-family: "Rubik";
   }
   &__input,
   &__textarea {
@@ -985,12 +1074,12 @@ body {
     font-size: 16px;
     line-height: 19px;
     color: $textColor;
-    border: 1px solid #C7D0D9;
+    border: 1px solid #c7d0d9;
     border-radius: 5px;
     transition: $transition;
-    @include placeholder(16px, #8C949B, "FiraSans", $opacity: 1);
+    @include placeholder(16px, #8c949b, "FiraSans", $opacity: 1);
     &:focus {
-      border: 1px solid #1E7243;
+      border: 1px solid #1e7243;
     }
   }
   &__textarea {
@@ -1000,12 +1089,12 @@ body {
 .agreement {
   display: flex;
   &__label {
-		.check {
+    .check {
       flex: none;
       display: block;
       width: 25px;
       height: 25px;
-      border: 1px solid #C7D0D9;
+      border: 1px solid #c7d0d9;
       border-radius: 2px;
       cursor: pointer;
       background: {
@@ -1016,19 +1105,19 @@ body {
       overflow: hidden;
       transition: $transition;
     }
-		input {
+    input {
       display: none;
       &:checked + .check {
         background-color: $green;
       }
-		}
+    }
   }
-	&__consent {
+  &__consent {
     margin-left: 15px;
-		font-size: 14px;
+    font-size: 14px;
     line-height: 20px;
-    color: #6F7982;
-	}
+    color: #6f7982;
+  }
   &__link {
     color: $green;
     border-bottom: 1px solid $green;
@@ -1044,83 +1133,83 @@ body {
 .map {
   margin-top: 108px;
   &__title {
-      font-size: 56px;
-      line-height: 70px;
-      font-weight: 900;
-      color: $textColor;
-      font-family: 'Rubik';
+    font-size: 56px;
+    line-height: 70px;
+    font-weight: 900;
+    color: $textColor;
+    font-family: "Rubik";
   }
   &__description {
-      margin-top: 21px;
-      font-size: 20px;
-      line-height: 32px;
+    margin-top: 21px;
+    font-size: 20px;
+    line-height: 32px;
   }
   &__content {
-      margin-top: 33px;
-      display: flex;
-      justify-content: space-between;
+    margin-top: 33px;
+    display: flex;
+    justify-content: space-between;
   }
   &__item {
-      padding: 27px 28px 23px;
-      width: 520px;
-      font-size: 18px;
-      line-height: 24px;
-      color: $textColor;
-      font-family: 'Rubik';
-      border: 1px solid $gray2;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: $transition;
-      &:not(:first-child) {
-          margin-top: 15px;
-      }
-      &.show {
-          border: 1px solid #9BB5A8;
-      }
+    padding: 27px 28px 23px;
+    width: 520px;
+    font-size: 18px;
+    line-height: 24px;
+    color: $textColor;
+    font-family: "Rubik";
+    border: 1px solid $gray2;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: $transition;
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+    &.show {
+      border: 1px solid #9bb5a8;
+    }
   }
   &__unit {
-      display: flex;
-      align-items: center;
-      margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    &:before {
+      content: "";
+      margin-right: 8px;
+      width: 24px;
+      height: 24px;
+      background: {
+        repeat: no-repeat;
+        position: center left;
+      }
+    }
+    &.address {
       &:before {
-          content:'';
-          margin-right: 8px;
-          width: 24px;
-          height: 24px;
-          background: {
-              repeat: no-repeat;
-              position: center left;
-          }
+        height: 25px;
+        background-image: url($imgUrl + "svg/mapUnitAddress.svg");
       }
-      &.address {
-          &:before {
-              height: 25px;
-              background-image: url($imgUrl + "svg/mapUnitAddress.svg");
-          }
+    }
+    &.tel {
+      &:before {
+        background-image: url($imgUrl + "svg/mapUnitTel.svg");
       }
-      &.tel {
-          &:before {
-              background-image: url($imgUrl + "svg/mapUnitTel.svg");
-          }
-      }
+    }
   }
   &__schedule {
-      span {
-          display: block;
-          font-size: 16px;
-          color: #7D8E84;
-      }
+    span {
+      display: block;
+      font-size: 16px;
+      color: #7d8e84;
+    }
   }
   &__tel {
-      pointer-events: none;
+    pointer-events: none;
   }
   &__aside {
-      width: 538px;
-      height: 585px;
-      overflow: hidden;
+    width: 538px;
+    height: 585px;
+    overflow: hidden;
   }
   #map {
-      width: 848.82px;
-      height: 585px;
+    width: 848.82px;
+    height: 585px;
   }
 }

@@ -13,18 +13,18 @@ import noUiSlider from "nouislider";
 global.noUiSlider = noUiSlider;
 
 //📁 /assets/js/blocks  _header.js
-import { headerCatalog, headerSearchelp } from "./blocks/_header.js";
+import { headerCatalog, headerSearchelp, headerClick, headerScroll } from "./blocks/_header.js";
 
 //📁 /assets/js/blocks  _footer.js
 import { footerScrollUp, footerValidationEmail } from "./blocks/_footer.js";
 
-// //📁 /assets/js/blocks  catalog.js
-// import {
-//   catalogPopups,
-//   checkNum,
-//   priceSlider,
-//   filters,
-// } from "./blocks/catalog.js";
+//📁 /assets/js/blocks  catalog.js
+import {
+  catalogPopups,
+  checkNum,
+  priceSlider,
+  filters,
+} from "./blocks/catalog.js";
 
 //📁 /assets/js/blocks  sliders.js
 import { sliderMain, sliderProductSpecial } from "./blocks/sliders.js";
@@ -41,10 +41,18 @@ import { mapInit } from "./blocks/map.js";
 //📁 /assets/js/blocks  scrollbar.js
 import { mapAsideScroll } from "./blocks/scrollbar.js";
 
-
 document.addEventListener("DOMContentLoaded", function () {
   // open contextual hint
   headerSearchelp();
+  
+  //hide headerTop on scroll
+  headerScroll()
+
+  //popup catalog
+  headerCatalog();
+
+  //popup basket and pre-order
+  headerClick();
 
   // slick slider main
   sliderMain();
@@ -71,18 +79,17 @@ document.addEventListener("DOMContentLoaded", function () {
   footerValidationEmail();
 
   // //open popups in catalog
-  // catalogPopups();
+  catalogPopups();
 
   // //check numbers in pagination
-  // checkNum();
+   checkNum();
 
   // //slider for price
-  // priceSlider();
+   priceSlider();
 
   // //
-  // checkNum();
+   checkNum();
 
   // //all filters
-  // filters();
-
+   filters();
 });

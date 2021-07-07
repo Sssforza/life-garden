@@ -11435,7 +11435,13 @@ global.noUiSlider = nouislider__WEBPACK_IMPORTED_MODULE_3___default.a; //📁 /a
 
 document.addEventListener("DOMContentLoaded", function () {
   // open contextual hint
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerSearchelp"])(); // slick slider main
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerSearchelp"])(); //hide headerTop on scroll
+
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerScroll"])(); //popup catalog
+
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerCatalog"])(); //popup basket and pre-order
+
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerClick"])(); // slick slider main
 
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_7__["sliderMain"])(); // slick slider main page special product
 
@@ -11443,23 +11449,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerScrollUp"])(); // map
 
-  Object(_blocks_map_js__WEBPACK_IMPORTED_MODULE_10__["mapInit"])(); // tabs sliders in the main page section specialSample
+  Object(_blocks_map_js__WEBPACK_IMPORTED_MODULE_10__["mapInit"])(); // map aside scroll
+
+  Object(_blocks_scrollbar_js__WEBPACK_IMPORTED_MODULE_11__["mapAsideScroll"])(); // tabs sliders in the main page section specialSample
 
   Object(_blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_8__["specialSampleTabs"])(); // main garden show all
 
   Object(_blocks_showFull_js__WEBPACK_IMPORTED_MODULE_9__["mainGardenShow"])(); // validation e-mail
 
-  Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerValidationEmail"])(); //open popups in catalog
+  Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerValidationEmail"])(); // //open popups in catalog
 
-  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["catalogPopups"])(); //check numbers in pagination
+  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["catalogPopups"])(); // //check numbers in pagination
 
-  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["checkNum"])(); //slider for price
+  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["checkNum"])(); // //slider for price
 
-  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["priceSlider"])(); //
+  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["priceSlider"])(); // //
 
-  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["checkNum"])(); // map aside scroll
-
-  Object(_blocks_scrollbar_js__WEBPACK_IMPORTED_MODULE_11__["mapAsideScroll"])(); //all filters
+  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["checkNum"])(); // //all filters
 
   Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["filters"])();
 });
@@ -18582,6 +18588,8 @@ $.magnificPopup.registerModule(RETINA_NS, {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerCatalog", function() { return headerCatalog; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerSearchelp", function() { return headerSearchelp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerClick", function() { return headerClick; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerScroll", function() { return headerScroll; });
 function headerCatalog() {
   var buttonCatalog = document.querySelector(".headerMiddleCatalog__js");
   var headerCatalog = document.querySelector(".headerCatalog__js");
@@ -18607,6 +18615,56 @@ function headerSearchelp() {
       headerHelp.classList.add("hidden");
     }
   });
+}
+function headerClick() {
+  var basketClick = document.querySelector(".headerBasket__js");
+  var basketPop = document.querySelector(".headerClickBasket__js");
+  var preorderClick = document.querySelector(".headerPreorder__js");
+  var preorderPop = document.querySelector(".headerClickPreorder__js");
+
+  function closeBasket(e) {
+    if (basketPop && e.target !== basketPop && !basketPop.contains(e.target)) {
+      basketPop.classList.add("hidden");
+    }
+  }
+
+  function closePreorder(e) {
+    if (preorderPop && e.target !== preorderPop && !preorderPop.contains(e.target)) {
+      preorderPop.classList.add("hidden");
+    }
+  }
+
+  basketClick.addEventListener('click', function (e) {
+    if (basketPop.classList.contains("hidden")) {
+      document.removeEventListener("click", closeBasket);
+    }
+
+    basketPop.classList.toggle("hidden");
+    setTimeout(function () {
+      document.addEventListener("click", closeBasket);
+    }, 0);
+  });
+  preorderClick.addEventListener('click', function () {
+    if (preorderPop.classList.contains("hidden")) {
+      document.removeEventListener("click", closePreorder);
+    }
+
+    preorderPop.classList.toggle("hidden");
+    setTimeout(function () {
+      document.addEventListener("click", closePreorder);
+    }, 0);
+  });
+}
+function headerScroll() {
+  var headerTop = document.querySelector('.headerTop');
+
+  window.onscroll = function () {
+    if (window.pageYOffset > 1) {
+      headerTop.classList.add('hidden');
+    } else {
+      headerTop.classList.remove('hidden');
+    }
+  };
 }
 
 /***/ }),

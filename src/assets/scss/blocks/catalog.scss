@@ -1,5 +1,9 @@
 @import "../modules/utilities/_variables.scss";
 @import "../modules/utilities/_mixins.scss";
+
+.page_catalog{
+  padding-bottom: 0;
+}
 .catalog {
   &__content {
     margin-top: 41px;
@@ -520,6 +524,7 @@
   &__buttonResset {
     width: 150px;
     height: 52px;
+    margin: 0;
     font: {
       family: Rubik;
       size: 16px;
