@@ -18,13 +18,13 @@ import { headerCatalog, headerSearchelp } from "./blocks/_header.js";
 //📁 /assets/js/blocks  _footer.js
 import { footerScrollUp, footerValidationEmail } from "./blocks/_footer.js";
 
-//📁 /assets/js/blocks  catalog.js
-import {
-  catalogPopups,
-  checkNum,
-  priceSlider,
-  filters,
-} from "./blocks/catalog.js";
+// //📁 /assets/js/blocks  catalog.js
+// import {
+//   catalogPopups,
+//   checkNum,
+//   priceSlider,
+//   filters,
+// } from "./blocks/catalog.js";
 
 //📁 /assets/js/blocks  sliders.js
 import { sliderMain, sliderProductSpecial } from "./blocks/sliders.js";
@@ -58,6 +58,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // map
   mapInit();
 
+  // map aside scroll
+  mapAsideScroll();
+
   // tabs sliders in the main page section specialSample
   specialSampleTabs();
 
@@ -67,21 +70,19 @@ document.addEventListener("DOMContentLoaded", function () {
   // validation e-mail
   footerValidationEmail();
 
-  //open popups in catalog
-  catalogPopups();
+  // //open popups in catalog
+  // catalogPopups();
 
-  //check numbers in pagination
-  checkNum();
+  // //check numbers in pagination
+  // checkNum();
 
-  //slider for price
-  priceSlider();
-  
-  //
-  checkNum();
+  // //slider for price
+  // priceSlider();
 
-  // map aside scroll
-  mapAsideScroll();
+  // //
+  // checkNum();
 
-  //all filters
-  filters();
+  // //all filters
+  // filters();
+
 });

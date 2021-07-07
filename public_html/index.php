@@ -2,6 +2,7 @@
 <?
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 ?>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=81ff5a41-050a-4199-aee4-2c8ebd0c8bfb"></script>
 <link rel='stylesheet' href="/dist/css/blocks/indexPage.css">
 <main class="main">
 	<section class="page page_index">
