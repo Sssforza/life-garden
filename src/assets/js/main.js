@@ -18,6 +18,7 @@ import {
     headerSearchelp,
     headerClick,
     headerScroll,
+    headerOpenClient
 } from "./blocks/_header.js";
 
 //📁 /assets/js/blocks  _footer.js
@@ -106,4 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
      
     //open lists of shops in lk
     openAddress()
+
+    //open client
+    headerOpenClient()
 });

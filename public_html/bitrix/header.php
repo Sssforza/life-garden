@@ -39,19 +39,29 @@
                 </div>
                 <span>+ 7 3812 34-93-41</span>
               </a>
-              <a class="headerTop__enter" href="#">
+              <a class="headerTop__enter hidden" href="#">
                 <div class="headerTop__icon">
                   <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/enter.svg'; ?>
                 </div>
                 <span class="headerTop__text">Вход</span>
               </a>
-              <a class="headerTop__enter" href="#">
-                <div class="headerTop__icon">
-                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/client.svg'; ?>
+              <div class="headerTop__client client__js">
+                <div class="headerTop__enter clientClick__js">
+                  <div class="headerTop__icon">
+                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/client.svg'; ?>
+                  </div>
+                  <span class="headerTop__text">Имя клиента...</span>
+                  <div class="headerTop__arrow">
+                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/client-arrow.svg'; ?>
+                  </div>
                 </div>
-                <span class="headerTop__text">Имя клиента...</span>
-                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/client-arrow.svg'; ?>
-              </a>
+                <ul class="headerTop__box">
+                  <li class="headerTop__item"><a href="/lk-profile/">Профиль</a></li>
+                  <li class="headerTop__item"><a href="/lk-orders/">Мои заказы</a></li>
+                  <li class="headerTop__item"><a href="/lk-favorites/">Избранное</a></li>
+                  <li class="headerTop__item"><a href="#">Выйти</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -63,14 +73,14 @@
               <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/logo.svg'; ?>
             </a>
             <div class="headerMiddle__search">
-              <a class="headerMiddle__catalog headerMiddleCatalog__js" href="#">
+              <div class="headerMiddle__catalog headerMiddleCatalog__js" href="#">
                 <span>Каталог</span>
                 <div class="hamburger hamburger__collapse hamburger__js">
                   <span class="hamburger__box">
                     <span class="hamburger__inner"></span>
                   </span>
                 </div>
-              </a>
+              </div>
               <div class="headerMiddle__formContainer">
 
                 <form class="headerMiddle__form headerMiddleForm__js">

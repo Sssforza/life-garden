@@ -187,6 +187,11 @@
         align-items: center;
         & span {
             margin-left: 28px;
+            cursor: pointer;
+            transition: $transition;
+            &:hover{
+                color: $green;
+            }
         }
     }
     &__input {
@@ -255,6 +260,9 @@
             margin: 0;
             background: $border;
             color: $textColor;
+        }
+        &:hover{
+            color: $white;
         }
     }
 }

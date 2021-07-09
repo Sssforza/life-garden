@@ -92,8 +92,58 @@
     display: flex;
     align-items: center;
     transition: $transition;
+    cursor: pointer;
     &:hover {
       color: #c9d200;
+    }
+  }
+  &__client {
+    position: relative;
+    display: flex;
+    align-items: center;
+    &_open{
+      .headerTop__box{
+        display: block;
+      }
+      .headerTop__arrow{
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__box {
+    display: none;
+    position: absolute;
+    width: 156px;
+    top: 37px;
+    right: 0;
+    left: 40px;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    height: 160px;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  &__item {
+    padding: 0 18px;
+    color: $textColor;
+    font-size: 14px;
+    line-height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: $transition;
+    background-color: $white;
+    &:hover{
+      background-color: #F0F0F0;
+    }
+  }
+  &__arrow{
+    margin-left: 5px;
+    & svg{
+      path{
+        display: block;
+      }
     }
   }
   &__end {
@@ -102,7 +152,7 @@
 }
 .headerMiddle {
   position: relative;
-  z-index: 100;
+  z-index: 10;
   background-color: $white;
   padding: 16px 0;
   border-bottom: 1px solid #c7d0d9;
@@ -123,6 +173,7 @@
   &__catalog {
     display: flex;
     align-items: center;
+    cursor: pointer;
     & span {
       font: {
         size: 18px;
@@ -161,7 +212,7 @@
     justify-content: space-between;
     align-items: center;
   }
-  &__preorder{
+  &__preorder {
     position: relative;
   }
   &__basket {
@@ -171,7 +222,7 @@
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    &:hover{
+    &:hover {
       & svg {
         path {
           fill: $green;
@@ -291,7 +342,7 @@
   width: 100%;
   height: 100%;
   top: -100%;
-  z-index: 75;
+  z-index: 5;
   transition: top 0.5s ease-in-out;
   padding-top: 40px;
   padding-bottom: 55px;
@@ -581,7 +632,7 @@
       }
       &__price {
         width: auto;
-        margin-left:0px;
+        margin-left: 0px;
       }
       &__priceValue {
         font-size: 18px;

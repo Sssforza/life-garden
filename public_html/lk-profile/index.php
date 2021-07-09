@@ -111,11 +111,11 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								</div>
 								<div class="lkProfile__address">
 									<div class="lkProfile__addressMap">
-										<div class="envelopeInput lkProfile__input ">
-											<div class="envelopeInput__title">
+										<div class="envelopeInput lkProfile__input shops__js">
+											<div class="envelopeInput__title ">
 												<span>Выберите другой магазин самовывоза</span>
 											</div>
-											<input class="envelopeInput__input" type="text" value="ул. Маяковского, 20" disabled>
+											<input class="envelopeInput__input openAddress__js" type="text" placeholder="ул. Маяковского, 20">
 											<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowColor.svg'; ?>
 											<div class="lkProfile__shops">
 												<ul>
@@ -202,6 +202,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<span>График работы:</span>
 								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
 							</div>
+							<div class="map__btn map__btn_checked btnWhite">
+								Выбрать
+							</div>
 						</div>
 						<div class="map__item mapItem_js" data-coord1="54.973993" data-coord2="73.273727" data-id="1">
 							<div class="map__unit address">ул. Сакена Сейфуллина, 27</div>
@@ -211,6 +214,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="map__schedule">
 								<span>График работы:</span>
 								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
+							</div>
+							<div class="map__btn btnWhite">
+								Выбрать
 							</div>
 						</div>
 						<div class="map__item mapItem_js" data-coord1="55.029399" data-coord2="73.273754" data-id="3">
@@ -222,6 +228,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<span>График работы:</span>
 								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
 							</div>
+							<div class="map__btn btnWhite">
+								Выбрать
+							</div>
 						</div>
 						<div class="map__item mapItem_js" data-coord1="54.985772" data-coord2="73.405312" data-id="4">
 							<div class="map__unit address">ул. ​10 лет Октября, 113</div>
@@ -232,6 +241,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<span>График работы:</span>
 								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
 							</div>
+							<div class="map__btn btnWhite">
+								Выбрать
+							</div>
 						</div>
 						<div class="map__item mapItem_js" data-coord1="54.944228" data-coord2="73.385621" data-id="5">
 							<div class="map__unit address">​проспект Карла Маркса, 83</div>
@@ -241,6 +253,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="map__schedule">
 								<span>График работы:</span>
 								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
+							</div>
+							<div class="map__btn btnWhite">
+								Выбрать
 							</div>
 						</div>
 					</aside>

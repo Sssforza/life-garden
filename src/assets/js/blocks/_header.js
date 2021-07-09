@@ -86,3 +86,12 @@ export function headerScroll() {
 
   }
 }
+
+export function headerOpenClient() {
+  const headerTopClient = document.querySelector('.client__js')
+  const btnClient = document.querySelector('.clientClick__js')
+
+  btnClient.addEventListener('click', () => {
+    headerTopClient.classList.toggle('headerTop__client_open')
+  })
+}

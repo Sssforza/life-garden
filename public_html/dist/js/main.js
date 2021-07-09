@@ -11474,7 +11474,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__["openMap"])(); //open lists of shops in lk
 
-  Object(_blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__["openAddress"])();
+  Object(_blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__["openAddress"])(); //open client
+
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerOpenClient"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
@@ -18597,6 +18599,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerSearchelp", function() { return headerSearchelp; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerClick", function() { return headerClick; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerScroll", function() { return headerScroll; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerOpenClient", function() { return headerOpenClient; });
 function headerCatalog() {
   var buttonCatalog = document.querySelector(".headerMiddleCatalog__js");
   var headerCatalog = document.querySelector(".headerCatalog__js");
@@ -18672,6 +18675,13 @@ function headerScroll() {
       headerTop.classList.remove('hidden');
     }
   };
+}
+function headerOpenClient() {
+  var headerTopClient = document.querySelector('.client__js');
+  var btnClient = document.querySelector('.clientClick__js');
+  btnClient.addEventListener('click', function () {
+    headerTopClient.classList.toggle('headerTop__client_open');
+  });
 }
 
 /***/ }),
@@ -19015,43 +19025,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openMap", function() { return openMap; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openAddress", function() { return openAddress; });
 function openMap() {
-  var mapPopup = document.querySelector(".windowsMapWrapper__js");
-  var mapPopupWindow = document.querySelector(".windowsMapPopup__js");
-  var mapPopupClose = document.querySelector(".windowsMapClose__js");
-  var mapBtn = document.querySelector(".showMap__js");
+  if (document.querySelector(".windowsMapWrapper__js")) {
+    var closePopup = function closePopup(e) {
+      if (mapPopupWindow && e.target !== mapPopupWindow && !mapPopupWindow.contains(e.target)) {
+        mapPopup.classList.add("hidden");
+        scrollOffOn();
+        document.removeEventListener("click", closePopup);
+      }
+    };
 
-  function closePopup(e) {
-    if (mapPopupWindow && e.target !== mapPopupWindow && !mapPopupWindow.contains(e.target)) {
+    var scrollOffOn = function scrollOffOn() {
+      return document.body.classList.toggle("hiddenHeaderCatalog");
+    };
+
+    var mapPopup = document.querySelector(".windowsMapWrapper__js");
+    var mapPopupWindow = document.querySelector(".windowsMapPopup__js");
+    var mapPopupClose = document.querySelector(".windowsMapClose__js");
+    var mapBtn = document.querySelector(".showMap__js");
+    mapBtn.addEventListener("click", function () {
+      mapPopup.classList.remove("hidden");
+      scrollOffOn();
+      setTimeout(function () {
+        document.addEventListener("click", closePopup);
+      }, 0);
+    });
+    mapPopupClose.addEventListener("click", function () {
       mapPopup.classList.add("hidden");
       scrollOffOn();
       document.removeEventListener("click", closePopup);
-    }
+    });
   }
-
-  function scrollOffOn() {
-    return document.body.classList.toggle("hiddenHeaderCatalog");
-  }
-
-  mapBtn.addEventListener("click", function () {
-    mapPopup.classList.remove("hidden");
-    scrollOffOn();
-    setTimeout(function () {
-      document.addEventListener("click", closePopup);
-    }, 0);
-  });
-  mapPopupClose.addEventListener("click", function () {
-    mapPopup.classList.add("hidden");
-    scrollOffOn();
-    document.removeEventListener("click", closePopup);
-  });
 }
 function openAddress() {
-  var addressBtn = document.querySelector(".openAddress__js");
-  var addressPopup = document.querySelector(".shops__js");
-  console.log(addressBtn, addressPopup);
-  /*   addressBtn.addEventListener('click', () => {
-        addressPopup.classList.toggle('lkProfile__input_open')
-    }) */
+  if (document.querySelector(".openAddress__js")) {
+    var addressBtn = document.querySelector(".openAddress__js");
+    var addressPopup = document.querySelector(".shops__js");
+    addressBtn.addEventListener("click", function () {
+      addressPopup.classList.toggle("lkProfile__input_open");
+    });
+  }
 }
 
 /***/ }),
