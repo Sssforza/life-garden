@@ -1,6 +1,5 @@
-
 <?
-	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 ?>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=81ff5a41-050a-4199-aee4-2c8ebd0c8bfb"></script>
 <link rel='stylesheet' href="/dist/css/blocks/indexPage.css">
@@ -18,7 +17,7 @@
 						<div class="mainSlierInfo__item mainSlierInfoItem_js">
 							<div class="mainSlierInfo__top">
 								<div class="mainSlierInfo__img">
-									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/mainSlierInfoImg1.svg';?>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/mainSlierInfoImg1.svg'; ?>
 								</div>
 								<div class="mainSlierInfo__title">Растения для Омска</div>
 							</div>
@@ -29,7 +28,7 @@
 						<div class="mainSlierInfo__item">
 							<div class="mainSlierInfo__top">
 								<div class="mainSlierInfo__img">
-									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/mainSlierInfoImg2.svg';?>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/mainSlierInfoImg2.svg'; ?>
 								</div>
 								<div class="mainSlierInfo__title">Биологическая продукция</div>
 							</div>
@@ -40,7 +39,7 @@
 						<div class="mainSlierInfo__item">
 							<div class="mainSlierInfo__top">
 								<div class="mainSlierInfo__img">
-									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/mainSlierInfoImg3.svg';?>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/mainSlierInfoImg3.svg'; ?>
 								</div>
 								<div class="mainSlierInfo__title">Удобная и&nbsp;быстрая доставка</div>
 							</div>
@@ -115,25 +114,25 @@
 						<div class="specialSample__content">
 							<div class="specialSample__item specialSampleItem_js active" data-sample="novelty">
 								<div class="specialSample__img">
-									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg1.svg';?>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg1.svg'; ?>
 								</div>
 								<div class="specialSample__name">Новинки</div>
 							</div>
 							<div class="specialSample__item specialSampleItem_js" data-sample="promotions">
 								<div class="specialSample__img">
-									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg2.svg';?>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg2.svg'; ?>
 								</div>
 								<div class="specialSample__name">Товары по акции</div>
 							</div>
 							<div class="specialSample__item specialSampleItem_js" data-sample="hit">
 								<div class="specialSample__img">
-									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg3.svg';?>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg3.svg'; ?>
 								</div>
 								<div class="specialSample__name">Хит продаж</div>
 							</div>
 							<div class="specialSample__item specialSampleItem_js" data-sample="presents">
 								<div class="specialSample__img">
-									<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg4.svg';?>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg4.svg'; ?>
 								</div>
 								<div class="specialSample__name">Для подарков</div>
 							</div>
@@ -167,19 +166,19 @@
 										<div class="review">
 											<div class="review__list">
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 											</div>
 											<div class="review__how">1 отзыв</div>
@@ -205,18 +204,18 @@
 										<div class="cardProduct__bottom">
 											<div class="counter">
 												<div class="counter__minus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
 												</div>
 												<div class="counter__input">
 													<input type="number" value="1">
 												</div>
 												<div class="counter__plus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
 												</div>
 											</div>
 											<div class="cardProduct__elements">
 												<div class="likeProduct">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
 												</div>
 												<div class="btnJaundicedFull addBasket">В корзину</div>
 											</div>
@@ -245,19 +244,19 @@
 										<div class="review">
 											<div class="review__list">
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 											</div>
 											<div class="review__how">25 отзывов</div>
@@ -275,18 +274,18 @@
 										<div class="cardProduct__bottom">
 											<div class="counter">
 												<div class="counter__minus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
 												</div>
 												<div class="counter__input">
 													<input type="number" value="1">
 												</div>
 												<div class="counter__plus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
 												</div>
 											</div>
 											<div class="cardProduct__elements">
 												<div class="likeProduct active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
 												</div>
 												<div class="btnJaundicedFull addBasket">В корзину</div>
 											</div>
@@ -315,19 +314,19 @@
 										<div class="review">
 											<div class="review__list">
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 											</div>
 											<div class="review__how">25 отзывов</div>
@@ -353,18 +352,18 @@
 										<div class="cardProduct__bottom">
 											<div class="counter">
 												<div class="counter__minus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
 												</div>
 												<div class="counter__input">
 													<input type="number" value="1">
 												</div>
 												<div class="counter__plus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
 												</div>
 											</div>
 											<div class="cardProduct__elements">
 												<div class="likeProduct">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
 												</div>
 												<div class="btnJaundicedFull addBasket">В корзину</div>
 											</div>
@@ -393,19 +392,19 @@
 										<div class="review">
 											<div class="review__list">
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 											</div>
 											<div class="review__how">1 отзыв</div>
@@ -423,18 +422,18 @@
 										<div class="cardProduct__bottom">
 											<div class="counter">
 												<div class="counter__minus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
 												</div>
 												<div class="counter__input">
 													<input type="number" value="1">
 												</div>
 												<div class="counter__plus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
 												</div>
 											</div>
 											<div class="cardProduct__elements">
 												<div class="likeProduct">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
 												</div>
 												<div class="btnJaundicedFull addBasket">В корзину</div>
 											</div>
@@ -463,19 +462,19 @@
 										<div class="review">
 											<div class="review__list">
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 											</div>
 											<div class="review__how">25 отзывов</div>
@@ -493,18 +492,18 @@
 										<div class="cardProduct__bottom">
 											<div class="counter">
 												<div class="counter__minus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
 												</div>
 												<div class="counter__input">
 													<input type="number" value="1">
 												</div>
 												<div class="counter__plus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
 												</div>
 											</div>
 											<div class="cardProduct__elements">
 												<div class="likeProduct active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
 												</div>
 												<div class="btnJaundicedFull addBasket">В корзину</div>
 											</div>
@@ -533,19 +532,19 @@
 										<div class="review">
 											<div class="review__list">
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 											</div>
 											<div class="review__how">1 отзыв</div>
@@ -563,18 +562,18 @@
 										<div class="cardProduct__bottom">
 											<div class="counter">
 												<div class="counter__minus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
 												</div>
 												<div class="counter__input">
 													<input type="number" value="1">
 												</div>
 												<div class="counter__plus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
 												</div>
 											</div>
 											<div class="cardProduct__elements">
 												<div class="likeProduct">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
 												</div>
 												<div class="btnJaundicedFull addBasket">В корзину</div>
 											</div>
@@ -605,19 +604,19 @@
 										<div class="review">
 											<div class="review__list">
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 											</div>
 											<div class="review__how">1 отзыв</div>
@@ -635,18 +634,18 @@
 										<div class="cardProduct__bottom">
 											<div class="counter">
 												<div class="counter__minus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
 												</div>
 												<div class="counter__input">
 													<input type="number" value="1">
 												</div>
 												<div class="counter__plus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
 												</div>
 											</div>
 											<div class="cardProduct__elements">
 												<div class="likeProduct">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
 												</div>
 												<div class="btnJaundicedFull addBasket">В корзину</div>
 											</div>
@@ -678,19 +677,19 @@
 										<div class="review">
 											<div class="review__list">
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 											</div>
 											<div class="review__how">1 отзыв</div>
@@ -716,18 +715,18 @@
 										<div class="cardProduct__bottom">
 											<div class="counter">
 												<div class="counter__minus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
 												</div>
 												<div class="counter__input">
 													<input type="number" value="1">
 												</div>
 												<div class="counter__plus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
 												</div>
 											</div>
 											<div class="cardProduct__elements">
 												<div class="likeProduct">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
 												</div>
 												<div class="btnJaundicedFull addBasket">В корзину</div>
 											</div>
@@ -756,19 +755,19 @@
 										<div class="review">
 											<div class="review__list">
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 											</div>
 											<div class="review__how">1 отзыв</div>
@@ -786,18 +785,18 @@
 										<div class="cardProduct__bottom">
 											<div class="counter">
 												<div class="counter__minus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
 												</div>
 												<div class="counter__input">
 													<input type="number" value="1">
 												</div>
 												<div class="counter__plus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
 												</div>
 											</div>
 											<div class="cardProduct__elements">
 												<div class="likeProduct">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
 												</div>
 												<div class="btnJaundicedFull addBasket">В корзину</div>
 											</div>
@@ -828,19 +827,19 @@
 										<div class="review">
 											<div class="review__list">
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 											</div>
 											<div class="review__how">1 отзыв</div>
@@ -858,18 +857,18 @@
 										<div class="cardProduct__bottom">
 											<div class="counter">
 												<div class="counter__minus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
 												</div>
 												<div class="counter__input">
 													<input type="number" value="1">
 												</div>
 												<div class="counter__plus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
 												</div>
 											</div>
 											<div class="cardProduct__elements">
 												<div class="likeProduct">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
 												</div>
 												<div class="btnJaundicedFull addBasket">В корзину</div>
 											</div>
@@ -898,19 +897,19 @@
 										<div class="review">
 											<div class="review__list">
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 											</div>
 											<div class="review__how">25 отзывов</div>
@@ -928,18 +927,18 @@
 										<div class="cardProduct__bottom">
 											<div class="counter">
 												<div class="counter__minus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
 												</div>
 												<div class="counter__input">
 													<input type="number" value="1">
 												</div>
 												<div class="counter__plus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
 												</div>
 											</div>
 											<div class="cardProduct__elements">
 												<div class="likeProduct active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
 												</div>
 												<div class="btnJaundicedFull addBasket">В корзину</div>
 											</div>
@@ -968,19 +967,19 @@
 										<div class="review">
 											<div class="review__list">
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 											</div>
 											<div class="review__how">1 отзыв</div>
@@ -998,18 +997,18 @@
 										<div class="cardProduct__bottom">
 											<div class="counter">
 												<div class="counter__minus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
 												</div>
 												<div class="counter__input">
 													<input type="number" value="1">
 												</div>
 												<div class="counter__plus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
 												</div>
 											</div>
 											<div class="cardProduct__elements">
 												<div class="likeProduct">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
 												</div>
 												<div class="btnJaundicedFull addBasket">В корзину</div>
 											</div>
@@ -1043,19 +1042,19 @@
 										<div class="review">
 											<div class="review__list">
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 											</div>
 											<div class="review__how">1 отзыв</div>
@@ -1081,18 +1080,18 @@
 										<div class="cardProduct__bottom">
 											<div class="counter">
 												<div class="counter__minus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
 												</div>
 												<div class="counter__input">
 													<input type="number" value="1">
 												</div>
 												<div class="counter__plus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
 												</div>
 											</div>
 											<div class="cardProduct__elements">
 												<div class="likeProduct">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
 												</div>
 												<div class="btnJaundicedFull addBasket">В корзину</div>
 											</div>
@@ -1121,19 +1120,19 @@
 										<div class="review">
 											<div class="review__list">
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item active">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 												<div class="review__item">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 												</div>
 											</div>
 											<div class="review__how">1 отзыв</div>
@@ -1151,18 +1150,18 @@
 										<div class="cardProduct__bottom">
 											<div class="counter">
 												<div class="counter__minus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
 												</div>
 												<div class="counter__input">
 													<input type="number" value="1">
 												</div>
 												<div class="counter__plus">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
 												</div>
 											</div>
 											<div class="cardProduct__elements">
 												<div class="likeProduct">
-													<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg';?>
+													<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
 												</div>
 												<div class="btnJaundicedFull addBasket">В корзину</div>
 											</div>
@@ -1239,7 +1238,7 @@
 								Карта дает право на&nbsp;покупки со&nbsp;скидкой
 							</div>
 							<div class="clubCard__li">
-								Дополнительная скидка&nbsp;5% в&nbsp;день рождения 3&nbsp;дня&nbsp;до, 3&nbsp;дня 
+								Дополнительная скидка&nbsp;5% в&nbsp;день рождения 3&nbsp;дня&nbsp;до, 3&nbsp;дня
 								после и&nbsp;в&nbsp;день Рождения
 							</div>
 						</div>
@@ -1256,7 +1255,7 @@
 					</div>
 					<a class="btn clubCard__btn" href="#">Получить карту</a>
 					<div class="clubCard__minInfo">
-						* Скидка не&nbsp;распространяется на&nbsp;товары по&nbsp;акции. Скидка в&nbsp;период &laquo;Дня&nbsp;рождения&raquo; предоставляется только самому клиенту по&nbsp;предъявлении документа 
+						* Скидка не&nbsp;распространяется на&nbsp;товары по&nbsp;акции. Скидка в&nbsp;период &laquo;Дня&nbsp;рождения&raquo; предоставляется только самому клиенту по&nbsp;предъявлении документа
 						(паспорт, пенсионное удостоверение, водительские права).
 					</div>
 				</div>
@@ -1332,41 +1331,41 @@
 						<div class="mainGarden__column">
 							Омский центр экологического садоводства &laquo;Живой сад&raquo;. Работаем с&nbsp;2006&nbsp;года.
 							Предлагаем только проверенные товары для экологического ЗемлеДелия и&nbsp;декоративного садоводства.
-							ЭМ&nbsp;&mdash; товары для сада и&nbsp;дома. Знаменитая Сушилка Изидри. 
+							ЭМ&nbsp;&mdash; товары для сада и&nbsp;дома. Знаменитая Сушилка Изидри.
 							Новости о&nbsp;природном мировом земледелии, новинки, поступления товаров в&nbsp;магазины.
-							Помогаем садоводам, огородникам, дачникам, владельцам приусадебных участков выращивать экологически чистые 
-							урожаи,восстанавливать и&nbsp;повышать плодородие почвы, облегчать труд 
-							на&nbsp;земле, создавать красивые сады, в&nbsp;которых они отдыхают семьей 
+							Помогаем садоводам, огородникам, дачникам, владельцам приусадебных участков выращивать экологически чистые
+							урожаи,восстанавливать и&nbsp;повышать плодородие почвы, облегчать труд
+							на&nbsp;земле, создавать красивые сады, в&nbsp;которых они отдыхают семьей
 							и&nbsp;делать их&nbsp;по&nbsp;возможности малоуходными, гармоничными и&nbsp;живыми!
 							Живи экологично! Живи дольше!
 							Омский центр экологического садоводства &laquo;Живой сад&raquo;. Работаем с&nbsp;2006&nbsp;года.
 							Предлагаем только проверенные товары для экологического ЗемлеДелия и&nbsp;декоративного садоводства.
-							ЭМ&nbsp;&mdash; товары для сада и&nbsp;дома. Знаменитая Сушилка Изидри. 
+							ЭМ&nbsp;&mdash; товары для сада и&nbsp;дома. Знаменитая Сушилка Изидри.
 							Новости о&nbsp;природном мировом земледелии, новинки, поступления товаров в&nbsp;магазины.
-							Помогаем садоводам, огородникам, дачникам, владельцам приусадебных участков выращивать экологически чистые 
-							урожаи,восстанавливать и&nbsp;повышать плодородие почвы, облегчать труд 
-							на&nbsp;земле, создавать красивые сады, в&nbsp;которых они отдыхают семьей 
+							Помогаем садоводам, огородникам, дачникам, владельцам приусадебных участков выращивать экологически чистые
+							урожаи,восстанавливать и&nbsp;повышать плодородие почвы, облегчать труд
+							на&nbsp;земле, создавать красивые сады, в&nbsp;которых они отдыхают семьей
 							и&nbsp;делать их&nbsp;по&nbsp;возможности малоуходными, гармоничными и&nbsp;живыми!
 							Живи экологично! Живи дольше!
 						</div>
 						<div class="mainGarden__column">
-							Интернет-магазин семена почтой предлагает Вам купить семена 
-							от&nbsp;самых, в&nbsp;своем сегменте агрофирм 
-							&laquo;Поиск&raquo;, &laquo;Гавриш&raquo;, &laquo;Русский огород&raquo;, &laquo;Марс&raquo;, &laquo;Аэлита&raquo;. 
-							Это крупнейшие российские селекционно-семеноводческие 
+							Интернет-магазин семена почтой предлагает Вам купить семена
+							от&nbsp;самых, в&nbsp;своем сегменте агрофирм
+							&laquo;Поиск&raquo;, &laquo;Гавриш&raquo;, &laquo;Русский огород&raquo;, &laquo;Марс&raquo;, &laquo;Аэлита&raquo;.
+							Это крупнейшие российские селекционно-семеноводческие
 							компании, работающие на&nbsp;рынке от&nbsp;15&nbsp;до&nbsp;25-ти лет. Вся продукция
 							проходит контроль качества и&nbsp;снабжается сертификатами соответствия.
-							Работая с&nbsp;1990&nbsp;г., мы&nbsp;отправляем более 100&nbsp;000 
-							посылок в&nbsp;год. При отменном качестве семян наши цены 
+							Работая с&nbsp;1990&nbsp;г., мы&nbsp;отправляем более 100&nbsp;000
+							посылок в&nbsp;год. При отменном качестве семян наши цены
 							значительно ниже, чем в&nbsp;других интернет-магазинах.
-							Интернет-магазин семена почтой предлагает Вам купить семена 
-							от&nbsp;самых надежных, лидирующих в&nbsp;своем сегменте агрофирм 
-							&laquo;Поиск&raquo;, &laquo;Гавриш&raquo;, &laquo;Русский огород&raquo;, &laquo;Марс&raquo;, &laquo;Аэлита&raquo;. 
-							Это крупнейшие российские селекционно-семеноводческие 
+							Интернет-магазин семена почтой предлагает Вам купить семена
+							от&nbsp;самых надежных, лидирующих в&nbsp;своем сегменте агрофирм
+							&laquo;Поиск&raquo;, &laquo;Гавриш&raquo;, &laquo;Русский огород&raquo;, &laquo;Марс&raquo;, &laquo;Аэлита&raquo;.
+							Это крупнейшие российские селекционно-семеноводческие
 							компании, работающие на&nbsp;рынке от&nbsp;15&nbsp;до&nbsp;25-ти лет. Вся продукция
 							проходит контроль качества и&nbsp;снабжается сертификатами соответствия.
-							Работая с&nbsp;1990&nbsp;г., мы&nbsp;отправляем более 100&nbsp;000 
-							посылок в&nbsp;год. При отменном качестве семян наши цены 
+							Работая с&nbsp;1990&nbsp;г., мы&nbsp;отправляем более 100&nbsp;000
+							посылок в&nbsp;год. При отменном качестве семян наши цены
 							значительно ниже, чем в&nbsp;других интернет-магазинах.
 						</div>
 					</div>
@@ -1374,7 +1373,7 @@
 						<div class="mainGarden__btn mainGardenBtn_js">
 							<span class="mainGarden__show">Показать целиком</span>
 							<span class="mainGarden__hide">Свернуть</span>
-							<?include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/mainGardenAll.svg';?>
+							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/mainGardenAll.svg'; ?>
 						</div>
 					</div>
 				</div>
@@ -1384,5 +1383,5 @@
 </main>
 
 <?
-	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");
 ?>

@@ -107,9 +107,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							</div>
 							<div class="lkProfile__address">
 								<div class="lkProfile__addressMap">
-									<div class="envelopeInput lkProfile__input">
+									<div class="envelopeInput lkProfile__input shops__js">
 										<div class="envelopeInput__title">Выберите другой магазин самовывоза</div>
-										<input class="envelopeInput__input" type="text" value="ул. Маяковского, 20">
+										<input class="envelopeInput__input openAddress__js" type="text" value="ул. Маяковского, 20">
 										<div class="lkProfile__shops">
 											<ul>
 												<li class="lkProfile__shopsLi">ул. Маяковского, 20</li>

@@ -1,0 +1,146 @@
+@import "../modules/utilities/_variables.scss";
+.lk {
+    display: flex;
+    justify-content: space-between;
+    &__content {
+        width: calc(100% - 355px);
+    }
+}
+.lkOrders {
+    display: flex;
+    justify-content: space-between;
+    &__container {
+        margin-top: 35px;
+        border: 1px solid #c7d0d9;
+        border-radius: 10px;
+        width: 1045px;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 47px 15px 46px;
+        border-bottom: 1px solid #c7d0d9;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__status {
+        display: flex;
+        align-items: center;
+        &svg {
+            display: block;
+            path {
+            }
+        }
+        & span {
+            margin-left: 6px;
+            font-family: Rubik;
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+    &__number {
+        margin-left: 30px;
+        font-family: Rubik;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    &__btn {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 184px;
+        height: 42px;
+        background: #cad4db;
+        border-radius: 5px;
+        & svg {
+            path {
+                display: block;
+            }
+        }
+        & span {
+            font-family: Rubik;
+            font-size: 16px;
+            line-height: 24px;
+            margin-left: 5px;
+        }
+    }
+
+    // .lkOrders__cards
+
+    &__cards {
+        padding: 0 46px;
+    }
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            border-bottom: 1px solid #e1e7ed;
+            z-index: -1;
+        }
+    }
+    &__boxCard {
+        display: flex;
+        box-sizing: border-box;
+    }
+    // .lkOrders__info
+
+    &__info {
+        padding: 27px 47px 35px 46px;
+        border-top: 1px solid #c7d0d9;
+    }
+
+    &__dates {
+        display: flex;
+    }
+    &__text {
+        font-family: Rubik;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #005827;
+        & span {
+            color: $textColor;
+        }
+        &_margin {
+            margin-top: 24px;
+        }
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        font-family: Rubik;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #005827;
+        & span {
+            font-family: Rubik;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 24px;
+            color: $textColor;
+        }
+    }
+    &__address {
+        font-family: Rubik;
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 9px;
+    }
+}

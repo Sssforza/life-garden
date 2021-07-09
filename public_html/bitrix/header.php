@@ -45,6 +45,13 @@
                 </div>
                 <span class="headerTop__text">Вход</span>
               </a>
+              <a class="headerTop__enter" href="#">
+                <div class="headerTop__icon">
+                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/client.svg'; ?>
+                </div>
+                <span class="headerTop__text">Имя клиента...</span>
+                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/client-arrow.svg'; ?>
+              </a>
             </div>
           </div>
         </div>
@@ -592,4 +599,5 @@
             примерно один раз в неделю. </div>
         </div>
       </div>
+
     </header>

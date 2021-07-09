@@ -11402,11 +11402,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_header_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8);
 /* harmony import */ var _blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(9);
 /* harmony import */ var _blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(10);
-/* harmony import */ var _blocks_sliders_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(11);
-/* harmony import */ var _blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(12);
-/* harmony import */ var _blocks_showFull_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(13);
-/* harmony import */ var _blocks_map_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(14);
-/* harmony import */ var _blocks_scrollbar_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(15);
+/* harmony import */ var _blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(11);
+/* harmony import */ var _blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(12);
+/* harmony import */ var _blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(13);
+/* harmony import */ var _blocks_showFull_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(14);
+/* harmony import */ var _blocks_map_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(15);
+/* harmony import */ var _blocks_scrollbar_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(16);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁 /node_modules/  slick 1.8.1
@@ -11421,6 +11422,8 @@ global.noUiSlider = nouislider__WEBPACK_IMPORTED_MODULE_3___default.a; //📁 /a
  //📁 /assets/js/blocks  _footer.js
 
  //📁 /assets/js/blocks  catalog.js
+
+ //📁 /assets/js/blocks  lkProfile.js
 
  //📁 /assets/js/blocks  sliders.js
 
@@ -11443,19 +11446,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerClick"])(); // slick slider main
 
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_7__["sliderMain"])(); // slick slider main page special product
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderMain"])(); // slick slider main page special product
 
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_7__["sliderProductSpecial"])(); // sroll page on top
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderProductSpecial"])(); // sroll page on top
 
   Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerScrollUp"])(); // map
 
-  Object(_blocks_map_js__WEBPACK_IMPORTED_MODULE_10__["mapInit"])(); // map aside scroll
+  Object(_blocks_map_js__WEBPACK_IMPORTED_MODULE_11__["mapInit"])(); // map aside scroll
 
-  Object(_blocks_scrollbar_js__WEBPACK_IMPORTED_MODULE_11__["mapAsideScroll"])(); // tabs sliders in the main page section specialSample
+  Object(_blocks_scrollbar_js__WEBPACK_IMPORTED_MODULE_12__["mapAsideScroll"])(); // tabs sliders in the main page section specialSample
 
-  Object(_blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_8__["specialSampleTabs"])(); // main garden show all
+  Object(_blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_9__["specialSampleTabs"])(); // main garden show all
 
-  Object(_blocks_showFull_js__WEBPACK_IMPORTED_MODULE_9__["mainGardenShow"])(); // validation e-mail
+  Object(_blocks_showFull_js__WEBPACK_IMPORTED_MODULE_10__["mainGardenShow"])(); // validation e-mail
 
   Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerValidationEmail"])(); // //open popups in catalog
 
@@ -11467,7 +11470,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["checkNum"])(); // //all filters
 
-  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["filters"])();
+  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["filters"])(); //open map
+
+  Object(_blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__["openMap"])(); //open lists of shops in lk
+
+  Object(_blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__["openAddress"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
@@ -19005,6 +19012,54 @@ function filters() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openMap", function() { return openMap; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openAddress", function() { return openAddress; });
+function openMap() {
+  var mapPopup = document.querySelector(".windowsMapWrapper__js");
+  var mapPopupWindow = document.querySelector(".windowsMapPopup__js");
+  var mapPopupClose = document.querySelector(".windowsMapClose__js");
+  var mapBtn = document.querySelector(".showMap__js");
+
+  function closePopup(e) {
+    if (mapPopupWindow && e.target !== mapPopupWindow && !mapPopupWindow.contains(e.target)) {
+      mapPopup.classList.add("hidden");
+      scrollOffOn();
+      document.removeEventListener("click", closePopup);
+    }
+  }
+
+  function scrollOffOn() {
+    return document.body.classList.toggle("hiddenHeaderCatalog");
+  }
+
+  mapBtn.addEventListener("click", function () {
+    mapPopup.classList.remove("hidden");
+    scrollOffOn();
+    setTimeout(function () {
+      document.addEventListener("click", closePopup);
+    }, 0);
+  });
+  mapPopupClose.addEventListener("click", function () {
+    mapPopup.classList.add("hidden");
+    scrollOffOn();
+    document.removeEventListener("click", closePopup);
+  });
+}
+function openAddress() {
+  var addressBtn = document.querySelector(".openAddress__js");
+  var addressPopup = document.querySelector(".shops__js");
+  console.log(addressBtn, addressPopup);
+  /*   addressBtn.addEventListener('click', () => {
+        addressPopup.classList.toggle('lkProfile__input_open')
+    }) */
+}
+
+/***/ }),
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderMain", function() { return sliderMain; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderProductSpecial", function() { return sliderProductSpecial; });
 // SliderMain
@@ -19050,7 +19105,7 @@ function sliderProductSpecial() {
 ;
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19085,7 +19140,7 @@ function specialSampleTabs() {
 ;
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19104,7 +19159,7 @@ function mainGardenShow() {
 ;
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19203,7 +19258,7 @@ function mapInit() {
 }
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19211,11 +19266,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapAsideScroll", function() { return mapAsideScroll; });
 // map aside scroll
 function mapAsideScroll() {
-  if (document.querySelector('.map__aside')) {
-    $('.scrollbar-inner').scrollbar();
+  if (document.querySelector(".map__aside")) {
+    $(".scrollbar-inner").scrollbar();
   }
 }
-;
 
 /***/ })
 /******/ ]);
