@@ -246,6 +246,7 @@
     &__container {
         margin-top: 20px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
     &__btn {
@@ -256,13 +257,11 @@
         font-size: 18px;
         line-height: 23px;
         margin-top: 20px;
-        &_margin {
-            margin: 0;
-            background: $border;
-            color: $textColor;
-        }
         &:hover{
             color: $white;
+        }
+        &_margin{
+            margin: 0;
         }
     }
 }

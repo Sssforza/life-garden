@@ -37,3 +37,19 @@ export function sliderProductSpecial () {
 		});
     }
 };
+
+// sliderProduct
+export function sliderProduct() {
+    const slickMain = $('.sliderProduct_js');
+	if (slickMain.length) {
+		slickMain.slick({
+			infinite: false,
+			speed: 500,
+			slidesToShow: 6,
+			slidesToScroll: 6,
+			draggable: false,
+			prevArrow: '<div class="product__prev">&larr;</div>',
+			nextArrow: '<div class="product__next">&rarr;</div>',
+		});
+    }
+};

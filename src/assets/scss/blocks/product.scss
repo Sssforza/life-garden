@@ -1,0 +1,264 @@
+@import "../modules/utilities/_variables.scss";
+
+.product {
+  display: flex;
+  &_checked {
+    border: 3px solid $green !important;
+  }
+  &__slider {
+  }
+  &__prev {
+    position: absolute;
+    top: 100%;
+    z-index: 100;
+    width: 100px;
+    height: 50px;
+  }
+  &__next {
+    position: absolute;
+    top: 100%;
+    left: 100px;
+  }
+  &__image {
+    width: 690px;
+    height: 600px;
+    border-radius: 30px;
+    overflow: hidden;
+    &_small {
+      cursor: pointer;
+      max-width: 106px;
+      height: 106px;
+      border-radius: 15px;
+      margin-left: 5px;
+    }
+  }
+  &__box {
+    width: 690px;
+    margin-top: 11px;
+    position: relative;
+  }
+
+  // .product__info
+
+  &__info {
+    margin-left: 60px;
+  }
+
+  // .product__article
+
+  &__article {
+    font-size: 14px;
+    line-height: 28px;
+    color: #919eab;
+  }
+  &__title {
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  &__review {
+    margin-top: 15px;
+  }
+  &__season {
+    display: flex;
+    align-content: center;
+    margin-top: 20px;
+
+    & svg {
+      path {
+        display: block;
+      }
+    }
+  }
+  &__seasonText {
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    & span {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  &__cost {
+    display: inline-flex;
+    gap: 65px;
+  }
+  &__bottom {
+    justify-content: start;
+    gap: 65px;
+  }
+
+  // .product__weight
+
+  &__weight {
+    margin-top: 25px;
+  }
+
+  &__colors {
+    margin-top: 30px;
+  }
+  &__method {
+    margin-top: 41px;
+    border-top: 1px solid #dbe4ec;
+    padding-top: 30px;
+  }
+}
+
+.weight {
+  &__text {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  &__container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 50px;
+    border: 1px solid $border;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+    cursor: pointer;
+  }
+}
+
+.colors {
+  // .colors__text
+
+  &__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    & span {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  &__box {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  &__item {
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+.method {
+  &__title {
+    font-family: Rubik;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &__container {
+    display: flex;
+    gap: 92px;
+  }
+  &__item {
+    display: flex;
+    margin-top: 18px;
+  }
+  &__text {
+    margin-left: 13px;
+    font-family: Rubik;
+    font-size: 16px;
+    line-height: 19px;
+    & span {
+      font-family: Rubik;
+      font-size: 14px;
+      line-height: 17px;
+      color: #5b6168;
+    }
+  }
+}
+
+.info {
+  margin-top: 40px;
+  &__head {
+    display: flex;
+    gap: 35px;
+    border-bottom: 1px solid #919eab;
+  }
+  &__title {
+    cursor: pointer;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 70px;
+    color: #919eab;
+    position: relative;
+    transition: $transition;
+    &_checked {
+      color: $textColor;
+      border-bottom: 4px solid $green;
+      pointer-events: none;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+      right: 0;
+      height: 4px;
+      background: $green;
+      opacity: 0;
+      pointer-events: none;
+      transition: $transition;
+    }
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+      color: $textColor;
+    }
+  }
+
+  // .info__body
+
+  &__body {
+  }
+
+  // .info__columnLeft
+
+  &__columnLeft {
+  }
+
+  // .info__text
+
+  &__text {
+  }
+
+  // .info__description
+
+  &__description {
+  }
+
+  // .info__columnRight
+
+  &__columnRight {
+  }
+
+  // .info__item
+
+  &__item {
+  }
+}

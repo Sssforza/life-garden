@@ -51,7 +51,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								</div>
 							</div>
 
-							<div class="lkOrders__btn">
+							<div class="btnGray lkOrders__btn">
 								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/repeat.svg'; ?>
 								<span>Повторить заказ</span>
 							</div>
@@ -132,7 +132,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								</div>
 							</div>
 
-							<div class="lkOrders__btn">
+							<div class="btnGray lkOrders__btn">
 								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/basket-small.svg'; ?>
 								<span>Отменить заказ</span>
 							</div>
@@ -213,7 +213,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								</div>
 							</div>
 
-							<div class="lkOrders__btn">
+							<div class="btnGray lkOrders__btn">
 								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/repeat.svg'; ?>
 								<span>Повторить заказ</span>
 							</div>
@@ -293,7 +293,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								</div>
 							</div>
 
-							<div class="lkOrders__btn">
+							<div class="btnGray lkOrders__btn">
 								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/repeat.svg'; ?>
 								<span>Повторить заказ</span>
 							</div>
@@ -373,7 +373,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								</div>
 							</div>
 
-							<div class="lkOrders__btn">
+							<div class="btnGray lkOrders__btn">
 								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/repeat.svg'; ?>
 								<span>Повторить заказ</span>
 							</div>

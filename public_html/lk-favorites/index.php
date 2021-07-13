@@ -1,6 +1,5 @@
-
 <?
-	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 ?>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=81ff5a41-050a-4199-aee4-2c8ebd0c8bfb"></script>
 <link rel='stylesheet' href="/dist/css/blocks/lk.css">
@@ -10,7 +9,7 @@
 			<ul class="breadCrumbs__ul">
 				<li>
 					<a class="breadCrumbs__link" href="/">Главная</a>
-					</li>
+				</li>
 				<li>
 					<span>Личный кабинет</span>
 				</li>
@@ -438,5 +437,5 @@
 </main>
 
 <?
-	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");
 ?>

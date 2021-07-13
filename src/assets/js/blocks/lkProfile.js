@@ -22,9 +22,9 @@ export function openMap() {
     mapBtn.addEventListener("click", () => {
       mapPopup.classList.remove("hidden");
       scrollOffOn();
-      setTimeout(() => {
+/*       setTimeout(() => {
         document.addEventListener("click", closePopup);
-      }, 0);
+      }, 0); */
     });
 
     mapPopupClose.addEventListener("click", () => {

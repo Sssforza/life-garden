@@ -36,16 +36,21 @@ import {
 import { openMap, openAddress } from "./blocks/lkProfile.js";
 
 //📁 /assets/js/blocks  sliders.js
-import { sliderMain, sliderProductSpecial } from "./blocks/sliders.js";
+import { sliderMain, sliderProductSpecial, sliderProduct } from "./blocks/sliders.js";
 
 //📁 /assets/js/blocks  specialSample.js
 import { specialSampleTabs } from "./blocks/specialSample.js";
+
+//📁 /assets/js/blocks  product.js
+import { openImage } from "./blocks/product.js";
 
 //📁 /assets/js/blocks  specialSample.js
 import { mainGardenShow } from "./blocks/showFull.js";
 
 //📁 /assets/js/blocks  specialSample.js
 import { mapInit } from "./blocks/map.js";
+//📁 /assets/js/blocks  specialSample.js
+import { mapWindow } from "./blocks/mapWindow.js";
 
 //📁 /assets/js/blocks  scrollbar.js
 import { mapAsideScroll } from "./blocks/scrollbar.js";
@@ -69,11 +74,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // slick slider main page special product
     sliderProductSpecial();
 
+    // slick slider Product page 
+    sliderProduct();
+
     // sroll page on top
     footerScrollUp();
 
     // map
     mapInit();
+    // mapWindow
+    mapWindow();
 
     // map aside scroll
     mapAsideScroll();
@@ -110,4 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //open client
     headerOpenClient()
+
+    //open big image in product
+    openImage()
 });

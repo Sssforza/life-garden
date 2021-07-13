@@ -11405,9 +11405,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(11);
 /* harmony import */ var _blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(12);
 /* harmony import */ var _blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(13);
-/* harmony import */ var _blocks_showFull_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(14);
-/* harmony import */ var _blocks_map_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(15);
-/* harmony import */ var _blocks_scrollbar_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(16);
+/* harmony import */ var _blocks_product_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(14);
+/* harmony import */ var _blocks_showFull_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(15);
+/* harmony import */ var _blocks_map_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(16);
+/* harmony import */ var _blocks_mapWindow_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(17);
+/* harmony import */ var _blocks_scrollbar_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(18);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁 /node_modules/  slick 1.8.1
@@ -11426,6 +11428,10 @@ global.noUiSlider = nouislider__WEBPACK_IMPORTED_MODULE_3___default.a; //📁 /a
  //📁 /assets/js/blocks  lkProfile.js
 
  //📁 /assets/js/blocks  sliders.js
+
+ //📁 /assets/js/blocks  specialSample.js
+
+ //📁 /assets/js/blocks  product.js
 
  //📁 /assets/js/blocks  specialSample.js
 
@@ -11448,17 +11454,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderMain"])(); // slick slider main page special product
 
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderProductSpecial"])(); // sroll page on top
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderProductSpecial"])(); // slick slider Product page 
+
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderProduct"])(); // sroll page on top
 
   Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerScrollUp"])(); // map
 
-  Object(_blocks_map_js__WEBPACK_IMPORTED_MODULE_11__["mapInit"])(); // map aside scroll
+  Object(_blocks_map_js__WEBPACK_IMPORTED_MODULE_12__["mapInit"])(); // mapWindow
 
-  Object(_blocks_scrollbar_js__WEBPACK_IMPORTED_MODULE_12__["mapAsideScroll"])(); // tabs sliders in the main page section specialSample
+  Object(_blocks_mapWindow_js__WEBPACK_IMPORTED_MODULE_13__["mapWindow"])(); // map aside scroll
+
+  Object(_blocks_scrollbar_js__WEBPACK_IMPORTED_MODULE_14__["mapAsideScroll"])(); // tabs sliders in the main page section specialSample
 
   Object(_blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_9__["specialSampleTabs"])(); // main garden show all
 
-  Object(_blocks_showFull_js__WEBPACK_IMPORTED_MODULE_10__["mainGardenShow"])(); // validation e-mail
+  Object(_blocks_showFull_js__WEBPACK_IMPORTED_MODULE_11__["mainGardenShow"])(); // validation e-mail
 
   Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerValidationEmail"])(); // //open popups in catalog
 
@@ -11476,7 +11486,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__["openAddress"])(); //open client
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerOpenClient"])();
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerOpenClient"])(); //open big image in product
+
+  Object(_blocks_product_js__WEBPACK_IMPORTED_MODULE_10__["openImage"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
@@ -19045,9 +19057,9 @@ function openMap() {
     mapBtn.addEventListener("click", function () {
       mapPopup.classList.remove("hidden");
       scrollOffOn();
-      setTimeout(function () {
-        document.addEventListener("click", closePopup);
-      }, 0);
+      /*       setTimeout(() => {
+              document.addEventListener("click", closePopup);
+            }, 0); */
     });
     mapPopupClose.addEventListener("click", function () {
       mapPopup.classList.add("hidden");
@@ -19074,6 +19086,7 @@ function openAddress() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderMain", function() { return sliderMain; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderProductSpecial", function() { return sliderProductSpecial; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderProduct", function() { return sliderProduct; });
 // SliderMain
 function sliderMain() {
   var slickMain = $('.mainSlier_js');
@@ -19111,6 +19124,23 @@ function sliderProductSpecial() {
       draggable: false,
       prevArrow: '<div class="productBlock__prev"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83984 2L10.8398 10.84L1.83984 19" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>',
       nextArrow: '<div class="productBlock__next"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83984 2L10.8398 10.84L1.83984 19" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>'
+    });
+  }
+}
+; // sliderProduct
+
+function sliderProduct() {
+  var slickMain = $('.sliderProduct_js');
+
+  if (slickMain.length) {
+    slickMain.slick({
+      infinite: false,
+      speed: 500,
+      slidesToShow: 6,
+      slidesToScroll: 6,
+      draggable: false,
+      prevArrow: '<div class="product__prev">&larr;</div>',
+      nextArrow: '<div class="product__next">&rarr;</div>'
     });
   }
 }
@@ -19157,6 +19187,23 @@ function specialSampleTabs() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openImage", function() { return openImage; });
+function openImage() {
+  var imageClick = document.querySelectorAll(".imageClick__js");
+  var image = document.querySelector(".image_js");
+  imageClick.forEach(function (item) {
+    item.addEventListener("click", function () {
+      image.style.backgroundImage = item.style.backgroundImage;
+    });
+  });
+}
+
+/***/ }),
+/* 15 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mainGardenShow", function() { return mainGardenShow; });
 // main garden show all
 function mainGardenShow() {
@@ -19171,7 +19218,7 @@ function mainGardenShow() {
 ;
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19270,7 +19317,132 @@ function mapInit() {
 }
 
 /***/ }),
-/* 16 */
+/* 17 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapWindow", function() { return mapWindow; });
+// map
+function mapWindow() {
+  if (document.querySelector("#mapWindow")) {
+    var init = function init() {
+      $("#mapWindow").empty();
+      myMap = null;
+      var myMap = new ymaps.Map("mapWindow", {
+        center: center,
+        zoom: zoom,
+        controls: []
+      }, {
+        searchControlProvider: "yandex#search"
+      }),
+          objectManager = new ymaps.ObjectManager({
+        clusterize: true,
+        gridSize: 32,
+        clusterDisableClickZoom: true,
+        hideIconOnBalloonOpen: true
+      });
+      objectManager.clusters.options.set("preset", "islands#greenClusterIcons");
+      var objects = [];
+      objectManager.objects.options.set({
+        iconLayout: "default#image",
+        iconImageHref: "/dist/img/mapIcon.png",
+        iconImageSize: [40, 52]
+      });
+      var size = Object.keys(groups).length;
+      size - 1;
+
+      for (var i = 0, l = size; i < l; i++) {
+        var address = [{
+          address: "ул. Маяковского, 20",
+          tel: "+7 (908) 310-48-07",
+          clock: "Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00"
+        }, {
+          address: "ул. Сакена Сейфуллина, 27",
+          tel: "+7 (908) 310-94-77",
+          clock: "Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00"
+        }, {
+          address: "ул. пр. Мира, 64",
+          tel: "+7 (908) 310-35-69",
+          clock: "Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00"
+        }, {
+          address: "ул. 10 лет Октября, 113",
+          tel: "+7 (908) 310-35-69",
+          clock: "Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00"
+        }, {
+          address: "проспект Карла Маркса, 83",
+          tel: "+7 (908) 310-92-55",
+          clock: "Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00"
+        }];
+        var groupsId = groups[i].id;
+        var centerGroups = groups[i].center;
+        objects.push({
+          type: "Feature",
+          id: groupsId,
+          geometry: {
+            type: "Point",
+            coordinates: centerGroups
+          },
+          properties: {
+            balloonContentHeader: "<div class='map__baloonTitle'> ".concat(address[i].address, " </div>"),
+            balloonContentBody: "<div class='map__baloonTel'> ".concat(address[i].tel, " <br> ").concat(address[i].clock, " </div>"),
+            balloonContentFooter: "<div class=\"map__btn btnWhite mapBtn_js\">\u0412\u044B\u0431\u0440\u0430\u0442\u044C</div>"
+          }
+        });
+      }
+
+      objectManager.add(objects);
+      myMap.geoObjects.add(objectManager);
+      myMap.options.set("dragCursor", "arrow");
+    };
+
+    var myMap;
+    var bigMap = false;
+    var groups = [];
+    $(".mapItem_js").each(function (item, i) {
+      groups.push({
+        id: item,
+        center: [$(this).attr("data-coord1"), $(this).attr("data-coord2")]
+      });
+    });
+    ymaps.ready(init);
+    var center = [54.99244, 73.36859]; //омск
+
+    var zoom = 12;
+    $(".mapBtn_js").on("click", function () {
+      console.log("fddfa");
+      ymaps.ready(init);
+    });
+    $(".mapItem_js").on("click", function () {
+      $(".map__aside .mapItem_js").not($(this)).removeClass("show");
+
+      if ($(this).hasClass("show")) {
+        $(this).removeClass("show");
+        groups = [];
+        $(".mapItem_js").each(function (item, i) {
+          groups.push({
+            id: item,
+            center: [$(this).attr("data-coord1"), $(this).attr("data-coord2")]
+          });
+        });
+        center = [54.99244, 73.36859]; //омск
+
+        zoom = 12;
+        var myMap;
+        ymaps.ready(init);
+      } else {
+        $(this).addClass("show");
+        center = [$(this).data("coord1"), $(this).data("coord2")];
+        zoom = 15;
+        var myMap;
+        ymaps.ready(init);
+      }
+    });
+  }
+}
+
+/***/ }),
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

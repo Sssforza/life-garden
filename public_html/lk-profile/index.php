@@ -133,7 +133,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 										</div>
 									</div>
 									<div class="lkProfile__saveContainer">
-										<div class="btn lkProfile__btn lkProfile__btn_margin">Сохранить изменения</div>
+										<div class="btnGray lkProfile__btn lkProfile__btn_margin">Сохранить изменения</div>
 										<span>Отменить</span>
 									</div>
 								</div>
@@ -154,7 +154,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									</div>
 
 									<div class="lkProfile__saveContainer">
-										<div class="btn lkProfile__btn lkProfile__btn_margin">Сохранить изменения</div>
+										<div class="btnGray lkProfile__btn lkProfile__btn_margin">Сохранить изменения</div>
 										<span>Отменить</span>
 									</div>
 								</div>
@@ -202,7 +202,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<span>График работы:</span>
 								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
 							</div>
-							<div class="map__btn map__btn_checked btnWhite">
+							<div class="map__btn btnWhite">
 								Выбрать
 							</div>
 						</div>
@@ -259,7 +259,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							</div>
 						</div>
 					</aside>
-					<div id="map" class="map__window"></div>
+					<div id="mapWindow" class="map__window"></div>
 				</div>
 			</section>
 		</div>

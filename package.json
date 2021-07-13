@@ -61,6 +61,8 @@
         "webpack-stream": "^5.2.1",
         "yargs": "^15.0.2"
     },
-    "dependencies": {},
+    "dependencies": {
+        "blowup": "^1.0.2"
+    },
     "version": "0.0.0"
 }

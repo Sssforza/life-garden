@@ -52,16 +52,12 @@
         line-height: 19px;
     }
     &__btn {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         width: 184px;
         height: 42px;
-        background: #cad4db;
-        border-radius: 5px;
         & svg {
+            
             path {
+                transition: $transition;
                 display: block;
             }
         }
@@ -70,6 +66,13 @@
             font-size: 16px;
             line-height: 24px;
             margin-left: 5px;
+        }
+        &:hover{
+            & svg {
+                path{
+                    fill: $white;
+                }
+            }
         }
     }
 
