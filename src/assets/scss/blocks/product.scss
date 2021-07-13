@@ -3,9 +3,17 @@
 .product {
   display: flex;
   &_checked {
-    border: 3px solid $green !important;
+    pointer-events: none;
+    border: 2px solid $green !important;
   }
   &__slider {
+  }
+  &__button {
+    width: 160px;
+    height: 46px;
+  }
+  &__like {
+    margin-left: 15px;
   }
   &__prev {
     position: absolute;
@@ -28,7 +36,7 @@
       cursor: pointer;
       max-width: 106px;
       height: 106px;
-      border-radius: 15px;
+      border-radius: 20px;
       margin-left: 5px;
     }
   }
@@ -38,14 +46,9 @@
     position: relative;
   }
 
-  // .product__info
-
   &__info {
     margin-left: 60px;
   }
-
-  // .product__article
-
   &__article {
     font-size: 14px;
     line-height: 28px;
@@ -86,14 +89,37 @@
   &__cost {
     display: inline-flex;
     gap: 65px;
+    .cost__totalPrice,
+    .cost__ruble {
+      margin-left: 10px;
+      font-weight: 500;
+      font-size: 35px;
+      line-height: 24px;
+    }
+    .cost__price {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+    }
+    .cost__info {
+      margin-left: 10px;
+    }
   }
   &__bottom {
     justify-content: start;
     gap: 65px;
+    .counter {
+      width: 142px;
+      height: 46px;
+      &__minus,
+      &__plus {
+        width: 46px;
+      }
+      &__input {
+        width: 52px;
+      }
+    }
   }
-
-  // .product__weight
-
   &__weight {
     margin-top: 25px;
   }
@@ -133,12 +159,14 @@
     line-height: 20px;
     font-weight: normal;
     cursor: pointer;
+    transition: $transition;
+    &:hover {
+      border: 1px solid #1e7243;
+    }
   }
 }
 
 .colors {
-  // .colors__text
-
   &__text {
     font-weight: 500;
     font-size: 16px;
@@ -155,10 +183,20 @@
     margin-top: 20px;
   }
   &__item {
-    width: 41px;
-    height: 41px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
     cursor: pointer;
+    &_big {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
   }
 }
 .method {
@@ -208,9 +246,9 @@
     position: relative;
     transition: $transition;
     &_checked {
+      pointer-events: none;
       color: $textColor;
       border-bottom: 4px solid $green;
-      pointer-events: none;
     }
     &:after {
       content: "";
@@ -231,34 +269,272 @@
       color: $textColor;
     }
   }
-
-  // .info__body
-
+  &__name {
+    margin-top: 30px;
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 50px;
+  }
   &__body {
+    display: flex;
+    margin-top: 32px;
+    &_margin {
+      margin: 0;
+    }
   }
-
-  // .info__columnLeft
-
   &__columnLeft {
+    width: 50%;
   }
-
-  // .info__text
-
   &__text {
+    font-size: 16px;
+    line-height: 26px;
+    &_margin {
+      margin-left: 17px;
+    }
   }
-
-  // .info__description
-
+  &__pdf {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    & span {
+      font-size: 14px;
+      line-height: 17px;
+      color: #919eab;
+    }
+  }
+  &__textUl {
+    margin-top: 20px;
+  }
+  &__textLi {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    &_color {
+      color: #5b6168;
+    }
+    & span {
+      color: $textColor;
+    }
+  }
   &__description {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 25px;
   }
-
-  // .info__columnRight
-
   &__columnRight {
+    padding-left: 70px;
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 50%;
+    height: 80%;
   }
-
-  // .info__item
 
   &__item {
+    display: flex;
+    align-items: center;
+    width: 257px;
   }
+  &__svg {
+    path {
+    }
+  }
+  &__points {
+    flex: 1 0;
+    border-bottom: 1px dotted $border;
+    height: 20px;
+    margin: 0 0.4em;
+  }
+  &__availability {
+    font-size: 16px;
+    line-height: 12px;
+  }
+}
+
+.reviews {
+  &__item {
+    margin-left: 14px;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 19px;
+    color: $textColor;
+    &_margin {
+      margin-top: 13px;
+    }
+    &_gray {
+      font-size: 14px;
+      line-height: 22px;
+      color: #5e758c;
+      margin-top: 15px;
+    }
+    &_bold {
+      font-weight: 500;
+    }
+  }
+  &__columnLeft {
+    width: 290px;
+  }
+  &__value {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  &__stars {
+    flex-direction: column;
+    border-bottom: 1px solid $border;
+    padding-bottom: 23px;
+  }
+  &__btn {
+    font-family: Rubik;
+    font-size: 16px;
+    line-height: 21px;
+    margin-top: 25px;
+    width: 290px;
+    height: 56px;
+    cursor: pointer;
+  }
+
+  &__columnRight {
+    margin-left: 65px;
+    width: 966px;
+  }
+  &__description {
+    font-family: Rubik;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  &__evaluations {
+    margin-top: 25px;
+  }
+  &__agreement {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__band {
+    display: flex;
+    width: 190px;
+    height: 6px;
+    border-radius: 4px;
+    background: #cad4db;
+    position: relative;
+    &_green {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 6px;
+      background: $green;
+      border-radius: 4px;
+    }
+  }
+  &__label {
+    .check {
+      width: 16px;
+      height: 16px;
+      background: {
+        image: url($imgUrl + "svg/checkAgreementSmall.svg");
+        repeat: no-repeat;
+        position: center;
+      }
+    }
+  }
+  &__box {
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+  &__letter {
+    width: 70px;
+    height: 70px;
+    border: 1px solid $border;
+    font-family: Futura PT;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1e7243;
+  }
+  &__name {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+    & span {
+      font-family: FiraSans;
+      font-size: 14px;
+      line-height: 18px;
+      color: #919eab;
+    }
+    margin-left: 15px;
+  }
+
+  &__title {
+    margin-top: 16px;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  // .reviews__buttons
+
+  &__buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 6px;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 36px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 14px;
+    line-height: 22px;
+    border: 1px solid $gray2;
+    transition: $transition;
+    &:hover {
+      background: #c8dad0;
+    }
+  }
+}
+
+
+.zoomer {
+  background-position: 50% 50%;
+  position: relative;
+  width: 500px;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.zoomer img:hover {
+  /*
+  * скрываем начальное изображение
+  * при наведении курсора на блок
+  */
+  opacity: 0;
+}
+
+.zoomer img {
+  transition: opacity .5s;
+  display: block;
+  width: 100%;
 }

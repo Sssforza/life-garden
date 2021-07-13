@@ -603,6 +603,7 @@ body {
   align-items: baseline;
   &__list {
     display: flex;
+    align-items: center;
   }
   &__item {
     margin-right: 2px;

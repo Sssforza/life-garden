@@ -14,11 +14,11 @@ global.noUiSlider = noUiSlider;
 
 //📁 /assets/js/blocks  _header.js
 import {
-    headerCatalog,
-    headerSearchelp,
-    headerClick,
-    headerScroll,
-    headerOpenClient
+  headerCatalog,
+  headerSearchelp,
+  headerClick,
+  headerScroll,
+  headerOpenClient,
 } from "./blocks/_header.js";
 
 //📁 /assets/js/blocks  _footer.js
@@ -26,23 +26,27 @@ import { footerScrollUp, footerValidationEmail } from "./blocks/_footer.js";
 
 //📁 /assets/js/blocks  catalog.js
 import {
-    catalogPopups,
-    checkNum,
-    priceSlider,
-    filters,
+  catalogPopups,
+  checkNum,
+  priceSlider,
+  filters,
 } from "./blocks/catalog.js";
 
 //📁 /assets/js/blocks  lkProfile.js
 import { openMap, openAddress } from "./blocks/lkProfile.js";
 
 //📁 /assets/js/blocks  sliders.js
-import { sliderMain, sliderProductSpecial, sliderProduct } from "./blocks/sliders.js";
+import {
+  sliderMain,
+  sliderProductSpecial,
+  sliderProduct,
+} from "./blocks/sliders.js";
 
 //📁 /assets/js/blocks  specialSample.js
 import { specialSampleTabs } from "./blocks/specialSample.js";
 
 //📁 /assets/js/blocks  product.js
-import { openImage } from "./blocks/product.js";
+import { openImage, checkCategories, otherClicks} from "./blocks/product.js";
 
 //📁 /assets/js/blocks  specialSample.js
 import { mainGardenShow } from "./blocks/showFull.js";
@@ -56,71 +60,78 @@ import { mapWindow } from "./blocks/mapWindow.js";
 import { mapAsideScroll } from "./blocks/scrollbar.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-    // open contextual hint
-    headerSearchelp();
+  // open contextual hint
+  headerSearchelp();
 
-    //hide headerTop on scroll
-    headerScroll();
+  //hide headerTop on scroll
+  headerScroll();
 
-    //popup catalog
-    headerCatalog();
+  //popup catalog
+  headerCatalog();
 
-    //popup basket and pre-order
-    headerClick();
+  //popup basket and pre-order
+  headerClick();
 
-    // slick slider main
-    sliderMain();
+  // slick slider main
+  sliderMain();
 
-    // slick slider main page special product
-    sliderProductSpecial();
+  // slick slider main page special product
+  sliderProductSpecial();
 
-    // slick slider Product page 
-    sliderProduct();
+  // slick slider Product page
+  sliderProduct();
 
-    // sroll page on top
-    footerScrollUp();
+  // sroll page on top
+  footerScrollUp();
 
-    // map
-    mapInit();
-    // mapWindow
-    mapWindow();
+  // map
+  mapInit();
+  // mapWindow
+  mapWindow();
 
-    // map aside scroll
-    mapAsideScroll();
+  // map aside scroll
+  mapAsideScroll();
 
-    // tabs sliders in the main page section specialSample
-    specialSampleTabs();
+  // tabs sliders in the main page section specialSample
+  specialSampleTabs();
 
-    // main garden show all
-    mainGardenShow();
+  // main garden show all
+  mainGardenShow();
 
-    // validation e-mail
-    footerValidationEmail();
+  // validation e-mail
+  footerValidationEmail();
 
-    // //open popups in catalog
-    catalogPopups();
+  // //open popups in catalog
+  catalogPopups();
 
-    // //check numbers in pagination
-    checkNum();
+  // //check numbers in pagination
+  checkNum();
 
-    // //slider for price
-    priceSlider();
+  // //slider for price
+  priceSlider();
 
-    // //
-    checkNum();
+  // //
+  checkNum();
 
-    // //all filters
-    filters();
+  // //all filters
+  filters();
 
-    //open map
-    openMap();
-     
-    //open lists of shops in lk
-    openAddress()
+  //open map
+  openMap();
 
-    //open client
-    headerOpenClient()
+  //open lists of shops in lk
+  openAddress();
 
-    //open big image in product
-    openImage()
+  //open client
+  headerOpenClient();
+
+  //open big image in product
+  openImage();
+
+  //check category in product
+  checkCategories();
+
+  //other clicks in product
+  otherClicks();
+
 });

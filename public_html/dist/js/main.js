@@ -11454,7 +11454,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderMain"])(); // slick slider main page special product
 
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderProductSpecial"])(); // slick slider Product page 
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderProductSpecial"])(); // slick slider Product page
 
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderProduct"])(); // sroll page on top
 
@@ -11488,7 +11488,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerOpenClient"])(); //open big image in product
 
-  Object(_blocks_product_js__WEBPACK_IMPORTED_MODULE_10__["openImage"])();
+  Object(_blocks_product_js__WEBPACK_IMPORTED_MODULE_10__["openImage"])(); //check category in product
+
+  Object(_blocks_product_js__WEBPACK_IMPORTED_MODULE_10__["checkCategories"])(); //other clicks in product
+
+  Object(_blocks_product_js__WEBPACK_IMPORTED_MODULE_10__["otherClicks"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
@@ -19188,12 +19192,66 @@ function specialSampleTabs() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openImage", function() { return openImage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "otherClicks", function() { return otherClicks; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkCategories", function() { return checkCategories; });
 function openImage() {
   var imageClick = document.querySelectorAll(".imageClick__js");
   var image = document.querySelector(".image_js");
   imageClick.forEach(function (item) {
     item.addEventListener("click", function () {
+      imageClick.forEach(function (el) {
+        el.classList.remove("product_checked");
+      });
+      item.classList.add("product_checked");
       image.style.backgroundImage = item.style.backgroundImage;
+    });
+  });
+
+  image.onmousemove = function (event) {
+    var zoomer = event.currentTarget;
+    event.offsetX ? offsetX = event.offsetX : offsetX = event.touches[0].pageX;
+    event.offsetY ? offsetY = event.offsetY : offsetX = event.touches[0].pageX;
+    var x = offsetX / zoomer.offsetWidth * 100;
+    var y = offsetY / zoomer.offsetHeight * 100;
+    zoomer.style.backgroundPosition = x + "% " + y + "%";
+  };
+}
+function otherClicks() {
+  var clickWeight = document.querySelectorAll(".weight__js");
+  clickWeight.forEach(function (item) {
+    item.addEventListener("click", function () {
+      clickWeight.forEach(function (el) {
+        el.classList.remove("product_checked");
+      });
+      item.classList.add("product_checked");
+    });
+  });
+  var clickColor = document.querySelectorAll(".color__js");
+  clickColor.forEach(function (item) {
+    item.addEventListener("click", function () {
+      clickColor.forEach(function (el) {
+        el.classList.remove("product_checked");
+      });
+      item.classList.add("product_checked");
+    });
+  });
+}
+function checkCategories() {
+  var clickCategories = document.querySelectorAll(".infoCategories__js");
+  var blockCategories = document.querySelectorAll(".info__js");
+  clickCategories.forEach(function (item) {
+    item.addEventListener("click", function () {
+      clickCategories.forEach(function (el) {
+        el.classList.remove("info__title_checked");
+      });
+      item.classList.add("info__title_checked");
+      blockCategories.forEach(function (element) {
+        if (item.id === element.id) {
+          element.classList.remove("hidden");
+        } else {
+          element.classList.add("hidden");
+        }
+      });
     });
   });
 }
