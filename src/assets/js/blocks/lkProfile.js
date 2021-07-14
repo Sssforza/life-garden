@@ -22,7 +22,7 @@ export function openMap() {
     mapBtn.addEventListener("click", () => {
       mapPopup.classList.remove("hidden");
       scrollOffOn();
-/*       setTimeout(() => {
+      /*       setTimeout(() => {
         document.addEventListener("click", closePopup);
       }, 0); */
     });
@@ -33,6 +33,42 @@ export function openMap() {
       document.removeEventListener("click", closePopup);
     });
   }
+}
+
+export function checkMethodDelivery() {
+  const clickCourier = document.querySelector(".choice__courier_js");
+  const clickPickup = document.querySelector(".choice__pickup_js");
+  const blockCourier = document.querySelector(".lkProfile__courier_js");
+  const blockPickup = document.querySelector(".lkProfile__pickup_js");
+  const clickAdd = document.querySelector(".lkProfile__addBtn_js");
+  const blockAdd = document.querySelector(".lkProfile__addAddress_js");
+  const clickDeleteAddress = document.querySelectorAll(".lkProfile__delete_js");
+
+  clickCourier.addEventListener("click", () => {
+    clickCourier.classList.add("choice__btn_checked");
+    clickPickup.classList.remove("choice__btn_checked");
+    blockCourier.classList.remove("hidden");
+    blockPickup.classList.add("hidden");
+  });
+  clickPickup.addEventListener("click", () => {
+    clickPickup.classList.add("choice__btn_checked");
+    clickCourier.classList.remove("choice__btn_checked");
+    blockCourier.classList.add("hidden");
+    blockPickup.classList.remove("hidden");
+    blockAdd.classList.add("hidden");
+
+  });
+
+  clickAdd.addEventListener("click", () => {
+    blockAdd.classList.toggle("hidden");
+  });
+  
+  clickDeleteAddress.forEach((item) => {
+    item.onclick = () => {
+      item.parentNode.parentNode.removeChild(item.parentNode);
+    }
+  })
+
 }
 
 export function openAddress() {

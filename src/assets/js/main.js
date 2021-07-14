@@ -33,7 +33,7 @@ import {
 } from "./blocks/catalog.js";
 
 //📁 /assets/js/blocks  lkProfile.js
-import { openMap, openAddress } from "./blocks/lkProfile.js";
+import { openMap, openAddress, checkMethodDelivery } from "./blocks/lkProfile.js";
 
 //📁 /assets/js/blocks  sliders.js
 import {
@@ -118,6 +118,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //open map
   openMap();
+
+  //check method delivery
+  checkMethodDelivery()
 
   //open lists of shops in lk
   openAddress();

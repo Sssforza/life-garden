@@ -11,13 +11,6 @@
     &__aside {
     }
     &__form {
-        .envelopeInput {
-            margin-bottom: 20px;
-        }
-        .envelopeInput__input {
-            width: 450px;
-            height: 50px;
-        }
     }
 }
 .lkMenu {
@@ -74,7 +67,6 @@
         margin-top: 26px;
     }
     &__address {
-        margin-top: 20px;
     }
     &__home {
         display: flex;
@@ -145,6 +137,8 @@
         cursor: pointer;
         margin-top: 21px;
         align-items: center;
+        position: relative;
+        left: -10px;
         transition: $transition;
         & span {
             font-size: 18px;
@@ -163,6 +157,7 @@
     }
     &__addressMap {
         display: flex;
+        margin-top: 33px;
     }
     &__showMap {
         cursor: pointer;
@@ -185,6 +180,7 @@
     &__saveContainer {
         display: flex;
         align-items: center;
+        margin-top: 11px;
         & span {
             margin-left: 28px;
             cursor: pointer;
@@ -265,7 +261,9 @@
         }
     }
 }
-.choiceBtn {
+
+
+.choice{
     width: 450px;
     height: 55px;
     background: #f2f3f4;
@@ -279,7 +277,7 @@
     font-size: 18px;
     line-height: 21px;
 
-    &__courier {
+    &__btn {
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -294,6 +292,7 @@
         }
         &_checked {
             background: $jaundiced;
+            pointer-events: none;
         }
     }
 }

@@ -11473,7 +11473,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["filters"])(); //open map
 
-  Object(_blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__["openMap"])(); //open lists of shops in lk
+  Object(_blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__["openMap"])(); //check method delivery
+
+  Object(_blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__["checkMethodDelivery"])(); //open lists of shops in lk
 
   Object(_blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__["openAddress"])(); //open client
 
@@ -19521,6 +19523,7 @@ function filters() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openMap", function() { return openMap; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkMethodDelivery", function() { return checkMethodDelivery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openAddress", function() { return openAddress; });
 function openMap() {
   if (document.querySelector(".windowsMapWrapper__js")) {
@@ -19544,8 +19547,8 @@ function openMap() {
       mapPopup.classList.remove("hidden");
       scrollOffOn();
       /*       setTimeout(() => {
-              document.addEventListener("click", closePopup);
-            }, 0); */
+        document.addEventListener("click", closePopup);
+      }, 0); */
     });
     mapPopupClose.addEventListener("click", function () {
       mapPopup.classList.add("hidden");
@@ -19553,6 +19556,36 @@ function openMap() {
       document.removeEventListener("click", closePopup);
     });
   }
+}
+function checkMethodDelivery() {
+  var clickCourier = document.querySelector(".choice__courier_js");
+  var clickPickup = document.querySelector(".choice__pickup_js");
+  var blockCourier = document.querySelector(".lkProfile__courier_js");
+  var blockPickup = document.querySelector(".lkProfile__pickup_js");
+  var clickAdd = document.querySelector(".lkProfile__addBtn_js");
+  var blockAdd = document.querySelector(".lkProfile__addAddress_js");
+  var clickDeleteAddress = document.querySelectorAll(".lkProfile__delete_js");
+  clickCourier.addEventListener("click", function () {
+    clickCourier.classList.add("choice__btn_checked");
+    clickPickup.classList.remove("choice__btn_checked");
+    blockCourier.classList.remove("hidden");
+    blockPickup.classList.add("hidden");
+  });
+  clickPickup.addEventListener("click", function () {
+    clickPickup.classList.add("choice__btn_checked");
+    clickCourier.classList.remove("choice__btn_checked");
+    blockCourier.classList.add("hidden");
+    blockPickup.classList.remove("hidden");
+    blockAdd.classList.add("hidden");
+  });
+  clickAdd.addEventListener("click", function () {
+    blockAdd.classList.toggle("hidden");
+  });
+  clickDeleteAddress.forEach(function (item) {
+    item.onclick = function () {
+      item.parentNode.parentNode.removeChild(item.parentNode);
+    };
+  });
 }
 function openAddress() {
   if (document.querySelector(".openAddress__js")) {
