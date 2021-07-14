@@ -24,9 +24,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 			<div class="goods">
 				<section class="product">
 					<div class="product__slider">
-						<div class="zoomer product__image image_js" 
-						style="background-image:url(/dist/img/trash/product.png)">
-							<img src="/dist/img/trash/product.png" />
+						<div class="product__image zoom image_js" id="ex1" style="background-image:url(/dist/img/trash/product.png)">
 						</div>
 						<div class="product__box sliderProduct_js">
 							<div class="product__image product__image_small product_checked imageClick__js" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)"></div>

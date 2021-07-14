@@ -125,13 +125,14 @@ document.addEventListener("DOMContentLoaded", function () {
   //open client
   headerOpenClient();
 
-  //open big image in product
-  openImage();
 
   //check category in product
   checkCategories();
 
   //other clicks in product
   otherClicks();
+  
+  //open big image in product
+  openImage();
 
 });
