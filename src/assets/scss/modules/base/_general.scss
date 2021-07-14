@@ -1110,9 +1110,16 @@ body {
     &:focus {
       border: 1px solid #1e7243;
     }
+    &_lk{
+      width: 450px;
+      height: 50px;
+    }
   }
   &__textarea {
     padding: 15px 18px;
+  }
+  &_lk{
+    margin-bottom: 20px;
   }
 }
 .agreement {

@@ -45,31 +45,31 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<div class="lkProfile__subtitle">Персональные данные</div>
 							</div>
 							<div class="lkProfile__fields">
-								<div class="envelopeInput">
+								<div class="envelopeInput envelopeInput_lk">
 									<div class="envelopeInput__title">Имя</div>
-									<input class="envelopeInput__input" type="text" value="Иван">
+									<input class="envelopeInput__input envelopeInput__input_lk" type="text" value="Иван">
 								</div>
-								<div class="envelopeInput">
+								<div class="envelopeInput envelopeInput_lk">
 									<div class="envelopeInput__title">Телефон</div>
-									<input class="envelopeInput__input" type="number" placeholder="+7 (999) 999-99-99">
+									<input class="envelopeInput__input envelopeInput__input_lk" type="number" placeholder="+7 (999) 999-99-99">
 								</div>
-								<div class="envelopeInput">
+								<div class="envelopeInput envelopeInput_lk">
 									<div class="envelopeInput__title">Фамилия</div>
-									<input class="envelopeInput__input" type="text" value="Иванович">
+									<input class="envelopeInput__input envelopeInput__input_lk" type="text" value="Иванович">
 								</div>
-								<div class="envelopeInput">
+								<div class="envelopeInput envelopeInput_lk">
 									<div class="envelopeInput__title">E-mail</div>
-									<input class="envelopeInput__input" type="text" value="lifegarden@mail.ru" disabled>
+									<input class="envelopeInput__input envelopeInput__input_lk" type="text" value="lifegarden@mail.ru" disabled>
 								</div>
-								<div class="envelopeInput">
+								<div class="envelopeInput envelopeInput_lk">
 									<div class="envelopeInput__title">Отчество</div>
-									<input class="envelopeInput__input" type="text" value="Иванов">
+									<input class="envelopeInput__input envelopeInput__input_lk" type="text" value="Иванов">
 								</div>
 							</div>
 							<div class="lkProfile__birthday">
-								<div class="envelopeInput">
+								<div class="envelopeInput envelopeInput_lk">
 									<div class="envelopeInput__title">Дата рождения</div>
-									<input class="envelopeInput__input" type="text" value="дд.мм.гггг">
+									<input class="envelopeInput__input envelopeInput__input_lk" type="text" value="дд.мм.гггг">
 								</div>
 								<div class="lkProfile__message">
 									<span> Заполните поле даты рождения и получите скидку 5% в честь
@@ -86,36 +86,36 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<div class="lkProfile__subtitle">
 									Адрес доставки
 								</div>
-								<div class="choiceBtn lkProfile__choice">
-									<div class="choiceBtn__courier choiceBtn__courier_checked">Курьером</div>
-									<div class="choiceBtn__courier">Самовывоз</div>
+								<div class="choice lkProfile__choice">
+									<div class="choice__btn choice__courier_js choice__btn_checked">Курьером</div>
+									<div class="choice__btn choice__pickup_js">Самовывоз</div>
 								</div>
-								<div class="lkProfile__address">
+								<div class="lkProfile__address lkProfile__courier_js">
 									<ul>
 										<li class="lkProfile__liAddress">
 											<label><input type="radio" name='address' checked>
 												<span>Омск, ул. Сакена Сейфуллина, 27</span>
 											</label>
-											<div class="lkProfile__delete">Удалить</div>
+											<div class="lkProfile__delete lkProfile__delete_js">Удалить</div>
 										</li>
 										<li class="lkProfile__liAddress">
 											<label><input type="radio" name='address'>
 												<span>Омск, ул. Сакена Сейфуллина, 27</span></label>
-											<div class="lkProfile__delete">Удалить</div>
+											<div class="lkProfile__delete lkProfile__delete_js">Удалить</div>
 										</li>
 									</ul>
-									<div class="lkProfile__add">
+									<div class="lkProfile__add lkProfile__addBtn_js">
 										<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/addAddress.svg'; ?>
 										<span>Добавить адрес</span>
 									</div>
 								</div>
-								<div class="lkProfile__address">
+								<div class="lkProfile__address lkProfile__pickup_js hidden">
 									<div class="lkProfile__addressMap">
-										<div class="envelopeInput lkProfile__input shops__js">
+										<div class="envelopeInput envelopeInput_lk lkProfile__input shops__js">
 											<div class="envelopeInput__title ">
 												<span>Выберите другой магазин самовывоза</span>
 											</div>
-											<input class="envelopeInput__input openAddress__js" type="text" placeholder="ул. Маяковского, 20">
+											<input class="envelopeInput__input envelopeInput__input_lk openAddress__js" type="text" value="ул. Маяковского, 20" readonly="readonly">
 											<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowColor.svg'; ?>
 											<div class="lkProfile__shops">
 												<ul>
@@ -132,24 +132,20 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 											<span>Показать на карте</span>
 										</div>
 									</div>
-									<div class="lkProfile__saveContainer">
-										<div class="btnGray lkProfile__btn lkProfile__btn_margin">Сохранить изменения</div>
-										<span>Отменить</span>
-									</div>
 								</div>
-								<div class="lkProfile__address ">
+								<div class="lkProfile__address lkProfile__addAddress_js hidden">
 									<div class="lkProfile__home">
-										<div class="envelopeInput">
-											<div class="envelopeInput__title">Улица</div>
-											<input class="envelopeInput__input" type="text" placeholder="Введите улицу">
+										<div class="envelopeInput envelopeInput_lk">
+											<div class="envelopeInput__title">Улица <span style='color:red'>*</span> </div>
+											<input class="envelopeInput__input envelopeInput__input_lk" type="text" placeholder="Введите улицу">
 										</div>
-										<div class="envelopeInput">
-											<div class="envelopeInput__title">Дом</div>
-											<input class="envelopeInput__input" type="text" placeholder="Введите номер дома">
+										<div class="envelopeInput envelopeInput_lk">
+											<div class="envelopeInput__title">Дом <span style='color:red'>*</span></div>
+											<input class="envelopeInput__input envelopeInput__input_lk" type="text" placeholder="Введите номер дома">
 										</div>
-										<div class="envelopeInput">
+										<div class="envelopeInput envelopeInput_lk">
 											<div class="envelopeInput__title">Квартира/офис</div>
-											<input class="envelopeInput__input" type="text" placeholder="Введите номер квартиры или офиса">
+											<input class="envelopeInput__input envelopeInput__input_lk" type="text" placeholder="Введите номер квартиры или офиса">
 										</div>
 									</div>
 
@@ -166,13 +162,13 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									Изменить пароль
 								</div>
 								<div class="lkProfile__container">
-									<div class="envelopeInput">
+									<div class="envelopeInput envelopeInput_lk">
 										<div class="envelopeInput__title">Новый пароль</div>
-										<input class="envelopeInput__input" type="password" value="">
+										<input class="envelopeInput__input envelopeInput__input_lk" type="password" value="">
 									</div>
-									<div class="envelopeInput">
+									<div class="envelopeInput envelopeInput_lk">
 										<div class="envelopeInput__title">Подтвердите пароль</div>
-										<input class="envelopeInput__input" type="password" value="">
+										<input class="envelopeInput__input envelopeInput__input_lk" type="password" value="">
 									</div>
 								</div>
 							</div>
