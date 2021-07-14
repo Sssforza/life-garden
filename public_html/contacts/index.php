@@ -72,7 +72,7 @@
 						<div class="contactsForm__content">
 							<div class="contactsForm__fields">
 								<div class="envelopeInput">
-									<div class="envelopeInput__title">Имя</div>
+									<div class="envelopeInput__title">Имя<span class="envelopeInput__surely">*</span></div>
 									<input class="envelopeInput__input" type="text" placeholder="Введите ваше имя">
 								</div>
 								<div class="envelopeInput">
@@ -84,11 +84,11 @@
 									<input class="envelopeInput__input" type="text" placeholder="Введите вашу фамилию">
 								</div>
 								<div class="envelopeInput">
-									<div class="envelopeInput__title">E-mail</div>
+									<div class="envelopeInput__title">E-mail<span class="envelopeInput__surely">*</span></div>
 									<input class="envelopeInput__input" type="text" placeholder="Введите ваш e-mail">
 								</div>
 								<div class="envelopeInput">
-									<div class="envelopeInput__title">Сообщение</div>
+									<div class="envelopeInput__title">Сообщение<span class="envelopeInput__surely">*</span></div>
 									<textarea class="envelopeInput__textarea" placeholder="Введите ваше сообщение"></textarea>
 								</div>
 							</div>
@@ -106,63 +106,61 @@
 					</form>
 				</section>
 				<section class="map pageContacts__map contactsMap">
-					<div class="container">
-						<div class="contactsMap__title">Магазины</div>
-						<div class="map__content">
-							<aside class="map__aside scrollbar-inner">
-								<div class="map__item mapItem_js" data-coord1="54.970231" data-coord2="73.392044" data-id="0">
-									<div class="map__unit address">ул. Маяковского, 20</div>
-									<div class="map__unit tel">
-										<a class="map__tel" href="tel:+79083104807">+7 (908) 310-48-07</a>
-									</div>
-									<div class="map__schedule">
-										<span>График работы:</span>
-										Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
-									</div>
+					<div class="contactsMap__title">Магазины</div>
+					<div class="map__content">
+						<aside class="map__aside scrollbar-inner">
+							<div class="map__item mapItem_js" data-coord1="54.970231" data-coord2="73.392044" data-id="0">
+								<div class="map__unit address">ул. Маяковского, 20</div>
+								<div class="map__unit tel">
+									<a class="map__tel" href="tel:+79083104807">+7 (908) 310-48-07</a>
 								</div>
-								<div class="map__item mapItem_js" data-coord1="54.973993" data-coord2="73.273727" data-id="1">
-									<div class="map__unit address">ул. Сакена Сейфуллина, 27</div>
-									<div class="map__unit tel">
-										<a class="map__tel" href="tel:+79083104807">+7 (908) 310-94-77</a>
-									</div>
-									<div class="map__schedule">
-										<span>График работы:</span>
-										Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
-									</div>
+								<div class="map__schedule">
+									<span>График работы:</span>
+									Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
 								</div>
-								<div class="map__item mapItem_js" data-coord1="55.029399" data-coord2="73.273754" data-id="3">
-									<div class="map__unit address">ул. пр. Мира, 64</div>
-									<div class="map__unit tel">
-										<a class="map__tel" href="tel:+79083104807">+7 (908) 310-35-69</a>
-									</div>
-									<div class="map__schedule">
-										<span>График работы:</span>
-										Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
-									</div>
+							</div>
+							<div class="map__item mapItem_js" data-coord1="54.973993" data-coord2="73.273727" data-id="1">
+								<div class="map__unit address">ул. Сакена Сейфуллина, 27</div>
+								<div class="map__unit tel">
+									<a class="map__tel" href="tel:+79083104807">+7 (908) 310-94-77</a>
 								</div>
-								<div class="map__item mapItem_js" data-coord1="54.985772" data-coord2="73.405312" data-id="4">
-									<div class="map__unit address">ул. ​10 лет Октября, 113</div>
-									<div class="map__unit tel">
-										<a class="map__tel" href="tel:+79083104807">+7 (908) 310-35-69</a>
-									</div>
-									<div class="map__schedule">
-										<span>График работы:</span>
-										Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
-									</div>
+								<div class="map__schedule">
+									<span>График работы:</span>
+									Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
 								</div>
-								<div class="map__item mapItem_js" data-coord1="54.944228" data-coord2="73.385621" data-id="5">
-									<div class="map__unit address">​проспект Карла Маркса, 83</div>
-									<div class="map__unit tel">
-										<a class="map__tel" href="tel:+79083104807">+7 (908) 310-92-55</a>
-									</div>
-									<div class="map__schedule">
-										<span>График работы:</span>
-										Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
-									</div>
+							</div>
+							<div class="map__item mapItem_js" data-coord1="55.029399" data-coord2="73.273754" data-id="3">
+								<div class="map__unit address">ул. пр. Мира, 64</div>
+								<div class="map__unit tel">
+									<a class="map__tel" href="tel:+79083104807">+7 (908) 310-35-69</a>
 								</div>
-							</aside>
-							<div id="map"></div>
-						</div>
+								<div class="map__schedule">
+									<span>График работы:</span>
+									Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
+								</div>
+							</div>
+							<div class="map__item mapItem_js" data-coord1="54.985772" data-coord2="73.405312" data-id="4">
+								<div class="map__unit address">ул. ​10 лет Октября, 113</div>
+								<div class="map__unit tel">
+									<a class="map__tel" href="tel:+79083104807">+7 (908) 310-35-69</a>
+								</div>
+								<div class="map__schedule">
+									<span>График работы:</span>
+									Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
+								</div>
+							</div>
+							<div class="map__item mapItem_js" data-coord1="54.944228" data-coord2="73.385621" data-id="5">
+								<div class="map__unit address">​проспект Карла Маркса, 83</div>
+								<div class="map__unit tel">
+									<a class="map__tel" href="tel:+79083104807">+7 (908) 310-92-55</a>
+								</div>
+								<div class="map__schedule">
+									<span>График работы:</span>
+									Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
+								</div>
+							</div>
+						</aside>
+						<div id="map"></div>
 					</div>
 				</section>
 			</div>

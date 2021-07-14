@@ -1114,6 +1114,9 @@ body {
   &__textarea {
     padding: 15px 18px;
   }
+  &__surely {
+    color:$error;
+  }
 }
 .agreement {
   display: flex;
