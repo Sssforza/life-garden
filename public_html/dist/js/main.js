@@ -11486,7 +11486,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__["checkMethodDelivery"])(); //open lists of shops in lk
 
-  Object(_blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__["openAddress"])(); //open client
+  Object(_blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__["openAddress"])(); //close message birthday in lk
+
+  Object(_blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__["dateBirthday"])(); //open client
 
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerOpenClient"])(); //check category in product
 
@@ -19043,6 +19045,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openMap", function() { return openMap; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkMethodDelivery", function() { return checkMethodDelivery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openAddress", function() { return openAddress; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dateBirthday", function() { return dateBirthday; });
 function openMap() {
   if (document.querySelector(".windowsMapWrapper__js")) {
     var closePopup = function closePopup(e) {
@@ -19061,6 +19064,7 @@ function openMap() {
     var mapPopupWindow = document.querySelector(".windowsMapPopup__js");
     var mapPopupClose = document.querySelector(".windowsMapClose__js");
     var mapBtn = document.querySelector(".showMap__js");
+    var mapBtnChoice = document.querySelectorAll(".map__btn_js");
     mapBtn.addEventListener("click", function () {
       mapPopup.classList.remove("hidden");
       scrollOffOn();
@@ -19073,45 +19077,88 @@ function openMap() {
       scrollOffOn();
       document.removeEventListener("click", closePopup);
     });
+    mapBtnChoice.forEach(function (item) {
+      item.onclick = function () {
+        mapPopup.classList.add("hidden");
+        scrollOffOn();
+        document.removeEventListener("click", closePopup);
+      };
+    });
   }
 }
 function checkMethodDelivery() {
-  var clickCourier = document.querySelector(".choice__courier_js");
-  var clickPickup = document.querySelector(".choice__pickup_js");
-  var blockCourier = document.querySelector(".lkProfile__courier_js");
-  var blockPickup = document.querySelector(".lkProfile__pickup_js");
-  var clickAdd = document.querySelector(".lkProfile__addBtn_js");
-  var blockAdd = document.querySelector(".lkProfile__addAddress_js");
-  var clickDeleteAddress = document.querySelectorAll(".lkProfile__delete_js");
-  clickCourier.addEventListener("click", function () {
-    clickCourier.classList.add("choice__btn_checked");
-    clickPickup.classList.remove("choice__btn_checked");
-    blockCourier.classList.remove("hidden");
-    blockPickup.classList.add("hidden");
-  });
-  clickPickup.addEventListener("click", function () {
-    clickPickup.classList.add("choice__btn_checked");
-    clickCourier.classList.remove("choice__btn_checked");
-    blockCourier.classList.add("hidden");
-    blockPickup.classList.remove("hidden");
-    blockAdd.classList.add("hidden");
-  });
-  clickAdd.addEventListener("click", function () {
-    blockAdd.classList.toggle("hidden");
-  });
-  clickDeleteAddress.forEach(function (item) {
-    item.onclick = function () {
-      item.parentNode.parentNode.removeChild(item.parentNode);
+  if (document.querySelector(".choice__courier_js")) {
+    var clickCourier = document.querySelector(".choice__courier_js");
+    var clickPickup = document.querySelector(".choice__pickup_js");
+    var blockCourier = document.querySelector(".lkProfile__courier_js");
+    var blockPickup = document.querySelector(".lkProfile__pickup_js");
+    var clickAdd = document.querySelector(".lkProfile__addBtn_js");
+    var blockAdd = document.querySelector(".lkProfile__addAddress_js");
+    var cancelAdd = document.querySelector(".lkProfile__cancel_js");
+    var clickDeleteAddress = document.querySelectorAll(".lkProfile__delete_js");
+    clickCourier.addEventListener("click", function () {
+      clickCourier.classList.add("choice__btn_checked");
+      clickPickup.classList.remove("choice__btn_checked");
+      blockCourier.classList.remove("hidden");
+      blockPickup.classList.add("hidden");
+    });
+    clickPickup.addEventListener("click", function () {
+      clickPickup.classList.add("choice__btn_checked");
+      clickCourier.classList.remove("choice__btn_checked");
+      blockCourier.classList.add("hidden");
+      blockPickup.classList.remove("hidden");
+      blockAdd.classList.add("hidden");
+    });
+    clickAdd.addEventListener("click", function () {
+      blockAdd.classList.remove("hidden");
+      blockCourier.classList.add("hidden");
+    });
+
+    cancelAdd.onclick = function () {
+      blockAdd.classList.add("hidden");
+      blockCourier.classList.remove("hidden");
     };
-  });
+
+    clickDeleteAddress.forEach(function (item) {
+      item.onclick = function () {
+        item.parentNode.parentNode.removeChild(item.parentNode);
+      };
+    });
+  }
 }
 function openAddress() {
   if (document.querySelector(".openAddress__js")) {
+    var closePopup = function closePopup(e) {
+      if (addressPopup && e.target !== addressPopup && !addressPopup.contains(e.target)) {
+        addressPopup.classList.remove("lkProfile__input_open");
+        document.removeEventListener("click", closePopup);
+      }
+    };
+
     var addressBtn = document.querySelector(".openAddress__js");
     var addressPopup = document.querySelector(".shops__js");
+    var addressShop = document.querySelectorAll(".lkProfile__shop_js");
+    var addressInput = document.querySelector(".openAddressInput__js");
     addressBtn.addEventListener("click", function () {
       addressPopup.classList.toggle("lkProfile__input_open");
+      document.onclick = closePopup;
     });
+    addressShop.forEach(function (item) {
+      item.onclick = function () {
+        addressInput.value = item.textContent;
+        addressPopup.classList.remove("lkProfile__input_open");
+      };
+    });
+  }
+}
+function dateBirthday() {
+  if (document.querySelector(".lkProfile__close_js")) {
+    var closeBirthday = document.querySelector(".lkProfile__close_js");
+    var messageBirthday = document.querySelector(".lkProfile__message_js");
+
+    closeBirthday.onclick = function () {
+      messageBirthday.classList.add("hidden");
+    };
   }
 }
 
@@ -19415,11 +19462,117 @@ function mapWindow() {
       }, {
         searchControlProvider: "yandex#search"
       }),
-          objectManager = new ymaps.ObjectManager({
+          MyBalloonLayout = ymaps.templateLayoutFactory.createClass('<div class="popover top">' + "<div class=\"close\"><svg width=\"19\" height=\"19\" viewBox=\"0 0 19 19\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <path d=\"M18.0607 3.06066C18.6464 2.47487 18.6464 1.52513 18.0607 0.93934C17.4749 0.353553 16.5251 0.353553 15.9393 0.93934L18.0607 3.06066ZM0.93934 15.9393C0.353553 16.5251 0.353553 17.4749 0.93934 18.0607C1.52513 18.6464 2.47487 18.6464 3.06066 18.0607L0.93934 15.9393ZM15.9393 18.0607C16.5251 18.6464 17.4749 18.6464 18.0607 18.0607C18.6464 17.4749 18.6464 16.5251 18.0607 15.9393L15.9393 18.0607ZM3.06066 0.93934C2.47487 0.353553 1.52513 0.353553 0.93934 0.93934C0.353553 1.52513 0.353553 2.47487 0.93934 3.06066L3.06066 0.93934ZM15.9393 0.93934L0.93934 15.9393L3.06066 18.0607L18.0607 3.06066L15.9393 0.93934ZM18.0607 15.9393L3.06066 0.93934L0.93934 3.06066L15.9393 18.0607L18.0607 15.9393Z\" fill=\"#98A6B4\"/>\n            </svg></div>" + '<div class="arrow"></div>' + '<div class="popover-inner">' + "$[[options.contentLayout observeSize minWidth=235 maxWidth=255 maxHeight=350]]" + "</div>" + "<div class=\"map__btn map__btn_show btnWhite mapBtn_js\">\u0412\u044B\u0431\u0440\u0430\u0442\u044C</div>" + "</div>", {
+        /**
+         * Строит экземпляр макета на основе шаблона и добавляет его в родительский HTML-элемент.
+         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#build
+         * @function
+         * @name build
+         */
+        build: function build() {
+          this.constructor.superclass.build.call(this);
+          this._$element = $(".popover", this.getParentElement());
+          this.applyElementOffset();
+
+          this._$element.find(".close").on("click", $.proxy(this.onCloseClick, this));
+        },
+
+        /**
+         * Удаляет содержимое макета из DOM.
+         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#clear
+         * @function
+         * @name clear
+         */
+        clear: function clear() {
+          this._$element.find(".close").off("click");
+
+          this.constructor.superclass.clear.call(this);
+        },
+
+        /**
+         * Метод будет вызван системой шаблонов АПИ при изменении размеров вложенного макета.
+         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
+         * @function
+         * @name onSublayoutSizeChange
+         */
+        onSublayoutSizeChange: function onSublayoutSizeChange() {
+          MyBalloonLayout.superclass.onSublayoutSizeChange.apply(this, arguments);
+
+          if (!this._isElement(this._$element)) {
+            return;
+          }
+
+          this.applyElementOffset();
+          this.events.fire("shapechange");
+        },
+
+        /**
+         * Сдвигаем балун, чтобы "хвостик" указывал на точку привязки.
+         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
+         * @function
+         * @name applyElementOffset
+         */
+        applyElementOffset: function applyElementOffset() {
+          this._$element.css({
+            left: -(this._$element[0].offsetWidth / 2),
+            top: -(this._$element[0].offsetHeight + this._$element.find(".arrow")[0].offsetHeight)
+          });
+        },
+
+        /**
+         * Закрывает балун при клике на крестик, кидая событие "userclose" на макете.
+         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
+         * @function
+         * @name onCloseClick
+         */
+        onCloseClick: function onCloseClick(e) {
+          e.preventDefault();
+          this.events.fire("userclose");
+        },
+
+        /**
+         * Используется для автопозиционирования (balloonAutoPan).
+         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/ILayout.xml#getClientBounds
+         * @function
+         * @name getClientBounds
+         * @returns {Number[][]} Координаты левого верхнего и правого нижнего углов шаблона относительно точки привязки.
+         */
+        getShape: function getShape() {
+          if (!this._isElement(this._$element)) {
+            return MyBalloonLayout.superclass.getShape.call(this);
+          }
+
+          var position = this._$element.position();
+
+          return new ymaps.shape.Rectangle(new ymaps.geometry.pixel.Rectangle([[position.left, position.top], [position.left + this._$element[0].offsetWidth, position.top + this._$element[0].offsetHeight + this._$element.find(".arrow")[0].offsetHeight]]));
+        },
+
+        /**
+         * Проверяем наличие элемента (в ИЕ и Опере его еще может не быть).
+         * @function
+         * @private
+         * @name _isElement
+         * @param {jQuery} [element] Элемент.
+         * @returns {Boolean} Флаг наличия.
+         */
+        _isElement: function _isElement(element) {
+          return element && element[0] && element.find(".arrow")[0];
+        }
+      }),
+          MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass("<div class='map__baloonTitle'> $[properties.balloonHeader] </div>" + "<div class='map__baloonTel'>  $[properties.balloonBody] </div>" + "<div class='map__baloonTel'>  $[properties.balloonFooter] </div>");
+
+      var click = function click() {
+        $(".mapBtn_js").on("click", function () {
+          $(".windowsMapWrapper__js").addClass("hidden");
+          objectManager.objects.balloon.close();
+          console.log(objectManager.objects);
+        });
+      };
+
+      var objectManager = new ymaps.ObjectManager({
         clusterize: true,
         gridSize: 32,
-        clusterDisableClickZoom: true,
-        hideIconOnBalloonOpen: true
+        clusterDisableClickZoom: true
       });
       objectManager.clusters.options.set("preset", "islands#greenClusterIcons");
       var objects = [];
@@ -19462,10 +19615,14 @@ function mapWindow() {
             type: "Point",
             coordinates: centerGroups
           },
+          options: {
+            balloonLayout: MyBalloonLayout,
+            balloonContentLayout: MyBalloonContentLayout
+          },
           properties: {
-            balloonContentHeader: "<div class='map__baloonTitle'> ".concat(address[i].address, " </div>"),
-            balloonContentBody: "<div class='map__baloonTel'> ".concat(address[i].tel, " <br> ").concat(address[i].clock, " </div>"),
-            balloonContentFooter: "<div class=\"map__btn btnWhite mapBtn_js\">\u0412\u044B\u0431\u0440\u0430\u0442\u044C</div>"
+            balloonHeader: address[i].address,
+            balloonBody: address[i].tel,
+            balloonFooter: address[i].clock
           }
         });
       }
@@ -19473,6 +19630,9 @@ function mapWindow() {
       objectManager.add(objects);
       myMap.geoObjects.add(objectManager);
       myMap.options.set("dragCursor", "arrow");
+      objectManager.objects.events.add("balloonopen", function () {
+        click();
+      });
     };
 
     var myMap;
@@ -19488,10 +19648,6 @@ function mapWindow() {
     var center = [54.99244, 73.36859]; //омск
 
     var zoom = 12;
-    $(".mapBtn_js").on("click", function () {
-      console.log("fddfa");
-      ymaps.ready(init);
-    });
     $(".mapItem_js").on("click", function () {
       $(".map__aside .mapItem_js").not($(this)).removeClass("show");
 
@@ -19511,6 +19667,10 @@ function mapWindow() {
         ymaps.ready(init);
       } else {
         $(this).addClass("show");
+        groups = [{
+          id: $(this).data("id"),
+          center: [$(this).data("coord1"), $(this).data("coord2")]
+        }];
         center = [$(this).data("coord1"), $(this).data("coord2")];
         zoom = 15;
         var myMap;

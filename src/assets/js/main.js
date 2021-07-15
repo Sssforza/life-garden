@@ -33,7 +33,7 @@ import {
 } from "./blocks/catalog.js";
 
 //📁 /assets/js/blocks  lkProfile.js
-import { openMap, openAddress, checkMethodDelivery } from "./blocks/lkProfile.js";
+import { openMap, openAddress, checkMethodDelivery, dateBirthday } from "./blocks/lkProfile.js";
 
 //📁 /assets/js/blocks  sliders.js
 import {
@@ -125,6 +125,9 @@ document.addEventListener("DOMContentLoaded", function () {
   //open lists of shops in lk
   openAddress();
 
+  //close message birthday in lk
+  dateBirthday();
+
   //open client
   headerOpenClient();
 
@@ -137,5 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
   
   //open big image in product
   openImage();
+
 
 });

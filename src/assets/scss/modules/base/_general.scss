@@ -694,6 +694,9 @@ body {
       size: 18px;
     }
     line-height: 20px;
+    &_orders {
+      font-size: 16px;
+    }
   }
   &__article {
     font-size: 14px;
@@ -710,6 +713,9 @@ body {
   &__price {
     margin-left: 73px;
     width: 100px;
+    &_width {
+      width: auto;
+    }
   }
   &__text {
     font-size: 14px;
@@ -724,8 +730,20 @@ body {
       weight: 500;
     }
     line-height: 24px;
-    &_margin {
+    &_orders {
       margin: 0;
+      font-size: 18px;
+    }
+  }
+  &__ruble {
+    font: {
+      family: Roboto;
+      size: 22px;
+      weight: 500;
+      color: $textColor;
+    }
+    &_orders {
+      font-size: 16px;
     }
   }
   &__icons {
@@ -1110,7 +1128,7 @@ body {
     &:focus {
       border: 1px solid #1e7243;
     }
-    &_lk{
+    &_lk {
       width: 450px;
       height: 50px;
     }
@@ -1118,7 +1136,7 @@ body {
   &__textarea {
     padding: 15px 18px;
   }
-  &_lk{
+  &_lk {
     margin-bottom: 20px;
   }
 }
@@ -1178,6 +1196,7 @@ body {
     line-height: 24px;
   }
   &__baloonTel {
+    margin-top: 6px;
     font-family: FiraSans;
     font-size: 14px;
     line-height: 24px;
@@ -1220,9 +1239,11 @@ body {
     &.show {
       border: 1px solid #9bb5a8;
       .map__btn {
-        color: $white;
-        background: #1b643b;
+        display: flex;
       }
+    }
+    &_noneCursor {
+      cursor: auto;
     }
   }
   &__unit {
@@ -1271,9 +1292,13 @@ body {
     }
   }
   &__btn {
+    display: none;
     width: 120px;
     height: 40px;
     margin-top: 15px;
+    &_show {
+      display: flex;
+    }
   }
   #map {
     width: 848.82px;
@@ -1288,3 +1313,4 @@ body {
     height: 585px !important;
   }
 }
+

@@ -71,12 +71,11 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<div class="envelopeInput__title">Дата рождения</div>
 									<input class="envelopeInput__input envelopeInput__input_lk" type="text" value="дд.мм.гггг">
 								</div>
-								<div class="lkProfile__message">
+								<div class="lkProfile__message lkProfile__message_js">
 									<span> Заполните поле даты рождения и получите скидку 5% в честь
 										вашего дня рождения. Скидка действует 3 дня до, 3 дня после
 										и в день рождения.</span>
-
-									<div class="lkProfile__close">
+									<div class="lkProfile__close lkProfile__close_js">
 										<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/closeProfile.svg'; ?>
 									</div>
 								</div>
@@ -115,15 +114,17 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 											<div class="envelopeInput__title ">
 												<span>Выберите другой магазин самовывоза</span>
 											</div>
-											<input class="envelopeInput__input envelopeInput__input_lk openAddress__js" type="text" value="ул. Маяковского, 20" readonly="readonly">
-											<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowColor.svg'; ?>
+											<div class="openAddress__js">
+												<input class="envelopeInput__input envelopeInput__input_lk openAddressInput__js" type="text" value="ул. Маяковского, 20" readonly="readonly">
+												<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowColor.svg'; ?>
+											</div>
 											<div class="lkProfile__shops">
 												<ul>
-													<li class="lkProfile__shopsLi">ул. Маяковского, 20</li>
-													<li class="lkProfile__shopsLi">ул. Сакена Сейфуллина, 27</li>
-													<li class="lkProfile__shopsLi">пр. Мира, 64</li>
-													<li class="lkProfile__shopsLi">ул. 10 лет Октября, 113</li>
-													<li class="lkProfile__shopsLi">пр. Маркса, 83</li>
+													<li class="lkProfile__shopsLi lkProfile__shop_js">ул. Маяковского, 20</li>
+													<li class="lkProfile__shopsLi lkProfile__shop_js">ул. Сакена Сейфуллина, 27</li>
+													<li class="lkProfile__shopsLi lkProfile__shop_js">пр. Мира, 64</li>
+													<li class="lkProfile__shopsLi lkProfile__shop_js">ул. 10 лет Октября, 113</li>
+													<li class="lkProfile__shopsLi lkProfile__shop_js">пр. Маркса, 83</li>
 												</ul>
 											</div>
 										</div>
@@ -151,7 +152,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 
 									<div class="lkProfile__saveContainer">
 										<div class="btnGray lkProfile__btn lkProfile__btn_margin">Сохранить изменения</div>
-										<span>Отменить</span>
+										<span class="lkProfile__cancel_js">Отменить</span>
 									</div>
 								</div>
 
@@ -177,7 +178,6 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 					</form>
 				</section>
 			</div>
-
 		</section>
 	</div>
 	<div class="windowsMessage__wrap windowsMapWrapper__js hidden">
@@ -198,7 +198,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<span>График работы:</span>
 								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
 							</div>
-							<div class="map__btn btnWhite">
+							<div class="map__btn btnWhite map__btn_js">
 								Выбрать
 							</div>
 						</div>
@@ -211,7 +211,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<span>График работы:</span>
 								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
 							</div>
-							<div class="map__btn btnWhite">
+							<div class="map__btn btnWhite map__btn_js">
 								Выбрать
 							</div>
 						</div>
@@ -224,7 +224,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<span>График работы:</span>
 								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
 							</div>
-							<div class="map__btn btnWhite">
+							<div class="map__btn btnWhite map__btn_js">
 								Выбрать
 							</div>
 						</div>
@@ -237,7 +237,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<span>График работы:</span>
 								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
 							</div>
-							<div class="map__btn btnWhite">
+							<div class="map__btn btnWhite map__btn_js">
 								Выбрать
 							</div>
 						</div>
@@ -250,7 +250,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<span>График работы:</span>
 								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
 							</div>
-							<div class="map__btn btnWhite">
+							<div class="map__btn btnWhite map__btn_js">
 								Выбрать
 							</div>
 						</div>
