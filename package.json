@@ -62,7 +62,8 @@
         "yargs": "^15.0.2"
     },
     "dependencies": {
-        "blowup": "^1.0.2"
+        "blowup": "^1.0.2",
+        "sharp": "^0.28.3"
     },
     "version": "0.0.0"
 }

@@ -1136,7 +1136,10 @@ body {
   &__textarea {
     padding: 15px 18px;
   }
-  &_lk {
+  &__surely {
+    color:$error;
+  }
+  &_lk{
     margin-bottom: 20px;
   }
 }
