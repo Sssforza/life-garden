@@ -51,7 +51,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								</div>
 								<div class="envelopeInput envelopeInput_lk">
 									<div class="envelopeInput__title">Телефон</div>
-									<input class="envelopeInput__input envelopeInput__input_lk" type="number" placeholder="+7 (999) 999-99-99">
+									<input class="envelopeInput__input envelopeInput__input_lk" type="number" placeholder="+7 (___) ___-__-__">
 								</div>
 								<div class="envelopeInput envelopeInput_lk">
 									<div class="envelopeInput__title">Фамилия</div>
@@ -69,7 +69,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="lkProfile__birthday">
 								<div class="envelopeInput envelopeInput_lk">
 									<div class="envelopeInput__title">Дата рождения</div>
-									<input class="envelopeInput__input envelopeInput__input_lk" type="text" value="дд.мм.гггг">
+									<input class="envelopeInput__input envelopeInput__input_lk" type="number" placeholder="дд.мм.гг" value="дд.мм.гггг">
 								</div>
 								<div class="lkProfile__message lkProfile__message_js">
 									<span> Заполните поле даты рождения и получите скидку 5% в честь

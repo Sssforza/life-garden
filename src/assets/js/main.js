@@ -46,7 +46,7 @@ import {
 import { specialSampleTabs } from "./blocks/specialSample.js";
 
 //📁 /assets/js/blocks  product.js
-import { openImage, checkCategories, otherClicks} from "./blocks/product.js";
+import { openImage, checkCategories, otherClicks} from "./blocks/detail.js";
 
 //📁 /assets/js/blocks  specialSample.js
 import { mainGardenShow } from "./blocks/showFull.js";

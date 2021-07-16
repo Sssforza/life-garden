@@ -1,10 +1,10 @@
 @import "../modules/utilities/_variables.scss";
 
-.product {
+.productCard {
   display: flex;
   &_checked {
     pointer-events: none;
-    border: 2px solid $green !important;
+    border: 3px solid $green !important;
   }
   &__slider {
   }
@@ -57,12 +57,16 @@
     height: 600px;
     border-radius: 30px;
     overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     &_small {
       cursor: pointer;
       max-width: 106px;
       height: 106px;
       border-radius: 20px;
       margin-left: 5px;
+      border: 3px solid $white;
     }
   }
   &__box {
@@ -252,7 +256,7 @@
   }
 }
 
-.info {
+.productTabs {
   margin-top: 40px;
   &__head {
     display: flex;

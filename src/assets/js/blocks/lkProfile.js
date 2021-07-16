@@ -34,7 +34,8 @@ export function openMap() {
       document.removeEventListener("click", closePopup);
     });
     mapBtnChoice.forEach((item) => {
-      item.onclick = () => {
+      item.onclick = (event) => {
+        event.stopPropagation();
         mapPopup.classList.add("hidden");
         scrollOffOn();
         document.removeEventListener("click", closePopup);

@@ -227,8 +227,8 @@
                         </div>
                         <div class="basketCard__price">
                           <div class="basketCard__text">Цена</div>
-                          <span class="basketCard__priceValue">11223222</span>
-                          <span class="basketCard__priceValue">₽</span>
+                          <span class="basketCard__priceValue">11 223 222</span>
+                          <span class="basketCard__priceValue basketCard__ruble ">₽</span>
                         </div>
                         <div class="basketCard__icons">
                           <div class="basketCard__iconLike">
@@ -271,8 +271,8 @@
                         </div>
                         <div class="basketCard__price">
                           <div class="basketCard__text">Цена</div>
-                          <span class="basketCard__priceValue">1122</span>
-                          <span class="basketCard__priceValue">₽</span>
+                          <span class="basketCard__priceValue">1 122</span>
+                          <span class="basketCard__priceValue basketCard__ruble ">₽</span>
                         </div>
                         <div class="basketCard__icons">
                           <div class="basketCard__iconLike">
@@ -315,8 +315,8 @@
                         </div>
                         <div class="basketCard__price">
                           <div class="basketCard__text">Цена</div>
-                          <span class="basketCard__priceValue">1122</span>
-                          <span class="basketCard__priceValue">₽</span>
+                          <span class="basketCard__priceValue">1 122</span>
+                          <span class="basketCard__priceValue basketCard__ruble ">₽</span>
                         </div>
                         <div class="basketCard__icons">
                           <div class="basketCard__iconLike">
@@ -331,9 +331,9 @@
                   </div>
                   <div class="headerClick__price">
                     <div class="headerClick__all">Всего</div>
-                    <div class="headerClick__sum">53232380 ₽</div>
+                    <div class="headerClick__sum">53 232 380<span class="basketCard__ruble">₽</span></div>
                   </div>
-                  <div class="btn headerClick__btn">Оформить предзаказ</div>
+                  <a class="btn headerClick__btn" href="#">Оформить предзаказ</a>
                 </div>
               </div>
 
@@ -387,8 +387,8 @@
                         </div>
                         <div class="basketCard__price">
                           <div class="basketCard__text">Цена</div>
-                          <span class="basketCard__priceValue">11223222</span>
-                          <span class="basketCard__priceValue">₽</span>
+                          <span class="basketCard__priceValue">11 223 222</span>
+                          <span class="basketCard__priceValue basketCard__ruble ">₽</span>
                         </div>
                         <div class="basketCard__icons">
                           <div class="basketCard__iconLike">
@@ -431,8 +431,8 @@
                         </div>
                         <div class="basketCard__price">
                           <div class="basketCard__text">Цена</div>
-                          <span class="basketCard__priceValue">1122</span>
-                          <span class="basketCard__priceValue">₽</span>
+                          <span class="basketCard__priceValue">1 122</span>
+                          <span class="basketCard__priceValue basketCard__ruble ">₽</span>
                         </div>
                         <div class="basketCard__icons">
                           <div class="basketCard__iconLike">
@@ -475,8 +475,8 @@
                         </div>
                         <div class="basketCard__price">
                           <div class="basketCard__text">Цена</div>
-                          <span class="basketCard__priceValue">1122</span>
-                          <span class="basketCard__priceValue">₽</span>
+                          <span class="basketCard__priceValue">1 122</span>
+                          <span class="basketCard__priceValue basketCard__ruble ">₽</span>
                         </div>
                         <div class="basketCard__icons">
                           <div class="basketCard__iconLike">
@@ -491,9 +491,9 @@
                   </div>
                   <div class="headerClick__price">
                     <div class="headerClick__all">Всего</div>
-                    <div class="headerClick__sum">53232380 ₽</div>
+                    <div class="headerClick__sum">53 232 380 <span class="basketCard__ruble">₽</span> </div>
                   </div>
-                  <div class="btn headerClick__btn">Перейти в корзину</div>
+                  <a class="btn headerClick__btn" href="/basket/">Перейти в корзину</a>
                 </div>
               </div>
             </div>

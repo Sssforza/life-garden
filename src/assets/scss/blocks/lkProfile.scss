@@ -297,6 +297,7 @@
     background: #f2f3f4;
     border-radius: 50px;
     transition: $transition;
+    margin:0 3px;
     &:hover {
       background: $jaundiced;
     }
@@ -307,66 +308,3 @@
   }
 }
 
-.popover {
-  width: 325px;
-  height: 215px;
-  background: #ffffff;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  padding: 30px 22px 47px 27px;
-  position: relative;
-  left: -119.5px;
-  top: -84px;
-}
-.popover .close {
-  position: absolute;
-  right: 23px;
-  top: 24px;
-  cursor: pointer;
-  &svg{
-      path{
-          transition: $transition;
-          display: block;
-      }
-  }
-  &:hover{
-      & svg{
-          path{
-              fill: $textColor;
-          }
-      }
-  }
-}
-.popover.top {
-    margin-top: -10px;
-}
-.popover.top .arrow {
-  bottom: -11px;
-  left: 50%;
-  margin-left: -11px;
-  border-top-color: #999;
-  border-top-color: rgba(0, 0, 0, 0.25);
-  border-bottom-width: 0;
-}
-.popover .arrow {
-  border-width: 11px;
-}
-.popover .arrow,
-.popover .arrow:after {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-}
-.popover.top .arrow:after {
-  bottom: 1px;
-  margin-left: -10px;
-  border-top-color: #fff;
-  border-bottom-width: 0;
-}
-.popover .arrow:after {
-  border-width: 10px;
-  content: "";
-}

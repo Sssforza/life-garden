@@ -25,6 +25,10 @@
     size: 16px;
     style: normal;
   }
+  transition: all 1s;
+  &__hidden {
+    margin-top: -45px;
+  }
   &__menu {
     display: flex;
     justify-content: space-between;
@@ -101,11 +105,11 @@
     position: relative;
     display: flex;
     align-items: center;
-    &_open{
-      .headerTop__box{
+    &_open {
+      .headerTop__box {
         display: block;
       }
-      .headerTop__arrow{
+      .headerTop__arrow {
         transform: rotate(180deg);
       }
     }
@@ -134,14 +138,14 @@
     align-items: center;
     transition: $transition;
     background-color: $white;
-    &:hover{
-      background-color: #F0F0F0;
+    &:hover {
+      background-color: #f0f0f0;
     }
   }
-  &__arrow{
+  &__arrow {
     margin-left: 5px;
-    & svg{
-      path{
+    & svg {
+      path {
         display: block;
       }
     }
@@ -581,12 +585,17 @@
   }
 
   &__clear {
+    cursor: pointer;
     font: {
       family: Rubik;
       size: 14px;
     }
     line-height: 20px;
     color: #8c949b;
+    transition: $transition;
+    &:hover {
+      color: $textColor;
+    }
   }
 
   &__container {
@@ -640,15 +649,21 @@
       }
       &__icons {
         position: absolute;
-        top: -5px;
+        top: 23px;
         right: 0;
+        margin: 0;
       }
       &__iconLike {
-        display: none;
+        margin: 0;
+        & svg {
+          width: 16px;
+          height: 18px;
+        }
       }
 
       &__iconBasket {
         margin: 0;
+        margin-left: 10px;
         & svg {
           width: 15px;
           height: 17px;

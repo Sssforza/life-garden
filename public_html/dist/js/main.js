@@ -11405,7 +11405,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(11);
 /* harmony import */ var _blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(12);
 /* harmony import */ var _blocks_specialSample_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(13);
-/* harmony import */ var _blocks_product_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(14);
+/* harmony import */ var _blocks_detail_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(14);
 /* harmony import */ var _blocks_showFull_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(15);
 /* harmony import */ var _blocks_map_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(16);
 /* harmony import */ var _blocks_mapWindow_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(17);
@@ -11492,11 +11492,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerOpenClient"])(); //check category in product
 
-  Object(_blocks_product_js__WEBPACK_IMPORTED_MODULE_10__["checkCategories"])(); //other clicks in product
+  Object(_blocks_detail_js__WEBPACK_IMPORTED_MODULE_10__["checkCategories"])(); //other clicks in product
 
-  Object(_blocks_product_js__WEBPACK_IMPORTED_MODULE_10__["otherClicks"])(); //open big image in product
+  Object(_blocks_detail_js__WEBPACK_IMPORTED_MODULE_10__["otherClicks"])(); //open big image in product
 
-  Object(_blocks_product_js__WEBPACK_IMPORTED_MODULE_10__["openImage"])();
+  Object(_blocks_detail_js__WEBPACK_IMPORTED_MODULE_10__["openImage"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
@@ -18690,9 +18690,9 @@ function headerScroll() {
 
   window.onscroll = function () {
     if (window.pageYOffset > 1) {
-      headerTop.classList.add('hidden');
+      headerTop.classList.add('headerTop__hidden');
     } else {
-      headerTop.classList.remove('hidden');
+      headerTop.classList.remove('headerTop__hidden');
     }
   };
 }
@@ -19078,7 +19078,8 @@ function openMap() {
       document.removeEventListener("click", closePopup);
     });
     mapBtnChoice.forEach(function (item) {
-      item.onclick = function () {
+      item.onclick = function (event) {
+        event.stopPropagation();
         mapPopup.classList.add("hidden");
         scrollOffOn();
         document.removeEventListener("click", closePopup);
@@ -19213,16 +19214,25 @@ function sliderProductSpecial() {
 
 function sliderProduct() {
   var slickMain = $(".sliderProduct_js");
+  var slickFor = $(".sliderFor_js");
 
   if (slickMain.length) {
+    slickFor.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.sliderProduct_js'
+    });
     slickMain.slick({
       infinite: false,
       speed: 500,
       slidesToShow: 6,
       slidesToScroll: 6,
+      asNavFor: '.sliderFor_js',
       draggable: false,
-      prevArrow: "<div class=\"product__prev\"><svg width=\"30\" height=\"20\" viewBox=\"0 0 30 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t<path d=\"M9.90039 17.8008L2.00037 9.90076L9.90039 2.00073\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\t\t\t<path d=\"M3.40039 9.80078L28.4004 9.80078\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n\t\t\t</svg>\n\t\t\t\n\t\t\t</div>",
-      nextArrow: "<div class=\"product__next\"><svg width=\"29\" height=\"20\" viewBox=\"0 0 29 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t  <path d=\"M19.5 2L27.4 9.90002L19.5 17.8\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\t  <path d=\"M26 10L1 10\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n\t  </svg>\n\t  </div>"
+      prevArrow: "<div class=\"productCard__prev\"><svg width=\"30\" height=\"20\" viewBox=\"0 0 30 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t<path d=\"M9.90039 17.8008L2.00037 9.90076L9.90039 2.00073\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\t\t\t<path d=\"M3.40039 9.80078L28.4004 9.80078\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n\t\t\t</svg>\n\t\t\t</div>",
+      nextArrow: "<div class=\"productCard__next\"><svg width=\"29\" height=\"20\" viewBox=\"0 0 29 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path d=\"M19.5 2L27.4 9.90002L19.5 17.8\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n      <path d=\"M26 10L1 10\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n      </svg>\n\t  </div>"
     });
   }
 }
@@ -19272,47 +19282,47 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "otherClicks", function() { return otherClicks; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkCategories", function() { return checkCategories; });
 function openImage() {
-  var imageClick = document.querySelectorAll(".imageClick__js");
-  var image = document.querySelector(".image_js");
-  imageClick.forEach(function (item) {
-    item.addEventListener("click", function () {
-      imageClick.forEach(function (el) {
-        el.classList.remove("product_checked");
-      });
-      item.classList.add("product_checked");
-      image.style.backgroundImage = item.style.backgroundImage;
-    });
-  });
+  /*  const imageClick = document.querySelectorAll(".imageClick_js");
+   const image = document.querySelector(".image_js");
+   imageClick.forEach((item) => {
+     item.addEventListener("click", () => {
+       imageClick.forEach((el) => {
+         el.classList.remove("productCard_checked");
+       });
+       item.classList.add("productCard_checked");
+       image.style.backgroundImage = item.style.backgroundImage;
+     });
+   }); */
 }
 function otherClicks() {
-  var clickWeight = document.querySelectorAll(".weight__js");
+  var clickWeight = document.querySelectorAll(".weight_js");
   clickWeight.forEach(function (item) {
     item.addEventListener("click", function () {
       clickWeight.forEach(function (el) {
-        el.classList.remove("product_checked");
+        el.classList.remove("productCard_checked");
       });
-      item.classList.add("product_checked");
+      item.classList.add("productCard_checked");
     });
   });
-  var clickColor = document.querySelectorAll(".color__js");
+  var clickColor = document.querySelectorAll(".color_js");
   clickColor.forEach(function (item) {
     item.addEventListener("click", function () {
       clickColor.forEach(function (el) {
-        el.classList.remove("product_checked");
+        el.classList.remove("productCard_checked");
       });
-      item.classList.add("product_checked");
+      item.classList.add("productCard_checked");
     });
   });
 }
 function checkCategories() {
-  var clickCategories = document.querySelectorAll(".infoCategories__js");
-  var blockCategories = document.querySelectorAll(".info__js");
+  var clickCategories = document.querySelectorAll(".infoCategories_js");
+  var blockCategories = document.querySelectorAll(".info_js");
   clickCategories.forEach(function (item) {
     item.addEventListener("click", function () {
       clickCategories.forEach(function (el) {
-        el.classList.remove("info__title_checked");
+        el.classList.remove("productTabs__title_checked");
       });
-      item.classList.add("info__title_checked");
+      item.classList.add("productTabs__title_checked");
       blockCategories.forEach(function (element) {
         if (item.id === element.id) {
           element.classList.remove("hidden");
@@ -19463,11 +19473,8 @@ function mapWindow() {
         searchControlProvider: "yandex#search"
       }),
           MyBalloonLayout = ymaps.templateLayoutFactory.createClass('<div class="popover top">' + "<div class=\"close\"><svg width=\"19\" height=\"19\" viewBox=\"0 0 19 19\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <path d=\"M18.0607 3.06066C18.6464 2.47487 18.6464 1.52513 18.0607 0.93934C17.4749 0.353553 16.5251 0.353553 15.9393 0.93934L18.0607 3.06066ZM0.93934 15.9393C0.353553 16.5251 0.353553 17.4749 0.93934 18.0607C1.52513 18.6464 2.47487 18.6464 3.06066 18.0607L0.93934 15.9393ZM15.9393 18.0607C16.5251 18.6464 17.4749 18.6464 18.0607 18.0607C18.6464 17.4749 18.6464 16.5251 18.0607 15.9393L15.9393 18.0607ZM3.06066 0.93934C2.47487 0.353553 1.52513 0.353553 0.93934 0.93934C0.353553 1.52513 0.353553 2.47487 0.93934 3.06066L3.06066 0.93934ZM15.9393 0.93934L0.93934 15.9393L3.06066 18.0607L18.0607 3.06066L15.9393 0.93934ZM18.0607 15.9393L3.06066 0.93934L0.93934 3.06066L15.9393 18.0607L18.0607 15.9393Z\" fill=\"#98A6B4\"/>\n            </svg></div>" + '<div class="arrow"></div>' + '<div class="popover-inner">' + "$[[options.contentLayout observeSize minWidth=235 maxWidth=255 maxHeight=350]]" + "</div>" + "<div class=\"map__btn map__btn_show btnWhite mapBtn_js\">\u0412\u044B\u0431\u0440\u0430\u0442\u044C</div>" + "</div>", {
-        /**
+        /*
          * Строит экземпляр макета на основе шаблона и добавляет его в родительский HTML-элемент.
-         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#build
-         * @function
-         * @name build
          */
         build: function build() {
           this.constructor.superclass.build.call(this);
@@ -19477,11 +19484,8 @@ function mapWindow() {
           this._$element.find(".close").on("click", $.proxy(this.onCloseClick, this));
         },
 
-        /**
+        /*
          * Удаляет содержимое макета из DOM.
-         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#clear
-         * @function
-         * @name clear
          */
         clear: function clear() {
           this._$element.find(".close").off("click");
@@ -19489,11 +19493,8 @@ function mapWindow() {
           this.constructor.superclass.clear.call(this);
         },
 
-        /**
+        /*
          * Метод будет вызван системой шаблонов АПИ при изменении размеров вложенного макета.
-         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
-         * @function
-         * @name onSublayoutSizeChange
          */
         onSublayoutSizeChange: function onSublayoutSizeChange() {
           MyBalloonLayout.superclass.onSublayoutSizeChange.apply(this, arguments);
@@ -19506,11 +19507,8 @@ function mapWindow() {
           this.events.fire("shapechange");
         },
 
-        /**
+        /*
          * Сдвигаем балун, чтобы "хвостик" указывал на точку привязки.
-         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
-         * @function
-         * @name applyElementOffset
          */
         applyElementOffset: function applyElementOffset() {
           this._$element.css({
@@ -19519,23 +19517,16 @@ function mapWindow() {
           });
         },
 
-        /**
+        /*
          * Закрывает балун при клике на крестик, кидая событие "userclose" на макете.
-         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
-         * @function
-         * @name onCloseClick
          */
         onCloseClick: function onCloseClick(e) {
           e.preventDefault();
           this.events.fire("userclose");
         },
 
-        /**
+        /*
          * Используется для автопозиционирования (balloonAutoPan).
-         * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/ILayout.xml#getClientBounds
-         * @function
-         * @name getClientBounds
-         * @returns {Number[][]} Координаты левого верхнего и правого нижнего углов шаблона относительно точки привязки.
          */
         getShape: function getShape() {
           if (!this._isElement(this._$element)) {
@@ -19547,13 +19538,8 @@ function mapWindow() {
           return new ymaps.shape.Rectangle(new ymaps.geometry.pixel.Rectangle([[position.left, position.top], [position.left + this._$element[0].offsetWidth, position.top + this._$element[0].offsetHeight + this._$element.find(".arrow")[0].offsetHeight]]));
         },
 
-        /**
+        /*
          * Проверяем наличие элемента (в ИЕ и Опере его еще может не быть).
-         * @function
-         * @private
-         * @name _isElement
-         * @param {jQuery} [element] Элемент.
-         * @returns {Boolean} Флаг наличия.
          */
         _isElement: function _isElement(element) {
           return element && element[0] && element.find(".arrow")[0];
@@ -19565,7 +19551,7 @@ function mapWindow() {
         $(".mapBtn_js").on("click", function () {
           $(".windowsMapWrapper__js").addClass("hidden");
           objectManager.objects.balloon.close();
-          console.log(objectManager.objects);
+          document.body.classList.remove("hiddenHeaderCatalog");
         });
       };
 

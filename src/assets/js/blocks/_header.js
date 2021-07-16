@@ -79,9 +79,9 @@ export function headerScroll() {
   const headerTop = document.querySelector('.headerTop')
   window.onscroll = function() {
     if (window.pageYOffset > 1) {
-      headerTop.classList.add('hidden');
+      headerTop.classList.add('headerTop__hidden');
     } else {
-      headerTop.classList.remove('hidden');
+      headerTop.classList.remove('headerTop__hidden');
     }
 
   }

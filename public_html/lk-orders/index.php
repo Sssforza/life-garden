@@ -39,6 +39,11 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				</aside>
 				<section class="lk__content">
 					<div class="page__title">Мои заказы <span>128 заказов</span></div>
+					<div class="lkOrders__zeroOrders">
+						<div class="page__title">Мои заказы <span>нет заказов</span></div>
+						<div class="page__title">Мои заказы <span>нет заказов</span></div>
+					
+					</div>
 					<div class="lkOrders__container">
 						<div class="lkOrders__item">
 							<div class="lkOrders__header">
@@ -162,7 +167,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<div class="basketCard__action">
 
 										<div class="basketCard__price basketCard__price_width">
-											<span class="basketCard__priceValue basketCard__priceValue_orders">2880</span>
+											<span class="basketCard__priceValue basketCard__priceValue_orders">2 880</span>
 											<span class="basketCard__priceValue basketCard__priceValue_orders basketCard__ruble basketCard__ruble_orders">₽</span>
 										</div>
 									</div>
@@ -187,7 +192,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<div class="basketCard__action">
 
 										<div class="basketCard__price basketCard__price_width">
-											<span class="basketCard__priceValue basketCard__priceValue_orders">2880</span>
+											<span class="basketCard__priceValue basketCard__priceValue_orders">2 880</span>
 											<span class="basketCard__priceValue basketCard__priceValue_orders basketCard__ruble basketCard__ruble_orders">₽</span>
 										</div>
 									</div>
@@ -243,7 +248,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<div class="basketCard__action">
 
 										<div class="basketCard__price basketCard__price_width">
-											<span class="basketCard__priceValue basketCard__priceValue_orders">2880</span>
+											<span class="basketCard__priceValue basketCard__priceValue_orders">2 880</span>
 											<span class="basketCard__priceValue basketCard__priceValue_orders basketCard__ruble basketCard__ruble_orders">₽</span>
 										</div>
 									</div>
@@ -268,7 +273,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<div class="basketCard__action">
 
 										<div class="basketCard__price basketCard__price_width">
-											<span class="basketCard__priceValue basketCard__priceValue_orders">2880</span>
+											<span class="basketCard__priceValue basketCard__priceValue_orders">2 880</span>
 											<span class="basketCard__priceValue basketCard__priceValue_orders basketCard__ruble basketCard__ruble_orders">₽</span>
 										</div>
 									</div>
@@ -323,7 +328,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<div class="basketCard__action">
 
 										<div class="basketCard__price basketCard__price_width">
-											<span class="basketCard__priceValue basketCard__priceValue_orders">2880</span>
+											<span class="basketCard__priceValue basketCard__priceValue_orders">2 880</span>
 											<span class="basketCard__priceValue basketCard__priceValue_orders basketCard__ruble basketCard__ruble_orders">₽</span>
 										</div>
 									</div>
@@ -348,7 +353,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<div class="basketCard__action">
 
 										<div class="basketCard__price basketCard__price_width">
-											<span class="basketCard__priceValue basketCard__priceValue_orders">2880</span>
+											<span class="basketCard__priceValue basketCard__priceValue_orders">2 880</span>
 											<span class="basketCard__priceValue basketCard__priceValue_orders basketCard__ruble basketCard__ruble_orders">₽</span>
 										</div>
 									</div>
@@ -403,7 +408,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<div class="basketCard__action">
 
 										<div class="basketCard__price basketCard__price_width">
-											<span class="basketCard__priceValue basketCard__priceValue_orders">2880</span>
+											<span class="basketCard__priceValue basketCard__priceValue_orders">2 880</span>
 											<span class="basketCard__priceValue basketCard__priceValue_orders basketCard__ruble basketCard__ruble_orders">₽</span>
 										</div>
 									</div>

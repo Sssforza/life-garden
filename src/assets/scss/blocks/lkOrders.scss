@@ -8,10 +8,13 @@
 }
 .lkOrders {
   &__container {
-
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
   }
   &__item {
-    margin-top: 35px;
+    
     border: 1px solid #c7d0d9;
     border-radius: 10px;
     width: 1045px;
