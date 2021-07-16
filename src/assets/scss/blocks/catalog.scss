@@ -65,7 +65,16 @@
     line-height: 24px;
   }
 }
+.catalogInput__container{
+  display: flex;
+  align-items: center;
 
+  & label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+}
 .catalogMenu {
 }
 .catalogCards {
@@ -365,6 +374,8 @@
     max-height: 162px;
     overflow: hidden;
     transition: $transition;
+
+    padding-left: 1px;
     &_big {
       max-height: 324px;
       overflow: scroll;
@@ -413,7 +424,10 @@
       top: 1px;
       left: 6px;
     }
+
+
     & input[type="radio"] {
+      margin: 0;
       cursor: pointer;
       width: 16px;
       height: 16px;
@@ -442,6 +456,9 @@
       border-radius: 50%;
       background: $green;
       transform: translate(-50%, -50%);
+    }
+    & input[type="radio"]:checked::before {
+      border: 1px solid $green;
     }
   }
 

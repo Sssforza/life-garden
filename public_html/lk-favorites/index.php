@@ -39,7 +39,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				</aside>
 				<section class="lk__content">
 					<div class="page__title">Избранные товары</div>
-					<div class="lk__zeroOrders">
+					<div class="lk__zeroOrders hidden">
 						<div class="page__subtitle">Сохраняйте товары, которые понравились</div>
 						<div class="page__description">
 							<span>Нажмите на иконку &nbsp;</span>

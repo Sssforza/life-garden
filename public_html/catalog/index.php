@@ -184,25 +184,25 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								</div>
 								<div class="catalogMenu__container catalogColorContainer__js">
 									<div class="catalogMenu__items">
-										<div class="catalogLabel__container">
+										<div class="catalogInput__container">
 											<label class="catalogMenu__label">
 												<input class="radio" type="radio" name="color" checked>
 												<span>Желтая</span>
 											</label>
 										</div>
-										<div class="catalogLabel__container">
+										<div class="catalogInput__container">
 											<label class="catalogMenu__label">
 												<input type="radio" name="color">
 												<span>Желтая</span>
 											</label>
 										</div>
-										<div class="catalogLabel__container">
+										<div class="catalogInput__container">
 											<label class="catalogMenu__label">
 												<input type="radio" name="color">
 												<span>Желтая</span>
 											</label>
 										</div>
-										<div class="catalogLabel__container">
+										<div class="catalogInput__container">
 											<label class="catalogMenu__label">
 												<input type="radio" name="color">
 												<span>Желтая</span>
