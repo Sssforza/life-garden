@@ -39,6 +39,14 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				</aside>
 				<section class="lk__content">
 					<div class="page__title">Избранные товары</div>
+					<div class="lk__zeroOrders">
+						<div class="page__subtitle">Сохраняйте товары, которые понравились</div>
+						<div class="page__description">
+							<span>Нажмите на иконку &nbsp;</span>
+							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeBasket.svg'; ?>
+							<span> &nbsp; в карточке товара, и он появится на этой странице!</span>
+						</div>
+					</div>
 					<div class="lk__list lk__cardProduct">
 						<div class="cardProduct">
 							<div class="cardProduct__new">Новинка</div>
@@ -419,13 +427,13 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						<div class="pagination__prev">
 							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pagiLeft.svg'; ?>
 						</div>
-						<a href="#" class="pagination__number paginationNumber__js pagination_checked">1</a>
-						<a href="#" class="pagination__number paginationNumber__js">2</a>
-						<a href="#" class="pagination__number paginationNumber__js">3</a>
-						<a href="#" class="pagination__number paginationNumber__js">4</a>
-						<a href="#" class="pagination__number paginationNumber__js">5</a>
+						<a href="#" class="pagination__number paginationNumber_js pagination_checked">1</a>
+						<a href="#" class="pagination__number paginationNumber_js">2</a>
+						<a href="#" class="pagination__number paginationNumber_js">3</a>
+						<a href="#" class="pagination__number paginationNumber_js">4</a>
+						<a href="#" class="pagination__number paginationNumber_js">5</a>
 						<a href="#" class="pagination__points">....</a>
-						<a href="#" class="pagination__number paginationNumber__js">10</a>
+						<a href="#" class="pagination__number paginationNumber_js">10</a>
 						<a href="#" class="pagination__next">
 							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pagiRight.svg'; ?>
 						</a>

@@ -1,9 +1,9 @@
 export function openMap() {
-  if (document.querySelector(".windowsMapWrapper__js")) {
-    const mapPopup = document.querySelector(".windowsMapWrapper__js");
-    const mapPopupWindow = document.querySelector(".windowsMapPopup__js");
-    const mapPopupClose = document.querySelector(".windowsMapClose__js");
-    const mapBtn = document.querySelector(".showMap__js");
+  if (document.querySelector(".windowsMapWrapper_js")) {
+    const mapPopup = document.querySelector(".windowsMapWrapper_js");
+    const mapPopupWindow = document.querySelector(".windowsMapPopup_js");
+    const mapPopupClose = document.querySelector(".windowsMapClose_js");
+    const mapBtn = document.querySelector(".showMap_js");
     const mapBtnChoice = document.querySelectorAll(".map__btn_js");
     function closePopup(e) {
       if (
@@ -90,11 +90,11 @@ export function checkMethodDelivery() {
 }
 
 export function openAddress() {
-  if (document.querySelector(".openAddress__js")) {
-    const addressBtn = document.querySelector(".openAddress__js");
-    const addressPopup = document.querySelector(".shops__js");
+  if (document.querySelector(".openAddress_js")) {
+    const addressBtn = document.querySelector(".openAddress_js");
+    const addressPopup = document.querySelector(".shops_js");
     const addressShop = document.querySelectorAll(".lkProfile__shop_js");
-    const addressInput = document.querySelector(".openAddressInput__js");
+    const addressInput = document.querySelector(".openAddressInput_js");
     function closePopup(e) {
       if (
         addressPopup &&

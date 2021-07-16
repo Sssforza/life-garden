@@ -110,12 +110,12 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								</div>
 								<div class="lkProfile__address lkProfile__pickup_js hidden">
 									<div class="lkProfile__addressMap">
-										<div class="envelopeInput envelopeInput_lk lkProfile__input shops__js">
+										<div class="envelopeInput envelopeInput_lk lkProfile__input shops_js">
 											<div class="envelopeInput__title ">
 												<span>Выберите другой магазин самовывоза</span>
 											</div>
-											<div class="openAddress__js">
-												<input class="envelopeInput__input envelopeInput__input_lk openAddressInput__js" type="text" value="ул. Маяковского, 20" readonly="readonly">
+											<div class="openAddress_js">
+												<input class="envelopeInput__input envelopeInput__input_lk openAddressInput_js" type="text" value="ул. Маяковского, 20" readonly="readonly">
 												<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowColor.svg'; ?>
 											</div>
 											<div class="lkProfile__shops">
@@ -128,7 +128,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 												</ul>
 											</div>
 										</div>
-										<div class="lkProfile__showMap showMap__js">
+										<div class="lkProfile__showMap showMap_js">
 											<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/mapProfile.svg'; ?>
 											<span>Показать на карте</span>
 										</div>
@@ -180,9 +180,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 			</div>
 		</section>
 	</div>
-	<div class="windowsMessage__wrap windowsMapWrapper__js hidden">
-		<div class="windowsMessage__map windowsMapPopup__js">
-			<div class="windowsMessage__close windowsMapClose__js">
+	<div class="windowsMessage__wrap windowsMapWrapper_js hidden">
+		<div class="windowsMessage__map windowsMapPopup_js">
+			<div class="windowsMessage__close windowsMapClose_js">
 				<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
 			</div>
 			<section class="map map_small">

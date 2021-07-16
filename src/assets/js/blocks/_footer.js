@@ -1,5 +1,5 @@
 export function footerScrollUp() {
-  const buttonUp = document.querySelector(".footerButtonUp__js");
+  const buttonUp = document.querySelector(".footerButtonUp_js");
 
   buttonUp.addEventListener("click", function backToTop() {
     if (window.pageYOffset > 0) {
@@ -10,14 +10,14 @@ export function footerScrollUp() {
 }
 
 export function footerValidationEmail() {
-  const footerInput = document.querySelector(".footerSubscribeInput__js");
+  const footerInput = document.querySelector(".footerSubscribeInput_js");
   const footerButtonEmail = document.querySelector(
-    ".footerSubscribeButton__js"
+    ".footerSubscribeButton_js"
   );
-  const footerError = document.querySelector(".footerSubscribeError__js");
-  const footerPopap = document.querySelector(".windowsMessage__js");
-  const footerPopapWindow = document.querySelector(".windowsMessagePopap__js");
-  const footerPopapClose = document.querySelector(".windowsMessageClose__js");
+  const footerError = document.querySelector(".footerSubscribeError_js");
+  const footerPopap = document.querySelector(".windowsMessage_js");
+  const footerPopapWindow = document.querySelector(".windowsMessagePopap_js");
+  const footerPopapClose = document.querySelector(".windowsMessageClose_js");
 
   function validateEmail(value) {
     const re =

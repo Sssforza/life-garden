@@ -66,12 +66,12 @@
                     <span class="footerSubscribe__label">Оставьте свой e-mail, и мы будем сообщать
                         вам об акциях и новинках</span>
                     <form class="footerSubscribe__form" action="">
-                        <input class="footerSubscribe__input footerSubscribeInput__js" type="text" placeholder="Укажите ваш e-mail" value="">
-                        <button class="footerSubscribe__button footerSubscribeButton__js" type="submit">
+                        <input class="footerSubscribe__input footerSubscribeInput_js" type="text" placeholder="Укажите ваш e-mail" value="">
+                        <button class="footerSubscribe__button footerSubscribeButton_js" type="submit">
                             <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
                         </button>
                     </form>
-                    <div class="footerSubscribe__error footerSubscribeError__js hidden">
+                    <div class="footerSubscribe__error footerSubscribeError_js hidden">
                         <div class="footerSubscribe__errorImg">!</div>
                         <span class="footerSubscribe__errorText">Адрес электронной почты введён некорректно. <br> Пример: example@mail.ru
                         </span>
@@ -98,7 +98,7 @@
                     </div>
                 </div>
 
-                <div class="footer__buttonUp footerButtonUp__js">
+                <div class="footer__buttonUp footerButtonUp_js">
                     <div class="footer__buttonUpArrow">
                         <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/top-arrow.svg'; ?>
                     </div>

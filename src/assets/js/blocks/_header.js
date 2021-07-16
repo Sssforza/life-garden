@@ -1,7 +1,7 @@
 export function headerCatalog() {
-  const buttonCatalog = document.querySelector(".headerMiddleCatalog__js");
-  const headerCatalog = document.querySelector(".headerCatalog__js");
-  const hamburger = document.querySelector(".hamburger__js");
+  const buttonCatalog = document.querySelector(".headerMiddleCatalog_js");
+  const headerCatalog = document.querySelector(".headerCatalog_js");
+  const hamburger = document.querySelector(".hamburger_js");
 
   buttonCatalog.addEventListener("click", () => {
     headerCatalog.classList.toggle("headerCatalog__go");
@@ -10,8 +10,8 @@ export function headerCatalog() {
   });
 }
 export function headerSearchelp() {
-  const headerHelp = document.querySelector(".headerHelp__js");
-  const headerForm = document.querySelector(".headerMiddleForm__js");
+  const headerHelp = document.querySelector(".headerHelp_js");
+  const headerForm = document.querySelector(".headerMiddleForm_js");
   document.addEventListener("click", function (e) {
     if (headerHelp && e.target !== headerHelp && !headerHelp.contains(e.target)) {
       headerHelp.classList.add("hidden");
@@ -27,10 +27,10 @@ export function headerSearchelp() {
 }
 
 export function headerClick() {
-  const basketClick = document.querySelector(".headerBasket__js");
-  const basketPop = document.querySelector(".headerClickBasket__js");
-  const preorderClick = document.querySelector(".headerPreorder__js");
-  const preorderPop = document.querySelector(".headerClickPreorder__js");
+  const basketClick = document.querySelector(".headerBasket_js");
+  const basketPop = document.querySelector(".headerClickBasket_js");
+  const preorderClick = document.querySelector(".headerPreorder_js");
+  const preorderPop = document.querySelector(".headerClickPreorder_js");
 
   function closeBasket(e) {
     if (
@@ -88,8 +88,8 @@ export function headerScroll() {
 }
 
 export function headerOpenClient() {
-  const headerTopClient = document.querySelector('.client__js')
-  const btnClient = document.querySelector('.clientClick__js')
+  const headerTopClient = document.querySelector('.client_js')
+  const btnClient = document.querySelector('.clientClick_js')
 
   btnClient.addEventListener('click', () => {
     headerTopClient.classList.toggle('headerTop__client_open')

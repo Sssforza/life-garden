@@ -18621,9 +18621,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerScroll", function() { return headerScroll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerOpenClient", function() { return headerOpenClient; });
 function headerCatalog() {
-  var buttonCatalog = document.querySelector(".headerMiddleCatalog__js");
-  var headerCatalog = document.querySelector(".headerCatalog__js");
-  var hamburger = document.querySelector(".hamburger__js");
+  var buttonCatalog = document.querySelector(".headerMiddleCatalog_js");
+  var headerCatalog = document.querySelector(".headerCatalog_js");
+  var hamburger = document.querySelector(".hamburger_js");
   buttonCatalog.addEventListener("click", function () {
     headerCatalog.classList.toggle("headerCatalog__go");
     document.body.classList.toggle("hiddenHeaderCatalog");
@@ -18631,8 +18631,8 @@ function headerCatalog() {
   });
 }
 function headerSearchelp() {
-  var headerHelp = document.querySelector(".headerHelp__js");
-  var headerForm = document.querySelector(".headerMiddleForm__js");
+  var headerHelp = document.querySelector(".headerHelp_js");
+  var headerForm = document.querySelector(".headerMiddleForm_js");
   document.addEventListener("click", function (e) {
     if (headerHelp && e.target !== headerHelp && !headerHelp.contains(e.target)) {
       headerHelp.classList.add("hidden");
@@ -18647,10 +18647,10 @@ function headerSearchelp() {
   });
 }
 function headerClick() {
-  var basketClick = document.querySelector(".headerBasket__js");
-  var basketPop = document.querySelector(".headerClickBasket__js");
-  var preorderClick = document.querySelector(".headerPreorder__js");
-  var preorderPop = document.querySelector(".headerClickPreorder__js");
+  var basketClick = document.querySelector(".headerBasket_js");
+  var basketPop = document.querySelector(".headerClickBasket_js");
+  var preorderClick = document.querySelector(".headerPreorder_js");
+  var preorderPop = document.querySelector(".headerClickPreorder_js");
 
   function closeBasket(e) {
     if (basketPop && e.target !== basketPop && !basketPop.contains(e.target)) {
@@ -18697,8 +18697,8 @@ function headerScroll() {
   };
 }
 function headerOpenClient() {
-  var headerTopClient = document.querySelector('.client__js');
-  var btnClient = document.querySelector('.clientClick__js');
+  var headerTopClient = document.querySelector('.client_js');
+  var btnClient = document.querySelector('.clientClick_js');
   btnClient.addEventListener('click', function () {
     headerTopClient.classList.toggle('headerTop__client_open');
   });
@@ -18713,7 +18713,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "footerScrollUp", function() { return footerScrollUp; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "footerValidationEmail", function() { return footerValidationEmail; });
 function footerScrollUp() {
-  var buttonUp = document.querySelector(".footerButtonUp__js");
+  var buttonUp = document.querySelector(".footerButtonUp_js");
   buttonUp.addEventListener("click", function backToTop() {
     if (window.pageYOffset > 0) {
       window.scrollBy(0, -80);
@@ -18722,12 +18722,12 @@ function footerScrollUp() {
   });
 }
 function footerValidationEmail() {
-  var footerInput = document.querySelector(".footerSubscribeInput__js");
-  var footerButtonEmail = document.querySelector(".footerSubscribeButton__js");
-  var footerError = document.querySelector(".footerSubscribeError__js");
-  var footerPopap = document.querySelector(".windowsMessage__js");
-  var footerPopapWindow = document.querySelector(".windowsMessagePopap__js");
-  var footerPopapClose = document.querySelector(".windowsMessageClose__js");
+  var footerInput = document.querySelector(".footerSubscribeInput_js");
+  var footerButtonEmail = document.querySelector(".footerSubscribeButton_js");
+  var footerError = document.querySelector(".footerSubscribeError_js");
+  var footerPopap = document.querySelector(".windowsMessage_js");
+  var footerPopapWindow = document.querySelector(".windowsMessagePopap_js");
+  var footerPopapClose = document.querySelector(".windowsMessageClose_js");
 
   function validateEmail(value) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -18914,7 +18914,7 @@ function catalogPopups() {
   }
 }
 function checkNum() {
-  var numbers = document.querySelectorAll(".paginationNumber__js");
+  var numbers = document.querySelectorAll(".paginationNumber_js");
   numbers.forEach(function (element) {
     element.addEventListener("click", function () {
       numbers.forEach(function (item) {
@@ -19047,7 +19047,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openAddress", function() { return openAddress; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dateBirthday", function() { return dateBirthday; });
 function openMap() {
-  if (document.querySelector(".windowsMapWrapper__js")) {
+  if (document.querySelector(".windowsMapWrapper_js")) {
     var closePopup = function closePopup(e) {
       if (mapPopupWindow && e.target !== mapPopupWindow && !mapPopupWindow.contains(e.target)) {
         mapPopup.classList.add("hidden");
@@ -19060,10 +19060,10 @@ function openMap() {
       return document.body.classList.toggle("hiddenHeaderCatalog");
     };
 
-    var mapPopup = document.querySelector(".windowsMapWrapper__js");
-    var mapPopupWindow = document.querySelector(".windowsMapPopup__js");
-    var mapPopupClose = document.querySelector(".windowsMapClose__js");
-    var mapBtn = document.querySelector(".showMap__js");
+    var mapPopup = document.querySelector(".windowsMapWrapper_js");
+    var mapPopupWindow = document.querySelector(".windowsMapPopup_js");
+    var mapPopupClose = document.querySelector(".windowsMapClose_js");
+    var mapBtn = document.querySelector(".showMap_js");
     var mapBtnChoice = document.querySelectorAll(".map__btn_js");
     mapBtn.addEventListener("click", function () {
       mapPopup.classList.remove("hidden");
@@ -19128,7 +19128,7 @@ function checkMethodDelivery() {
   }
 }
 function openAddress() {
-  if (document.querySelector(".openAddress__js")) {
+  if (document.querySelector(".openAddress_js")) {
     var closePopup = function closePopup(e) {
       if (addressPopup && e.target !== addressPopup && !addressPopup.contains(e.target)) {
         addressPopup.classList.remove("lkProfile__input_open");
@@ -19136,10 +19136,10 @@ function openAddress() {
       }
     };
 
-    var addressBtn = document.querySelector(".openAddress__js");
-    var addressPopup = document.querySelector(".shops__js");
+    var addressBtn = document.querySelector(".openAddress_js");
+    var addressPopup = document.querySelector(".shops_js");
     var addressShop = document.querySelectorAll(".lkProfile__shop_js");
-    var addressInput = document.querySelector(".openAddressInput__js");
+    var addressInput = document.querySelector(".openAddressInput_js");
     addressBtn.addEventListener("click", function () {
       addressPopup.classList.toggle("lkProfile__input_open");
       document.onclick = closePopup;
@@ -19231,6 +19231,7 @@ function sliderProduct() {
       slidesToScroll: 6,
       asNavFor: '.sliderFor_js',
       draggable: false,
+      focusOnSelect: true,
       prevArrow: "<div class=\"productCard__prev\"><svg width=\"30\" height=\"20\" viewBox=\"0 0 30 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t<path d=\"M9.90039 17.8008L2.00037 9.90076L9.90039 2.00073\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\t\t\t<path d=\"M3.40039 9.80078L28.4004 9.80078\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n\t\t\t</svg>\n\t\t\t</div>",
       nextArrow: "<div class=\"productCard__next\"><svg width=\"29\" height=\"20\" viewBox=\"0 0 29 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path d=\"M19.5 2L27.4 9.90002L19.5 17.8\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n      <path d=\"M26 10L1 10\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n      </svg>\n\t  </div>"
     });
@@ -19549,7 +19550,7 @@ function mapWindow() {
 
       var click = function click() {
         $(".mapBtn_js").on("click", function () {
-          $(".windowsMapWrapper__js").addClass("hidden");
+          $(".windowsMapWrapper_js").addClass("hidden");
           objectManager.objects.balloon.close();
           document.body.classList.remove("hiddenHeaderCatalog");
         });

@@ -151,7 +151,7 @@ export function catalogPopups() {
 }
 
 export function checkNum() {
-  const numbers = document.querySelectorAll(".paginationNumber__js");
+  const numbers = document.querySelectorAll(".paginationNumber_js");
   numbers.forEach((element) => {
     element.addEventListener("click", () => {
       numbers.forEach((item) => {

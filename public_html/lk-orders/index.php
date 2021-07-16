@@ -40,9 +40,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				<section class="lk__content">
 					<div class="page__title">Мои заказы <span>128 заказов</span></div>
 					<div class="lkOrders__zeroOrders">
-						<div class="page__title">Мои заказы <span>нет заказов</span></div>
-						<div class="page__title">Мои заказы <span>нет заказов</span></div>
-					
+						<div class="page__subtitle">История заказов отсутствует</div>
 					</div>
 					<div class="lkOrders__container">
 						<div class="lkOrders__item">
@@ -463,13 +461,13 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						<div class="pagination__prev">
 							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pagiLeft.svg'; ?>
 						</div>
-						<a href="#" class="pagination__number paginationNumber__js pagination_checked">1</a>
-						<a href="#" class="pagination__number paginationNumber__js">2</a>
-						<a href="#" class="pagination__number paginationNumber__js">3</a>
-						<a href="#" class="pagination__number paginationNumber__js">4</a>
-						<a href="#" class="pagination__number paginationNumber__js">5</a>
+						<a href="#" class="pagination__number paginationNumber_js pagination_checked">1</a>
+						<a href="#" class="pagination__number paginationNumber_js">2</a>
+						<a href="#" class="pagination__number paginationNumber_js">3</a>
+						<a href="#" class="pagination__number paginationNumber_js">4</a>
+						<a href="#" class="pagination__number paginationNumber_js">5</a>
 						<a href="#" class="pagination__points">....</a>
-						<a href="#" class="pagination__number paginationNumber__js">10</a>
+						<a href="#" class="pagination__number paginationNumber_js">10</a>
 						<a href="#" class="pagination__next">
 							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pagiRight.svg'; ?>
 						</a>

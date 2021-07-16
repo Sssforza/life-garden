@@ -44,8 +44,8 @@
                 </div>
                 <span class="headerTop__text">Вход</span>
               </a>
-              <div class="headerTop__client client__js">
-                <div class="headerTop__enter clientClick__js">
+              <div class="headerTop__client client_js">
+                <div class="headerTop__enter clientClick_js">
                   <div class="headerTop__icon">
                     <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/client.svg'; ?>
                   </div>
@@ -72,9 +72,9 @@
               <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/logo.svg'; ?>
             </a>
             <div class="headerMiddle__search">
-              <div class="headerMiddle__catalog headerMiddleCatalog__js" href="#">
+              <div class="headerMiddle__catalog headerMiddleCatalog_js" href="#">
                 <span>Каталог</span>
-                <div class="hamburger hamburger__collapse hamburger__js">
+                <div class="hamburger hamburger__collapse hamburger_js">
                   <span class="hamburger__box">
                     <span class="hamburger__inner"></span>
                   </span>
@@ -82,13 +82,13 @@
               </div>
               <div class="headerMiddle__formContainer">
 
-                <form class="headerMiddle__form headerMiddleForm__js">
-                  <input class="headerMiddle__input headerMiddleInput__js" type="text" placeholder="Поиск">
+                <form class="headerMiddle__form headerMiddleForm_js">
+                  <input class="headerMiddle__input headerMiddleInput_js" type="text" placeholder="Поиск">
                   <button class="headerMiddle__button" type="submit">
                     <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search.svg'; ?>
                   </button>
                 </form>
-                <div class="headerHelp hidden headerHelp__js">
+                <div class="headerHelp hidden headerHelp_js">
                   <a href="#" class="headerHelp__item">
                     <div class="headerHelp__svg">
                       <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search-mini.svg'; ?>
@@ -184,13 +184,13 @@
                 <span class="iconSelected__count">0</span>
               </div>
               <div class="headerMiddle__preorder">
-                <div class="iconSelected headerPreorder__js">
+                <div class="iconSelected headerPreorder_js">
                   <div class="iconSelected__svg">
                     <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/date.svg'; ?>
                   </div>
                   <span class="iconSelected__count">0</span>
                 </div>
-                <div class="headerClick headerClickPreorder__js hidden">
+                <div class="headerClick headerClickPreorder_js hidden">
                   <div class="headerClick__top">
                     <div class="headerClick__title">Товары для предзаказа</div>
                     <div class="headerClick__clear">Очистить все</div>
@@ -338,7 +338,7 @@
               </div>
 
               <div class="headerMiddle__basket">
-                <div class="headerMiddle__iconsBasket headerBasket__js">
+                <div class="headerMiddle__iconsBasket headerBasket_js">
                   <div class="iconSelected">
                     <div class="iconSelected__svg">
                       <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/garbage.svg'; ?>
@@ -350,7 +350,7 @@
                     <span>6570 р</span>
                   </div>
                 </div>
-                <div class="headerClick headerClickBasket__js hidden">
+                <div class="headerClick headerClickBasket_js hidden">
                   <div class="headerClick__top">
                     <div class="headerClick__title">Корзина</div>
                     <div class="headerClick__clear">Очистить все</div>
@@ -500,7 +500,7 @@
           </div>
         </div>
       </div>
-      <div class="headerBottom headerBottom__js">
+      <div class="headerBottom headerBottom_js">
         <div class="container">
           <ul class="header__container">
             <li><a class="headerBottom__link" href="#">Акции</a></li>
@@ -516,7 +516,7 @@
           </ul>
         </div>
       </div>
-      <div class="headerCatalog headerCatalog__js ">
+      <div class="headerCatalog headerCatalog_js ">
         <div class="container">
           <div class="headerCatalog__title">Каталог</div>
           <div class="headerCatalog__categories">
@@ -597,9 +597,9 @@
           </div>
         </div>
       </div>
-      <div class="windowsMessage__wrap windowsMessage__js hidden">
-        <div class="windowsMessage__popap windowsMessagePopap__js">
-          <div class="windowsMessage__close windowsMessageClose__js">
+      <div class="windowsMessage__wrap windowsMessage_js hidden">
+        <div class="windowsMessage__popap windowsMessagePopap_js">
+          <div class="windowsMessage__close windowsMessageClose_js">
             <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
           </div>
           <div class="windowsMessage__title">Вы успешно подписались</div>

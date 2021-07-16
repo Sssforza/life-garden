@@ -146,7 +146,7 @@ export function mapWindow() {
 
       const click = () => {
         $(".mapBtn_js").on("click", function () {
-          $(".windowsMapWrapper__js").addClass("hidden");
+          $(".windowsMapWrapper_js").addClass("hidden");
           objectManager.objects.balloon.close();
           document.body.classList.remove("hiddenHeaderCatalog");
         });
