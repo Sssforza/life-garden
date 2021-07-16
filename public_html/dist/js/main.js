@@ -19283,35 +19283,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "otherClicks", function() { return otherClicks; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkCategories", function() { return checkCategories; });
 function openImage() {
-  /*  const imageClick = document.querySelectorAll(".imageClick_js");
-   const image = document.querySelector(".image_js");
-   imageClick.forEach((item) => {
-     item.addEventListener("click", () => {
-       imageClick.forEach((el) => {
-         el.classList.remove("productCard_checked");
-       });
-       item.classList.add("productCard_checked");
-       image.style.backgroundImage = item.style.backgroundImage;
-     });
-   }); */
+  var imageClick = document.querySelectorAll(".imageClick_js");
+  var image = document.querySelector(".image_js");
+  imageClick.forEach(function (item) {
+    item.addEventListener("click", function () {
+      imageClick.forEach(function (el) {
+        el.classList.remove("productCard_checked");
+      });
+      item.classList.add("productCard_checked");
+      image.style.backgroundImage = item.style.backgroundImage;
+    });
+  });
 }
 function otherClicks() {
   var clickWeight = document.querySelectorAll(".weight_js");
   clickWeight.forEach(function (item) {
     item.addEventListener("click", function () {
       clickWeight.forEach(function (el) {
-        el.classList.remove("productCard_checked");
+        el.classList.remove("productCard__checked_small");
       });
-      item.classList.add("productCard_checked");
+      item.classList.add("productCard__checked_small");
     });
   });
   var clickColor = document.querySelectorAll(".color_js");
   clickColor.forEach(function (item) {
     item.addEventListener("click", function () {
       clickColor.forEach(function (el) {
-        el.classList.remove("productCard_checked");
+        el.classList.remove("productCard__checked_small");
       });
-      item.classList.add("productCard_checked");
+      item.classList.add("productCard__checked_small");
     });
   });
 }

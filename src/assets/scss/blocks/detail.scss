@@ -1,10 +1,32 @@
 @import "../modules/utilities/_variables.scss";
+.detail{
+  &__productBox{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 87px;
+  }
+}
+.productBox{
+  &__hit{
 
+  }
+  &__additional{
+
+  }
+  &__similar{
+
+  }
+}
 .productCard {
   display: flex;
-  &_checked {
+  justify-content: space-between;
+  &__checked {
     pointer-events: none;
     border: 3px solid $green !important;
+    &_small {
+      border: 2px solid $green !important;
+    }
   }
   &__slider {
   }
@@ -25,9 +47,9 @@
         display: block;
       }
     }
-    &:hover{
-      svg{
-        path{
+    &:hover {
+      svg {
+        path {
           stroke: $textColor;
         }
       }
@@ -36,7 +58,7 @@
   &__next {
     position: absolute;
     top: 115%;
-    left: 75px;
+    left: 55px;
     cursor: pointer;
     & svg {
       path {
@@ -44,9 +66,9 @@
         display: block;
       }
     }
-    &:hover{
-      svg{
-        path{
+    &:hover {
+      svg {
+        path {
           stroke: $textColor;
         }
       }
@@ -62,10 +84,10 @@
     background-position: center;
     &_small {
       cursor: pointer;
-      max-width: 106px;
-      height: 106px;
+      max-width: 112px;
+      height: 112px;
       border-radius: 20px;
-      margin-left: 5px;
+      margin: 0 2px;
       border: 3px solid $white;
     }
   }
@@ -123,19 +145,23 @@
       font-weight: 500;
       font-size: 35px;
       line-height: 24px;
+      &_ussual {
+        margin: 0;
+      }
     }
     .cost__price {
       display: flex;
       align-items: center;
       margin-top: 15px;
     }
-    .cost__info {
-      margin-left: 10px;
+    .cost__right {
+      margin-left: 20px;
     }
   }
   &__bottom {
     justify-content: start;
     gap: 65px;
+    margin-top: 28px;
     .counter {
       width: 142px;
       height: 46px;
@@ -208,7 +234,7 @@
   &__box {
     display: flex;
     gap: 8px;
-    margin-top: 20px;
+    margin-top: 15px;
   }
   &__item {
     width: 38px;
@@ -226,7 +252,7 @@
     }
   }
 }
-.method {
+.productMethod {
   &__title {
     font-family: Rubik;
     font-style: normal;
@@ -263,6 +289,9 @@
     gap: 35px;
     border-bottom: 1px solid #919eab;
   }
+  &__main{
+    margin-top: 30px;
+  }
   &__title {
     cursor: pointer;
     font-family: Rubik;
@@ -272,32 +301,18 @@
     color: #919eab;
     position: relative;
     transition: $transition;
+    border-bottom: 4px solid $white;
     &_checked {
       pointer-events: none;
       color: $textColor;
       border-bottom: 4px solid $green;
     }
-    &:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0px;
-      right: 0;
-      height: 4px;
-      background: $green;
-      opacity: 0;
-      pointer-events: none;
-      transition: $transition;
-    }
     &:hover {
-      &:after {
-        opacity: 1;
-      }
       color: $textColor;
+      border-bottom: 4px solid $green;
     }
   }
   &__name {
-    margin-top: 30px;
     font-family: Rubik;
     font-weight: bold;
     font-size: 35px;
@@ -315,9 +330,17 @@
   }
   &__text {
     font-size: 16px;
-    line-height: 26px;
+    line-height: 20px;
     &_margin {
       margin-left: 17px;
+    }
+    &_lh {
+      line-height: 26px;
+    }
+    &_span {
+      font-size: 14px;
+      line-height: 17px;
+      color: #919eab;
     }
   }
   &__pdf {
@@ -333,17 +356,21 @@
     }
   }
   &__textUl {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &_margin {
+      margin-top: 20px;
+    }
   }
   &__textLi {
-    margin-top: 10px;
     display: flex;
     justify-content: space-between;
     &_color {
       color: #5b6168;
-    }
-    & span {
-      color: $textColor;
+      & span {
+        color: $textColor;
+      }
     }
   }
   &__description {
@@ -383,13 +410,13 @@
   }
 }
 
-.reviews {
+.productReviews {
   &__item {
     margin-left: 14px;
   }
   &__text {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 24px;
     color: $textColor;
     &_margin {
       margin-top: 13px;
@@ -402,6 +429,10 @@
     }
     &_bold {
       font-weight: 500;
+    }
+    &_small {
+      font-size: 14px;
+      line-height: 17px;
     }
   }
   &__columnLeft {
@@ -431,6 +462,9 @@
   &__columnRight {
     margin-left: 65px;
     width: 966px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
   }
   &__description {
     font-family: Rubik;
@@ -445,11 +479,27 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    .productReviews__text{
+      margin-left: 10px;
+    }
+    .review__item{
+      margin-left: 5px;
+    }
+    .productReviews__band{
+margin-left: 15px;
+
+    }
+    &_d{
+
+    }
+    &_e{
+
+    }
   }
 
   &__band {
     display: flex;
-    width: 190px;
+    min-width: 190px;
     height: 6px;
     border-radius: 4px;
     background: #cad4db;
@@ -459,7 +509,7 @@
       content: "";
       top: 0;
       left: 0;
-      width: 100px;
+     
       height: 6px;
       background: $green;
       border-radius: 4px;
@@ -477,6 +527,8 @@
     }
   }
   &__box {
+    border-bottom: 1px solid #cad4db;
+    padding-bottom: 50px;
   }
   &__header {
     display: flex;
@@ -517,9 +569,6 @@
     font-size: 20px;
     line-height: 30px;
   }
-
-  // .reviews__buttons
-
   &__buttons {
     margin-top: 10px;
     display: flex;
@@ -540,5 +589,13 @@
     &:hover {
       background: #c8dad0;
     }
+  }
+  &__link {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: $green;
   }
 }
