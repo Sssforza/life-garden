@@ -1,0 +1,231 @@
+@import "../modules/utilities/_variables.scss";
+@import "../modules/utilities/_mixins.scss";
+.about {
+  // .about__history
+
+  &__history {
+  }
+
+  // .about__facts
+
+  &__facts {
+  }
+
+  // .about__title
+
+  &__title {
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  // .about__care
+
+  &__care {
+  }
+
+  // .about__text
+
+  &__text {
+    margin-top: 25px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  &__help {
+  }
+}
+.aboutHistory {
+  margin-top: 35px;
+  &__image {
+    object-fit: cover;
+    width: 1400px;
+    height: 500px;
+    border-radius: 10px;
+  }
+  &__title {
+    margin-top: 40px;
+    max-width: 1204px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    color: $green;
+    & span {
+      color: $textColor;
+    }
+    padding-left: 30px;
+    border-left: 6px solid $green;
+  }
+}
+.aboutFacts {
+  background: #f3f3f3;
+  margin-top: 77px;
+  padding: 75px 0 154px;
+  &__content {
+  }
+  &__card {
+    height: 320px;
+    background: $green;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex !important;
+  }
+  &__info {
+    width: 50%;
+    padding: 65px 0 49px 33px;
+  }
+  &__text {
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 40px;
+    color: $white;
+    display: flex;
+    align-items: center;
+    &_small {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      color: $white;
+      margin-top: 17px;
+    }
+    & span {
+      font-size: 30px;
+      line-height: 40px;
+      margin-left: 8px;
+    }
+  }
+  &__image {
+    width: 50%;
+  }
+  &__points {
+    margin-top: 65px;
+  }
+}
+.aboutCare {
+  padding-top: 63px;
+  padding-bottom: 50px;
+  display: flex;
+  gap: 111px;
+  align-items: center;
+  position: relative;
+  &::after {
+    content: url("/dist/img/aboutBorder.png");
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 100%;
+  }
+  &__column {
+    width: 675px;
+  }
+
+  &__subtitle {
+    margin-top: 22px;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  &__image {
+  }
+}
+.aboutHelp {
+  margin-top: 67px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__icon {
+  }
+
+  &__title {
+    margin-top: 26px;
+    width: 670px;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+  }
+
+  &__container {
+    width: 1074px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 71px;
+    column-gap: 128px;
+    row-gap: 51px;
+  }
+
+  &__item {
+    display: flex;
+    width: 44%;
+  }
+
+  &__text {
+    margin-top: 6px;
+    margin-left: 26px;
+    display: flex;
+    flex-direction: column;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    & span {
+      margin-top: 13px;
+      font-family: Firasans;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__quote {
+  }
+}
+.aboutSlider {
+  margin: 31px -10px 0 -10px;
+  position: relative;
+
+  &__prev,
+  &__next {
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc(100% + 25px);
+    right: 79px;
+    cursor: pointer;
+    & svg {
+      margin-right: 5px;
+      path {
+        transition: $transition;
+        display: block;
+      }
+    }
+    &:hover {
+      & svg {
+        path {
+          stroke: $textColor;
+        }
+      }
+    }
+  }
+  &__next {
+    transform: rotate(180deg);
+    top: calc(100% + 25px);
+    right: 10px;
+  }
+}
+.slick-slide {
+  margin: 0 10px;
+}

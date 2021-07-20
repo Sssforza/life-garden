@@ -40,6 +40,27 @@ export function sliderProductSpecial() {
     });
   }
 }
+// sliderAbout
+export function sliderAbout() {
+  const slickMain = $(".aboutSlider_js");
+  if (slickMain.length) {
+    slickMain.slick({
+      infinite: false,
+      speed: 500,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      draggable: false,
+      prevArrow:
+        `<div class="aboutSlider__prev"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 19L3 10.16L12 2" stroke="#1E7243" stroke-width="3" stroke-linecap="round"/>
+        </svg></div>`,
+      nextArrow:
+        `<div class="aboutSlider__next"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 19L3 10.16L12 2" stroke="#1E7243" stroke-width="3" stroke-linecap="round"/>
+        </svg></div>`
+    });
+  }
+}
 
 // sliderProduct
 export function sliderProduct() {
@@ -51,7 +72,8 @@ export function sliderProduct() {
       slidesToScroll: 1,
       arrows: false,
       fade: true,
-      asNavFor: '.sliderProduct_js'
+      draggable: false,
+      swipe: false,
     });
     slickMain.slick({
       infinite: false,

@@ -32,7 +32,7 @@ import {
   filters,
 } from "./blocks/catalog.js";
 
-//📁 /assets/js/blocks  lkProfile.js
+//📁 /assets/js/blocks .js
 import { openMap, openAddress, checkMethodDelivery, dateBirthday } from "./blocks/lkProfile.js";
 
 //📁 /assets/js/blocks  sliders.js
@@ -40,6 +40,7 @@ import {
   sliderMain,
   sliderProductSpecial,
   sliderProduct,
+  sliderAbout
 } from "./blocks/sliders.js";
 
 //📁 /assets/js/blocks  specialSample.js
@@ -141,5 +142,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //open big image in product
   openImage();
 
-
+  
+  sliderAbout();
 });

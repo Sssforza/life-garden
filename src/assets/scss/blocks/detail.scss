@@ -1,4 +1,26 @@
 @import "../modules/utilities/_variables.scss";
+.image {
+  width: 600px;
+  overflow: hidden;
+  img {
+    margin: auto;
+    display: block;
+    transition: opacity .5s;
+    width: 600px;
+    &:hover  {
+      opacity: 0;
+    }
+  }
+  &__wrap {
+    background-position: 50% 50%;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    cursor: zoom-in;
+  }
+}
+
+
 .detail{
   &__productBox{
     margin-top: 80px;
@@ -43,17 +65,18 @@
     cursor: pointer;
     & svg {
       path {
+        stroke: $textColor;
         transition: $transition;
         display: block;
       }
     }
-    &:hover {
+/*     &:hover {
       svg {
         path {
           stroke: $textColor;
         }
       }
-    }
+    } */
   }
   &__next {
     position: absolute;
@@ -62,17 +85,18 @@
     cursor: pointer;
     & svg {
       path {
+        stroke: $textColor;
         transition: $transition;
         display: block;
       }
     }
-    &:hover {
+/*     &:hover {
       svg {
         path {
           stroke: $textColor;
         }
       }
-    }
+    } */
   }
   &__image {
     width: 690px;
@@ -80,6 +104,7 @@
     border-radius: 30px;
     overflow: hidden;
     background-size: cover;
+    object-fit: cover;
     background-repeat: no-repeat;
     background-position: center;
     &_small {
@@ -159,7 +184,7 @@
     }
   }
   &__bottom {
-    justify-content: start;
+    justify-content: flex-start;
     gap: 65px;
     margin-top: 28px;
     .counter {
@@ -188,7 +213,7 @@
   }
 }
 
-.weight {
+.productWeight {
   &__text {
     font-family: Rubik;
     font-weight: 500;
@@ -220,7 +245,7 @@
   }
 }
 
-.colors {
+.productColors {
   &__text {
     font-weight: 500;
     font-size: 16px;
@@ -281,7 +306,13 @@
     }
   }
 }
-
+.slick-disabled{
+  & svg {
+    path {
+      stroke: #919EAB;
+    }
+  }
+}
 .productTabs {
   margin-top: 40px;
   &__head {
@@ -331,6 +362,7 @@
   &__text {
     font-size: 16px;
     line-height: 20px;
+    transition: $transition;
     &_margin {
       margin-left: 17px;
     }
@@ -341,6 +373,11 @@
       font-size: 14px;
       line-height: 17px;
       color: #919eab;
+    }
+    &_hover{
+      &:hover{
+        color: $green;
+      }
     }
   }
   &__pdf {
@@ -382,7 +419,7 @@
   &__columnRight {
     padding-left: 70px;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 40px;
     width: 50%;

@@ -7,6 +7,7 @@
   <link rel='stylesheet' href="/dist/css/main.css">
   <script type="text/javascript" src="/dist/js/main.js"></script>
 </head>
+
 <body>
   <div class="wrapper">
     <header class="header">
@@ -20,7 +21,7 @@
               <li class="headerTop__menuLi headerTop__menuElse"><a href="#">Еще
                   &#8226;&#8226;&#8226;</a></li>
               <div class="headerTop__menuHide">
-                <li class="headerTop__menuLi"><a href="#">О компании</a></li>
+                <li class="headerTop__menuLi"><a href="/about/">О компании</a></li>
                 <li class="headerTop__menuLi"><a href="#">Новости</a></li>
                 <li class="headerTop__menuLi"><a href="#">Контакты</a></li>
               </div>

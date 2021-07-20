@@ -89,7 +89,8 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
-module.exports = __webpack_require__(3);
+__webpack_require__(3);
+module.exports = __webpack_require__(19);
 
 
 /***/ }),
@@ -11425,7 +11426,7 @@ global.noUiSlider = nouislider__WEBPACK_IMPORTED_MODULE_3___default.a; //📁 /a
 
  //📁 /assets/js/blocks  catalog.js
 
- //📁 /assets/js/blocks  lkProfile.js
+ //📁 /assets/js/blocks .js
 
  //📁 /assets/js/blocks  sliders.js
 
@@ -11497,6 +11498,7 @@ document.addEventListener("DOMContentLoaded", function () {
   Object(_blocks_detail_js__WEBPACK_IMPORTED_MODULE_10__["otherClicks"])(); //open big image in product
 
   Object(_blocks_detail_js__WEBPACK_IMPORTED_MODULE_10__["openImage"])();
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderAbout"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
@@ -19171,6 +19173,7 @@ function dateBirthday() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderMain", function() { return sliderMain; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderProductSpecial", function() { return sliderProductSpecial; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderAbout", function() { return sliderAbout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderProduct", function() { return sliderProduct; });
 // SliderMain
 function sliderMain() {
@@ -19210,6 +19213,22 @@ function sliderProductSpecial() {
       nextArrow: '<div class="productBlock__next"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83984 2L10.8398 10.84L1.83984 19" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>'
     });
   }
+} // sliderAbout
+
+function sliderAbout() {
+  var slickMain = $(".aboutSlider_js");
+
+  if (slickMain.length) {
+    slickMain.slick({
+      infinite: false,
+      speed: 500,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      draggable: false,
+      prevArrow: "<div class=\"aboutSlider__prev\"><svg width=\"14\" height=\"21\" viewBox=\"0 0 14 21\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M12 19L3 10.16L12 2\" stroke=\"#1E7243\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n        </svg></div>",
+      nextArrow: "<div class=\"aboutSlider__next\"><svg width=\"14\" height=\"21\" viewBox=\"0 0 14 21\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M12 19L3 10.16L12 2\" stroke=\"#1E7243\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n        </svg></div>"
+    });
+  }
 } // sliderProduct
 
 function sliderProduct() {
@@ -19222,7 +19241,8 @@ function sliderProduct() {
       slidesToScroll: 1,
       arrows: false,
       fade: true,
-      asNavFor: '.sliderProduct_js'
+      draggable: false,
+      swipe: false
     });
     slickMain.slick({
       infinite: false,
@@ -19284,14 +19304,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkCategories", function() { return checkCategories; });
 function openImage() {
   var imageClick = document.querySelectorAll(".imageClick_js");
-  var image = document.querySelector(".image_js");
+  var image = document.querySelectorAll(".image_js");
+  image.forEach(function (item) {
+    $(item).loupe();
+  });
   imageClick.forEach(function (item) {
     item.addEventListener("click", function () {
       imageClick.forEach(function (el) {
-        el.classList.remove("productCard_checked");
+        el.classList.remove("productCard__checked");
       });
-      item.classList.add("productCard_checked");
-      image.style.backgroundImage = item.style.backgroundImage;
+      item.classList.add("productCard__checked");
     });
   });
 }
@@ -19680,6 +19702,68 @@ function mapAsideScroll() {
     $(".scrollbar-inner").scrollbar();
   }
 }
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports) {
+
+// (c) 2010 jdbartlett, MIT license
+(function (a) {
+  a.fn.loupe = function (b) {
+    var c = a.extend({
+      loupe: "loupe",
+      width: 200,
+      height: 150
+    }, b || {});
+    return this.length ? this.each(function () {
+      var j = a(this),
+          g,
+          k,
+          f = j.is("img") ? j : j.find("img:first"),
+          e,
+          h = function h() {
+        k.hide();
+      },
+          i;
+
+      if (j.data("loupe") != null) {
+        return j.data("loupe", b);
+      }
+
+      e = function e(p) {
+        var o = f.offset(),
+            q = f.outerWidth(),
+            m = f.outerHeight(),
+            l = c.width / 2,
+            n = c.height / 2;
+
+        if (!j.data("loupe") || p.pageX > q + o.left + 10 || p.pageX < o.left - 10 || p.pageY > m + o.top + 10 || p.pageY < o.top - 10) {
+          return h();
+        }
+
+        i = i ? clearTimeout(i) : 0;
+        k.show().css({
+          left: p.pageX - l,
+          top: p.pageY - n
+        });
+        g.css({
+          left: -((p.pageX - o.left) / q * g.width() - l) | 0,
+          top: -((p.pageY - o.top) / m * g.height() - n) | 0
+        });
+      };
+
+      k = a("<div />").addClass(c.loupe).css({
+        width: c.width,
+        height: c.height,
+        position: "absolute",
+        overflow: "hidden"
+      }).append(g = a("<img />").attr("src", j.attr(j.is("img") ? "src" : "href")).css("position", "absolute")).mousemove(e).hide().appendTo("body");
+      j.data("loupe", true).mouseenter(e).mouseout(function () {
+        i = setTimeout(h, 10);
+      });
+    }) : this;
+  };
+})(jQuery);
 
 /***/ })
 /******/ ]);

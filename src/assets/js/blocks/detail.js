@@ -1,17 +1,18 @@
 export function openImage() {
   const imageClick = document.querySelectorAll(".imageClick_js");
-  const image = document.querySelector(".image_js");
+  const image = document.querySelectorAll(".image_js");
+  image.forEach((item) => {
+   $(item).loupe()
+  })
   imageClick.forEach((item) => {
     item.addEventListener("click", () => {
-      imageClick.forEach((el) => {
-        el.classList.remove("productCard_checked");
+       imageClick.forEach((el) => {
+        el.classList.remove("productCard__checked");
       });
-      item.classList.add("productCard_checked");
-      image.style.backgroundImage = item.style.backgroundImage;
-    });
+      item.classList.add("productCard__checked");
+      });
   });
 }
-
 export function otherClicks() {
   const clickWeight = document.querySelectorAll(".weight_js");
   clickWeight.forEach((item) => {

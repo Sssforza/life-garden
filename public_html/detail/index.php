@@ -24,16 +24,23 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 			<div class="detail">
 				<section class="detail__productCard productCard">
 					<div class="productCard__slider">
-						<div class="productCard__image image_js sliderFor_js" style="background-image:url(/dist/img/trash/product.png)">
+						<div class="productCard__image  sliderFor_js">
+							<img class="productCard__image image_js " src="/dist/img/trash/leika1.png">
+							<img class="productCard__image image_js" src="/dist/img/trash/tree.png">
+							<img class="productCard__image image_js" src="/dist/img/trash/cardProductImg2.jpg">
+							<img class="productCard__image image_js" src="/dist/img/trash/product.png">
+							<img class="productCard__image image_js" src="/dist/img/trash/cardProductImg4.jpg">
+							<img class="productCard__image image_js" src="/dist/img/trash/product.png">
+							<img class="productCard__image image_js" src="/dist/img/trash/cardProductImg5.jpg">
 						</div>
 						<div class="productCard__box sliderProduct_js">
-							<div class="productCard__image productCard__image_small imageClick_js productCard__checked" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)"></div>
-							<div class="productCard__image productCard__image_small imageClick_js" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)"></div>
-							<div class="productCard__image productCard__image_small imageClick_js" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)"></div>
-							<div class="productCard__image productCard__image_small imageClick_js" style="background-image:url(/dist/img/trash/product.png)"></div>
-							<div class="productCard__image productCard__image_small imageClick_js" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)"></div>
-							<div class="productCard__image productCard__image_small imageClick_js" style="background-image:url(/dist/img/trash/product.png)"></div>
-							<div class="productCard__image productCard__image_small imageClick_js" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)"></div>
+							<img class="productCard__image imageClick_js productCard__image_small productCard__checked" src="/dist/img/trash/leika1.png">
+							<img class="productCard__image imageClick_js productCard__image_small" src="/dist/img/trash/tree.png">
+							<img class="productCard__image imageClick_js productCard__image_small" src="/dist/img/trash/cardProductImg2.jpg">
+							<img class="productCard__image imageClick_js productCard__image_small" src="/dist/img/trash/product.png">
+							<img class="productCard__image imageClick_js productCard__image_small" src="/dist/img/trash/cardProductImg4.jpg">
+							<img class="productCard__image imageClick_js productCard__image_small" src="/dist/img/trash/product.png">
+							<img class="productCard__image imageClick_js productCard__image_small" src="/dist/img/trash/cardProductImg5.jpg">
 						</div>
 					</div>
 					<div class="productCard__info">
@@ -72,37 +79,37 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/seson.svg'; ?>
 							<div class="productCard__seasonText">Сезон: <span>Лето</span></div>
 						</div>
-						<div class="productCard__weight weight">
-							<div class="weight__text">Вес, кг</div>
-							<div class="weight__container">
-								<div class="weight__item weight_js">2,5 кг</div>
-								<div class="weight__item weight_js">2,5 кг</div>
-								<div class="weight__item weight_js">2,5 кг</div>
-								<div class="weight__item weight_js productCard__checked_small">2,5 кг</div>
+						<div class="productCard__weight productWeight">
+							<div class="productWeight__text">Вес, кг</div>
+							<div class="productWeight__container">
+								<div class="productWeight__item weight_js">2,5 кг</div>
+								<div class="productWeight__item weight_js">2,5 кг</div>
+								<div class="productWeight__item weight_js">2,5 кг</div>
+								<div class="productWeight__item weight_js productCard__checked_small">2,5 кг</div>
 							</div>
 						</div>
-						<div class="productCard__colors colors">
-							<div class="colors__text">
+						<div class="productCard__colors productColors">
+							<div class="productColors__text">
 								Цвет: <span>салатовый микс</span>
 							</div>
-							<div class="colors__box">
-								<div class="colors__item_big color_js productCard__checked_small">
-									<div class="colors__item" style="background-color:#5D9D16;"></div>
+							<div class="productColors__box">
+								<div class="productColors__item_big color_js productCard__checked_small">
+									<div class="productColors__item" style="background-color:#5D9D16;"></div>
 								</div>
-								<div class="colors__item_big color_js">
-									<div class="colors__item" style="background-color:#69BE5E;"></div>
+								<div class="productColors__item_big color_js">
+									<div class="productColors__item" style="background-color:#69BE5E;"></div>
 								</div>
-								<div class="colors__item_big color_js">
-									<div class="colors__item" style="background-color:#4E6D4A;"></div>
+								<div class="productColors__item_big color_js">
+									<div class="productColors__item" style="background-color:#4E6D4A;"></div>
 								</div>
-								<div class="colors__item_big color_js">
-									<div class="colors__item" style="background-color:#169D74;"></div>
+								<div class="productColors__item_big color_js">
+									<div class="productColors__item" style="background-color:#169D74;"></div>
 								</div>
-								<div class="colors__item_big color_js">
-									<div class="colors__item" style="background-color:#34B15E;"></div>
+								<div class="productColors__item_big color_js">
+									<div class="productColors__item" style="background-color:#34B15E;"></div>
 								</div>
-								<div class="colors__item_big color_js">
-									<div class="colors__item" style="background-color:#5ACA51;"></div>
+								<div class="productColors__item_big color_js">
+									<div class="productColors__item" style="background-color:#5ACA51;"></div>
 								</div>
 							</div>
 						</div>
@@ -263,7 +270,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						<div class="productTabs__body">
 							<div class="productTabs__columnLeft">
 								<ul class="productTabs__textUl">
-									<li class="productTabs__textLi productTabs__textLi_color">ул. Маяковского, д. 20 <div class="productTabs__points"></div>
+									<li class="productTabs__textLi">ул. Маяковского, д. 20 <div class="productTabs__points"></div>
 										<div class="availability ">
 											<div class="availability__text productTabs__availability has">
 												<span>есть в наличии</span><span>(5 шт)</span>
@@ -273,7 +280,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 											</div>
 										</div>
 									</li>
-									<li class="productTabs__textLi productTabs__textLi_color">пр. Мира, д. 64<div class="productTabs__points"></div>
+									<li class="productTabs__textLi">пр. Мира, д. 64<div class="productTabs__points"></div>
 										<div class="availability ">
 											<div class="availability__text productTabs__availability has">
 												<span>есть в наличии</span><span>(5 шт)</span>
@@ -283,7 +290,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 											</div>
 										</div>
 									</li>
-									<li class="productTabs__textLi productTabs__textLi_color">пр. Карла Маркса, д. 83<div class="productTabs__points"></div>
+									<li class="productTabs__textLi">пр. Карла Маркса, д. 83<div class="productTabs__points"></div>
 										<div class="availability ">
 											<div class="availability__text productTabs__availability has">
 												<span>есть в наличии</span><span>(5 шт)</span>
@@ -293,7 +300,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 											</div>
 										</div>
 									</li>
-									<li class="productTabs__textLi productTabs__textLi_color">ул. Сакена Сейфуллина, д. 27<div class="productTabs__points"></div>
+									<li class="productTabs__textLi">ул. Сакена Сейфуллина, д. 27<div class="productTabs__points"></div>
 										<div class="availability ">
 											<div class="availability__text productTabs__availability has hidden">
 												<span>есть в наличии</span><span>(5 шт)</span>
@@ -303,7 +310,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 											</div>
 										</div>
 									</li>
-									<li class="productTabs__textLi productTabs__textLi_color">ул. 10 лет Октября, д. 113<div class="productTabs__points"></div>
+									<li class="productTabs__textLi">ул. 10 лет Октября, д. 113<div class="productTabs__points"></div>
 										<div class="availability ">
 											<div class="availability__text productTabs__availability has">
 												<span>есть в наличии</span><span>(5 шт)</span>
@@ -357,21 +364,21 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 											<a class="productTabs__pdf" href="#" download>
 												<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pdf.svg'; ?>
 												</div>
-												<div class="productTabs__text productTabs__text_margin ">Скачать сертификат качества PDF <br><span class="productTabs__text_span ">(755.1 Kb)</span></div>
+												<div class="productTabs__text productTabs__text_margin productTabs__text_hover">Скачать сертификат качества PDF <br><span class="productTabs__text_span ">(755.1 Kb)</span></div>
 											</a>
 										</li>
 										<li class='productTabs__textLi'>
 											<a class="productTabs__pdf" href="#" download>
 												<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pdf.svg'; ?>
 												</div>
-												<div class="productTabs__text productTabs__text_margin ">Скачать лицензию на товар PDF<br><span class="productTabs__text_span ">(755.1 Kb)</span></div>
+												<div class="productTabs__text productTabs__text_margin productTabs__text_hover">Скачать лицензию на товар PDF<br><span class="productTabs__text_span ">(755.1 Kb)</span></div>
 											</a>
 										</li>
 										<li class='productTabs__textLi'>
 											<a class="productTabs__pdf" href="#" download>
 												<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pdf.svg'; ?>
 												</div>
-												<div class="productTabs__text productTabs__text_margin ">Скачать сертификат соответствия<br><span class="productTabs__text_span ">(755.1 Kb)</span></div>
+												<div class="productTabs__text productTabs__text_margin productTabs__text_hover">Скачать сертификат соответствия<br><span class="productTabs__text_span ">(755.1 Kb)</span></div>
 											</a>
 										</li>
 									</ul>
@@ -418,7 +425,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 											<a class="productTabs__pdf" href="#" download>
 												<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pdf.svg'; ?>
 												</div>
-												<div class="productTabs__text productTabs__text_margin ">Скачать инструкцию PDF<br><span class="productTabs__text_span ">(755.1 Kb)</span></div>
+												<div class="productTabs__text productTabs__text_margin productTabs__text_hover">Скачать инструкцию PDF<br><span class="productTabs__text_span ">(755.1 Kb)</span></div>
 											</a>
 										</li>
 									</ul>
