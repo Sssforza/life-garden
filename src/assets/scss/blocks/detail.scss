@@ -103,10 +103,7 @@
     height: 600px;
     border-radius: 30px;
     overflow: hidden;
-    background-size: cover;
     object-fit: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     &_small {
       cursor: pointer;
       max-width: 112px;

@@ -1,15 +1,20 @@
 export function openImage() {
   const imageClick = document.querySelectorAll(".imageClick_js");
-  const image = document.querySelectorAll(".image_js");
-  image.forEach((item) => {
-   $(item).loupe()
-  })
+  let image = document.querySelector(".image_js");
+  const parent = document.querySelector(".imgParent_js");
+  $(image).loupe()
   imageClick.forEach((item) => {
     item.addEventListener("click", () => {
-       imageClick.forEach((el) => {
+      imageClick.forEach((el) => {
         el.classList.remove("productCard__checked");
       });
+      image.parentNode.removeChild(image);
+      image = document.createElement('img')
+      image.classList.add('image_js','productCard__image')
+      image.src = item.src;
+      parent.appendChild(image)
       item.classList.add("productCard__checked");
+      $(image).loupe()
       });
   });
 }

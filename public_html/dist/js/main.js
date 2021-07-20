@@ -19233,25 +19233,15 @@ function sliderAbout() {
 
 function sliderProduct() {
   var slickMain = $(".sliderProduct_js");
-  var slickFor = $(".sliderFor_js");
 
   if (slickMain.length) {
-    slickFor.slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      fade: true,
-      draggable: false,
-      swipe: false
-    });
     slickMain.slick({
       infinite: false,
       speed: 500,
       slidesToShow: 6,
       slidesToScroll: 6,
-      asNavFor: '.sliderFor_js',
       draggable: false,
-      focusOnSelect: true,
+      focusOnSelect: false,
       prevArrow: "<div class=\"productCard__prev\"><svg width=\"30\" height=\"20\" viewBox=\"0 0 30 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t<path d=\"M9.90039 17.8008L2.00037 9.90076L9.90039 2.00073\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\t\t\t<path d=\"M3.40039 9.80078L28.4004 9.80078\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n\t\t\t</svg>\n\t\t\t</div>",
       nextArrow: "<div class=\"productCard__next\"><svg width=\"29\" height=\"20\" viewBox=\"0 0 29 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path d=\"M19.5 2L27.4 9.90002L19.5 17.8\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n      <path d=\"M26 10L1 10\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n      </svg>\n\t  </div>"
     });
@@ -19304,16 +19294,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkCategories", function() { return checkCategories; });
 function openImage() {
   var imageClick = document.querySelectorAll(".imageClick_js");
-  var image = document.querySelectorAll(".image_js");
-  image.forEach(function (item) {
-    $(item).loupe();
-  });
+  var image = document.querySelector(".image_js");
+  var parent = document.querySelector(".imgParent_js");
+  $(image).loupe();
   imageClick.forEach(function (item) {
     item.addEventListener("click", function () {
       imageClick.forEach(function (el) {
         el.classList.remove("productCard__checked");
       });
+      image.parentNode.removeChild(image);
+      image = document.createElement('img');
+      image.classList.add('image_js', 'productCard__image');
+      image.src = item.src;
+      parent.appendChild(image);
       item.classList.add("productCard__checked");
+      $(image).loupe();
     });
   });
 }

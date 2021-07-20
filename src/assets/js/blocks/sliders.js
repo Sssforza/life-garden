@@ -50,14 +50,12 @@ export function sliderAbout() {
       slidesToShow: 2,
       slidesToScroll: 1,
       draggable: false,
-      prevArrow:
-        `<div class="aboutSlider__prev"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+      prevArrow: `<div class="aboutSlider__prev"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 19L3 10.16L12 2" stroke="#1E7243" stroke-width="3" stroke-linecap="round"/>
         </svg></div>`,
-      nextArrow:
-        `<div class="aboutSlider__next"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+      nextArrow: `<div class="aboutSlider__next"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 19L3 10.16L12 2" stroke="#1E7243" stroke-width="3" stroke-linecap="round"/>
-        </svg></div>`
+        </svg></div>`,
     });
   }
 }
@@ -65,24 +63,14 @@ export function sliderAbout() {
 // sliderProduct
 export function sliderProduct() {
   const slickMain = $(".sliderProduct_js");
-  const slickFor = $(".sliderFor_js");
   if (slickMain.length) {
-    slickFor.slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      fade: true,
-      draggable: false,
-      swipe: false,
-    });
     slickMain.slick({
       infinite: false,
       speed: 500,
       slidesToShow: 6,
       slidesToScroll: 6,
-      asNavFor: '.sliderFor_js',
       draggable: false,
-      focusOnSelect: true,
+      focusOnSelect: false,
       prevArrow: `<div class="productCard__prev"><svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M9.90039 17.8008L2.00037 9.90076L9.90039 2.00073" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 			<path d="M3.40039 9.80078L28.4004 9.80078" stroke="#919EAB" stroke-width="2" stroke-linecap="round"/>
