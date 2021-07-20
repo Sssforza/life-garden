@@ -64,7 +64,6 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 
 			</section>
 			<section class="about__care aboutCare container">
-
 				<div class="aboutCare__column">
 					<div class="about__title">C заботой о вашем саде</div>
 					<div class="aboutCare__subtitle">Тщательный контроль сорта и качества посадочного

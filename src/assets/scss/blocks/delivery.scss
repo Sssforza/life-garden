@@ -1,0 +1,130 @@
+@import "../modules/utilities/_variables.scss";
+.delivery {
+  &__container {
+    width: 875px;
+  }
+  &__subtitle {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 26px;
+    &_small {
+      font-size: 20px;
+    }
+  }
+  &__omsk {
+    margin-top: 44px;
+  }
+  &__russia {
+    margin-top: 98px;
+  }
+  &__methods {
+    margin-top: 60px;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 12px;
+    & span {
+      font-weight: bold;
+    }
+    &_margin{
+        margin-top: 22px;
+    }
+  }
+  &__table {
+    margin-top: 42px;
+  }
+  &__title {
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 26px;
+  }
+  &__cash {
+    margin-top: 26px;
+  }
+  &__card {
+    margin-top: 49px;
+  }
+  &__accept {
+    margin-top: 19px;
+    display: flex;
+    align-items: center;
+  }
+  &__masterImg {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  &__visaImg {
+    margin-top: 15px;
+    margin-left: 15px;
+    max-width: 100px;
+    max-height: 100px;
+  }
+  &__mirImg {
+    margin-left: 15px;
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+.deliveryTable {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  &__row {
+    display: flex;
+    gap: 200px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #c7d0d9;
+  }
+  &__title {
+    width: 127px;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  &__middle {
+    display: flex;
+    flex-direction: column;
+    width: 156px;
+  }
+  &__cost {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: $green;
+  }
+  &__price {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 19px;
+    & span {
+      font-family: Roboto;
+      font-weight: 500;
+    }
+  }
+  &__subtitle {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 10px;
+    & span {
+      font-family: Roboto;
+      font-weight: 500;
+    }
+  }
+  &__end {
+  }
+  &__img {
+  }
+
+  &__sdek {
+    width: 127px;
+    height: 28px;
+  }
+  &__post {
+    width: 127px;
+    height: 68px;
+  }
+}
