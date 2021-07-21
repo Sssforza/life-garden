@@ -18815,7 +18815,7 @@ function priceSlider() {
   }
 }
 function catalogPopups() {
-  if (document.querySelector(".catalogCardsPopularLink__js")) {
+  if (document.querySelector(".catalogCardsPopularLink_js")) {
     var closePopapPopular = function closePopapPopular(e) {
       if (popupPopular && e.target !== popupPopular && !popupPopular.contains(e.target)) {
         popupPopular.classList.add("hidden");
@@ -18840,11 +18840,11 @@ function catalogPopups() {
       }
     };
 
-    var btnPopular = document.querySelector(".catalogCardsPopularLink__js");
-    var popularItem = document.querySelectorAll(".catalogCardsPopularItem__js");
-    var popupPopular = document.querySelector(".catalogCardsPopularPopup__js");
-    var btnText = document.querySelector(".catalogCardsPopularLinkText__js");
-    var label = document.querySelectorAll(".catalogCardsPopularLabel__js");
+    var btnPopular = document.querySelector(".catalogCardsPopularLink_js");
+    var popularItem = document.querySelectorAll(".catalogCardsPopularItem_js");
+    var popupPopular = document.querySelector(".catalogCardsPopularPopup_js");
+    var btnText = document.querySelector(".catalogCardsPopularLinkText_js");
+    var label = document.querySelectorAll(".catalogCardsPopularLabel_js");
     btnPopular.addEventListener("click", function () {
       if (popupPopular.classList.contains("hidden")) {
         document.removeEventListener("click", closePopapPopular);
@@ -18872,11 +18872,11 @@ function catalogPopups() {
         }, 300);
       });
     });
-    var btnAlphabet = document.querySelector(".catalogCardsAlphabetLink__js");
-    var popupAlphabet = document.querySelector(".catalogCardsAlphabetPopup__js");
-    var letter = document.querySelectorAll(".catalogCardsAlphabetLetter__js");
-    var linkText = document.querySelector(".catalogCardsAlphabetTextChecked__js");
-    var btnAll = document.querySelector(".catalogCardsAlphabetAll__js");
+    var btnAlphabet = document.querySelector(".catalogCardsAlphabetLink_js");
+    var popupAlphabet = document.querySelector(".catalogCardsAlphabetPopup_js");
+    var letter = document.querySelectorAll(".catalogCardsAlphabetLetter_js");
+    var linkText = document.querySelector(".catalogCardsAlphabetTextChecked_js");
+    var btnAll = document.querySelector(".catalogCardsAlphabetAll_js");
     var arrowOpen = document.querySelector(".open");
     var arrowClose = document.querySelector(".close");
     btnAlphabet.addEventListener("click", function () {
@@ -18962,9 +18962,9 @@ function filters() {
         element.classList.add("catalogMenu__link_checked");
       });
     });
-    var showMore = document.querySelector(".catalogMenuShow__js");
-    var showMoreLinks = document.querySelector(".catalogMenuLinks__js");
-    var showMoreText = document.querySelector(".catalogMenuText__js");
+    var showMore = document.querySelector(".catalogMenuShow_js");
+    var showMoreLinks = document.querySelector(".catalogMenuLinks_js");
+    var showMoreText = document.querySelector(".catalogMenuText_js");
     showMore.addEventListener("click", function () {
       showMoreLinks.classList.toggle("catalogMenu__links_open");
 
@@ -18976,14 +18976,14 @@ function filters() {
         arrowClose(arrowLinkOpen, arrowLinkClose);
       }
     });
-    var down = document.querySelector(".catalogMenuDown__js");
-    var container = document.querySelector(".catalogMenuContainer__js");
-    var stockDown = document.querySelector(".catalogStockDown__js");
-    var stockContainer = document.querySelector(".catalogStockContainer__js");
-    var colorDown = document.querySelector(".catalogColorDown__js");
-    var colorContainer = document.querySelector(".catalogColorContainer__js");
-    var showMoreSmall = document.querySelector(".catalogMenuSmall__js");
-    var showTextSmall = document.querySelector(".catalogMenuTextSmall__js");
+    var down = document.querySelector(".catalogMenuDown_js");
+    var container = document.querySelector(".catalogMenuContainer_js");
+    var stockDown = document.querySelector(".catalogStockDown_js");
+    var stockContainer = document.querySelector(".catalogStockContainer_js");
+    var colorDown = document.querySelector(".catalogColorDown_js");
+    var colorContainer = document.querySelector(".catalogColorContainer_js");
+    var showMoreSmall = document.querySelector(".catalogMenuSmall_js");
+    var showTextSmall = document.querySelector(".catalogMenuTextSmall_js");
     var items = document.querySelector(".catalogMenuItems_js");
     down.addEventListener("click", function () {
       arrowClose(arrowStockOpen, arrowStockClose);

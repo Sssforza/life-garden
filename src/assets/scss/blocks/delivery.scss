@@ -12,6 +12,10 @@
       font-size: 20px;
     }
   }
+  &__tel{
+    pointer-events: none;
+    font-weight: bold;
+  }
   &__omsk {
     margin-top: 44px;
   }
@@ -26,10 +30,10 @@
     line-height: 24px;
     margin-top: 12px;
     & span {
-      font-weight: bold;
+      
     }
-    &_margin{
-        margin-top: 22px;
+    &_margin {
+      margin-top: 22px;
     }
   }
   &__table {
@@ -48,23 +52,14 @@
     margin-top: 49px;
   }
   &__accept {
-    margin-top: 19px;
+    margin-top: 45px;
     display: flex;
     align-items: center;
+    gap: 40px;
+
   }
-  &__masterImg {
-    max-width: 100px;
-    max-height: 100px;
-  }
-  &__visaImg {
-    margin-top: 15px;
-    margin-left: 15px;
-    max-width: 100px;
-    max-height: 100px;
-  }
-  &__mirImg {
-    margin-left: 15px;
-    max-width: 100px;
+  &__img {
+    max-width: 112px;
     max-height: 100px;
   }
 }
@@ -75,7 +70,7 @@
   &__row {
     display: flex;
     gap: 200px;
-    padding-bottom: 26px;
+    padding-bottom: 26px; 
     border-bottom: 1px solid #c7d0d9;
   }
   &__title {
@@ -117,14 +112,8 @@
   &__end {
   }
   &__img {
-  }
-
-  &__sdek {
+    display: block;
     width: 127px;
-    height: 28px;
-  }
-  &__post {
-    width: 127px;
-    height: 68px;
+    height: 100%;
   }
 }

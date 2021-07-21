@@ -22,7 +22,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 					Доставка товаров по всей территории РФ производится компаниями «Почта России» и СДЭК. Скорость
 					и стоимость доставки рассчитываются автоматически при выборе городав корзине интернет-магазина.
 					Дополнительную информацию по доставке можно получить у сотрудника магазина или по телефону
-					<span>8-908-310-48-07</span>
+					<a class="delivery__tel" href="tell: +79083104807" >8-908-310-48-07</a>
 				</div>
 				<div class="delivery__table deliveryTable">
 					<div class="deliveryTable__row">
@@ -59,7 +59,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				</div>
 				<div class="delivery__table deliveryTable">
 					<div class="deliveryTable__row">
-						<img class="deliveryTable__sdek" src="/dist/img/sdek.png">
+						<img class="deliveryTable__img" src="/dist/img/sdek.png">
 						<div class="deliveryTable__middle">
 							<div class="deliveryTable__cost">Стоимость доставки</div>
 							<div class="deliveryTable__subtitle">до пункта выдачи 400 ₽</div>
@@ -72,7 +72,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						</div>
 					</div>
 					<div class="deliveryTable__row">
-						<img class="deliveryTable__post" src="/dist/img/post.png">
+						<img class="deliveryTable__img" src="/dist/img/post.png">
 						<div class="deliveryTable__middle">
 							<div class="deliveryTable__cost">Стоимость доставки</div>
 							<div class="deliveryTable__subtitle">до пункта выдачи 400 ₽</div>
@@ -111,9 +111,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 					</div>
 				</div>
 				<div class="delivery__accept">
-					<img class="delivery__masterImg" src="/dist/img/mastercardGray.png" alt="">
-					<img class="delivery__visaImg" src="/dist/img/visaGray.png" alt="">
-					<img class="delivery__mirImg" src="/dist/img/mirGray.png" alt="">
+					<img class="delivery__img" src="/dist/img/mastercardGray.png" alt="">
+					<img class="delivery__img" src="/dist/img/visaGray.png" alt="">
+					<img class="delivery__img" src="/dist/img/mirGray.png" alt="">
 				</div>
 			</section>
 		</div>

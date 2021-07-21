@@ -1,7 +1,7 @@
 @import "../modules/utilities/_variables.scss";
 
-.master {
-  // .master__header
+.masterClass {
+  // .masterClass__header
 
   &__header {
     margin-top: 28px;
@@ -13,7 +13,7 @@
     width: 376px;
     height: 55px;
   }
-  // .master__archive
+  // .masterClass__archive
 
   &__archive {
     margin-left: 42px;
@@ -51,25 +51,25 @@
   }
 
   &__title {
-    // .master__title_small
+    // .masterClass__title_small
 
     &_small {
     }
   }
 
-  // .master__slider
+  // .masterClass__slider
 
   &__slider {
   }
 }
 
-.masterCard {
-  // .masterCard__columnLeft
+.masterClassCard {
+  // .masterClassCard__columnLeft
 
   &__columnLeft {
   }
 
-  // .masterCard__share
+  // .masterClassCard__share
 
   &__share {
     margin-top: 30px;
@@ -134,36 +134,36 @@
     line-height: 26px;
   }
 
-  // .masterCard__readAll
+  // .masterClassCard__readAll
 
   &__readAll {
-    // .masterCard__readAll_js
+    // .masterClassCard__readAll_js
 
     &_js {
     }
   }
 
-  // .masterCard__footer
+  // .masterClassCard__footer
 
   &__footer {
   }
 
-  // .masterCard__row
+  // .masterClassCard__row
 
   &__row {
   }
 
-  // .masterCard__description
+  // .masterClassCard__description
 
   &__description {
   }
 
-  // .masterCard__value
+  // .masterClassCard__value
 
   &__value {
   }
 
-  // .masterCard__btn
+  // .masterClassCard__btn
 
   &__btn {
   }

@@ -31,7 +31,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 					<aside class="catalog__menu catalogMenu">
 						<form action="">
 							<div class="catalogMenu__box">
-								<ul class="catalogMenu__links catalogMenuLinks__js">
+								<ul class="catalogMenu__links catalogMenuLinks_js">
 									<li><a class="catalogMenu__link catalogMenu__link_checked" href="#">Анис</a></li>
 									<li><a class="catalogMenu__link" href="#">Базилик</a></li>
 									<li><a class="catalogMenu__link" href="#">Валериана</a></li>
@@ -55,7 +55,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<li><a class="catalogMenu__link" href="#">Горчица</a></li>
 									<li><a class="catalogMenu__link" href="#">Душица</a></li>
 								</ul>
-								<div class="catalogMenu__show catalogMenuShow__js"> <span class="catalogMenuText__js">Показать еще</span>
+								<div class="catalogMenu__show catalogMenuShow_js"> <span class="catalogMenuText_js">Показать еще</span>
 									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowLink.svg'; ?>
 								</div>
 							</div>
@@ -75,11 +75,11 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								</div>
 							</div>
 							<div class="catalogMenu__sort">
-								<div class="catalogMenu__down catalogMenuDown__js">
+								<div class="catalogMenu__down catalogMenuDown_js">
 									<span class="catalogMenu__title">Сорт</span>
 									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowSort.svg'; ?>
 								</div>
-								<div class="catalogMenu__container catalogMenuContainer__js">
+								<div class="catalogMenu__container catalogMenuContainer_js">
 									<div class="scrollGreen catalogMenu__items catalogMenuItems_js">
 										<div>
 											<label class="catalogMenu__label">
@@ -149,18 +149,18 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 										</div>
 									</div>
 
-									<div class="catalogMenu__show catalogMenu__show_small catalogMenuSmall__js">
-										<span class="catalogMenuTextSmall__js">Показать еще</span>
+									<div class="catalogMenu__show catalogMenu__show_small catalogMenuSmall_js">
+										<span class="catalogMenuTextSmall_js">Показать еще</span>
 										<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShow.svg'; ?>
 									</div>
 								</div>
 							</div>
 							<div class="catalogMenu__stock">
-								<div class="catalogMenu__down catalogStockDown__js">
+								<div class="catalogMenu__down catalogStockDown_js">
 									<span class="catalogMenu__title">В наличии</span>
 									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowStock.svg'; ?>
 								</div>
-								<div class="catalogMenu__container catalogStockContainer__js">
+								<div class="catalogMenu__container catalogStockContainer_js">
 									<div class="catalogMenu__items">
 										<div class="catalogLabel__container">
 											<label class="catalogMenu__label">
@@ -178,11 +178,11 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								</div>
 							</div>
 							<div class="catalogMenu__color">
-								<div class="catalogMenu__down catalogColorDown__js">
+								<div class="catalogMenu__down catalogColorDown_js">
 									<span class="catalogMenu__title">Окрас хвои</span>
 									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowColor.svg'; ?>
 								</div>
-								<div class="catalogMenu__container catalogColorContainer__js">
+								<div class="catalogMenu__container catalogColorContainer_js">
 									<div class="catalogMenu__items">
 										<div class="catalogInput__container">
 											<label class="catalogMenu__label">
@@ -235,63 +235,63 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 					<div class="catalog__cards catalogCards">
 						<div class="catalogCards__filters">
 							<div class="catalogCards__popular catalogCardsPopular ">
-								<div class="catalogCardsPopular__link catalogCardsPopularLink__js">
-									<div class="catalogCardsPopular__linkText catalogCardsPopularLinkText__js">Сначала популярные</div>
+								<div class="catalogCardsPopular__link catalogCardsPopularLink_js">
+									<div class="catalogCardsPopular__linkText catalogCardsPopularLinkText_js">Сначала популярные</div>
 									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pop1.svg'; ?>
 								</div>
 
-								<div class="catalogCardsPopular__popup catalogCardsPopularPopup__js hidden">
-									<div class="catalogCardsPopular__item catalogCardsPopularItem__js"> <input type="radio" id="contactChoice1" name="popular" checked>
-										<label class="catalogCardsPopular__label catalogCardsPopularLabel__js" for="contactChoice1">Сначала популярные</label>
+								<div class="catalogCardsPopular__popup catalogCardsPopularPopup_js hidden">
+									<div class="catalogCardsPopular__item catalogCardsPopularItem_js"> <input type="radio" id="contactChoice1" name="popular" checked>
+										<label class="catalogCardsPopular__label catalogCardsPopularLabel_js" for="contactChoice1">Сначала популярные</label>
 									</div>
-									<div class="catalogCardsPopular__item catalogCardsPopularItem__js"><input type="radio" id="contactChoice2" name="popular">
-										<label class="catalogCardsPopular__label catalogCardsPopularLabel__js" for="contactChoice2">Сначала дешевле</label>
+									<div class="catalogCardsPopular__item catalogCardsPopularItem_js"><input type="radio" id="contactChoice2" name="popular">
+										<label class="catalogCardsPopular__label catalogCardsPopularLabel_js" for="contactChoice2">Сначала дешевле</label>
 									</div>
-									<div class="catalogCardsPopular__item catalogCardsPopularItem__js"><input type="radio" id="contactChoice3" name="popular">
-										<label class="catalogCardsPopular__label catalogCardsPopularLabel__js" for="contactChoice3">Сначала дороже</label>
+									<div class="catalogCardsPopular__item catalogCardsPopularItem_js"><input type="radio" id="contactChoice3" name="popular">
+										<label class="catalogCardsPopular__label catalogCardsPopularLabel_js" for="contactChoice3">Сначала дороже</label>
 									</div>
 								</div>
 							</div>
 							<div class="catalogCards__alphabet catalogCardsAlphabet">
-								<div class="catalogCardsAlphabet__link catalogCardsAlphabetLink__js"> <span>По алфавиту <span class="catalogCardsAlphabet__textChecked catalogCardsAlphabetTextChecked__js">все</span></span>
+								<div class="catalogCardsAlphabet__link catalogCardsAlphabetLink_js"> <span>По алфавиту <span class="catalogCardsAlphabet__textChecked catalogCardsAlphabetTextChecked_js">все</span></span>
 
 									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/alphabet.svg'; ?></div>
-								<div class="catalogCardsAlphabet__popup catalogCardsAlphabetPopup__js hidden">
+								<div class="catalogCardsAlphabet__popup catalogCardsAlphabetPopup_js hidden">
 									<div class="catalogCardsAlphabet__container">
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">А</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Б</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">В</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Г</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Д</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Е</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ё</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ж</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">З</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">И</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Й</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">К</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Л</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">М</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Н</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">О</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">П</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">А</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Б</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">В</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Г</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Д</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Е</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Ё</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Ж</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">З</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">И</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Й</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">К</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Л</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">М</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Н</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">О</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">П</div>
 									</div>
 									<div class="catalogCardsAlphabet__containerNext">
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Р</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">С</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Т</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">У</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ф</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Х</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ц</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ч</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ш</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Щ</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Э</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Ю</div>
-										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter__js">Я</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Р</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">С</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Т</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">У</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Ф</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Х</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Ц</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Ч</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Ш</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Щ</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Э</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Ю</div>
+										<div class="catalogCardsAlphabet__letter catalogCardsAlphabetLetter_js">Я</div>
 									</div>
-									<div class="catalogCardsAlphabet__all catalogCardsAlphabetAll__js">Показать все</div>
+									<div class="catalogCardsAlphabet__all catalogCardsAlphabetAll_js">Показать все</div>
 								</div>
 							</div>
 						</div>
@@ -931,13 +931,13 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="pagination__prev">
 								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pagiLeft.svg'; ?>
 							</div>
-							<a href="#" class="pagination__number paginationNumber__js pagination_checked">1</a>
-							<a href="#" class="pagination__number paginationNumber__js">2</a>
-							<a href="#" class="pagination__number paginationNumber__js">3</a>
-							<a href="#" class="pagination__number paginationNumber__js">4</a>
-							<a href="#" class="pagination__number paginationNumber__js">5</a>
+							<a href="#" class="pagination__number paginationNumber_js pagination_checked">1</a>
+							<a href="#" class="pagination__number paginationNumber_js">2</a>
+							<a href="#" class="pagination__number paginationNumber_js">3</a>
+							<a href="#" class="pagination__number paginationNumber_js">4</a>
+							<a href="#" class="pagination__number paginationNumber_js">5</a>
 							<a href="#" class="pagination__points">....</a>
-							<a href="#" class="pagination__number paginationNumber__js">10</a>
+							<a href="#" class="pagination__number paginationNumber_js">10</a>
 							<a href="#" class="pagination__next">
 								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pagiRight.svg'; ?>
 							</a>

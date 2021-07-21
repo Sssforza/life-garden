@@ -80,9 +80,9 @@
                 <div class="footer__accept footerAccept">
                     <div class="footer__title footer__title_small">Мы принимаем</div>
                     <div class="footerAccept__cards">
-                        <img class="footerAccept__masterImg" src="/dist/img/mastercard.png" alt="">
-                        <img class="footerAccept__visaImg" src="/dist/img/visa.png" alt="">
-                        <img class="footerAccept__mirImg" src="/dist/img/mir.png" alt="">
+                        <img class="footerAccept__img" src="/dist/img/mastercard.png" alt="">
+                        <img class="footerAccept__img" src="/dist/img/visa.png" alt="">
+                        <img class="footerAccept__img" src="/dist/img/mir.png" alt="">
                     </div>
                 </div>
                 <div class="footer__end footerEnd">

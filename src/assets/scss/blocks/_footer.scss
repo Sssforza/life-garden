@@ -263,19 +263,10 @@
   &__cards {
     display: flex;
     align-items: center;
+    gap: 25px;
+    margin-top: 32px;
   }
-  &__masterImg {
-    max-width: 100px;
-    max-height: 100px;
-  }
-  &__visaImg {
-    margin-top: 15px;
-    margin-left: 15px;
-    max-width: 100px;
-    max-height: 100px;
-  }
-  &__mirImg {
-    margin-left: 15px;
+  &__img {
     max-width: 100px;
     max-height: 100px;
   }
