@@ -16,7 +16,7 @@
           <div class="header__container">
             <ul class="headerTop__menu">
               <li class="headerTop__menuLi"><a href="/delivery/">Доставка и оплата</a></li>
-              <li class="headerTop__menuLi"><a href="#">Семинары</a></li>
+              <li class="headerTop__menuLi"><a href="/master/">Семинары</a></li>
               <li class="headerTop__menuLi"><a href="#">Блог огородника</a></li>
               <li class="headerTop__menuLi headerTop__menuElse"><a href="#">Еще
                   &#8226;&#8226;&#8226;</a></li>

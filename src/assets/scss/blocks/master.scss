@@ -1,0 +1,170 @@
+@import "../modules/utilities/_variables.scss";
+
+.master {
+  // .master__header
+
+  &__header {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__choice {
+    width: 376px;
+    height: 55px;
+  }
+  // .master__archive
+
+  &__archive {
+    margin-left: 42px;
+    display: flex;
+    align-items: center;
+    & svg {
+      path {
+        display: block;
+      }
+    }
+  }
+
+  &__archiveText {
+    margin-left: 10px;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 13px;
+    & span {
+      color: $green;
+      cursor: pointer;
+      border-bottom: 2px dashed $green;
+    }
+  }
+
+  &__container {
+    margin-top: 37px;
+  }
+
+  &__card {
+    display: flex;
+  }
+
+  &__footer {
+  }
+
+  &__title {
+    // .master__title_small
+
+    &_small {
+    }
+  }
+
+  // .master__slider
+
+  &__slider {
+  }
+}
+
+.masterCard {
+  // .masterCard__columnLeft
+
+  &__columnLeft {
+  }
+
+  // .masterCard__share
+
+  &__share {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    & span {
+      font-family: Rubik;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__img {
+    width: 528px;
+    height: 370px;
+  }
+  &__link {
+    margin-left: 12px;
+    & svg {
+      path {
+        display: block;
+      }
+    }
+  }
+  &__columnRight {
+    margin-left: 60px;
+  }
+  &__header {
+    display: flex;
+    align-items: flex-start;
+  }
+  &__date {
+    display: flex;
+    align-items: center;
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 47px;
+    color: $green;
+    & span {
+      margin-left: 17px;
+      font-family: Firasans;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+      color: $textColor;
+    }
+  }
+  &__title {
+    margin-left: 40px;
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 40px;
+  }
+  &__body {
+    margin-top: 25px;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  // .masterCard__readAll
+
+  &__readAll {
+    // .masterCard__readAll_js
+
+    &_js {
+    }
+  }
+
+  // .masterCard__footer
+
+  &__footer {
+  }
+
+  // .masterCard__row
+
+  &__row {
+  }
+
+  // .masterCard__description
+
+  &__description {
+  }
+
+  // .masterCard__value
+
+  &__value {
+  }
+
+  // .masterCard__btn
+
+  &__btn {
+  }
+}

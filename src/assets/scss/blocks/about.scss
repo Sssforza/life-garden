@@ -140,6 +140,11 @@
   flex-direction: column;
   align-items: center;
   &__icon {
+    & svg {
+      path {
+        display: block;
+      }
+    }
   }
 
   &__title {

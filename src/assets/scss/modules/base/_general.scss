@@ -76,9 +76,9 @@ body {
     align-items: center;
     font-size: 16px;
     line-height: 24px;
-    & svg{
+    & svg {
       fill: #98a6b4;
-      path{
+      path {
         display: block;
       }
     }
@@ -211,6 +211,40 @@ body {
       size: 16px;
     }
     line-height: 24px;
+  }
+}
+.choice {
+  width: 450px;
+  height: 55px;
+  background: #f2f3f4;
+  mix-blend-mode: normal;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Rubik;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+
+  &__btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 221px;
+    height: 49px;
+    background: #f2f3f4;
+    border-radius: 50px;
+    transition: $transition;
+    margin: 0 3px;
+    &:hover {
+      background: $jaundiced;
+    }
+    &_checked {
+      background: $jaundiced;
+      pointer-events: none;
+    }
   }
 }
 .productBlock {

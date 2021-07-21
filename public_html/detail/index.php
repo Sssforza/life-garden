@@ -25,7 +25,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				<section class="detail__productCard productCard">
 					<div class="productCard__slider">
 						<div class="imgParent_js"></div>
-							<img class="productCard__image image_js" src="/dist/img/trash/aboutSlide1.jpg">
+						<img class="productCard__image image_js" src="/dist/img/trash/aboutSlide1.jpg">
 						<div class="productCard__box sliderProduct_js">
 							<img class="productCard__image imageClick_js productCard__image_small productCard__checked" src="/dist/img/trash/aboutSlide1.jpg">
 							<img class="productCard__image imageClick_js productCard__image_small" src="/dist/img/trash/aboutSlide2.jpg">
@@ -179,7 +179,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								</div>
 								<div class="productTabs__description">Состав семян газона:
 								</div>
-								<ul class="productTabs__textUl productTabs__textUl_margin ">
+								<ul class="productTabs__textUl productTabs__textUl_indention ">
 									<li class="productTabs__textLi">Овсяница красная Гринлайт — 10%</li>
 									<li class="productTabs__textLi">Мятлик луговой Балин — 10%</li>
 									<li class="productTabs__textLi">Райграс пастбищный Дабл — 40%</li>
@@ -191,25 +191,25 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/winter.svg'; ?>
 									</div>
 
-									<div class="productTabs__text productTabs__text_margin ">Все растения с высокой
+									<div class="productTabs__text productTabs__text_indention ">Все растения с высокой
 										зимостойкостью</div>
 								</div>
 								<div class="productTabs__item">
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/infoCard.svg'; ?>
 									</div>
 
-									<div class="productTabs__text  productTabs__text_margin">Доставка бесплатно
+									<div class="productTabs__text  productTabs__text_indention">Доставка бесплатно
 										от 2000 ₽ по Омску</div>
 								</div>
 								<div class="productTabs__item">
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/infoDel.svg'; ?>
 									</div>
-									<div class="productTabs__text productTabs__text_margin">Оплата банковской картой</div>
+									<div class="productTabs__text productTabs__text_indention">Оплата банковской картой</div>
 								</div>
 								<div class="productTabs__item">
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/guarented.svg'; ?>
 									</div>
-									<div class="productTabs__text productTabs__text_margin">Гарантия 90 дней
+									<div class="productTabs__text productTabs__text_indention">Гарантия 90 дней
 										на весь посадочный
 										материал</div>
 								</div>
@@ -233,25 +233,25 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/winter.svg'; ?>
 									</div>
 
-									<div class="productTabs__text productTabs__text_margin ">Все растения с высокой
+									<div class="productTabs__text productTabs__text_indention ">Все растения с высокой
 										зимостойкостью</div>
 								</div>
 								<div class="productTabs__item">
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/infoCard.svg'; ?>
 									</div>
 
-									<div class="productTabs__text  productTabs__text_margin">Доставка бесплатно
+									<div class="productTabs__text  productTabs__text_indention">Доставка бесплатно
 										от 2000 ₽ по Омску</div>
 								</div>
 								<div class="productTabs__item">
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/infoDel.svg'; ?>
 									</div>
-									<div class="productTabs__text productTabs__text_margin">Оплата банковской картой</div>
+									<div class="productTabs__text productTabs__text_indention">Оплата банковской картой</div>
 								</div>
 								<div class="productTabs__item">
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/guarented.svg'; ?>
 									</div>
-									<div class="productTabs__text productTabs__text_margin">Гарантия 90 дней
+									<div class="productTabs__text productTabs__text_indention">Гарантия 90 дней
 										на весь посадочный
 										материал</div>
 								</div>
@@ -321,25 +321,25 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/winter.svg'; ?>
 									</div>
 
-									<div class="productTabs__text productTabs__text_margin ">Все растения с высокой
+									<div class="productTabs__text productTabs__text_indention ">Все растения с высокой
 										зимостойкостью</div>
 								</div>
 								<div class="productTabs__item">
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/infoCard.svg'; ?>
 									</div>
 
-									<div class="productTabs__text  productTabs__text_margin">Доставка бесплатно
+									<div class="productTabs__text  productTabs__text_indention">Доставка бесплатно
 										от 2000 ₽ по Омску</div>
 								</div>
 								<div class="productTabs__item">
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/infoDel.svg'; ?>
 									</div>
-									<div class="productTabs__text productTabs__text_margin">Оплата банковской картой</div>
+									<div class="productTabs__text productTabs__text_indention">Оплата банковской картой</div>
 								</div>
 								<div class="productTabs__item">
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/guarented.svg'; ?>
 									</div>
-									<div class="productTabs__text productTabs__text_margin">Гарантия 90 дней
+									<div class="productTabs__text productTabs__text_indention">Гарантия 90 дней
 										на весь посадочный
 										материал</div>
 								</div>
@@ -352,28 +352,20 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="productTabs__columnLeft">
 								<div class="productTabs__text">
 									<span>В данном разделе собраны документы, относящиеся к данному товару.</span>
-									<ul class="productTabs__textUl productTabs__textUl_margin">
-										<li class='productTabs__textLi'>
-											<a class="productTabs__pdf" href="#" download>
-												<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pdf.svg'; ?>
-												</div>
-												<div class="productTabs__text productTabs__text_margin productTabs__text_hover">Скачать сертификат качества PDF <br><span class="productTabs__text_span ">(755.1 Kb)</span></div>
-											</a>
+									<ul class="productTabs__textUl productTabs__textUl_indention">
+										<li class='productTabs__itemLi'>
+											<a class="productTabs__pdf" href="">Скачать сертификат качества PDF</a>
+											<span class="productTabs__pdfSpan ">(755.1 Kb)</span>
 										</li>
-										<li class='productTabs__textLi'>
-											<a class="productTabs__pdf" href="#" download>
-												<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pdf.svg'; ?>
-												</div>
-												<div class="productTabs__text productTabs__text_margin productTabs__text_hover">Скачать лицензию на товар PDF<br><span class="productTabs__text_span ">(755.1 Kb)</span></div>
-											</a>
+										<li class='productTabs__itemLi'>
+											<a class="productTabs__pdf" href="">Скачать лицензию на товар PDF</a>
+											<span class="productTabs__pdfSpan ">(755.1 Kb)</span>
 										</li>
-										<li class='productTabs__textLi'>
-											<a class="productTabs__pdf" href="#" download>
-												<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pdf.svg'; ?>
-												</div>
-												<div class="productTabs__text productTabs__text_margin productTabs__text_hover">Скачать сертификат соответствия<br><span class="productTabs__text_span ">(755.1 Kb)</span></div>
-											</a>
+										<li class='productTabs__itemLi'>
+											<a class="productTabs__pdf" href="">Скачать сертификат соответствия</a>
+											<span class="productTabs__pdfSpan ">(755.1 Kb)</span>
 										</li>
+
 									</ul>
 								</div>
 							</div>
@@ -382,25 +374,25 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/winter.svg'; ?>
 									</div>
 
-									<div class="productTabs__text productTabs__text_margin ">Все растения с высокой
+									<div class="productTabs__text productTabs__text_indention ">Все растения с высокой
 										зимостойкостью</div>
 								</div>
 								<div class="productTabs__item">
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/infoCard.svg'; ?>
 									</div>
 
-									<div class="productTabs__text  productTabs__text_margin">Доставка бесплатно
+									<div class="productTabs__text  productTabs__text_indention">Доставка бесплатно
 										от 2000 ₽ по Омску</div>
 								</div>
 								<div class="productTabs__item">
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/infoDel.svg'; ?>
 									</div>
-									<div class="productTabs__text productTabs__text_margin">Оплата банковской картой</div>
+									<div class="productTabs__text productTabs__text_indention">Оплата банковской картой</div>
 								</div>
 								<div class="productTabs__item">
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/guarented.svg'; ?>
 									</div>
-									<div class="productTabs__text productTabs__text_margin">Гарантия 90 дней
+									<div class="productTabs__text productTabs__text_indention">Гарантия 90 дней
 										на весь посадочный
 										материал</div>
 								</div>
@@ -413,13 +405,10 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="productTabs__columnLeft">
 								<div class="productTabs__text">
 									<span>На все товары мы предоставляем инструкцию по посадке растений.</span>
-									<ul class="productTabs__textUl productTabs__textUl_margin">
-										<li class='productTabs__textLi'>
-											<a class="productTabs__pdf" href="#" download>
-												<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pdf.svg'; ?>
-												</div>
-												<div class="productTabs__text productTabs__text_margin productTabs__text_hover">Скачать инструкцию PDF<br><span class="productTabs__text_span ">(755.1 Kb)</span></div>
-											</a>
+									<ul class="productTabs__textUl productTabs__textUl_indention">
+										<li class='productTabs__itemLi'>
+											<a class="productTabs__pdf" href="">Скачать инструкцию PDF</a>
+											<span class="productTabs__pdfSpan ">(755.1 Kb)</span>
 										</li>
 									</ul>
 								</div>
@@ -429,25 +418,25 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/winter.svg'; ?>
 									</div>
 
-									<div class="productTabs__text productTabs__text_margin ">Все растения с высокой
+									<div class="productTabs__text productTabs__text_indention ">Все растения с высокой
 										зимостойкостью</div>
 								</div>
 								<div class="productTabs__item">
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/infoCard.svg'; ?>
 									</div>
 
-									<div class="productTabs__text  productTabs__text_margin">Доставка бесплатно
+									<div class="productTabs__text  productTabs__text_indention">Доставка бесплатно
 										от 2000 ₽ по Омску</div>
 								</div>
 								<div class="productTabs__item">
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/infoDel.svg'; ?>
 									</div>
-									<div class="productTabs__text productTabs__text_margin">Оплата банковской картой</div>
+									<div class="productTabs__text productTabs__text_indention">Оплата банковской картой</div>
 								</div>
 								<div class="productTabs__item">
 									<div class="productTabs__svg"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/guarented.svg'; ?>
 									</div>
-									<div class="productTabs__text productTabs__text_margin">Гарантия 90 дней
+									<div class="productTabs__text productTabs__text_indention">Гарантия 90 дней
 										на весь посадочный
 										материал</div>
 								</div>
@@ -456,7 +445,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 					</div>
 					<div class="infoReviewsNot_js productReviews hidden">
 						<div class="productTabs__name">Отзывы</div>
-						<div class="productTabs__body productTabs__body_margin">
+						<div class="productTabs__body productTabs__body_indention">
 							<div class="productReviews__columnLeft">
 								<div class="review productReviews__stars">
 									<div class="review__list">
@@ -476,9 +465,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 											<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 										</div>
 									</div>
-									<div class="review__how productReviews__text productReviews__text_margin">Нет отзывов</div>
+									<div class="review__how productReviews__text productReviews__text_indention">Нет отзывов</div>
 								</div>
-								<div class="btn productReviews__btn">Написать отзыв</div>
+								<a class="btn productReviews__btn" href="#">Написать отзыв</a>
 							</div>
 							<div class="productReviews__columnRight">
 								<div class="productReviews__description">Помогите другим пользователям с выбором - будьте первым, кто поделиться своим <br> мнением об этом товаре</div>
@@ -487,7 +476,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 					</div>
 					<div id="reviews" class="productTabs__main info_js productReviews hidden">
 						<div class="productTabs__name">Отзывы</div>
-						<div class="productTabs__body productTabs__body_margin ">
+						<div class="productTabs__body productTabs__body_indention ">
 							<div class="productReviews__columnLeft">
 								<div class="review productReviews__stars">
 									<div class="review__list">
@@ -508,7 +497,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 											<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
 										</div>
 									</div>
-									<div class="review__how productReviews__text productReviews__text_margin">24 отзыва</div>
+									<div class="review__how productReviews__text productReviews__text_indention">24 отзыва</div>
 								</div>
 								<div class="productReviews__evaluations">
 									<div class="productReviews__text productReviews__text_bold">
@@ -607,7 +596,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									</div>
 								</div>
 
-								<div class="btn productReviews__btn">Написать отзыв</div>
+								<a class="btn productReviews__btn" href="#">Написать отзыв</a>
 							</div>
 
 							<div class="productReviews__columnRight">
@@ -635,15 +624,15 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 											</div>
 										</div>
 									</div>
-									<div class="productReviews__text productReviews__text_margin">
+									<div class="productReviews__text productReviews__text_indention">
 										На самом деле, ещё очень рано судить о качестве материала, так как купила ее 12го апреля,то есть менее суток ещё прошло, но уже развернула и кое-что вижу. Есть парочка маленьких свежих корешков, главные корни крепкие без признаков гниения. Правда, один такой корень был надломлен, ведь чтобы упаковать, эти корни сгибают и надрезают.
 									</div>
 									<div class="productReviews__title">Достоинства:</div>
-									<div class="productReviews__text productReviews__text_margin">
+									<div class="productReviews__text productReviews__text_indention">
 										Цена, очень низкая
 									</div>
 									<div class="productReviews__title">Недостатки:</div>
-									<div class="productReviews__text productReviews__text_margin">
+									<div class="productReviews__text productReviews__text_indention">
 										Посеял ровно месяц назад! Телал все по технологии! Сеял на чернозем, чернозем заранее приобрел, Растет очень очень медленно!!! Подивал каждый вечер, да и дожди поливали очень сильно!
 									</div>
 									<div class="productReviews__text productReviews__text_gray">
@@ -679,15 +668,15 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 										</div>
 
 									</div>
-									<div class="productReviews__text productReviews__text_margin">
+									<div class="productReviews__text productReviews__text_indention">
 										На самом деле, ещё очень рано судить о качестве материала, так как купила ее 12го апреля,то есть менее суток ещё прошло, но уже развернула и кое-что вижу. Есть парочка маленьких свежих корешков, главные корни крепкие без признаков гниения. Правда, один такой корень был надломлен, ведь чтобы упаковать, эти корни сгибают и надрезают.
 									</div>
 									<div class="productReviews__title">Достоинства:</div>
-									<div class="productReviews__text productReviews__text_margin">
+									<div class="productReviews__text productReviews__text_indention">
 										Цена, очень низкая
 									</div>
 									<div class="productReviews__title">Недостатки:</div>
-									<div class="productReviews__text productReviews__text_margin">
+									<div class="productReviews__text productReviews__text_indention">
 										Посеял ровно месяц назад! Телал все по технологии! Сеял на чернозем, чернозем заранее приобрел, Растет очень очень медленно!!! Подивал каждый вечер, да и дожди поливали очень сильно!
 									</div>
 									<div class="productReviews__text productReviews__text_gray">
@@ -698,12 +687,12 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 										<div class="productReviews__button">Нет &nbsp;<span> 0</span></div>
 									</div>
 								</div>
-								<a class="productReviews__link" href="#">Показать больше отзывов</a>
+								<div class="productReviews__link"><span>Показать больше отзывов</span></div>
 							</div>
 						</div>
 					</div>
 					<div class="detail__productBox productBox">
-						<div class="productBox__hit infoHit_js reviews">
+						<div class="productBox__hit">
 							<div class="productTabs__name">Хит продаж</div>
 							<div class="productSpecial__productBlock productBlock">
 								<div class="productBlock__content sliderProductSpecial_js productBlockBox_js show" data-slider="novelty">
@@ -1150,7 +1139,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								</div>
 							</div>
 						</div>
-						<div class="productBox__additional infoAdditional_js reviews">
+						<div class="productBox__additional">
 							<div class="productTabs__name">Дополнительные товары</div>
 							<div class="productSpecial__productBlock productBlock">
 								<div class="productBlock__content sliderProductSpecial_js productBlockBox_js show" data-slider="novelty">
