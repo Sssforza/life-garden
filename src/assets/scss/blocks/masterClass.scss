@@ -45,7 +45,7 @@
   &__sliderNav {
     margin: 16px 0;
     .slick-slide {
-      margin: 0 5px;
+      margin: 0 8px;
     }
     .slick-current {
       & img {
@@ -55,7 +55,7 @@
       }
     }
     .slick-list {
-      margin: 0 -5px;
+      margin: 0 -8px;
     }
   }
   &__slide {
