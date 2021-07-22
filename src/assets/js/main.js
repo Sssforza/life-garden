@@ -33,24 +33,33 @@ import {
 } from "./blocks/catalog.js";
 
 //📁 /assets/js/blocks .js
-import { openMap, openAddress, checkMethodDelivery, dateBirthday } from "./blocks/lkProfile.js";
+import {
+  openMap,
+  openAddress,
+  checkMethodDelivery,
+  dateBirthday,
+} from "./blocks/lkProfile.js";
 
 //📁 /assets/js/blocks  sliders.js
 import {
   sliderMain,
   sliderProductSpecial,
   sliderProduct,
-  sliderAbout
+  sliderAbout,
+  sliderMasterClass,
 } from "./blocks/sliders.js";
 
 //📁 /assets/js/blocks  specialSample.js
 import { specialSampleTabs } from "./blocks/specialSample.js";
 
 //📁 /assets/js/blocks  product.js
-import { openImage, checkCategories, otherClicks} from "./blocks/detail.js";
+import { openImage, checkCategories, otherClicks } from "./blocks/detail.js";
+
+//📁 /assets/js/blocks  masterClass.js
+import { masterClassPopups, masterClassBuy } from "./blocks/masterClass.js";
 
 //📁 /assets/js/blocks  specialSample.js
-import { mainGardenShow } from "./blocks/showFull.js";
+import { mainGardenShow, masterClassShow } from "./blocks/showFull.js";
 
 //📁 /assets/js/blocks  specialSample.js
 import { mapInit } from "./blocks/map.js";
@@ -99,6 +108,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // main garden show all
   mainGardenShow();
 
+  // mster-class show all
+  masterClassShow();
+
   // validation e-mail
   footerValidationEmail();
 
@@ -121,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
   openMap();
 
   //check method delivery
-  checkMethodDelivery()
+  checkMethodDelivery();
 
   //open lists of shops in lk
   openAddress();
@@ -132,16 +144,24 @@ document.addEventListener("DOMContentLoaded", function () {
   //open client
   headerOpenClient();
 
-
   //check category in product
   checkCategories();
 
   //other clicks in product
   otherClicks();
-  
+
   //open big image in product
   openImage();
 
-  
+  // slick slider About page
   sliderAbout();
+  
+  // slick slider MasterClass page
+  sliderMasterClass();
+
+  // all archives MasterClass page
+  masterClassPopups();
+
+  // buy popup MasterClass page
+  masterClassBuy();
 });

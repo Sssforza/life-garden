@@ -65,7 +65,6 @@ export function sliderProduct() {
   const slickMain = $(".sliderProduct_js");
   if (slickMain.length) {
     slickMain.slick({
-      infinite: false,
       speed: 500,
       slidesToShow: 6,
       slidesToScroll: 6,
@@ -81,6 +80,32 @@ export function sliderProduct() {
       <path d="M26 10L1 10" stroke="#919EAB" stroke-width="2" stroke-linecap="round"/>
       </svg>
 	  </div>`,
+    });
+  }
+}
+export function sliderMasterClass() {
+  const sliderFor = $(".masterClass__sliderFor_js");
+  const sliderNav = $(".masterClass__sliderNav_js");
+  if (sliderFor.length) {
+    sliderFor.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true,
+      asNavFor: ".masterClass__sliderNav_js",
+      prevArrow: `<div class="masterClass__prev"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 19L3 10.16L12 2" stroke="#1E7243" stroke-width="3" stroke-linecap="round"/>
+      </svg></div>`,
+      nextArrow: `<div class="masterClass__next"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 19L3 10.16L12 2" stroke="#1E7243" stroke-width="3" stroke-linecap="round"/>
+      </svg></div>`,
+    });
+    sliderNav.slick({
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      asNavFor: ".masterClass__sliderFor_js",
+      focusOnSelect: true,
+      arrows: false,
+      draggable: false
     });
   }
 }

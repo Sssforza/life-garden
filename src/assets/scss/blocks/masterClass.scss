@@ -13,34 +13,11 @@
     width: 376px;
     height: 55px;
   }
-  // .masterClass__archive
-
-  &__archive {
-    margin-left: 42px;
-    display: flex;
-    align-items: center;
-    & svg {
-      path {
-        display: block;
-      }
-    }
-  }
-
-  &__archiveText {
-    margin-left: 10px;
-    font-family: Rubik;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 13px;
-    & span {
-      color: $green;
-      cursor: pointer;
-      border-bottom: 2px dashed $green;
-    }
-  }
-
   &__container {
     margin-top: 37px;
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
   }
 
   &__card {
@@ -48,28 +25,101 @@
   }
 
   &__footer {
+    padding-top: 46px;
+    margin-top: -1px;
+    position: relative;
+    background-color: white;
   }
-
-  &__title {
-    // .masterClass__title_small
-
-    &_small {
+  &__sliderName {
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 50px;
+  }
+  &__slider {
+    margin-top: 30px;
+  }
+  &__sliderFor {
+    position: relative;
+  }
+  &__sliderNav {
+    margin: 16px 0;
+    .slick-slide {
+      margin: 0 5px;
+    }
+    .slick-current {
+      & img {
+        /* border: 5px solid #1e7243; */
+        outline: 5px solid #1e7243; 
+        outline-offset: -5px; 
+      }
+    }
+    .slick-list {
+      margin: 0 -5px;
     }
   }
+  &__slide {
+    object-fit: cover;
+    width: 1410px;
+    height: 650px;
+    &_small {
+      cursor: pointer;
+      width: 230px;
+      height: 102px;
+    }
+  }
+  &__prev,
+  &__next {
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
 
-  // .masterClass__slider
-
-  &__slider {
+    cursor: pointer;
+    & svg {
+      margin-right: 5px;
+      path {
+        transition: $transition;
+        display: block;
+      }
+    }
+    &:hover {
+      & svg {
+        path {
+          stroke: $textColor;
+        }
+      }
+    }
+  }
+  &__prev {
+    left: 41px;
+  }
+  &__next {
+    transform: rotate(180deg);
+    right: 41px;
+  }
+  &__btn {
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 21px;
+    margin-top: 31px;
+    width: 234px;
+    height: 55px;
   }
 }
 
 .masterClassCard {
-  // .masterClassCard__columnLeft
-
-  &__columnLeft {
+  border-bottom: 1px solid #cad4db;
+  padding-bottom: 56px;
+  &__visual {
   }
-
-  // .masterClassCard__share
 
   &__share {
     margin-top: 30px;
@@ -92,9 +142,19 @@
       path {
         display: block;
       }
+      circle {
+        transition: $transition;
+      }
+    }
+    &:hover {
+      & svg {
+        circle {
+          stroke: $green;
+        }
+      }
     }
   }
-  &__columnRight {
+  &__content {
     margin-left: 60px;
   }
   &__header {
@@ -128,43 +188,348 @@
   }
   &__body {
     margin-top: 25px;
+    &_show {
+      .masterClassCard__text {
+        height: auto;
+        max-height: 1000px;
+      }
+      .masterClassCard__hide {
+        display: inline-block;
+      }
+      .masterClassCard__show {
+        display: none;
+      }
+      .masterClassCard__readAll {
+        & svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
   }
   &__text {
     font-size: 16px;
     line-height: 26px;
+    max-height: 104px;
+    overflow: hidden;
+    transition: $transition;
   }
-
-  // .masterClassCard__readAll
 
   &__readAll {
-    // .masterClassCard__readAll_js
-
-    &_js {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: Rubik;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 8px;
+    & span {
+      border-bottom: 2px dashed $green;
+    }
+    & svg {
+      display: block;
+      margin-left: 7px;
+      path {
+        stroke: $green;
+      }
+    }
+    &:hover {
+      & span {
+        border-bottom: 2px solid $green;
+      }
     }
   }
-
-  // .masterClassCard__footer
-
-  &__footer {
+  &__show {
+    display: inline-block;
+  }
+  &__hide {
+    display: none;
   }
 
-  // .masterClassCard__row
-
+  &__table {
+    margin-top: 34px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
   &__row {
+    display: flex;
+    justify-content: space-between;
   }
 
   // .masterClassCard__description
 
   &__description {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 35px;
   }
 
-  // .masterClassCard__value
-
+  &__points {
+    flex: 1 0;
+    border-bottom: 1px dotted #cad4db;
+    height: 25px;
+    margin: 0 0.4em;
+  }
   &__value {
+    font-family: Rubik;
+    font-size: 18px;
+    line-height: 35px;
+  }
+  &__ruble {
+    font-family: Roboto;
+    font-weight: 400;
+  }
+  &__quantity {
+    color: $green;
+    border-bottom: 2px dotted $green;
+  }
+}
+.masterArchive {
+  margin-left: 42px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  & svg {
+    path {
+      display: block;
+    }
+  }
+  &__text {
+    margin-left: 10px;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 13px;
+    & span {
+      color: $green;
+      cursor: pointer;
+      border-bottom: 2px dashed $green;
+      &:hover {
+        border-bottom: 2px solid $green;
+      }
+    }
+  }
+  &__popup {
+    position: absolute;
+    width: 570px;
+    height: 250px;
+    left: -10px;
+    top: 0px;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 35px 35px 45px;
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    position: relative;
+    & input {
+      cursor: pointer;
+      padding-right: 48px;
+    }
+    & svg {
+      cursor: pointer;
+      position: absolute;
+      right: 22px;
+      bottom: 20px;
+      path {
+        display: block;
+        stroke: $green;
+      }
+    }
+    &_open {
+      & svg {
+        transform: rotate(180deg);
+      }
+      .masterArchive__years {
+        display: block;
+      }
+      .masterArchive__months {
+        display: block;
+      }
+    }
+  }
+  &__input {
+  }
+  &__years,
+  &__months {
+    display: none;
+    position: absolute;
+    width: 150px;
+    top: 100%;
+    left: 0;
+    background: $white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 0px 0px 5px 5px;
+    z-index: 0;
+  }
+  &__months {
+    width: 330px;
+    & ul {
+      & li:first-child {
+        padding-top: 5px;
+      }
+      & li:last-child {
+        padding-bottom: 5px;
+      }
+    }
+  }
+  &__year,
+  &__month {
+    font-size: 16px;
+    line-height: 44px;
+    cursor: pointer;
+    color: $textColor;
+    position: relative;
+    padding: 0 18px;
+    transition: $transition;
+    &:hover {
+      background-color: #f2f3f4;
+    }
+  }
+  &__month {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &__close {
+    z-index: 10;
+    position: absolute;
+    top: 26px;
+    right: 35px;
+    cursor: pointer;
+    svg {
+      path {
+        display: block;
+        transition: $transition;
+      }
+    }
+    &:hover {
+      & svg {
+        path {
+          fill: $textColor;
+        }
+      }
+    }
+  }
+}
+.masterClassOrder {
+  .windowsMessage__popap {
+    width: 1025px;
+    height: 750px;
+    padding: 59px 47px 54px;
+  }
+  .windowsMessage__title {
+    font-size: 35px;
+    line-height: 42px;
+  }
+  .envelopeInput__input {
+    width: 450px;
+    height: 50px;
+  }
+  .agreement{
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
   }
 
-  // .masterClassCard__btn
-
-  &__btn {
+  &__fields {
+    margin-top: 37px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 20px;
+  }
+  &__row {
+    margin-top: 40px;
+    border-top: 1px solid $green;
+    border-bottom: 1px solid $green;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__price {
+    font-family: Rubik;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  &__cost {
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 42px;
+  }
+  &__ruble {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 40px;
+  }
+  &__methods {
+    margin-top: 33px;
+    & input[type="radio"] {
+      cursor: pointer;
+      margin: 0px;
+      width: 25px;
+      height: 25px;
+      background-color: $green;
+      position: relative;
+    }
+    & input[type="radio"]::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      border: 1px solid $green;
+    }
+    & input[type="radio"]:checked::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background-color: $green;
+      transform: translate(-50%, -50%);
+    }
+    & label {
+      display: flex;
+      align-items: center;
+      & span {
+        margin-left: 8px;
+        font-family: Rubik;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+  }
+  &__subtitle {
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 42px;
+  }
+  &__check {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__description {
+    margin-left: 33px;
+    margin-top: 7px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6f7982;
   }
 }
