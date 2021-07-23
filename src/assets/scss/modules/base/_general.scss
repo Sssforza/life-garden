@@ -1446,3 +1446,229 @@ body {
   border-width: 10px;
   content: "";
 }
+
+.productCard {
+  display: flex;
+  justify-content: space-between;
+  &__checked {
+    pointer-events: none;
+    border: 3px solid $green !important;
+    &_small {
+      border: 2px solid $green !important;
+    }
+  }
+  .slick-disabled {
+    & svg {
+      path {
+        stroke: #919eab;
+      }
+    }
+  }
+  &__button {
+    width: 160px;
+    height: 46px;
+  }
+  &__like {
+    margin-left: 15px;
+  }
+  &__prev {
+    position: absolute;
+    top: 115%;
+    cursor: pointer;
+    & svg {
+      path {
+        stroke: $textColor;
+        transition: $transition;
+        display: block;
+      }
+    }
+  }
+  &__next {
+    position: absolute;
+    top: 115%;
+    left: 55px;
+    cursor: pointer;
+    & svg {
+      path {
+        stroke: $textColor;
+        transition: $transition;
+        display: block;
+      }
+    }
+  }
+  &__image {
+    width: 690px;
+    height: 600px;
+    border-radius: 30px;
+    overflow: hidden;
+    object-fit: cover;
+    &_small {
+      cursor: pointer;
+      max-width: 112px;
+      height: 112px;
+      border-radius: 20px;
+      margin: 0 2px;
+      border: 3px solid $white;
+    }
+  }
+  &__box {
+    width: 690px;
+    margin-top: 11px;
+    position: relative;
+  }
+  &__info {
+    margin-left: 60px;
+  }
+  &__article {
+    font-size: 14px;
+    line-height: 28px;
+    color: #919eab;
+  }
+  &__title {
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  &__review {
+    margin-top: 15px;
+  }
+  &__season {
+    display: flex;
+    align-content: center;
+    margin-top: 20px;
+
+    & svg {
+      path {
+        display: block;
+      }
+    }
+  }
+  &__seasonText {
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    & span {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  &__cost {
+    display: inline-flex;
+    gap: 65px;
+    .cost__totalPrice,
+    .cost__ruble {
+      margin-left: 10px;
+      font-weight: 500;
+      font-size: 35px;
+      line-height: 24px;
+      &_ussual {
+        margin: 0;
+      }
+    }
+    .cost__price {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+    }
+    .cost__right {
+      margin-left: 20px;
+    }
+  }
+  &__bottom {
+    justify-content: flex-start;
+    gap: 65px;
+    margin-top: 28px;
+    .counter {
+      width: 142px;
+      height: 46px;
+      &__minus,
+      &__plus {
+        width: 46px;
+      }
+      &__input {
+        width: 52px;
+      }
+    }
+  }
+  &__weight {
+    margin-top: 25px;
+  }
+
+  &__colors {
+    margin-top: 30px;
+  }
+  &__method {
+    margin-top: 41px;
+    border-top: 1px solid #dbe4ec;
+    padding-top: 30px;
+  }
+}
+
+.productWeight {
+  &__text {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  &__container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 50px;
+    border: 1px solid $border;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+      border: 1px solid #1e7243;
+    }
+  }
+}
+
+.productColors {
+  &__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    & span {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  &__box {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+  }
+  &__item {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    &_big {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

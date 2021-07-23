@@ -11506,11 +11506,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderAbout"])(); // slick slider MasterClass page
 
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderMasterClass"])(); // all archives MasterClass page
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderMasterClass"])(); // slick slider quick view on all pages(in header)
+
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderQuickView"])(); // all archives MasterClass page
 
   Object(_blocks_masterClass_js__WEBPACK_IMPORTED_MODULE_11__["masterClassPopups"])(); // buy popup MasterClass page
 
-  Object(_blocks_masterClass_js__WEBPACK_IMPORTED_MODULE_11__["masterClassBuy"])();
+  Object(_blocks_masterClass_js__WEBPACK_IMPORTED_MODULE_11__["masterClassBuy"])(); // quickView detail popup
+
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["quickView"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
@@ -18634,6 +18638,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerClick", function() { return headerClick; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerScroll", function() { return headerScroll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerOpenClient", function() { return headerOpenClient; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "quickView", function() { return quickView; });
 function headerCatalog() {
   var buttonCatalog = document.querySelector(".headerMiddleCatalog_js");
   var headerCatalog = document.querySelector(".headerCatalog_js");
@@ -18678,7 +18683,7 @@ function headerClick() {
     }
   }
 
-  basketClick.addEventListener('click', function (e) {
+  basketClick.addEventListener("click", function (e) {
     if (basketPop.classList.contains("hidden")) {
       document.removeEventListener("click", closeBasket);
     }
@@ -18688,7 +18693,7 @@ function headerClick() {
       document.addEventListener("click", closeBasket);
     }, 0);
   });
-  preorderClick.addEventListener('click', function () {
+  preorderClick.addEventListener("click", function () {
     if (preorderPop.classList.contains("hidden")) {
       document.removeEventListener("click", closePreorder);
     }
@@ -18700,22 +18705,72 @@ function headerClick() {
   });
 }
 function headerScroll() {
-  var headerTop = document.querySelector('.headerTop');
+  var headerTop = document.querySelector(".headerTop");
 
   window.onscroll = function () {
     if (window.pageYOffset > 1) {
-      headerTop.classList.add('headerTop__hidden');
+      headerTop.classList.add("headerTop__hidden");
     } else {
-      headerTop.classList.remove('headerTop__hidden');
+      headerTop.classList.remove("headerTop__hidden");
     }
   };
 }
 function headerOpenClient() {
-  var headerTopClient = document.querySelector('.client_js');
-  var btnClient = document.querySelector('.clientClick_js');
-  btnClient.addEventListener('click', function () {
-    headerTopClient.classList.toggle('headerTop__client_open');
+  var headerTopClient = document.querySelector(".client_js");
+  var btnClient = document.querySelector(".clientClick_js");
+  btnClient.addEventListener("click", function () {
+    headerTopClient.classList.toggle("headerTop__client_open");
   });
+}
+function quickView() {
+  if (document.querySelector(".cardProduct__quickView_js")) {
+    var slickMain = $(".sliderQuickView_js");
+    var slick = slickMain.slick({
+      infinite: false,
+      speed: 500,
+      slidesToShow: 6,
+      slidesToScroll: 6,
+      draggable: false,
+      focusOnSelect: false,
+      prevArrow: "<div class=\"productCard__prev\"><svg width=\"30\" height=\"20\" viewBox=\"0 0 30 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M9.90039 17.8008L2.00037 9.90076L9.90039 2.00073\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        <path d=\"M3.40039 9.80078L28.4004 9.80078\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n        </svg>\n        </div>",
+      nextArrow: "<div class=\"productCard__next\"><svg width=\"29\" height=\"20\" viewBox=\"0 0 29 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M19.5 2L27.4 9.90002L19.5 17.8\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        <path d=\"M26 10L1 10\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n        </svg>\n      </div>"
+    });
+    var quickViewBtn = document.querySelectorAll(".cardProduct__quickView_js");
+    var quickViewWrapper = document.querySelector(".quickViewWrapper_js");
+    var quickViewPopup = document.querySelector(".quickViewPopup_js");
+    var quickViewClose = document.querySelector(".quickViewClose_js");
+    var quickViewSmallImg = document.querySelectorAll(".quickView__small_js");
+    var quickViewBigImg = document.querySelector(".quickView__big_js");
+    quickViewBtn.forEach(function (item) {
+      item.onclick = function () {
+        slick.slick("refresh");
+        quickViewWrapper.classList.remove("hidden");
+        document.body.classList.add("hiddenHeaderCatalog");
+      };
+    });
+
+    quickViewWrapper.onclick = function (e) {
+      if (quickViewPopup && e.target !== quickViewPopup && !quickViewPopup.contains(e.target)) {
+        quickViewWrapper.classList.add("hidden");
+        document.body.classList.remove("hiddenHeaderCatalog");
+      }
+    };
+
+    quickViewClose.onclick = function () {
+      quickViewWrapper.classList.add("hidden");
+      document.body.classList.remove("hiddenHeaderCatalog");
+    };
+
+    quickViewSmallImg.forEach(function (item) {
+      item.addEventListener("click", function () {
+        quickViewSmallImg.forEach(function (el) {
+          el.classList.remove("productCard__checked");
+        });
+        quickViewBigImg.src = item.src;
+        item.classList.add("productCard__checked");
+      });
+    });
+  }
 }
 
 /***/ }),
@@ -19187,6 +19242,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderProductSpecial", function() { return sliderProductSpecial; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderAbout", function() { return sliderAbout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderProduct", function() { return sliderProduct; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderQuickView", function() { return sliderQuickView; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderMasterClass", function() { return sliderMasterClass; });
 // SliderMain
 function sliderMain() {
@@ -19249,6 +19305,7 @@ function sliderProduct() {
 
   if (slickMain.length) {
     slickMain.slick({
+      infinite: false,
       speed: 500,
       slidesToShow: 6,
       slidesToScroll: 6,
@@ -19258,6 +19315,30 @@ function sliderProduct() {
       nextArrow: "<div class=\"productCard__next\"><svg width=\"29\" height=\"20\" viewBox=\"0 0 29 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path d=\"M19.5 2L27.4 9.90002L19.5 17.8\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n      <path d=\"M26 10L1 10\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n      </svg>\n\t  </div>"
     });
   }
+}
+function sliderQuickView() {
+  /*   const slickMain = $(".sliderQuickView_js");
+    const quickViewBtn = $(".sliderQuickView_js");
+    if (slickMain.length) {
+      slickMain.slick({
+        infinite: false,
+        speed: 500,
+        slidesToShow: 6,
+        slidesToScroll: 6,
+        draggable: false,
+        focusOnSelect: false,
+        prevArrow: `<div class="productCard__prev"><svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  			<path d="M9.90039 17.8008L2.00037 9.90076L9.90039 2.00073" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  			<path d="M3.40039 9.80078L28.4004 9.80078" stroke="#919EAB" stroke-width="2" stroke-linecap="round"/>
+  			</svg>
+  			</div>`,
+        nextArrow: `<div class="productCard__next"><svg width="29" height="20" viewBox="0 0 29 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19.5 2L27.4 9.90002L19.5 17.8" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M26 10L1 10" stroke="#919EAB" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+  	  </div>`,
+      });
+    } */
 }
 function sliderMasterClass() {
   var sliderFor = $(".masterClass__sliderFor_js");

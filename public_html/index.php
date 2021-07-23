@@ -145,7 +145,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<div class="cardProduct__new">Новинка</div>
 								<div class="cardProduct__img">
 									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)">
-										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+										<div class="btnJaundiced cardProduct__quickView cardProduct__quickView_js">Быстрый просмотр</div>
 									</div>
 								</div>
 								<div class="cardProduct__info">
@@ -226,7 +226,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="productBlock__item cardProduct">
 								<div class="cardProduct__img">
 									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg2.jpg)">
-										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+										<div class="btnJaundiced cardProduct__quickView cardProduct__quickView_js">Быстрый просмотр</div>
 									</div>
 								</div>
 								<div class="cardProduct__info">
@@ -296,7 +296,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="productBlock__item cardProduct">
 								<div class="cardProduct__img">
 									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg3.jpg)">
-										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+										<div class="btnJaundiced cardProduct__quickView cardProduct__quickView_js">Быстрый просмотр</div>
 									</div>
 								</div>
 								<div class="cardProduct__info">
@@ -374,7 +374,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="productBlock__item cardProduct">
 								<div class="cardProduct__img">
 									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg4.jpg)">
-										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+										<div class="btnJaundiced cardProduct__quickView cardProduct__quickView_js">Быстрый просмотр</div>
 									</div>
 								</div>
 								<div class="cardProduct__info">
@@ -444,7 +444,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="productBlock__item cardProduct">
 								<div class="cardProduct__img">
 									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg2.jpg)">
-										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+										<div class="btnJaundiced cardProduct__quickView cardProduct__quickView_js">Быстрый просмотр</div>
 									</div>
 								</div>
 								<div class="cardProduct__info">
@@ -514,7 +514,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="productBlock__item cardProduct">
 								<div class="cardProduct__img">
 									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg4.jpg)">
-										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+										<div class="btnJaundiced cardProduct__quickView cardProduct__quickView_js">Быстрый просмотр</div>
 									</div>
 								</div>
 								<div class="cardProduct__info">
@@ -586,7 +586,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="productBlock__item cardProduct">
 								<div class="cardProduct__img">
 									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg5.jpg)">
-										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+										<div class="btnJaundiced cardProduct__quickView cardProduct__quickView_js">Быстрый просмотр</div>
 									</div>
 								</div>
 								<div class="cardProduct__info">
@@ -656,7 +656,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="productBlock__item cardProduct">
 								<div class="cardProduct__img">
 									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)">
-										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+										<div class="btnJaundiced cardProduct__quickView cardProduct__quickView_js">Быстрый просмотр</div>
 									</div>
 								</div>
 								<div class="cardProduct__info">
@@ -737,7 +737,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="productBlock__item cardProduct">
 								<div class="cardProduct__img">
 									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg4.jpg)">
-										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+										<div class="btnJaundiced cardProduct__quickView cardProduct__quickView_js">Быстрый просмотр</div>
 									</div>
 								</div>
 								<div class="cardProduct__info">
@@ -809,7 +809,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="productBlock__item cardProduct">
 								<div class="cardProduct__img">
 									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg5.jpg)">
-										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+										<div class="btnJaundiced cardProduct__quickView cardProduct__quickView_js">Быстрый просмотр</div>
 									</div>
 								</div>
 								<div class="cardProduct__info">
@@ -879,7 +879,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="productBlock__item cardProduct">
 								<div class="cardProduct__img">
 									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg2.jpg)">
-										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+										<div class="btnJaundiced cardProduct__quickView cardProduct__quickView_js">Быстрый просмотр</div>
 									</div>
 								</div>
 								<div class="cardProduct__info">
@@ -949,7 +949,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="productBlock__item cardProduct">
 								<div class="cardProduct__img">
 									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg4.jpg)">
-										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+										<div class="btnJaundiced cardProduct__quickView cardProduct__quickView_js">Быстрый просмотр</div>
 									</div>
 								</div>
 								<div class="cardProduct__info">
@@ -1021,7 +1021,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="productBlock__item cardProduct">
 								<div class="cardProduct__img">
 									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)">
-										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+										<div class="btnJaundiced cardProduct__quickView cardProduct__quickView_js">Быстрый просмотр</div>
 									</div>
 								</div>
 								<div class="cardProduct__info">
@@ -1102,7 +1102,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="productBlock__item cardProduct">
 								<div class="cardProduct__img">
 									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg4.jpg)">
-										<div class="btnJaundiced cardProduct__quickView">Быстрый просмотр</div>
+										<div class="btnJaundiced cardProduct__quickView cardProduct__quickView_js">Быстрый просмотр</div>
 									</div>
 								</div>
 								<div class="cardProduct__info">

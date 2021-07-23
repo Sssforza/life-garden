@@ -1,3 +1,6 @@
+// magnific-popup
+@import "../../../../node_modules/magnific-popup/dist/magnific-popup.css";
+
 .header {
   width: 100%;
   position: fixed;
@@ -784,4 +787,41 @@
   transform: rotate(-90deg);
   transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
     transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.quickView {
+  .windowsMessage__popap {
+    width: 1400px;
+    height: 756px;
+    padding: 50px 50px 89px;
+    border-radius: 20px;
+  }
+  .productCard__image {
+    width: 576px;
+    height: 501px;
+    border-radius: 20px;
+    &_small {
+      max-width: 94px;
+      height: 94px;
+      border-radius: 15px;
+      margin: 0;
+      border: 3px solid $white;
+      
+    }
+  }
+  .productCard__box{
+    margin-top: 5px;
+    width: 576px;
+  }
+  .slick-slide {
+    margin: 0 0px;
+  }
+  .slick-list {
+    margin: 0 -3px;
+  }
+  &__detailBtn{
+    margin-top: 25px;
+    width: 230px;
+    height: 48px;
+  }
 }

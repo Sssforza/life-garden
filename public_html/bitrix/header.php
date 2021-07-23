@@ -609,5 +609,134 @@
             примерно один раз в неделю. </div>
         </div>
       </div>
-
+      <div class="windowsMessage__wrap quickView quickViewWrapper_js hidden">
+        <div class="windowsMessage__popap quickViewPopup_js">
+          <div class="windowsMessage__close quickViewClose_js">
+            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
+          </div>
+          <section class="detail__productCard productCard">
+            <div class="productCard__slider">
+              <div class="quickView">
+                <img class="productCard__image quickView__big_js" src="/dist/img/trash/aboutSlide1.jpg">
+              </div>
+              <div class="productCard__box sliderQuickView_js">
+                <img class="productCard__image productCard__image_small quickView__small_js productCard__checked" src="/dist/img/trash/aboutSlide1.jpg">
+                <img class="productCard__image productCard__image_small quickView__small_js" src="/dist/img/trash/aboutSlide2.jpg">
+                <img class="productCard__image productCard__image_small quickView__small_js" src="/dist/img/trash/aboutSlide3.jpg">
+                <img class="productCard__image productCard__image_small quickView__small_js" src="/dist/img/trash/aboutSlide4.jpg">
+                <img class="productCard__image productCard__image_small quickView__small_js" src="/dist/img/trash/aboutSlide5.jpg">
+                <img class="productCard__image productCard__image_small quickView__small_js" src="/dist/img/trash/aboutSlide6.jpg">
+                <img class="productCard__image productCard__image_small quickView__small_js" src="/dist/img/trash/aboutSlide7.jpg">
+              </div>
+            </div>
+            <div class="productCard__info">
+              <div class="productCard__article">Арт. 17586503</div>
+              <div class="productCard__title">Лейка для садовых растений
+                Gardenia12 л.</div>
+              <div class="availability">
+                <div class="availability__text has">
+                  <span>Есть в наличии</span>
+                </div>
+                <div class="availability__text not hidden">
+                  <span>Нет в наличии</span>
+                </div>
+              </div>
+              <div class="review productCard__review">
+                <div class="review__list">
+                  <div class="review__item active">
+                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+                  </div>
+                  <div class="review__item active">
+                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+                  </div>
+                  <div class="review__item active">
+                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+                  </div>
+                  <div class="review__item active">
+                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+                  </div>
+                  <div class="review__item">
+                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+                  </div>
+                </div>
+                <div class="review__how">1 отзыв</div>
+              </div>
+              <div class="productCard__season">
+                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/seson.svg'; ?>
+                <div class="productCard__seasonText">Сезон: <span>Лето</span></div>
+              </div>
+              <div class="productCard__weight productWeight">
+                <div class="productWeight__text">Вес, кг</div>
+                <div class="productWeight__container">
+                  <div class="productWeight__item weight_js">2,5 кг</div>
+                  <div class="productWeight__item weight_js">2,5 кг</div>
+                  <div class="productWeight__item weight_js">2,5 кг</div>
+                  <div class="productWeight__item weight_js productCard__checked_small">2,5 кг</div>
+                </div>
+              </div>
+              <div class="productCard__colors productColors">
+                <div class="productColors__text">
+                  Цвет: <span>салатовый микс</span>
+                </div>
+                <div class="productColors__box">
+                  <div class="productColors__item_big color_js productCard__checked_small">
+                    <div class="productColors__item" style="background-color:#5D9D16;"></div>
+                  </div>
+                  <div class="productColors__item_big color_js">
+                    <div class="productColors__item" style="background-color:#69BE5E;"></div>
+                  </div>
+                  <div class="productColors__item_big color_js">
+                    <div class="productColors__item" style="background-color:#4E6D4A;"></div>
+                  </div>
+                  <div class="productColors__item_big color_js">
+                    <div class="productColors__item" style="background-color:#169D74;"></div>
+                  </div>
+                  <div class="productColors__item_big color_js">
+                    <div class="productColors__item" style="background-color:#34B15E;"></div>
+                  </div>
+                  <div class="productColors__item_big color_js">
+                    <div class="productColors__item" style="background-color:#5ACA51;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="productCard__cost cost">
+                <div class="cost__left">
+                  <div class="cost__info ">с картой живой сад</div>
+                  <div class="cost__price cost__price_card">
+                    <span class="cost__totalPrice">240</span>
+                    <span class="cost__ruble">₽</span>
+                  </div>
+                </div>
+                <div class="cost__right">
+                  <div class="cost__info">обычная цена</div>
+                  <div class="cost__price cost__price_common">
+                    <span class="cost__totalPrice cost__totalPrice_ussual">240</span>
+                    <span class="cost__ruble">₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cardProduct__bottom productCard__bottom">
+                <div class="counter">
+                  <div class="counter__minus">
+                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
+                  </div>
+                  <div class="counter__input">
+                    <input type="number" value="1">
+                  </div>
+                  <div class="counter__plus">
+                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
+                  </div>
+                </div>
+                <div class="cardProduct__elements">
+                  <div class="btnJaundicedFull productCard__button">В корзину</div>
+                  <div class="likeProduct productCard__like">
+                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
+                  </div>
+                </div>
+              </div>
+              <a class="btnWhite quickView__detailBtn" href="/detail/">Подробнее о товаре</a>
+            </div>
+          </section>
+        </div>
+      </div>
     </header>

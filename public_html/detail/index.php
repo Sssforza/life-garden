@@ -24,8 +24,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 			<div class="detail">
 				<section class="detail__productCard productCard">
 					<div class="productCard__slider">
-						<div class="imgParent_js"></div>
-						<img class="productCard__image image_js" src="/dist/img/trash/aboutSlide1.jpg">
+						<div class="imgParent_js">
+							<img class="productCard__image image_js" src="/dist/img/trash/aboutSlide1.jpg">
+						</div>
 						<div class="productCard__box sliderProduct_js">
 							<img class="productCard__image imageClick_js productCard__image_small productCard__checked" src="/dist/img/trash/aboutSlide1.jpg">
 							<img class="productCard__image imageClick_js productCard__image_small" src="/dist/img/trash/aboutSlide2.jpg">

@@ -19,6 +19,7 @@ import {
   headerClick,
   headerScroll,
   headerOpenClient,
+  quickView
 } from "./blocks/_header.js";
 
 //📁 /assets/js/blocks  _footer.js
@@ -47,6 +48,7 @@ import {
   sliderProduct,
   sliderAbout,
   sliderMasterClass,
+  sliderQuickView
 } from "./blocks/sliders.js";
 
 //📁 /assets/js/blocks  specialSample.js
@@ -159,9 +161,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // slick slider MasterClass page
   sliderMasterClass();
 
+  // slick slider quick view on all pages(in header)
+  sliderQuickView();
+
   // all archives MasterClass page
   masterClassPopups();
 
   // buy popup MasterClass page
   masterClassBuy();
+
+  // quickView detail popup
+  quickView();
 });

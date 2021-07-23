@@ -173,6 +173,8 @@
   }
   &__label {
     margin-left: 9px;
+    font-size: 16px;
+    line-height: 19px;
   }
 }
 .catalogCardsAlphabet {
@@ -257,6 +259,7 @@
     }
   }
   &__all {
+    width: max-content;
     font-size: 16px;
     line-height: 27px;
     color: $green;
