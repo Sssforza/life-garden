@@ -14,12 +14,14 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 		</ul>
 	</section>
 	<section class="page__box container promo">
-		<div class="promo__item promoItem">
-			<img class="promoItem__image" src="../dist/img/trash/promo.jpg">
+		<section class="promo__item promoItem">
+			<div class="promoItem__image">
+				<img src="../dist/img/trash/promo.jpg">
+			</div>
 			<div class="promoItem__text">
 				<div class="promoItem__date">
 					<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/calendar.svg'; ?>
-					<span>Старт акции 15.04.2021 — завершение 10.06.2021</span>
+					<span>Старт акции 15.04.2021 &mdash; завершение 10.06.2021</span>
 				</div>
 				<div class="promoItem__title">Акция на Многолетники</div>
 				<div class="promoItem__description">
@@ -30,8 +32,8 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 					<li>Хоста Вайд брим (Wide Brim)</li>
 				</ul>
 			</div>
-		</div>
-		<div class="promo__products promoProducts">
+		</section>
+		<section class="promo__products promoProducts">
 			<div class="promoProducts__title">В акции участвует <span>28 товаров</span></div>
 			<div class="promoProducts__container">
 				<div class="productBlock__item cardProduct">
@@ -595,26 +597,27 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="catalogCards__show btnShow">
-			<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/look.svg'; ?>
-			<span>Показать еще</span>
-		</div>
-		<div class="catalogCards__pagination pagination">
-			<div class="pagination__prev">
-				<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pagiLeft.svg'; ?>
+			<div class="catalogCards__show btnShow">
+				<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/look.svg'; ?>
+				<span>Показать еще</span>
 			</div>
-			<a href="#" class="pagination__number paginationNumber_js pagination_checked">1</a>
-			<a href="#" class="pagination__number paginationNumber_js">2</a>
-			<a href="#" class="pagination__number paginationNumber_js">3</a>
-			<a href="#" class="pagination__number paginationNumber_js">4</a>
-			<a href="#" class="pagination__number paginationNumber_js">5</a>
-			<a href="#" class="pagination__points">....</a>
-			<a href="#" class="pagination__number paginationNumber_js">10</a>
-			<a href="#" class="pagination__next">
-				<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pagiRight.svg'; ?>
-			</a>
-		</div>
+			<div class="catalogCards__pagination pagination">
+				<div class="pagination__prev">
+					<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pagiLeft.svg'; ?>
+				</div>
+				<a href="#" class="pagination__number paginationNumber_js pagination_checked">1</a>
+				<a href="#" class="pagination__number paginationNumber_js">2</a>
+				<a href="#" class="pagination__number paginationNumber_js">3</a>
+				<a href="#" class="pagination__number paginationNumber_js">4</a>
+				<a href="#" class="pagination__number paginationNumber_js">5</a>
+				<a href="#" class="pagination__points">....</a>
+				<a href="#" class="pagination__number paginationNumber_js">10</a>
+				<a href="#" class="pagination__next">
+					<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pagiRight.svg'; ?>
+				</a>
+			</div>
+		</section>
+
 	</section>
 </main>
 

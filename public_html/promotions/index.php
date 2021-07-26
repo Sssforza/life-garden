@@ -17,7 +17,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 		<div class="page__title ">Акции</div>
 		<div class="promotions__container">
 			<div class="promotions__item">
-				<img class="promotions__image" src="../dist/img/trash/promotion1.jpg">
+				<div class="promotions__image">
+					<img src="../dist/img/trash/promotion1.jpg">
+				</div>
 				<div class="promotions__date">
 					<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/calendar.svg'; ?>
 					<span>с 15.04.2021 — до 10.06.2021</span>
@@ -26,7 +28,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				<div class="promotions__description">При покупке Многолетников на сумму 2 200 <span class="promotions__description_ruble">₽</span> хоста в подарок</div>
 			</div>
 			<div class="promotions__item">
-				<img class="promotions__image" src="../dist/img/trash/promotion1.jpg">
+				<div class="promotions__image">
+					<img src="../dist/img/trash/promotion1.jpg">
+				</div>
 				<div class="promotions__date">
 					<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/calendar.svg'; ?>
 					<span>с 15.04.2021 — до 10.06.2021</span>
@@ -35,7 +39,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				<div class="promotions__description">При покупке Многолетников на сумму 2 200 <span class="promotions__description_ruble">₽</span> хоста в подарок</div>
 			</div>
 			<div class="promotions__item">
-				<img class="promotions__image" src="../dist/img/trash/promotion1.jpg">
+				<div class="promotions__image">
+					<img src="../dist/img/trash/promotion1.jpg">
+				</div>
 				<div class="promotions__date">
 					<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/calendar.svg'; ?>
 					<span>с 15.04.2021 — до 10.06.2021</span>
@@ -44,7 +50,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				<div class="promotions__description">При покупке Многолетников на сумму 2 200 <span class="promotions__description_ruble">₽</span> хоста в подарок</div>
 			</div>
 			<div class="promotions__item">
-				<img class="promotions__image" src="../dist/img/trash/promotion1.jpg">
+				<div class="promotions__image">
+					<img src="../dist/img/trash/promotion1.jpg">
+				</div>
 				<div class="promotions__date">
 					<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/calendar.svg'; ?>
 					<span>с 15.04.2021 — до 10.06.2021</span>

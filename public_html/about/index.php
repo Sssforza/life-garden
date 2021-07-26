@@ -18,9 +18,11 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 		<div class="page__title container">О компании</div>
 		<div class="about">
 			<section class="about__history aboutHistory container">
-				<img class="aboutHistory__image" src="/dist/img/aboutPeople.png">
-				<p class="aboutHistory__title">«Живой сад»<span> — центр природного земледелия, который специализируется
-						на помощи выращивания экологически чистого урожая</span></p>
+				<div class="aboutHistory__image">
+					<img src="/dist/img/aboutPeople.png">
+				</div>
+				<blockquote class="aboutHistory__title">«Живой сад»<span> — центр природного земледелия, который специализируется
+						на помощи выращивания экологически чистого урожая</span></blockquote>
 				<p class="about__text">Первый магазин «Живой сад» был открыт в 2006 году в Омске, и с тех пор компания демонстрирует уверенный рост. Помогаем
 					садоводам, огородникам, дачникам, владельцам приусадебных участков - выращивать экологически чистый урожай,
 					восстанавливать и повышать плодородие почвы, облегчать труд на земле, создавать красивые сады.</p>
@@ -33,7 +35,8 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="aboutFacts__info">
 								<div class="aboutFacts__text">6000</div>
 								<div class="aboutFacts__text_small">товаров на полках</div>
-								<img class="aboutFacts__points" src="/dist/img/aboutCardPoints.png">
+								<div class="aboutFacts__points">
+								</div>
 							</div>
 							<div class="aboutFacts__image">
 								<img src="/dist/img/6000products.jpg">
@@ -43,7 +46,8 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="aboutFacts__info">
 								<div class="aboutFacts__text">50 <span>тыс.</span></div>
 								<div class="aboutFacts__text_small">постоянных покупателей</div>
-								<img class="aboutFacts__points" src="/dist/img/aboutCardPoints.png">
+								<div class="aboutFacts__points">
+								</div>
 							</div>
 							<div class="aboutFacts__image">
 								<img src="/dist/img/50buyers.jpg">
@@ -53,7 +57,8 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="aboutFacts__info">
 								<div class="aboutFacts__text">15 <span>лет</span></div>
 								<div class="aboutFacts__text_small">мы работаем для вас</div>
-								<img class="aboutFacts__points" src="/dist/img/aboutCardPoints.png">
+								<div class="aboutFacts__points">
+								</div>
 							</div>
 							<div class="aboutFacts__image">
 								<img src="/dist/img/aboutCard.png">
@@ -63,7 +68,8 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="aboutFacts__info">
 								<div class="aboutFacts__text">5000</div>
 								<div class="aboutFacts__text_small">наименований растений</div>
-								<img class="aboutFacts__points" src="/dist/img/aboutCardPoints.png">
+								<div class="aboutFacts__points">
+								</div>
 							</div>
 							<div class="aboutFacts__image">
 								<img src="/dist/img/5kPlants.jpg">

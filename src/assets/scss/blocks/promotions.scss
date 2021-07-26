@@ -1,7 +1,6 @@
 @import "../modules/utilities/_variables.scss";
 
 .promotions {
-
   &__container {
     display: flex;
     flex-wrap: wrap;
@@ -9,20 +8,23 @@
     gap: 43px 20px;
   }
   &__item {
+    width: 690px;
   }
   &__image {
-    width: 690px;
-    height: 300px;
+    max-height: 300px;
     border-radius: 10px;
+    overflow: hidden;
+    & img {
+      display: block;
+      width: 100%;
+    }
   }
   &__date {
     margin-top: 29px;
     display: flex;
     align-items: center;
     & svg {
-      path {
-        display: block;
-      }
+      display: block;
     }
     & span {
       margin-left: 7px;
@@ -42,16 +44,16 @@
     line-height: 24px;
     display: inline-block;
     transition: $transition;
-    &:hover{
-        color: $green;
+    &:hover {
+      color: $green;
     }
   }
   &__description {
     margin-top: 12px;
     font-size: 16px;
     line-height: 24px;
-    &_ruble{
-        font-family: Roboto;
+    &_ruble {
+      font-family: Roboto;
     }
   }
 }

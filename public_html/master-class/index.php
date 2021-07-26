@@ -78,7 +78,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 		<section class="masterClass__container masterClass__containerNow_js">
 			<div class="masterClass__card masterClassCard">
 				<div class="masterClassCard__visual">
-					<img class="masterClassCard__img" src="/dist/img/trash/masterCardImg.jpg" alt="">
+					<div class="masterClassCard__img">
+						<img src="/dist/img/trash/masterCardImg.jpg" alt="">
+					</div>
 					<div class="social masterClassCard__social">
 						<div class="social__title">Поделиться</div>
 						<ul class="social__list">
@@ -153,7 +155,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 			</div>
 			<div class="masterClass__card masterClassCard">
 				<div class="masterClassCard__visual">
-					<img class="masterClassCard__img" src="/dist/img/trash/masterCardImg.jpg" alt="">
+					<div class="masterClassCard__img">
+						<img src="/dist/img/trash/masterCardImg.jpg" alt="">
+					</div>
 					<div class="social masterClassCard__social">
 						<div class="social__title">Поделиться</div>
 						<ul class="social__list">
@@ -230,7 +234,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 		<section class="masterClass__container masterClass__containerNext_js hidden">
 			<div class="masterClass__card masterClassCard ">
 				<div class="masterClassCard__visual">
-					<img class="masterClassCard__img" src="/dist/img/trash/masterCardImg1.jpg" alt="">
+					<div class="masterClassCard__img">
+						<img src="/dist/img/trash/masterCardImg1.jpg" alt="">
+					</div>
 					<div class="social masterClassCard__social">
 						<div class="social__title">Поделиться</div>
 						<ul class="social__list">

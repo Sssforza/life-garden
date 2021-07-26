@@ -33,10 +33,14 @@
 .aboutHistory {
   margin-top: 35px;
   &__image {
-    object-fit: cover;
-    max-width: 1400px;
+    width: 1400px;
     max-height: 500px;
     border-radius: 10px;
+    overflow: hidden;
+    & img {
+      display: block;
+      width: 100%;
+    }
   }
   &__title {
     margin-top: 40px;
@@ -69,7 +73,7 @@
   }
   &__info {
     width: 50%;
-    padding: 65px 0 49px 33px;
+    padding: 65px 49px 49px 33px;
   }
   &__text {
     font-family: Rubik;
@@ -94,9 +98,24 @@
   }
   &__image {
     width: 50%;
+    height: 100%;
+    & img {
+      display: block;
+    }
   }
   &__points {
     margin-top: 65px;
+    width: 87px;
+    height: 60px;
+    background: radial-gradient(
+      ellipse at center,
+      $jaundiced 0%,
+      $jaundiced 50%,
+      transparent 55%
+    );
+    background-size: 20px 20px;
+    background-repeat: space;
+    background-position: 0px top;
   }
 }
 .aboutCare {
@@ -141,9 +160,7 @@
     border: 1px solid #c7d0d9;
     border-radius: 50%;
     & svg {
-      path {
-        display: block;
-      }
+      display: block;
     }
   }
 
