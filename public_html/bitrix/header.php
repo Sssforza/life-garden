@@ -504,7 +504,7 @@
       <div class="headerBottom headerBottom_js">
         <div class="container">
           <ul class="header__container">
-            <li><a class="headerBottom__link" href="#">Акции</a></li>
+            <li><a class="headerBottom__link" href="/promotions/">Акции</a></li>
             <li><a class="headerBottom__link" href="#">Теплица</a></li>
             <li><a class="headerBottom__link" href="#">Семена</a></li>
             <li><a class="headerBottom__link" href="#">Саженцы</a></li>

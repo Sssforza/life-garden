@@ -45,7 +45,7 @@ export function sliderAbout() {
   const slickMain = $(".aboutSlider_js");
   if (slickMain.length) {
     slickMain.slick({
-      infinite: false,
+      infinite: true,
       speed: 500,
       slidesToShow: 2,
       slidesToScroll: 1,
@@ -83,30 +83,6 @@ export function sliderProduct() {
 	  </div>`,
     });
   }
-}
-export function sliderQuickView() {
-/*   const slickMain = $(".sliderQuickView_js");
-  const quickViewBtn = $(".sliderQuickView_js");
-  if (slickMain.length) {
-    slickMain.slick({
-      infinite: false,
-      speed: 500,
-      slidesToShow: 6,
-      slidesToScroll: 6,
-      draggable: false,
-      focusOnSelect: false,
-      prevArrow: `<div class="productCard__prev"><svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M9.90039 17.8008L2.00037 9.90076L9.90039 2.00073" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-			<path d="M3.40039 9.80078L28.4004 9.80078" stroke="#919EAB" stroke-width="2" stroke-linecap="round"/>
-			</svg>
-			</div>`,
-      nextArrow: `<div class="productCard__next"><svg width="29" height="20" viewBox="0 0 29 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M19.5 2L27.4 9.90002L19.5 17.8" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M26 10L1 10" stroke="#919EAB" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-	  </div>`,
-    });
-  } */
 }
 export function sliderMasterClass() {
   const sliderFor = $(".masterClass__sliderFor_js");

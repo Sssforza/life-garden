@@ -112,7 +112,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<div class="lkProfile__addressMap">
 										<div class="envelopeInput envelopeInput_lk lkProfile__input shops_js">
 											<div class="envelopeInput__title ">
-												<span>Выберите другой магазин самовывоза</span>
+												Выберите другой магазин самовывоза
 											</div>
 											<div class="openAddress_js">
 												<input class="envelopeInput__input envelopeInput__input_lk openAddressInput_js" type="text" value="ул. Маяковского, 20" readonly="readonly">
@@ -137,11 +137,11 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<div class="lkProfile__address lkProfile__addAddress_js hidden">
 									<div class="lkProfile__home">
 										<div class="envelopeInput envelopeInput_lk">
-											<div class="envelopeInput__title">Улица <span style='color:red'>*</span> </div>
+											<div class="envelopeInput__title">Улица <span>*</span> </div>
 											<input class="envelopeInput__input envelopeInput__input_lk" type="text" placeholder="Введите улицу">
 										</div>
 										<div class="envelopeInput envelopeInput_lk">
-											<div class="envelopeInput__title">Дом <span style='color:red'>*</span></div>
+											<div class="envelopeInput__title">Дом <span>*</span></div>
 											<input class="envelopeInput__input envelopeInput__input_lk" type="text" placeholder="Введите номер дома">
 										</div>
 										<div class="envelopeInput envelopeInput_lk">

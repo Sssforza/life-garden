@@ -11506,13 +11506,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderAbout"])(); // slick slider MasterClass page
 
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderMasterClass"])(); // slick slider quick view on all pages(in header)
-
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderQuickView"])(); // all archives MasterClass page
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderMasterClass"])(); // all archives MasterClass page
 
   Object(_blocks_masterClass_js__WEBPACK_IMPORTED_MODULE_11__["masterClassPopups"])(); // buy popup MasterClass page
 
-  Object(_blocks_masterClass_js__WEBPACK_IMPORTED_MODULE_11__["masterClassBuy"])(); // quickView detail popup
+  Object(_blocks_masterClass_js__WEBPACK_IMPORTED_MODULE_11__["masterClassBuy"])(); // choice month MasterClass page
+
+  Object(_blocks_masterClass_js__WEBPACK_IMPORTED_MODULE_11__["masterChoiceMonth"])(); // quickView detail popup
 
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["quickView"])();
 });
@@ -19242,7 +19242,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderProductSpecial", function() { return sliderProductSpecial; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderAbout", function() { return sliderAbout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderProduct", function() { return sliderProduct; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderQuickView", function() { return sliderQuickView; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderMasterClass", function() { return sliderMasterClass; });
 // SliderMain
 function sliderMain() {
@@ -19289,7 +19288,7 @@ function sliderAbout() {
 
   if (slickMain.length) {
     slickMain.slick({
-      infinite: false,
+      infinite: true,
       speed: 500,
       slidesToShow: 2,
       slidesToScroll: 1,
@@ -19315,30 +19314,6 @@ function sliderProduct() {
       nextArrow: "<div class=\"productCard__next\"><svg width=\"29\" height=\"20\" viewBox=\"0 0 29 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path d=\"M19.5 2L27.4 9.90002L19.5 17.8\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n      <path d=\"M26 10L1 10\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n      </svg>\n\t  </div>"
     });
   }
-}
-function sliderQuickView() {
-  /*   const slickMain = $(".sliderQuickView_js");
-    const quickViewBtn = $(".sliderQuickView_js");
-    if (slickMain.length) {
-      slickMain.slick({
-        infinite: false,
-        speed: 500,
-        slidesToShow: 6,
-        slidesToScroll: 6,
-        draggable: false,
-        focusOnSelect: false,
-        prevArrow: `<div class="productCard__prev"><svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-  			<path d="M9.90039 17.8008L2.00037 9.90076L9.90039 2.00073" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  			<path d="M3.40039 9.80078L28.4004 9.80078" stroke="#919EAB" stroke-width="2" stroke-linecap="round"/>
-  			</svg>
-  			</div>`,
-        nextArrow: `<div class="productCard__next"><svg width="29" height="20" viewBox="0 0 29 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M19.5 2L27.4 9.90002L19.5 17.8" stroke="#919EAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M26 10L1 10" stroke="#919EAB" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-  	  </div>`,
-      });
-    } */
 }
 function sliderMasterClass() {
   var sliderFor = $(".masterClass__sliderFor_js");
@@ -19476,8 +19451,15 @@ function checkCategories() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "masterClassPopups", function() { return masterClassPopups; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "masterClassBuy", function() { return masterClassBuy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "masterChoiceMonth", function() { return masterChoiceMonth; });
 function masterClassPopups() {
   if (document.querySelector(".masterArchive__popup_js")) {
+    var closeInputs = function closeInputs() {
+      masterItems.forEach(function (el) {
+        el.classList.remove("masterArchive__item_open");
+      });
+    };
+
     var masterPopup = document.querySelector(".masterArchive__popup_js");
     var btnClosePopup = masterPopup.querySelector(".masterArchive__close_js");
     var btnOpenPopup = document.querySelector(".masterArchive__date_js");
@@ -19485,13 +19467,13 @@ function masterClassPopups() {
     var masterItems = masterPopup.querySelectorAll(".masterArchive__item_js");
     var inputsClicker = masterPopup.querySelectorAll(".masterArchive__input_js");
     var inputsItems = masterPopup.querySelectorAll(".masterArchive__inputItem_js");
+    var inputYear = masterPopup.querySelector(".masterArchive__year_js");
+    var inputMonth = masterPopup.querySelector(".masterArchive__month_js");
 
     document.onclick = function (e) {
       if (masterPopup && e.target !== masterPopup && e.target !== btnOpenPopup && !masterPopup.contains(e.target)) {
         masterPopup.classList.add("hidden");
-        masterItems.forEach(function (el) {
-          el.classList.remove("masterArchive__item_open");
-        });
+        closeInputs();
       }
     };
 
@@ -19501,10 +19483,13 @@ function masterClassPopups() {
 
     btnClosePopup.onclick = function () {
       masterPopup.classList.add("hidden");
+      closeInputs();
     };
 
     btnApplyPopup.onclick = function () {
       masterPopup.classList.add("hidden");
+      closeInputs();
+      btnOpenPopup.textContent = "".concat(inputMonth.value, " ").concat(inputYear.value);
     };
 
     inputsClicker.forEach(function (item) {
@@ -19535,6 +19520,7 @@ function masterClassBuy() {
     var masterBuyPopup = document.querySelector(".masterClassOrder_js");
     var masterBuyClose = document.querySelector(".masterClass__orderClose_js");
     var masterBuyOrder = document.querySelector(".masterClassOrder__btn_js");
+    var agreementCheck = document.querySelector(".check_js");
     masterBuyBtn.forEach(function (item) {
       item.onclick = function () {
         masterBuyWrapper.classList.remove("hidden");
@@ -19558,6 +19544,36 @@ function masterClassBuy() {
       masterBuyWrapper.classList.add("hidden");
       document.body.classList.remove("hiddenHeaderCatalog");
     };
+
+    agreementCheck.onclick = function () {
+      agreementCheck.classList.toggle("agreement__checked");
+
+      if (agreementCheck.classList.contains("agreement__checked")) {
+        masterBuyOrder.disabled = false;
+      } else {
+        masterBuyOrder.disabled = true;
+      }
+    };
+  }
+}
+function masterChoiceMonth() {
+  if (document.querySelector(".choice__nowMonth_js")) {
+    var clickNowMonth = document.querySelector(".choice__nowMonth_js");
+    var clickNextMonth = document.querySelector(".choice__nextMonth_js");
+    var nowMonthCards = document.querySelector(".masterClass__containerNow_js");
+    var nextMonthCards = document.querySelector(".masterClass__containerNext_js");
+    clickNowMonth.addEventListener("click", function () {
+      clickNowMonth.classList.add("choice__btn_checked");
+      clickNextMonth.classList.remove("choice__btn_checked");
+      nowMonthCards.classList.remove("hidden");
+      nextMonthCards.classList.add("hidden");
+    });
+    clickNextMonth.addEventListener("click", function () {
+      clickNowMonth.classList.remove("choice__btn_checked");
+      clickNextMonth.classList.add("choice__btn_checked");
+      nowMonthCards.classList.add("hidden");
+      nextMonthCards.classList.remove("hidden");
+    });
   }
 }
 

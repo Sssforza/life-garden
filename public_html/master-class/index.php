@@ -15,10 +15,10 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 	</section>
 	<section class="page__box container masterClass">
 		<div class="page__title ">Расписание мастер-классов</div>
-		<div class="masterClass__header">
+		<section class="masterClass__header">
 			<div class="choice masterClass__choice">
-				<div class="choice__btn choice__btn_checked">Июль</div>
-				<div class="choice__btn ">Август</div>
+				<div class="choice__btn choice__nowMonth_js choice__btn_checked">Июль</div>
+				<div class="choice__btn choice__nextMonth_js ">Август</div>
 			</div>
 			<div class="masterClass__archive masterArchive">
 				<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/archive.svg'; ?>
@@ -35,7 +35,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<span>Год</span>
 							</div>
 							<div class="masterArchive__input masterArchive__input_js">
-								<input class="envelopeInput__input envelopeInput__input_year" type="text" value="2021" readonly="readonly">
+								<input class="envelopeInput__input envelopeInput__input_year masterArchive__year_js" type="text" value="2021" readonly="readonly">
 								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowColor.svg'; ?>
 							</div>
 							<div class="masterArchive__years">
@@ -50,7 +50,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<span>Месяц</span>
 							</div>
 							<div class="masterArchive__input masterArchive__input_js">
-								<input class="envelopeInput__input envelopeInput__input_month" type="text" value="Июль" readonly="readonly">
+								<input class="envelopeInput__input envelopeInput__input_month masterArchive__month_js" type="text" value="Июль" readonly="readonly">
 								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowColor.svg'; ?>
 							</div>
 							<div class="masterArchive__months">
@@ -74,19 +74,25 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 					<div class="masterClass__btn btn masterArchive__apply masterArchive__apply_js">Применить</div>
 				</div>
 			</div>
-		</div>
-		<div class="masterClass__container">
+		</section>
+		<section class="masterClass__container masterClass__containerNow_js">
 			<div class="masterClass__card masterClassCard">
 				<div class="masterClassCard__visual">
 					<img class="masterClassCard__img" src="/dist/img/trash/masterCardImg.jpg" alt="">
-					<div class="masterClassCard__share">
-						<span>Поделиться</span>
-						<a class="masterClassCard__link" href="">
-							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/vkWhite.svg'; ?>
-						</a>
-						<a class="masterClassCard__link" href="">
-							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/okWhite.svg'; ?>
-						</a>
+					<div class="social masterClassCard__social">
+						<div class="social__title">Поделиться</div>
+						<ul class="social__list">
+							<li>
+								<a class="social__item" href="">
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/vkWhite.svg'; ?>
+								</a>
+							</li>
+							<li>
+								<a class="social__item" href="">
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/okWhite.svg'; ?>
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 				<div class="masterClassCard__content">
@@ -95,7 +101,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							25 <span>Сентября <br> в 18:00</span>
 						</div>
 						<div class="masterClassCard__title">Как и чем укрыть сад надежно
-							и безопасно. Укрытие роз.
+							и безопасно.Укрытие роз.
 							Основные ошибки
 						</div>
 					</div>
@@ -125,7 +131,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="masterClassCard__description">Цена</div>
 							<div class="masterClassCard__points"></div>
 							<div class="masterClassCard__value">500
-								<span class="masterClassCard__ruble">₽</span>(Осталось
+								<span class="masterClassCard__ruble">₽ </span>(Осталось
 								<span class="masterClassCard__quantity">15 билетов</span>)
 							</div>
 						</div>
@@ -143,69 +149,25 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						</div>
 					</div>
 					<div class="masterClass__btn btn masterClass__btn_js">Купить билет</div>
-					<div class="windowsMessage__wrap masterClass__order masterClassOrder masterClassWrapper_js hidden">
-						<div class="windowsMessage__popap masterClassOrder_js ">
-							<div class="windowsMessage__close  masterClass__orderClose_js">
-								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
-							</div>
-							<div class="windowsMessage__title">Оформление заказа</div>
-							<form action="">
-								<div class="masterClassOrder__fields">
-									<div class="envelopeInput">
-										<div class="envelopeInput__title">Имя</div>
-										<input class="envelopeInput__input " type="text" placeholder="Введите ваше имя">
-									</div>
-									<div class="envelopeInput">
-										<div class="envelopeInput__title">Телефон</div>
-										<input class="envelopeInput__input " type="number" placeholder="+7 (___) ___-__-__">
-									</div>
-									<div class="envelopeInput">
-										<div class="envelopeInput__title">Фамилия</div>
-										<input class="envelopeInput__input " type="text" placeholder="Введите вашу фамилию">
-									</div>
-									<div class="envelopeInput">
-										<div class="envelopeInput__title">E-mail</div>
-										<input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
-									</div>
-								</div>
-								<div class="masterClassOrder__row">
-									<span class="masterClassOrder__price">К оплате</span><span class="masterClassOrder__cost">500 <span class="masterClassOrder__ruble">₽</span> </span>
-								</div>
-								<div class="masterClassOrder__methods">
-									<div class="masterClassOrder__subtitle">Способ оплаты</div>
-									<div class="masterClassOrder__check">
-										<label><input type="radio" name='address' checked>
-											<span>Оплата картой на сайте</span>
-										</label>
-										<span class="masterClassOrder__description">Оплата производится картой Visa или MasterCard</span>
-									</div>
-								</div>
-								<button type="submit" class="masterClass__btn btn masterClassOrder__btn_js">Перейти к оплате</button>
-								<div class="agreement">
-									<label class="agreement__label">
-										<input type="checkbox" checked="checked">
-										<span class="check"></span>
-									</label>
-									<div class="agreement__consent">
-										Нажимая «Перейти к оплате», вы соглашаетесь с <a class="agreement__link" href="/privacy/">условиями приобретения</a>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
 				</div>
 			</div>
 			<div class="masterClass__card masterClassCard">
 				<div class="masterClassCard__visual">
 					<img class="masterClassCard__img" src="/dist/img/trash/masterCardImg.jpg" alt="">
-					<div class="masterClassCard__share">
-						<span>Поделиться</span>
-						<a class="masterClassCard__link" href="">
-							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/vkWhite.svg'; ?>
-						</a>
-						<a class="masterClassCard__link" href="">
-							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/okWhite.svg'; ?>
-						</a>
+					<div class="social masterClassCard__social">
+						<div class="social__title">Поделиться</div>
+						<ul class="social__list">
+							<li>
+								<a class="social__item" href="">
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/vkWhite.svg'; ?>
+								</a>
+							</li>
+							<li>
+								<a class="social__item" href="">
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/okWhite.svg'; ?>
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 				<div class="masterClassCard__content">
@@ -214,7 +176,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							25 <span>Сентября <br> в 18:00</span>
 						</div>
 						<div class="masterClassCard__title">Как и чем укрыть сад надежно
-							и безопасно. Укрытие роз.
+							и безопасно.Укрытие роз.
 							Основные ошибки
 						</div>
 					</div>
@@ -244,7 +206,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							<div class="masterClassCard__description">Цена</div>
 							<div class="masterClassCard__points"></div>
 							<div class="masterClassCard__value">500
-								<span class="masterClassCard__ruble">₽</span>(Осталось
+								<span class="masterClassCard__ruble">₽ </span>(Осталось
 								<span class="masterClassCard__quantity">15 билетов</span>)
 							</div>
 						</div>
@@ -264,8 +226,81 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 					<div class="masterClass__btn btn masterClass__btn_js">Купить билет</div>
 				</div>
 			</div>
-		</div>
-		<div class="masterClass__footer">
+		</section>
+		<section class="masterClass__container masterClass__containerNext_js hidden">
+			<div class="masterClass__card masterClassCard ">
+				<div class="masterClassCard__visual">
+					<img class="masterClassCard__img" src="/dist/img/trash/masterCardImg1.jpg" alt="">
+					<div class="social masterClassCard__social">
+						<div class="social__title">Поделиться</div>
+						<ul class="social__list">
+							<li>
+								<a class="social__item" href="">
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/vkWhite.svg'; ?>
+								</a>
+							</li>
+							<li>
+								<a class="social__item" href="">
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/okWhite.svg'; ?>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="masterClassCard__content">
+					<div class="masterClassCard__header">
+						<div class="masterClassCard__date">
+							05 <span>Августа <br> в 18:00</span>
+						</div>
+						<div class="masterClassCard__title">Сеем лук порей, лук Эксибишен
+						</div>
+					</div>
+					<div class="masterClassCard__body masterClassCard__body_js">
+						<div class="masterClassCard__text">
+							Первый способ – засыпьте основание куста землей, уложите еловую хвою, насыпьте песок и укройте
+							его еловым лапником. Плети осторожно снимите с опор и уложите на еловый лапник. Сверху также
+							положите еловые ветки и замотайте всю зеленую массу спанбондом. Весной такое укрытие снимают
+							постепенно, сначала приоткрывая ветки, а затем высвобождая все растение.
+							Первый способ – засыпьте основание куста землей, уложите еловую хвою, насыпьте песок и укройте
+							его еловым лапником. Плети осторожно снимите с опор и уложите на еловый лапник. Сверху также
+							положите еловые ветки и замотайте всю зеленую массу спанбондом. Весной такое укрытие снимают
+							постепенно, сначала приоткрывая ветки, а затем высвобождая все растение.
+						</div>
+						<div class="masterClassCard__readAll masterClassCard__readAll_js">
+							<span class="masterClassCard__show">Читать полностью</span>
+							<span class="masterClassCard__hide">Скрыть</span>
+							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowSort.svg'; ?>
+						</div>
+					</div>
+					<div class="masterClassCard__table">
+						<div class="masterClassCard__row">
+							<div class="masterClassCard__description">Цена</div>
+							<div class="masterClassCard__points"></div>
+							<div class="masterClassCard__value">500
+								<span class="masterClassCard__ruble">₽ </span>(Осталось
+								<span class="masterClassCard__quantity">15 билетов</span>)
+							</div>
+						</div>
+						<div class="masterClassCard__row">
+							<div class="masterClassCard__description">Длительность</div>
+							<div class="masterClassCard__points"></div>
+							<div class="masterClassCard__value">30 минут
+							</div>
+						</div>
+						<div class="masterClassCard__row">
+							<div class="masterClassCard__description">Место проведения</div>
+							<div class="masterClassCard__points"></div>
+							<div class="masterClassCard__value">СКК им. Виктора Блинова
+							</div>
+						</div>
+					</div>
+					<div class="masterClass__btn btn masterClass__btn_js">Купить билет</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="masterClass__footer">
 			<div class="masterClass__sliderName">
 				Фотоотчет с мастер-класса
 			</div>
@@ -289,8 +324,58 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 					<img class="masterClass__slide masterClass__slide_small" src="/dist/img/trash/aboutSlide7.jpg">
 				</div>
 			</div>
-		</div>
+		</section>
 	</section>
+	<div class="windowsMessage__wrap masterClass__order masterClassOrder masterClassWrapper_js hidden">
+		<div class="windowsMessage__popap masterClassOrder_js ">
+			<div class="windowsMessage__close  masterClass__orderClose_js">
+				<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
+			</div>
+			<div class="windowsMessage__title">Оформление заказа</div>
+			<form action="">
+				<div class="masterClassOrder__fields">
+					<div class="envelopeInput">
+						<div class="envelopeInput__title">Имя<span>*</span></div>
+						<input class="envelopeInput__input " type="text" placeholder="Введите ваше имя">
+					</div>
+					<div class="envelopeInput">
+						<div class="envelopeInput__title">Телефон<span>*</span></div>
+						<input class="envelopeInput__input " type="number" placeholder="+7 (___) ___-__-__">
+					</div>
+					<div class="envelopeInput">
+						<div class="envelopeInput__title">Фамилия<span>*</span></div>
+						<input class="envelopeInput__input " type="text" placeholder="Введите вашу фамилию">
+					</div>
+					<div class="envelopeInput">
+						<div class="envelopeInput__title">E-mail</div>
+						<input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
+					</div>
+				</div>
+				<div class="masterClassOrder__row">
+					<span class="masterClassOrder__price">К оплате</span><span class="masterClassOrder__cost">500 <span class="masterClassOrder__ruble">₽</span> </span>
+				</div>
+				<div class="masterClassOrder__methods">
+					<div class="masterClassOrder__subtitle">Способ оплаты</div>
+					<div class="masterClassOrder__check">
+						<label><input type="radio" name='address' checked>
+							<span>Оплата картой на сайте</span>
+						</label>
+						<span class="masterClassOrder__description">Оплата производится картой Visa или MasterCard</span>
+					</div>
+				</div>
+				<button type="submit" class="masterClass__btn btn masterClassOrder__btn_js" disabled>Перейти к оплате</button>
+				<div class="agreement">
+					<label class="agreement__label ">
+						<input type="checkbox">
+						<span class="check check_js"></span>
+					</label>
+					<div class="agreement__consent ">
+						Нажимая «Перейти к оплате», вы соглашаетесь с <a class="agreement__link" href="/privacy/">условиями приобретения</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
 </main>
 
 <?

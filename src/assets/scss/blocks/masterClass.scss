@@ -1,8 +1,6 @@
 @import "../modules/utilities/_variables.scss";
 
 .masterClass {
-  // .masterClass__header
-
   &__header {
     margin-top: 28px;
     display: flex;
@@ -18,6 +16,9 @@
     display: flex;
     flex-direction: column;
     gap: 65px;
+    .masterClassCard:not(:last-child) {
+      border-bottom: 1px solid #cad4db;
+    }
   }
 
   &__card {
@@ -25,8 +26,7 @@
   }
 
   &__footer {
-    padding-top: 46px;
-    margin-top: -1px;
+    margin-top: 45px;
     position: relative;
     background-color: white;
   }
@@ -41,6 +41,12 @@
   }
   &__sliderFor {
     position: relative;
+    &:hover {
+      .masterClass__prev,
+      .masterClass__next {
+        opacity: 1;
+      }
+    }
   }
   &__sliderNav {
     margin: 16px 0;
@@ -50,8 +56,8 @@
     .slick-current {
       & img {
         /* border: 5px solid #1e7243; */
-        outline: 5px solid #1e7243; 
-        outline-offset: -5px; 
+        outline: 5px solid #1e7243;
+        outline-offset: -5px;
       }
     }
     .slick-list {
@@ -62,6 +68,7 @@
     object-fit: cover;
     width: 1410px;
     height: 650px;
+
     &_small {
       cursor: pointer;
       width: 230px;
@@ -70,27 +77,29 @@
   }
   &__prev,
   &__next {
+    opacity: 0;
     z-index: 100;
     width: 60px;
     height: 60px;
-    background: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    background: rgba(51, 51, 51, 0.3);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     top: 50%;
-
     cursor: pointer;
+    transition: $transition;
     & svg {
       margin-right: 5px;
       path {
         transition: $transition;
         display: block;
+        stroke: $white;
       }
     }
     &:hover {
+      background: $white;
       & svg {
         path {
           stroke: $textColor;
@@ -116,11 +125,12 @@
 }
 
 .masterClassCard {
-  border-bottom: 1px solid #cad4db;
   padding-bottom: 56px;
   &__visual {
   }
-
+  &__social {
+    margin-top: 30px;
+  }
   &__share {
     margin-top: 30px;
     display: flex;
@@ -133,8 +143,8 @@
   }
 
   &__img {
-    width: 528px;
-    height: 370px;
+    max-width: 528px;
+    max-height: 370px;
   }
   &__link {
     margin-left: 12px;
@@ -223,7 +233,18 @@
     line-height: 24px;
     margin-top: 8px;
     & span {
+      position: relative;
       border-bottom: 2px dashed $green;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background: $green;
+        transition: width 0.3s ease-out;
+      }
     }
     & svg {
       display: block;
@@ -234,7 +255,9 @@
     }
     &:hover {
       & span {
-        border-bottom: 2px solid $green;
+        &:after {
+          width: 100%;
+        }
       }
     }
   }
@@ -282,7 +305,6 @@
   }
   &__quantity {
     color: $green;
-    border-bottom: 2px dotted $green;
   }
 }
 .masterArchive {
@@ -302,11 +324,24 @@
     font-size: 18px;
     line-height: 13px;
     & span {
+      position: relative;
       color: $green;
       cursor: pointer;
       border-bottom: 2px dashed $green;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background: $green;
+        transition: width 0.3s ease-out;
+      }
       &:hover {
-        border-bottom: 2px solid $green;
+        &:after {
+          width: 100%;
+        }
       }
     }
   }
@@ -430,7 +465,7 @@
     width: 450px;
     height: 50px;
   }
-  .agreement{
+  .agreement {
     margin-top: 24px;
     display: flex;
     align-items: center;
@@ -472,7 +507,6 @@
   &__methods {
     margin-top: 33px;
     & input[type="radio"] {
-      cursor: pointer;
       margin: 0px;
       width: 25px;
       height: 25px;

@@ -11,6 +11,13 @@ export function masterClassPopups() {
     const inputsItems = masterPopup.querySelectorAll(
       ".masterArchive__inputItem_js"
     );
+    const inputYear = masterPopup.querySelector(".masterArchive__year_js");
+    const inputMonth = masterPopup.querySelector(".masterArchive__month_js");
+    function closeInputs() {
+      masterItems.forEach((el) => {
+        el.classList.remove("masterArchive__item_open");
+      });
+    }
     document.onclick = function (e) {
       if (
         masterPopup &&
@@ -19,9 +26,7 @@ export function masterClassPopups() {
         !masterPopup.contains(e.target)
       ) {
         masterPopup.classList.add("hidden");
-        masterItems.forEach((el) => {
-          el.classList.remove("masterArchive__item_open");
-        });
+        closeInputs();
       }
     };
     btnOpenPopup.onclick = () => {
@@ -29,9 +34,12 @@ export function masterClassPopups() {
     };
     btnClosePopup.onclick = () => {
       masterPopup.classList.add("hidden");
+      closeInputs();
     };
     btnApplyPopup.onclick = () => {
       masterPopup.classList.add("hidden");
+      closeInputs();
+      btnOpenPopup.textContent = `${inputMonth.value} ${inputYear.value}`;
     };
     inputsClicker.forEach((item) => {
       item.onclick = () => {
@@ -62,9 +70,9 @@ export function masterClassBuy() {
     const masterBuyClose = document.querySelector(
       ".masterClass__orderClose_js"
     );
-    const masterBuyOrder = document.querySelector(
-      ".masterClassOrder__btn_js"
-    );
+    const masterBuyOrder = document.querySelector(".masterClassOrder__btn_js");
+    const agreementCheck = document.querySelector(".check_js");
+
     masterBuyBtn.forEach((item) => {
       item.onclick = () => {
         masterBuyWrapper.classList.remove("hidden");
@@ -89,5 +97,39 @@ export function masterClassBuy() {
       masterBuyWrapper.classList.add("hidden");
       document.body.classList.remove("hiddenHeaderCatalog");
     };
+    agreementCheck.onclick = () => {
+      agreementCheck.classList.toggle("agreement__checked");
+      if (agreementCheck.classList.contains("agreement__checked")) {
+        masterBuyOrder.disabled = false;
+      } else {
+        masterBuyOrder.disabled = true;
+      }
+    };
+  }
+}
+
+export function masterChoiceMonth() {
+  if (document.querySelector(".choice__nowMonth_js")) {
+    const clickNowMonth = document.querySelector(".choice__nowMonth_js");
+    const clickNextMonth = document.querySelector(".choice__nextMonth_js");
+    const nowMonthCards = document.querySelector(
+      ".masterClass__containerNow_js"
+    );
+    const nextMonthCards = document.querySelector(
+      ".masterClass__containerNext_js"
+    );
+
+    clickNowMonth.addEventListener("click", () => {
+      clickNowMonth.classList.add("choice__btn_checked");
+      clickNextMonth.classList.remove("choice__btn_checked");
+      nowMonthCards.classList.remove("hidden");
+      nextMonthCards.classList.add("hidden");
+    });
+    clickNextMonth.addEventListener("click", () => {
+      clickNowMonth.classList.remove("choice__btn_checked");
+      clickNextMonth.classList.add("choice__btn_checked");
+      nowMonthCards.classList.add("hidden");
+      nextMonthCards.classList.remove("hidden");
+    });
   }
 }

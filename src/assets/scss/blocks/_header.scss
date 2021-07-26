@@ -328,7 +328,7 @@
       content: "";
       position: absolute;
       left: 0;
-      bottom: -19px;
+      bottom: -17px;
       right: 0;
       height: 4px;
       background: $green;
@@ -792,7 +792,7 @@
 .quickView {
   .windowsMessage__popap {
     width: 1400px;
-    height: 756px;
+    height: max-content;
     padding: 50px 50px 89px;
     border-radius: 20px;
   }
@@ -805,21 +805,20 @@
       height: 94px;
       border-radius: 15px;
       margin: 0;
-      border: 3px solid $white;
-      
+      /*       border: 3px solid $white; */
     }
   }
-  .productCard__box{
+  .productCard__box {
     margin-top: 5px;
     width: 576px;
   }
   .slick-slide {
-    margin: 0 0px;
+    margin: 0;
   }
   .slick-list {
-    margin: 0 -3px;
+    margin: 0 1px;
   }
-  &__detailBtn{
+  &__detailBtn {
     margin-top: 25px;
     width: 230px;
     height: 48px;

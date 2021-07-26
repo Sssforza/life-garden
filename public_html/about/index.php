@@ -36,7 +36,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<img class="aboutFacts__points" src="/dist/img/aboutCardPoints.png">
 							</div>
 							<div class="aboutFacts__image">
-								<img src="/dist/img/aboutCard.png">
+								<img src="/dist/img/6000products.jpg">
 							</div>
 						</div>
 						<div class="aboutFacts__card">
@@ -46,17 +46,27 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<img class="aboutFacts__points" src="/dist/img/aboutCardPoints.png">
 							</div>
 							<div class="aboutFacts__image">
-								<img src="/dist/img/aboutCard2.png">
+								<img src="/dist/img/50buyers.jpg">
 							</div>
 						</div>
 						<div class="aboutFacts__card">
 							<div class="aboutFacts__info">
-								<div class="aboutFacts__text">6000</div>
-								<div class="aboutFacts__text_small">товаров на полках</div>
+								<div class="aboutFacts__text">15 <span>лет</span></div>
+								<div class="aboutFacts__text_small">мы работаем для вас</div>
 								<img class="aboutFacts__points" src="/dist/img/aboutCardPoints.png">
 							</div>
 							<div class="aboutFacts__image">
 								<img src="/dist/img/aboutCard.png">
+							</div>
+						</div>
+						<div class="aboutFacts__card">
+							<div class="aboutFacts__info">
+								<div class="aboutFacts__text">5000</div>
+								<div class="aboutFacts__text_small">наименований растений</div>
+								<img class="aboutFacts__points" src="/dist/img/aboutCardPoints.png">
+							</div>
+							<div class="aboutFacts__image">
+								<img src="/dist/img/5kPlants.jpg">
 							</div>
 						</div>
 					</div>

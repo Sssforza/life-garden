@@ -48,7 +48,6 @@ import {
   sliderProduct,
   sliderAbout,
   sliderMasterClass,
-  sliderQuickView
 } from "./blocks/sliders.js";
 
 //📁 /assets/js/blocks  specialSample.js
@@ -58,7 +57,7 @@ import { specialSampleTabs } from "./blocks/specialSample.js";
 import { openImage, checkCategories, otherClicks } from "./blocks/detail.js";
 
 //📁 /assets/js/blocks  masterClass.js
-import { masterClassPopups, masterClassBuy } from "./blocks/masterClass.js";
+import { masterClassPopups, masterClassBuy, masterChoiceMonth } from "./blocks/masterClass.js";
 
 //📁 /assets/js/blocks  specialSample.js
 import { mainGardenShow, masterClassShow } from "./blocks/showFull.js";
@@ -161,14 +160,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // slick slider MasterClass page
   sliderMasterClass();
 
-  // slick slider quick view on all pages(in header)
-  sliderQuickView();
-
   // all archives MasterClass page
   masterClassPopups();
 
   // buy popup MasterClass page
   masterClassBuy();
+
+  // choice month MasterClass page
+  masterChoiceMonth();
 
   // quickView detail popup
   quickView();

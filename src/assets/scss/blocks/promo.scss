@@ -1,0 +1,96 @@
+@import "../modules/utilities/_variables.scss";
+
+.promo {
+  &__item {
+  }
+  &__products {
+  }
+}
+.promoItem {
+  display: flex;
+
+  &__image {
+    border-radius: 10px;
+    width: 690px;
+    height: 400px;
+  }
+  &__text {
+    margin-left: 40px;
+    margin-top: 23px;
+  }
+  &__date {
+    height: 32px;
+    width: max-content;
+    border: 1px solid #c7d0d9;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 7px 10px;
+    & svg {
+      path {
+        display: block;
+      }
+    }
+    & span {
+      margin-left: 6px;
+      font-family: Rubik;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      text-transform: uppercase;
+      color: $green;
+    }
+  }
+  &__title {
+    margin-top: 17px;
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+  }
+  &__description {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  &__ul {
+    margin-top: 13px;
+    & li {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      line-height: 30px;
+    }
+    & li::before {
+      content: "";
+      background: $green;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+}
+.promoProducts {
+  &__title {
+    margin-top: 91px;
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 50px;
+    & span {
+      font-family: Firasans;
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 24px;
+      color: #98a6b4;
+    }
+  }
+  &__container {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 35px;
+  }
+}
