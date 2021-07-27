@@ -32,7 +32,7 @@
                 <div class="footer__column footer__column_margin">
                     <div class="footer__title">Покупателям</div>
                     <ul class="footer__ul">
-                        <li><a class="footer__point" href="#">Клубная карта</a></li>
+                        <li><a class="footer__point" href="/club-card/">Клубная карта</a></li>
                         <li><a class="footer__point" href="#">Акции</a></li>
                         <li><a class="footer__point" href="#">Доставка и оплата</a></li>
                     </ul>
