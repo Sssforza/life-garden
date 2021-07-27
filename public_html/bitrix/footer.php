@@ -42,7 +42,6 @@
                     <div class="footerContacts__tel">
                         <a class="footerContacts__telContainer" href="tel: +73812349341">
                             <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/tel-footer.svg'; ?>
-
                             <span class="footerContacts__telText">+ 7 3812 34-93-41</span>
                         </a>
                         <div class="footerContacts__telCenter">Центр информационной поддержки клиента</div>

@@ -19996,10 +19996,34 @@ function mapAsideScroll() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkClubCard", function() { return checkClubCard; });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
 function checkClubCard() {
   if (document.querySelector(".clubRegistration__btn_js")) {
     var clubBtn = document.querySelector(".clubRegistration__btn_js");
     var agreementCheck = document.querySelector(".clubCheck_js");
+    var clubCardWrapper = document.querySelector(".clubWrap_js");
+    var clubCradPopup = document.querySelector(".clubPopup_js");
+    var clubCardClose = document.querySelector(".clubPopupClose_js");
+
+    clubBtn.onclick = function (e) {
+      e.preventDefault();
+      clubCardWrapper.classList.remove("hidden");
+      document.body.classList.add("hiddenHeaderCatalog");
+    };
+
+    clubCardWrapper.onclick = function (e) {
+      if (clubCradPopup && e.target !== clubCradPopup && !clubCradPopup.contains(e.target)) {
+        clubCardWrapper.classList.add("hidden");
+        document.body.classList.remove("hiddenHeaderCatalog");
+      }
+    };
+
+    clubCardClose.onclick = function () {
+      clubCardWrapper.classList.add("hidden");
+      document.body.classList.remove("hiddenHeaderCatalog");
+    };
 
     agreementCheck.onclick = function () {
       agreementCheck.classList.toggle("agreement__checked");

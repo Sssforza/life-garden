@@ -42,15 +42,15 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				<form class="clubRegistration__form" action="">
 					<div class="clubRegistration__fields">
 						<div class="envelopeInput">
-							<div class="envelopeInput__title">Имя<span>*</span></div>
+							<div class="envelopeInput__title">Имя <span>*</span></div>
 							<input class="envelopeInput__input " type="text" placeholder="Введите ваше имя">
 						</div>
 						<div class="envelopeInput">
-							<div class="envelopeInput__title">Фамилия<span>*</span></div>
+							<div class="envelopeInput__title">Фамилия <span>*</span></div>
 							<input class="envelopeInput__input " type="text" placeholder="Введите вашу фамилию">
 						</div>
 						<div class="envelopeInput">
-							<div class="envelopeInput__title">E-mail</div>
+							<div class="envelopeInput__title">E-mail <span>*</span></div>
 							<input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
 						</div>
 					</div>
@@ -67,7 +67,17 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				</form>
 			</section>
 		</div>
-
+		<div class="windowsMessage__wrap clubWrap_js hidden">
+        <div class="windowsMessage__popap clubPopup_js">
+          <div class="windowsMessage__close clubPopupClose_js">
+            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
+          </div>
+          <div class="windowsMessage__title">Вы успешно подписались</div>
+          <div class="windowsMessage__text">Благодарим за то, что подписались на нашу email-рассылку.
+            Теперь Вы будете получать актуальные новости и акции
+            примерно один раз в неделю. </div>
+        </div>
+      </div>
 	</section>
 </main>
 
