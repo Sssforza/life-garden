@@ -33,7 +33,7 @@
 .aboutHistory {
   margin-top: 35px;
   &__image {
-    width: 1400px;
+    max-width: 1400px;
     max-height: 500px;
     border-radius: 10px;
     overflow: hidden;

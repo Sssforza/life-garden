@@ -14,10 +14,16 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 		</ul>
 	</section>
 	<section class="page__box container club">
-		<div class="page__title ">Акции</div>
-		<div class="club__image">
-			<img src="/dist/img/clubCardImgBg3.jpg" alt="">
-		</div>
+		<section class="club__header">
+			<div class="page__title ">Клубная карта</div>
+			<div class="club__welcome clubWelcome" style="background-image:url(/dist/img/clubCardImgBg4.png">
+				<div class="clubWelcome__title">Добро пожаловать
+					в наш клуб</div>
+				<div class="clubWelcome__img">
+					<img src="/dist/img/clubCardImgBg.png" alt="">
+				</div>
+			</div>
+		</section>
 		<div class="club__container">
 			<section class="club__allows  clubАllows">
 				<div class="clubАllows__title">С помощью Вашей карты Вы можете:</div>
@@ -51,7 +57,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 					<div class="agreement">
 						<label class="agreement__label ">
 							<input type="checkbox">
-							<span class="check check_js"></span>
+							<span class="check clubCheck_js"></span>
 						</label>
 						<div class="agreement__consent ">
 							Нажимая на кнопку «Получить карту», вы принимаете <br> условия <a class="agreement__link" href="/privacy/">Пользовательского соглашения</a>

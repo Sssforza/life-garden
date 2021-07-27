@@ -1,19 +1,52 @@
 @import "../modules/utilities/_variables.scss";
 
 .club {
-  &__image {
-    margin-top: 41px;
-    overflow: hidden;
-    max-width: 1400px;
-    & img {
-      display: block;
-      width: 100%;
-    }
+  &__welcome {
+    margin-top: 40px;
   }
   &__container {
     display: flex;
-    gap: 200px;
+    gap: 270px;
     margin-top: 36px;
+  }
+}
+.clubWelcome {
+  width: 1400px;
+  height: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  &__title {
+    width: 45%;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 55px;
+    color: $white;
+    padding: 115px 30px 124px 80px;
+  }
+  &__img {
+    width: 664px;
+    height: 664px;
+    background: radial-gradient(
+      closest-side,
+      #cfe7d7 75%,
+      rgba(207, 231, 215, 0.5) 75%,
+      rgba(207, 231, 215, 0.5)
+    );
+    border-radius: 50%;
+    & img {
+      display: block;
+      object-fit: contain;
+      width: 653px;
+      margin-top: 220px;
+      margin-left: 165px;
+    }
   }
 }
 .clubАllows {

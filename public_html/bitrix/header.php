@@ -739,4 +739,38 @@
           </section>
         </div>
       </div>
+      <div class="windowsMessage__wrap clubCardWindow clubCardWindow_js hidden">
+        <div class="windowsMessage__popap clubCardWindow__popup clubCardWindow__popup_js ">
+          <div class="windowsMessage__close clubCardWindow__close_js">
+            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
+          </div>
+          <div class="windowsMessage__title">Оформить клубную карту</div>
+          <form class="clubRegistration__form" action="">
+            <div class="clubRegistration__fields">
+              <div class="envelopeInput">
+                <div class="envelopeInput__title">Имя<span>*</span></div>
+                <input class="envelopeInput__input " type="text" placeholder="Введите ваше имя">
+              </div>
+              <div class="envelopeInput">
+                <div class="envelopeInput__title">Фамилия<span>*</span></div>
+                <input class="envelopeInput__input " type="text" placeholder="Введите вашу фамилию">
+              </div>
+              <div class="envelopeInput">
+                <div class="envelopeInput__title">E-mail<span>*</span></div>
+                <input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
+              </div>
+            </div>
+            <div class="agreement">
+              <label class="agreement__label ">
+                <input type="checkbox">
+                <span class="check check_js"></span>
+              </label>
+              <div class="agreement__consent ">
+                Нажимая на кнопку «Получить карту», вы принимаете <br> условия <a class="agreement__link" href="/privacy/">Пользовательского соглашения</a>
+              </div>
+            </div>
+            <button type="submit" class="clubCardWindow__btn btn clubCardWindow__btn_js" disabled>Получить карту</button>
+          </form>
+        </div>
+      </div>
     </header>

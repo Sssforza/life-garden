@@ -824,3 +824,44 @@
     height: 48px;
   }
 }
+
+.clubCardWindow {
+  &__popup {
+    width: 520px;
+    height: 630px;
+    padding: 62px 40px 78px;
+    border-radius: 20px;
+  }
+  .windowsMessage__close {
+    right: 40px;
+  }
+  .windowsMessage__title {
+    text-align: start;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .envelopeInput__input {
+    width: 440px;
+    height: 50px;
+  }
+  .clubRegistration__fields {
+    margin-top: 15px;
+  }
+  .envelopeInput:not(:first-child) {
+    margin-top: 20px;
+  }
+  .agreement {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+  }
+  &__btn {
+    margin-top: 32px;
+    width: 295px;
+    height: 55px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+}

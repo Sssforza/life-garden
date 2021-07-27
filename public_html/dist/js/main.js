@@ -11519,7 +11519,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["quickView"])(); // check policy club-card
 
-  Object(_blocks_clubCard_js__WEBPACK_IMPORTED_MODULE_16__["checkClubCard"])();
+  Object(_blocks_clubCard_js__WEBPACK_IMPORTED_MODULE_16__["checkClubCard"])(); // club-card popup
+
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["clubCardPopup"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
@@ -18644,6 +18646,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerScroll", function() { return headerScroll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerOpenClient", function() { return headerOpenClient; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "quickView", function() { return quickView; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clubCardPopup", function() { return clubCardPopup; });
 function headerCatalog() {
   var buttonCatalog = document.querySelector(".headerMiddleCatalog_js");
   var headerCatalog = document.querySelector(".headerCatalog_js");
@@ -18775,6 +18778,48 @@ function quickView() {
         item.classList.add("productCard__checked");
       });
     });
+  }
+}
+function clubCardPopup() {
+  if (document.querySelector(".clubCard__btn_js")) {
+    var clubCardWrapper = document.querySelector(".clubCardWindow_js");
+    var clubCradPopup = document.querySelector(".clubCardWindow__popup_js");
+    var clubCardClose = document.querySelector(".clubCardWindow__close_js");
+    var clubCardWindowBtn = document.querySelector(".clubCardWindow__btn_js");
+    var clubCardBtn = document.querySelector(".clubCard__btn_js");
+    var agreementCheck = document.querySelector(".check_js");
+
+    clubCardBtn.onclick = function () {
+      clubCardWrapper.classList.remove("hidden");
+      document.body.classList.add("hiddenHeaderCatalog");
+    };
+
+    clubCardWrapper.onclick = function (e) {
+      if (clubCradPopup && e.target !== clubCradPopup && !clubCradPopup.contains(e.target)) {
+        clubCardWrapper.classList.add("hidden");
+        document.body.classList.remove("hiddenHeaderCatalog");
+      }
+    };
+
+    clubCardClose.onclick = function () {
+      clubCardWrapper.classList.add("hidden");
+      document.body.classList.remove("hiddenHeaderCatalog");
+    };
+
+    clubCardWindowBtn.onclick = function () {
+      clubCardWrapper.classList.add("hidden");
+      document.body.classList.remove("hiddenHeaderCatalog");
+    };
+
+    agreementCheck.onclick = function () {
+      agreementCheck.classList.toggle("agreement__checked");
+
+      if (agreementCheck.classList.contains("agreement__checked")) {
+        clubCardWindowBtn.disabled = false;
+      } else {
+        clubCardWindowBtn.disabled = true;
+      }
+    };
   }
 }
 
@@ -19952,18 +19997,20 @@ function mapAsideScroll() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkClubCard", function() { return checkClubCard; });
 function checkClubCard() {
-  var clubBtn = document.querySelector(".clubRegistration__btn_js");
-  var agreementCheck = document.querySelector(".check_js");
+  if (document.querySelector(".clubRegistration__btn_js")) {
+    var clubBtn = document.querySelector(".clubRegistration__btn_js");
+    var agreementCheck = document.querySelector(".clubCheck_js");
 
-  agreementCheck.onclick = function () {
-    agreementCheck.classList.toggle("agreement__checked");
+    agreementCheck.onclick = function () {
+      agreementCheck.classList.toggle("agreement__checked");
 
-    if (agreementCheck.classList.contains("agreement__checked")) {
-      clubBtn.disabled = false;
-    } else {
-      clubBtn.disabled = true;
-    }
-  };
+      if (agreementCheck.classList.contains("agreement__checked")) {
+        clubBtn.disabled = false;
+      } else {
+        clubBtn.disabled = true;
+      }
+    };
+  }
 }
 
 /***/ }),

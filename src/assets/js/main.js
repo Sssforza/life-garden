@@ -19,7 +19,8 @@ import {
   headerClick,
   headerScroll,
   headerOpenClient,
-  quickView
+  quickView,
+  clubCardPopup
 } from "./blocks/_header.js";
 
 //📁 /assets/js/blocks  _footer.js
@@ -177,4 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // check policy club-card
   checkClubCard();
+
+  // club-card popup
+  clubCardPopup();
 });
