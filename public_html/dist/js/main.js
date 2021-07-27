@@ -90,7 +90,7 @@
 
 __webpack_require__(1);
 __webpack_require__(3);
-module.exports = __webpack_require__(20);
+module.exports = __webpack_require__(21);
 
 
 /***/ }),
@@ -11412,6 +11412,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_map_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(17);
 /* harmony import */ var _blocks_mapWindow_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(18);
 /* harmony import */ var _blocks_scrollbar_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(19);
+/* harmony import */ var _blocks_clubCard_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(20);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁 /node_modules/  slick 1.8.1
@@ -11444,6 +11445,8 @@ global.noUiSlider = nouislider__WEBPACK_IMPORTED_MODULE_3___default.a; //📁 /a
  //📁 /assets/js/blocks  specialSample.js
 
  //📁 /assets/js/blocks  scrollbar.js
+
+ //📁 /assets/js/blocks  clubCard.js
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -11514,7 +11517,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_masterClass_js__WEBPACK_IMPORTED_MODULE_11__["masterChoiceMonth"])(); // quickView detail popup
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["quickView"])();
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["quickView"])(); // check policy club-card
+
+  Object(_blocks_clubCard_js__WEBPACK_IMPORTED_MODULE_16__["checkClubCard"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
@@ -19941,6 +19946,28 @@ function mapAsideScroll() {
 
 /***/ }),
 /* 20 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkClubCard", function() { return checkClubCard; });
+function checkClubCard() {
+  var clubBtn = document.querySelector(".clubRegistration__btn_js");
+  var agreementCheck = document.querySelector(".check_js");
+
+  agreementCheck.onclick = function () {
+    agreementCheck.classList.toggle("agreement__checked");
+
+    if (agreementCheck.classList.contains("agreement__checked")) {
+      clubBtn.disabled = false;
+    } else {
+      clubBtn.disabled = true;
+    }
+  };
+}
+
+/***/ }),
+/* 21 */
 /***/ (function(module, exports) {
 
 // (c) 2010 jdbartlett, MIT license

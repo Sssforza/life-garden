@@ -70,6 +70,9 @@ import { mapWindow } from "./blocks/mapWindow.js";
 //📁 /assets/js/blocks  scrollbar.js
 import { mapAsideScroll } from "./blocks/scrollbar.js";
 
+//📁 /assets/js/blocks  clubCard.js
+import { checkClubCard } from "./blocks/clubCard.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   // open contextual hint
   headerSearchelp();
@@ -171,4 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // quickView detail popup
   quickView();
+
+  // check policy club-card
+  checkClubCard();
 });
