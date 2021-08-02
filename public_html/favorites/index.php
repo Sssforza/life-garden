@@ -17,7 +17,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 		<section class="favorites__head ">
 			<div class="page__title">Избранные товары</div>
 			<div class="favorites__authorization">
-				<span class="favorites__link">Авторизуйтесь</span>, чтобы сохранить список избранного, иначе после завершения сессии список будет удален
+				<a class="favorites__link" href='/'>Авторизуйтесь</a>, чтобы сохранить список избранного, иначе после завершения сессии список будет удален
 			</div>
 		</section>
 		<section class="favorites__products">

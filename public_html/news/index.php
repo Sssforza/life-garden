@@ -24,19 +24,19 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 			</div>
 		</section>
 		<section class="news__body">
-			<div class="news__container">
+			<div class="news__container news__allnews_js">
 				<div class="news__card newsCard">
 					<div class="newsCard__img">
 						<img src="/dist/img/trash/news.jpg" alt="">
 					</div>
 					<div class="newsCard__box">
-						<div class="newsCard__date">9 марта 2021</div> 
+						<div class="newsCard__date">9 марта 2021</div>
 						<div class="newsCard__color newsCard__color_master">Мастер-класс</div>
 						<div class="newsCard__title">Акция на все семена цветов</div>
 						<div class="newsCard__subtitle">Запустилась рождественская акция на все семена цветов</div>
-						<div class="newsCard__btn">Читать полностью
+						<a class="newsCard__btn" href="/headline/">Читать полностью
 							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/newsArrow.svg'; ?>
-						</div>
+						</a>
 					</div>
 				</div>
 				<div class="news__card newsCard">
@@ -44,12 +44,12 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						<img src="/dist/img/trash/news.jpg" alt="">
 					</div>
 					<div class="newsCard__box">
-						<div class="newsCard__date">9 марта 2021</div> 
+						<div class="newsCard__date">9 марта 2021</div>
 						<div class="newsCard__title newsCard__title_indent">Акция на все семена цветов</div>
 						<div class="newsCard__subtitle">Запустилась рождественская акция на все семена цветов</div>
-						<div class="newsCard__btn">Читать полностью
+						<a class="newsCard__btn" href="/headline/">Читать полностью
 							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/newsArrow.svg'; ?>
-						</div>
+						</a>
 					</div>
 				</div>
 				<div class="news__card newsCard">
@@ -61,9 +61,39 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						<div class="newsCard__color newsCard__color_seminar">Семинар</div>
 						<div class="newsCard__title">Акция на все семена цветов</div>
 						<div class="newsCard__subtitle">Запустилась рождественская акция на все семена цветов</div>
-						<div class="newsCard__btn">Читать полностью
+						<a class="newsCard__btn" href="/headline/">Читать полностью
 							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/newsArrow.svg'; ?>
-						</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="news__container news__master_js hidden">
+				<div class="news__card newsCard">
+					<div class="newsCard__img">
+						<img src="/dist/img/trash/news.jpg" alt="">
+					</div>
+					<div class="newsCard__box">
+						<div class="newsCard__date">9 марта 2021</div>
+						<div class="newsCard__color newsCard__color_master">Мастер-класс</div>
+						<div class="newsCard__title">Акция на все семена цветов</div>
+						<div class="newsCard__subtitle">Запустилась рождественская акция на все семена цветов</div>
+						<a class="newsCard__btn" href="/headline/">Читать полностью
+							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/newsArrow.svg'; ?>
+						</a>
+					</div>
+				</div>
+				<div class="news__card newsCard">
+					<div class="newsCard__img">
+						<img src="/dist/img/trash/news.jpg" alt="">
+					</div>
+					<div class="newsCard__box">
+						<div class="newsCard__date">9 марта 2021</div>
+						<div class="newsCard__color newsCard__color_seminar">Семинар</div>
+						<div class="newsCard__title">Акция на все семена цветов</div>
+						<div class="newsCard__subtitle">Запустилась рождественская акция на все семена цветов</div>
+						<a class="newsCard__btn" href="/headline/">Читать полностью
+							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/newsArrow.svg'; ?>
+						</a>
 					</div>
 				</div>
 			</div>

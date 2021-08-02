@@ -89,6 +89,9 @@ import { newspaperPopup, pdfLoader } from "./blocks/newspaper.js";
 //📁 /assets/js/blocks  articles.js
 import { articles } from "./blocks/articles.js";
 
+//📁 /assets/js/blocks  news.js
+import { newsCategories } from "./blocks/news.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   // open contextual hint
   headerSearchelp();
@@ -220,4 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // articles
   articles();
+
+  // check categories in news
+  newsCategories();
 });
