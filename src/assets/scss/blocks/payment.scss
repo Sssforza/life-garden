@@ -1,0 +1,95 @@
+@import "../modules/utilities/_variables.scss";
+
+.payment {
+  &__header {
+  }
+
+  &__success {
+  }
+
+  &__title {
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  &__not {
+  }
+
+  &__box {
+    margin-left: 14px;
+  }
+  &__svg {
+    & svg {
+      display: block;
+    }
+  }
+  &__rub {
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: normal;
+  }
+
+  &__buttons {
+    margin-top: 27px;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__slider {
+    margin-top: 58px;
+  }
+}
+.paymentSuccess {
+  display: flex;
+  & span {
+    font-weight: normal;
+  }
+  &__number {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 19px;
+  }
+
+  &__sum {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 9px;
+  }
+
+  &__orders {
+    width: 250px;
+    height: 56px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: Rubik;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  &__main {
+    width: 250px;
+    height: 56px;
+    border-radius: 10px;
+  }
+}
+.paymentNot {
+  display: flex;
+
+  &__description {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__btn {
+    width: 250px;
+    height: 56px;
+    font-size: 16px;
+    line-height: 21px;
+    cursor: pointer;
+  }
+}

@@ -39,14 +39,14 @@
                 </div>
                 <span>+ 7 3812 34-93-41</span>
               </a>
-              <a class="headerTop__enter hidden" href="#">
+              <div class="headerTop__authorization headerTop__authorization_js " href="#">
                 <div class="headerTop__icon">
-                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/enter.svg'; ?>
+                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/authorization.svg'; ?>
                 </div>
                 <span class="headerTop__text">Вход</span>
-              </a>
-              <div class="headerTop__client client_js">
-                <div class="headerTop__enter clientClick_js">
+              </div>
+              <div class="headerTop__client client_js hidden">
+                <div class="headerTop__authorization clientClick_js">
                   <div class="headerTop__icon">
                     <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/client.svg'; ?>
                   </div>
@@ -598,7 +598,7 @@
           </div>
         </div>
       </div>
-      <div class="windowsMessage__wrap windowsMessage_js hidden">
+      <div id="test-modal" class="windowsMessage__wrap windowsMessage_js hidden">
         <div class="windowsMessage__popap windowsMessagePopap_js">
           <div class="windowsMessage__close windowsMessageClose_js">
             <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
@@ -609,136 +609,135 @@
             примерно один раз в неделю. </div>
         </div>
       </div>
-      <div class="windowsMessage__wrap quickView quickViewWrapper_js hidden">
-        <div class="windowsMessage__popap quickViewPopup_js">
-          <div class="windowsMessage__close quickViewClose_js">
-            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
-          </div>
-          <section class="detail__productCard productCard">
-            <div class="productCard__slider">
-              <div class="quickView">
-                <img class="productCard__image quickView__big_js" src="/dist/img/trash/aboutSlide1.jpg">
-              </div>
-              <div class="productCard__box sliderQuickView_js">
-                <img class="productCard__image productCard__image_small quickView__small_js productCard__checked" src="/dist/img/trash/aboutSlide1.jpg">
-                <img class="productCard__image productCard__image_small quickView__small_js" src="/dist/img/trash/aboutSlide2.jpg">
-                <img class="productCard__image productCard__image_small quickView__small_js" src="/dist/img/trash/aboutSlide3.jpg">
-                <img class="productCard__image productCard__image_small quickView__small_js" src="/dist/img/trash/aboutSlide4.jpg">
-                <img class="productCard__image productCard__image_small quickView__small_js" src="/dist/img/trash/aboutSlide5.jpg">
-                <img class="productCard__image productCard__image_small quickView__small_js" src="/dist/img/trash/aboutSlide6.jpg">
-                <img class="productCard__image productCard__image_small quickView__small_js" src="/dist/img/trash/aboutSlide7.jpg">
-              </div>
-            </div>
-            <div class="productCard__info">
-              <div class="productCard__article">Арт. 17586503</div>
-              <div class="productCard__title">Лейка для садовых растений
-                Gardenia12 л.</div>
-              <div class="availability">
-                <div class="availability__text has">
-                  <span>Есть в наличии</span>
-                </div>
-                <div class="availability__text not hidden">
-                  <span>Нет в наличии</span>
-                </div>
-              </div>
-              <div class="review productCard__review">
-                <div class="review__list">
-                  <div class="review__item active">
-                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
-                  </div>
-                  <div class="review__item active">
-                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
-                  </div>
-                  <div class="review__item active">
-                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
-                  </div>
-                  <div class="review__item active">
-                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
-                  </div>
-                  <div class="review__item">
-                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
-                  </div>
-                </div>
-                <div class="review__how">1 отзыв</div>
-              </div>
-              <div class="productCard__season">
-                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/seson.svg'; ?>
-                <div class="productCard__seasonText">Сезон: <span>Лето</span></div>
-              </div>
-              <div class="productCard__weight productWeight">
-                <div class="productWeight__text">Вес, кг</div>
-                <div class="productWeight__container">
-                  <div class="productWeight__item weight_js">2,5 кг</div>
-                  <div class="productWeight__item weight_js">2,5 кг</div>
-                  <div class="productWeight__item weight_js">2,5 кг</div>
-                  <div class="productWeight__item weight_js productCard__checked_small">2,5 кг</div>
-                </div>
-              </div>
-              <div class="productCard__colors productColors">
-                <div class="productColors__text">
-                  Цвет: <span>салатовый микс</span>
-                </div>
-                <div class="productColors__box">
-                  <div class="productColors__item_big color_js productCard__checked_small">
-                    <div class="productColors__item" style="background-color:#5D9D16;"></div>
-                  </div>
-                  <div class="productColors__item_big color_js">
-                    <div class="productColors__item" style="background-color:#69BE5E;"></div>
-                  </div>
-                  <div class="productColors__item_big color_js">
-                    <div class="productColors__item" style="background-color:#4E6D4A;"></div>
-                  </div>
-                  <div class="productColors__item_big color_js">
-                    <div class="productColors__item" style="background-color:#169D74;"></div>
-                  </div>
-                  <div class="productColors__item_big color_js">
-                    <div class="productColors__item" style="background-color:#34B15E;"></div>
-                  </div>
-                  <div class="productColors__item_big color_js">
-                    <div class="productColors__item" style="background-color:#5ACA51;"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="productCard__cost cost">
-                <div class="cost__left">
-                  <div class="cost__info ">с картой живой сад</div>
-                  <div class="cost__price cost__price_card">
-                    <span class="cost__totalPrice">240</span>
-                    <span class="cost__ruble">₽</span>
-                  </div>
-                </div>
-                <div class="cost__right">
-                  <div class="cost__info">обычная цена</div>
-                  <div class="cost__price cost__price_common">
-                    <span class="cost__totalPrice cost__totalPrice_ussual">240</span>
-                    <span class="cost__ruble">₽</span>
-                  </div>
-                </div>
-              </div>
-              <div class="cardProduct__bottom productCard__bottom">
-                <div class="counter">
-                  <div class="counter__minus">
-                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
-                  </div>
-                  <div class="counter__input">
-                    <input type="number" value="1">
-                  </div>
-                  <div class="counter__plus">
-                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
-                  </div>
-                </div>
-                <div class="cardProduct__elements">
-                  <div class="btnJaundicedFull productCard__button">В корзину</div>
-                  <div class="likeProduct productCard__like">
-                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
-                  </div>
-                </div>
-              </div>
-              <a class="btnWhite quickView__detailBtn" href="/detail/">Подробнее о товаре</a>
-            </div>
-          </section>
+      <div id="quickView" class="quickView windowsMessage__popap quickViewPopup_js mfp-hide">
+        <div class="windowsMessage__close quickViewClose_js popup-modal-dismiss">
+          <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
         </div>
+        <section class="detail__productCard productCard">
+          <div class="productCard__slider">
+            <div class="quickView__parent">
+              <img class="productCard__image quickView__big_js" src="/dist/img/trash/aboutSlide1.jpg">
+            </div>
+            <div class="productCard__box sliderQuickView_js">
+              <img class="productCard__image productCard__image_small quickView__small_js productCard__checked" src="/dist/img/trash/aboutSlide1.jpg">
+              <img class="productCard__image productCard__image_small quickView__small_js" src="/dist/img/trash/aboutSlide2.jpg">
+              <img class="productCard__image productCard__image_small quickView__small_js" src="/dist/img/trash/aboutSlide3.jpg">
+              <img class="productCard__image productCard__image_small quickView__small_js" src="/dist/img/trash/aboutSlide4.jpg">
+              <img class="productCard__image productCard__image_small quickView__small_js" src="/dist/img/trash/aboutSlide5.jpg">
+              <img class="productCard__image productCard__image_small quickView__small_js" src="/dist/img/trash/aboutSlide6.jpg">
+              <img class="productCard__image productCard__image_small quickView__small_js" src="/dist/img/trash/aboutSlide7.jpg">
+            </div>
+          </div>
+          <div class="productCard__info">
+            <div class="productCard__article">Арт. 17586503</div>
+            <div class="productCard__title">Лейка для садовых растений
+              Gardenia12 л.</div>
+            <div class="availability">
+              <div class="availability__text has">
+                <span>Есть в наличии</span>
+              </div>
+              <div class="availability__text not hidden">
+                <span>Нет в наличии</span>
+              </div>
+            </div>
+            <div class="review productCard__review">
+              <div class="review__list">
+                <div class="review__item active">
+                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+                </div>
+                <div class="review__item active">
+                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+                </div>
+                <div class="review__item active">
+                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+                </div>
+                <div class="review__item active">
+                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+                </div>
+                <div class="review__item">
+                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/reviewIcon.svg'; ?>
+                </div>
+              </div>
+              <div class="review__how">1 отзыв</div>
+            </div>
+            <div class="productCard__season">
+              <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/seson.svg'; ?>
+              <div class="productCard__seasonText">Сезон: <span>Лето</span></div>
+            </div>
+            <div class="productCard__weight productWeight">
+              <div class="productWeight__text">Вес, кг</div>
+              <div class="productWeight__container">
+                <div class="productWeight__item weight_js">2,5 кг</div>
+                <div class="productWeight__item weight_js">2,5 кг</div>
+                <div class="productWeight__item weight_js">2,5 кг</div>
+                <div class="productWeight__item weight_js productCard__checked_small">2,5 кг</div>
+              </div>
+            </div>
+            <div class="productCard__colors productColors">
+              <div class="productColors__text">
+                Цвет: <span>салатовый микс</span>
+              </div>
+              <div class="productColors__box">
+                <div class="productColors__item_big color_js productCard__checked_small">
+                  <div class="productColors__item" style="background-color:#5D9D16;"></div>
+                </div>
+                <div class="productColors__item_big color_js">
+                  <div class="productColors__item" style="background-color:#69BE5E;"></div>
+                </div>
+                <div class="productColors__item_big color_js">
+                  <div class="productColors__item" style="background-color:#4E6D4A;"></div>
+                </div>
+                <div class="productColors__item_big color_js">
+                  <div class="productColors__item" style="background-color:#169D74;"></div>
+                </div>
+                <div class="productColors__item_big color_js">
+                  <div class="productColors__item" style="background-color:#34B15E;"></div>
+                </div>
+                <div class="productColors__item_big color_js">
+                  <div class="productColors__item" style="background-color:#5ACA51;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="productCard__cost cost">
+              <div class="cost__left">
+                <div class="cost__info ">с картой живой сад</div>
+                <div class="cost__price cost__price_card">
+                  <span class="cost__totalPrice">240</span>
+                  <span class="cost__ruble">₽</span>
+                </div>
+              </div>
+              <div class="cost__right">
+                <div class="cost__info">обычная цена</div>
+                <div class="cost__price cost__price_common">
+                  <span class="cost__totalPrice cost__totalPrice_ussual">240</span>
+                  <span class="cost__ruble">₽</span>
+                </div>
+              </div>
+            </div>
+            <div class="cardProduct__bottom productCard__bottom">
+              <div class="counter">
+                <div class="counter__minus">
+                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterMinus.svg'; ?>
+                </div>
+                <div class="counter__input">
+                  <input type="number" value="1">
+                </div>
+                <div class="counter__plus">
+                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/counterPlus.svg'; ?>
+                </div>
+              </div>
+              <div class="cardProduct__elements">
+                <div class="btnJaundicedFull productCard__button">В корзину</div>
+                <div class="likeProduct productCard__like">
+                  <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/likeProducts.svg'; ?>
+                </div>
+              </div>
+            </div>
+            <a class="btnWhite quickView__detailBtn" href="/detail/">Подробнее о товаре</a>
+          </div>
+        </section>
       </div>
+
       <div class="windowsMessage__wrap clubCardWindow clubCardWindow_js hidden">
         <div class="windowsMessage__popap clubCardWindow__popup clubCardWindow__popup_js ">
           <div class="windowsMessage__close clubCardWindow__close_js">
@@ -770,6 +769,128 @@
               </div>
             </div>
             <button type="submit" class="clubCardWindow__btn btn clubCardWindow__btn_js" disabled>Получить карту</button>
+          </form>
+        </div>
+      </div>
+      <div class="windowsMessage__wrap authorization authorization_js hidden">
+        <div class="windowsMessage__popap authorization__popup authorization__popup_js ">
+          <div class="windowsMessage__close authorization__close_js">
+            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
+          </div>
+          <div class="windowsMessage__title">Личный кабинет</div>
+          <div class="authorization__head">
+            <div class="authorization__check checkEnter_js authorization__check_checked">Вход</div>
+            <div class="authorization__check checkReg_js">Регистрация</div>
+          </div>
+          <form class="authorization__enter authorization__enter_js authorization__enter_error" action="">
+            <div class="enter__fields">
+              <div class="envelopeInput">
+                <div class="envelopeInput__title">E-mail</div>
+                <input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
+              </div>
+              <div class="envelopeInput">
+                <div class="envelopeInput__title authorization__title">Пароль <span class="authorization__forgot_js">Забыли пароль?</span></div>
+                <input class="envelopeInput__input " type="password" placeholder="Введите пароль">
+                <span>Ошибка авторизации. Неверный логин или пароль.</span>
+              </div>
+            </div>
+            <button type="submit" class="authorization__btn btn enter__btn_js">Войти</button>
+          </form>
+          <form class="authorization__registration authorization__registration_js hidden" action="">
+            <div class="enter__fields">
+              <div class="envelopeInput">
+                <div class="envelopeInput__title">E-mail</div>
+                <input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
+              </div>
+              <div class="envelopeInput">
+                <div class="envelopeInput__title">Пароль</div>
+                <input class="envelopeInput__input " type="password" placeholder="Введите ваш e-mail">
+              </div>
+            </div>
+            <div class="agreement">
+              <label class="agreement__label ">
+                <input type="checkbox">
+                <span class="check enter__check_js"></span>
+              </label>
+              <div class="agreement__consent ">
+                Нажимая на кнопку «Зарегистрироваться», вы принимаете <br> условия <a class="agreement__link" href="/privacy/">Пользовательского соглашения</a>
+              </div>
+            </div>
+            <button type="submit" class="authorization__btn btn reg__btn_js" disabled>Зарегистрироваться</button>
+          </form>
+        </div>
+      </div>
+      <div class="windowsMessage__wrap forgotPassword forgotPassword_js hidden">
+        <div class="windowsMessage__popap forgotPassword__popup forgotPassword__popup_js ">
+          <div class="windowsMessage__close forgotPassword__close_js">
+            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
+          </div>
+          <div class="windowsMessage__title">Восстановление доступа</div>
+          <form class="forgotPassword__enter forgotPassword__enter_js" action="">
+            <div class="forgotPassword__fields">
+              <div class="envelopeInput">
+                <div class="envelopeInput__title">E-mail</div>
+                <input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
+              </div>
+            </div>
+            <div class="forgotPassword__box">
+              <button type="submit" class="forgotPassword__btn btn forgotPassword__btn_js">Восстановить</button>
+              <div class="forgotPassword__remember forgotPassword__remember_js">Вспомнили пароль?</div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="windowsMessage__wrap recoveryPassword recoveryPassword_js hidden">
+        <div class="windowsMessage__popap recoveryPassword__popup recoveryPassword__popup_js ">
+          <div class="windowsMessage__close recoveryPassword__close_js">
+            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
+          </div>
+          <div class="windowsMessage__title">Восстановление доступа</div>
+          <form class="recoveryPassword__enter recoveryPassword__enter_js" action="">
+            <div class="recoveryPassword__fields">
+              <div class="envelopeInput">
+                <div class="envelopeInput__title">Придумайте новый пароль</div>
+                <input class="envelopeInput__input " type="password" placeholder="Введите пароль">
+              </div>
+              <div class="envelopeInput">
+                <div class="envelopeInput__title">Подтвердите пароль</div>
+                <input class="envelopeInput__input " type="password" placeholder="Повторите пароль">
+              </div>
+            </div>
+            <button type="submit" class="recoveryPassword__btn btn recoveryPassword__btn_js">Восстановить</button>
+          </form>
+        </div>
+      </div>
+      <div class="windowsMessage__wrap personal personal_js hidden">
+        <div class="windowsMessage__popap personal__popup personal__popup_js ">
+          <div class="windowsMessage__close personal__close_js">
+            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
+          </div>
+          <div class="personal__title">Личный кабинет</div>
+          <div class="personal__head">
+            Личные данные
+          </div>
+          <form class="personal__form personal__form_js" action="">
+            <div class="personal__fields">
+              <div class="envelopeInput">
+                <div class="envelopeInput__title">Имя</div>
+                <input class="envelopeInput__input " type="text" placeholder="Введите имя">
+              </div>
+              <div class="envelopeInput">
+                <div class="envelopeInput__title">Фамилия</div>
+                <input class="envelopeInput__input " type="text" placeholder="Введите фамилию">
+              </div>
+              <div class="envelopeInput">
+                <div class="envelopeInput__title">Отчество</div>
+                <input class="envelopeInput__input " type="text" placeholder="Введите отчество">
+              </div>
+              <div class="envelopeInput">
+                <div class="envelopeInput__title">Телефон</div>
+                <input class="envelopeInput__input " type="number" placeholder="+7(___) ___-__-__">
+              </div>
+            </div>
+            <button type="submit" class="personal__btn btn personal__btn_js">Войти</button>
+            <div class="personal__skip personal__skip_js">Пропустить</div>
           </form>
         </div>
       </div>

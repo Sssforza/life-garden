@@ -1,0 +1,224 @@
+@import "../modules/utilities/_variables.scss";
+@import "./flipbook.style.css";
+
+.newspaper {
+  &__header {
+  }
+
+  &__body {
+  }
+}
+.newspaperHeader { 
+  &__container {
+    margin-top: 44px;
+    display: flex;
+    border-bottom: 1px solid #88bd9f;
+    gap: 40px;
+  }
+
+  &__item {
+    font-family: Rubik;
+    font-size: 20px;
+    line-height: 42px;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    border-bottom: 4px solid $white;
+    transition: $transition;
+    &_checked {
+      border-bottom: 4px solid $green;
+    }
+
+    &_open {
+      & svg {
+        transform: rotate(180deg);
+      }
+      .newspaperHeader__years {
+        display: block;
+      }
+    }
+    &:hover {
+      border-bottom: 4px solid $green;
+    }
+  }
+
+  &__text {
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    & svg {
+      margin-left: 12px;
+      display: block;
+      path {
+        stroke: $green;
+      }
+    }
+    & span {
+      color: $green;
+    }
+  }
+
+  &__years {
+    display: none;
+    position: absolute;
+    width: 155px;
+    top: calc(100% + 5px);
+    left: 0;
+    background: $white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    .newspaperHeader__year:first-child {
+      padding-top: 15px;
+    }
+    .newspaperHeader__year:last-child {
+      padding-bottom: 15px;
+    }
+  }
+
+  &__year {
+    font-size: 18px;
+    line-height: 24px;
+    cursor: pointer;
+    color: $textColor;
+    position: relative;
+    padding: 7.5px 25px;
+    transition: $transition;
+    &:hover {
+      background-color: #f2f3f4;
+    }
+  }
+}
+
+.newspaperBody {
+  margin-top: 53px;
+
+  &__ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 53px;
+  }
+
+  &__cover {
+    max-width: 230px;
+    max-height: 326px;
+    filter: drop-shadow(0px 3px 13px rgba(0, 0, 0, 0.17));
+    cursor: pointer;
+    & img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__release {
+    margin-top: 28px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+#canvas_container {
+  width: max-content;
+  height: max-content;
+  position: absolute;
+  left: 50%;
+  top: 47%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0px 3px 13px rgba(0, 0, 0, 0.17));
+}
+.newspaperPdf {
+  &__prev,
+  &__next {
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+    background: rgba(51, 51, 51, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 45%;
+    cursor: pointer;
+    transition: $transition;
+    & svg {
+      display: block;
+      margin-right: 5px;
+      path {
+        transition: $transition;
+        stroke: $white;
+      }
+    }
+    &:hover {
+      background: $white;
+      & svg {
+        path {
+          stroke: $green;
+        }
+      }
+    }
+  }
+  &__prev {
+    left: -15%;
+  }
+  &__next {
+    transform: rotate(180deg);
+    right: -15%;
+  }
+  &__nav {
+    width: 100%;
+    height: 46px;
+    background-color: $white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #zoom_controls {
+      display: flex;
+      gap: 40px;
+    }
+    #zoom_in {
+      font-family: Rubik;
+      font-size: 20px;
+      line-height: 36px;
+    }
+    #zoom_out {
+      font-family: Rubik;
+      font-size: 20px;
+      line-height: 36px;
+    }
+  }
+  &__input {
+    font-family: Rubik;
+    font-size: 20px;
+    line-height: 36px;
+    color: $white;
+    position: absolute;
+    top: 45px;
+    left: 50px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+  &__pages {
+    display: flex;
+    font-family: Rubik;
+    font-size: 20px;
+    line-height: 36px;
+    color: $white;
+    position: absolute;
+    top: 45px;
+    left: 50px;
+  }
+}
+.catalogCoverPdf{
+  &_wrapper{
+
+  }
+  &_airports{
+
+  }
+}

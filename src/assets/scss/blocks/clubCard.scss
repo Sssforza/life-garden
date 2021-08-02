@@ -60,15 +60,24 @@
 
   &__ul {
     margin-top: 26px;
-    margin-left: 18px;
-    & li {
-      list-style-image: url("../../../dist/img/dot.png");
-      font-size: 18px;
-      line-height: 26px;
-      padding-left: 10px;
-    }
-    & li:not(:first-child) {
+    padding-left: 25px;
+    .clubАllows__li:not(:first-child) {
       margin-top: 22px;
+    }
+  }
+  &__li {
+    font-size: 18px;
+    line-height: 26px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      left: -25px;
+      top: 8px;
+      background: $green;
+      border-radius: 50%;
     }
   }
 }
@@ -105,4 +114,8 @@
     font-size: 16px;
     line-height: 21px;
   }
+}
+.clubPopup{
+  width: 624px;
+  height: 200px;
 }

@@ -1,0 +1,113 @@
+@import "../modules/utilities/_variables.scss";
+
+.headline {
+  // .headline__body
+
+  &__body {
+    width: 1065px;
+  }
+
+  // .headline__date
+
+  &__date {
+    display: flex;
+    align-items: center;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $green;
+    text-transform: uppercase;
+    & span {
+      margin-left: 5px;
+    }
+  }
+
+  // .headline__title
+
+  &__title {
+    margin-top: 13px;
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 64px;
+    &_small {
+      font-size: 34px;
+      line-height: 48px;
+    }
+    &_verysmall {
+      font-size: 28px;
+      line-height: 48px;
+    }
+    &_recomendation {
+      font-family: Firasans;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 26px;
+    }
+    &_indent {
+      margin-top: 31px;
+    }
+  }
+
+  // .headline__subtitle
+
+  &__subtitle {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #8090a0;
+  }
+
+  // .headline__image
+
+  &__image {
+    margin-top: 31px;
+    width: 1045px;
+    height: 400px;
+    overflow: hidden;
+    & img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  // .headline__text
+
+  &__text {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    &_indent {
+      margin-top: 27px;
+    }
+  }
+
+  // .headline__recomendation
+
+  &__recomendation {
+  }
+
+  &__ol {
+    margin-top: 18px;
+    list-style: none;
+    counter-reset: li;
+    .headline__li:not(:first-child) {
+      margin-top: 13px;
+    }
+  }
+
+  &__li {
+    font-size: 16px;
+    line-height: 26px;
+    &:before {
+      counter-increment: li;
+      content: counters(li, ".") ". ";
+    }
+  }
+  &__slider{
+      margin-top: 40px;
+  }
+}

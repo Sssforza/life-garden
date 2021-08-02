@@ -14,7 +14,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 		</ul>
 	</section>
 	<section class="page__box container search">
-		<section class="search__nothing searchNothing hidden">
+		<section class="search__nothing searchNothing ">
 			<div class="searchNothing__header">
 				<div class="searchNothing__svg">
 					<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/searchPage.svg'; ?>
@@ -474,7 +474,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				</div>
 			</div>
 		</section>
-		<section class="search__find searchFind">
+		<section class="search__find searchFind hidden">
 			<div class="search__title">По запросу &nbsp;&#171; <div class="search__request">Газон</div> &#187; &nbsp;найдено <span> 840 товаров</span>
 			</div>
 			<div class="searchFind__body">

@@ -101,9 +101,9 @@ body {
   &:hover {
     background: $darkGreen;
   }
-  &:disabled{
+  &:disabled {
     pointer-events: none;
-    background: #6F7982;
+    background: #6f7982;
   }
 }
 .btnJaundiced {
@@ -178,8 +178,7 @@ body {
     color: $white;
     background: #1b643b;
   }
-  &_disabled{
-    
+  &_disabled {
   }
 }
 .btnGray {
@@ -955,11 +954,11 @@ body {
   }
   &__close {
     &svg {
+      display: block;
       path {
-        display: block;
       }
     }
-    position: absolute;
+    position: absolute; 
     top: 37px;
     right: 52px;
     cursor: pointer;
@@ -1178,7 +1177,7 @@ body {
     line-height: 19px;
     color: $textColor;
     font-family: "Rubik";
-    & span{
+    & span {
       color: $green;
     }
   }
@@ -1703,27 +1702,26 @@ body {
     justify-content: center;
     width: 45px;
     height: 45px;
-    border: 1px solid #C7D0D9;
+    border: 1px solid #c7d0d9;
     border-radius: 50%;
     transition: $transition;
-    &:hover{
+    &:hover {
       border: 1px solid $green;
     }
     & svg {
-      path{
+      path {
         display: block;
       }
     }
   }
 }
-.sliderPages{
-  &__title{
+.sliderPages {
+  &__title {
     font-family: Rubik;
     font-weight: bold;
     font-size: 36px;
     line-height: 50px;
   }
-  &__block{
-
+  &__block {
   }
 }

@@ -1,0 +1,31 @@
+@import "../modules/utilities/_variables.scss";
+
+.favorites {
+  &__head {
+  }
+
+  &__authorization {
+    font-family: Rubik;
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 20px;
+  }
+
+  &__link {
+    color: $green;
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__products {
+      margin-top: 35px;
+  }
+  &__container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 35px 20px;
+  }
+}

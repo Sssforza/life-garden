@@ -1,0 +1,123 @@
+@import "../modules/utilities/_variables.scss";
+.news {
+  &__header {
+  }
+
+  &__body {
+    margin-top: 45px;
+  }
+
+  &__container {
+    .news__card:not(:last-child) {
+      border-bottom: 1px solid #c7d0d9;
+    }
+    .news__card:not(:first-child) {
+      margin-top: 36px;
+    }
+  }
+
+  &__card {
+  }
+}
+.newsHeader {
+  &__container {
+    margin-top: 35px;
+    display: flex;
+    gap: 40px;
+    border-bottom: 1px solid #88bd9f;
+  }
+
+  &__item {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 42px;
+    border-bottom: 4px solid white;
+    transition: $transition;
+    cursor: pointer;
+    &_checked {
+      border-bottom: 4px solid $green;
+    }
+    &:hover {
+      border-bottom: 4px solid $green;
+    }
+  }
+}
+
+.newsCard {
+  display: flex;
+  padding-bottom: 37px;
+  &__img {
+    width: 278px;
+    height: 166px;
+    border-radius: 10px;
+    overflow: hidden;
+    & img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__box {
+    margin-left: 29px;
+  }
+
+  &__date {
+    font-size: 14px;
+    line-height: 24px;
+    color: #9196a9;
+  }
+
+  &__title {
+    margin-top: 9px;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 22px;
+    &_indent {
+      margin-top: 18px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 11px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    margin-top: 22px;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    transition: $transition;
+    cursor: pointer;
+    & svg {
+      display: block;
+      margin-left: 10px;
+      width: 14px;
+    }
+    &:hover {
+      color: $green;
+    }
+  }
+  &__color {
+    margin-top: 5px;
+    width: max-content;
+    font-size: 12px;
+    line-height: 19px;
+    background-color: #c9d200;
+    border-radius: 2px;
+    padding: 0 5px;
+    &_master {
+      background-color: $jaundiced;
+    }
+    &_seminar {
+      background-color: #feb322;
+    }
+  }
+}

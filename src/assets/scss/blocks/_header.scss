@@ -94,16 +94,7 @@
     }
     line-height: 15px;
   }
-  &__enter {
-    margin-left: 40px;
-    display: flex;
-    align-items: center;
-    transition: $transition;
-    cursor: pointer;
-    &:hover {
-      color: #c9d200;
-    }
-  }
+
   &__client {
     position: relative;
     display: flex;
@@ -155,6 +146,16 @@
   }
   &__end {
     display: flex;
+  }
+  &__authorization {
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    transition: $transition;
+    cursor: pointer;
+    &:hover {
+      color: $jaundiced;
+    }
   }
 }
 .headerMiddle {
@@ -790,12 +791,11 @@
 }
 
 .quickView {
-  .windowsMessage__popap {
-    width: 1400px;
-    height: max-content;
-    padding: 50px 50px 89px;
-    border-radius: 20px;
-  }
+  width: 1400px;
+  height: max-content;
+  padding: 50px 50px 89px;
+  border-radius: 20px;
+
   .productCard__image {
     width: 576px;
     height: 501px;
@@ -863,5 +863,385 @@
     height: 55px;
     font-size: 16px;
     line-height: 21px;
+  }
+}
+
+.authorization {
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & span {
+      font-size: 14px;
+      line-height: 17px;
+      color: $textColor;
+      cursor: pointer;
+      transition: $transition;
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+  &__popup {
+    width: 520px;
+    height: auto;
+    padding: 35px 40px 46px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .authorization__head {
+      padding: 0;
+      align-self: center;
+    }
+  }
+  .windowsMessage__close {
+    right: 40px;
+  }
+  .windowsMessage__title {
+    text-align: start;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .envelopeInput {
+    & span {
+      display: none;
+      margin-top: 6px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+  .envelopeInput__input {
+    width: 440px;
+    height: 50px;
+  }
+  .envelopeInput:not(:first-child) {
+    margin-top: 20px;
+  }
+  .agreement {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+  }
+  &__btn {
+    width: 200px;
+    height: 52px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &__head {
+    display: flex;
+    height: 60px;
+    background: #deeddd;
+    margin-top: 20px;
+    width: 520px;
+  }
+  &__check {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: rgba(51, 51, 51, 0.7);
+    &_checked {
+      color: $textColor;
+      border-bottom: 4px solid $green;
+    }
+    &:hover {
+      color: $textColor;
+    }
+  }
+  &__enter,
+  &__registration {
+    margin-top: 31px;
+  }
+  &__enter {
+    .authorization__btn {
+      margin-top: 35px;
+    }
+    &_error {
+      .envelopeInput {
+        & span {
+          display: block;
+        }
+        & input {
+          border: 1px solid $error;
+        }
+      }
+    }
+  }
+  &__registration {
+    .authorization__btn {
+      margin-top: 22px;
+    }
+  }
+}
+
+.forgotPassword {
+  &__popup {
+    width: 520px;
+    height: auto;
+    padding: 35px 40px 45px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+    margin-top: 35px;
+  }
+  &__remember {
+    font-family: Rubik;
+    font-size: 16px;
+    line-height: 29px;
+    cursor: pointer;
+    border-bottom: 1px dashed #9bb5a8;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0px;
+      bottom: -1px;
+      width: 0;
+      height: 1px;
+      background: #718078;
+      transition: width 0.3s ease-out;
+    }
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+  .windowsMessage__close {
+    right: 40px;
+  }
+  .windowsMessage__title {
+    text-align: start;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .envelopeInput {
+    & span {
+      display: none;
+      margin-top: 6px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+  .envelopeInput__input {
+    width: 440px;
+    height: 50px;
+  }
+  .envelopeInput:not(:first-child) {
+    margin-top: 20px;
+  }
+  .agreement {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+  }
+  &__btn {
+    width: 200px;
+    height: 52px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &__head {
+    display: flex;
+    height: 60px;
+    background: #deeddd;
+    margin-top: 20px;
+    width: 520px;
+  }
+  &__check {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: rgba(51, 51, 51, 0.7);
+    &_checked {
+      color: $textColor;
+      border-bottom: 4px solid $green;
+    }
+    &:hover {
+      color: $textColor;
+    }
+  }
+  &__enter,
+  &__registration {
+    margin-top: 31px;
+  }
+  &__enter {
+    .authorization__btn {
+      margin-top: 35px;
+    }
+    &_error {
+      .envelopeInput {
+        & span {
+          display: block;
+        }
+        & input {
+          border: 1px solid $error;
+        }
+      }
+    }
+  }
+  &__registration {
+    .authorization__btn {
+      margin-top: 22px;
+    }
+  }
+}
+.recoveryPassword {
+  &__popup {
+    width: 520px;
+    height: auto;
+    padding: 35px 40px 45px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .windowsMessage__close {
+    right: 40px;
+  }
+  .windowsMessage__title {
+    text-align: start;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .envelopeInput {
+    & span {
+      display: none;
+      margin-top: 6px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+  .envelopeInput__input {
+    width: 440px;
+    height: 50px;
+  }
+  .envelopeInput:not(:first-child) {
+    margin-top: 20px;
+  }
+  .agreement {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+  }
+  &__btn {
+    width: 200px;
+    height: 52px;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 35px;
+  }
+  &__enter {
+    margin-top: 31px;
+  }
+}
+
+.personal {
+  &__title {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  &__popup {
+    width: 520px;
+    height: auto;
+    padding: 35px 40px 46px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    .personal__head {
+      padding: 0;
+      align-self: center;
+    }
+  }
+  .windowsMessage__close {
+    right: 40px;
+  }
+  .windowsMessage__title {
+    text-align: start;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .envelopeInput {
+    & span {
+      display: none;
+      margin-top: 6px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+  .envelopeInput__input {
+    width: 440px;
+    height: 50px;
+  }
+  .envelopeInput:not(:first-child) {
+    margin-top: 20px;
+  }
+  &__btn {
+    width: 200px;
+    height: 52px;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 35px;
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    background: #deeddd;
+    margin-top: 35px;
+    width: 520px;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  &__form {
+    margin-top: 31px;
+  }
+
+  &__skip {
+    margin-top: 17px;
+    font-family: Rubik;
+    font-size: 18px;
+    line-height: 21px;
+    transition: $transition;
+    cursor: pointer;
+    &:hover {
+      color: $green;
+    }
   }
 }

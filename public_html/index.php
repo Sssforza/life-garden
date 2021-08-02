@@ -145,7 +145,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<div class="cardProduct__new">Новинка</div>
 								<div class="cardProduct__img">
 									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)">
-										<div class="btnJaundiced cardProduct__quickView cardProduct__quickView_js">Быстрый просмотр</div>
+										<a href="#quickView" class="popup-modal btnJaundiced cardProduct__quickView cardProduct__quickView_js">Быстрый просмотр</a>
 									</div>
 								</div>
 								<div class="cardProduct__info">

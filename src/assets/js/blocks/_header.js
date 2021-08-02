@@ -9,6 +9,7 @@ export function headerCatalog() {
     hamburger.classList.toggle("is-active");
   });
 }
+
 export function headerSearchelp() {
   const headerHelp = document.querySelector(".headerHelp_js");
   const headerForm = document.querySelector(".headerMiddleForm_js");
@@ -113,36 +114,9 @@ export function quickView() {
         </svg>
       </div>`,
     });
-    const quickViewBtn = document.querySelectorAll(
-      ".cardProduct__quickView_js"
-    );
-    const quickViewWrapper = document.querySelector(".quickViewWrapper_js");
-    const quickViewPopup = document.querySelector(".quickViewPopup_js");
-    const quickViewClose = document.querySelector(".quickViewClose_js");
     const quickViewSmallImg = document.querySelectorAll(".quickView__small_js");
     const quickViewBigImg = document.querySelector(".quickView__big_js");
 
-    quickViewBtn.forEach((item) => {
-      item.onclick = () => {
-        slick.slick("refresh");
-        quickViewWrapper.classList.remove("hidden");
-        document.body.classList.add("hiddenHeaderCatalog");
-      };
-    });
-    quickViewWrapper.onclick = (e) => {
-      if (
-        quickViewPopup &&
-        e.target !== quickViewPopup &&
-        !quickViewPopup.contains(e.target)
-      ) {
-        quickViewWrapper.classList.add("hidden");
-        document.body.classList.remove("hiddenHeaderCatalog");
-      }
-    };
-    quickViewClose.onclick = () => {
-      quickViewWrapper.classList.add("hidden");
-      document.body.classList.remove("hiddenHeaderCatalog");
-    };
     quickViewSmallImg.forEach((item) => {
       item.addEventListener("click", () => {
         quickViewSmallImg.forEach((el) => {
@@ -152,8 +126,21 @@ export function quickView() {
         item.classList.add("productCard__checked");
       });
     });
+    $(function () {
+      $(".popup-modal").magnificPopup({
+        type: "inline",
+        preloader: false,
+        modal: false,
+        showCloseBtn: false,
+      });
+      slick.slick("refresh");
+      $(document).on("click", ".popup-modal-dismiss", function (e) {
+        $.magnificPopup.close();
+      });
+    });
   }
 }
+
 export function clubCardPopup() {
   if (document.querySelector(".clubCard__btn_js")) {
     const clubCardWrapper = document.querySelector(".clubCardWindow_js");
@@ -199,3 +186,206 @@ export function clubCardPopup() {
     };
   }
 }
+
+export function authorization() {
+  if (document.querySelector(".headerTop__authorization_js")) {
+    const authorizationBtn = document.querySelector(
+      ".headerTop__authorization_js"
+    );
+    const enterBtnPopup = document.querySelector(".enter__btn_js");
+    const regBtnPopup = document.querySelector(".reg__btn_js");
+    const personalWrapper = document.querySelector(".personal_js");
+    const authorizationWrapper = document.querySelector(".authorization_js");
+    const authorizationPopup = authorizationWrapper.querySelector(
+      ".authorization__popup_js"
+    );
+    const authorizationClose = authorizationWrapper.querySelector(
+      ".authorization__close_js"
+    );
+    const forgotWindowBtn = document.querySelector(".authorization__forgot_js");
+    const forgotWrapper = document.querySelector(".forgotPassword_js");
+
+    forgotWindowBtn.onclick = () => {
+      authorizationWrapper.classList.add("hidden");
+      forgotWrapper.classList.remove("hidden");
+    };
+
+    authorizationBtn.onclick = () => {
+      authorizationWrapper.classList.remove("hidden");
+      document.body.classList.add("hiddenHeaderCatalog");
+    };
+
+    authorizationWrapper.onclick = (e) => {
+      if (
+        authorizationPopup &&
+        e.target !== authorizationPopup &&
+        !authorizationPopup.contains(e.target)
+      ) {
+        authorizationWrapper.classList.add("hidden");
+        document.body.classList.remove("hiddenHeaderCatalog");
+      }
+    };
+
+    authorizationClose.onclick = () => {
+      authorizationWrapper.classList.add("hidden");
+      document.body.classList.remove("hiddenHeaderCatalog");
+    };
+
+    enterBtnPopup.onclick = () => {
+      authorizationWrapper.classList.add("hidden");
+      document.body.classList.remove("hiddenHeaderCatalog");
+    };
+
+    regBtnPopup.onclick = (e) => {
+      e.preventDefault();
+      authorizationWrapper.classList.add("hidden");
+      personalWrapper.classList.remove("hidden");
+    };
+
+    const checkEnter = document.querySelector(".checkEnter_js");
+    const checkReg = document.querySelector(".checkReg_js");
+    const formEnter = document.querySelector(".authorization__enter_js");
+    const formReg = document.querySelector(".authorization__registration_js");
+
+    checkEnter.onclick = () => {
+      checkEnter.classList.add("authorization__check_checked");
+      checkReg.classList.remove("authorization__check_checked");
+      formReg.classList.add("hidden");
+      formEnter.classList.remove("hidden");
+    };
+
+    checkReg.onclick = () => {
+      checkEnter.classList.remove("authorization__check_checked");
+      checkReg.classList.add("authorization__check_checked");
+      formReg.classList.remove("hidden");
+      formEnter.classList.add("hidden");
+    };
+
+    const agreementCheck = document.querySelector(".enter__check_js");
+    agreementCheck.onclick = () => {
+      agreementCheck.classList.toggle("agreement__checked");
+      if (agreementCheck.classList.contains("agreement__checked")) {
+        regBtnPopup.disabled = false;
+      } else {
+        regBtnPopup.disabled = true;
+      }
+    };
+  }
+}
+
+export function recoveryPassword() {
+  if (document.querySelector(".recoveryPassword_js")) {
+    const recoveryWrapper = document.querySelector(".recoveryPassword_js");
+    const recoveryPopup = recoveryWrapper.querySelector(
+      ".recoveryPassword__popup_js"
+    );
+    const recoveryClose = recoveryWrapper.querySelector(
+      ".recoveryPassword__close_js"
+    );
+    const recoveryBtn = recoveryWrapper.querySelector(
+      ".recoveryPassword__btn_js"
+    );
+
+    recoveryWrapper.onclick = (e) => {
+      if (
+        recoveryPopup &&
+        e.target !== recoveryPopup &&
+        !recoveryPopup.contains(e.target)
+      ) {
+        recoveryWrapper.classList.add("hidden");
+        document.body.classList.remove("hiddenHeaderCatalog");
+      }
+    };
+
+    recoveryClose.onclick = () => {
+      recoveryWrapper.classList.add("hidden");
+      document.body.classList.remove("hiddenHeaderCatalog");
+    };
+
+    recoveryBtn.onclick = () => {
+      recoveryWrapper.classList.add("hidden");
+      document.body.classList.remove("hiddenHeaderCatalog");
+    };
+  }
+}
+
+export function forgotPassword() {
+  if (document.querySelector(".clubCard__btn_js")) {
+    const forgotWindowBtn = document.querySelector(".authorization__forgot_js");
+    const forgotWrapper = document.querySelector(".forgotPassword_js");
+    const forgotPopup = forgotWrapper.querySelector(
+      ".forgotPassword__popup_js"
+    );
+    const forgotClose = forgotWrapper.querySelector(
+      ".forgotPassword__close_js"
+    );
+    const forgotBtn = forgotWrapper.querySelector(".forgotPassword__btn_js");
+    const rememberBtn = forgotWrapper.querySelector(
+      ".forgotPassword__remember_js"
+    );
+
+    forgotWrapper.onclick = (e) => {
+      if (
+        forgotPopup &&
+        e.target !== forgotPopup &&
+        !forgotPopup.contains(e.target)
+      ) {
+        forgotWrapper.classList.add("hidden");
+        document.body.classList.remove("hiddenHeaderCatalog");
+      }
+    };
+
+    forgotClose.onclick = () => {
+      forgotWrapper.classList.add("hidden");
+      document.body.classList.remove("hiddenHeaderCatalog");
+    };
+
+    forgotBtn.onclick = () => {
+      forgotWrapper.classList.add("hidden");
+      document.body.classList.remove("hiddenHeaderCatalog");
+    };
+
+    rememberBtn.onclick = () => {
+      forgotWrapper.classList.add("hidden");
+      document.body.classList.remove("hiddenHeaderCatalog");
+    };
+  }
+}
+
+export function personal() {
+  if (document.querySelector(".reg__btn_js")) {
+    const personalWrapper = document.querySelector(".personal_js");
+    const personalPopup = personalWrapper.querySelector(".personal__popup_js");
+    const personalClose = personalWrapper.querySelector(".personal__close_js");
+    const personalBtn = personalWrapper.querySelector(".personal__btn_js");
+    const personalSkipBtn = personalWrapper.querySelector(".personal__skip_js");
+
+    personalWrapper.onclick = (e) => {
+      if (
+        personalPopup &&
+        e.target !== personalPopup &&
+        !personalPopup.contains(e.target)
+      ) {
+        personalWrapper.classList.add("hidden");
+        document.body.classList.remove("hiddenHeaderCatalog");
+      }
+    };
+
+    personalClose.onclick = () => {
+      personalWrapper.classList.add("hidden");
+      document.body.classList.remove("hiddenHeaderCatalog");
+    };
+
+    personalBtn.onclick = () => {
+      personalWrapper.classList.add("hidden");
+      document.body.classList.remove("hiddenHeaderCatalog");
+    };
+
+    personalSkipBtn.onclick = () => {
+      personalWrapper.classList.add("hidden");
+      document.body.classList.remove("hiddenHeaderCatalog");
+    };
+  }
+}
+
+export function magnificPopup() {}

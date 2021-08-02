@@ -20,7 +20,12 @@ import {
   headerScroll,
   headerOpenClient,
   quickView,
-  clubCardPopup
+  clubCardPopup,
+  authorization,
+  forgotPassword,
+  personal,
+  recoveryPassword,
+  magnificPopup,
 } from "./blocks/_header.js";
 
 //📁 /assets/js/blocks  _footer.js
@@ -58,7 +63,11 @@ import { specialSampleTabs } from "./blocks/specialSample.js";
 import { openImage, checkCategories, otherClicks } from "./blocks/detail.js";
 
 //📁 /assets/js/blocks  masterClass.js
-import { masterClassPopups, masterClassBuy, masterChoiceMonth } from "./blocks/masterClass.js";
+import {
+  masterClassPopups,
+  masterClassBuy,
+  masterChoiceMonth,
+} from "./blocks/masterClass.js";
 
 //📁 /assets/js/blocks  specialSample.js
 import { mainGardenShow, masterClassShow } from "./blocks/showFull.js";
@@ -73,6 +82,12 @@ import { mapAsideScroll } from "./blocks/scrollbar.js";
 
 //📁 /assets/js/blocks  clubCard.js
 import { checkClubCard } from "./blocks/clubCard.js";
+
+//📁 /assets/js/blocks  newspaper.js
+import { newspaperPopup, pdfLoader } from "./blocks/newspaper.js";
+
+//📁 /assets/js/blocks  articles.js
+import { articles } from "./blocks/articles.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   // open contextual hint
@@ -160,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // slick slider About page
   sliderAbout();
-  
+
   // slick slider MasterClass page
   sliderMasterClass();
 
@@ -181,4 +196,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // club-card popup
   clubCardPopup();
+
+  // authorization popup
+  authorization();
+
+  // forgot Password popup
+  forgotPassword();
+
+  // personal popup
+  personal();
+
+  // recovery Password popup
+  recoveryPassword();
+
+  // newspaper popup
+  newspaperPopup();
+
+  // pdf loader popup
+  pdfLoader();
+
+  // magnificPopup
+  magnificPopup();
+
+  // articles
+  articles();
 });
