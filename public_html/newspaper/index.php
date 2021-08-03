@@ -40,10 +40,10 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 		<section class="newspaper__body newspaperBody">
 			<div class="catalogCoverPdf">
 				<div class="catalogCoverPdf_wrapper">
-					<div class="catalogCoverPdf_airports" data-pdf="/dist/pdf/newspaper.pdf">
+					<div class="newspaperOne" data-pdf="/dist/pdf/newspaper.pdf">
 						<img src="/dist/img/trash/cover1.jpg" alt="">
 						<p class="text">
-							Catalogue HI-MACS airports
+							Газета
 						</p>
 					</div>
 				</div>

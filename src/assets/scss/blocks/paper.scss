@@ -1,0 +1,98 @@
+@import "../modules/utilities/_variables.scss";
+
+.paper {
+  &__body {
+    width: 1065px;
+    & h1 {
+      margin-top: 13px;
+      font-family: Rubik;
+      font-weight: bold;
+      font-size: 56px;
+      line-height: 64px;
+    }
+
+    & h2 {
+      margin-top: 15px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 32px;
+      color: #8090a0;
+    }
+
+    & h3 {
+      margin-top: 31px;
+      font-family: Rubik;
+      font-weight: bold;
+      font-size: 34px;
+      line-height: 48px;
+    }
+
+    & h4 {
+      margin-top: 28px;
+      font-family: Rubik;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 48px;
+    }
+
+    & h5 {
+      margin-top: 36px;
+      font-weight: bold;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    & p {
+      margin-top: 10px;
+      font-size: 16px;
+      line-height: 24px;
+      &:first-of-type {
+        margin-top: 27px;
+      }
+    }
+
+    & img {
+      margin-top: 31px;
+      max-height: 400px;
+      overflow: hidden;
+      display: block;
+      width: 100%;
+    }
+
+    & ol {
+      margin-top: 18px;
+      list-style: none;
+      counter-reset: li;
+      li:not(:first-child) {
+        margin-top: 13px;
+      }
+    }
+
+    & li {
+      font-size: 16px;
+      line-height: 26px;
+      &:before {
+        counter-increment: li;
+        content: counters(li, ".") ". ";
+      }
+    }
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $green;
+    text-transform: uppercase;
+    & span {
+      margin-left: 5px;
+    }
+  }
+  &__slider {
+    margin-top: 40px;
+  }
+}

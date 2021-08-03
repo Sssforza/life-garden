@@ -39,75 +39,9 @@ export function newspaperPopup() {
   }
 }
 export function pdfLoader() {
- /*  $(".catalogCoverPdf_airports").flipBook({
+/*   $(".newspaperOne").flipBook({
     pdfUrl: "/dist/pdf/newspaper.pdf",
     lightBox: true,
   }); */
-  /* if (document.querySelector(".newspaperBody__cover")) {
-    const cover = document.querySelectorAll(".newspaperBody__cover");
-    const windowPdf = document.querySelector(".windowPdf_js");
-    const pdfCurrent = windowPdf.querySelector(".newspaperPdf__currentPage_js");
-    const pdfMax = windowPdf.querySelector(".newspaperPdf__maxPage_js");
-
-    function pdfLoad() {
-      var myState = {
-        pdf: null,
-        currentPage: 1,
-        zoom: 1,
-      };
-      pdfjsLib.getDocument("/dist/pdf/newspaper.pdf").then((pdf) => {
-        myState.pdf = pdf;
-        render();
-        pdfMax.textContent = myState.pdf._pdfInfo.numPages;
-      });
-      function render() {
-        myState.pdf.getPage(myState.currentPage).then((page) => {
-          var canvas = document.getElementById("pdf_renderer");
-          var ctx = canvas.getContext("2d");
-          var viewport = page.getViewport(myState.zoom);
-
-          canvas.width = viewport.width;
-          canvas.height = viewport.height;
-          page.render({
-            canvasContext: ctx,
-            viewport: viewport,
-          });
-        });
-      }
-      document.getElementById("go_previous").addEventListener("click", (e) => {
-        if (myState.pdf == null || myState.currentPage == 1) return;
-        myState.currentPage -= 1;
-        pdfCurrent.textContent = myState.currentPage;
-        render();
-      });
-      document.getElementById("go_next").addEventListener("click", (e) => {
-        if (
-          myState.pdf == null ||
-          myState.currentPage > myState.pdf._pdfInfo.numPages
-        )
-          return;
-        console.log(myState.pdf._pdfInfo.numPages);
-        myState.currentPage += 1;
-        pdfCurrent.textContent = myState.currentPage;
-        render();
-      });
-      document.getElementById("zoom_in").addEventListener("click", (e) => {
-        if (myState.pdf == null) return;
-        myState.zoom += 0.1;
-        render();
-      });
-      document.getElementById("zoom_out").addEventListener("click", (e) => {
-        if (myState.pdf == null) return;
-        myState.zoom -= 0.1;
-        render();
-      });
-    }
-
-    cover.forEach((item) => {
-      item.onclick = () => {
-        windowPdf.classList.remove("hidden");
-        pdfLoad();
-      };
-    });
-  } */
+ 
 }

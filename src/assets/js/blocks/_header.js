@@ -126,6 +126,9 @@ export function quickView() {
         item.classList.add("productCard__checked");
       });
     });
+    $(".popup-modal").click(() => {
+      slick.slick("refresh");
+    });
     $(function () {
       $(".popup-modal").magnificPopup({
         type: "inline",
@@ -133,48 +136,31 @@ export function quickView() {
         modal: false,
         showCloseBtn: false,
       });
-      slick.slick("refresh");
       $(document).on("click", ".popup-modal-dismiss", function (e) {
         $.magnificPopup.close();
       });
+
     });
+
   }
 }
 
 export function clubCardPopup() {
   if (document.querySelector(".clubCard__btn_js")) {
-    const clubCardWrapper = document.querySelector(".clubCardWindow_js");
-    const clubCradPopup = document.querySelector(".clubCardWindow__popup_js");
-    const clubCardClose = document.querySelector(".clubCardWindow__close_js");
     const clubCardWindowBtn = document.querySelector(".clubCardWindow__btn_js");
-    const clubCardBtn = document.querySelector(".clubCard__btn_js");
     const agreementCheck = document.querySelector(".check_js");
 
-    clubCardBtn.onclick = () => {
-      clubCardWrapper.classList.remove("hidden");
-      document.body.classList.add("hiddenHeaderCatalog");
-    };
-
-    clubCardWrapper.onclick = (e) => {
-      if (
-        clubCradPopup &&
-        e.target !== clubCradPopup &&
-        !clubCradPopup.contains(e.target)
-      ) {
-        clubCardWrapper.classList.add("hidden");
-        document.body.classList.remove("hiddenHeaderCatalog");
-      }
-    };
-
-    clubCardClose.onclick = () => {
-      clubCardWrapper.classList.add("hidden");
-      document.body.classList.remove("hiddenHeaderCatalog");
-    };
-
-    clubCardWindowBtn.onclick = () => {
-      clubCardWrapper.classList.add("hidden");
-      document.body.classList.remove("hiddenHeaderCatalog");
-    };
+    $(function () {
+      $(".popup-modal-club").magnificPopup({
+        type: "inline",
+        preloader: false,
+        modal: false,
+        showCloseBtn: false,
+      });
+      $(document).on("click", ".popup-modal-dismiss", function (e) {
+        $.magnificPopup.close();
+      });
+    });
 
     agreementCheck.onclick = () => {
       agreementCheck.classList.toggle("agreement__checked");
@@ -189,58 +175,17 @@ export function clubCardPopup() {
 
 export function authorization() {
   if (document.querySelector(".headerTop__authorization_js")) {
-    const authorizationBtn = document.querySelector(
-      ".headerTop__authorization_js"
-    );
-    const enterBtnPopup = document.querySelector(".enter__btn_js");
-    const regBtnPopup = document.querySelector(".reg__btn_js");
-    const personalWrapper = document.querySelector(".personal_js");
-    const authorizationWrapper = document.querySelector(".authorization_js");
-    const authorizationPopup = authorizationWrapper.querySelector(
-      ".authorization__popup_js"
-    );
-    const authorizationClose = authorizationWrapper.querySelector(
-      ".authorization__close_js"
-    );
-    const forgotWindowBtn = document.querySelector(".authorization__forgot_js");
-    const forgotWrapper = document.querySelector(".forgotPassword_js");
-
-    forgotWindowBtn.onclick = () => {
-      authorizationWrapper.classList.add("hidden");
-      forgotWrapper.classList.remove("hidden");
-    };
-
-    authorizationBtn.onclick = () => {
-      authorizationWrapper.classList.remove("hidden");
-      document.body.classList.add("hiddenHeaderCatalog");
-    };
-
-    authorizationWrapper.onclick = (e) => {
-      if (
-        authorizationPopup &&
-        e.target !== authorizationPopup &&
-        !authorizationPopup.contains(e.target)
-      ) {
-        authorizationWrapper.classList.add("hidden");
-        document.body.classList.remove("hiddenHeaderCatalog");
-      }
-    };
-
-    authorizationClose.onclick = () => {
-      authorizationWrapper.classList.add("hidden");
-      document.body.classList.remove("hiddenHeaderCatalog");
-    };
-
-    enterBtnPopup.onclick = () => {
-      authorizationWrapper.classList.add("hidden");
-      document.body.classList.remove("hiddenHeaderCatalog");
-    };
-
-    regBtnPopup.onclick = (e) => {
-      e.preventDefault();
-      authorizationWrapper.classList.add("hidden");
-      personalWrapper.classList.remove("hidden");
-    };
+    $(function () {
+      $(".popup-modal-authorization").magnificPopup({
+        type: "inline",
+        preloader: false,
+        modal: false,
+        showCloseBtn: false,
+      });
+      $(document).on("click", ".popup-modal-dismiss", function (e) {
+        $.magnificPopup.close();
+      });
+    });
 
     const checkEnter = document.querySelector(".checkEnter_js");
     const checkReg = document.querySelector(".checkReg_js");
@@ -262,12 +207,14 @@ export function authorization() {
     };
 
     const agreementCheck = document.querySelector(".enter__check_js");
+    const regBtn = document.querySelector(".reg__btn_js");
+
     agreementCheck.onclick = () => {
       agreementCheck.classList.toggle("agreement__checked");
       if (agreementCheck.classList.contains("agreement__checked")) {
-        regBtnPopup.disabled = false;
+        regBtn.classList.remove("authorization__btn_disabled");
       } else {
-        regBtnPopup.disabled = true;
+        regBtn.classList.add("authorization__btn_disabled");
       }
     };
   }
@@ -310,81 +257,34 @@ export function recoveryPassword() {
 }
 
 export function forgotPassword() {
-  if (document.querySelector(".clubCard__btn_js")) {
-    const forgotWindowBtn = document.querySelector(".authorization__forgot_js");
-    const forgotWrapper = document.querySelector(".forgotPassword_js");
-    const forgotPopup = forgotWrapper.querySelector(
-      ".forgotPassword__popup_js"
-    );
-    const forgotClose = forgotWrapper.querySelector(
-      ".forgotPassword__close_js"
-    );
-    const forgotBtn = forgotWrapper.querySelector(".forgotPassword__btn_js");
-    const rememberBtn = forgotWrapper.querySelector(
-      ".forgotPassword__remember_js"
-    );
-
-    forgotWrapper.onclick = (e) => {
-      if (
-        forgotPopup &&
-        e.target !== forgotPopup &&
-        !forgotPopup.contains(e.target)
-      ) {
-        forgotWrapper.classList.add("hidden");
-        document.body.classList.remove("hiddenHeaderCatalog");
-      }
-    };
-
-    forgotClose.onclick = () => {
-      forgotWrapper.classList.add("hidden");
-      document.body.classList.remove("hiddenHeaderCatalog");
-    };
-
-    forgotBtn.onclick = () => {
-      forgotWrapper.classList.add("hidden");
-      document.body.classList.remove("hiddenHeaderCatalog");
-    };
-
-    rememberBtn.onclick = () => {
-      forgotWrapper.classList.add("hidden");
-      document.body.classList.remove("hiddenHeaderCatalog");
-    };
+  if (document.querySelector(".popup-modal-forgotPassword")) {
+    $(function () {
+      $(".popup-modal-forgotPassword").magnificPopup({
+        type: "inline",
+        preloader: false,
+        modal: false,
+        showCloseBtn: false,
+      });
+      $(document).on("click", ".popup-modal-dismiss", function (e) {
+        $.magnificPopup.close();
+      });
+    });
   }
 }
 
 export function personal() {
-  if (document.querySelector(".reg__btn_js")) {
-    const personalWrapper = document.querySelector(".personal_js");
-    const personalPopup = personalWrapper.querySelector(".personal__popup_js");
-    const personalClose = personalWrapper.querySelector(".personal__close_js");
-    const personalBtn = personalWrapper.querySelector(".personal__btn_js");
-    const personalSkipBtn = personalWrapper.querySelector(".personal__skip_js");
-
-    personalWrapper.onclick = (e) => {
-      if (
-        personalPopup &&
-        e.target !== personalPopup &&
-        !personalPopup.contains(e.target)
-      ) {
-        personalWrapper.classList.add("hidden");
-        document.body.classList.remove("hiddenHeaderCatalog");
-      }
-    };
-
-    personalClose.onclick = () => {
-      personalWrapper.classList.add("hidden");
-      document.body.classList.remove("hiddenHeaderCatalog");
-    };
-
-    personalBtn.onclick = () => {
-      personalWrapper.classList.add("hidden");
-      document.body.classList.remove("hiddenHeaderCatalog");
-    };
-
-    personalSkipBtn.onclick = () => {
-      personalWrapper.classList.add("hidden");
-      document.body.classList.remove("hiddenHeaderCatalog");
-    };
+  if (document.querySelector(".popup-modal-personal")) {
+    $(function () {
+      $(".popup-modal-personal").magnificPopup({
+        type: "inline",
+        preloader: false,
+        modal: false,
+        showCloseBtn: false,
+      });
+      $(document).on("click", ".popup-modal-dismiss", function (e) {
+        $.magnificPopup.close();
+      });
+    });
   }
 }
 

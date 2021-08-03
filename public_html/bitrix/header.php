@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel='stylesheet' href="/dist/css/main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
   <script type="text/javascript" src="/dist/js/main.js"></script>
 </head>
 
@@ -26,7 +27,7 @@
                 <li class="headerTop__menuLi"><a href="#">Контакты</a></li>
               </div>
             </ul>
-            <a class="headerTop__newspapper" href="#">
+            <a class="headerTop__newspapper" href="/newspaper/">
               <div class="headerTop__icon">
                 <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/newspapper.svg'; ?>
               </div>
@@ -39,12 +40,12 @@
                 </div>
                 <span>+ 7 3812 34-93-41</span>
               </a>
-              <div class="headerTop__authorization headerTop__authorization_js " href="#">
+              <a class="popup-modal-authorization headerTop__authorization headerTop__authorization_js " href="#authorization">
                 <div class="headerTop__icon">
                   <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/authorization.svg'; ?>
                 </div>
                 <span class="headerTop__text">Вход</span>
-              </div>
+              </a>
               <div class="headerTop__client client_js hidden">
                 <div class="headerTop__authorization clientClick_js">
                   <div class="headerTop__icon">
@@ -737,109 +738,104 @@
           </div>
         </section>
       </div>
+      <div id="clubCard" class="clubCardWindow windowsMessage__popap clubCardWindow_js mfp-hide">
+        <div class="windowsMessage__close clubCardWindow__close_js  popup-modal-dismiss">
+          <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
+        </div>
+        <div class="windowsMessage__title">Оформить клубную карту</div>
+        <form class="clubRegistration__form" action="">
+          <div class="clubRegistration__fields">
+            <div class="envelopeInput">
+              <div class="envelopeInput__title">Имя<span>*</span></div>
+              <input class="envelopeInput__input " type="text" placeholder="Введите ваше имя">
+            </div>
+            <div class="envelopeInput">
+              <div class="envelopeInput__title">Фамилия<span>*</span></div>
+              <input class="envelopeInput__input " type="text" placeholder="Введите вашу фамилию">
+            </div>
+            <div class="envelopeInput">
+              <div class="envelopeInput__title">E-mail<span>*</span></div>
+              <input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
+            </div>
+          </div>
+          <div class="agreement">
+            <label class="agreement__label ">
+              <input type="checkbox">
+              <span class="check check_js"></span>
+            </label>
+            <div class="agreement__consent ">
+              Нажимая на кнопку «Получить карту», вы принимаете <br> условия <a class="agreement__link" href="/privacy/">Пользовательского соглашения</a>
+            </div>
+          </div>
+          <button type="submit" class="clubCardWindow__btn btn clubCardWindow__btn_js" disabled>Получить карту</button>
+        </form>
+      </div>
+      <div id="authorization" class="authorization windowsMessage__popap authorizationPopup_js mfp-hide">
+        <div class="windowsMessage__close authorization__close_js popup-modal-dismiss">
+          <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
+        </div>
+        <div class="windowsMessage__title">Личный кабинет</div>
+        <div class="authorization__head">
+          <div class="authorization__check checkEnter_js authorization__check_checked">Вход</div>
+          <div class="authorization__check checkReg_js">Регистрация</div>
+        </div>
+        <form class="authorization__enter authorization__enter_js authorization__enter_error" action="">
+          <div class="enter__fields">
+            <div class="envelopeInput">
+              <div class="envelopeInput__title">E-mail</div>
+              <input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
+            </div>
+            <div class="envelopeInput">
+              <div class="envelopeInput__title authorization__title">Пароль <a class="popup-modal-forgotPassword" href="#forgotPassword">Забыли пароль?</a></div>
+              <input class="envelopeInput__input " type="password" placeholder="Введите пароль">
+              <span>Ошибка авторизации. Неверный логин или пароль.</span>
+            </div>
+          </div>
+          <button type="submit" class="authorization__btn btn enter__btn_js">Войти</button>
+        </form>
+        <form class="authorization__registration authorization__registration_js hidden" action="">
+          <div class="enter__fields">
+            <div class="envelopeInput">
+              <div class="envelopeInput__title">E-mail</div>
+              <input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
+            </div>
+            <div class="envelopeInput">
+              <div class="envelopeInput__title">Пароль</div>
+              <input class="envelopeInput__input " type="password" placeholder="Введите ваш e-mail">
+            </div>
+          </div>
+          <div class="agreement">
+            <label class="agreement__label ">
+              <input type="checkbox">
+              <span class="check enter__check_js"></span>
+            </label>
+            <div class="agreement__consent ">
+              Нажимая на кнопку «Зарегистрироваться», вы принимаете <br> условия <a class="agreement__link" href="/privacy/">Пользовательского соглашения</a>
+            </div>
+          </div>
+          <a class="popup-modal-personal authorization__btn authorization__btn_disabled btn reg__btn_js" href="#personal">Зарегистрироваться</a>
+        </form>
+      </div>
 
-      <div class="windowsMessage__wrap clubCardWindow clubCardWindow_js hidden">
-        <div class="windowsMessage__popap clubCardWindow__popup clubCardWindow__popup_js ">
-          <div class="windowsMessage__close clubCardWindow__close_js">
-            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
-          </div>
-          <div class="windowsMessage__title">Оформить клубную карту</div>
-          <form class="clubRegistration__form" action="">
-            <div class="clubRegistration__fields">
-              <div class="envelopeInput">
-                <div class="envelopeInput__title">Имя<span>*</span></div>
-                <input class="envelopeInput__input " type="text" placeholder="Введите ваше имя">
-              </div>
-              <div class="envelopeInput">
-                <div class="envelopeInput__title">Фамилия<span>*</span></div>
-                <input class="envelopeInput__input " type="text" placeholder="Введите вашу фамилию">
-              </div>
-              <div class="envelopeInput">
-                <div class="envelopeInput__title">E-mail<span>*</span></div>
-                <input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
-              </div>
-            </div>
-            <div class="agreement">
-              <label class="agreement__label ">
-                <input type="checkbox">
-                <span class="check check_js"></span>
-              </label>
-              <div class="agreement__consent ">
-                Нажимая на кнопку «Получить карту», вы принимаете <br> условия <a class="agreement__link" href="/privacy/">Пользовательского соглашения</a>
-              </div>
-            </div>
-            <button type="submit" class="clubCardWindow__btn btn clubCardWindow__btn_js" disabled>Получить карту</button>
-          </form>
+      <div id="forgotPassword" class="forgotPassword windowsMessage__popap forgotPassword_js mfp-hide">
+        <div class="windowsMessage__close forgotPassword__close_js popup-modal-dismiss">
+          <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
         </div>
-      </div>
-      <div class="windowsMessage__wrap authorization authorization_js hidden">
-        <div class="windowsMessage__popap authorization__popup authorization__popup_js ">
-          <div class="windowsMessage__close authorization__close_js">
-            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
+        <div class="windowsMessage__title">Восстановление доступа</div>
+        <form class="forgotPassword__enter forgotPassword__enter_js" action="">
+          <div class="forgotPassword__fields">
+            <div class="envelopeInput">
+              <div class="envelopeInput__title">E-mail</div>
+              <input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
+            </div>
           </div>
-          <div class="windowsMessage__title">Личный кабинет</div>
-          <div class="authorization__head">
-            <div class="authorization__check checkEnter_js authorization__check_checked">Вход</div>
-            <div class="authorization__check checkReg_js">Регистрация</div>
+          <div class="forgotPassword__box">
+            <button type="submit" class="forgotPassword__btn btn forgotPassword__btn_js popup-modal-dismiss">Восстановить</button>
+            <div class="forgotPassword__remember forgotPassword__remember_js popup-modal-dismiss">Вспомнили пароль?</div>
           </div>
-          <form class="authorization__enter authorization__enter_js authorization__enter_error" action="">
-            <div class="enter__fields">
-              <div class="envelopeInput">
-                <div class="envelopeInput__title">E-mail</div>
-                <input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
-              </div>
-              <div class="envelopeInput">
-                <div class="envelopeInput__title authorization__title">Пароль <span class="authorization__forgot_js">Забыли пароль?</span></div>
-                <input class="envelopeInput__input " type="password" placeholder="Введите пароль">
-                <span>Ошибка авторизации. Неверный логин или пароль.</span>
-              </div>
-            </div>
-            <button type="submit" class="authorization__btn btn enter__btn_js">Войти</button>
-          </form>
-          <form class="authorization__registration authorization__registration_js hidden" action="">
-            <div class="enter__fields">
-              <div class="envelopeInput">
-                <div class="envelopeInput__title">E-mail</div>
-                <input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
-              </div>
-              <div class="envelopeInput">
-                <div class="envelopeInput__title">Пароль</div>
-                <input class="envelopeInput__input " type="password" placeholder="Введите ваш e-mail">
-              </div>
-            </div>
-            <div class="agreement">
-              <label class="agreement__label ">
-                <input type="checkbox">
-                <span class="check enter__check_js"></span>
-              </label>
-              <div class="agreement__consent ">
-                Нажимая на кнопку «Зарегистрироваться», вы принимаете <br> условия <a class="agreement__link" href="/privacy/">Пользовательского соглашения</a>
-              </div>
-            </div>
-            <button type="submit" class="authorization__btn btn reg__btn_js" disabled>Зарегистрироваться</button>
-          </form>
-        </div>
+        </form>
       </div>
-      <div class="windowsMessage__wrap forgotPassword forgotPassword_js hidden">
-        <div class="windowsMessage__popap forgotPassword__popup forgotPassword__popup_js ">
-          <div class="windowsMessage__close forgotPassword__close_js">
-            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
-          </div>
-          <div class="windowsMessage__title">Восстановление доступа</div>
-          <form class="forgotPassword__enter forgotPassword__enter_js" action="">
-            <div class="forgotPassword__fields">
-              <div class="envelopeInput">
-                <div class="envelopeInput__title">E-mail</div>
-                <input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
-              </div>
-            </div>
-            <div class="forgotPassword__box">
-              <button type="submit" class="forgotPassword__btn btn forgotPassword__btn_js">Восстановить</button>
-              <div class="forgotPassword__remember forgotPassword__remember_js">Вспомнили пароль?</div>
-            </div>
-          </form>
-        </div>
-      </div>
+
       <div class="windowsMessage__wrap recoveryPassword recoveryPassword_js hidden">
         <div class="windowsMessage__popap recoveryPassword__popup recoveryPassword__popup_js ">
           <div class="windowsMessage__close recoveryPassword__close_js">
@@ -861,37 +857,35 @@
           </form>
         </div>
       </div>
-      <div class="windowsMessage__wrap personal personal_js hidden">
-        <div class="windowsMessage__popap personal__popup personal__popup_js ">
-          <div class="windowsMessage__close personal__close_js">
-            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
-          </div>
-          <div class="personal__title">Личный кабинет</div>
-          <div class="personal__head">
-            Личные данные
-          </div>
-          <form class="personal__form personal__form_js" action="">
-            <div class="personal__fields">
-              <div class="envelopeInput">
-                <div class="envelopeInput__title">Имя</div>
-                <input class="envelopeInput__input " type="text" placeholder="Введите имя">
-              </div>
-              <div class="envelopeInput">
-                <div class="envelopeInput__title">Фамилия</div>
-                <input class="envelopeInput__input " type="text" placeholder="Введите фамилию">
-              </div>
-              <div class="envelopeInput">
-                <div class="envelopeInput__title">Отчество</div>
-                <input class="envelopeInput__input " type="text" placeholder="Введите отчество">
-              </div>
-              <div class="envelopeInput">
-                <div class="envelopeInput__title">Телефон</div>
-                <input class="envelopeInput__input " type="number" placeholder="+7(___) ___-__-__">
-              </div>
-            </div>
-            <button type="submit" class="personal__btn btn personal__btn_js">Войти</button>
-            <div class="personal__skip personal__skip_js">Пропустить</div>
-          </form>
+      <div id="personal" class="personal windowsMessage__popap mfp-hide">
+        <div class="windowsMessage__close personal__close_js popup-modal-dismiss">
+          <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
         </div>
+        <div class="personal__title">Личный кабинет</div>
+        <div class="personal__head">
+          Личные данные
+        </div>
+        <form class="personal__form personal__form_js" action="">
+          <div class="personal__fields">
+            <div class="envelopeInput">
+              <div class="envelopeInput__title">Имя</div>
+              <input class="envelopeInput__input " type="text" placeholder="Введите имя">
+            </div>
+            <div class="envelopeInput">
+              <div class="envelopeInput__title">Фамилия</div>
+              <input class="envelopeInput__input " type="text" placeholder="Введите фамилию">
+            </div>
+            <div class="envelopeInput">
+              <div class="envelopeInput__title">Отчество</div>
+              <input class="envelopeInput__input " type="text" placeholder="Введите отчество">
+            </div>
+            <div class="envelopeInput">
+              <div class="envelopeInput__title">Телефон</div>
+              <input class="envelopeInput__input " type="number" placeholder="+7(___) ___-__-__">
+            </div>
+          </div>
+          <button type="submit" class="personal__btn btn personal__btn_js popup-modal-dismiss">Войти</button>
+          <div class="personal__skip popup-modal-dismiss">Пропустить</div>
+        </form>
       </div>
     </header>

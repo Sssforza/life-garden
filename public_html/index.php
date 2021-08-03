@@ -1253,7 +1253,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							</div>
 						</div>
 					</div>
-					<a class="btn clubCard__btn clubCard__btn_js" href="#">Получить карту</a>
+					<a href="#clubCard" class="popup-modal-club btn clubCard__btn clubCard__btn_js" href="#">Получить карту</a>
 					<div class="clubCard__minInfo">
 						* Скидка не&nbsp;распространяется на&nbsp;товары по&nbsp;акции. Скидка в&nbsp;период &laquo;Дня&nbsp;рождения&raquo; предоставляется только самому клиенту по&nbsp;предъявлении документа
 						(паспорт, пенсионное удостоверение, водительские права).

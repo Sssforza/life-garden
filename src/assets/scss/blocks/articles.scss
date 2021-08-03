@@ -9,7 +9,8 @@
     justify-content: space-between;
     &_open {
       .articles__tegs {
-        height: max-content;
+        height: auto;
+        max-height: 1000px;
       }
       .articles__show {
         display: none;
@@ -25,7 +26,8 @@
     flex-wrap: wrap;
     gap: 13px 10px;
     overflow: hidden;
-    height: 38px;
+    max-height: 38px;
+    transition: $transition;
   }
   &__item {
     padding: 7px 20px;
@@ -39,7 +41,7 @@
     cursor: pointer;
     &_check {
       background: #deeddd;
-      border: none;
+      border: 1px solid $white;
     }
     &:hover {
       color: $green;
@@ -51,6 +53,7 @@
     font-family: Rubik;
     font-size: 16px;
     line-height: 24px;
+    color: $green;
     & span {
       position: relative;
       border-bottom: 2px dashed #abd2bc;
@@ -67,6 +70,7 @@
     }
     &:hover {
       & span {
+        color: $textColor;
         &:after {
           width: 100%;
         }
@@ -83,8 +87,10 @@
     margin-top: 32px;
     .helpfulCard {
       border: 1px solid #cad4db;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+      transition: $transition;
       &_hover {
-        border: none;
+        border: 1px solid $white;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
       }
     }

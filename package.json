@@ -12,8 +12,14 @@
         "prod": "gulp prod --production",
         "jc": "gulp jc"
     },
+    "browser": {
+        "fs": false,
+        "path": false,
+        "os": false
+    },
     "devDependencies": {
         "@babel/core": "^7.9.6",
+        "@babel/parser": "^7.14.9",
         "@babel/preset-env": "^7.9.6",
         "@babel/register": "^7.9.0",
         "babel-loader": "^8.1.0",
@@ -63,6 +69,7 @@
     },
     "dependencies": {
         "blowup": "^1.0.2",
+        "node-ensure": "^0.0.0",
         "sharp": "^0.28.3"
     },
     "version": "0.0.0"

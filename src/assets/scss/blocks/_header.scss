@@ -826,12 +826,11 @@
 }
 
 .clubCardWindow {
-  &__popup {
-    width: 520px;
-    height: 630px;
-    padding: 62px 40px 78px;
-    border-radius: 20px;
-  }
+  width: 520px;
+  height: 630px;
+  padding: 62px 40px 78px;
+  border-radius: 20px;
+
   .windowsMessage__close {
     right: 40px;
   }
@@ -867,11 +866,22 @@
 }
 
 .authorization {
+  width: 520px;
+  height: auto;
+  padding: 35px 40px 46px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+
+  .authorization__head {
+    padding: 0;
+    align-self: center;
+  }
   &__title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    & span {
+    & a {
       font-size: 14px;
       line-height: 17px;
       color: $textColor;
@@ -882,19 +892,7 @@
       }
     }
   }
-  &__popup {
-    width: 520px;
-    height: auto;
-    padding: 35px 40px 46px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
 
-    .authorization__head {
-      padding: 0;
-      align-self: center;
-    }
-  }
   .windowsMessage__close {
     right: 40px;
   }
@@ -930,6 +928,10 @@
     height: 52px;
     font-size: 16px;
     line-height: 19px;
+    &_disabled{
+      pointer-events: none;
+      background-color: $gray2;
+    }
   }
   &__head {
     display: flex;
@@ -986,14 +988,13 @@
 }
 
 .forgotPassword {
-  &__popup {
-    width: 520px;
-    height: auto;
-    padding: 35px 40px 45px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-  }
+  width: 520px;
+  height: auto;
+  padding: 35px 40px 45px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+
   &__box {
     display: flex;
     align-items: center;
@@ -1171,18 +1172,18 @@
     font-size: 18px;
     line-height: 21px;
   }
-  &__popup {
-    width: 520px;
-    height: auto;
-    padding: 35px 40px 46px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    .personal__head {
-      padding: 0;
-      align-self: center;
-    }
+
+  width: 520px;
+  height: auto;
+  padding: 35px 40px 46px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  .personal__head {
+    padding: 0;
+    align-self: center;
   }
+
   .windowsMessage__close {
     right: 40px;
   }

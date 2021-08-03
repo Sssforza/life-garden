@@ -16,21 +16,21 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 	<section class="page__box container articles">
 		<section class="articles__head ">
 			<div class="page__title">Статьи</div>
-			<div class="articles__box articles__box_open">
+			<div class="articles__box articles__box_js">
 				<ul class="articles__tegs">
-					<li class="articles__item articles__item_check">Все статьи</li>
-					<li class="articles__item">Восстановление плодородия</li>
-					<li class="articles__item">Защита сада</li>
-					<li class="articles__item">Здоровое питание</li>
-					<li class="articles__item">Мульчирование почвы</li>
-					<li class="articles__item">Сезонные работы</li>
-					<li class="articles__item">Посадки</li>
-					<li class="articles__item">Полезные микроорганизмы</li>
-					<li class="articles__item">Сидераты зелёные удобрения</li>
-					<li class="articles__item">Здоровое питание</li>
-					<li class="articles__item">Мульчирование почвы</li>
-					<li class="articles__item">Сезонные работы</li>
-					<li class="articles__item">Защита сада</li>
+					<li class="articles__item articles__item_js articles__item_check">Все статьи</li>
+					<li class="articles__item articles__item_js">Восстановление плодородия</li>
+					<li class="articles__item articles__item_js">Защита сада</li>
+					<li class="articles__item articles__item_js">Здоровое питание</li>
+					<li class="articles__item articles__item_js">Мульчирование почвы</li>
+					<li class="articles__item articles__item_js">Сезонные работы</li>
+					<li class="articles__item articles__item_js">Посадки</li>
+					<li class="articles__item articles__item_js">Полезные микроорганизмы</li>
+					<li class="articles__item articles__item_js">Сидераты зелёные удобрения</li>
+					<li class="articles__item articles__item_js">Здоровое питание</li>
+					<li class="articles__item articles__item_js">Мульчирование почвы</li>
+					<li class="articles__item articles__item_js">Сезонные работы</li>
+					<li class="articles__item articles__item_js">Защита сада</li>
 				</ul>
 				<div class="articles__readAll articles__readAll_js">
 					<span class="articles__show">Все теги</span>
@@ -47,10 +47,10 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						<div class="helpfulCard__title">Как добиться дружных всходов сельдерея</div>
 						<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.</div>
 					</div>
-					<div class="cardArticle__btn helpfulCard__btn">
+					<a href="/paper/" class="cardArticle__btn helpfulCard__btn">
 						<span>Читать дальше</span>
 						<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
-					</div>
+					</a>
 				</div>
 				<div class="helpfulCard">
 					<div class="helpfulCard__img" style="background-image:url(/dist/img/trash/friendly.png)"></div>
@@ -60,10 +60,10 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.</div>
 
 					</div>
-					<div class="cardArticle__btn helpfulCard__btn">
+					<a href="/paper/" class="cardArticle__btn helpfulCard__btn">
 						<span>Читать дальше</span>
 						<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
-					</div>
+					</a>
 				</div>
 				<div class="helpfulCard">
 					<div class="helpfulCard__img" style="background-image:url(/dist/img/trash/friendly.png)"></div>
@@ -73,10 +73,10 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.</div>
 
 					</div>
-					<div class="cardArticle__btn helpfulCard__btn">
+					<a href="/paper/" class="cardArticle__btn helpfulCard__btn">
 						<span>Читать дальше</span>
 						<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
-					</div>
+					</a>
 				</div>
 				<div class="helpfulCard">
 					<div class="helpfulCard__img" style="background-image:url(/dist/img/trash/friendly.png)"></div>
@@ -86,10 +86,10 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.</div>
 
 					</div>
-					<div class="cardArticle__btn helpfulCard__btn">
+					<a href="/paper/" class="cardArticle__btn helpfulCard__btn">
 						<span>Читать дальше</span>
 						<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
-					</div>
+					</a>
 				</div>
 				<div class="helpfulCard">
 					<div class="helpfulCard__img" style="background-image:url(/dist/img/trash/friendly.png)"></div>
@@ -99,10 +99,10 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.</div>
 
 					</div>
-					<div class="cardArticle__btn helpfulCard__btn">
+					<a href="/paper/" class="cardArticle__btn helpfulCard__btn">
 						<span>Читать дальше</span>
 						<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
-					</div>
+					</a>
 				</div>
 				<div class="helpfulCard">
 					<div class="helpfulCard__img" style="background-image:url(/dist/img/trash/friendly.png)"></div>
@@ -112,10 +112,10 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.</div>
 
 					</div>
-					<div class="cardArticle__btn helpfulCard__btn">
+					<a href="/paper/" class="cardArticle__btn helpfulCard__btn">
 						<span>Читать дальше</span>
 						<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
-					</div>
+					</a>
 				</div>
 				<div class="helpfulCard">
 					<div class="helpfulCard__img" style="background-image:url(/dist/img/trash/friendly.png)"></div>
@@ -125,10 +125,10 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.</div>
 
 					</div>
-					<div class="cardArticle__btn helpfulCard__btn">
+					<a href="/paper/" class="cardArticle__btn helpfulCard__btn">
 						<span>Читать дальше</span>
 						<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
-					</div>
+					</a>
 				</div>
 				<div class="helpfulCard">
 					<div class="helpfulCard__img" style="background-image:url(/dist/img/trash/friendly.png)"></div>
@@ -138,10 +138,10 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.</div>
 
 					</div>
-					<div class="cardArticle__btn helpfulCard__btn">
+					<a href="/paper/" class="cardArticle__btn helpfulCard__btn">
 						<span>Читать дальше</span>
 						<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
-					</div>
+					</a>
 				</div>
 			</div>
 			<div class="catalogCards__show btnShow">

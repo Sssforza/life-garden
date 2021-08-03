@@ -63,41 +63,12 @@ export function masterClassPopups() {
   }
 }
 export function masterClassBuy() {
-  if (document.querySelector(".masterClassOrder_js")) {
-    const masterBuyBtn = document.querySelectorAll(".masterClass__btn_js");
-    const masterBuyWrapper = document.querySelector(".masterClassWrapper_js");
-    const masterBuyPopup = document.querySelector(".masterClassOrder_js");
-    const masterBuyClose = document.querySelector(
-      ".masterClass__orderClose_js"
-    );
+  if (document.querySelector(".popup-modal-masterClassOrder")) {
+    const agreementCheck = document.querySelector(".check__master_js");
     const masterBuyOrder = document.querySelector(".masterClassOrder__btn_js");
-    const agreementCheck = document.querySelector(".check_js");
 
-    masterBuyBtn.forEach((item) => {
-      item.onclick = () => {
-        masterBuyWrapper.classList.remove("hidden");
-        document.body.classList.add("hiddenHeaderCatalog");
-      };
-    });
-    masterBuyWrapper.onclick = (e) => {
-      if (
-        masterBuyPopup &&
-        e.target !== masterBuyPopup &&
-        !masterBuyPopup.contains(e.target)
-      ) {
-        masterBuyWrapper.classList.add("hidden");
-        document.body.classList.remove("hiddenHeaderCatalog");
-      }
-    };
-    masterBuyClose.onclick = () => {
-      masterBuyWrapper.classList.add("hidden");
-      document.body.classList.remove("hiddenHeaderCatalog");
-    };
-    masterBuyOrder.onclick = () => {
-      masterBuyWrapper.classList.add("hidden");
-      document.body.classList.remove("hiddenHeaderCatalog");
-    };
     agreementCheck.onclick = () => {
+      console.log("sdfs");
       agreementCheck.classList.toggle("agreement__checked");
       if (agreementCheck.classList.contains("agreement__checked")) {
         masterBuyOrder.disabled = false;
@@ -105,6 +76,17 @@ export function masterClassBuy() {
         masterBuyOrder.disabled = true;
       }
     };
+    $(function () {
+      $(".popup-modal-masterClassOrder").magnificPopup({
+        type: "inline",
+        preloader: false,
+        modal: false,
+        showCloseBtn: false,
+      });
+      $(document).on("click", ".popup-modal-dismiss", function (e) {
+        $.magnificPopup.close();
+      });
+    });
   }
 }
 

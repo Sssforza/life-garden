@@ -1,20 +1,20 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 ?>
-<link rel='stylesheet' href="/dist/css/blocks/headline.css">
+<link rel='stylesheet' href="/dist/css/blocks/paper.css">
 <main class="page page_catalog">
 	<div class="container">
 		<section class="breadCrumbs">
 			<ul class="breadCrumbs__ul">
-				<li><a class="breadCrumbs__link" href="/">Главная</a></li>
-				<li><a class="breadCrumbs__link" href="/news/">Новости</a></li>
+				<li><a class="breadCrumbs__link" href="">Главная</a></li>
+				<li><a class="breadCrumbs__link" href="">Статьи</a></li>
 				<li><span>Горчичный жмых — защита от почвенных вредителей
 					</span></li>
 			</ul>
 		</section>
-		<div class="page__box headline">
-			<section class="headline__body">
-				<div class="headline__date">
+		<div class="page__box paper">
+			<section class="paper__body">
+				<div class="paper__date">
 					<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/seson.svg'; ?>
 					<span>27 октября 2020</span>
 				</div>
@@ -44,8 +44,8 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				<p>
 					Фитосанитарная активность - одна из основных причин применения горчичного жмыха там, где велик риск накопления в грунте болезнетворной микрофлоры, грибков, личинок вредителей. При этом средство не оказывает губительного действия на полезных насекомых, полезную почвенную микрофлору и сами растения.
 				</p>
-				<div class="headline__recomendation">
-					<h5 class="headline__title headline__title_indent headline__title_recomendation">Рекомендации по нормам внесения горчичного жмыха:
+				<div class="paper__recomendation">
+					<h5 class="paper__title paper__title_indent paper__title_recomendation">Рекомендации по нормам внесения горчичного жмыха:
 					</h5>
 					<ol>
 						<li>При посадке картофеля вносить в лунку от одной столовой ложки до горсти.
@@ -58,11 +58,11 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 			</section>
 		</div>
 	</div>
-	<section class="helpful sliderPages headline__slider">
+	<section class="helpful sliderPages paper__slider">
 		<div class="helpful__content container">
 			<div class="helpful__head">
-				<div class="helpful__title">По теме</div>
-				<a class="helpful__link" href="/news/">Все новости</a>
+				<div class="helpful__title">Полезные статьи</div>
+				<a class="helpful__link" href="/articles/">Все статьи</a>
 			</div>
 			<div class="sliderPages__block productBlock">
 				<div class="helpful__container productBlock__content sliderProductSpecial_js productBlockBox_js show">
@@ -142,7 +142,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 		</div>
 	</section>
 
-	<section class="sliderPages headline__slider container">
+	<section class="sliderPages paper__slider container">
 		<div class="sliderPages__title">Рекомендации для вас</div>
 		<div class="sliderPages__block productBlock">
 			<div class="productBlock__content sliderProductSpecial_js productBlockBox_js show" data-slider="novelty">

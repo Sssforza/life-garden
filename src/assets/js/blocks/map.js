@@ -62,7 +62,7 @@ export function mapInit () {
         $('.mapItem_js').on('click', function() {
             $('.map__aside .mapItem_js').not($(this)).removeClass('show');
             if($(this).hasClass('show')) {
-                $(this).removeClass('show');
+                $(this).removeClass('show'); 
                 groups = [];
                 $('.mapItem_js').each(function(item, i) {
                     groups.push({
