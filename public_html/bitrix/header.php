@@ -7,6 +7,17 @@
   <link rel='stylesheet' href="/dist/css/main.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
   <script type="text/javascript" src="/dist/js/main.js"></script>
+  <script type="text/javascript" src="/dist/min/three.min.js"></script>
+  <script type="text/javascript" src="/dist/min/flipbook.min.js"></script>
+  <script type="text/javascript" src="/dist/min/flipbook.book3.min.js"></script>
+  <script type="text/javascript" src="/dist/min/flipbook.pdfservice.min.js"></script>
+  <script type="text/javascript" src="/dist/min/flipbook.swipe.min.js"></script>
+  <script type="text/javascript" src="/dist/min/flipbook.webgl.js"></script>
+  <script type="text/javascript" src="/dist/min/flipbook.webgl.min.js"></script>
+  <script type="text/javascript" src="/dist/min/iscroll.min.js"></script>
+  <script type="text/javascript" src="/dist/min/pdf.min.js"></script>
+  <script type="text/javascript" src="/dist/min/pdf.worker.min.js"></script>
+  
 </head>
 
 <body>

@@ -39,9 +39,8 @@ export function newspaperPopup() {
   }
 }
 export function pdfLoader() {
-/*   $(".newspaperOne").flipBook({
+  $(".newspaperPdf_js").flipBook({
     pdfUrl: "/dist/pdf/newspaper.pdf",
     lightBox: true,
-  }); */
- 
+  });
 }

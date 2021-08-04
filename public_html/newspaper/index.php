@@ -2,6 +2,7 @@
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 ?>
 <link rel='stylesheet' href="/dist/css/blocks/newspaper.css">
+<link rel='stylesheet' href="/dist/min/font-awesome.css">
 <main class="page page_promo">
 	<section class="breadCrumbs container">
 		<ul class="breadCrumbs__ul">
@@ -38,12 +39,12 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 			</div>
 		</section>
 		<section class="newspaper__body newspaperBody">
-			<div class="catalogCoverPdf">
-				<div class="catalogCoverPdf_wrapper">
-					<div class="newspaperOne" data-pdf="/dist/pdf/newspaper.pdf">
-						<img src="/dist/img/trash/cover1.jpg" alt="">
-						<p class="text">
-							Газета
+			<div class="newspaperBody__list">
+				<div class="newspaperBody__item">
+					<div class="newspaperBody__picture newspaperPdf_js" data-pdf="/dist/pdf/newspaper.pdf">
+						<img src="/dist/img/trash/cover1.jpg">
+						<p class="newspaperBody__name">
+							№12 Декабрь 2020
 						</p>
 					</div>
 				</div>
