@@ -139,9 +139,7 @@ export function quickView() {
       $(document).on("click", ".popup-modal-dismiss", function (e) {
         $.magnificPopup.close();
       });
-
     });
-
   }
 }
 
@@ -249,10 +247,10 @@ export function recoveryPassword() {
       document.body.classList.remove("hiddenHeaderCatalog");
     };
 
-    recoveryBtn.onclick = () => {
+/*     recoveryBtn.onclick = () => {
       recoveryWrapper.classList.add("hidden");
       document.body.classList.remove("hiddenHeaderCatalog");
-    };
+    }; */
   }
 }
 
@@ -274,18 +272,104 @@ export function forgotPassword() {
 
 export function personal() {
   if (document.querySelector(".popup-modal-personal")) {
-    $(function () {
-      $(".popup-modal-personal").magnificPopup({
-        type: "inline",
-        preloader: false,
-        modal: false,
-        showCloseBtn: false,
-      });
-      $(document).on("click", ".popup-modal-dismiss", function (e) {
-        $.magnificPopup.close();
-      });
-    });
   }
 }
 
-export function magnificPopup() {}
+export function validationPopups() {
+  const enterEmail = document.querySelector(".enter__email_js");
+  const enterPassword = document.querySelector(".enter__password_js");
+  const enterBtn = document.querySelector(".enter__btn_js");
+
+  function validateEmail(value) {
+    const re =
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(value);
+  }
+  enterBtn.onclick = (e) => {
+    e.preventDefault();
+    if (!validateEmail(enterEmail.value)) {
+      enterEmail.classList.add("envelopeInput__input_error");
+    } else {
+      enterEmail.classList.remove("envelopeInput__input_error");
+    }
+    if (enterPassword.value.length === 0) {
+      enterPassword.classList.add("envelopeInput__input_error");
+    } else {
+      enterPassword.classList.remove("envelopeInput__input_error");
+    }
+    if (validateEmail(enterEmail.value) && enterPassword.value.length > 0) {
+      console.log(enterEmail.value);
+      $.magnificPopup.close();
+    }
+  };
+
+  const regEmail = document.querySelector(".reg__email_js");
+  const regPassword = document.querySelector(".reg__password_js");
+  const regBtn = document.querySelector(".reg__btn_js");
+
+  regBtn.onclick = (e) => {
+    if (!validateEmail(regEmail.value)) {
+      regEmail.classList.add("envelopeInput__input_error");
+    } else {
+      regEmail.classList.remove("envelopeInput__input_error");
+    }
+    if (regPassword.value.length === 0) {
+      regPassword.classList.add("envelopeInput__input_error");
+    } else {
+      regPassword.classList.remove("envelopeInput__input_error");
+    }
+    if (validateEmail(regEmail.value) && regPassword.value.length > 0) {
+      $(function () {
+        $(".popup-modal-personal").magnificPopup({
+          type: "inline",
+          preloader: false,
+          modal: false,
+          showCloseBtn: false,
+        });
+        $(document).on("click", ".popup-modal-dismiss", function (e) {
+          $.magnificPopup.close();
+        });
+      });
+    } else {
+      $(".popup-modal-personal").off("click");
+    }
+  };
+
+  const forgotEmail = document.querySelector(".forgot__email_js");
+  const forgotBtn = document.querySelector(".forgotPassword__btn_js");
+
+  forgotBtn.onclick = (e) => {
+    e.preventDefault();
+    if (!validateEmail(forgotEmail.value)) {
+      forgotEmail.classList.add("envelopeInput__input_error");
+    } else {
+      console.log(forgotEmail.value);
+      $.magnificPopup.close();
+    }
+  };
+
+  $(".maskPhone").mask("+7 (Z00) 000-00-00", {
+    translation: {
+      Z: { pattern: /[0-69-9]/ },
+    },
+  });
+
+  const enterRecPassword = document.querySelector(".recovery__enter_js");
+  const repeatRecPassword = document.querySelector(".recovery__repeat_js");
+  const recoveryBtn = document.querySelector(".recoveryPassword__btn_js");
+  const recoveryError = document.querySelector(".recovery__error_js");
+
+  recoveryBtn.onclick = (e) => {
+    e.preventDefault()
+    if (enterRecPassword.value === repeatRecPassword.value) {
+      enterRecPassword.classList.remove("envelopeInput__input_error")
+      repeatRecPassword.classList.remove("envelopeInput__input_error")
+      recoveryError.classList.add('hidden')
+      console.log(enterRecPassword.value);
+    } else {
+      enterRecPassword.classList.add("envelopeInput__input_error")
+      repeatRecPassword.classList.add("envelopeInput__input_error")
+      recoveryError.classList.remove('hidden')
+    }
+  };
+}

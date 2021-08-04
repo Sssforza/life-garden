@@ -69,7 +69,9 @@
     },
     "dependencies": {
         "blowup": "^1.0.2",
+        "flip-book": "^1.9.9",
         "node-ensure": "^0.0.0",
+        "pdfjs-dist": "^2.9.359",
         "sharp": "^0.28.3"
     },
     "version": "0.0.0"

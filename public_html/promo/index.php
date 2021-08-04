@@ -9,7 +9,10 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				<a class="breadCrumbs__link" href="/">Главная</a>
 			</li>
 			<li>
-				<span>Акции</span>
+				<a class="breadCrumbs__link" href="/">Акции</a>
+			</li>
+			<li>
+				<span>Акция на Многолетники</span>
 			</li>
 		</ul>
 	</section>

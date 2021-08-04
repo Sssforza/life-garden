@@ -1,0 +1,102 @@
+@import "../modules/utilities/_variables.scss";
+
+.feedback {
+  &__product {
+  }
+  &__description {
+    margin-top: 26px;
+  }
+  &__form {
+  }
+  &__fields {
+    .envelopeInput:not(:first-child) {
+      margin-top: 20px;
+    }
+    .envelopeInput__title {
+      font-family: Rubik;
+      font-size: 18px;
+      line-height: 21px;
+    }
+    .envelopeInput__textarea {
+      font-family: Firasans;
+      width: 760px;
+      height: 140px;
+      padding: 13px 14px;
+    }
+  }
+
+  // .feedback__estimation
+
+  &__estimation {
+  }
+
+  // .feedback__btn
+
+  &__btn {
+    width: 230px;
+    height: 55px;
+    font-size: 18px;
+    line-height: 23px;
+    margin-top: 39px;
+  }
+}
+.feedbackProduct {
+  margin-top: 43px;
+  display: flex;
+  &__img {
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+  }
+  &__box {
+    margin-left: 26px;
+  }
+  &__title {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &__articul {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 10px;
+    color: $gray1;
+  }
+}
+
+.feedbackEstimation {
+  margin-top: 39px;
+  &__title {
+    font-family: Rubik;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .review {
+    display: flex;
+    align-items: center;
+  }
+  .review__list {
+    .review__item:not(:first-child) {
+      margin-left: 9px;
+    }
+  }
+  .review__item {
+    cursor: pointer;
+    margin-right: 0;
+    & svg {
+      width: 26px;
+      height: 26px;
+    }
+  }
+  .review__how {
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 14px;
+    margin-top: 3px;
+  }
+}
