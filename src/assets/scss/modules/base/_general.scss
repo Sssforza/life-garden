@@ -40,6 +40,10 @@ body {
 .page {
   padding-top: 210px;
   padding-bottom: 88px;
+  @media (max-width: $lg) {
+    padding-top: 152px;
+    padding-bottom: 66px;
+  }
   &__box {
     margin-top: 35px;
   }
@@ -104,6 +108,10 @@ body {
   &:disabled {
     pointer-events: none;
     background: #6f7982;
+  }
+  &_disabled {
+    pointer-events: none;
+    background-color: #6f7982;
   }
 }
 .btnJaundiced {
@@ -288,6 +296,9 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: $transition;
+    @media (max-width: $lg) {
+      opacity: 1;
+    }
     &:hover {
       svg {
         path {
@@ -322,6 +333,9 @@ body {
   border: 1px solid $border;
   border-radius: 10px;
   overflow: hidden;
+  @media (max-width: $lg) {
+    width: 307px;
+  }
   &__img {
     width: 100%;
     height: 200px;

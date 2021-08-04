@@ -210,9 +210,9 @@ export function authorization() {
     agreementCheck.onclick = () => {
       agreementCheck.classList.toggle("agreement__checked");
       if (agreementCheck.classList.contains("agreement__checked")) {
-        regBtn.classList.remove("authorization__btn_disabled");
+        regBtn.classList.remove("btn_disabled");
       } else {
-        regBtn.classList.add("authorization__btn_disabled");
+        regBtn.classList.add("btn_disabled");
       }
     };
   }
@@ -247,7 +247,7 @@ export function recoveryPassword() {
       document.body.classList.remove("hiddenHeaderCatalog");
     };
 
-/*     recoveryBtn.onclick = () => {
+    /*     recoveryBtn.onclick = () => {
       recoveryWrapper.classList.add("hidden");
       document.body.classList.remove("hiddenHeaderCatalog");
     }; */
@@ -270,10 +270,7 @@ export function forgotPassword() {
   }
 }
 
-export function personal() {
-  if (document.querySelector(".popup-modal-personal")) {
-  }
-}
+export function personal() {}
 
 export function validationPopups() {
   const enterEmail = document.querySelector(".enter__email_js");
@@ -308,6 +305,7 @@ export function validationPopups() {
   const regBtn = document.querySelector(".reg__btn_js");
 
   regBtn.onclick = (e) => {
+    e.preventDefault();
     if (!validateEmail(regEmail.value)) {
       regEmail.classList.add("envelopeInput__input_error");
     } else {
@@ -320,7 +318,10 @@ export function validationPopups() {
     }
     if (validateEmail(regEmail.value) && regPassword.value.length > 0) {
       $(function () {
-        $(".popup-modal-personal").magnificPopup({
+        $.magnificPopup.open({
+          items: {
+            src: "#personal",
+          },
           type: "inline",
           preloader: false,
           modal: false,
@@ -330,8 +331,6 @@ export function validationPopups() {
           $.magnificPopup.close();
         });
       });
-    } else {
-      $(".popup-modal-personal").off("click");
     }
   };
 
@@ -360,16 +359,64 @@ export function validationPopups() {
   const recoveryError = document.querySelector(".recovery__error_js");
 
   recoveryBtn.onclick = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (enterRecPassword.value === repeatRecPassword.value) {
-      enterRecPassword.classList.remove("envelopeInput__input_error")
-      repeatRecPassword.classList.remove("envelopeInput__input_error")
-      recoveryError.classList.add('hidden')
+      enterRecPassword.classList.remove("envelopeInput__input_error");
+      repeatRecPassword.classList.remove("envelopeInput__input_error");
+      recoveryError.classList.add("hidden");
       console.log(enterRecPassword.value);
     } else {
-      enterRecPassword.classList.add("envelopeInput__input_error")
-      repeatRecPassword.classList.add("envelopeInput__input_error")
-      recoveryError.classList.remove('hidden')
+      enterRecPassword.classList.add("envelopeInput__input_error");
+      repeatRecPassword.classList.add("envelopeInput__input_error");
+      recoveryError.classList.remove("hidden");
+    }
+  };
+
+  const clubCardWindowName = document.querySelector(".clubCardWindow__name_js");
+  const clubCardWindowSurname = document.querySelector(
+    ".clubCardWindow__surname_js"
+  );
+  const clubCardWindowEmail = document.querySelector(
+    ".clubCardWindow__email_js"
+  );
+  const clubCardWindowBtn = document.querySelector(".clubCardWindow__btn_js");
+
+  clubCardWindowBtn.onclick = (e) => {
+    e.preventDefault();
+    if (!validateEmail(clubCardWindowEmail.value)) {
+      clubCardWindowEmail.classList.add("envelopeInput__input_error");
+    } else {
+      clubCardWindowEmail.classList.remove("envelopeInput__input_error");
+    }
+    if (clubCardWindowName.value.length === 0) {
+      clubCardWindowName.classList.add("envelopeInput__input_error");
+    } else {
+      clubCardWindowName.classList.remove("envelopeInput__input_error");
+    }
+    if (clubCardWindowSurname.value.length === 0) {
+      clubCardWindowSurname.classList.add("envelopeInput__input_error");
+    } else {
+      clubCardWindowSurname.classList.remove("envelopeInput__input_error");
+    }
+    if (
+      validateEmail(clubCardWindowEmail.value) &&
+      clubCardWindowName.value.length > 0 &&
+      clubCardWindowSurname.value.length > 0
+    ) {
+      $(function () {
+        $.magnificPopup.open({
+          items: {
+            src: "#clubPagePopup",
+          },
+          type: "inline",
+          preloader: false,
+          modal: false,
+          showCloseBtn: false,
+        });
+        $(document).on("click", ".popup-modal-dismiss", function (e) {
+          $.magnificPopup.close();
+        });
+      });
     }
   };
 }

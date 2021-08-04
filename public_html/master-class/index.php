@@ -227,7 +227,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							</div>
 						</div>
 					</div>
-					<div class="masterClass__btn btn masterClass__btn_js">Купить билет</div>
+					<a class="popup-modal-masterClassOrder masterClass__btn btn masterClass__btn_js" href="#masterClassOrder">Купить билет</a>
 				</div>
 			</div>
 		</section>
@@ -300,7 +300,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							</div>
 						</div>
 					</div>
-					<div class="masterClass__btn btn masterClass__btn_js">Купить билет</div>
+					<a class="popup-modal-masterClassOrder masterClass__btn btn masterClass__btn_js" href="#masterClassOrder">Купить билет</a>
 				</div>
 			</div>
 		</section>
@@ -340,20 +340,20 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 		<form action="">
 			<div class="masterClassOrder__fields">
 				<div class="envelopeInput">
-					<div class="envelopeInput__title">Имя<span>*</span></div>
-					<input class="envelopeInput__input " type="text" placeholder="Введите ваше имя">
+					<div class="envelopeInput__title ">Имя<span>*</span></div>
+					<input class="envelopeInput__input masterClass__name_js" type="text" placeholder="Введите ваше имя">
 				</div>
 				<div class="envelopeInput">
-					<div class="envelopeInput__title">Телефон<span>*</span></div>
-					<input class="envelopeInput__input " type="number" placeholder="+7 (___) ___-__-__">
+					<div class="envelopeInput__title  ">Телефон<span>*</span></div>
+					<input class="envelopeInput__input maskPhone masterClass__tel_js" type="text" placeholder="+7 (___) ___-__-__">
 				</div>
 				<div class="envelopeInput">
-					<div class="envelopeInput__title">Фамилия<span>*</span></div>
-					<input class="envelopeInput__input " type="text" placeholder="Введите вашу фамилию">
+					<div class="envelopeInput__title ">Фамилия<span>*</span></div>
+					<input class="envelopeInput__input masterClass__surname_js" type="text" placeholder="Введите вашу фамилию">
 				</div>
 				<div class="envelopeInput">
-					<div class="envelopeInput__title">E-mail</div>
-					<input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
+					<div class="envelopeInput__title ">E-mail</div>
+					<input class="envelopeInput__input masterClass__email_js" type="text" placeholder="Введите ваш e-mail">
 				</div>
 			</div>
 			<div class="masterClassOrder__row">

@@ -95,6 +95,9 @@ import { newsCategories } from "./blocks/news.js";
 //📁 /assets/js/blocks  feedback.js
 import { reviewCheck } from "./blocks/feedback.js";
 
+//📁 /assets/js/blocks  adaptive.js
+import { adaptive } from "./blocks/adaptive.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   // open contextual hint
   headerSearchelp();
@@ -232,4 +235,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // check stars in feedback
   reviewCheck();
+
+  // adaptive
+  adaptive();
 });

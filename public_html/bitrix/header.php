@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="">
   <link rel='stylesheet' href="/dist/css/main.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
   <script type="text/javascript" src="/dist/js/main.js"></script>
@@ -747,15 +747,15 @@
           <div class="clubRegistration__fields">
             <div class="envelopeInput">
               <div class="envelopeInput__title">Имя<span>*</span></div>
-              <input class="envelopeInput__input " type="text" placeholder="Введите ваше имя">
+              <input class="envelopeInput__input clubCardWindow__name_js" type="text" placeholder="Введите ваше имя">
             </div>
             <div class="envelopeInput">
               <div class="envelopeInput__title">Фамилия<span>*</span></div>
-              <input class="envelopeInput__input " type="text" placeholder="Введите вашу фамилию">
+              <input class="envelopeInput__input clubCardWindow__surname_js" type="text" placeholder="Введите вашу фамилию">
             </div>
             <div class="envelopeInput">
               <div class="envelopeInput__title">E-mail<span>*</span></div>
-              <input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
+              <input class="envelopeInput__input clubCardWindow__email_js" type="text" placeholder="Введите ваш e-mail">
             </div>
           </div>
           <div class="agreement">
@@ -813,7 +813,7 @@
               Нажимая на кнопку «Зарегистрироваться», вы принимаете <br> условия <a class="agreement__link" href="/privacy/">Пользовательского соглашения</a>
             </div>
           </div>
-          <a class="popup-modal-personal authorization__btn authorization__btn_disabled btn reg__btn_js" href="#personal">Зарегистрироваться</a>
+          <button type="submit" class="popup-modal-personal authorization__btn btn_disabled btn reg__btn_js">Зарегистрироваться</button>
         </form>
       </div>
 
@@ -889,4 +889,12 @@
           <a class="personal__skip" href="#">Пропустить</a>
         </form>
       </div>
+      <div id="clubPagePopup" class="windowsMessage__popap clubPopup clubPopup_js  mfp-hide">
+				<div class="windowsMessage__close clubPopupClose_js popup-modal-dismiss">
+					<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
+				</div>
+				<div class="windowsMessage__title">Клубная карта оформлена</div>
+				<div class="windowsMessage__text">Теперь вы можете пользоваться всеми
+					преимуществами карты. </div>
+			</div>
     </header>

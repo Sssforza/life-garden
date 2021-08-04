@@ -39,19 +39,19 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 			</section>
 			<section class="club__registration clubRegistration">
 				<div class="clubRegistration__title">Оформить клубную карту</div>
-				<form class="clubRegistration__form" action="">
+				<form class="clubRegistration__form clubRegistration__form_js" action="">
 					<div class="clubRegistration__fields">
 						<div class="envelopeInput">
 							<div class="envelopeInput__title">Имя <span>*</span></div>
-							<input class="envelopeInput__input " type="text" placeholder="Введите ваше имя">
+							<input class="envelopeInput__input clubCard__name_js" type="text" placeholder="Введите ваше имя">
 						</div>
 						<div class="envelopeInput">
 							<div class="envelopeInput__title">Фамилия <span>*</span></div>
-							<input class="envelopeInput__input " type="text" placeholder="Введите вашу фамилию">
+							<input class="envelopeInput__input clubCard__surname_js" type="text" placeholder="Введите вашу фамилию">
 						</div>
 						<div class="envelopeInput">
-							<div class="envelopeInput__title">E-mail <span>*</span></div>
-							<input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
+							<div class="envelopeInput__title ">E-mail <span>*</span></div>
+							<input class="envelopeInput__input clubCard__email_js" type="text" placeholder="Введите ваш e-mail">
 						</div>
 					</div>
 					<div class="agreement">
@@ -63,19 +63,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							Нажимая на кнопку «Получить карту», вы принимаете <br> условия <a class="agreement__link" href="/privacy/">Пользовательского соглашения</a>
 						</div>
 					</div>
-					<button type="submit" class="clubRegistration__btn btn clubRegistration__btn_js" disabled>Получить карту</button>
+					<button type="submit" class="clubRegistration__btn btn btn_disabled clubRegistration__btn_js">Получить карту</button>
 				</form>
 			</section>
-		</div>
-		<div class="windowsMessage__wrap clubWrap_js hidden">
-			<div class="windowsMessage__popap clubPopup clubPopup_js">
-				<div class="windowsMessage__close clubPopupClose_js">
-					<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
-				</div>
-				<div class="windowsMessage__title">Клубная карта оформлена</div>
-				<div class="windowsMessage__text">Теперь вы можете пользоваться всеми
-					преимуществами карты. </div>
-			</div>
 		</div>
 	</section>
 </main>

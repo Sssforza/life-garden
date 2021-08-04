@@ -90,8 +90,9 @@
 
 __webpack_require__(1);
 __webpack_require__(3);
-__webpack_require__(25);
-module.exports = __webpack_require__(26);
+__webpack_require__(26);
+__webpack_require__(28);
+module.exports = __webpack_require__(29);
 
 
 /***/ }),
@@ -11418,6 +11419,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_articles_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(22);
 /* harmony import */ var _blocks_news_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(23);
 /* harmony import */ var _blocks_feedback_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(24);
+/* harmony import */ var _blocks_adaptive_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(25);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁 /node_modules/  slick 1.8.1
@@ -11460,6 +11462,8 @@ global.noUiSlider = nouislider__WEBPACK_IMPORTED_MODULE_3___default.a; //📁 /a
  //📁 /assets/js/blocks  news.js
 
  //📁 /assets/js/blocks  feedback.js
+
+ //📁 /assets/js/blocks  adaptive.js
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -11554,7 +11558,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["validationPopups"])(); // check stars in feedback
 
-  Object(_blocks_feedback_js__WEBPACK_IMPORTED_MODULE_20__["reviewCheck"])();
+  Object(_blocks_feedback_js__WEBPACK_IMPORTED_MODULE_20__["reviewCheck"])(); // adaptive
+
+  Object(_blocks_adaptive_js__WEBPACK_IMPORTED_MODULE_21__["adaptive"])();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
 
@@ -18874,9 +18880,9 @@ function authorization() {
       agreementCheck.classList.toggle("agreement__checked");
 
       if (agreementCheck.classList.contains("agreement__checked")) {
-        regBtn.classList.remove("authorization__btn_disabled");
+        regBtn.classList.remove("btn_disabled");
       } else {
-        regBtn.classList.add("authorization__btn_disabled");
+        regBtn.classList.add("btn_disabled");
       }
     };
   }
@@ -18900,9 +18906,9 @@ function recoveryPassword() {
       document.body.classList.remove("hiddenHeaderCatalog");
     };
     /*     recoveryBtn.onclick = () => {
-          recoveryWrapper.classList.add("hidden");
-          document.body.classList.remove("hiddenHeaderCatalog");
-        }; */
+      recoveryWrapper.classList.add("hidden");
+      document.body.classList.remove("hiddenHeaderCatalog");
+    }; */
 
   }
 }
@@ -18921,9 +18927,7 @@ function forgotPassword() {
     });
   }
 }
-function personal() {
-  if (document.querySelector(".popup-modal-personal")) {}
-}
+function personal() {}
 function validationPopups() {
   var enterEmail = document.querySelector(".enter__email_js");
   var enterPassword = document.querySelector(".enter__password_js");
@@ -18960,6 +18964,8 @@ function validationPopups() {
   var regBtn = document.querySelector(".reg__btn_js");
 
   regBtn.onclick = function (e) {
+    e.preventDefault();
+
     if (!validateEmail(regEmail.value)) {
       regEmail.classList.add("envelopeInput__input_error");
     } else {
@@ -18974,7 +18980,10 @@ function validationPopups() {
 
     if (validateEmail(regEmail.value) && regPassword.value.length > 0) {
       $(function () {
-        $(".popup-modal-personal").magnificPopup({
+        $.magnificPopup.open({
+          items: {
+            src: "#personal"
+          },
           type: "inline",
           preloader: false,
           modal: false,
@@ -18984,8 +18993,6 @@ function validationPopups() {
           $.magnificPopup.close();
         });
       });
-    } else {
-      $(".popup-modal-personal").off("click");
     }
   };
 
@@ -19021,12 +19028,56 @@ function validationPopups() {
     if (enterRecPassword.value === repeatRecPassword.value) {
       enterRecPassword.classList.remove("envelopeInput__input_error");
       repeatRecPassword.classList.remove("envelopeInput__input_error");
-      recoveryError.classList.add('hidden');
+      recoveryError.classList.add("hidden");
       console.log(enterRecPassword.value);
     } else {
       enterRecPassword.classList.add("envelopeInput__input_error");
       repeatRecPassword.classList.add("envelopeInput__input_error");
-      recoveryError.classList.remove('hidden');
+      recoveryError.classList.remove("hidden");
+    }
+  };
+
+  var clubCardWindowName = document.querySelector(".clubCardWindow__name_js");
+  var clubCardWindowSurname = document.querySelector(".clubCardWindow__surname_js");
+  var clubCardWindowEmail = document.querySelector(".clubCardWindow__email_js");
+  var clubCardWindowBtn = document.querySelector(".clubCardWindow__btn_js");
+
+  clubCardWindowBtn.onclick = function (e) {
+    e.preventDefault();
+
+    if (!validateEmail(clubCardWindowEmail.value)) {
+      clubCardWindowEmail.classList.add("envelopeInput__input_error");
+    } else {
+      clubCardWindowEmail.classList.remove("envelopeInput__input_error");
+    }
+
+    if (clubCardWindowName.value.length === 0) {
+      clubCardWindowName.classList.add("envelopeInput__input_error");
+    } else {
+      clubCardWindowName.classList.remove("envelopeInput__input_error");
+    }
+
+    if (clubCardWindowSurname.value.length === 0) {
+      clubCardWindowSurname.classList.add("envelopeInput__input_error");
+    } else {
+      clubCardWindowSurname.classList.remove("envelopeInput__input_error");
+    }
+
+    if (validateEmail(clubCardWindowEmail.value) && clubCardWindowName.value.length > 0 && clubCardWindowSurname.value.length > 0) {
+      $(function () {
+        $.magnificPopup.open({
+          items: {
+            src: "#clubPagePopup"
+          },
+          type: "inline",
+          preloader: false,
+          modal: false,
+          showCloseBtn: false
+        });
+        $(document).on("click", ".popup-modal-dismiss", function (e) {
+          $.magnificPopup.close();
+        });
+      });
     }
   };
 }
@@ -19536,9 +19587,22 @@ function sliderProductSpecial() {
       slidesToScroll: 1,
       draggable: false,
       prevArrow: '<div class="productBlock__prev"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83984 2L10.8398 10.84L1.83984 19" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>',
-      nextArrow: '<div class="productBlock__next"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83984 2L10.8398 10.84L1.83984 19" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>'
+      nextArrow: '<div class="productBlock__next"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83984 2L10.8398 10.84L1.83984 19" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>',
+      responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          dots: true,
+          dotsClass: "mainSlier__dots"
+        }
+      }]
     });
   }
+
+  var dotsParent = document.querySelector(".mainSlier__dots");
+  var dotsWidth = dotsParent.offsetWidth / 2;
+  dotsParent.style.marginLeft = "-" + dotsWidth + "px";
 } // sliderAbout
 
 function sliderAbout() {
@@ -19773,11 +19837,63 @@ function masterClassPopups() {
 }
 function masterClassBuy() {
   if (document.querySelector(".popup-modal-masterClassOrder")) {
+    var validateEmail = function validateEmail(value) {
+      var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(value);
+    };
+
+    var masterClassName = document.querySelector(".masterClass__name_js");
+    var masterClassSurname = document.querySelector(".masterClass__surname_js");
+    var masterClassTel = document.querySelector(".masterClass__tel_js");
+    var masterClassEmail = document.querySelector(".masterClass__email_js");
+    var masterClassBtn = document.querySelector(".masterClassOrder__btn_js");
+    $(".maskPhone").mask("+7 (Z00) 000-00-00", {
+      translation: {
+        Z: {
+          pattern: /[0-69-9]/
+        }
+      }
+    });
+
+    masterClassBtn.onclick = function (e) {
+      e.preventDefault();
+
+      if (masterClassEmail.value.length > 0) {
+        if (!validateEmail(masterClassEmail.value)) {
+          masterClassEmail.classList.add("envelopeInput__input_error");
+        } else {
+          masterClassEmail.classList.remove("envelopeInput__input_error");
+        }
+      }
+
+      if (masterClassName.value.length === 0) {
+        masterClassName.classList.add("envelopeInput__input_error");
+      } else {
+        masterClassName.classList.remove("envelopeInput__input_error");
+      }
+
+      if (masterClassSurname.value.length === 0) {
+        masterClassSurname.classList.add("envelopeInput__input_error");
+      } else {
+        masterClassSurname.classList.remove("envelopeInput__input_error");
+      }
+
+      if (masterClassTel.value.length < 18) {
+        masterClassTel.classList.add("envelopeInput__input_error");
+      } else {
+        masterClassTel.classList.remove("envelopeInput__input_error");
+      }
+
+      if (masterClassName.value.length > 0 && masterClassSurname.value.length > 0 && masterClassTel.value.length === 18) {
+        console.log("SUPER");
+        $.magnificPopup.close();
+      }
+    };
+
     var agreementCheck = document.querySelector(".check__master_js");
     var masterBuyOrder = document.querySelector(".masterClassOrder__btn_js");
 
     agreementCheck.onclick = function () {
-      console.log("sdfs");
       agreementCheck.classList.toggle("agreement__checked");
 
       if (agreementCheck.classList.contains("agreement__checked")) {
@@ -20190,42 +20306,70 @@ function mapAsideScroll() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkClubCard", function() { return checkClubCard; });
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-
 function checkClubCard() {
   if (document.querySelector(".clubRegistration__btn_js")) {
+    var validateEmail = function validateEmail(value) {
+      var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(value);
+    };
+
     var clubBtn = document.querySelector(".clubRegistration__btn_js");
     var agreementCheck = document.querySelector(".clubCheck_js");
     var clubCardWrapper = document.querySelector(".clubWrap_js");
     var clubCradPopup = document.querySelector(".clubPopup_js");
     var clubCardClose = document.querySelector(".clubPopupClose_js");
 
-    clubBtn.onclick = function (e) {
-      e.preventDefault();
-      clubCardWrapper.classList.remove("hidden");
-      document.body.classList.add("hiddenHeaderCatalog");
-    };
-
-    clubCardWrapper.onclick = function (e) {
-      if (clubCradPopup && e.target !== clubCradPopup && !clubCradPopup.contains(e.target)) {
-        clubCardWrapper.classList.add("hidden");
-        document.body.classList.remove("hiddenHeaderCatalog");
-      }
-    };
-
-    clubCardClose.onclick = function () {
-      clubCardWrapper.classList.add("hidden");
-      document.body.classList.remove("hiddenHeaderCatalog");
-    };
-
     agreementCheck.onclick = function () {
       agreementCheck.classList.toggle("agreement__checked");
 
       if (agreementCheck.classList.contains("agreement__checked")) {
-        clubBtn.disabled = false;
+        clubBtn.classList.remove("btn_disabled");
       } else {
-        clubBtn.disabled = true;
+        clubBtn.classList.add("btn_disabled");
+      }
+    };
+
+    var clubCardName = document.querySelector(".clubCard__name_js");
+    var clubCardSurname = document.querySelector(".clubCard__surname_js");
+    var clubCardEmail = document.querySelector(".clubCard__email_js");
+
+    clubBtn.onclick = function (e) {
+      e.preventDefault();
+
+      if (!validateEmail(clubCardEmail.value)) {
+        clubCardEmail.classList.add("envelopeInput__input_error");
+      } else {
+        clubCardEmail.classList.remove("envelopeInput__input_error");
+      }
+
+      if (clubCardName.value.length === 0) {
+        clubCardName.classList.add("envelopeInput__input_error");
+      } else {
+        clubCardName.classList.remove("envelopeInput__input_error");
+      }
+
+      if (clubCardSurname.value.length === 0) {
+        clubCardSurname.classList.add("envelopeInput__input_error");
+      } else {
+        clubCardSurname.classList.remove("envelopeInput__input_error");
+      }
+
+      if (validateEmail(clubCardEmail.value) && clubCardName.value.length > 0 && clubCardSurname.value.length > 0) {
+        document.querySelector(".clubRegistration__form_js").reset();
+        $(function () {
+          $.magnificPopup.open({
+            items: {
+              src: "#clubPagePopup"
+            },
+            type: "inline",
+            preloader: false,
+            modal: false,
+            showCloseBtn: false
+          });
+          $(document).on("click", ".popup-modal-dismiss", function (e) {
+            $.magnificPopup.close();
+          });
+        });
       }
     };
   }
@@ -20346,56 +20490,369 @@ function newsCategories() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "reviewCheck", function() { return reviewCheck; });
 function reviewCheck() {
-  var feedbackStars = document.querySelectorAll(".review__item_js");
-  var feedbackEstimation = document.querySelector(".feedbackEstimation__text_js");
-  feedbackStars.forEach(function (star, index) {
-    star.onclick = function () {
-      feedbackStars.forEach(function (element) {
-        element.classList.remove("active");
-      });
+  if (document.querySelector(".feedbackEstimation__text_js")) {
+    var feedbackStars = document.querySelectorAll(".review__item_js");
+    var feedbackEstimation = document.querySelector(".feedbackEstimation__text_js");
+    feedbackStars.forEach(function (star, index) {
+      star.onclick = function () {
+        feedbackStars.forEach(function (element) {
+          element.classList.remove("active");
+        });
 
-      for (var i = 0; i <= index; i++) {
-        feedbackStars[i].classList.add('active');
-      }
+        for (var i = 0; i <= index; i++) {
+          feedbackStars[i].classList.add("active");
+        }
 
-      if (index === 0) {
-        feedbackEstimation.textContent = 'Ужасно';
-      }
+        if (index === 0) {
+          feedbackEstimation.textContent = "Ужасно";
+        }
 
-      if (index === 1) {
-        feedbackEstimation.textContent = 'Плохо';
-      }
+        if (index === 1) {
+          feedbackEstimation.textContent = "Плохо";
+        }
 
-      if (index === 2) {
-        feedbackEstimation.textContent = 'Неплохо';
-      }
+        if (index === 2) {
+          feedbackEstimation.textContent = "Неплохо";
+        }
 
-      if (index === 3) {
-        feedbackEstimation.textContent = 'Хорошо';
-      }
+        if (index === 3) {
+          feedbackEstimation.textContent = "Хорошо";
+        }
 
-      if (index === 4) {
-        feedbackEstimation.textContent = 'Отлично';
+        if (index === 4) {
+          feedbackEstimation.textContent = "Отлично";
+        }
+      };
+    });
+    var feedbackComment = document.querySelector(".feedback__comment_js");
+    var feedbackBtn = document.querySelector(".feedback__btn_js");
+
+    feedbackBtn.onclick = function (e) {
+      e.preventDefault();
+
+      if (feedbackComment.value.length === 0) {
+        feedbackComment.classList.add("envelopeInput__textarea_error");
+      } else {
+        feedbackComment.classList.remove("envelopeInput__textarea_error");
+        console.log("super");
       }
     };
-  });
-  var feedbackComment = document.querySelector(".feedback__comment_js");
-  var feedbackBtn = document.querySelector(".feedback__btn_js");
-
-  feedbackBtn.onclick = function (e) {
-    e.preventDefault();
-
-    if (feedbackComment.value.length === 0) {
-      feedbackComment.classList.add("envelopeInput__textarea_error");
-    } else {
-      feedbackComment.classList.remove("envelopeInput__textarea_error");
-      console.log('super');
-    }
-  };
+  }
 }
 
 /***/ }),
 /* 25 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "adaptive", function() { return adaptive; });
+function adaptive() {
+  var windowInnerWidth = document.documentElement.clientWidth;
+  var lg = 1400; //1024
+
+  var xs = 541; //540 content=320
+
+  var viewport = $('meta[name="viewport"]');
+
+  if (window.screen.availWidth < lg) {
+    if (device.tablet()) {
+      viewport.attr("content", "width=1024");
+    }
+  }
+
+  if (window.screen.availWidth < xs) {
+    if (device.mobile()) {
+      viewport.attr("content", "width=320");
+    }
+  }
+}
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+// Device.js
+// (c) 2014 Matthew Hudson
+// Device.js is freely distributable under the MIT license.
+// For all details and documentation:
+// http://matthewhudson.me/projects/device.js/
+(function () {
+  var device, previousDevice, addClass, documentElement, find, handleOrientation, hasClass, orientationEvent, removeClass, userAgent; // Save the previous value of the device variable.
+
+  previousDevice = window.device;
+  device = {}; // Add device as a global object.
+
+  window.device = device; // The <html> element.
+
+  documentElement = window.document.documentElement; // The client user agent string.
+  // Lowercase, so we can use the more efficient indexOf(), instead of Regex
+
+  userAgent = window.navigator.userAgent.toLowerCase(); // Main functions
+  // --------------
+
+  device.ios = function () {
+    return device.iphone() || device.ipod() || device.ipad();
+  };
+
+  device.iphone = function () {
+    return !device.windows() && find('iphone');
+  };
+
+  device.ipod = function () {
+    return find('ipod');
+  };
+
+  device.ipad = function () {
+    return find('ipad');
+  };
+
+  device.android = function () {
+    return !device.windows() && find('android');
+  };
+
+  device.androidPhone = function () {
+    return device.android() && find('mobile');
+  };
+
+  device.androidTablet = function () {
+    return device.android() && !find('mobile');
+  };
+
+  device.blackberry = function () {
+    return find('blackberry') || find('bb10') || find('rim');
+  };
+
+  device.blackberryPhone = function () {
+    return device.blackberry() && !find('tablet');
+  };
+
+  device.blackberryTablet = function () {
+    return device.blackberry() && find('tablet');
+  };
+
+  device.windows = function () {
+    return find('windows');
+  };
+
+  device.windowsPhone = function () {
+    return device.windows() && find('phone');
+  };
+
+  device.windowsTablet = function () {
+    return device.windows() && find('touch') && !device.windowsPhone();
+  };
+
+  device.fxos = function () {
+    return (find('(mobile;') || find('(tablet;')) && find('; rv:');
+  };
+
+  device.fxosPhone = function () {
+    return device.fxos() && find('mobile');
+  };
+
+  device.fxosTablet = function () {
+    return device.fxos() && find('tablet');
+  };
+
+  device.meego = function () {
+    return find('meego');
+  };
+
+  device.cordova = function () {
+    return window.cordova && location.protocol === 'file:';
+  };
+
+  device.nodeWebkit = function () {
+    return _typeof(window.process) === 'object';
+  };
+
+  device.mobile = function () {
+    return device.androidPhone() || device.iphone() || device.ipod() || device.windowsPhone() || device.blackberryPhone() || device.fxosPhone() || device.meego();
+  };
+
+  device.tablet = function () {
+    return device.ipad() || device.androidTablet() || device.blackberryTablet() || device.windowsTablet() || device.fxosTablet();
+  };
+
+  device.desktop = function () {
+    return !device.tablet() && !device.mobile();
+  };
+
+  device.television = function () {
+    var i, tvString;
+    television = ["googletv", "viera", "smarttv", "internet.tv", "netcast", "nettv", "appletv", "boxee", "kylo", "roku", "dlnadoc", "roku", "pov_tv", "hbbtv", "ce-html"];
+    i = 0;
+
+    while (i < television.length) {
+      if (find(television[i])) {
+        return true;
+      }
+
+      i++;
+    }
+
+    return false;
+  };
+
+  device.portrait = function () {
+    return window.innerHeight / window.innerWidth > 1;
+  };
+
+  device.landscape = function () {
+    return window.innerHeight / window.innerWidth < 1;
+  }; // Public Utility Functions
+  // ------------------------
+  // Run device.js in noConflict mode,
+  // returning the device variable to its previous owner.
+
+
+  device.noConflict = function () {
+    window.device = previousDevice;
+    return this;
+  }; // Private Utility Functions
+  // -------------------------
+  // Simple UA string search
+
+
+  find = function find(needle) {
+    return userAgent.indexOf(needle) !== -1;
+  }; // Check if documentElement already has a given class.
+
+
+  hasClass = function hasClass(className) {
+    var regex;
+    regex = new RegExp(className, 'i');
+    return documentElement.className.match(regex);
+  }; // Add one or more CSS classes to the <html> element.
+
+
+  addClass = function addClass(className) {
+    var currentClassNames = null;
+
+    if (!hasClass(className)) {
+      currentClassNames = documentElement.className.replace(/^\s+|\s+$/g, '');
+      documentElement.className = currentClassNames + " " + className;
+    }
+  }; // Remove single CSS class from the <html> element.
+
+
+  removeClass = function removeClass(className) {
+    if (hasClass(className)) {
+      documentElement.className = documentElement.className.replace(" " + className, "");
+    }
+  }; // HTML Element Handling
+  // ---------------------
+  // Insert the appropriate CSS class based on the _user_agent.
+
+
+  if (device.ios()) {
+    if (device.ipad()) {
+      addClass("ios ipad tablet");
+    } else if (device.iphone()) {
+      addClass("ios iphone mobile");
+    } else if (device.ipod()) {
+      addClass("ios ipod mobile");
+    }
+  } else if (device.android()) {
+    if (device.androidTablet()) {
+      addClass("android tablet");
+    } else {
+      addClass("android mobile");
+    }
+  } else if (device.blackberry()) {
+    if (device.blackberryTablet()) {
+      addClass("blackberry tablet");
+    } else {
+      addClass("blackberry mobile");
+    }
+  } else if (device.windows()) {
+    if (device.windowsTablet()) {
+      addClass("windows tablet");
+    } else if (device.windowsPhone()) {
+      addClass("windows mobile");
+    } else {
+      addClass("desktop");
+    }
+  } else if (device.fxos()) {
+    if (device.fxosTablet()) {
+      addClass("fxos tablet");
+    } else {
+      addClass("fxos mobile");
+    }
+  } else if (device.meego()) {
+    addClass("meego mobile");
+  } else if (device.nodeWebkit()) {
+    addClass("node-webkit");
+  } else if (device.television()) {
+    addClass("television");
+  } else if (device.desktop()) {
+    addClass("desktop");
+  }
+
+  if (device.cordova()) {
+    addClass("cordova");
+  } // Orientation Handling
+  // --------------------
+  // Handle device orientation changes.
+
+
+  handleOrientation = function handleOrientation() {
+    if (device.landscape()) {
+      removeClass("portrait");
+      addClass("landscape");
+    } else {
+      removeClass("landscape");
+      addClass("portrait");
+    }
+
+    return;
+  }; // Detect whether device supports orientationchange event,
+  // otherwise fall back to the resize event.
+
+
+  if (Object.prototype.hasOwnProperty.call(window, "onorientationchange")) {
+    orientationEvent = "orientationchange";
+  } else {
+    orientationEvent = "resize";
+  } // Listen for changes in orientation.
+
+
+  if (window.addEventListener) {
+    window.addEventListener(orientationEvent, handleOrientation, false);
+  } else if (window.attachEvent) {
+    window.attachEvent(orientationEvent, handleOrientation);
+  } else {
+    window[orientationEvent] = handleOrientation;
+  }
+
+  handleOrientation();
+
+  if ( true && _typeof(__webpack_require__(27)) === 'object' && __webpack_require__(27)) {
+    !(__WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+      return device;
+    }).call(exports, __webpack_require__, exports, module),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if ( true && module.exports) {
+    module.exports = device;
+  } else {
+    window.device = device;
+  }
+}).call(this);
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports) {
+
+/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
+module.exports = __webpack_amd_options__;
+
+/* WEBPACK VAR INJECTION */}.call(this, {}))
+
+/***/ }),
+/* 28 */
 /***/ (function(module, exports) {
 
 // (c) 2010 jdbartlett, MIT license
@@ -20457,7 +20914,7 @@ function reviewCheck() {
 })(jQuery);
 
 /***/ }),
-/* 26 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }

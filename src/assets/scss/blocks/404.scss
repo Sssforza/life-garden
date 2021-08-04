@@ -1,0 +1,38 @@
+@import "../modules/utilities/_variables.scss";
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__img {
+    max-width: 409px;
+    height: 237px;
+    & img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 50px;
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 9px;
+    width: 550px;
+    text-align: center;
+  }
+
+  &__btn {
+    font-size: 18px;
+    line-height: 23px;
+    width: 250px;
+    height: 60px;
+    margin-top: 29px;
+  }
+}
