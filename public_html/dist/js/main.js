@@ -20417,10 +20417,10 @@ function newspaperPopup() {
   }
 }
 function pdfLoader() {
-  /*   $(".newspaperOne").flipBook({
-      pdfUrl: "/dist/pdf/newspaper.pdf",
-      lightBox: true,
-    }); */
+  $(".newspaperPdf_js").flipBook({
+    pdfUrl: "/dist/pdf/newspaper.pdf",
+    lightBox: true
+  });
 }
 
 /***/ }),
