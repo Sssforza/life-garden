@@ -958,7 +958,7 @@ body {
       path {
       }
     }
-    position: absolute; 
+    position: absolute;
     top: 37px;
     right: 52px;
     cursor: pointer;
@@ -1181,6 +1181,11 @@ body {
       color: $green;
     }
   }
+  &__errorMessage {
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 20px;
+  }
   &__input,
   &__textarea {
     margin-top: 10px;
@@ -1191,7 +1196,7 @@ body {
     border: 1px solid #c7d0d9;
     border-radius: 5px;
     transition: $transition;
-    @include placeholder(16px, #8c949b, "FiraSans", $opacity: 1);
+    @include placeholder(16px, #8c949b, "Firasans", $opacity: 1);
     &:focus {
       border: 1px solid #1e7243;
     }
@@ -1206,6 +1211,9 @@ body {
     &_month {
       width: 330px;
       height: 50px;
+    }
+    &_error {
+      border: 1px solid $error;
     }
   }
   &__textarea {

@@ -43,5 +43,5 @@ export function pdfLoader() {
     pdfUrl: "/dist/pdf/newspaper.pdf",
     lightBox: true,
   }); */
- 
+  
 }

@@ -40,7 +40,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 		<section class="newspaper__body newspaperBody">
 			<div class="catalogCoverPdf">
 				<div class="catalogCoverPdf_wrapper">
-					<div class="newspaperOne" data-pdf="/dist/pdf/newspaper.pdf">
+					<div class="newspaperOne flip-book-container solid-container" src="dist/pdf/newspaper.pdf" data-pdf="/dist/pdf/newspaper.pdf">
 						<img src="/dist/img/trash/cover1.jpg" alt="">
 						<p class="text">
 							Газета

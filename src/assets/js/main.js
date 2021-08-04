@@ -25,7 +25,7 @@ import {
   forgotPassword,
   personal,
   recoveryPassword,
-  magnificPopup,
+  validationPopups
 } from "./blocks/_header.js";
 
 //📁 /assets/js/blocks  _footer.js
@@ -91,6 +91,9 @@ import { articles } from "./blocks/articles.js";
 
 //📁 /assets/js/blocks  news.js
 import { newsCategories } from "./blocks/news.js";
+
+//📁 /assets/js/blocks  feedback.js
+import { reviewCheck } from "./blocks/feedback.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   // open contextual hint
@@ -218,12 +221,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // pdf loader popup
   pdfLoader();
 
-  // magnificPopup
-  magnificPopup();
-
   // articles
   articles();
 
   // check categories in news
   newsCategories();
+
+  // validation all popups
+  validationPopups();
+
+  // check stars in feedback
+  reviewCheck();
 });

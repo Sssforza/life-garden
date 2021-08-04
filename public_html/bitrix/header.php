@@ -779,29 +779,29 @@
           <div class="authorization__check checkEnter_js authorization__check_checked">Вход</div>
           <div class="authorization__check checkReg_js">Регистрация</div>
         </div>
-        <form class="authorization__enter authorization__enter_js authorization__enter_error" action="">
+        <form class="authorization__enter authorization__enter_js" action="">
           <div class="enter__fields">
             <div class="envelopeInput">
               <div class="envelopeInput__title">E-mail</div>
-              <input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
+              <input class="envelopeInput__input enter__email_js" type="text" placeholder="Введите ваш e-mail">
             </div>
             <div class="envelopeInput">
               <div class="envelopeInput__title authorization__title">Пароль <a class="popup-modal-forgotPassword" href="#forgotPassword">Забыли пароль?</a></div>
-              <input class="envelopeInput__input " type="password" placeholder="Введите пароль">
-              <span>Ошибка авторизации. Неверный логин или пароль.</span>
+              <input class="envelopeInput__input enter__password_js" type="password" placeholder="Введите пароль">
             </div>
           </div>
+          <span class="envelopeInput__errorMessage hidden">Ошибка авторизации. Неверный логин или пароль.</span>
           <button type="submit" class="authorization__btn btn enter__btn_js">Войти</button>
         </form>
         <form class="authorization__registration authorization__registration_js hidden" action="">
           <div class="enter__fields">
             <div class="envelopeInput">
               <div class="envelopeInput__title">E-mail</div>
-              <input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
+              <input class="envelopeInput__input reg__email_js" type="text" placeholder="Введите ваш e-mail">
             </div>
             <div class="envelopeInput">
               <div class="envelopeInput__title">Пароль</div>
-              <input class="envelopeInput__input " type="password" placeholder="Введите ваш e-mail">
+              <input class="envelopeInput__input reg__password_js" type="password" placeholder="Введите пароль">
             </div>
           </div>
           <div class="agreement">
@@ -826,12 +826,12 @@
           <div class="forgotPassword__fields">
             <div class="envelopeInput">
               <div class="envelopeInput__title">E-mail</div>
-              <input class="envelopeInput__input " type="text" placeholder="Введите ваш e-mail">
+              <input class="envelopeInput__input forgot__email_js" type="text" placeholder="Введите ваш e-mail">
             </div>
           </div>
           <div class="forgotPassword__box">
-            <button type="submit" class="forgotPassword__btn btn forgotPassword__btn_js popup-modal-dismiss">Восстановить</button>
-            <div class="forgotPassword__remember forgotPassword__remember_js popup-modal-dismiss">Вспомнили пароль?</div>
+            <button type="submit" class="forgotPassword__btn btn forgotPassword__btn_js ">Восстановить</button>
+            <a class="popup-modal-authorization forgotPassword__remember forgotPassword__remember_js " href="#authorization">Вспомнили пароль?</a>
           </div>
         </form>
       </div>
@@ -846,13 +846,14 @@
             <div class="recoveryPassword__fields">
               <div class="envelopeInput">
                 <div class="envelopeInput__title">Придумайте новый пароль</div>
-                <input class="envelopeInput__input " type="password" placeholder="Введите пароль">
+                <input class="envelopeInput__input recovery__enter_js" type="password" placeholder="Введите пароль">
               </div>
               <div class="envelopeInput">
                 <div class="envelopeInput__title">Подтвердите пароль</div>
-                <input class="envelopeInput__input " type="password" placeholder="Повторите пароль">
+                <input class="envelopeInput__input recovery__repeat_js" type="password" placeholder="Повторите пароль">
               </div>
             </div>
+            <span class="envelopeInput__errorMessage recovery__error_js hidden">Пароли не совпадают.</span>
             <button type="submit" class="recoveryPassword__btn btn recoveryPassword__btn_js">Восстановить</button>
           </form>
         </div>
@@ -881,11 +882,11 @@
             </div>
             <div class="envelopeInput">
               <div class="envelopeInput__title">Телефон</div>
-              <input class="envelopeInput__input " type="number" placeholder="+7(___) ___-__-__">
+              <input class="envelopeInput__input maskPhone" type="text" placeholder="+7(___) ___-__-__">
             </div>
           </div>
-          <button type="submit" class="personal__btn btn personal__btn_js popup-modal-dismiss">Войти</button>
-          <div class="personal__skip popup-modal-dismiss">Пропустить</div>
+          <button type="submit" class="personal__btn btn personal__btn_js">Войти</button>
+          <a class="personal__skip" href="#">Пропустить</a>
         </form>
       </div>
     </header>
