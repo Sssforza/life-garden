@@ -201,7 +201,7 @@
 
     gap: 20px;
     @media (max-width: $lg) {
-      gap: 20px 14px;
+      gap: 20px 13px;
     }
   }
   &__item {
@@ -247,6 +247,9 @@
 }
 .mainNews {
   margin-top: 117px;
+  @media (max-width: $lg) {
+    margin-top: 92px;
+  }
   &__header {
     display: flex;
     align-items: flex-end;
@@ -257,6 +260,10 @@
     font-size: 60px;
     line-height: 50px;
     font-weight: 900;
+    @media (max-width: $lg) {
+      font-size: 48px;
+      line-height: 40px;
+    }
   }
   &__subtitle {
     position: relative;
@@ -283,6 +290,9 @@
     margin-top: 42px;
     display: flex;
     justify-content: space-between;
+    @media (max-width: $lg) {
+      margin-top: 20px;
+    }
   }
   &__general {
     flex: none;
@@ -293,6 +303,9 @@
       border-radius: 20px;
       overflow: hidden;
     }
+    @media (max-width: $lg) {
+      width: 435px;
+    }
   }
   &__box {
     margin-top: 27px;
@@ -300,13 +313,22 @@
       margin-top: 4px;
       font-size: 26px;
       line-height: 34px;
+      @media (max-width: $lg) {
+        font-size: 20px;
+        line-height: 28px;
+      }
     }
   }
   &__all {
     margin-left: 40px;
   }
   &__item {
-    padding-top: 21px;
+    &:not(:first-child) {
+      padding-top: 21px;
+    }
+    &:first-child {
+      margin-top: -10px;
+    }
     padding-bottom: 24px;
     border-bottom: 1px solid $border;
   }
@@ -327,6 +349,9 @@
     &:hover {
       color: $green;
     }
+    @media (max-width: $lg) {
+      font-size: 18px;
+    }
   }
 }
 .clubCard {
@@ -336,6 +361,11 @@
   background: #cfe7d7;
   border-top: 3px dashed #ffffff;
   border-bottom: 3px dashed #ffffff;
+  @media (max-width: $lg) {
+    margin-top: 55px;
+    padding: 80px 0 58px;
+    overflow: hidden;
+  }
   &:after {
     content: "";
     position: absolute;
@@ -347,6 +377,16 @@
       image: url($imgUrl + "clubCardImgBg.png");
       position: bottom;
       repeat: no-repeat;
+    }
+    @media (max-width: $lg) {
+      width: 636px;
+      height: 408px;
+      right: -190px;
+      top: 212px;
+      background: {
+        position: center;
+        size: 636px 408px;
+      }
     }
   }
   &:before {
@@ -361,6 +401,9 @@
       position: center;
       repeat: no-repeat;
     }
+    @media (max-width: $lg) {
+      display: none;
+    }
   }
   &__title {
     font-size: 56px;
@@ -368,10 +411,17 @@
     font-weight: 900;
     color: $textColor;
     font-family: "Rubik";
+    @media (max-width: $lg) {
+      font-size: 48px;
+      line-height: 58px;
+    }
   }
   &__description {
     margin-top: 49px;
     width: 46%;
+    @media (max-width: $lg) {
+      width: 53%;
+    }
   }
   &__item {
     display: flex;
@@ -393,6 +443,10 @@
     font-weight: 300;
     color: $textColor;
     font-family: "Rubik";
+    @media (max-width: $lg) {
+      font-size: 90px;
+      line-height: 50px;
+    }
   }
   &__text {
     margin-left: 20px;
@@ -401,6 +455,9 @@
     img {
       display: block;
     }
+    @media (max-width: $lg) {
+      margin-top: -20px;
+    }
   }
   &__li {
     display: flex;
@@ -408,6 +465,10 @@
     font-size: 20px;
     line-height: 28px;
     color: $textColor;
+    @media (max-width: $lg) {
+      font-size: 18px;
+      line-height: 26px;
+    }
     &:before {
       content: "";
       margin-right: 14px;
@@ -434,6 +495,9 @@
     font-size: 16px;
     line-height: 24px;
     color: #7d8e84;
+    @media (max-width: $lg) {
+      width: 781px;
+    }
   }
 }
 .productSpecial {
@@ -553,12 +617,15 @@
     line-height: 24px;
     color: $textColor;
     @media (max-width: $lg) {
-        font-size: 18px;
-      }
+      font-size: 18px;
+    }
   }
 }
 .mainGarden {
   margin-top: 113px;
+  @media (max-width: $lg) {
+    margin-top: 60px;
+  }
   &__title {
     font-size: 60px;
     line-height: 50px;
@@ -566,6 +633,9 @@
     color: $textColor;
     font-family: "Rubik";
     text-align: center;
+    @media (max-width: $lg) {
+      font-size: 48px;
+    }
   }
   &__subTitle {
     margin-top: 33px;
@@ -574,9 +644,16 @@
     color: $darkGreen;
     font-family: "Rubik";
     text-align: center;
+    @media (max-width: $lg) {
+      margin-top: 20px;
+      font-size: 26px;
+    }
   }
   &__info {
     margin-top: 60px;
+    @media (max-width: $lg) {
+      margin-top: 35px;
+    }
     &.show {
       .mainGarden__hide {
         display: inline-block;
@@ -602,6 +679,16 @@
     line-height: 26px;
     color: $textColor;
     width: 50%;
+    @media (max-width: $lg) {
+     font-size: 16px;
+     &:first-child {
+      padding-right: 40px;
+    }
+    &:last-child {
+      padding-left: 40px;
+      border-left: 1px solid $gray2;
+    }
+    }
     &:first-child {
       padding-right: 73px;
     }

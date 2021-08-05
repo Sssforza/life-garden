@@ -39,7 +39,7 @@ export function newspaperPopup() {
   }
 }
 export function pdfLoader() {
-  $(".newspaperPdf_js").flipBook({
+  $(".newspaperBody__pdf_js").flipBook({
     pdfUrl: "/dist/pdf/newspaper.pdf",
     lightBox: true,
   });

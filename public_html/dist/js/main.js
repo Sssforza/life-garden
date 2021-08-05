@@ -19577,32 +19577,28 @@ function sliderMain() {
 } // sliderProductSpecial
 
 function sliderProductSpecial() {
-  var slickMain = $(".sliderProductSpecial_js");
+  if (document.querySelector(".sliderProductSpecial_js")) {
+    var slickMain = $(".sliderProductSpecial_js");
 
-  if (slickMain.length) {
-    slickMain.slick({
-      infinite: false,
-      speed: 500,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      draggable: false,
-      prevArrow: '<div class="productBlock__prev"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83984 2L10.8398 10.84L1.83984 19" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>',
-      nextArrow: '<div class="productBlock__next"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83984 2L10.8398 10.84L1.83984 19" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>',
-      responsive: [{
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          dots: true,
-          dotsClass: "mainSlier__dots"
-        }
-      }]
-    });
+    if (slickMain.length) {
+      slickMain.slick({
+        infinite: false,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        draggable: false,
+        prevArrow: '<div class="productBlock__prev"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83984 2L10.8398 10.84L1.83984 19" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>',
+        nextArrow: '<div class="productBlock__next"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83984 2L10.8398 10.84L1.83984 19" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>',
+        responsive: [{
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        }]
+      });
+    }
   }
-
-  var dotsParent = document.querySelector(".mainSlier__dots");
-  var dotsWidth = dotsParent.offsetWidth / 2;
-  dotsParent.style.marginLeft = "-" + dotsWidth + "px";
 } // sliderAbout
 
 function sliderAbout() {
@@ -20417,7 +20413,7 @@ function newspaperPopup() {
   }
 }
 function pdfLoader() {
-  $(".newspaperPdf_js").flipBook({
+  $(".newspaperBody__pdf_js").flipBook({
     pdfUrl: "/dist/pdf/newspaper.pdf",
     lightBox: true
   });
@@ -20549,7 +20545,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "adaptive", function() { return adaptive; });
 function adaptive() {
   var windowInnerWidth = document.documentElement.clientWidth;
-  var lg = 1400; //1024
+  var lg = 1024; //1024
 
   var xs = 541; //540 content=320
 

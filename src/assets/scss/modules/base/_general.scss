@@ -263,6 +263,29 @@ body {
 }
 .productBlock {
   margin-top: 37px;
+  &__dots {
+    position: absolute;
+    left: 50%;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    li {
+      margin: 0 5px;
+      width: 12px;
+      height: 12px;
+      background: $gray2;
+      border-radius: 50%;
+      overflow: hidden;
+      cursor: pointer;
+      transition: $transition;
+      &.slick-active {
+        background: #1e7243;
+      }
+      button {
+        display: none;
+      }
+    }
+  }
   &__content {
     margin: 0 -10px;
     &:hover {
@@ -320,10 +343,16 @@ body {
   }
   &__next {
     right: -25px;
+    @media (max-width: $lg) {
+      right: -13px;
+    }
   }
   &__prev {
     left: -25px;
     transform: rotate(180deg);
+    @media (max-width: $lg) {
+      left: -13px;
+    }
   }
 }
 .cardProduct {
@@ -932,6 +961,12 @@ body {
       }
     }
   }
+  @media (max-width: $lg) {
+    & svg {
+      width: 24px;
+      margin-left: 14px;
+    }
+  }
   &.active {
     svg {
       path {
@@ -1286,6 +1321,9 @@ body {
 // map
 .map {
   margin-top: 108px;
+  @media (max-width: $lg) {
+    margin-top: 45px;
+  }
   &_small {
     margin: 0;
   }
@@ -1311,16 +1349,25 @@ body {
       font-size: 36px;
       line-height: 43px;
     }
+    @media (max-width: $lg) {
+      font-size: 48px;
+    }
   }
   &__description {
     margin-top: 21px;
     font-size: 20px;
     line-height: 32px;
+    @media (max-width: $lg) {
+      margin-top: 5px;
+    }
   }
   &__content {
     margin-top: 33px;
     display: flex;
-    justify-content: space-between;
+    gap: 12px;
+    @media (max-width: $lg) {
+      
+    }
   }
   &__item {
     padding: 27px 28px 23px;
@@ -1329,10 +1376,18 @@ body {
     line-height: 24px;
     color: $textColor;
     font-family: "Rubik";
+    font-style: normal;
+    font-weight: normal;
     border: 1px solid $gray2;
     border-radius: 5px;
     cursor: pointer;
     transition: $transition;
+
+    @media (max-width: $lg) {
+      padding: 28px 35px 23px 29px;
+      width: 347px;
+      font-size: 16px;
+    }
     &:not(:first-child) {
       margin-top: 15px;
     }
@@ -1361,6 +1416,7 @@ body {
       }
     }
     &.address {
+      font-family: "Firasans";
       &:before {
         height: 25px;
         background-image: url($imgUrl + "svg/mapUnitAddress.svg");
@@ -1377,6 +1433,9 @@ body {
       display: block;
       font-size: 16px;
       color: #7d8e84;
+      @media (max-width: $lg) {
+        font-size: 14px;
+      }
     }
   }
   &__tel {
@@ -1390,7 +1449,12 @@ body {
       overflow: scroll;
       overflow-x: hidden;
     }
+    @media (max-width: $lg) {
+      width: 364px;
+      height: 588px;
+    }
   }
+
   &__btn {
     display: none;
     width: 120px;
@@ -1403,6 +1467,9 @@ body {
   #map {
     width: 848.82px;
     height: 585px;
+    @media (max-width: $lg) {
+      width: 583px;
+    }
   }
   #mapWindow {
     width: 848.82px;

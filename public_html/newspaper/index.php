@@ -39,19 +39,8 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 			</div>
 		</section>
 		<section class="newspaper__body newspaperBody">
-			<div class="newspaperBody__list">
-				<div class="newspaperBody__item">
-					<div class="newspaperBody__picture newspaperPdf_js" data-pdf="/dist/pdf/newspaper.pdf">
-						<img src="/dist/img/trash/cover1.jpg">
-						<p class="newspaperBody__name">
-							№12 Декабрь 2020
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<!-- <ul class="newspaperBody__ul">
-				<li>
+			<ul class="newspaperBody__ul">
+				<li class="newspaperBody__pdf newspaperBody__pdf_js" data-pdf="/dist/pdf/newspaper.pdf">
 					<div class="newspaperBody__cover">
 						<img src="/dist/img/trash/cover1.jpg" alt="">
 					</div>
@@ -59,47 +48,47 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						№12 Декабрь 2020
 					</div>
 				</li>
-				<li>
+				<li class="newspaperBody__pdf newspaperBody__pdf_js" data-pdf="/dist/pdf/newspaper.pdf">
 					<div class="newspaperBody__cover">
 						<img src="/dist/img/trash/cover1.jpg" alt="">
 					</div>
-					<div class="newspaperBody__release">
+					<p class="newspaperBody__release">
 						№12 Декабрь 2020
-					</div>
+					</p>
 				</li>
-				<li>
+				<li class="newspaperBody__pdf newspaperBody__pdf_js" data-pdf="/dist/pdf/newspaper.pdf">
 					<div class="newspaperBody__cover">
 						<img src="/dist/img/trash/cover1.jpg" alt="">
 					</div>
-					<div class="newspaperBody__release">
+					<p class="newspaperBody__release">
 						№12 Декабрь 2020
-					</div>
+					</p>
 				</li>
-				<li>
+				<li class="newspaperBody__pdf newspaperBody__pdf_js" data-pdf="/dist/pdf/newspaper.pdf">
 					<div class="newspaperBody__cover">
 						<img src="/dist/img/trash/cover1.jpg" alt="">
 					</div>
-					<div class="newspaperBody__release">
+					<p class="newspaperBody__release">
 						№12 Декабрь 2020
-					</div>
+					</p>
 				</li>
-				<li>
+				<li class="newspaperBody__pdf newspaperBody__pdf_js" data-pdf="/dist/pdf/newspaper.pdf">
 					<div class="newspaperBody__cover">
 						<img src="/dist/img/trash/cover1.jpg" alt="">
 					</div>
-					<div class="newspaperBody__release">
+					<p class="newspaperBody__release">
 						№12 Декабрь 2020
-					</div>
+					</p>
 				</li>
-				<li>
+				<li class="newspaperBody__pdf newspaperBody__pdf_js" data-pdf="/dist/pdf/newspaper.pdf">
 					<div class="newspaperBody__cover">
 						<img src="/dist/img/trash/cover1.jpg" alt="">
 					</div>
-					<div class="newspaperBody__release">
+					<p class="newspaperBody__release">
 						№12 Декабрь 2020
-					</div>
+					</p>
 				</li>
-			</ul> -->
+			</ul>
 		</section>
 	</section>
 

@@ -1,6 +1,6 @@
 export function adaptive() {
   let windowInnerWidth = document.documentElement.clientWidth;
-  let lg = 1400; //1024
+  let lg = 1024; //1024
   let xs = 541; //540 content=320
 
   let viewport = $('meta[name="viewport"]');
