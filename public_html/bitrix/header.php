@@ -893,11 +893,11 @@
             </div>
             <div class="envelopeInput">
               <div class="envelopeInput__title">Телефон</div>
-              <input class="envelopeInput__input maskPhone" type="text" placeholder="+7(___) ___-__-__">
+              <input class="envelopeInput__input maskPhone personal__tel_js" type="text" placeholder="+7(___) ___-__-__">
             </div>
           </div>
           <button type="submit" class="personal__btn btn personal__btn_js">Войти</button>
-          <a class="personal__skip" href="#">Пропустить</a>
+          <a class="personal__skip" href="/">Пропустить</a>
         </form>
       </div>
       <div id="clubPagePopup" class="windowsMessage__popap clubPopup clubPopup_js  mfp-hide">

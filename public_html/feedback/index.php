@@ -69,8 +69,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						</div>
 						<div class="review__how feedbackEstimation__text_js"></div>
 					</div>
-					<button class="btn feedback__btn feedback__btn_js" type="submit">Отправить отзыв</button>
 				</div>
+				<button class="btn feedback__btn feedback__btn_js" type="submit">Отправить отзыв</button>
+
 			</form>
 		</section>
 

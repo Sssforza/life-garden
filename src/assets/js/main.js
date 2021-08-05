@@ -19,13 +19,6 @@ import {
   headerClick,
   headerScroll,
   headerOpenClient,
-  quickView,
-  clubCardPopup,
-  authorization,
-  forgotPassword,
-  personal,
-  recoveryPassword,
-  validationPopups
 } from "./blocks/_header.js";
 
 //📁 /assets/js/blocks  _footer.js
@@ -65,7 +58,6 @@ import { openImage, checkCategories, otherClicks } from "./blocks/detail.js";
 //📁 /assets/js/blocks  masterClass.js
 import {
   masterClassPopups,
-  masterClassBuy,
   masterChoiceMonth,
 } from "./blocks/masterClass.js";
 
@@ -97,6 +89,27 @@ import { reviewCheck } from "./blocks/feedback.js";
 
 //📁 /assets/js/blocks  adaptive.js
 import { adaptive } from "./blocks/adaptive.js";
+
+//📁 /assets/js/blocks  adaptive.js
+import {
+  popupForgotPassword,
+  popupRecoveryPassword,
+  popupAuthorization,
+  popupClubCard,
+  popupQuickView,
+  popupMasterClass,
+} from "./blocks/popups.js";
+
+//📁 /assets/js/blocks  adaptive.js
+import {
+  validationEnter,
+  validationReg,
+  validationForgot,
+  validationRecovery,
+  validationClubCard,
+  validationPersonal,
+  validationMasterClass
+} from "./blocks/validation";
 
 document.addEventListener("DOMContentLoaded", function () {
   // open contextual hint
@@ -191,32 +204,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // all archives MasterClass page
   masterClassPopups();
 
-  // buy popup MasterClass page
-  masterClassBuy();
-
   // choice month MasterClass page
   masterChoiceMonth();
 
-  // quickView detail popup
-  quickView();
-
   // check policy club-card
   checkClubCard();
-
-  // club-card popup
-  clubCardPopup();
-
-  // authorization popup
-  authorization();
-
-  // forgot Password popup
-  forgotPassword();
-
-  // personal popup
-  personal();
-
-  // recovery Password popup
-  recoveryPassword();
 
   // newspaper popup
   newspaperPopup();
@@ -231,7 +223,21 @@ document.addEventListener("DOMContentLoaded", function () {
   newsCategories();
 
   // validation all popups
-  validationPopups();
+  validationEnter();
+  validationReg();
+  validationForgot();
+  validationRecovery();
+  validationClubCard();
+  validationPersonal();
+  validationMasterClass();
+
+  //open all popups
+  popupForgotPassword();
+  popupRecoveryPassword();
+  popupAuthorization();
+  popupClubCard();
+  popupQuickView();
+  popupMasterClass();
 
   // check stars in feedback
   reviewCheck();

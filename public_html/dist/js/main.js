@@ -90,9 +90,9 @@
 
 __webpack_require__(1);
 __webpack_require__(3);
-__webpack_require__(26);
 __webpack_require__(28);
-module.exports = __webpack_require__(29);
+__webpack_require__(30);
+module.exports = __webpack_require__(31);
 
 
 /***/ }),
@@ -11420,6 +11420,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_news_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(23);
 /* harmony import */ var _blocks_feedback_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(24);
 /* harmony import */ var _blocks_adaptive_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(25);
+/* harmony import */ var _blocks_popups_js__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(26);
+/* harmony import */ var _blocks_validation__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(27);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁 /node_modules/  slick 1.8.1
@@ -11462,6 +11464,10 @@ global.noUiSlider = nouislider__WEBPACK_IMPORTED_MODULE_3___default.a; //📁 /a
  //📁 /assets/js/blocks  news.js
 
  //📁 /assets/js/blocks  feedback.js
+
+ //📁 /assets/js/blocks  adaptive.js
+
+ //📁 /assets/js/blocks  adaptive.js
 
  //📁 /assets/js/blocks  adaptive.js
 
@@ -11528,25 +11534,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderMasterClass"])(); // all archives MasterClass page
 
-  Object(_blocks_masterClass_js__WEBPACK_IMPORTED_MODULE_11__["masterClassPopups"])(); // buy popup MasterClass page
+  Object(_blocks_masterClass_js__WEBPACK_IMPORTED_MODULE_11__["masterClassPopups"])(); // choice month MasterClass page
 
-  Object(_blocks_masterClass_js__WEBPACK_IMPORTED_MODULE_11__["masterClassBuy"])(); // choice month MasterClass page
+  Object(_blocks_masterClass_js__WEBPACK_IMPORTED_MODULE_11__["masterChoiceMonth"])(); // check policy club-card
 
-  Object(_blocks_masterClass_js__WEBPACK_IMPORTED_MODULE_11__["masterChoiceMonth"])(); // quickView detail popup
-
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["quickView"])(); // check policy club-card
-
-  Object(_blocks_clubCard_js__WEBPACK_IMPORTED_MODULE_16__["checkClubCard"])(); // club-card popup
-
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["clubCardPopup"])(); // authorization popup
-
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["authorization"])(); // forgot Password popup
-
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["forgotPassword"])(); // personal popup
-
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["personal"])(); // recovery Password popup
-
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["recoveryPassword"])(); // newspaper popup
+  Object(_blocks_clubCard_js__WEBPACK_IMPORTED_MODULE_16__["checkClubCard"])(); // newspaper popup
 
   Object(_blocks_newspaper_js__WEBPACK_IMPORTED_MODULE_17__["newspaperPopup"])(); // pdf loader popup
 
@@ -11556,7 +11548,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_news_js__WEBPACK_IMPORTED_MODULE_19__["newsCategories"])(); // validation all popups
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["validationPopups"])(); // check stars in feedback
+  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_23__["validationEnter"])();
+  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_23__["validationReg"])();
+  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_23__["validationForgot"])();
+  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_23__["validationRecovery"])();
+  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_23__["validationClubCard"])();
+  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_23__["validationPersonal"])();
+  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_23__["validationMasterClass"])(); //open all popups
+
+  Object(_blocks_popups_js__WEBPACK_IMPORTED_MODULE_22__["popupForgotPassword"])();
+  Object(_blocks_popups_js__WEBPACK_IMPORTED_MODULE_22__["popupRecoveryPassword"])();
+  Object(_blocks_popups_js__WEBPACK_IMPORTED_MODULE_22__["popupAuthorization"])();
+  Object(_blocks_popups_js__WEBPACK_IMPORTED_MODULE_22__["popupClubCard"])();
+  Object(_blocks_popups_js__WEBPACK_IMPORTED_MODULE_22__["popupQuickView"])();
+  Object(_blocks_popups_js__WEBPACK_IMPORTED_MODULE_22__["popupMasterClass"])(); // check stars in feedback
 
   Object(_blocks_feedback_js__WEBPACK_IMPORTED_MODULE_20__["reviewCheck"])(); // adaptive
 
@@ -18684,13 +18689,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerClick", function() { return headerClick; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerScroll", function() { return headerScroll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerOpenClient", function() { return headerOpenClient; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "quickView", function() { return quickView; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clubCardPopup", function() { return clubCardPopup; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "authorization", function() { return authorization; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recoveryPassword", function() { return recoveryPassword; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "forgotPassword", function() { return forgotPassword; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "personal", function() { return personal; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validationPopups", function() { return validationPopups; });
 function headerCatalog() {
   var buttonCatalog = document.querySelector(".headerMiddleCatalog_js");
   var headerCatalog = document.querySelector(".headerCatalog_js");
@@ -18773,313 +18771,6 @@ function headerOpenClient() {
   btnClient.addEventListener("click", function () {
     headerTopClient.classList.toggle("headerTop__client_open");
   });
-}
-function quickView() {
-  if (document.querySelector(".cardProduct__quickView_js")) {
-    var slickMain = $(".sliderQuickView_js");
-    var slick = slickMain.slick({
-      infinite: false,
-      speed: 500,
-      slidesToShow: 6,
-      slidesToScroll: 6,
-      draggable: false,
-      focusOnSelect: false,
-      prevArrow: "<div class=\"productCard__prev\"><svg width=\"30\" height=\"20\" viewBox=\"0 0 30 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M9.90039 17.8008L2.00037 9.90076L9.90039 2.00073\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        <path d=\"M3.40039 9.80078L28.4004 9.80078\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n        </svg>\n        </div>",
-      nextArrow: "<div class=\"productCard__next\"><svg width=\"29\" height=\"20\" viewBox=\"0 0 29 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M19.5 2L27.4 9.90002L19.5 17.8\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        <path d=\"M26 10L1 10\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n        </svg>\n      </div>"
-    });
-    var quickViewSmallImg = document.querySelectorAll(".quickView__small_js");
-    var quickViewBigImg = document.querySelector(".quickView__big_js");
-    quickViewSmallImg.forEach(function (item) {
-      item.addEventListener("click", function () {
-        quickViewSmallImg.forEach(function (el) {
-          el.classList.remove("productCard__checked");
-        });
-        quickViewBigImg.src = item.src;
-        item.classList.add("productCard__checked");
-      });
-    });
-    $(".popup-modal").click(function () {
-      slick.slick("refresh");
-    });
-    $(function () {
-      $(".popup-modal").magnificPopup({
-        type: "inline",
-        preloader: false,
-        modal: false,
-        showCloseBtn: false
-      });
-      $(document).on("click", ".popup-modal-dismiss", function (e) {
-        $.magnificPopup.close();
-      });
-    });
-  }
-}
-function clubCardPopup() {
-  if (document.querySelector(".clubCard__btn_js")) {
-    var clubCardWindowBtn = document.querySelector(".clubCardWindow__btn_js");
-    var agreementCheck = document.querySelector(".check_js");
-    $(function () {
-      $(".popup-modal-club").magnificPopup({
-        type: "inline",
-        preloader: false,
-        modal: false,
-        showCloseBtn: false
-      });
-      $(document).on("click", ".popup-modal-dismiss", function (e) {
-        $.magnificPopup.close();
-      });
-    });
-
-    agreementCheck.onclick = function () {
-      agreementCheck.classList.toggle("agreement__checked");
-
-      if (agreementCheck.classList.contains("agreement__checked")) {
-        clubCardWindowBtn.disabled = false;
-      } else {
-        clubCardWindowBtn.disabled = true;
-      }
-    };
-  }
-}
-function authorization() {
-  if (document.querySelector(".headerTop__authorization_js")) {
-    $(function () {
-      $(".popup-modal-authorization").magnificPopup({
-        type: "inline",
-        preloader: false,
-        modal: false,
-        showCloseBtn: false
-      });
-      $(document).on("click", ".popup-modal-dismiss", function (e) {
-        $.magnificPopup.close();
-      });
-    });
-    var checkEnter = document.querySelector(".checkEnter_js");
-    var checkReg = document.querySelector(".checkReg_js");
-    var formEnter = document.querySelector(".authorization__enter_js");
-    var formReg = document.querySelector(".authorization__registration_js");
-
-    checkEnter.onclick = function () {
-      checkEnter.classList.add("authorization__check_checked");
-      checkReg.classList.remove("authorization__check_checked");
-      formReg.classList.add("hidden");
-      formEnter.classList.remove("hidden");
-    };
-
-    checkReg.onclick = function () {
-      checkEnter.classList.remove("authorization__check_checked");
-      checkReg.classList.add("authorization__check_checked");
-      formReg.classList.remove("hidden");
-      formEnter.classList.add("hidden");
-    };
-
-    var agreementCheck = document.querySelector(".enter__check_js");
-    var regBtn = document.querySelector(".reg__btn_js");
-
-    agreementCheck.onclick = function () {
-      agreementCheck.classList.toggle("agreement__checked");
-
-      if (agreementCheck.classList.contains("agreement__checked")) {
-        regBtn.classList.remove("btn_disabled");
-      } else {
-        regBtn.classList.add("btn_disabled");
-      }
-    };
-  }
-}
-function recoveryPassword() {
-  if (document.querySelector(".recoveryPassword_js")) {
-    var recoveryWrapper = document.querySelector(".recoveryPassword_js");
-    var recoveryPopup = recoveryWrapper.querySelector(".recoveryPassword__popup_js");
-    var recoveryClose = recoveryWrapper.querySelector(".recoveryPassword__close_js");
-    var recoveryBtn = recoveryWrapper.querySelector(".recoveryPassword__btn_js");
-
-    recoveryWrapper.onclick = function (e) {
-      if (recoveryPopup && e.target !== recoveryPopup && !recoveryPopup.contains(e.target)) {
-        recoveryWrapper.classList.add("hidden");
-        document.body.classList.remove("hiddenHeaderCatalog");
-      }
-    };
-
-    recoveryClose.onclick = function () {
-      recoveryWrapper.classList.add("hidden");
-      document.body.classList.remove("hiddenHeaderCatalog");
-    };
-    /*     recoveryBtn.onclick = () => {
-      recoveryWrapper.classList.add("hidden");
-      document.body.classList.remove("hiddenHeaderCatalog");
-    }; */
-
-  }
-}
-function forgotPassword() {
-  if (document.querySelector(".popup-modal-forgotPassword")) {
-    $(function () {
-      $(".popup-modal-forgotPassword").magnificPopup({
-        type: "inline",
-        preloader: false,
-        modal: false,
-        showCloseBtn: false
-      });
-      $(document).on("click", ".popup-modal-dismiss", function (e) {
-        $.magnificPopup.close();
-      });
-    });
-  }
-}
-function personal() {}
-function validationPopups() {
-  var enterEmail = document.querySelector(".enter__email_js");
-  var enterPassword = document.querySelector(".enter__password_js");
-  var enterBtn = document.querySelector(".enter__btn_js");
-
-  function validateEmail(value) {
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(value);
-  }
-
-  enterBtn.onclick = function (e) {
-    e.preventDefault();
-
-    if (!validateEmail(enterEmail.value)) {
-      enterEmail.classList.add("envelopeInput__input_error");
-    } else {
-      enterEmail.classList.remove("envelopeInput__input_error");
-    }
-
-    if (enterPassword.value.length === 0) {
-      enterPassword.classList.add("envelopeInput__input_error");
-    } else {
-      enterPassword.classList.remove("envelopeInput__input_error");
-    }
-
-    if (validateEmail(enterEmail.value) && enterPassword.value.length > 0) {
-      console.log(enterEmail.value);
-      $.magnificPopup.close();
-    }
-  };
-
-  var regEmail = document.querySelector(".reg__email_js");
-  var regPassword = document.querySelector(".reg__password_js");
-  var regBtn = document.querySelector(".reg__btn_js");
-
-  regBtn.onclick = function (e) {
-    e.preventDefault();
-
-    if (!validateEmail(regEmail.value)) {
-      regEmail.classList.add("envelopeInput__input_error");
-    } else {
-      regEmail.classList.remove("envelopeInput__input_error");
-    }
-
-    if (regPassword.value.length === 0) {
-      regPassword.classList.add("envelopeInput__input_error");
-    } else {
-      regPassword.classList.remove("envelopeInput__input_error");
-    }
-
-    if (validateEmail(regEmail.value) && regPassword.value.length > 0) {
-      $(function () {
-        $.magnificPopup.open({
-          items: {
-            src: "#personal"
-          },
-          type: "inline",
-          preloader: false,
-          modal: false,
-          showCloseBtn: false
-        });
-        $(document).on("click", ".popup-modal-dismiss", function (e) {
-          $.magnificPopup.close();
-        });
-      });
-    }
-  };
-
-  var forgotEmail = document.querySelector(".forgot__email_js");
-  var forgotBtn = document.querySelector(".forgotPassword__btn_js");
-
-  forgotBtn.onclick = function (e) {
-    e.preventDefault();
-
-    if (!validateEmail(forgotEmail.value)) {
-      forgotEmail.classList.add("envelopeInput__input_error");
-    } else {
-      console.log(forgotEmail.value);
-      $.magnificPopup.close();
-    }
-  };
-
-  $(".maskPhone").mask("+7 (Z00) 000-00-00", {
-    translation: {
-      Z: {
-        pattern: /[0-69-9]/
-      }
-    }
-  });
-  var enterRecPassword = document.querySelector(".recovery__enter_js");
-  var repeatRecPassword = document.querySelector(".recovery__repeat_js");
-  var recoveryBtn = document.querySelector(".recoveryPassword__btn_js");
-  var recoveryError = document.querySelector(".recovery__error_js");
-
-  recoveryBtn.onclick = function (e) {
-    e.preventDefault();
-
-    if (enterRecPassword.value === repeatRecPassword.value) {
-      enterRecPassword.classList.remove("envelopeInput__input_error");
-      repeatRecPassword.classList.remove("envelopeInput__input_error");
-      recoveryError.classList.add("hidden");
-      console.log(enterRecPassword.value);
-    } else {
-      enterRecPassword.classList.add("envelopeInput__input_error");
-      repeatRecPassword.classList.add("envelopeInput__input_error");
-      recoveryError.classList.remove("hidden");
-    }
-  };
-
-  var clubCardWindowName = document.querySelector(".clubCardWindow__name_js");
-  var clubCardWindowSurname = document.querySelector(".clubCardWindow__surname_js");
-  var clubCardWindowEmail = document.querySelector(".clubCardWindow__email_js");
-  var clubCardWindowBtn = document.querySelector(".clubCardWindow__btn_js");
-
-  clubCardWindowBtn.onclick = function (e) {
-    e.preventDefault();
-
-    if (!validateEmail(clubCardWindowEmail.value)) {
-      clubCardWindowEmail.classList.add("envelopeInput__input_error");
-    } else {
-      clubCardWindowEmail.classList.remove("envelopeInput__input_error");
-    }
-
-    if (clubCardWindowName.value.length === 0) {
-      clubCardWindowName.classList.add("envelopeInput__input_error");
-    } else {
-      clubCardWindowName.classList.remove("envelopeInput__input_error");
-    }
-
-    if (clubCardWindowSurname.value.length === 0) {
-      clubCardWindowSurname.classList.add("envelopeInput__input_error");
-    } else {
-      clubCardWindowSurname.classList.remove("envelopeInput__input_error");
-    }
-
-    if (validateEmail(clubCardWindowEmail.value) && clubCardWindowName.value.length > 0 && clubCardWindowSurname.value.length > 0) {
-      $(function () {
-        $.magnificPopup.open({
-          items: {
-            src: "#clubPagePopup"
-          },
-          type: "inline",
-          preloader: false,
-          modal: false,
-          showCloseBtn: false
-        });
-        $(document).on("click", ".popup-modal-dismiss", function (e) {
-          $.magnificPopup.close();
-        });
-      });
-    }
-  };
 }
 
 /***/ }),
@@ -19590,7 +19281,7 @@ function sliderProductSpecial() {
         prevArrow: '<div class="productBlock__prev"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83984 2L10.8398 10.84L1.83984 19" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>',
         nextArrow: '<div class="productBlock__next"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83984 2L10.8398 10.84L1.83984 19" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>',
         responsive: [{
-          breakpoint: 1024,
+          breakpoint: 1400,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1
@@ -19768,7 +19459,6 @@ function checkCategories() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "masterClassPopups", function() { return masterClassPopups; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "masterClassBuy", function() { return masterClassBuy; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "masterChoiceMonth", function() { return masterChoiceMonth; });
 function masterClassPopups() {
   if (document.querySelector(".masterArchive__popup_js")) {
@@ -19828,87 +19518,6 @@ function masterClassPopups() {
           }
         });
       };
-    });
-  }
-}
-function masterClassBuy() {
-  if (document.querySelector(".popup-modal-masterClassOrder")) {
-    var validateEmail = function validateEmail(value) {
-      var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(value);
-    };
-
-    var masterClassName = document.querySelector(".masterClass__name_js");
-    var masterClassSurname = document.querySelector(".masterClass__surname_js");
-    var masterClassTel = document.querySelector(".masterClass__tel_js");
-    var masterClassEmail = document.querySelector(".masterClass__email_js");
-    var masterClassBtn = document.querySelector(".masterClassOrder__btn_js");
-    $(".maskPhone").mask("+7 (Z00) 000-00-00", {
-      translation: {
-        Z: {
-          pattern: /[0-69-9]/
-        }
-      }
-    });
-
-    masterClassBtn.onclick = function (e) {
-      e.preventDefault();
-
-      if (masterClassEmail.value.length > 0) {
-        if (!validateEmail(masterClassEmail.value)) {
-          masterClassEmail.classList.add("envelopeInput__input_error");
-        } else {
-          masterClassEmail.classList.remove("envelopeInput__input_error");
-        }
-      }
-
-      if (masterClassName.value.length === 0) {
-        masterClassName.classList.add("envelopeInput__input_error");
-      } else {
-        masterClassName.classList.remove("envelopeInput__input_error");
-      }
-
-      if (masterClassSurname.value.length === 0) {
-        masterClassSurname.classList.add("envelopeInput__input_error");
-      } else {
-        masterClassSurname.classList.remove("envelopeInput__input_error");
-      }
-
-      if (masterClassTel.value.length < 18) {
-        masterClassTel.classList.add("envelopeInput__input_error");
-      } else {
-        masterClassTel.classList.remove("envelopeInput__input_error");
-      }
-
-      if (masterClassName.value.length > 0 && masterClassSurname.value.length > 0 && masterClassTel.value.length === 18) {
-        console.log("SUPER");
-        $.magnificPopup.close();
-      }
-    };
-
-    var agreementCheck = document.querySelector(".check__master_js");
-    var masterBuyOrder = document.querySelector(".masterClassOrder__btn_js");
-
-    agreementCheck.onclick = function () {
-      agreementCheck.classList.toggle("agreement__checked");
-
-      if (agreementCheck.classList.contains("agreement__checked")) {
-        masterBuyOrder.disabled = false;
-      } else {
-        masterBuyOrder.disabled = true;
-      }
-    };
-
-    $(function () {
-      $(".popup-modal-masterClassOrder").magnificPopup({
-        type: "inline",
-        preloader: false,
-        modal: false,
-        showCloseBtn: false
-      });
-      $(document).on("click", ".popup-modal-dismiss", function (e) {
-        $.magnificPopup.close();
-      });
     });
   }
 }
@@ -20551,10 +20160,8 @@ function adaptive() {
 
   var viewport = $('meta[name="viewport"]');
 
-  if (window.screen.availWidth < lg) {
-    if (device.tablet()) {
-      viewport.attr("content", "width=1024");
-    }
+  if (window.screen.availWidth < lg || device.tablet()) {
+    viewport.attr("content", "width=1024");
   }
 
   if (window.screen.availWidth < xs) {
@@ -20566,6 +20173,434 @@ function adaptive() {
 
 /***/ }),
 /* 26 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupForgotPassword", function() { return popupForgotPassword; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupRecoveryPassword", function() { return popupRecoveryPassword; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupAuthorization", function() { return popupAuthorization; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupClubCard", function() { return popupClubCard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupQuickView", function() { return popupQuickView; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupMasterClass", function() { return popupMasterClass; });
+function popupForgotPassword() {
+  if (document.querySelector(".popup-modal-forgotPassword")) {
+    $(function () {
+      $(".popup-modal-forgotPassword").magnificPopup({
+        type: "inline",
+        preloader: false,
+        modal: false,
+        showCloseBtn: false
+      });
+      $(document).on("click", ".popup-modal-dismiss", function (e) {
+        $.magnificPopup.close();
+      });
+    });
+  }
+}
+function popupRecoveryPassword() {
+  if (document.querySelector(".recoveryPassword_js")) {
+    var recoveryWrapper = document.querySelector(".recoveryPassword_js");
+    var recoveryPopup = recoveryWrapper.querySelector(".recoveryPassword__popup_js");
+    var recoveryClose = recoveryWrapper.querySelector(".recoveryPassword__close_js");
+    var recoveryBtn = recoveryWrapper.querySelector(".recoveryPassword__btn_js");
+
+    recoveryWrapper.onclick = function (e) {
+      if (recoveryPopup && e.target !== recoveryPopup && !recoveryPopup.contains(e.target)) {
+        recoveryWrapper.classList.add("hidden");
+        document.body.classList.remove("hiddenHeaderCatalog");
+      }
+    };
+
+    recoveryClose.onclick = function () {
+      recoveryWrapper.classList.add("hidden");
+      document.body.classList.remove("hiddenHeaderCatalog");
+    };
+  }
+}
+function popupAuthorization() {
+  if (document.querySelector(".headerTop__authorization_js")) {
+    $(function () {
+      $(".popup-modal-authorization").magnificPopup({
+        type: "inline",
+        preloader: false,
+        modal: false,
+        showCloseBtn: false
+      });
+      $(document).on("click", ".popup-modal-dismiss", function (e) {
+        $.magnificPopup.close();
+      });
+    });
+    var checkEnter = document.querySelector(".checkEnter_js");
+    var checkReg = document.querySelector(".checkReg_js");
+    var formEnter = document.querySelector(".authorization__enter_js");
+    var formReg = document.querySelector(".authorization__registration_js");
+
+    checkEnter.onclick = function () {
+      checkEnter.classList.add("authorization__check_checked");
+      checkReg.classList.remove("authorization__check_checked");
+      formReg.classList.add("hidden");
+      formEnter.classList.remove("hidden");
+    };
+
+    checkReg.onclick = function () {
+      checkEnter.classList.remove("authorization__check_checked");
+      checkReg.classList.add("authorization__check_checked");
+      formReg.classList.remove("hidden");
+      formEnter.classList.add("hidden");
+    };
+
+    var agreementCheck = document.querySelector(".enter__check_js");
+    var regBtn = document.querySelector(".reg__btn_js");
+
+    agreementCheck.onclick = function () {
+      agreementCheck.classList.toggle("agreement__checked");
+
+      if (agreementCheck.classList.contains("agreement__checked")) {
+        regBtn.classList.remove("btn_disabled");
+      } else {
+        regBtn.classList.add("btn_disabled");
+      }
+    };
+  }
+}
+function popupClubCard() {
+  if (document.querySelector(".clubCard__btn_js")) {
+    var clubCardWindowBtn = document.querySelector(".clubCardWindow__btn_js");
+    var agreementCheck = document.querySelector(".check_js");
+    $(function () {
+      $(".popup-modal-club").magnificPopup({
+        type: "inline",
+        preloader: false,
+        modal: false,
+        showCloseBtn: false
+      });
+      $(document).on("click", ".popup-modal-dismiss", function (e) {
+        $.magnificPopup.close();
+      });
+    });
+
+    agreementCheck.onclick = function () {
+      agreementCheck.classList.toggle("agreement__checked");
+
+      if (agreementCheck.classList.contains("agreement__checked")) {
+        clubCardWindowBtn.disabled = false;
+      } else {
+        clubCardWindowBtn.disabled = true;
+      }
+    };
+  }
+}
+function popupQuickView() {
+  if (document.querySelector(".cardProduct__quickView_js")) {
+    var slickMain = $(".sliderQuickView_js");
+    var slick = slickMain.slick({
+      infinite: false,
+      speed: 500,
+      slidesToShow: 6,
+      slidesToScroll: 6,
+      draggable: false,
+      focusOnSelect: false,
+      prevArrow: "<div class=\"productCard__prev\"><svg width=\"30\" height=\"20\" viewBox=\"0 0 30 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M9.90039 17.8008L2.00037 9.90076L9.90039 2.00073\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n          <path d=\"M3.40039 9.80078L28.4004 9.80078\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n          </svg>\n          </div>",
+      nextArrow: "<div class=\"productCard__next\"><svg width=\"29\" height=\"20\" viewBox=\"0 0 29 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M19.5 2L27.4 9.90002L19.5 17.8\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n          <path d=\"M26 10L1 10\" stroke=\"#919EAB\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n          </svg>\n        </div>"
+    });
+    var quickViewSmallImg = document.querySelectorAll(".quickView__small_js");
+    var quickViewBigImg = document.querySelector(".quickView__big_js");
+    quickViewSmallImg.forEach(function (item) {
+      item.addEventListener("click", function () {
+        quickViewSmallImg.forEach(function (el) {
+          el.classList.remove("productCard__checked");
+        });
+        quickViewBigImg.src = item.src;
+        item.classList.add("productCard__checked");
+      });
+    });
+    $(".popup-modal").click(function () {
+      slick.slick("refresh");
+    });
+    $(function () {
+      $(".popup-modal").magnificPopup({
+        type: "inline",
+        preloader: false,
+        modal: false,
+        showCloseBtn: false
+      });
+      $(document).on("click", ".popup-modal-dismiss", function (e) {
+        $.magnificPopup.close();
+      });
+    });
+  }
+}
+function popupMasterClass() {
+  if (document.querySelector(".popup-modal-masterClassOrder")) {
+    $(function () {
+      $(".popup-modal-masterClassOrder").magnificPopup({
+        type: "inline",
+        preloader: false,
+        modal: false,
+        showCloseBtn: false
+      });
+      $(document).on("click", ".popup-modal-dismiss", function (e) {
+        $.magnificPopup.close();
+      });
+    });
+  }
+}
+
+/***/ }),
+/* 27 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validationEnter", function() { return validationEnter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validationReg", function() { return validationReg; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validationForgot", function() { return validationForgot; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validationRecovery", function() { return validationRecovery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validationClubCard", function() { return validationClubCard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validationPersonal", function() { return validationPersonal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validationMasterClass", function() { return validationMasterClass; });
+function validateEmail(value) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(value);
+}
+
+function validationEnter() {
+  var enterEmail = document.querySelector(".enter__email_js");
+  var enterPassword = document.querySelector(".enter__password_js");
+  var enterBtn = document.querySelector(".enter__btn_js");
+
+  enterBtn.onclick = function (e) {
+    e.preventDefault();
+
+    if (!validateEmail(enterEmail.value)) {
+      enterEmail.classList.add("envelopeInput__input_error");
+    } else {
+      enterEmail.classList.remove("envelopeInput__input_error");
+    }
+
+    if (enterPassword.value.length === 0) {
+      enterPassword.classList.add("envelopeInput__input_error");
+    } else {
+      enterPassword.classList.remove("envelopeInput__input_error");
+    }
+
+    if (validateEmail(enterEmail.value) && enterPassword.value.length > 0) {
+      console.log(enterEmail.value);
+      $.magnificPopup.close();
+    }
+  };
+}
+function validationReg() {
+  var regEmail = document.querySelector(".reg__email_js");
+  var regPassword = document.querySelector(".reg__password_js");
+  var regBtn = document.querySelector(".reg__btn_js");
+
+  regBtn.onclick = function (e) {
+    e.preventDefault();
+
+    if (!validateEmail(regEmail.value)) {
+      regEmail.classList.add("envelopeInput__input_error");
+    } else {
+      regEmail.classList.remove("envelopeInput__input_error");
+    }
+
+    if (regPassword.value.length === 0) {
+      regPassword.classList.add("envelopeInput__input_error");
+    } else {
+      regPassword.classList.remove("envelopeInput__input_error");
+    }
+
+    if (validateEmail(regEmail.value) && regPassword.value.length > 0) {
+      $(function () {
+        $.magnificPopup.open({
+          items: {
+            src: "#personal"
+          },
+          type: "inline",
+          preloader: false,
+          modal: false,
+          showCloseBtn: false
+        });
+        $(document).on("click", ".popup-modal-dismiss", function (e) {
+          $.magnificPopup.close();
+        });
+      });
+    }
+  };
+}
+function validationForgot() {
+  var forgotEmail = document.querySelector(".forgot__email_js");
+  var forgotBtn = document.querySelector(".forgotPassword__btn_js");
+
+  forgotBtn.onclick = function (e) {
+    e.preventDefault();
+
+    if (!validateEmail(forgotEmail.value)) {
+      forgotEmail.classList.add("envelopeInput__input_error");
+    } else {
+      console.log(forgotEmail.value);
+      $.magnificPopup.close();
+    }
+  };
+}
+function validationRecovery() {
+  var enterRecPassword = document.querySelector(".recovery__enter_js");
+  var repeatRecPassword = document.querySelector(".recovery__repeat_js");
+  var recoveryBtn = document.querySelector(".recoveryPassword__btn_js");
+  var recoveryError = document.querySelector(".recovery__error_js");
+
+  recoveryBtn.onclick = function (e) {
+    e.preventDefault();
+
+    if (enterRecPassword.value === repeatRecPassword.value) {
+      enterRecPassword.classList.remove("envelopeInput__input_error");
+      repeatRecPassword.classList.remove("envelopeInput__input_error");
+      recoveryError.classList.add("hidden");
+      console.log(enterRecPassword.value);
+    } else {
+      enterRecPassword.classList.add("envelopeInput__input_error");
+      repeatRecPassword.classList.add("envelopeInput__input_error");
+      recoveryError.classList.remove("hidden");
+    }
+  };
+}
+function validationClubCard() {
+  var clubCardWindowName = document.querySelector(".clubCardWindow__name_js");
+  var clubCardWindowSurname = document.querySelector(".clubCardWindow__surname_js");
+  var clubCardWindowEmail = document.querySelector(".clubCardWindow__email_js");
+  var clubCardWindowBtn = document.querySelector(".clubCardWindow__btn_js");
+
+  clubCardWindowBtn.onclick = function (e) {
+    e.preventDefault();
+
+    if (!validateEmail(clubCardWindowEmail.value)) {
+      clubCardWindowEmail.classList.add("envelopeInput__input_error");
+    } else {
+      clubCardWindowEmail.classList.remove("envelopeInput__input_error");
+    }
+
+    if (clubCardWindowName.value.length === 0) {
+      clubCardWindowName.classList.add("envelopeInput__input_error");
+    } else {
+      clubCardWindowName.classList.remove("envelopeInput__input_error");
+    }
+
+    if (clubCardWindowSurname.value.length === 0) {
+      clubCardWindowSurname.classList.add("envelopeInput__input_error");
+    } else {
+      clubCardWindowSurname.classList.remove("envelopeInput__input_error");
+    }
+
+    if (validateEmail(clubCardWindowEmail.value) && clubCardWindowName.value.length > 0 && clubCardWindowSurname.value.length > 0) {
+      $(function () {
+        $.magnificPopup.open({
+          items: {
+            src: "#clubPagePopup"
+          },
+          type: "inline",
+          preloader: false,
+          modal: false,
+          showCloseBtn: false
+        });
+        $(document).on("click", ".popup-modal-dismiss", function (e) {
+          $.magnificPopup.close();
+        });
+      });
+    }
+  };
+}
+function validationPersonal() {
+  var personalTel = document.querySelector(".personal__tel_js");
+  var personalBtn = document.querySelector(".personal__btn_js");
+
+  personalBtn.onclick = function (e) {
+    e.preventDefault();
+
+    if (personalTel.value.length < 18 && personalTel.value.length > 1) {
+      personalTel.classList.add("envelopeInput__input_error");
+    } else {
+      personalTel.classList.remove("envelopeInput__input_error");
+      console.log("SUPER");
+      $.magnificPopup.close();
+    }
+  };
+
+  $(".maskPhone").mask("+7 (Z00) 000-00-00", {
+    translation: {
+      Z: {
+        pattern: /[0-69-9]/
+      }
+    }
+  });
+}
+function validationMasterClass() {
+  if (document.querySelector(".popup-modal-masterClassOrder")) {
+    var masterClassName = document.querySelector(".masterClass__name_js");
+    var masterClassSurname = document.querySelector(".masterClass__surname_js");
+    var masterClassTel = document.querySelector(".masterClass__tel_js");
+    var masterClassEmail = document.querySelector(".masterClass__email_js");
+    var masterClassBtn = document.querySelector(".masterClassOrder__btn_js");
+    $(".maskPhone").mask("+7 (Z00) 000-00-00", {
+      translation: {
+        Z: {
+          pattern: /[0-69-9]/
+        }
+      }
+    });
+
+    masterClassBtn.onclick = function (e) {
+      e.preventDefault();
+
+      if (masterClassEmail.value.length > 0) {
+        if (!validateEmail(masterClassEmail.value)) {
+          masterClassEmail.classList.add("envelopeInput__input_error");
+        } else {
+          masterClassEmail.classList.remove("envelopeInput__input_error");
+        }
+      }
+
+      if (masterClassName.value.length === 0) {
+        masterClassName.classList.add("envelopeInput__input_error");
+      } else {
+        masterClassName.classList.remove("envelopeInput__input_error");
+      }
+
+      if (masterClassSurname.value.length === 0) {
+        masterClassSurname.classList.add("envelopeInput__input_error");
+      } else {
+        masterClassSurname.classList.remove("envelopeInput__input_error");
+      }
+
+      if (masterClassTel.value.length < 18) {
+        masterClassTel.classList.add("envelopeInput__input_error");
+      } else {
+        masterClassTel.classList.remove("envelopeInput__input_error");
+      }
+
+      if (masterClassName.value.length > 0 && masterClassSurname.value.length > 0 && masterClassTel.value.length === 18) {
+        console.log("SUPER");
+        $.magnificPopup.close();
+      }
+    };
+
+    var agreementCheck = document.querySelector(".check__master_js");
+    var masterBuyOrder = document.querySelector(".masterClassOrder__btn_js");
+
+    agreementCheck.onclick = function () {
+      agreementCheck.classList.toggle("agreement__checked");
+
+      if (agreementCheck.classList.contains("agreement__checked")) {
+        masterBuyOrder.disabled = false;
+      } else {
+        masterBuyOrder.disabled = true;
+      }
+    };
+  }
+}
+
+/***/ }),
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -20826,7 +20861,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - type
 
   handleOrientation();
 
-  if ( true && _typeof(__webpack_require__(27)) === 'object' && __webpack_require__(27)) {
+  if ( true && _typeof(__webpack_require__(29)) === 'object' && __webpack_require__(29)) {
     !(__WEBPACK_AMD_DEFINE_RESULT__ = (function () {
       return device;
     }).call(exports, __webpack_require__, exports, module),
@@ -20839,7 +20874,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - type
 }).call(this);
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ (function(module, exports) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
@@ -20848,7 +20883,7 @@ module.exports = __webpack_amd_options__;
 /* WEBPACK VAR INJECTION */}.call(this, {}))
 
 /***/ }),
-/* 28 */
+/* 30 */
 /***/ (function(module, exports) {
 
 // (c) 2010 jdbartlett, MIT license
@@ -20910,7 +20945,7 @@ module.exports = __webpack_amd_options__;
 })(jQuery);
 
 /***/ }),
-/* 29 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
