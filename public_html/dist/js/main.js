@@ -20545,7 +20545,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "adaptive", function() { return adaptive; });
 function adaptive() {
   var windowInnerWidth = document.documentElement.clientWidth;
-  var lg = 1024; //1024
+  var lg = 1400; //1024
 
   var xs = 541; //540 content=320
 
@@ -20559,7 +20559,7 @@ function adaptive() {
 
   if (window.screen.availWidth < xs) {
     if (device.mobile()) {
-      viewport.attr("content", "width=320");
+      viewport.attr("content", "width=540");
     }
   }
 }

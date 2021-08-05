@@ -44,6 +44,10 @@ body {
     padding-top: 152px;
     padding-bottom: 66px;
   }
+  @media (max-width: $lg) {
+    padding-top: 200px;
+    padding-bottom: 72px;
+  }
   &__box {
     margin-top: 35px;
   }

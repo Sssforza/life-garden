@@ -25,6 +25,10 @@
       width: 960px;
       height: 492px;
     }
+    @media (max-width: $xs) {
+      width: 500px;
+      height: 256px;
+    }
   }
   &__item {
     width: 1045px;
@@ -39,6 +43,10 @@
     @media (max-width: $lg) {
       width: 960px;
       height: 492px;
+    }
+    @media (max-width: $xs) {
+      width: 500px;
+      height: 256px;
     }
   }
   &__next,
@@ -122,10 +130,20 @@
     padding: 0;
     margin: 68px 0 0;
   }
+  @media (max-width: $xs) {
+    border-radius: 30px 0px;
+    width: 500px;
+    padding: 25px;
+    margin: 67px 0 0;
+  }
   &__list {
     @media (max-width: $lg) {
       display: flex;
       padding: 14px 0;
+    }
+    @media (max-width: $xs) {
+      display: block;
+      padding: 0;
     }
   }
   &__item {
@@ -150,6 +168,19 @@
         border-right: none;
       }
     }
+    @media (max-width: $xs) {
+      width: 100%;
+      padding: 25px 0;
+      border-right: none;
+      border-bottom: 1px dashed #a1c19f;
+      &:first-child {
+        padding-top: 0;
+      }
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
   }
   &__top {
     display: flex;
@@ -166,18 +197,27 @@
     line-height: 22px;
     font-weight: 500;
     color: $textColor;
+    @media (max-width: $xs) {
+      font-size: 20px;
+    }
   }
   &__description {
     margin-top: 10px;
     font-size: 16px;
     line-height: 22px;
     color: $textColor;
+    @media (max-width: $xs) {
+      font-size: 18px;
+    }
   }
 }
 .productSection {
   margin-top: 120px;
   @media (max-width: $lg) {
     margin-top: 60px;
+  }
+  @media (max-width: $xs) {
+    margin-top: 55px;
   }
   &__title {
     font-size: 56px;
@@ -187,6 +227,9 @@
     text-align: center;
     @media (max-width: $lg) {
       font-size: 48px;
+    }
+    @media (max-width: $lg) {
+      font-size: 36px;
     }
   }
   &__content {
@@ -203,6 +246,9 @@
     @media (max-width: $lg) {
       gap: 20px 13px;
     }
+    @media (max-width: $xs) {
+      gap: 15px;
+    }
   }
   &__item {
     padding: 10px 5px 25px;
@@ -217,8 +263,10 @@
     transition: $transition;
     @media (max-width: $lg) {
       width: 229px;
-      height: 254px;
     }
+    @media (max-width: $lg) {
+      width: 242px;
+     }
     &:hover {
       border: 1px solid transparent;
       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
