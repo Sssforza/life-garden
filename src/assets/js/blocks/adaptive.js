@@ -5,10 +5,8 @@ export function adaptive() {
 
   let viewport = $('meta[name="viewport"]');
 
-  if (window.screen.availWidth < lg) {
-    if (device.tablet()) {
-      viewport.attr("content", "width=1024");
-    }
+  if (window.screen.availWidth < lg || device.tablet()) {
+    viewport.attr("content", "width=1024");
   }
   if (window.screen.availWidth < xs) {
     if (device.mobile()) {
