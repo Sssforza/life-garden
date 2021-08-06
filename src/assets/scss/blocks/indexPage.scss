@@ -264,9 +264,9 @@
     @media (max-width: $lg) {
       width: 229px;
     }
-    @media (max-width: $lg) {
+    @media (max-width: $xs) {
       width: 242px;
-     }
+    }
     &:hover {
       border: 1px solid transparent;
       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
@@ -298,6 +298,9 @@
   @media (max-width: $lg) {
     margin-top: 92px;
   }
+  @media (max-width: $xs) {
+    margin-top: 47px;
+  }
   &__header {
     display: flex;
     align-items: flex-end;
@@ -311,6 +314,10 @@
     @media (max-width: $lg) {
       font-size: 48px;
       line-height: 40px;
+    }
+    @media (max-width: $xs) {
+      font-size: 36px;
+      line-height: 50px;
     }
   }
   &__subtitle {
@@ -333,6 +340,9 @@
         opacity: 1;
       }
     }
+    @media (max-width: $xs) {
+      display: none;
+    }
   }
   &__content {
     margin-top: 42px;
@@ -340,6 +350,9 @@
     justify-content: space-between;
     @media (max-width: $lg) {
       margin-top: 20px;
+    }
+    @media (max-width: $xs) {
+      display: block;
     }
   }
   &__general {
@@ -354,6 +367,9 @@
     @media (max-width: $lg) {
       width: 435px;
     }
+    @media (max-width: $xs) {
+      width: 500px;
+    }
   }
   &__box {
     margin-top: 27px;
@@ -366,9 +382,15 @@
         line-height: 28px;
       }
     }
+    @media (max-width: $xs) {
+      margin-top: 15px;
+    }
   }
   &__all {
     margin-left: 40px;
+    @media (max-width: $xs) {
+      margin: 35px 0 0;
+    }
   }
   &__item {
     &:not(:first-child) {
@@ -379,6 +401,20 @@
     }
     padding-bottom: 24px;
     border-bottom: 1px solid $border;
+    @media (max-width: $xs) {
+      &:not(:first-child) {
+        padding-top: 20px;
+      }
+      &:first-child {
+        margin-top: 0px;
+      }
+      &:last-child {
+        border: none;
+        padding-bottom: 0;
+      }
+      padding-bottom: 20px;
+      border-bottom: 1px solid $border;
+    }
   }
   &__date {
     font-size: 16px;
@@ -400,6 +436,21 @@
     @media (max-width: $lg) {
       font-size: 18px;
     }
+    @media (max-width: $xs) {
+      font-size: 20px;
+    }
+  }
+  &__btnAll {
+    display: none;
+    width: 500px;
+    height: 55px;
+    font-family: Rubik;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 30px;
+    @media (max-width: $xs) {
+      display: flex;
+    }
   }
 }
 .clubCard {
@@ -412,6 +463,11 @@
   @media (max-width: $lg) {
     margin-top: 55px;
     padding: 80px 0 58px;
+    overflow: hidden;
+  }
+  @media (max-width: $xs) {
+    margin-top: 55px;
+    padding: 49px 0 60px;
     overflow: hidden;
   }
   &:after {
@@ -435,6 +491,9 @@
         position: center;
         size: 636px 408px;
       }
+    }
+    @media (max-width: $xs) {
+      display: none;
     }
   }
   &:before {
@@ -463,6 +522,10 @@
       font-size: 48px;
       line-height: 58px;
     }
+    @media (max-width: $xs) {
+      font-size: 36px;
+      line-height: 46px;
+    }
   }
   &__description {
     margin-top: 49px;
@@ -470,9 +533,15 @@
     @media (max-width: $lg) {
       width: 53%;
     }
+    @media (max-width: $xs) {
+      width: 100%;
+    }
   }
   &__item {
     display: flex;
+    @media (max-width: $xs) {
+      margin-top: 32px;
+    }
     &:last-child {
       margin-top: 115px;
     }
@@ -491,10 +560,14 @@
     font-weight: 300;
     color: $textColor;
     font-family: "Rubik";
-    @media (max-width: $lg) {
-      font-size: 90px;
-      line-height: 50px;
-    }
+  }
+  @media (max-width: $lg) {
+    font-size: 90px;
+    line-height: 50px;
+  }
+  @media (max-width: $lg) {
+    font-size: 100px;
+    line-height: 50px;
   }
   &__text {
     margin-left: 20px;
@@ -516,6 +589,11 @@
     @media (max-width: $lg) {
       font-size: 18px;
       line-height: 26px;
+    }
+    @media (max-width: $xs) {
+      font-size: 20px;
+      line-height: 28px;
+      margin-top: 10px;
     }
     &:before {
       content: "";
@@ -546,6 +624,10 @@
     @media (max-width: $lg) {
       width: 781px;
     }
+    @media (max-width: $xs) {
+      margin-top: 37px;
+      width: auto;
+    }
   }
 }
 .productSpecial {
@@ -557,6 +639,9 @@
     &:before {
       display: none;
     }
+  }
+  @media (max-width: $xs) {
+    display: none;
   }
   &:after {
     content: "";
@@ -674,6 +759,9 @@
   @media (max-width: $lg) {
     margin-top: 60px;
   }
+  @media (max-width: $xs) {
+    margin-top: 50px;
+  }
   &__title {
     font-size: 60px;
     line-height: 50px;
@@ -683,6 +771,9 @@
     text-align: center;
     @media (max-width: $lg) {
       font-size: 48px;
+    }
+    @media (max-width: $xs) {
+      font-size: 36px;
     }
   }
   &__subTitle {
@@ -696,11 +787,18 @@
       margin-top: 20px;
       font-size: 26px;
     }
+    @media (max-width: $xs) {
+      margin-top: 3px;
+      font-size: 24px;
+    }
   }
   &__info {
     margin-top: 60px;
     @media (max-width: $lg) {
       margin-top: 35px;
+    }
+    @media (max-width: $xs) {
+      margin-top: 17px;
     }
     &.show {
       .mainGarden__hide {
@@ -721,6 +819,9 @@
     display: flex;
     max-height: 286px;
     overflow: hidden;
+    @media (max-width: $xs) {
+      display: block;
+    }
   }
   &__column {
     font-size: 18px;
@@ -728,15 +829,16 @@
     color: $textColor;
     width: 50%;
     @media (max-width: $lg) {
-     font-size: 16px;
-     &:first-child {
-      padding-right: 40px;
+      font-size: 16px;
+      &:first-child {
+        padding-right: 40px;
+      }
+      &:last-child {
+        padding-left: 40px;
+        border-left: 1px solid $gray2;
+      }
     }
-    &:last-child {
-      padding-left: 40px;
-      border-left: 1px solid $gray2;
-    }
-    }
+
     &:first-child {
       padding-right: 73px;
     }
@@ -744,12 +846,29 @@
       padding-left: 85px;
       border-left: 1px solid $gray2;
     }
+    @media (max-width: $xs) {
+      font-size: 18px;
+      padding: 0;
+      border: none;
+      width: 100%;
+      &:first-child {
+        padding-right: 0;
+      }
+      &:last-child {
+        padding-left: 0px;
+        border-left: none;
+      }
+    }
   }
   &__all {
     margin-top: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: $xs) {
+      margin-top: 22px;
+      justify-content: start;
+    }
   }
   &__btn {
     font-size: 18px;

@@ -29,12 +29,21 @@
     style: normal;
   }
   transition: all 1s;
+  @media (max-width: $lg) {
+    line-height: 10px;
+    font: {
+      size: 14px;
+    }
+  }
   &__hidden {
     margin-top: -45px;
   }
   &__menu {
     display: flex;
     justify-content: space-between;
+    @media (max-width: $lg) {
+      position: relative;
+    }
   }
   &__menuLi {
     transition: $transition;
@@ -47,10 +56,38 @@
   }
   &__menuElse {
     display: none;
+    @media (max-width: $lg) {
+      display: block;
+    }
   }
   &__menuHide {
     display: flex;
     margin-left: 25px;
+    @media (max-width: $lg) {
+      display: none;
+      position: absolute;
+      flex-direction: column;
+      width: 145px;
+      height: 120px;
+      background: $white;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+      top: calc(100% + 18px);
+      right: 0;
+      color: $textColor;
+      overflow: hidden;
+      .headerTop__menuLi {
+        margin: 0;
+        font-size: 14px;
+        line-height: 40px;
+        padding: 0 18px;
+        &:hover {
+          background: #f0f0f0;
+          color: $textColor;
+          cursor: pointer;
+        }
+      }
+    }
   }
   &__newspapper {
     display: flex;
@@ -58,6 +95,18 @@
     justify-content: space-between;
     transition: $transition;
     position: relative;
+    @media (max-width: $lg) {
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        left: 48%;
+        width: 83%;
+        height: 1px;
+        margin-left: -30%;
+        background: $white;
+      }
+    }
     &:after {
       content: "";
       position: absolute;
@@ -93,6 +142,10 @@
       size: 20px;
     }
     line-height: 15px;
+    @media (max-width: $lg) {
+      font-size: 18px;
+      line-height: 13px;
+    }
   }
 
   &__client {
@@ -173,15 +226,23 @@
     border: 1px solid grey;
     border-radius: 50px;
     padding: 0 22px 0 29px;
+    @media (max-width: $lg) {
+      width: 524px;
+      padding: 0 15px 0 20px;
+    }
   }
   &__logo {
     width: 252px;
     height: 39px;
+    & svg{
+      display: block;
+    }
   }
   &__catalog {
     display: flex;
     align-items: center;
     cursor: pointer;
+
     & span {
       font: {
         size: 18px;
@@ -189,6 +250,9 @@
       }
       line-height: 13px;
       color: $darkGreen;
+      @media (max-width: $lg) {
+        font-size: 16px;
+      }
     }
   }
   &__form {
@@ -196,6 +260,9 @@
     display: flex;
     align-items: center;
     margin-left: 29px;
+    @media (max-width: $lg) {
+      margin-left: 13px;
+    }
   }
   &__formContainer {
     position: relative;
@@ -211,6 +278,14 @@
     font-size: 18px;
     line-height: 13px;
     @include placeholder(18px, #9196a9, "FiraSans", $opacity: 1);
+    @media (max-width: $lg) {
+      padding-left: 11px;
+      min-width: 368px;
+      font-size: 16px;
+      line-height: 12px;
+      @include placeholder(16px, #9196a9, "FiraSans", $opacity: 1);
+
+    }
   }
   &__button {
     display: block;
@@ -249,6 +324,9 @@
   position: relative;
   cursor: pointer;
   margin-right: 30px;
+  @media (max-width: $lg) {
+    margin-right: 25px;
+  }
   & svg {
     path {
       fill: $textColor;
@@ -295,6 +373,9 @@
   &__garbage {
     display: flex;
     flex-direction: column;
+    @media (max-width: $lg) {
+      display: none;
+    }
     span {
       &:first-child {
         font-style: normal;

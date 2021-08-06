@@ -1328,8 +1328,32 @@ body {
   @media (max-width: $lg) {
     margin-top: 45px;
   }
+  @media (max-width: $xs) {
+    margin-top: 40px;
+  }
   &_small {
     margin: 0;
+  }
+  &__choice {
+    display: none;
+    width: 500px;
+    height: 65px;
+    margin-top: 15px;
+    & span {
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      margin-left: 6px;
+    }
+    @media (max-width: $xs) {
+      display: flex;
+    }
+    .choice__btn {
+      width: 50%;
+      height: 59px;
+    }
   }
   &__baloonTitle {
     font-family: FiraSans;
@@ -1354,7 +1378,7 @@ body {
       line-height: 43px;
     }
     @media (max-width: $lg) {
-      font-size: 48px;
+      font-size: 36px;
     }
   }
   &__description {
@@ -1364,13 +1388,17 @@ body {
     @media (max-width: $lg) {
       margin-top: 5px;
     }
+    @media (max-width: $lg) {
+      margin-top: 0;
+      line-height: 28px;
+    }
   }
   &__content {
     margin-top: 33px;
     display: flex;
     gap: 12px;
-    @media (max-width: $lg) {
-      
+    @media (max-width: $xs) {
+      display: block;
     }
   }
   &__item {
@@ -1391,6 +1419,20 @@ body {
       padding: 28px 35px 23px 29px;
       width: 347px;
       font-size: 16px;
+    }
+    @media (max-width: $xs) {
+      width: 500px;
+      border: none;
+      pointer-events: none;
+      padding: 0;
+      font-size: 20px;
+      &:not(:last-child) {
+        padding-bottom: 26px;
+        border-bottom: 1px solid $border;
+      }
+      &:not(:first-child) {
+        margin-top: 25px;
+      }
     }
     &:not(:first-child) {
       margin-top: 15px;
@@ -1440,6 +1482,9 @@ body {
       @media (max-width: $lg) {
         font-size: 14px;
       }
+      @media (max-width: $xs) {
+        font-size: 18px;
+      }
     }
   }
   &__tel {
@@ -1457,6 +1502,11 @@ body {
       width: 364px;
       height: 588px;
     }
+    @media (max-width: $xs) {
+      width: 500px;
+      height: auto;
+      margin-top: 25px;
+    }
   }
 
   &__btn {
@@ -1473,6 +1523,9 @@ body {
     height: 585px;
     @media (max-width: $lg) {
       width: 583px;
+    }
+    @media (max-width: $xs) {
+      width: 500px;
     }
   }
   #mapWindow {

@@ -1225,6 +1225,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						</div>
 					</div>
 				</div>
+				<a class="mainNews__btnAll btn" href="/news/">Все новости</a>
 			</div>
 		</section>
 		<section class="clubCard">
@@ -1265,6 +1266,16 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 			<div class="container">
 				<div class="map__title">Ждём в гости</div>
 				<div class="map__description">Найдите ближайший магазин и&nbsp;отправляйтесь за&nbsp;покупками</div>
+				<div class="map__choice choice">
+					<div class="choice__btn choice__btn_checked">
+						<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/choiceMap.svg'; ?>
+						<span>На карте</span>
+					</div>
+					<div class="choice__btn ">
+						<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/choiceList.svg'; ?>
+						<span>Списком</span>
+					</div>
+				</div>
 				<div class="map__content">
 					<aside class="map__aside scrollbar-inner">
 						<div class="map__item mapItem_js" data-coord1="54.970231" data-coord2="73.392044" data-id="0">
