@@ -536,7 +536,7 @@
       </div>
 
 
-      <div class="headerMenuMobile">
+      <div class="headerMenuMobile headerMenuMobile_js">
         <a class="headerMenuMobile__enter" href="#authorization">
           <div class="headerMenuMobile__container">
             <div class="headerMenuMobile__icon">
@@ -545,7 +545,7 @@
             <span>Вход/Регистрация</span>
           </div>
         </a>
-        <div class="headerMenuMobile__cabinet">
+        <div class="headerMenuMobile__cabinet headerMobileCabinet headerMobileCabinet_js">
           <a class="headerMenuMobile__enter" href="#">
             <div class="headerMenuMobile__container">
               <div class="headerMenuMobile__icon">
@@ -557,17 +557,17 @@
               <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowSort.svg'; ?>
             </div>
           </a>
+          <ul class="headerMobileCabinet__ul">
+            <li class="headerMobileCabinet__li"><a href="/lk-profile/"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/lk-profile.svg'; ?>
+                <span>Профиль</span> </a></li>
+            <li class="headerMobileCabinet__li"><a href="/lk-orders/"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/lk-orders.svg'; ?>
+                <span> Мои заказы</span> </a></li>
+            <li class="headerMobileCabinet__li"><a href="/lk-favorites/"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/lk-favorites.svg'; ?>
+                <span>Избранное</span> </a></li>
+            <li class="headerMobileCabinet__li"><a href="#"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/lk-out.svg'; ?>
+                <span>Выйти</span> </a></li>
+          </ul>
         </div>
-        <ul class="headerMenuMobile__ul">
-          <li class="headerMenuMobile__li"><a href="/lk-profile/"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/lk-profile.svg'; ?>
-              <span>Профиль</span> </a></li>
-          <li class="headerMenuMobile__li"><a href="/lk-orders/"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/lk-orders.svg'; ?>
-              <span> Мои заказы</span> </a></li>
-          <li class="headerMenuMobile__li"><a href="/lk-favorites/"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/lk-favorites.svg'; ?>
-              <span>Избранное</span> </a></li>
-          <li class="headerMenuMobile__li"><a href="#"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/lk-out.svg'; ?>
-              <span>Выйти</span> </a></li>
-        </ul>
         <a class="headerMenuMobile__telephone" href="tel: +73812349341">
           <div class="headerMenuMobile__icon">
             <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/telephone.svg'; ?>
@@ -577,19 +577,98 @@
             <span>Центр информационной поддержки клиента</span>
           </div>
         </a>
-        <div class="headerMenuMobile__catalog">
-          <div class="headerMenuMobile__container">
-            <div class="hamburger hamburger__collapse">
-              <span class="hamburger__box">
-                <span class="hamburger__inner"></span>
-              </span>
+        <div class="headerMenuMobile__catalog headerCatalogMobile headerCatalogMobile_js">
+          <div class="headerCatalogMobile__box">
+            <div class="headerCatalogMobile__container">
+              <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/burger.svg'; ?>
+              <span class="headerCatalogMobile__text">Каталог</span>
             </div>
-            <span class="headerMenuMobile__text">Каталог</span>
+            <div class="headerMenuMobile__arrow">
+              <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowSort.svg'; ?>
+            </div>
           </div>
-          <div class="headerMenuMobile__arrow">
-            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowSort.svg'; ?>
-          </div>
+          <ul class="headerCatalogMobile__ul">
+            <li class="headerCatalogMobile__li">
+              <div class="headerCatalogMobile__container">
+                <div class="headerCatalogMobile__image">
+                  <img src="/dist/img/productPopularImg7.png" alt="">
+                </div>
+                <span class="headerCatalogMobile__text">Для сада</span>
+              </div>
+              <div class="headerMenuMobile__arrow">
+                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowSort.svg'; ?>
+              </div>
+            </li>
+            <li class="headerCatalogMobile__li">
+              <div class="headerCatalogMobile__container">
+                <div class="headerCatalogMobile__image">
+                  <img src="/dist/img/productPopularImg5.png" alt="">
+                </div>
+                <span class="headerCatalogMobile__text">Инструменты</span>
+              </div>
+              <div class="headerMenuMobile__arrow">
+                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowSort.svg'; ?>
+              </div>
+            </li>
+            <li class="headerCatalogMobile__li">
+              <div class="headerCatalogMobile__container">
+                <div class="headerCatalogMobile__image">
+                  <img src="/dist/img/forHome.png" alt="">
+                </div>
+                <span class="headerCatalogMobile__text">Для дома</span>
+              </div>
+              <div class="headerMenuMobile__arrow">
+                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowSort.svg'; ?>
+              </div>
+            </li>
+            <li class="headerCatalogMobile__li">
+              <div class="headerCatalogMobile__container">
+                <div class="headerCatalogMobile__image">
+                  <img src="/dist/img/plants.png" alt="">
+                </div>
+                <span class="headerCatalogMobile__text">Растения</span>
+              </div>
+              <div class="headerMenuMobile__arrow">
+                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowSort.svg'; ?>
+              </div>
+            </li>
+            <li class="headerCatalogMobile__li">
+              <div class="headerCatalogMobile__container">
+                <div class="headerCatalogMobile__image">
+                  <img src="/dist/img/forPlants.png" alt="">
+                </div>
+                <span class="headerCatalogMobile__text">Для растений</span>
+              </div>
+              <div class="headerMenuMobile__arrow">
+                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowSort.svg'; ?>
+              </div>
+            </li>
+            <li class="headerCatalogMobile__li">
+              <div class="headerCatalogMobile__container">
+                <div class="headerCatalogMobile__image">
+                  <img src="/dist/img/other.png" alt="">
+                </div>
+                <span class="headerCatalogMobile__text">Прочее</span>
+              </div>
+              <div class="headerMenuMobile__arrow">
+                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowSort.svg'; ?>
+              </div>
+            </li>
+          </ul>
         </div>
+        <ul class="headerMenuMobile__ul">
+          <li><a class="headerMenuMobile__a" href="">Акции</a></li>
+          <li><a class="headerMenuMobile__a" href="">Клубная карта</a></li>
+          <li><a class="headerMenuMobile__a" href="">Доставка и оплата</a></li>
+          <li><a class="headerMenuMobile__a" href="">Семинары</a></li>
+          <li><a class="headerMenuMobile__a" href="">Блог огородника</a></li>
+          <li><a class="headerMenuMobile__a" href="">
+              <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/newspapper.svg'; ?>
+              Газета «Живой сад»</a></li>
+          <li><a class="headerMenuMobile__a" href="">О компании</a></li>
+          <li><a class="headerMenuMobile__a" href="">Новости</a></li>
+          <li><a class="headerMenuMobile__a" href="">Контакты</a></li>
+        </ul>
       </div>
 
       <div class="headerCatalog headerCatalog_js ">

@@ -14,12 +14,13 @@ global.noUiSlider = noUiSlider;
 
 //📁 /assets/js/blocks  _header.js
 import {
-  headerCatalog,
-  headerSearchelp,
-  headerClick,
-  headerScroll,
-  headerOpenClient,
-  headerOpenElse
+    headerCatalog,
+    headerSearchelp,
+    headerClick,
+    headerScroll,
+    headerOpenClient,
+    headerOpenElse,
+    headerMenuMobile,
 } from "./blocks/_header.js";
 
 //📁 /assets/js/blocks  _footer.js
@@ -27,27 +28,27 @@ import { footerScrollUp, footerValidationEmail } from "./blocks/_footer.js";
 
 //📁 /assets/js/blocks  catalog.js
 import {
-  catalogPopups,
-  checkNum,
-  priceSlider,
-  filters,
+    catalogPopups,
+    checkNum,
+    priceSlider,
+    filters,
 } from "./blocks/catalog.js";
 
 //📁 /assets/js/blocks .js
 import {
-  openMap,
-  openAddress,
-  checkMethodDelivery,
-  dateBirthday,
+    openMap,
+    openAddress,
+    checkMethodDelivery,
+    dateBirthday,
 } from "./blocks/lkProfile.js";
 
 //📁 /assets/js/blocks  sliders.js
 import {
-  sliderMain,
-  sliderProductSpecial,
-  sliderProduct,
-  sliderAbout,
-  sliderMasterClass,
+    sliderMain,
+    sliderProductSpecial,
+    sliderProduct,
+    sliderAbout,
+    sliderMasterClass,
 } from "./blocks/sliders.js";
 
 //📁 /assets/js/blocks  specialSample.js
@@ -57,10 +58,7 @@ import { specialSampleTabs } from "./blocks/specialSample.js";
 import { openImage, checkCategories, otherClicks } from "./blocks/detail.js";
 
 //📁 /assets/js/blocks  masterClass.js
-import {
-  masterClassPopups,
-  masterChoiceMonth,
-} from "./blocks/masterClass.js";
+import { masterClassPopups, masterChoiceMonth } from "./blocks/masterClass.js";
 
 //📁 /assets/js/blocks  specialSample.js
 import { mainGardenShow, masterClassShow } from "./blocks/showFull.js";
@@ -97,162 +95,165 @@ import { adaptive } from "./blocks/adaptive.js";
 
 //📁 /assets/js/blocks  adaptive.js
 import {
-  popupForgotPassword,
-  popupRecoveryPassword,
-  popupAuthorization,
-  popupClubCard,
-  popupQuickView,
-  popupMasterClass,
+    popupForgotPassword,
+    popupRecoveryPassword,
+    popupAuthorization,
+    popupClubCard,
+    popupQuickView,
+    popupMasterClass,
 } from "./blocks/popups.js";
 
 //📁 /assets/js/blocks  adaptive.js
 import {
-  validationEnter,
-  validationReg,
-  validationForgot,
-  validationRecovery,
-  validationClubCard,
-  validationPersonal,
-  validationMasterClass
+    validationEnter,
+    validationReg,
+    validationForgot,
+    validationRecovery,
+    validationClubCard,
+    validationPersonal,
+    validationMasterClass,
 } from "./blocks/validation";
 
 document.addEventListener("DOMContentLoaded", function () {
-  // open contextual hint
-  headerSearchelp();
+    // open contextual hint
+    headerSearchelp();
 
-  //hide headerTop on scroll
-  headerScroll();
+    //hide headerTop on scroll
+    headerScroll();
 
-  //popup catalog
-  headerCatalog();
+    //popup catalog
+    headerCatalog();
 
-  //popup else
-  headerOpenElse();
+    //popup else
+    headerOpenElse();
 
-  //popup basket and pre-order
-  headerClick();
+    //popup basket and pre-order
+    headerClick();
 
-  // slick slider main
-  sliderMain();
+    //mobile menu
+    headerMenuMobile();
 
-  // slick slider main page special product
-  sliderProductSpecial();
+    // slick slider main
+    sliderMain();
 
-  // slick slider Product page
-  sliderProduct();
+    // slick slider main page special product
+    sliderProductSpecial();
 
-  // sroll page on top
-  footerScrollUp();
+    // slick slider Product page
+    sliderProduct();
 
-  // map
-  mapInit();
-  // mapWindow
-  mapWindow();
+    // sroll page on top
+    footerScrollUp();
 
-  // map aside scroll
-  mapAsideScroll();
+    // map
+    mapInit();
+    // mapWindow
+    mapWindow();
 
-  // tabs sliders in the main page section specialSample
-  specialSampleTabs();
+    // map aside scroll
+    mapAsideScroll();
 
-  // main garden show all
-  mainGardenShow();
+    // tabs sliders in the main page section specialSample
+    specialSampleTabs();
 
-  // mster-class show all
-  masterClassShow();
+    // main garden show all
+    mainGardenShow();
 
-  // check map or list on main
-  checkShops();
+    // mster-class show all
+    masterClassShow();
 
-  // validation e-mail
-  footerValidationEmail();
+    // check map or list on main
+    checkShops();
 
-  // //open popups in catalog
-  catalogPopups();
+    // validation e-mail
+    footerValidationEmail();
 
-  // //check numbers in pagination
-  checkNum();
+    // //open popups in catalog
+    catalogPopups();
 
-  // //slider for price
-  priceSlider();
+    // //check numbers in pagination
+    checkNum();
 
-  // //
-  checkNum();
+    // //slider for price
+    priceSlider();
 
-  // //all filters
-  filters();
+    // //
+    checkNum();
 
-  //open map
-  openMap();
+    // //all filters
+    filters();
 
-  //check method delivery
-  checkMethodDelivery();
+    //open map
+    openMap();
 
-  //open lists of shops in lk
-  openAddress();
+    //check method delivery
+    checkMethodDelivery();
 
-  //close message birthday in lk
-  dateBirthday();
+    //open lists of shops in lk
+    openAddress();
 
-  //open client
-  headerOpenClient();
+    //close message birthday in lk
+    dateBirthday();
 
-  //check category in product
-  checkCategories();
+    //open client
+    headerOpenClient();
 
-  //other clicks in product
-  otherClicks();
+    //check category in product
+    checkCategories();
 
-  //open big image in product
-  openImage();
+    //other clicks in product
+    otherClicks();
 
-  // slick slider About page
-  sliderAbout();
+    //open big image in product
+    openImage();
 
-  // slick slider MasterClass page
-  sliderMasterClass();
+    // slick slider About page
+    sliderAbout();
 
-  // all archives MasterClass page
-  masterClassPopups();
+    // slick slider MasterClass page
+    sliderMasterClass();
 
-  // choice month MasterClass page
-  masterChoiceMonth();
+    // all archives MasterClass page
+    masterClassPopups();
 
-  // check policy club-card
-  checkClubCard();
+    // choice month MasterClass page
+    masterChoiceMonth();
 
-  // newspaper popup
-  newspaperPopup();
+    // check policy club-card
+    checkClubCard();
 
-  // pdf loader popup
-  pdfLoader();
+    // newspaper popup
+    newspaperPopup();
 
-  // articles
-  articles();
+    // pdf loader popup
+    pdfLoader();
 
-  // check categories in news
-  newsCategories();
+    // articles
+    articles();
 
-  // validation all popups
-  validationEnter();
-  validationReg();
-  validationForgot();
-  validationRecovery();
-  validationClubCard();
-  validationPersonal();
-  validationMasterClass();
+    // check categories in news
+    newsCategories();
 
-  //open all popups
-  popupForgotPassword();
-  popupRecoveryPassword();
-  popupAuthorization();
-  popupClubCard();
-  popupQuickView();
-  popupMasterClass();
+    // validation all popups
+    validationEnter();
+    validationReg();
+    validationForgot();
+    validationRecovery();
+    validationClubCard();
+    validationPersonal();
+    validationMasterClass();
 
-  // check stars in feedback
-  reviewCheck();
+    //open all popups
+    popupForgotPassword();
+    popupRecoveryPassword();
+    popupAuthorization();
+    popupClubCard();
+    popupQuickView();
+    popupMasterClass();
 
-  // adaptive
-  adaptive();
+    // check stars in feedback
+    reviewCheck();
+
+    // adaptive
+    adaptive();
 });

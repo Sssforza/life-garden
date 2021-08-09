@@ -11485,7 +11485,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerOpenElse"])(); //popup basket and pre-order
 
-  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerClick"])(); // slick slider main
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerClick"])(); //mobile menu
+
+  Object(_blocks_header_js__WEBPACK_IMPORTED_MODULE_4__["headerMenuMobile"])(); // slick slider main
 
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderMain"])(); // slick slider main page special product
 
@@ -18697,6 +18699,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerScroll", function() { return headerScroll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerOpenClient", function() { return headerOpenClient; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerOpenElse", function() { return headerOpenElse; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headerMenuMobile", function() { return headerMenuMobile; });
 function headerCatalog() {
   var buttonCatalog = document.querySelector(".headerMiddleCatalog_js");
   var headerCatalog = document.querySelector(".headerCatalog_js");
@@ -18785,6 +18788,23 @@ function headerOpenElse() {
   var btnElse = document.querySelector(".headerTop__menuElse_js");
   btnElse.addEventListener("click", function () {
     menuElse.classList.toggle("headerTop__menuHide_open");
+  });
+}
+function headerMenuMobile() {
+  var headerMenuMobile = document.querySelector(".headerMenuMobile_js");
+  var hamburger = document.querySelector(".hamburgerXs_js");
+  hamburger.addEventListener("click", function () {
+    headerMenuMobile.classList.toggle("headerMenuMobile_open");
+    document.body.classList.toggle("hiddenHeaderCatalog");
+    hamburger.classList.toggle("is-active");
+  });
+  var headerMobileCabinet = document.querySelector(".headerMobileCabinet_js");
+  headerMobileCabinet.addEventListener("click", function () {
+    headerMobileCabinet.classList.toggle("headerMobileCabinet_open");
+  });
+  var headerCatalogMobile = document.querySelector(".headerCatalogMobile_js");
+  headerCatalogMobile.addEventListener("click", function () {
+    headerCatalogMobile.classList.toggle("headerCatalogMobile_open");
   });
 }
 
