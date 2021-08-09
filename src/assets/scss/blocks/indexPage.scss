@@ -228,8 +228,9 @@
     @media (max-width: $lg) {
       font-size: 48px;
     }
-    @media (max-width: $lg) {
+    @media (max-width: $xs) {
       font-size: 36px;
+      line-height: 46px;
     }
   }
   &__content {
@@ -565,7 +566,7 @@
     font-size: 90px;
     line-height: 50px;
   }
-  @media (max-width: $lg) {
+  @media (max-width: $xs) {
     font-size: 100px;
     line-height: 50px;
   }
@@ -907,3 +908,4 @@
     display: none;
   }
 }
+

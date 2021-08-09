@@ -92,5 +92,13 @@ export function headerOpenClient() {
     headerTopClient.classList.toggle("headerTop__client_open");
   });
 }
+export function headerOpenElse() {
+  const menuElse = document.querySelector(".headerTop__menuHide_js");
+  const btnElse = document.querySelector(".headerTop__menuElse_js");
+
+  btnElse.addEventListener("click", () => {
+    menuElse.classList.toggle("headerTop__menuHide_open");
+  });
+}
 
 

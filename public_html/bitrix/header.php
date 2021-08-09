@@ -17,7 +17,7 @@
   <script type="text/javascript" src="/dist/min/iscroll.min.js"></script>
   <script type="text/javascript" src="/dist/min/pdf.min.js"></script>
   <script type="text/javascript" src="/dist/min/pdf.worker.min.js"></script>
-  
+
 </head>
 
 <body>
@@ -30,9 +30,9 @@
               <li class="headerTop__menuLi"><a href="/delivery/">Доставка и оплата</a></li>
               <li class="headerTop__menuLi"><a href="/master-class/">Семинары</a></li>
               <li class="headerTop__menuLi"><a href="#">Блог огородника</a></li>
-              <li class="headerTop__menuLi headerTop__menuElse"><a href="#">Еще
+              <li class="headerTop__menuLi headerTop__menuElse headerTop__menuElse_js"><a href="#">Еще
                   &#8226;&#8226;&#8226;</a></li>
-              <div class="headerTop__menuHide">
+              <div class="headerTop__menuHide headerTop__menuHide_js">
                 <li class="headerTop__menuLi"><a href="/about/">О компании</a></li>
                 <li class="headerTop__menuLi"><a href="#">Новости</a></li>
                 <li class="headerTop__menuLi"><a href="#">Контакты</a></li>
@@ -51,13 +51,13 @@
                 </div>
                 <span>+ 7 3812 34-93-41</span>
               </a>
-              <a class="popup-modal-authorization headerTop__authorization headerTop__authorization_js " href="#authorization">
+              <a class="popup-modal-authorization headerTop__authorization headerTop__authorization_js hidden" href="#authorization">
                 <div class="headerTop__icon">
                   <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/authorization.svg'; ?>
                 </div>
                 <span class="headerTop__text">Вход</span>
               </a>
-              <div class="headerTop__client client_js hidden">
+              <div class="headerTop__client client_js">
                 <div class="headerTop__authorization clientClick_js">
                   <div class="headerTop__icon">
                     <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/client.svg'; ?>
@@ -94,7 +94,6 @@
                 </div>
               </div>
               <div class="headerMiddle__formContainer">
-
                 <form class="headerMiddle__form headerMiddleForm_js">
                   <input class="headerMiddle__input headerMiddleInput_js" type="text" placeholder="Поиск">
                   <button class="headerMiddle__button" type="submit">
@@ -508,6 +507,12 @@
                   </div>
                   <a class="btn headerClick__btn" href="/basket/">Перейти в корзину</a>
                 </div>
+
+              </div>
+              <div class="hamburgerXs hamburgerXs--spring hamburgerXs_js">
+                <span class="hamburgerXs-box">
+                  <span class="hamburgerXs-inner"></span>
+                </span>
               </div>
             </div>
           </div>
@@ -529,6 +534,64 @@
           </ul>
         </div>
       </div>
+
+
+      <div class="headerMenuMobile">
+        <a class="headerMenuMobile__enter" href="#authorization">
+          <div class="headerMenuMobile__container">
+            <div class="headerMenuMobile__icon">
+              <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/authorization.svg'; ?>
+            </div>
+            <span>Вход/Регистрация</span>
+          </div>
+        </a>
+        <div class="headerMenuMobile__cabinet">
+          <a class="headerMenuMobile__enter" href="#">
+            <div class="headerMenuMobile__container">
+              <div class="headerMenuMobile__icon">
+                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/authorization.svg'; ?>
+              </div>
+              <span>Личный кабинет</span>
+            </div>
+            <div class="headerMenuMobile__arrow">
+              <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowSort.svg'; ?>
+            </div>
+          </a>
+        </div>
+        <ul class="headerMenuMobile__ul">
+          <li class="headerMenuMobile__li"><a href="/lk-profile/"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/lk-profile.svg'; ?>
+              <span>Профиль</span> </a></li>
+          <li class="headerMenuMobile__li"><a href="/lk-orders/"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/lk-orders.svg'; ?>
+              <span> Мои заказы</span> </a></li>
+          <li class="headerMenuMobile__li"><a href="/lk-favorites/"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/lk-favorites.svg'; ?>
+              <span>Избранное</span> </a></li>
+          <li class="headerMenuMobile__li"><a href="#"> <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/lk-out.svg'; ?>
+              <span>Выйти</span> </a></li>
+        </ul>
+        <a class="headerMenuMobile__telephone" href="tel: +73812349341">
+          <div class="headerMenuMobile__icon">
+            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/telephone.svg'; ?>
+          </div>
+          <div class="headerMenuMobile__box">
+            + 7 3812 34-93-41
+            <span>Центр информационной поддержки клиента</span>
+          </div>
+        </a>
+        <div class="headerMenuMobile__catalog">
+          <div class="headerMenuMobile__container">
+            <div class="hamburger hamburger__collapse">
+              <span class="hamburger__box">
+                <span class="hamburger__inner"></span>
+              </span>
+            </div>
+            <span class="headerMenuMobile__text">Каталог</span>
+          </div>
+          <div class="headerMenuMobile__arrow">
+            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowSort.svg'; ?>
+          </div>
+        </div>
+      </div>
+
       <div class="headerCatalog headerCatalog_js ">
         <div class="container">
           <div class="headerCatalog__title">Каталог</div>
@@ -901,11 +964,11 @@
         </form>
       </div>
       <div id="clubPagePopup" class="windowsMessage__popap clubPopup clubPopup_js  mfp-hide">
-				<div class="windowsMessage__close clubPopupClose_js popup-modal-dismiss">
-					<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
-				</div>
-				<div class="windowsMessage__title">Клубная карта оформлена</div>
-				<div class="windowsMessage__text">Теперь вы можете пользоваться всеми
-					преимуществами карты. </div>
-			</div>
+        <div class="windowsMessage__close clubPopupClose_js popup-modal-dismiss">
+          <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
+        </div>
+        <div class="windowsMessage__title">Клубная карта оформлена</div>
+        <div class="windowsMessage__text">Теперь вы можете пользоваться всеми
+          преимуществами карты. </div>
+      </div>
     </header>

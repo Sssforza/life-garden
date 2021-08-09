@@ -1262,22 +1262,22 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				</div>
 			</div>
 		</section>
-		<section class="map">
+		<section class="map map__main">
 			<div class="container">
 				<div class="map__title">Ждём в гости</div>
 				<div class="map__description">Найдите ближайший магазин и&nbsp;отправляйтесь за&nbsp;покупками</div>
 				<div class="map__choice choice">
-					<div class="choice__btn choice__btn_checked">
+					<div class="choice__btn choice__btn_checked choice__map_js">
 						<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/choiceMap.svg'; ?>
 						<span>На карте</span>
 					</div>
-					<div class="choice__btn ">
+					<div class="choice__btn choice__list_js">
 						<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/choiceList.svg'; ?>
 						<span>Списком</span>
 					</div>
 				</div>
 				<div class="map__content">
-					<aside class="map__aside scrollbar-inner">
+					<aside class="map__aside scrollbar-inner aside__show_js">
 						<div class="map__item mapItem_js" data-coord1="54.970231" data-coord2="73.392044" data-id="0">
 							<div class="map__unit address">ул. Маяковского, 20</div>
 							<div class="map__unit tel">
@@ -1329,7 +1329,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							</div>
 						</div>
 					</aside>
-					<div id="map"></div>
+					<div id="mapWindow" class="map__show_js map_checked"></div>
 				</div>
 			</div>
 		</section>

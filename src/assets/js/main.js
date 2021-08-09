@@ -19,6 +19,7 @@ import {
   headerClick,
   headerScroll,
   headerOpenClient,
+  headerOpenElse
 } from "./blocks/_header.js";
 
 //📁 /assets/js/blocks  _footer.js
@@ -66,6 +67,10 @@ import { mainGardenShow, masterClassShow } from "./blocks/showFull.js";
 
 //📁 /assets/js/blocks  specialSample.js
 import { mapInit } from "./blocks/map.js";
+
+//📁 /assets/js/blocks  index.js
+import { checkShops } from "./blocks/index.js";
+
 //📁 /assets/js/blocks  specialSample.js
 import { mapWindow } from "./blocks/mapWindow.js";
 
@@ -121,6 +126,9 @@ document.addEventListener("DOMContentLoaded", function () {
   //popup catalog
   headerCatalog();
 
+  //popup else
+  headerOpenElse();
+
   //popup basket and pre-order
   headerClick();
 
@@ -152,6 +160,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // mster-class show all
   masterClassShow();
+
+  // check map or list on main
+  checkShops();
 
   // validation e-mail
   footerValidationEmail();
