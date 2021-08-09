@@ -39,51 +39,57 @@
                 </div>
                 <div class="footer__column footer__column_margin footerContacts">
                     <div class="footer__title">Наши контакты</div>
-                    <div class="footerContacts__tel">
-                        <a class="footerContacts__telContainer" href="tel: +73812349341">
-                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/tel-footer.svg'; ?>
-                            <span class="footerContacts__telText">+ 7 3812 34-93-41</span>
+                    <div class="footerContacts__box">
+                        <div class="footerContacts__tel">
+                            <a class="footerContacts__telContainer" href="tel: +73812349341">
+                                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/tel-footer.svg'; ?>
+                                <span class="footerContacts__telText">+ 7 3812 34-93-41</span>
+                            </a>
+                            <div class="footerContacts__telCenter">Центр информационной поддержки клиента</div>
+                        </div>
+                        <a class="footerContacts__email" href="mailto:zhivoy-sad.@mail.ru">
+                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/email.svg'; ?>
+                            <span class="footerContacts__emailText"> zhivoy-sad.@mail.ru
+                            </span>
                         </a>
-                        <div class="footerContacts__telCenter">Центр информационной поддержки клиента</div>
+                        <div class="footerContacts__address">
+                            <div class="footerContacts__addressContainer">
+                                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/address.svg'; ?>
+                                <span class="footerContacts__addressText"> ул. Сакена Сейфуллина, 27, Омск
+                                </span>
+                            </div>
+                            <a class="btnJaundicedGreenHover footerContacts__button" href="#">Найти магазин рядом</a>
+                        </div>
                     </div>
-                    <a class="footerContacts__email" href="mailto:zhivoy-sad.@mail.ru">
-                        <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/email.svg'; ?>
-                        <span class="footerContacts__emailText"> zhivoy-sad.@mail.ru
-                        </span>
-                    </a>
-                    <div class="footerContacts__address">
-                        <div class="footerContacts__addressContainer">
-                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/address.svg'; ?>
-                            <span class="footerContacts__addressText"> ул. Сакена Сейфуллина, 27, Омск
+
+                </div>
+                <div class="footer__box">
+                    <div class="footer__subscribe footerSubscribe">
+                        <div class="footer__title footer__title_small">Подпишитесь</div>
+                        <span class="footerSubscribe__label">Оставьте свой e-mail, и мы будем сообщать
+                            вам об акциях и новинках</span>
+                        <form class="footerSubscribe__form" action="">
+                            <input class="footerSubscribe__input footerSubscribeInput_js" type="text" placeholder="Укажите ваш e-mail" value="">
+                            <button class="footerSubscribe__button footerSubscribeButton_js" type="submit">
+                                <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
+                            </button>
+                        </form>
+                        <div class="footerSubscribe__error footerSubscribeError_js hidden">
+                            <div class="footerSubscribe__errorImg">!</div>
+                            <span class="footerSubscribe__errorText">Адрес электронной почты введён некорректно. <br> Пример: example@mail.ru
                             </span>
                         </div>
-                        <a class="btnJaundicedGreenHover footerContacts__button" href="#">Найти магазин рядом</a>
+                    </div>
+                    <div class="footer__accept footerAccept">
+                        <div class="footer__title footer__title_small">Мы принимаем</div>
+                        <div class="footerAccept__cards">
+                            <img class="footerAccept__img" src="/dist/img/mastercard.png" alt="">
+                            <img class="footerAccept__img" src="/dist/img/visa.png" alt="">
+                            <img class="footerAccept__img" src="/dist/img/mir.png" alt="">
+                        </div>
                     </div>
                 </div>
-                <div class="footer__subscribe footerSubscribe">
-                    <div class="footer__title footer__title_small">Подпишитесь</div>
-                    <span class="footerSubscribe__label">Оставьте свой e-mail, и мы будем сообщать
-                        вам об акциях и новинках</span>
-                    <form class="footerSubscribe__form" action="">
-                        <input class="footerSubscribe__input footerSubscribeInput_js" type="text" placeholder="Укажите ваш e-mail" value="">
-                        <button class="footerSubscribe__button footerSubscribeButton_js" type="submit">
-                            <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
-                        </button>
-                    </form>
-                    <div class="footerSubscribe__error footerSubscribeError_js hidden">
-                        <div class="footerSubscribe__errorImg">!</div>
-                        <span class="footerSubscribe__errorText">Адрес электронной почты введён некорректно. <br> Пример: example@mail.ru
-                        </span>
-                    </div>
-                </div>
-                <div class="footer__accept footerAccept">
-                    <div class="footer__title footer__title_small">Мы принимаем</div>
-                    <div class="footerAccept__cards">
-                        <img class="footerAccept__img" src="/dist/img/mastercard.png" alt="">
-                        <img class="footerAccept__img" src="/dist/img/visa.png" alt="">
-                        <img class="footerAccept__img" src="/dist/img/mir.png" alt="">
-                    </div>
-                </div>
+
                 <div class="footer__end footerEnd">
                     <div class="footerEnd__ferma">
                         <a class="footerEnd__logo" href="https://fermastudio.com/" target="_blank">

@@ -19321,6 +19321,14 @@ function sliderProductSpecial() {
             slidesToShow: 3,
             slidesToScroll: 1
           }
+        }, {
+          breakpoint: 540,
+          settings: {
+            slidesToShow: 1.5,
+            slidesToScroll: 1,
+            arrows: false,
+            draggable: true
+          }
         }]
       });
     }

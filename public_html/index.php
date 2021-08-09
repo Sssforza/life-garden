@@ -139,6 +139,32 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						</div>
 						<a class="productSpecial__all" href="#">Показать все</a>
 					</div>
+					<div class="productBlock__content sliderProductSpecial_js productBlockBox_js show" data-slider="novelty">
+						<div class="specialSample__item specialSampleItem_js active" data-sample="novelty">
+							<div class="specialSample__img">
+								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg1.svg'; ?>
+							</div>
+							<div class="specialSample__name">Новинки</div>
+						</div>
+						<div class="specialSample__item specialSampleItem_js" data-sample="promotions">
+							<div class="specialSample__img">
+								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg2.svg'; ?>
+							</div>
+							<div class="specialSample__name">Товары по акции</div>
+						</div>
+						<div class="specialSample__item specialSampleItem_js" data-sample="hit">
+							<div class="specialSample__img">
+								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg3.svg'; ?>
+							</div>
+							<div class="specialSample__name">Хит продаж</div>
+						</div>
+						<div class="specialSample__item specialSampleItem_js" data-sample="presents">
+							<div class="specialSample__img">
+								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg4.svg'; ?>
+							</div>
+							<div class="specialSample__name">Для подарков</div>
+						</div>
+					</div>
 					<div class="productSpecial__productBlock productBlock">
 						<div class="productBlock__content sliderProductSpecial_js productBlockBox_js show" data-slider="novelty">
 							<div class="productBlock__item cardProduct">

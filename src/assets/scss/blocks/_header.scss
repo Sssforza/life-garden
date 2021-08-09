@@ -783,6 +783,7 @@
     padding-bottom: 55px;
     background-color: $white;
     color: $textColor;
+    overflow-y: scroll;
     &__go {
         top: 129px;
         transition: top 0.5s;
@@ -803,6 +804,12 @@
             template-columns: 33% 37% 1fr;
             template-rows: 1fr 1fr;
             gap: 44px;
+        }
+        @media (max-width: $lg) {
+            grid: {
+                template-columns: 50% 50%;
+                gap: 55px;
+            }
         }
     }
     &__item {
@@ -857,6 +864,14 @@
     transition: top 0.5s ease-in-out;
     background-color: $white;
     color: $textColor;
+    @media (max-width: $xs) {
+        left: -20px;
+        align-self: center;
+        width: 540px;
+        height: calc(100vh - 72px);
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
 
     &__item {
         display: flex;
@@ -864,6 +879,12 @@
         padding: 15px 36px 15px 41px;
         position: relative;
         transition: $transition;
+        @media (max-width: $xs) {
+            padding: 20px;
+            &:after {
+                left: 46px;
+            }
+        }
         &:hover {
             background-color: #f0f0f0;
             position: relative;
@@ -886,6 +907,11 @@
     }
     &__svg {
         display: block;
+        & svg {
+            display: block;
+            width: 18px;
+            height: 18px;
+        }
     }
     &__svgArrow {
         display: block;
@@ -901,6 +927,11 @@
             size: 16px;
         }
         line-height: 24px;
+        @media (max-width: $xs) {
+            margin-left: 8px;
+            font-size: 20px;
+            line-height: 26px;
+        }
     }
     &__itemSale {
         display: flex;
@@ -908,6 +939,11 @@
         padding: 15px 36px 15px 41px;
         position: relative;
         transition: $transition;
+        @media (max-width: $xs) {
+            &:after {
+                left: 46px;
+            }
+        }
         &:hover {
             background-color: #f0f0f0;
             position: relative;
@@ -936,6 +972,9 @@
         .headerHelp__text {
             margin: 0;
         }
+        @media (max-width: $xs) {
+            margin-left: 8px;
+        }
     }
     &__img {
         width: 54px;
@@ -946,6 +985,10 @@
         font-size: 14px;
         line-height: 10px;
         color: #8c949b;
+        @media (max-width: $xs) {
+            font-size: 16px;
+            line-height: 12px;
+        }
     }
     &__price {
         display: flex;
