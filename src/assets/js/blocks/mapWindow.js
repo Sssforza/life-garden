@@ -14,7 +14,7 @@ export function mapWindow() {
 
     ymaps.ready(init);
 
-    var center = [54.99244, 73.36859]; //омск
+    var center = [54.99244, 73.34859]; //омск
     var zoom = 12;
 
     function init() {

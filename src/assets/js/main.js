@@ -19,8 +19,7 @@ import {
   headerClick,
   headerScroll,
   headerOpenClient,
-  quickView,
-  clubCardPopup
+  headerOpenElse
 } from "./blocks/_header.js";
 
 //📁 /assets/js/blocks  _footer.js
@@ -58,13 +57,20 @@ import { specialSampleTabs } from "./blocks/specialSample.js";
 import { openImage, checkCategories, otherClicks } from "./blocks/detail.js";
 
 //📁 /assets/js/blocks  masterClass.js
-import { masterClassPopups, masterClassBuy, masterChoiceMonth } from "./blocks/masterClass.js";
+import {
+  masterClassPopups,
+  masterChoiceMonth,
+} from "./blocks/masterClass.js";
 
 //📁 /assets/js/blocks  specialSample.js
 import { mainGardenShow, masterClassShow } from "./blocks/showFull.js";
 
 //📁 /assets/js/blocks  specialSample.js
 import { mapInit } from "./blocks/map.js";
+
+//📁 /assets/js/blocks  index.js
+import { checkShops } from "./blocks/index.js";
+
 //📁 /assets/js/blocks  specialSample.js
 import { mapWindow } from "./blocks/mapWindow.js";
 
@@ -73,6 +79,42 @@ import { mapAsideScroll } from "./blocks/scrollbar.js";
 
 //📁 /assets/js/blocks  clubCard.js
 import { checkClubCard } from "./blocks/clubCard.js";
+
+//📁 /assets/js/blocks  newspaper.js
+import { newspaperPopup, pdfLoader } from "./blocks/newspaper.js";
+
+//📁 /assets/js/blocks  articles.js
+import { articles } from "./blocks/articles.js";
+
+//📁 /assets/js/blocks  news.js
+import { newsCategories } from "./blocks/news.js";
+
+//📁 /assets/js/blocks  feedback.js
+import { reviewCheck } from "./blocks/feedback.js";
+
+//📁 /assets/js/blocks  adaptive.js
+import { adaptive } from "./blocks/adaptive.js";
+
+//📁 /assets/js/blocks  adaptive.js
+import {
+  popupForgotPassword,
+  popupRecoveryPassword,
+  popupAuthorization,
+  popupClubCard,
+  popupQuickView,
+  popupMasterClass,
+} from "./blocks/popups.js";
+
+//📁 /assets/js/blocks  adaptive.js
+import {
+  validationEnter,
+  validationReg,
+  validationForgot,
+  validationRecovery,
+  validationClubCard,
+  validationPersonal,
+  validationMasterClass
+} from "./blocks/validation";
 
 document.addEventListener("DOMContentLoaded", function () {
   // open contextual hint
@@ -83,6 +125,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //popup catalog
   headerCatalog();
+
+  //popup else
+  headerOpenElse();
 
   //popup basket and pre-order
   headerClick();
@@ -115,6 +160,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // mster-class show all
   masterClassShow();
+
+  // check map or list on main
+  checkShops();
 
   // validation e-mail
   footerValidationEmail();
@@ -160,25 +208,51 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // slick slider About page
   sliderAbout();
-  
+
   // slick slider MasterClass page
   sliderMasterClass();
 
   // all archives MasterClass page
   masterClassPopups();
 
-  // buy popup MasterClass page
-  masterClassBuy();
-
   // choice month MasterClass page
   masterChoiceMonth();
-
-  // quickView detail popup
-  quickView();
 
   // check policy club-card
   checkClubCard();
 
-  // club-card popup
-  clubCardPopup();
+  // newspaper popup
+  newspaperPopup();
+
+  // pdf loader popup
+  pdfLoader();
+
+  // articles
+  articles();
+
+  // check categories in news
+  newsCategories();
+
+  // validation all popups
+  validationEnter();
+  validationReg();
+  validationForgot();
+  validationRecovery();
+  validationClubCard();
+  validationPersonal();
+  validationMasterClass();
+
+  //open all popups
+  popupForgotPassword();
+  popupRecoveryPassword();
+  popupAuthorization();
+  popupClubCard();
+  popupQuickView();
+  popupMasterClass();
+
+  // check stars in feedback
+  reviewCheck();
+
+  // adaptive
+  adaptive();
 });

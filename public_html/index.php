@@ -145,7 +145,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<div class="cardProduct__new">Новинка</div>
 								<div class="cardProduct__img">
 									<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg1.jpg)">
-										<div class="btnJaundiced cardProduct__quickView cardProduct__quickView_js">Быстрый просмотр</div>
+										<a href="#quickView" class="popup-modal btnJaundiced cardProduct__quickView cardProduct__quickView_js">Быстрый просмотр</a>
 									</div>
 								</div>
 								<div class="cardProduct__info">
@@ -1225,6 +1225,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						</div>
 					</div>
 				</div>
+				<a class="mainNews__btnAll btn" href="/news/">Все новости</a>
 			</div>
 		</section>
 		<section class="clubCard">
@@ -1253,7 +1254,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							</div>
 						</div>
 					</div>
-					<a class="btn clubCard__btn clubCard__btn_js" href="#">Получить карту</a>
+					<a href="#clubCard" class="popup-modal-club btn clubCard__btn clubCard__btn_js" href="#">Получить карту</a>
 					<div class="clubCard__minInfo">
 						* Скидка не&nbsp;распространяется на&nbsp;товары по&nbsp;акции. Скидка в&nbsp;период &laquo;Дня&nbsp;рождения&raquo; предоставляется только самому клиенту по&nbsp;предъявлении документа
 						(паспорт, пенсионное удостоверение, водительские права).
@@ -1261,12 +1262,22 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				</div>
 			</div>
 		</section>
-		<section class="map">
+		<section class="map map__main">
 			<div class="container">
 				<div class="map__title">Ждём в гости</div>
 				<div class="map__description">Найдите ближайший магазин и&nbsp;отправляйтесь за&nbsp;покупками</div>
+				<div class="map__choice choice">
+					<div class="choice__btn choice__btn_checked choice__map_js">
+						<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/choiceMap.svg'; ?>
+						<span>На карте</span>
+					</div>
+					<div class="choice__btn choice__list_js">
+						<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/choiceList.svg'; ?>
+						<span>Списком</span>
+					</div>
+				</div>
 				<div class="map__content">
-					<aside class="map__aside scrollbar-inner">
+					<aside class="map__aside scrollbar-inner aside__show_js">
 						<div class="map__item mapItem_js" data-coord1="54.970231" data-coord2="73.392044" data-id="0">
 							<div class="map__unit address">ул. Маяковского, 20</div>
 							<div class="map__unit tel">
@@ -1318,7 +1329,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 							</div>
 						</div>
 					</aside>
-					<div id="map"></div>
+					<div id="mapWindow" class="map__show_js map_checked"></div>
 				</div>
 			</div>
 		</section>

@@ -40,6 +40,14 @@ body {
 .page {
   padding-top: 210px;
   padding-bottom: 88px;
+  @media (max-width: $lg) {
+    padding-top: 152px;
+    padding-bottom: 66px;
+  }
+  @media (max-width: $xs) {
+    padding-top: 200px;
+    padding-bottom: 72px;
+  }
   &__box {
     margin-top: 35px;
   }
@@ -101,9 +109,13 @@ body {
   &:hover {
     background: $darkGreen;
   }
-  &:disabled{
+  &:disabled {
     pointer-events: none;
-    background: #6F7982;
+    background: #6f7982;
+  }
+  &_disabled {
+    pointer-events: none;
+    background-color: #6f7982;
   }
 }
 .btnJaundiced {
@@ -178,8 +190,7 @@ body {
     color: $white;
     background: #1b643b;
   }
-  &_disabled{
-    
+  &_disabled {
   }
 }
 .btnGray {
@@ -256,6 +267,29 @@ body {
 }
 .productBlock {
   margin-top: 37px;
+  &__dots {
+    position: absolute;
+    left: 50%;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    li {
+      margin: 0 5px;
+      width: 12px;
+      height: 12px;
+      background: $gray2;
+      border-radius: 50%;
+      overflow: hidden;
+      cursor: pointer;
+      transition: $transition;
+      &.slick-active {
+        background: #1e7243;
+      }
+      button {
+        display: none;
+      }
+    }
+  }
   &__content {
     margin: 0 -10px;
     &:hover {
@@ -289,6 +323,9 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: $transition;
+    @media (max-width: $lg) {
+      opacity: 1;
+    }
     &:hover {
       svg {
         path {
@@ -310,10 +347,16 @@ body {
   }
   &__next {
     right: -25px;
+    @media (max-width: $lg) {
+      right: -13px;
+    }
   }
   &__prev {
     left: -25px;
     transform: rotate(180deg);
+    @media (max-width: $lg) {
+      left: -13px;
+    }
   }
 }
 .cardProduct {
@@ -323,6 +366,9 @@ body {
   border: 1px solid $border;
   border-radius: 10px;
   overflow: hidden;
+  @media (max-width: $lg) {
+    width: 307px;
+  }
   &__img {
     width: 100%;
     height: 200px;
@@ -919,6 +965,12 @@ body {
       }
     }
   }
+  @media (max-width: $lg) {
+    & svg {
+      width: 24px;
+      margin-left: 14px;
+    }
+  }
   &.active {
     svg {
       path {
@@ -955,8 +1007,8 @@ body {
   }
   &__close {
     &svg {
+      display: block;
       path {
-        display: block;
       }
     }
     position: absolute;
@@ -1178,9 +1230,14 @@ body {
     line-height: 19px;
     color: $textColor;
     font-family: "Rubik";
-    & span{
+    & span {
       color: $green;
     }
+  }
+  &__errorMessage {
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 20px;
   }
   &__input,
   &__textarea {
@@ -1192,7 +1249,7 @@ body {
     border: 1px solid #c7d0d9;
     border-radius: 5px;
     transition: $transition;
-    @include placeholder(16px, #8c949b, "FiraSans", $opacity: 1);
+    @include placeholder(16px, #8c949b, "Firasans", $opacity: 1);
     &:focus {
       border: 1px solid #1e7243;
     }
@@ -1207,6 +1264,9 @@ body {
     &_month {
       width: 330px;
       height: 50px;
+    }
+    &_error {
+      border: 1px solid $error;
     }
   }
   &__textarea {
@@ -1265,8 +1325,40 @@ body {
 // map
 .map {
   margin-top: 108px;
+  @media (max-width: $lg) {
+    margin-top: 45px;
+  }
+  @media (max-width: $xs) {
+    margin-top: 40px;
+  }
+  &__main{
+    .map__btn{
+      display: none;
+    }
+  }
   &_small {
     margin: 0;
+  }
+  &__choice {
+    display: none;
+    width: 500px;
+    height: 65px;
+    margin-top: 15px;
+    & span {
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      margin-left: 6px;
+    }
+    @media (max-width: $xs) {
+      display: flex;
+    }
+    .choice__btn {
+      width: 50%;
+      height: 59px;
+    }
   }
   &__baloonTitle {
     font-family: FiraSans;
@@ -1290,16 +1382,29 @@ body {
       font-size: 36px;
       line-height: 43px;
     }
+    @media (max-width: $lg) {
+      font-size: 36px;
+    }
   }
   &__description {
     margin-top: 21px;
     font-size: 20px;
     line-height: 32px;
+    @media (max-width: $lg) {
+      margin-top: 5px;
+    }
+    @media (max-width: $lg) {
+      margin-top: 0;
+      line-height: 28px;
+    }
   }
   &__content {
     margin-top: 33px;
     display: flex;
-    justify-content: space-between;
+    gap: 12px;
+    @media (max-width: $xs) {
+      display: block;
+    }
   }
   &__item {
     padding: 27px 28px 23px;
@@ -1308,10 +1413,32 @@ body {
     line-height: 24px;
     color: $textColor;
     font-family: "Rubik";
+    font-style: normal;
+    font-weight: normal;
     border: 1px solid $gray2;
     border-radius: 5px;
     cursor: pointer;
     transition: $transition;
+
+    @media (max-width: $lg) {
+      padding: 28px 35px 23px 29px;
+      width: 347px;
+      font-size: 16px;
+    }
+    @media (max-width: $xs) {
+      width: 500px;
+      border: none;
+      pointer-events: none;
+      padding: 0;
+      font-size: 20px;
+      &:not(:last-child) {
+        padding-bottom: 26px;
+        border-bottom: 1px solid $border;
+      }
+      &:not(:first-child) {
+        margin-top: 25px;
+      }
+    }
     &:not(:first-child) {
       margin-top: 15px;
     }
@@ -1340,6 +1467,7 @@ body {
       }
     }
     &.address {
+      font-family: "Firasans";
       &:before {
         height: 25px;
         background-image: url($imgUrl + "svg/mapUnitAddress.svg");
@@ -1356,10 +1484,20 @@ body {
       display: block;
       font-size: 16px;
       color: #7d8e84;
+      @media (max-width: $lg) {
+        font-size: 14px;
+      }
+      @media (max-width: $xs) {
+        font-size: 18px;
+        line-height: 28px;
+      }
     }
   }
   &__tel {
     pointer-events: none;
+  }
+  &_checked{
+    display: block !important;
   }
   &__aside {
     width: 538px;
@@ -1369,7 +1507,18 @@ body {
       overflow: scroll;
       overflow-x: hidden;
     }
+    @media (max-width: $lg) {
+      width: 364px;
+      height: 588px;
+    }
+    @media (max-width: $xs) {
+      display: none;
+      width: 500px;
+      height: auto;
+      margin-top: 25px;
+    }
   }
+
   &__btn {
     display: none;
     width: 120px;
@@ -1382,10 +1531,23 @@ body {
   #map {
     width: 848.82px;
     height: 585px;
+    @media (max-width: $lg) {
+      width: 583px;
+    }
+    @media (max-width: $xs) {
+      width: 500px;
+    }
   }
   #mapWindow {
     width: 848.82px;
     height: 585px;
+    @media (max-width: $lg) {
+      width: 583px;
+    }
+    @media (max-width: $xs) {
+      display: none;
+      width: 500px;
+    }
   }
   &__window {
     width: 750px !important;
@@ -1394,7 +1556,7 @@ body {
 }
 .popover {
   width: 325px;
-  height: 215px;
+  height: auto;
   background: #ffffff;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
@@ -1703,27 +1865,26 @@ body {
     justify-content: center;
     width: 45px;
     height: 45px;
-    border: 1px solid #C7D0D9;
+    border: 1px solid #c7d0d9;
     border-radius: 50%;
     transition: $transition;
-    &:hover{
+    &:hover {
       border: 1px solid $green;
     }
     & svg {
-      path{
+      path {
         display: block;
       }
     }
   }
 }
-.sliderPages{
-  &__title{
+.sliderPages {
+  &__title {
     font-family: Rubik;
     font-weight: bold;
     font-size: 36px;
     line-height: 50px;
   }
-  &__block{
-
+  &__block {
   }
 }

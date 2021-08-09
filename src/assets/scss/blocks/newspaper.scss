@@ -1,0 +1,125 @@
+@import "../modules/utilities/_variables.scss";
+@import "./flipbook.style.scss";
+
+
+.newspaper {
+  &__header {
+  }
+
+  &__body {
+  }
+}
+.newspaperHeader { 
+  &__container {
+    margin-top: 44px;
+    display: flex;
+    border-bottom: 1px solid #88bd9f;
+    gap: 40px;
+  }
+
+  &__item {
+    font-family: Rubik;
+    font-size: 20px;
+    line-height: 42px;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    border-bottom: 4px solid $white;
+    transition: $transition;
+    &_checked {
+      border-bottom: 4px solid $green;
+    }
+
+    &_open {
+      & svg {
+        transform: rotate(180deg);
+      }
+      .newspaperHeader__years {
+        display: block;
+      }
+    }
+    &:hover {
+      border-bottom: 4px solid $green;
+    }
+  }
+
+  &__text {
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    & svg {
+      margin-left: 12px;
+      display: block;
+      path {
+        stroke: $green;
+      }
+    }
+    & span {
+      color: $green;
+    }
+  }
+
+  &__years {
+    display: none;
+    position: absolute;
+    width: 155px;
+    top: calc(100% + 5px);
+    left: 0;
+    background: $white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    .newspaperHeader__year:first-child {
+      padding-top: 15px;
+    }
+    .newspaperHeader__year:last-child {
+      padding-bottom: 15px;
+    }
+  }
+
+  &__year {
+    font-size: 18px;
+    line-height: 24px;
+    cursor: pointer;
+    color: $textColor;
+    position: relative;
+    padding: 7.5px 25px;
+    transition: $transition;
+    &:hover {
+      background-color: #f2f3f4;
+    }
+  }
+}
+
+.newspaperBody {
+  margin-top: 53px;
+
+  &__ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 53px;
+  }
+
+  &__pdf{
+    width: 230px;
+  }
+
+  &__cover {
+    max-width: 230px;
+    max-height: 326px;
+    filter: drop-shadow(0px 3px 13px rgba(0, 0, 0, 0.17));
+    cursor: pointer;
+    & img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__release {
+    width: max-content;
+    margin-top: 28px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

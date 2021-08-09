@@ -1,6 +1,8 @@
 // magnific-popup
 @import "../../../../node_modules/magnific-popup/dist/magnific-popup.css";
 
+@import "../blocks/hamburgerBox.scss";
+
 .header {
   width: 100%;
   position: fixed;
@@ -12,6 +14,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: $xs) {
+      justify-content: start;
+    }
   }
   &_padding {
     padding-right: 17px;
@@ -29,12 +34,24 @@
     style: normal;
   }
   transition: all 1s;
+  @media (max-width: $lg) {
+    line-height: 10px;
+    font: {
+      size: 14px;
+    }
+  }
+  @media (max-width: $xs) {
+    display: none;
+  }
   &__hidden {
     margin-top: -45px;
   }
   &__menu {
     display: flex;
     justify-content: space-between;
+    @media (max-width: $lg) {
+      position: relative;
+    }
   }
   &__menuLi {
     transition: $transition;
@@ -47,10 +64,41 @@
   }
   &__menuElse {
     display: none;
+    @media (max-width: $lg) {
+      display: block;
+    }
   }
   &__menuHide {
     display: flex;
     margin-left: 25px;
+    &_open {
+      display: flex !important;
+    }
+    @media (max-width: $lg) {
+      display: none;
+      position: absolute;
+      flex-direction: column;
+      width: 145px;
+      height: 120px;
+      background: $white;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+      top: calc(100% + 18px);
+      right: 0;
+      color: $textColor;
+      overflow: hidden;
+      .headerTop__menuLi {
+        margin: 0;
+        font-size: 14px;
+        line-height: 40px;
+        padding: 0 18px;
+        &:hover {
+          background: #f0f0f0;
+          color: $textColor;
+          cursor: pointer;
+        }
+      }
+    }
   }
   &__newspapper {
     display: flex;
@@ -58,6 +106,18 @@
     justify-content: space-between;
     transition: $transition;
     position: relative;
+    @media (max-width: $lg) {
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        left: 48%;
+        width: 83%;
+        height: 1px;
+        margin-left: -30%;
+        background: $white;
+      }
+    }
     &:after {
       content: "";
       position: absolute;
@@ -93,17 +153,12 @@
       size: 20px;
     }
     line-height: 15px;
-  }
-  &__enter {
-    margin-left: 40px;
-    display: flex;
-    align-items: center;
-    transition: $transition;
-    cursor: pointer;
-    &:hover {
-      color: #c9d200;
+    @media (max-width: $lg) {
+      font-size: 18px;
+      line-height: 13px;
     }
   }
+
   &__client {
     position: relative;
     display: flex;
@@ -130,7 +185,12 @@
     height: 160px;
     flex-direction: column;
     overflow: hidden;
+    @media (max-width: $lg) {
+      left: 0;
+      width: 156px;
+    }
   }
+
   &__item {
     padding: 0 18px;
     color: $textColor;
@@ -156,6 +216,19 @@
   &__end {
     display: flex;
   }
+  &__authorization {
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    transition: $transition;
+    cursor: pointer;
+    &:hover {
+      color: $jaundiced;
+    }
+    @media (max-width: $lg) {
+      margin-left: 15px;
+    }
+  }
 }
 .headerMiddle {
   position: relative;
@@ -163,6 +236,8 @@
   background-color: $white;
   padding: 16px 0;
   border-bottom: 1px solid #c7d0d9;
+  @media (max-width: $xs) {
+  }
   &__search {
     display: flex;
     justify-content: space-between;
@@ -172,15 +247,48 @@
     border: 1px solid grey;
     border-radius: 50px;
     padding: 0 22px 0 29px;
+    position: relative;
+    @media (max-width: $lg) {
+      width: 524px;
+      padding: 0 15px 0 20px;
+    }
+    @media (max-width: $xs) {
+      display: none;
+      align-self: center;
+      position: absolute;
+      top: calc(100% + 17px);
+      left: 0px;
+      right: 0px;
+      width: 540px;
+      height: 112px;
+      border: none;
+      background: $white;
+      padding: 20px;
+      border-radius: 0;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
   }
   &__logo {
     width: 252px;
     height: 39px;
+    & svg {
+      display: block;
+    }
+    @media (max-width: $xs) {
+      width: 219px;
+      & svg {
+        width: 219px;
+        height: 33px;
+      }
+    }
   }
   &__catalog {
     display: flex;
     align-items: center;
     cursor: pointer;
+    @media (max-width: $xs) {
+      display: none;
+    }
     & span {
       font: {
         size: 18px;
@@ -188,6 +296,9 @@
       }
       line-height: 13px;
       color: $darkGreen;
+      @media (max-width: $lg) {
+        font-size: 16px;
+      }
     }
   }
   &__form {
@@ -195,10 +306,22 @@
     display: flex;
     align-items: center;
     margin-left: 29px;
+    @media (max-width: $lg) {
+      margin-left: 13px;
+    }
+    @media (max-width: $xs) {
+      margin-left: 0px;
+      width: 100%;
+      justify-content: space-between;
+    }
   }
   &__formContainer {
     position: relative;
     height: 50px;
+    @media (max-width: $xs) {
+      height: 60px;
+      width: 100%;
+    }
   }
   &__input {
     height: 30px;
@@ -210,14 +333,60 @@
     font-size: 18px;
     line-height: 13px;
     @include placeholder(18px, #9196a9, "FiraSans", $opacity: 1);
+    @media (max-width: $lg) {
+      padding-left: 11px;
+      min-width: 368px;
+      font-size: 16px;
+      line-height: 12px;
+      @include placeholder(16px, #9196a9, "FiraSans", $opacity: 1);
+    }
+    @media (max-width: $xs) {
+      width: 100%;
+      height: 60px;
+      background: #f0f0f0;
+      position: relative;
+      border: none;
+      padding-left: 11px;
+      min-width: 368px;
+      font-size: 22px;
+      line-height: 24px;
+      border-radius: 10px;
+      padding: 18px 18px 18px 22px;
+      @include placeholder(22px, #919eab, "Firasans", $opacity: 1);
+    }
   }
   &__button {
     display: block;
+    &svg {
+      display: block;
+    }
+    @media (max-width: $xs) {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      width: 70px;
+      height: 48px;
+      background: #1e7243;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & svg {
+        width: 23px;
+        height: 23px;
+        path {
+          fill: $white;
+        }
+      }
+    }
   }
   &__icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: $xs) {
+      margin-left: 39px;
+    }
   }
   &__preorder {
     position: relative;
@@ -238,6 +407,149 @@
     }
     .iconSelected {
       margin-right: 13px;
+      @media (max-width: $xs) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+.headerMenuMobile {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: $white;
+  padding: 0 20px;
+  @media (max-width: $xs) {
+    display: flex;
+  }
+  &__enter {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: space-between;
+    width: 540px;
+    height: 68px;
+    background: #00693b;
+    color: $white;
+    padding: 0 20px;
+    & span {
+      font-family: Rubik;
+      font-size: 24px;
+      line-height: 18px;
+      margin-left: 10px;
+    }
+    & svg {
+      width: 25px;
+      height: 28px;
+    }
+  }
+  &__cabinet {
+    align-self: center;
+    width: 540px;
+    height: 68px;
+  }
+  &__icon {
+    & svg {
+      display: block;
+    }
+  }
+  &__arrow {
+    & svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+      path {
+        stroke: $white;
+      }
+    }
+  }
+  &__ul {
+    align-self: center;
+    width: 540px;
+    background: #deeddd;
+    padding: 0 20px;
+  }
+  &__li {
+    padding: 11px 0;
+    &:first-child {
+      padding-top: 28px;
+    }
+    &:last-child {
+      padding-bottom: 28px;
+    }
+    & svg {
+      display: block;
+      width: 22px;
+      height: 22px;
+    }
+    & a {
+      display: flex;
+      align-items: center;
+    }
+    & span {
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 22px;
+      line-height: 26px;
+      margin-left: 10px;
+    }
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 21px;
+    margin-left: 8px;
+    & span {
+      margin-top: 17px;
+      font-family: Firasans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 20px;
+      color: #919eab;
+    }
+  }
+  &__telephone {
+    display: flex;
+    padding: 30px 0;
+    & svg {
+      width: 26px;
+      height: 26px;
+      path {
+        stroke: $green;
+        fill: $green;
+      }
+    }
+  }
+  &__text {
+    margin-left: 12px;
+    font-family: Rubik;
+    font-size: 24px;
+    line-height: 42px;
+  }
+  &__catalog {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    border-bottom: 1px solid #cad4db;
+    border-top: 1px solid #cad4db;
+    .headerMenuMobile__arrow {
+      & svg {
+        transform: rotate(270deg);
+        path {
+          stroke: $green;
+        }
+      }
     }
   }
 }
@@ -248,6 +560,17 @@
   position: relative;
   cursor: pointer;
   margin-right: 30px;
+  @media (max-width: $lg) {
+    margin-right: 25px;
+  }
+  @media (max-width: $xs) {
+    margin-right: 37px;
+
+    & svg {
+      width: 29px;
+      height: 29px;
+    }
+  }
   & svg {
     path {
       fill: $textColor;
@@ -294,6 +617,9 @@
   &__garbage {
     display: flex;
     flex-direction: column;
+    @media (max-width: $lg) {
+      display: none;
+    }
     span {
       &:first-child {
         font-style: normal;
@@ -341,6 +667,9 @@
         opacity: 1;
       }
     }
+  }
+  @media (max-width: $lg) {
+    display: none;
   }
 }
 .headerCatalog {
@@ -711,91 +1040,12 @@
   }
 }
 
-.hamburger {
-  padding-left: 7px;
-  transition-duration: 0.15s;
-  overflow: visible;
-  position: relative;
-  &__box {
-    width: 20px;
-    height: 12px;
-    display: inline-block;
-    position: relative;
-  }
-  &__inner {
-  }
-}
-.hamburger.is-active .hamburger__inner,
-.hamburger.is-active .hamburger__inner::before,
-.hamburger.is-active .hamburger__inner::after {
-  background-color: $darkGreen;
-}
-.hamburger__inner,
-.hamburger__inner::before,
-.hamburger__inner::after {
-  width: 12px;
-  height: 2px;
-  background-color: $darkGreen;
-  border-radius: 1px;
-  position: absolute;
-  transition-property: transform;
-  transition-duration: 0.15s;
-  transition-timing-function: ease;
-}
-.hamburger__inner::before,
-.hamburger__inner::after {
-  content: "";
-  display: block;
-}
-.hamburger__inner::before {
-  width: 16px;
-  top: -5px;
-}
-.hamburger__inner::after {
-  width: 20px;
-  top: 0px;
-}
-.hamburger__collapse .hamburger__inner {
-  bottom: 0px;
-  transition-duration: 0.13s;
-  transition-delay: 0.13s;
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-.hamburger__collapse .hamburger__inner::after {
-  top: -10px;
-  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-    opacity 0.1s linear;
-}
-.hamburger__collapse .hamburger__inner::before {
-  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-.hamburger__collapse.is-active .hamburger__inner {
-  transform: translate3d(0, -2px, 0) rotate(-45deg);
-  transition-delay: 0.22s;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-.hamburger__collapse.is-active .hamburger__inner::after {
-  width: 16px;
-  top: 0;
-  opacity: 1;
-  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-    opacity 0.1s 0.22s linear;
-}
-.hamburger__collapse.is-active .hamburger__inner::before {
-  top: 0;
-  transform: rotate(-90deg);
-  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-    transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
 .quickView {
-  .windowsMessage__popap {
-    width: 1400px;
-    height: max-content;
-    padding: 50px 50px 89px;
-    border-radius: 20px;
-  }
+  width: 1400px;
+  height: max-content;
+  padding: 50px 50px 89px;
+  border-radius: 20px;
+
   .productCard__image {
     width: 576px;
     height: 501px;
@@ -826,12 +1076,11 @@
 }
 
 .clubCardWindow {
-  &__popup {
-    width: 520px;
-    height: 630px;
-    padding: 62px 40px 78px;
-    border-radius: 20px;
-  }
+  width: 520px;
+  height: 630px;
+  padding: 62px 40px 78px;
+  border-radius: 20px;
+
   .windowsMessage__close {
     right: 40px;
   }
@@ -863,5 +1112,364 @@
     height: 55px;
     font-size: 16px;
     line-height: 21px;
+  }
+}
+
+.authorization {
+  width: 520px;
+  height: auto;
+  padding: 35px 40px 46px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+
+  .authorization__head {
+    padding: 0;
+    align-self: center;
+  }
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & a {
+      font-size: 14px;
+      line-height: 17px;
+      color: $textColor;
+      cursor: pointer;
+      transition: $transition;
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+
+  .windowsMessage__close {
+    right: 40px;
+  }
+  .windowsMessage__title {
+    text-align: start;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .envelopeInput {
+    & span {
+    }
+  }
+  .envelopeInput__input {
+    width: 440px;
+    height: 50px;
+  }
+  .envelopeInput:not(:first-child) {
+    margin-top: 20px;
+  }
+  .agreement {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+  }
+  &__btn {
+    width: 200px;
+    height: 52px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &__head {
+    display: flex;
+    height: 60px;
+    background: #deeddd;
+    margin-top: 20px;
+    width: 520px;
+  }
+  &__check {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: rgba(51, 51, 51, 0.7);
+    &_checked {
+      color: $textColor;
+      border-bottom: 4px solid $green;
+    }
+    &:hover {
+      color: $textColor;
+    }
+  }
+  &__enter,
+  &__registration {
+    margin-top: 31px;
+  }
+  &__enter {
+    .authorization__btn {
+      margin-top: 35px;
+    }
+  }
+  &__registration {
+    .authorization__btn {
+      margin-top: 22px;
+    }
+  }
+}
+
+.forgotPassword {
+  width: 520px;
+  height: auto;
+  padding: 35px 40px 45px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+    margin-top: 35px;
+  }
+  &__remember {
+    font-family: Rubik;
+    font-size: 16px;
+    line-height: 29px;
+    cursor: pointer;
+    border-bottom: 1px dashed #9bb5a8;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0px;
+      bottom: -1px;
+      width: 0;
+      height: 1px;
+      background: #718078;
+      transition: width 0.3s ease-out;
+    }
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+  .windowsMessage__close {
+    right: 40px;
+  }
+  .windowsMessage__title {
+    text-align: start;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .envelopeInput {
+    & span {
+      display: none;
+      margin-top: 6px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+  .envelopeInput__input {
+    width: 440px;
+    height: 50px;
+  }
+  .envelopeInput:not(:first-child) {
+    margin-top: 20px;
+  }
+  .agreement {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+  }
+  &__btn {
+    width: 200px;
+    height: 52px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &__head {
+    display: flex;
+    height: 60px;
+    background: #deeddd;
+    margin-top: 20px;
+    width: 520px;
+  }
+  &__check {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: rgba(51, 51, 51, 0.7);
+    &_checked {
+      color: $textColor;
+      border-bottom: 4px solid $green;
+    }
+    &:hover {
+      color: $textColor;
+    }
+  }
+  &__enter,
+  &__registration {
+    margin-top: 31px;
+  }
+  &__enter {
+    .authorization__btn {
+      margin-top: 35px;
+    }
+    &_error {
+      .envelopeInput {
+        & span {
+          display: block;
+        }
+        & input {
+          border: 1px solid $error;
+        }
+      }
+    }
+  }
+  &__registration {
+    .authorization__btn {
+      margin-top: 22px;
+    }
+  }
+}
+.recoveryPassword {
+  &__popup {
+    width: 520px;
+    height: auto;
+    padding: 35px 40px 45px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .windowsMessage__close {
+    right: 40px;
+  }
+  .windowsMessage__title {
+    text-align: start;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .envelopeInput {
+    & span {
+      display: none;
+      margin-top: 6px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+  .envelopeInput__input {
+    width: 440px;
+    height: 50px;
+  }
+  .envelopeInput:not(:first-child) {
+    margin-top: 20px;
+  }
+  .agreement {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+  }
+  &__btn {
+    width: 200px;
+    height: 52px;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 35px;
+  }
+  &__enter {
+    margin-top: 31px;
+  }
+}
+
+.personal {
+  &__title {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  width: 520px;
+  height: auto;
+  padding: 35px 40px 46px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  .personal__head {
+    padding: 0;
+    align-self: center;
+  }
+
+  .windowsMessage__close {
+    right: 40px;
+  }
+  .windowsMessage__title {
+    text-align: start;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .envelopeInput__input {
+    width: 440px;
+    height: 50px;
+  }
+
+  .envelopeInput:not(:first-child) {
+    margin-top: 20px;
+  }
+  &__btn {
+    width: 200px;
+    height: 52px;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 35px;
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    background: #deeddd;
+    margin-top: 35px;
+    width: 520px;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  &__form {
+    margin-top: 31px;
+  }
+
+  &__skip {
+    display: inline-block;
+    margin-top: 17px;
+    font-family: Rubik;
+    font-size: 18px;
+    line-height: 21px;
+    transition: $transition;
+    cursor: pointer;
+    &:hover {
+      color: $green;
+    }
   }
 }
