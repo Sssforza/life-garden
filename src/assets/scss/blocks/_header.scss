@@ -61,6 +61,11 @@
         &:hover {
             color: #c9d200;
         }
+        @media (max-width: $lg) {
+            &:not(:first-child) {
+                margin-left: 20px;
+            }
+        }
     }
     &__menuElse {
         display: none;

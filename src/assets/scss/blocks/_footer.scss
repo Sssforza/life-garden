@@ -27,7 +27,7 @@
         &_margin {
             margin-left: 45px;
             @media (max-width: $lg) {
-                margin-left: 155px;
+                margin-left: 175px;
             }
         }
     }
@@ -82,14 +82,20 @@
                 stroke: $textColor;
             }
         }
+        @media (max-width: $lg) {
+            right: 32px;
+        }
         @media (max-width: $xs) {
             right: 20px;
         }
     }
     &__box {
         display: flex;
-        width: 100%;
-        justify-content: space-between;
+
+        @media (max-width: $lg) {
+            width: 100%;
+            justify-content: space-between;
+        }
         @media (max-width: $xs) {
             flex-direction: column-reverse;
         }
