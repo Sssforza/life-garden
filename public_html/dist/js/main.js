@@ -11493,7 +11493,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderProductSpecial"])(); // slick slider Product page
 
-  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderProduct"])(); // sroll page on top
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderProduct"])(); // slick slider Product page
+
+  Object(_blocks_sliders_js__WEBPACK_IMPORTED_MODULE_8__["sliderProductSectionCategories"])(); // sroll page on top
 
   Object(_blocks_footer_js__WEBPACK_IMPORTED_MODULE_5__["footerScrollUp"])(); // map
 
@@ -19275,6 +19277,7 @@ function dateBirthday() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderMain", function() { return sliderMain; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderProductSpecial", function() { return sliderProductSpecial; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderProductSectionCategories", function() { return sliderProductSectionCategories; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderAbout", function() { return sliderAbout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderProduct", function() { return sliderProduct; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderMasterClass", function() { return sliderMasterClass; });
@@ -19310,26 +19313,50 @@ function sliderProductSpecial() {
       slickMain.slick({
         infinite: false,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 1.5,
         slidesToScroll: 1,
         draggable: false,
+        arrows: false,
+        mobileFirst: true,
+        variableWidth: true,
         prevArrow: '<div class="productBlock__prev"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83984 2L10.8398 10.84L1.83984 19" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>',
         nextArrow: '<div class="productBlock__next"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83984 2L10.8398 10.84L1.83984 19" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>',
         responsive: [{
-          breakpoint: 1400,
+          breakpoint: 565,
           settings: {
             slidesToShow: 3,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            arrows: true,
+            draggable: true,
+            variableWidth: false
           }
         }, {
-          breakpoint: 540,
+          breakpoint: 1401,
           settings: {
-            slidesToShow: 1.5,
+            slidesToShow: 4,
             slidesToScroll: 1,
-            arrows: false,
-            draggable: true
+            arrows: true,
+            draggable: true,
+            variableWidth: false
           }
         }]
+      });
+    }
+  }
+}
+function sliderProductSectionCategories() {
+  if (document.querySelector(".productSectionCategories__slider_js")) {
+    var slickMain = $(".productSectionCategories__slider_js");
+
+    if (slickMain.length) {
+      slickMain.slick({
+        infinite: false,
+        speed: 500,
+        slidesToShow: 2.5,
+        slidesToScroll: 1,
+        draggable: true,
+        arrows: false,
+        variableWidth: true
       });
     }
   }

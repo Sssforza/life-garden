@@ -27,7 +27,7 @@
         &_margin {
             margin-left: 45px;
             @media (max-width: $lg) {
-                margin-left: 175px;
+                margin-left: 155px;
             }
         }
     }
@@ -88,6 +88,8 @@
     }
     &__box {
         display: flex;
+        width: 100%;
+        justify-content: space-between;
         @media (max-width: $xs) {
             flex-direction: column-reverse;
         }
@@ -329,6 +331,7 @@
 
     @media (max-width: $lg) {
         margin-top: 35px;
+        margin-left: 0;
     }
     @media (max-width: $xs) {
         margin-top: 25px;

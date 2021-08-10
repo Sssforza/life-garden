@@ -49,6 +49,7 @@ import {
     sliderProduct,
     sliderAbout,
     sliderMasterClass,
+    sliderProductSectionCategories,
 } from "./blocks/sliders.js";
 
 //📁 /assets/js/blocks  specialSample.js
@@ -141,6 +142,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // slick slider Product page
     sliderProduct();
+
+    // slick slider Product page
+    sliderProductSectionCategories();
 
     // sroll page on top
     footerScrollUp();

@@ -139,8 +139,8 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						</div>
 						<a class="productSpecial__all" href="#">Показать все</a>
 					</div>
-					<div class="productBlock__content sliderProductSpecial_js productBlockBox_js show" data-slider="novelty">
-						<div class="specialSample__item specialSampleItem_js active" data-sample="novelty">
+					<div class="productSection__categories productSectionCategories__slider_js productBlockBox_js">
+						<div class=" specialSample__item specialSampleItem_js active" data-sample="novelty">
 							<div class="specialSample__img">
 								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg1.svg'; ?>
 							</div>
