@@ -118,13 +118,14 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 										<div class="lkOrders__text">Заказ от: <span>12.02.2020 /</span> </div>
 										<div class="lkOrders__text">&nbsp; Доставлено: <span>20.02.2020</span> </div>
 									</div>
-									<div class="lkOrders__text lkOrders__text_sum">Сумма:
-										<span class="lkOrders__sum">13 800</span>
-										<span class="basketCard__ruble">₽</span>
-									</div>
+									<div class="lkOrders__text lkOrders__text_margin"> Адрес доставки:</div>
+									<div class="lkOrders__address"><span>г. Омск ул. Сакена Сейфуллина, 27</span></div>
+
 								</div>
-								<div class="lkOrders__text lkOrders__text_margin"> Адрес доставки:</div>
-								<div class="lkOrders__address"><span>г. Омск ул. Сакена Сейфуллина, 27</span></div>
+								<div class="lkOrders__text lkOrders__text_sum">Сумма:
+									<span class="lkOrders__sum">13 800</span>
+									<span class="basketCard__ruble">₽</span>
+								</div>
 							</div>
 						</div>
 						<div class="lkOrders__item">
@@ -200,12 +201,14 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<div class="lkOrders__box">
 									<div class="lkOrders__dates">
 										<div class="lkOrders__text">Заказ от: <span>12.02.2020 /</span> </div>
-										<div class="lkOrders__text">&nbsp; Ожидаемая дата доставки: <span>20.02.2020</span> </div>
+										<div class="lkOrders__text">&nbsp; Дата доставки: <span>20.02.2020</span> </div>
 									</div>
-									<div class="lkOrders__text lkOrders__text_sum">Сумма: <span class="lkOrders__sum">13 800</span> <span class="basketCard__ruble"> ₽</span></div>
+									<div class="lkOrders__text lkOrders__text_margin"> Адрес доставки:</div>
+									<div class="lkOrders__address"><span>г. Омск ул. Сакена Сейфуллина, 27</span></div>
 								</div>
-								<div class="lkOrders__text lkOrders__text_margin"> Адрес доставки:</div>
-								<div class="lkOrders__address"><span>г. Омск ул. Сакена Сейфуллина, 27</span></div>
+								<div class="lkOrders__text lkOrders__text_sum">Сумма: <span class="lkOrders__sum">13 800</span> <span class="basketCard__ruble"> ₽</span></div>
+
+
 							</div>
 						</div>
 						<div class="lkOrders__item">
@@ -282,10 +285,12 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<div class="lkOrders__dates">
 										<div class="lkOrders__text">Заказ от: <span>12.02.2020 /</span> </div>
 									</div>
-									<div class="lkOrders__text lkOrders__text_sum">Сумма: <span class="lkOrders__sum">13 800</span> <span class="basketCard__ruble"> ₽</span></div>
+									<div class="lkOrders__text lkOrders__text_margin"> Адрес доставки:</div>
+									<div class="lkOrders__address"><span>г. Омск ул. Сакена Сейфуллина, 27</span></div>
 								</div>
-								<div class="lkOrders__text lkOrders__text_margin"> Адрес доставки:</div>
-								<div class="lkOrders__address"><span>г. Омск ул. Сакена Сейфуллина, 27</span></div>
+
+								<div class="lkOrders__text lkOrders__text_sum">Сумма: <span class="lkOrders__sum">13 800</span> <span class="basketCard__ruble"> ₽</span></div>
+
 							</div>
 						</div>
 						<div class="lkOrders__item">
@@ -362,10 +367,12 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<div class="lkOrders__dates">
 										<div class="lkOrders__text">Заказ от: <span>12.02.2020 /</span> </div>
 									</div>
-									<div class="lkOrders__text lkOrders__text_sum">Сумма: <span class="lkOrders__sum">13 800</span> <span class="basketCard__ruble"> ₽</span></div>
+									<div class="lkOrders__text lkOrders__text_margin"> Адрес доставки:</div>
+									<div class="lkOrders__address"><span>г. Омск ул. Сакена Сейфуллина, 27</span></div>
 								</div>
-								<div class="lkOrders__text lkOrders__text_margin"> Адрес доставки:</div>
-								<div class="lkOrders__address"><span>г. Омск ул. Сакена Сейфуллина, 27</span></div>
+								<div class="lkOrders__text lkOrders__text_sum">Сумма: <span class="lkOrders__sum">13 800</span> <span class="basketCard__ruble"> ₽</span></div>
+
+
 							</div>
 						</div>
 						<div class="lkOrders__item">
@@ -442,13 +449,14 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<div class="lkOrders__dates">
 										<div class="lkOrders__text">Заказ от: <span>12.02.2020 /</span> </div>
 									</div>
-									<div class="lkOrders__text lkOrders__text_sum">Сумма:
-										<span class="lkOrders__sum">13 800</span>
-										<span class="basketCard__ruble"> ₽</span>
-									</div>
+									<div class="lkOrders__text lkOrders__text_margin"> Адрес доставки:</div>
+									<div class="lkOrders__address"><span>г. Омск ул. Сакена Сейфуллина, 27</span></div>
 								</div>
-								<div class="lkOrders__text lkOrders__text_margin"> Адрес доставки:</div>
-								<div class="lkOrders__address"><span>г. Омск ул. Сакена Сейфуллина, 27</span></div>
+
+								<div class="lkOrders__text lkOrders__text_sum">Сумма:
+									<span class="lkOrders__sum">13 800</span>
+									<span class="basketCard__ruble"> ₽</span>
+								</div>
 							</div>
 						</div>
 					</div>

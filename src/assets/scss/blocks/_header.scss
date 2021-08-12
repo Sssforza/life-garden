@@ -407,6 +407,7 @@
         line-height: 13px;
         @include placeholder(18px, #9196a9, "FiraSans", $opacity: 1);
         @media (max-width: $lg) {
+            position: relative;
             padding-left: 11px;
             min-width: 368px;
             font-size: 16px;
@@ -454,14 +455,16 @@
         }
     }
     &__clear {
-        display: none;
+        display: block;
         position: absolute;
 
         &svg {
             display: block;
         }
         @media (max-width: $lg) {
-            display: block;
+            cursor: pointer;
+            top: 13px;
+            right: 38px;
             & svg {
                 width: 25px;
                 height: 25px;

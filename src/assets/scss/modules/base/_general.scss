@@ -400,11 +400,16 @@ body {
         width: 307px;
     }
     @media (max-width: $xs) {
-        width: 307px;
+        width: 100%;
+        padding: 31px;
+        height: 430px;
     }
     &__img {
         width: 100%;
         height: 200px;
+        @media (max-width: $xs) {
+            width: 200px;
+        }
     }
     &__picture {
         position: relative;
@@ -417,6 +422,9 @@ body {
             size: cover;
             position: center;
             repeat: no-repeat;
+        }
+        @media (max-width: $xs) {
+            border-radius: 10px;
         }
         &:after {
             content: "";
@@ -454,6 +462,11 @@ body {
         flex-direction: column;
         justify-content: space-between;
         height: 285px;
+        @media (max-width: $xs) {
+            margin-top: 24px;
+            padding: 0;
+            height: 137px;
+        }
     }
     &__title {
         max-height: 72px;
@@ -471,6 +484,7 @@ body {
         }
         @media (max-width: $xs) {
             font-size: 20px;
+            line-height: 28px;
         }
     }
     &__bottom {
@@ -478,6 +492,8 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: $xs) {
+        }
     }
     &__elements {
         display: flex;
@@ -486,6 +502,13 @@ body {
             margin-left: 12px;
             width: 105px;
             height: 42px;
+            @media (max-width: $xs) {
+                width: 165px;
+                height: 58px;
+                font-size: 20px;
+                line-height: 24px;
+                margin-left: 30px;
+            }
         }
     }
     &__new {
@@ -712,13 +735,35 @@ body {
 }
 .availability {
     margin-top: 11px;
+    @media (max-width: $xs) {
+        position: absolute;
+        top: 32px;
+        right: 96px;
+    }
     &__text {
         display: flex;
         align-items: center;
         font-size: 14px;
         line-height: 10px;
         color: $gray1;
-
+        @media (max-width: $xs) {
+            font-size: 18px;
+            line-height: 13px;
+            &.has {
+                &:before {
+                    width: 14px;
+                    height: 13px;
+                    background-size: cover;
+                }
+            }
+            &.not {
+                &:before {
+                    width: 14px;
+                    height: 14px;
+                    background-size: cover;
+                }
+            }
+        }
         &:before {
             content: "";
             margin-right: 3px;
@@ -745,6 +790,11 @@ body {
     margin-top: 8px;
     display: flex;
     align-items: baseline;
+    @media (max-width: $xs) {
+        position: absolute;
+        top: 61px;
+        left: 255px;
+    }
     &__list {
         display: flex;
         align-items: center;
@@ -769,17 +819,30 @@ body {
         font-size: 14px;
         line-height: 10px;
         color: #5b6168;
+        @media (max-width: $xs) {
+            font-size: 16px;
+        }
     }
 }
 .cost {
     margin-top: 17px;
     display: flex;
     justify-content: space-between;
+    @media (max-width: $xs) {
+        position: absolute;
+        top: 86px;
+        left: 255px;
+        flex-direction: column;
+    }
     &__info {
         font-size: 12px;
         line-height: 9px;
         color: #98a6b4;
         text-transform: uppercase;
+        @media (max-width: $xs) {
+            margin-top: 17px;
+            font-size: 14px;
+        }
     }
     &__price {
         margin-top: 7px;
@@ -807,6 +870,9 @@ body {
         font-weight: 500;
         color: $textColor;
         font-family: "Rubik";
+        @media (max-width: $xs) {
+            font-size: 30px;
+        }
     }
     &__ruble {
         font-size: 18px;
@@ -814,6 +880,9 @@ body {
         font-weight: 600;
         color: $textColor;
         font-family: "Roboto";
+        @media (max-width: $xs) {
+            font-size: 28px;
+        }
     }
 }
 
@@ -949,6 +1018,10 @@ body {
     border: 1px solid #c7d0d9;
     border-radius: 5px;
     overflow: hidden;
+    @media (max-width: $xs) {
+        width: 163px;
+        height: 52px;
+    }
     &__minus,
     &__plus {
         padding-top: 1px;
@@ -960,6 +1033,9 @@ body {
         cursor: pointer;
         background: transparent;
         transition: $transition;
+        @media (max-width: $xs) {
+            width: 52px;
+        }
         svg {
             path {
                 transition: $transition;
@@ -977,6 +1053,13 @@ body {
     }
     &__input {
         width: 40px;
+        @media (max-width: $xs) {
+            width: 61px;
+            input {
+                font-size: 18px;
+                line-height: 21px;
+            }
+        }
         input {
             padding-top: 2px;
             width: 100%;
@@ -1017,6 +1100,12 @@ body {
         & svg {
             width: 24px;
             margin-left: 14px;
+        }
+    }
+    @media (max-width: $xs) {
+        & svg {
+            width: 36px;
+            margin-left: 0px;
         }
     }
     &.active {

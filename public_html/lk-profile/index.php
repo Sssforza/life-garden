@@ -45,42 +45,48 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<div class="lkProfile__subtitle">Персональные данные</div>
 							</div>
 							<div class="lkProfile__fields">
-								<div class="envelopeInput envelopeInput_lk">
-									<div class="envelopeInput__title">Имя</div>
-									<input class="envelopeInput__input envelopeInput__input_lk" type="text" value="Иван">
-								</div>
-								<div class="envelopeInput envelopeInput_lk">
-									<div class="envelopeInput__title">Телефон</div>
-									<input class="envelopeInput__input envelopeInput__input_lk" type="number" placeholder="+7 (___) ___-__-__">
-								</div>
-								<div class="envelopeInput envelopeInput_lk">
-									<div class="envelopeInput__title">Фамилия</div>
-									<input class="envelopeInput__input envelopeInput__input_lk" type="text" value="Иванович">
-								</div>
-								<div class="envelopeInput envelopeInput_lk">
-									<div class="envelopeInput__title">E-mail</div>
-									<input class="envelopeInput__input envelopeInput__input_lk" type="text" value="lifegarden@mail.ru" disabled>
-								</div>
-								<div class="envelopeInput envelopeInput_lk">
-									<div class="envelopeInput__title">Отчество</div>
-									<input class="envelopeInput__input envelopeInput__input_lk" type="text" value="Иванов">
-								</div>
-							</div>
-							<div class="lkProfile__birthday">
-								<div class="envelopeInput envelopeInput_lk">
-									<div class="envelopeInput__title">Дата рождения</div>
-									<input class="envelopeInput__input envelopeInput__input_lk" type="number" placeholder="дд.мм.гг" value="дд.мм.гггг">
-								</div>
-								<div class="lkProfile__message lkProfile__message_js">
-									<span> Заполните поле даты рождения и получите скидку 5% в честь
-										вашего дня рождения. Скидка действует 3 дня до, 3 дня после
-										и в день рождения.</span>
-									<div class="lkProfile__close lkProfile__close_js">
-										<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/closeProfile.svg'; ?>
+								<div class="lkProfile__column">
+									<div class="envelopeInput envelopeInput_lk">
+										<div class="envelopeInput__title">Имя</div>
+										<input class="envelopeInput__input envelopeInput__input_lk" type="text" value="Иван">
+									</div>
+									<div class="envelopeInput envelopeInput_lk">
+										<div class="envelopeInput__title">Фамилия</div>
+										<input class="envelopeInput__input envelopeInput__input_lk" type="text" value="Иванович">
+									</div>
+									<div class="envelopeInput envelopeInput_lk">
+										<div class="envelopeInput__title">Отчество</div>
+										<input class="envelopeInput__input envelopeInput__input_lk" type="text" value="Иванов">
+									</div>
+									<div class="lkProfile__birthday">
+										<div class="envelopeInput envelopeInput_lk">
+											<div class="envelopeInput__title">Дата рождения</div>
+											<input class="envelopeInput__input envelopeInput__input_lk" type="number" placeholder="дд.мм.гг" value="дд.мм.гггг">
+										</div>
+										<div class="lkProfile__message lkProfile__message_js">
+											<span> Заполните поле даты рождения и получите скидку 5% в честь
+												вашего дня рождения. Скидка действует 3 дня до, 3 дня после
+												и в день рождения.</span>
+											<div class="lkProfile__close lkProfile__close_js">
+												<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/closeProfile.svg'; ?>
+											</div>
+										</div>
+
 									</div>
 								</div>
+								<div class="lkProfile__column">
+									<div class="envelopeInput envelopeInput_lk">
+										<div class="envelopeInput__title">Телефон</div>
+										<input class="envelopeInput__input envelopeInput__input_lk" type="number" placeholder="+7 (___) ___-__-__">
+									</div>
 
+									<div class="envelopeInput envelopeInput_lk">
+										<div class="envelopeInput__title">E-mail</div>
+										<input class="envelopeInput__input envelopeInput__input_lk" type="text" value="lifegarden@mail.ru" disabled>
+									</div>
+								</div>
 							</div>
+
 							<div class="lkProfile__delivery">
 								<div class="lkProfile__subtitle">
 									Адрес доставки
@@ -112,7 +118,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<div class="lkProfile__addressMap">
 										<div class="envelopeInput envelopeInput_lk lkProfile__input shops_js">
 											<div class="envelopeInput__title ">
-												Выберите другой магазин самовывоза
+												Выберите магазин самовывоза
 											</div>
 											<div class="openAddress_js">
 												<input class="envelopeInput__input envelopeInput__input_lk openAddressInput_js" type="text" value="ул. Маяковского, 20" readonly="readonly">
