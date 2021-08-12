@@ -11,22 +11,56 @@ export function headerCatalog() {
 }
 
 export function headerSearchelp() {
-    const headerHelp = document.querySelector(".headerHelp_js");
-    const headerForm = document.querySelector(".headerMiddleForm_js");
+    const header = document.querySelector(".header");
+    const headerHelp = header.querySelector(".headerHelp_js");
+    const headerForm = header.querySelector(".headerMiddleForm_js");
+    const headerInput = header.querySelector(".headerMiddleInput_js");
+    const closeheaderInput = header.querySelector(".closeXs_js");
+    const clearHeaderInput = header.querySelector(".headerMiddle__clear_js");
+
+    headerInput.onfocus = () => {
+        if (window.innerWidth < 1400) {
+            header.classList.add("header_mobile");
+            headerHelp.classList.remove("hidden");
+            document.body.classList.add("hiddenHeaderCatalog");
+        }
+    };
+    closeheaderInput.onclick = () => {
+        header.classList.remove("header_mobile");
+        headerHelp.classList.add("hidden");
+        document.body.classList.remove("hiddenHeaderCatalog");
+    };
+
+    clearHeaderInput.onclick = () => {
+        clearHeaderInput.classList.add("hidden");
+
+        headerInput.value = "";
+    };
+
     document.addEventListener("click", function (e) {
-        if (
-            headerHelp &&
-            e.target !== headerHelp &&
-            !headerHelp.contains(e.target)
-        ) {
-            headerHelp.classList.add("hidden");
+        if (window.innerWidth >= 1400) {
+            if (
+                headerHelp &&
+                e.target !== headerHelp &&
+                !headerHelp.contains(e.target)
+            ) {
+                headerHelp.classList.add("hidden");
+            }
         }
     });
     headerForm.addEventListener("input", function (event) {
-        if (event.target.value.length >= 2) {
-            headerHelp.classList.remove("hidden");
+        if (window.innerWidth >= 1400) {
+            if (event.target.value.length >= 2) {
+                headerHelp.classList.remove("hidden");
+            } else {
+                headerHelp.classList.add("hidden");
+            }
         } else {
-            headerHelp.classList.add("hidden");
+            if (event.target.value.length >= 2) {
+                clearHeaderInput.classList.remove("hidden");
+            } else {
+                clearHeaderInput.classList.add("hidden");
+            }
         }
     });
 }

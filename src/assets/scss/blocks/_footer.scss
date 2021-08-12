@@ -60,7 +60,9 @@
     }
     &__buttonUp {
         position: absolute;
-        padding: 19px 21px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 60.22px;
         height: 62.85px;
         top: 20px;
@@ -314,6 +316,20 @@
             left: -35px;
             border: 15px solid transparent;
             border-right: 32px solid $white;
+        }
+        @media (max-width: $xs) {
+            font-size: 20px;
+            left: 0;
+            top: 120%;
+            width: 500px;
+            &:after {
+                content: "";
+                position: absolute;
+                top: -35px;
+                left: 18px;
+                border: 15px solid transparent;
+                border-bottom: 32px solid $white;
+            }
         }
     }
     &__errorImg {

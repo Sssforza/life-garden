@@ -128,10 +128,10 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 												</ul>
 											</div>
 										</div>
-										<div class="lkProfile__showMap showMap_js">
+										<a class="lkProfile__showMap showMap_js" href="#windowMap">
 											<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/mapProfile.svg'; ?>
 											<span>Показать на карте</span>
-										</div>
+										</a>
 									</div>
 								</div>
 								<div class="lkProfile__address lkProfile__addAddress_js hidden">
@@ -155,8 +155,6 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 										<span class="lkProfile__cancel_js">Отменить</span>
 									</div>
 								</div>
-
-
 							</div>
 							<div class="lkProfile__password">
 								<div class="lkProfile__subtitle">
@@ -165,11 +163,11 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<div class="lkProfile__container">
 									<div class="envelopeInput envelopeInput_lk">
 										<div class="envelopeInput__title">Новый пароль</div>
-										<input class="envelopeInput__input envelopeInput__input_lk" type="password" value="">
+										<input class="envelopeInput__input envelopeInput__input_lk" type="password" value="" placeholder="Введите новый пароль">
 									</div>
 									<div class="envelopeInput envelopeInput_lk">
 										<div class="envelopeInput__title">Подтвердите пароль</div>
-										<input class="envelopeInput__input envelopeInput__input_lk" type="password" value="">
+										<input class="envelopeInput__input envelopeInput__input_lk" type="password" value="" placeholder="Повторите новый пароль">
 									</div>
 								</div>
 							</div>
@@ -180,86 +178,85 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 			</div>
 		</section>
 	</div>
-	<div class="windowsMessage__wrap windowsMapWrapper_js hidden">
-		<div class="windowsMessage__map windowsMapPopup_js">
-			<div class="windowsMessage__close windowsMapClose_js">
-				<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
-			</div>
-			<section class="map map_small">
-				<div class="map__title map__title_small">Выберите магазин самовывоза</div>
-				<div class="map__content">
-					<aside class="map__aside map__aside_small scrollGreen">
-						<div class="map__item mapItem_js" data-coord1="54.970231" data-coord2="73.392044" data-id="0">
-							<div class="map__unit address">ул. Маяковского, 20</div>
-							<div class="map__unit tel">
-								<a class="map__tel" href="tel:+79083104807">+7 (908) 310-48-07</a>
-							</div>
-							<div class="map__schedule">
-								<span>График работы:</span>
-								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
-							</div>
-							<div class="map__btn btnWhite map__btn_js">
-								Выбрать
-							</div>
-						</div>
-						<div class="map__item mapItem_js" data-coord1="54.973993" data-coord2="73.273727" data-id="1">
-							<div class="map__unit address">ул. Сакена Сейфуллина, 27</div>
-							<div class="map__unit tel">
-								<a class="map__tel" href="tel:+79083104807">+7 (908) 310-94-77</a>
-							</div>
-							<div class="map__schedule">
-								<span>График работы:</span>
-								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
-							</div>
-							<div class="map__btn btnWhite map__btn_js">
-								Выбрать
-							</div>
-						</div>
-						<div class="map__item mapItem_js" data-coord1="55.029399" data-coord2="73.273754" data-id="3">
-							<div class="map__unit address">ул. пр. Мира, 64</div>
-							<div class="map__unit tel">
-								<a class="map__tel" href="tel:+79083104807">+7 (908) 310-35-69</a>
-							</div>
-							<div class="map__schedule">
-								<span>График работы:</span>
-								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
-							</div>
-							<div class="map__btn btnWhite map__btn_js">
-								Выбрать
-							</div>
-						</div>
-						<div class="map__item mapItem_js" data-coord1="54.985772" data-coord2="73.405312" data-id="4">
-							<div class="map__unit address">ул. ​10 лет Октября, 113</div>
-							<div class="map__unit tel">
-								<a class="map__tel" href="tel:+79083104807">+7 (908) 310-35-69</a>
-							</div>
-							<div class="map__schedule">
-								<span>График работы:</span>
-								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
-							</div>
-							<div class="map__btn btnWhite map__btn_js">
-								Выбрать
-							</div>
-						</div>
-						<div class="map__item mapItem_js" data-coord1="54.944228" data-coord2="73.385621" data-id="5">
-							<div class="map__unit address">​проспект Карла Маркса, 83</div>
-							<div class="map__unit tel">
-								<a class="map__tel" href="tel:+79083104807">+7 (908) 310-92-55</a>
-							</div>
-							<div class="map__schedule">
-								<span>График работы:</span>
-								Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
-							</div>
-							<div class="map__btn btnWhite map__btn_js">
-								Выбрать
-							</div>
-						</div>
-					</aside>
-					<div id="mapWindow" class="map__window"></div>
-				</div>
-			</section>
+	<div id="windowMap" class="windowsMessage__map mfp-hide">
+		<div class="windowsMessage__close popup-modal-dismiss">
+			<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/close.svg'; ?>
 		</div>
+		<section class="map map_small">
+			<div class="map__title map__title_small">Выберите магазин самовывоза</div>
+			<div class="map__content">
+				<aside class="map__aside map__aside_small scrollGreen">
+					<div class="map__item mapItem_js" data-coord1="54.970231" data-coord2="73.392044" data-id="0">
+						<div class="map__unit address">ул. Маяковского, 20</div>
+						<div class="map__unit tel">
+							<a class="map__tel" href="tel:+79083104807">+7 (908) 310-48-07</a>
+						</div>
+						<div class="map__schedule">
+							<span>График работы:</span>
+							Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
+						</div>
+						<div class="map__btn btnWhite popup-modal-dismiss">
+							Выбрать
+						</div>
+					</div>
+					<div class="map__item mapItem_js" data-coord1="54.973993" data-coord2="73.273727" data-id="1">
+						<div class="map__unit address">ул. Сакена Сейфуллина, 27</div>
+						<div class="map__unit tel">
+							<a class="map__tel" href="tel:+79083104807">+7 (908) 310-94-77</a>
+						</div>
+						<div class="map__schedule">
+							<span>График работы:</span>
+							Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
+						</div>
+						<div class="map__btn btnWhite popup-modal-dismiss">
+							Выбрать
+						</div>
+					</div>
+					<div class="map__item mapItem_js" data-coord1="55.029399" data-coord2="73.273754" data-id="3">
+						<div class="map__unit address">ул. пр. Мира, 64</div>
+						<div class="map__unit tel">
+							<a class="map__tel" href="tel:+79083104807">+7 (908) 310-35-69</a>
+						</div>
+						<div class="map__schedule">
+							<span>График работы:</span>
+							Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
+						</div>
+						<div class="map__btn btnWhite popup-modal-dismiss">
+							Выбрать
+						</div>
+					</div>
+					<div class="map__item mapItem_js" data-coord1="54.985772" data-coord2="73.405312" data-id="4">
+						<div class="map__unit address">ул. ​10 лет Октября, 113</div>
+						<div class="map__unit tel">
+							<a class="map__tel" href="tel:+79083104807">+7 (908) 310-35-69</a>
+						</div>
+						<div class="map__schedule">
+							<span>График работы:</span>
+							Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
+						</div>
+						<div class="map__btn btnWhite popup-modal-dismiss">
+							Выбрать
+						</div>
+					</div>
+					<div class="map__item mapItem_js" data-coord1="54.944228" data-coord2="73.385621" data-id="5">
+						<div class="map__unit address">​проспект Карла Маркса, 83</div>
+						<div class="map__unit tel">
+							<a class="map__tel" href="tel:+79083104807">+7 (908) 310-92-55</a>
+						</div>
+						<div class="map__schedule">
+							<span>График работы:</span>
+							Понедельник ­–­­ Пятница 9:00 ­–­­ 19:00
+						</div>
+						<div class="map__btn btnWhite popup-modal-dismiss">
+							Выбрать
+						</div>
+					</div>
+				</aside>
+				<div id="mapWindow" class="map__window"></div>
+			</div>
+		</section>
 	</div>
+
 </main>
 
 <?

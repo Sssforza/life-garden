@@ -36,7 +36,6 @@ import {
 
 //📁 /assets/js/blocks .js
 import {
-    openMap,
     openAddress,
     checkMethodDelivery,
     dateBirthday,
@@ -94,6 +93,9 @@ import { reviewCheck } from "./blocks/feedback.js";
 //📁 /assets/js/blocks  adaptive.js
 import { adaptive } from "./blocks/adaptive.js";
 
+//📁 /assets/js/blocks  search.js
+import { checkSearchCategories } from "./blocks/search.js";
+
 //📁 /assets/js/blocks  adaptive.js
 import {
     popupForgotPassword,
@@ -102,6 +104,7 @@ import {
     popupClubCard,
     popupQuickView,
     popupMasterClass,
+    popupMap,
 } from "./blocks/popups.js";
 
 //📁 /assets/js/blocks  adaptive.js
@@ -187,9 +190,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // //all filters
     filters();
 
-    //open map
-    openMap();
-
     //check method delivery
     checkMethodDelivery();
 
@@ -254,9 +254,13 @@ document.addEventListener("DOMContentLoaded", function () {
     popupClubCard();
     popupQuickView();
     popupMasterClass();
+    popupMap();
 
     // check stars in feedback
     reviewCheck();
+
+    // check categories in search
+    checkSearchCategories();
 
     // adaptive
     adaptive();

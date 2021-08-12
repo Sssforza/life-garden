@@ -34,8 +34,8 @@
                   &#8226;&#8226;&#8226;</a></li>
               <div class="headerTop__menuHide headerTop__menuHide_js">
                 <li class="headerTop__menuLi"><a href="/about/">О компании</a></li>
-                <li class="headerTop__menuLi"><a href="#">Новости</a></li>
-                <li class="headerTop__menuLi"><a href="#">Контакты</a></li>
+                <li class="headerTop__menuLi"><a href="/news/">Новости</a></li>
+                <li class="headerTop__menuLi"><a href="/contacts/">Контакты</a></li>
               </div>
             </ul>
             <a class="headerTop__newspapper" href="/newspaper/">
@@ -96,9 +96,14 @@
               <div class="headerMiddle__formContainer">
                 <form class="headerMiddle__form headerMiddleForm_js">
                   <input class="headerMiddle__input headerMiddleInput_js" type="text" placeholder="Поиск">
+
                   <button class="headerMiddle__button" type="submit">
                     <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/search.svg'; ?>
                   </button>
+
+                  <div class="headerMiddle__clear headerMiddle__clear_js hidden">
+                    <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/clearInput.svg'; ?>
+                  </div>
                 </form>
                 <div class="headerHelp hidden headerHelp_js">
                   <a href="#" class="headerHelp__item">
@@ -514,6 +519,11 @@
                   <span class="hamburgerXs-inner"></span>
                 </span>
               </div>
+              <div class="hamburgerXs hamburgerXs--spring closeSearch closeXs_js is-active">
+                <span class="hamburgerXs-box">
+                  <span class="hamburgerXs-inner"></span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -657,17 +667,17 @@
           </ul>
         </div>
         <ul class="headerMenuMobile__ul">
-          <li><a class="headerMenuMobile__a" href="">Акции</a></li>
-          <li><a class="headerMenuMobile__a" href="">Клубная карта</a></li>
-          <li><a class="headerMenuMobile__a" href="">Доставка и оплата</a></li>
-          <li><a class="headerMenuMobile__a" href="">Семинары</a></li>
+          <li><a class="headerMenuMobile__a" href="/promotions/">Акции</a></li>
+          <li><a class="headerMenuMobile__a" href="/club-card">Клубная карта</a></li>
+          <li><a class="headerMenuMobile__a" href="/delivery/">Доставка и оплата</a></li>
+          <li><a class="headerMenuMobile__a" href="master-class">Семинары</a></li>
           <li><a class="headerMenuMobile__a" href="">Блог огородника</a></li>
-          <li><a class="headerMenuMobile__a" href="">
+          <li><a class="headerMenuMobile__a" href="/newspaper/">
               <? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/newspapper.svg'; ?>
               Газета «Живой сад»</a></li>
-          <li><a class="headerMenuMobile__a" href="">О компании</a></li>
-          <li><a class="headerMenuMobile__a" href="">Новости</a></li>
-          <li><a class="headerMenuMobile__a" href="">Контакты</a></li>
+          <li><a class="headerMenuMobile__a" href="/about/">О компании</a></li>
+          <li><a class="headerMenuMobile__a" href="/news/">Новости</a></li>
+          <li><a class="headerMenuMobile__a" href="/contacts/">Контакты</a></li>
         </ul>
       </div>
 
@@ -735,6 +745,7 @@
                   <li><a class="headerCatalog__textLink" href="#">Биопрепараты, органические удобрения</a></li>
                   <li><a class="headerCatalog__textLink" href="#">Сидераты</a></li>
                   <li><a class="headerCatalog__textLink" href="#">Грунт для растений</a></li>
+
                 </ul>
               </div>
             </div>

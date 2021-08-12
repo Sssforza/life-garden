@@ -3,8 +3,18 @@
 .lk {
     display: flex;
     justify-content: space-between;
+    @media (max-width: $lg) {
+        gap: 49px;
+        justify-content: flex-start;
+    }
     &__content {
         width: calc(100% - 355px);
+        @media (max-width: $lg) {
+            width: calc(100% - 329px);
+        }
+        @media (max-width: $xs) {
+            width: 100%;
+        }
     }
     &__list {
         margin-top: 35px;
@@ -14,9 +24,16 @@
         flex-wrap: wrap;
         margin-right: -10px;
         margin-left: -10px;
+        @media (max-width: $lg) {
+            gap: 20px;
+        }
+        @media (max-width: $xs) {
+        }
     }
     .cardProduct {
         margin: 0 10px 35px 10px;
+        @media (max-width: $lg) {
+            margin: 0;
+        }
     }
 }
-

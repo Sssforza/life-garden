@@ -139,7 +139,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						</div>
 						<a class="productSpecial__all" href="#">Показать все</a>
 					</div>
-					<div class="productSection__categories productSectionCategories__slider_js productBlockBox_js">
+					<div class="productSection__categories productBlockBox_js">
 						<div class=" specialSample__item specialSampleItem_js active" data-sample="novelty">
 							<div class="specialSample__img">
 								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/specialSampleImg1.svg'; ?>
@@ -1204,7 +1204,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 			<div class="mainNews__wrapper container">
 				<div class="mainNews__header">
 					<div class="mainNews__title">Новости</div>
-					<a class="mainNews__subtitle" href="#">Все новости</a>
+					<a class="mainNews__subtitle" href="/news/">Все новости</a>
 				</div>
 				<div class="mainNews__content">
 					<div class="mainNews__general">

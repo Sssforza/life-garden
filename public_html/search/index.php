@@ -14,7 +14,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 		</ul>
 	</section>
 	<section class="page__box container search">
-		<section class="search__nothing searchNothing ">
+		<section class="search__nothing searchNothing hidden">
 			<div class="searchNothing__header">
 				<div class="searchNothing__svg">
 					<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/searchPage.svg'; ?>
@@ -474,20 +474,19 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				</div>
 			</div>
 		</section>
-		<section class="search__find searchFind hidden">
+		<section class="search__find searchFind">
 			<div class="search__title">По запросу &nbsp;&#171; <div class="search__request">Газон</div> &#187; &nbsp;найдено <span> 840 товаров</span>
 			</div>
 			<div class="searchFind__body">
-				<div class="searchFind__filters searchFilters">
-					<div class="searchFilters__title">Сортировать:</div>
-					<ul class="searchFilters__ul">
-						<li class="searchFilters__li searchFilters_checked">по популярности</li>
-						<li class="searchFilters__li">по возрастанию цены</li>
-						<li class="searchFilters__li">по убыванию цены</li>
-						<li class="searchFilters__li">по новинкам</li>
+				<div class="searchFind__categories searchCategories">
+					<ul class="searchCategories__ul">
+						<li id="products" class="searchCategories__li searchCategories__li_js searchCategories_checked">Товары</li>
+						<li id="articles" class="searchCategories__li searchCategories__li_js">Статьи</li>
+						<li id="news" class="searchCategories__li searchCategories__li_js">Новости</li>
+						<li id="master" class="searchCategories__li searchCategories__li_js">Семинары и мастер-классы</li>
 					</ul>
 				</div>
-				<div class="searchFind__container">
+				<div id="products" class="searchFind__container searchFind__container_js">
 					<div class="productBlock__item cardProduct">
 						<div class="cardProduct__img">
 							<div class="cardProduct__picture" style="background-image:url(/dist/img/trash/cardProductImg2.jpg)">
@@ -1046,6 +1045,184 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									</div>
 								</div>
 							</div>
+						</div>
+					</div>
+				</div>
+				<div id="articles" class="searchFind__container searchFind__container_js hidden">
+					<div class="helpfulCard">
+						<div class="helpfulCard__img" style="background-image:url(/dist/img/trash/friendly.png)"></div>
+						<div class="helpfulCard__text">
+							<div class="helpfulCard__date">16 МАРТА 2021</div>
+							<div class="helpfulCard__title">Как добиться дружных всходов сельдерея</div>
+							<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.</div>
+						</div>
+						<a href="/paper/" class="cardArticle__btn helpfulCard__btn">
+							<span>Читать дальше</span>
+							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
+						</a>
+					</div>
+					<div class="helpfulCard">
+						<div class="helpfulCard__img" style="background-image:url(/dist/img/trash/friendly.png)"></div>
+						<div class="helpfulCard__text">
+							<div class="helpfulCard__date">16 МАРТА 2021</div>
+							<div class="helpfulCard__title">Как добиться дружных всходов сельдерея</div>
+							<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.</div>
+
+						</div>
+						<a href="/paper/" class="cardArticle__btn helpfulCard__btn">
+							<span>Читать дальше</span>
+							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
+						</a>
+					</div>
+					<div class="helpfulCard">
+						<div class="helpfulCard__img" style="background-image:url(/dist/img/trash/friendly.png)"></div>
+						<div class="helpfulCard__text">
+							<div class="helpfulCard__date">16 МАРТА 2021</div>
+							<div class="helpfulCard__title">Как добиться дружных всходов сельдерея</div>
+							<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.</div>
+
+						</div>
+						<a href="/paper/" class="cardArticle__btn helpfulCard__btn">
+							<span>Читать дальше</span>
+							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
+						</a>
+					</div>
+					<div class="helpfulCard">
+						<div class="helpfulCard__img" style="background-image:url(/dist/img/trash/friendly.png)"></div>
+						<div class="helpfulCard__text">
+							<div class="helpfulCard__date">16 МАРТА 2021</div>
+							<div class="helpfulCard__title">Как добиться дружных всходов сельдерея</div>
+							<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.</div>
+
+						</div>
+						<a href="/paper/" class="cardArticle__btn helpfulCard__btn">
+							<span>Читать дальше</span>
+							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
+						</a>
+					</div>
+					<div class="helpfulCard">
+						<div class="helpfulCard__img" style="background-image:url(/dist/img/trash/friendly.png)"></div>
+						<div class="helpfulCard__text">
+							<div class="helpfulCard__date">16 МАРТА 2021</div>
+							<div class="helpfulCard__title">Как добиться дружных всходов сельдерея</div>
+							<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.</div>
+
+						</div>
+						<a href="/paper/" class="cardArticle__btn helpfulCard__btn">
+							<span>Читать дальше</span>
+							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
+						</a>
+					</div>
+					<div class="helpfulCard">
+						<div class="helpfulCard__img" style="background-image:url(/dist/img/trash/friendly.png)"></div>
+						<div class="helpfulCard__text">
+							<div class="helpfulCard__date">16 МАРТА 2021</div>
+							<div class="helpfulCard__title">Как добиться дружных всходов сельдерея</div>
+							<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.</div>
+
+						</div>
+						<a href="/paper/" class="cardArticle__btn helpfulCard__btn">
+							<span>Читать дальше</span>
+							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
+						</a>
+					</div>
+					<div class="helpfulCard">
+						<div class="helpfulCard__img" style="background-image:url(/dist/img/trash/friendly.png)"></div>
+						<div class="helpfulCard__text">
+							<div class="helpfulCard__date">16 МАРТА 2021</div>
+							<div class="helpfulCard__title">Как добиться дружных всходов сельдерея</div>
+							<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.</div>
+
+						</div>
+						<a href="/paper/" class="cardArticle__btn helpfulCard__btn">
+							<span>Читать дальше</span>
+							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
+						</a>
+					</div>
+					<div class="helpfulCard">
+						<div class="helpfulCard__img" style="background-image:url(/dist/img/trash/friendly.png)"></div>
+						<div class="helpfulCard__text">
+							<div class="helpfulCard__date">16 МАРТА 2021</div>
+							<div class="helpfulCard__title">Как добиться дружных всходов сельдерея</div>
+							<div class="helpfulCard__description">Сельдерей – культура, которую встретишь не в каждом огороде. И не в последнюю очередь потому, что всхожесть семян частенько не радует. И с агротехникой знаком не каждый.</div>
+
+						</div>
+						<a href="/paper/" class="cardArticle__btn helpfulCard__btn">
+							<span>Читать дальше</span>
+							<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/right-arrow.svg'; ?>
+						</a>
+					</div>
+				</div>
+				<div id="news" class="searchFind__box searchFind__container_js hidden">
+					<div class="news__card newsCard">
+						<div class="newsCard__img">
+							<img src="/dist/img/trash/news.jpg" alt="">
+						</div>
+						<div class="newsCard__box">
+							<div class="newsCard__date">9 марта 2021</div>
+							<div class="newsCard__color newsCard__color_master">Мастер-класс</div>
+							<div class="newsCard__title">Акция на все семена цветов</div>
+							<div class="newsCard__subtitle">Запустилась рождественская акция на все семена цветов</div>
+							<a class="newsCard__btn" href="/headline/">Читать полностью
+								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/newsArrow.svg'; ?>
+							</a>
+						</div>
+					</div>
+					<div class="news__card newsCard">
+						<div class="newsCard__img">
+							<img src="/dist/img/trash/news.jpg" alt="">
+						</div>
+						<div class="newsCard__box">
+							<div class="newsCard__date">9 марта 2021</div>
+							<div class="newsCard__title newsCard__title_indent">Акция на все семена цветов</div>
+							<div class="newsCard__subtitle">Запустилась рождественская акция на все семена цветов</div>
+							<a class="newsCard__btn" href="/headline/">Читать полностью
+								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/newsArrow.svg'; ?>
+							</a>
+						</div>
+					</div>
+					<div class="news__card newsCard">
+						<div class="newsCard__img">
+							<img src="/dist/img/trash/news.jpg" alt="">
+						</div>
+						<div class="newsCard__box">
+							<div class="newsCard__date">9 марта 2021</div>
+							<div class="newsCard__color newsCard__color_seminar">Семинар</div>
+							<div class="newsCard__title">Акция на все семена цветов</div>
+							<div class="newsCard__subtitle">Запустилась рождественская акция на все семена цветов</div>
+							<a class="newsCard__btn" href="/headline/">Читать полностью
+								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/newsArrow.svg'; ?>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div id="master" class="searchFind__box searchFind__container_js hidden">
+					<div class="news__card newsCard">
+						<div class="newsCard__img">
+							<img src="/dist/img/trash/news.jpg" alt="">
+						</div>
+						<div class="newsCard__box">
+							<div class="newsCard__date">9 марта 2021</div>
+							<div class="newsCard__color newsCard__color_master">Мастер-класс</div>
+							<div class="newsCard__title">Акция на все семена цветов</div>
+							<div class="newsCard__subtitle">Запустилась рождественская акция на все семена цветов</div>
+							<a class="newsCard__btn" href="/headline/">Читать полностью
+								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/newsArrow.svg'; ?>
+							</a>
+						</div>
+					</div>
+					<div class="news__card newsCard">
+						<div class="newsCard__img">
+							<img src="/dist/img/trash/news.jpg" alt="">
+						</div>
+						<div class="newsCard__box">
+							<div class="newsCard__date">9 марта 2021</div>
+							<div class="newsCard__color newsCard__color_seminar">Семинар</div>
+							<div class="newsCard__title">Акция на все семена цветов</div>
+							<div class="newsCard__subtitle">Запустилась рождественская акция на все семена цветов</div>
+							<a class="newsCard__btn" href="/headline/">Читать полностью
+								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/newsArrow.svg'; ?>
+							</a>
 						</div>
 					</div>
 				</div>

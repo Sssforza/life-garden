@@ -31,32 +31,23 @@ export function sliderProductSpecial() {
             slickMain.slick({
                 infinite: false,
                 speed: 500,
-                slidesToShow: 1.5,
+                slidesToShow: 4,
                 slidesToScroll: 1,
                 draggable: false,
-                arrows: false,
-                mobileFirst: true,
-                variableWidth: true,
-
+                arrows: true,
                 prevArrow:
                     '<div class="productBlock__prev"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83984 2L10.8398 10.84L1.83984 19" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>',
                 nextArrow:
                     '<div class="productBlock__next"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83984 2L10.8398 10.84L1.83984 19" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>',
                 responsive: [
                     {
-                        breakpoint: 565,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 1,
-                            arrows: true,
-                            draggable: true,
-                            variableWidth: false,
-                        },
+                        breakpoint: 600,
+                        settings: "unslick",
                     },
                     {
-                        breakpoint: 1401,
+                        breakpoint: 1400,
                         settings: {
-                            slidesToShow: 4,
+                            slidesToShow: 3,
                             slidesToScroll: 1,
                             arrows: true,
                             draggable: true,

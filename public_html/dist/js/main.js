@@ -90,9 +90,9 @@
 
 __webpack_require__(1);
 __webpack_require__(3);
-__webpack_require__(29);
-__webpack_require__(31);
-module.exports = __webpack_require__(32);
+__webpack_require__(30);
+__webpack_require__(32);
+module.exports = __webpack_require__(33);
 
 
 /***/ }),
@@ -11421,8 +11421,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_news_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(24);
 /* harmony import */ var _blocks_feedback_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(25);
 /* harmony import */ var _blocks_adaptive_js__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(26);
-/* harmony import */ var _blocks_popups_js__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(27);
-/* harmony import */ var _blocks_validation__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(28);
+/* harmony import */ var _blocks_search_js__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(27);
+/* harmony import */ var _blocks_popups_js__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(28);
+/* harmony import */ var _blocks_validation__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(29);
 //📁 /node_modules/  jquery 3.5.1
 
 global.jQuery = global.$ = jquery__WEBPACK_IMPORTED_MODULE_0___default.a; //📁 /node_modules/  slick 1.8.1
@@ -11469,6 +11470,8 @@ global.noUiSlider = nouislider__WEBPACK_IMPORTED_MODULE_3___default.a; //📁 /a
  //📁 /assets/js/blocks  feedback.js
 
  //📁 /assets/js/blocks  adaptive.js
+
+ //📁 /assets/js/blocks  search.js
 
  //📁 /assets/js/blocks  adaptive.js
 
@@ -11523,9 +11526,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["checkNum"])(); // //all filters
 
-  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["filters"])(); //open map
-
-  Object(_blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__["openMap"])(); //check method delivery
+  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["filters"])(); //check method delivery
 
   Object(_blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__["checkMethodDelivery"])(); //open lists of shops in lk
 
@@ -11559,22 +11560,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_news_js__WEBPACK_IMPORTED_MODULE_20__["newsCategories"])(); // validation all popups
 
-  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_24__["validationEnter"])();
-  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_24__["validationReg"])();
-  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_24__["validationForgot"])();
-  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_24__["validationRecovery"])();
-  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_24__["validationClubCard"])();
-  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_24__["validationPersonal"])();
-  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_24__["validationMasterClass"])(); //open all popups
+  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_25__["validationEnter"])();
+  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_25__["validationReg"])();
+  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_25__["validationForgot"])();
+  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_25__["validationRecovery"])();
+  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_25__["validationClubCard"])();
+  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_25__["validationPersonal"])();
+  Object(_blocks_validation__WEBPACK_IMPORTED_MODULE_25__["validationMasterClass"])(); //open all popups
 
-  Object(_blocks_popups_js__WEBPACK_IMPORTED_MODULE_23__["popupForgotPassword"])();
-  Object(_blocks_popups_js__WEBPACK_IMPORTED_MODULE_23__["popupRecoveryPassword"])();
-  Object(_blocks_popups_js__WEBPACK_IMPORTED_MODULE_23__["popupAuthorization"])();
-  Object(_blocks_popups_js__WEBPACK_IMPORTED_MODULE_23__["popupClubCard"])();
-  Object(_blocks_popups_js__WEBPACK_IMPORTED_MODULE_23__["popupQuickView"])();
-  Object(_blocks_popups_js__WEBPACK_IMPORTED_MODULE_23__["popupMasterClass"])(); // check stars in feedback
+  Object(_blocks_popups_js__WEBPACK_IMPORTED_MODULE_24__["popupForgotPassword"])();
+  Object(_blocks_popups_js__WEBPACK_IMPORTED_MODULE_24__["popupRecoveryPassword"])();
+  Object(_blocks_popups_js__WEBPACK_IMPORTED_MODULE_24__["popupAuthorization"])();
+  Object(_blocks_popups_js__WEBPACK_IMPORTED_MODULE_24__["popupClubCard"])();
+  Object(_blocks_popups_js__WEBPACK_IMPORTED_MODULE_24__["popupQuickView"])();
+  Object(_blocks_popups_js__WEBPACK_IMPORTED_MODULE_24__["popupMasterClass"])();
+  Object(_blocks_popups_js__WEBPACK_IMPORTED_MODULE_24__["popupMap"])(); // check stars in feedback
 
-  Object(_blocks_feedback_js__WEBPACK_IMPORTED_MODULE_21__["reviewCheck"])(); // adaptive
+  Object(_blocks_feedback_js__WEBPACK_IMPORTED_MODULE_21__["reviewCheck"])(); // check categories in search
+
+  Object(_blocks_search_js__WEBPACK_IMPORTED_MODULE_23__["checkSearchCategories"])(); // adaptive
 
   Object(_blocks_adaptive_js__WEBPACK_IMPORTED_MODULE_22__["adaptive"])();
 });
@@ -18713,18 +18717,52 @@ function headerCatalog() {
   });
 }
 function headerSearchelp() {
-  var headerHelp = document.querySelector(".headerHelp_js");
-  var headerForm = document.querySelector(".headerMiddleForm_js");
+  var header = document.querySelector(".header");
+  var headerHelp = header.querySelector(".headerHelp_js");
+  var headerForm = header.querySelector(".headerMiddleForm_js");
+  var headerInput = header.querySelector(".headerMiddleInput_js");
+  var closeheaderInput = header.querySelector(".closeXs_js");
+  var clearHeaderInput = header.querySelector(".headerMiddle__clear_js");
+
+  headerInput.onfocus = function () {
+    if (window.innerWidth < 1400) {
+      header.classList.add("header_mobile");
+      headerHelp.classList.remove("hidden");
+      document.body.classList.add("hiddenHeaderCatalog");
+    }
+  };
+
+  closeheaderInput.onclick = function () {
+    header.classList.remove("header_mobile");
+    headerHelp.classList.add("hidden");
+    document.body.classList.remove("hiddenHeaderCatalog");
+  };
+
+  clearHeaderInput.onclick = function () {
+    clearHeaderInput.classList.add("hidden");
+    headerInput.value = "";
+  };
+
   document.addEventListener("click", function (e) {
-    if (headerHelp && e.target !== headerHelp && !headerHelp.contains(e.target)) {
-      headerHelp.classList.add("hidden");
+    if (window.innerWidth >= 1400) {
+      if (headerHelp && e.target !== headerHelp && !headerHelp.contains(e.target)) {
+        headerHelp.classList.add("hidden");
+      }
     }
   });
   headerForm.addEventListener("input", function (event) {
-    if (event.target.value.length >= 2) {
-      headerHelp.classList.remove("hidden");
+    if (window.innerWidth >= 1400) {
+      if (event.target.value.length >= 2) {
+        headerHelp.classList.remove("hidden");
+      } else {
+        headerHelp.classList.add("hidden");
+      }
     } else {
-      headerHelp.classList.add("hidden");
+      if (event.target.value.length >= 2) {
+        clearHeaderInput.classList.remove("hidden");
+      } else {
+        clearHeaderInput.classList.add("hidden");
+      }
     }
   });
 }
@@ -19148,51 +19186,9 @@ function filters() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openMap", function() { return openMap; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkMethodDelivery", function() { return checkMethodDelivery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openAddress", function() { return openAddress; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dateBirthday", function() { return dateBirthday; });
-function openMap() {
-  if (document.querySelector(".windowsMapWrapper_js")) {
-    var closePopup = function closePopup(e) {
-      if (mapPopupWindow && e.target !== mapPopupWindow && !mapPopupWindow.contains(e.target)) {
-        mapPopup.classList.add("hidden");
-        scrollOffOn();
-        document.removeEventListener("click", closePopup);
-      }
-    };
-
-    var scrollOffOn = function scrollOffOn() {
-      return document.body.classList.toggle("hiddenHeaderCatalog");
-    };
-
-    var mapPopup = document.querySelector(".windowsMapWrapper_js");
-    var mapPopupWindow = document.querySelector(".windowsMapPopup_js");
-    var mapPopupClose = document.querySelector(".windowsMapClose_js");
-    var mapBtn = document.querySelector(".showMap_js");
-    var mapBtnChoice = document.querySelectorAll(".map__btn_js");
-    mapBtn.addEventListener("click", function () {
-      mapPopup.classList.remove("hidden");
-      scrollOffOn();
-      /*       setTimeout(() => {
-        document.addEventListener("click", closePopup);
-      }, 0); */
-    });
-    mapPopupClose.addEventListener("click", function () {
-      mapPopup.classList.add("hidden");
-      scrollOffOn();
-      document.removeEventListener("click", closePopup);
-    });
-    mapBtnChoice.forEach(function (item) {
-      item.onclick = function (event) {
-        event.stopPropagation();
-        mapPopup.classList.add("hidden");
-        scrollOffOn();
-        document.removeEventListener("click", closePopup);
-      };
-    });
-  }
-}
 function checkMethodDelivery() {
   if (document.querySelector(".choice__courier_js")) {
     var clickCourier = document.querySelector(".choice__courier_js");
@@ -19313,27 +19309,19 @@ function sliderProductSpecial() {
       slickMain.slick({
         infinite: false,
         speed: 500,
-        slidesToShow: 1.5,
+        slidesToShow: 4,
         slidesToScroll: 1,
         draggable: false,
-        arrows: false,
-        mobileFirst: true,
-        variableWidth: true,
+        arrows: true,
         prevArrow: '<div class="productBlock__prev"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83984 2L10.8398 10.84L1.83984 19" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>',
         nextArrow: '<div class="productBlock__next"><svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83984 2L10.8398 10.84L1.83984 19" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>',
         responsive: [{
-          breakpoint: 565,
+          breakpoint: 600,
+          settings: "unslick"
+        }, {
+          breakpoint: 1400,
           settings: {
             slidesToShow: 3,
-            slidesToScroll: 1,
-            arrows: true,
-            draggable: true,
-            variableWidth: false
-          }
-        }, {
-          breakpoint: 1401,
-          settings: {
-            slidesToShow: 4,
             slidesToScroll: 1,
             arrows: true,
             draggable: true,
@@ -19798,7 +19786,7 @@ function mapWindow() {
       }, {
         searchControlProvider: "yandex#search"
       }),
-          MyBalloonLayout = ymaps.templateLayoutFactory.createClass('<div class="popover top">' + "<div class=\"close\"><svg width=\"19\" height=\"19\" viewBox=\"0 0 19 19\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <path d=\"M18.0607 3.06066C18.6464 2.47487 18.6464 1.52513 18.0607 0.93934C17.4749 0.353553 16.5251 0.353553 15.9393 0.93934L18.0607 3.06066ZM0.93934 15.9393C0.353553 16.5251 0.353553 17.4749 0.93934 18.0607C1.52513 18.6464 2.47487 18.6464 3.06066 18.0607L0.93934 15.9393ZM15.9393 18.0607C16.5251 18.6464 17.4749 18.6464 18.0607 18.0607C18.6464 17.4749 18.6464 16.5251 18.0607 15.9393L15.9393 18.0607ZM3.06066 0.93934C2.47487 0.353553 1.52513 0.353553 0.93934 0.93934C0.353553 1.52513 0.353553 2.47487 0.93934 3.06066L3.06066 0.93934ZM15.9393 0.93934L0.93934 15.9393L3.06066 18.0607L18.0607 3.06066L15.9393 0.93934ZM18.0607 15.9393L3.06066 0.93934L0.93934 3.06066L15.9393 18.0607L18.0607 15.9393Z\" fill=\"#98A6B4\"/>\n            </svg></div>" + '<div class="arrow"></div>' + '<div class="popover-inner">' + "$[[options.contentLayout observeSize minWidth=235 maxWidth=255 maxHeight=350]]" + "</div>" + "<div class=\"map__btn map__btn_show btnWhite mapBtn_js\">\u0412\u044B\u0431\u0440\u0430\u0442\u044C</div>" + "</div>", {
+          MyBalloonLayout = ymaps.templateLayoutFactory.createClass('<div class="popover top">' + "<div class=\"close\"><svg width=\"19\" height=\"19\" viewBox=\"0 0 19 19\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <path d=\"M18.0607 3.06066C18.6464 2.47487 18.6464 1.52513 18.0607 0.93934C17.4749 0.353553 16.5251 0.353553 15.9393 0.93934L18.0607 3.06066ZM0.93934 15.9393C0.353553 16.5251 0.353553 17.4749 0.93934 18.0607C1.52513 18.6464 2.47487 18.6464 3.06066 18.0607L0.93934 15.9393ZM15.9393 18.0607C16.5251 18.6464 17.4749 18.6464 18.0607 18.0607C18.6464 17.4749 18.6464 16.5251 18.0607 15.9393L15.9393 18.0607ZM3.06066 0.93934C2.47487 0.353553 1.52513 0.353553 0.93934 0.93934C0.353553 1.52513 0.353553 2.47487 0.93934 3.06066L3.06066 0.93934ZM15.9393 0.93934L0.93934 15.9393L3.06066 18.0607L18.0607 3.06066L15.9393 0.93934ZM18.0607 15.9393L3.06066 0.93934L0.93934 3.06066L15.9393 18.0607L18.0607 15.9393Z\" fill=\"#98A6B4\"/>\n            </svg></div>" + '<div class="arrow"></div>' + '<div class="popover-inner">' + "$[[options.contentLayout observeSize minWidth=235 maxWidth=255 maxHeight=350]]" + "</div>" + "<div class=\"map__btn map__btn_show btnWhite popup-modal-dismiss\">\u0412\u044B\u0431\u0440\u0430\u0442\u044C</div>" + "</div>", {
         /*
          * Строит экземпляр макета на основе шаблона и добавляет его в родительский HTML-элемент.
          */
@@ -20279,12 +20267,40 @@ function adaptive() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkSearchCategories", function() { return checkSearchCategories; });
+function checkSearchCategories() {
+  var clickCategories = document.querySelectorAll(".searchCategories__li_js");
+  var blockCategories = document.querySelectorAll(".searchFind__container_js");
+  clickCategories.forEach(function (item) {
+    item.addEventListener("click", function () {
+      clickCategories.forEach(function (el) {
+        el.classList.remove("searchCategories_checked");
+      });
+      item.classList.add("searchCategories_checked");
+      blockCategories.forEach(function (element) {
+        if (item.id === element.id) {
+          element.classList.remove("hidden");
+        } else {
+          element.classList.add("hidden");
+        }
+      });
+    });
+  });
+}
+
+/***/ }),
+/* 28 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupForgotPassword", function() { return popupForgotPassword; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupRecoveryPassword", function() { return popupRecoveryPassword; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupAuthorization", function() { return popupAuthorization; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupClubCard", function() { return popupClubCard; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupQuickView", function() { return popupQuickView; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupMasterClass", function() { return popupMasterClass; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "popupMap", function() { return popupMap; });
 function popupForgotPassword() {
   if (document.querySelector(".popup-modal-forgotPassword")) {
     $(function () {
@@ -20448,9 +20464,24 @@ function popupMasterClass() {
     });
   }
 }
+function popupMap() {
+  if (document.querySelector(".showMap_js")) {
+    $(function () {
+      $(".showMap_js").magnificPopup({
+        type: "inline",
+        preloader: false,
+        modal: false,
+        showCloseBtn: false
+      });
+      $(document).on("click", ".popup-modal-dismiss", function (e) {
+        $.magnificPopup.close();
+      });
+    });
+  }
+}
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20702,7 +20733,7 @@ function validationMasterClass() {
 }
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -20963,7 +20994,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - type
 
   handleOrientation();
 
-  if ( true && _typeof(__webpack_require__(30)) === 'object' && __webpack_require__(30)) {
+  if ( true && _typeof(__webpack_require__(31)) === 'object' && __webpack_require__(31)) {
     !(__WEBPACK_AMD_DEFINE_RESULT__ = (function () {
       return device;
     }).call(exports, __webpack_require__, exports, module),
@@ -20976,7 +21007,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - type
 }).call(this);
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
@@ -20985,7 +21016,7 @@ module.exports = __webpack_amd_options__;
 /* WEBPACK VAR INJECTION */}.call(this, {}))
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports) {
 
 // (c) 2010 jdbartlett, MIT license
@@ -21047,7 +21078,7 @@ module.exports = __webpack_amd_options__;
 })(jQuery);
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }

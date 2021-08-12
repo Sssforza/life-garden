@@ -1,146 +1,257 @@
 @import "../modules/utilities/_variables.scss";
 .lk {
-  display: flex;
-  justify-content: space-between;
-  &__content {
-    width: calc(100% - 355px);
-  }
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $lg) {
+        gap: 49px;
+        justify-content: flex-start;
+    }
+    &__content {
+        width: calc(100% - 355px);
+        @media (max-width: $lg) {
+            width: calc(100% - 329px);
+        }
+        @media (max-width: $xs) {
+            width: 100%;
+        }
+    }
 }
 .lkOrders {
-  &__container {
-    margin-top: 35px;
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-  }
-  &__item {
-    border: 1px solid #c7d0d9;
-    border-radius: 10px;
-    width: 1045px;
-  }
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 47px 15px 46px;
-    border-bottom: 1px solid #c7d0d9;
-  }
-
-  &__box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__status {
-    display: flex;
-    align-items: center;
-    &svg {
-      display: block;
-      path {
-      }
-    }
-    & span {
-      margin-left: 6px;
-      font-family: Rubik;
-      font-size: 16px;
-      line-height: 19px;
-    }
-  }
-  &__number {
-    margin-left: 30px;
-    font-family: Rubik;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-  }
-  &__btn {
-    width: 184px;
-    height: 42px;
-    & svg {
-      path {
-        transition: $transition;
-        display: block;
-      }
-    }
-    & span {
-      font-family: Rubik;
-      font-size: 16px;
-      line-height: 24px;
-      margin-left: 5px;
-    }
-    &:hover {
-      & svg {
-        path {
-          fill: $white;
+    .basketCard {
+        @media (max-width: $lg) {
+            padding: 30px 0;
         }
-      }
+        @media (max-width: $xs) {
+            padding: 42px 0 30px;
+            flex-wrap: wrap;
+            gap: 9px 100px;
+        }
     }
-  }
-  &__cards {
-    padding: 0 46px;
-  }
-  &__card {
-    display: flex;
-    justify-content: space-between;
-    border: none;
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-      right: 0;
-      border-bottom: 1px solid #e1e7ed;
-      z-index: -1;
+    .basketCard__description {
+        @media (max-width: $lg) {
+            width: 198px;
+        }
+        @media (max-width: $xs) {
+        }
     }
-  }
-  &__boxCard {
-    display: flex;
-    box-sizing: border-box;
-  }
-  &__info {
-    padding: 27px 47px 35px 46px;
-    border-top: 1px solid #c7d0d9;
-  }
+    .basketCard__price {
+        @media (max-width: $lg) {
+            margin-left: 0;
+        }
+    }
+    .basketCard__text {
+        @media (max-width: $lg) {
+            font-size: 14px;
+            line-height: 24px;
+        }
+        @media (max-width: $xs) {
+            font-size: 18px;
+            margin-left: 128px;
+        }
+    }
+    .basketCard__article {
+        font-size: 14px;
+        line-height: 10px;
+        color: #8c949b;
+        margin-top: 10px;
+        @media (max-width: $lg) {
+            font-size: 12px;
+            line-height: 8px;
+        }
+        @media (max-width: $xs) {
+            font-size: 18px;
+            line-height: 13px;
+        }
+    }
+    &__container {
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        @media (max-width: $lg) {
+            margin-top: 19px;
+            gap: 20px;
+        }
+    }
+    &__item {
+        border: 1px solid #c7d0d9;
+        border-radius: 10px;
+        width: 100%;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 47px 15px 46px;
+        border-bottom: 1px solid #c7d0d9;
+        @media (max-width: $lg) {
+            padding: 15px 25px 15px 25px;
+        }
+        @media (max-width: $xs) {
+            padding: 20px 30px 25px;
+        }
+    }
 
-  &__dates {
-    display: flex;
-  }
-  &__text {
-    font-family: Rubik;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: #005827;
-    & span {
-      color: $textColor;
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: $xs) {
+            width: 100%;
+        }
     }
-    &_margin {
-      margin-top: 24px;
-    }
-  }
 
-  &__price {
-    display: flex;
-    align-items: center;
-    font-family: Rubik;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: #005827;
-  }
-  &__sum {
-    font-family: Rubik;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 24px;
-    color: $textColor;
-  }
-  &__address {
-    font-family: Rubik;
-    font-size: 16px;
-    line-height: 19px;
-    margin-top: 9px;
-  }
+    &__status {
+        display: flex;
+        align-items: center;
+        &svg {
+            display: block;
+            path {
+            }
+        }
+        & span {
+            margin-left: 6px;
+            font-family: Rubik;
+            font-size: 16px;
+            line-height: 19px;
+            @media (max-width: $lg) {
+                font-size: 14px;
+                line-height: 17px;
+            }
+            @media (max-width: $xs) {
+                font-size: 18px;
+                line-height: 21px;
+            }
+        }
+    }
+    &__number {
+        margin-left: 30px;
+        font-family: Rubik;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        @media (max-width: $lg) {
+            font-size: 14px;
+            line-height: 17px;
+        }
+        @media (max-width: $xs) {
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+    &__btn {
+        width: 184px;
+        height: 42px;
+        @media (max-width: $lg) {
+            width: 165px;
+            & span {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+        @media (max-width: $xs) {
+            display: none;
+        }
+        & svg {
+            path {
+                transition: $transition;
+                display: block;
+            }
+        }
+        & span {
+            font-family: Rubik;
+            font-size: 16px;
+            line-height: 24px;
+            margin-left: 5px;
+        }
+        &:hover {
+            & svg {
+                path {
+                    fill: $white;
+                }
+            }
+        }
+    }
+    &__cards {
+        padding: 0 46px;
+        @media (max-width: $lg) {
+            padding: 0 25px;
+        }
+        @media (max-width: $xs) {
+            padding: 0 30px;
+        }
+    }
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            border-bottom: 1px solid #e1e7ed;
+            z-index: -1;
+        }
+    }
+    &__boxCard {
+        display: flex;
+        box-sizing: border-box;
+    }
+    &__info {
+        padding: 27px 47px 35px 46px;
+        border-top: 1px solid #c7d0d9;
+        @media (max-width: $lg) {
+            padding: 18px 25px 28px;
+        }
+    }
+
+    &__dates {
+        display: flex;
+    }
+    &__text {
+        display: flex;
+        align-items: center;
+        font-family: Rubik;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #005827;
+        & span {
+            color: $textColor;
+        }
+        &_margin {
+            margin-top: 24px;
+        }
+        &_sum {
+            @media (max-width: $xs) {
+                display: none;
+            }
+        }
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        font-family: Rubik;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #005827;
+    }
+    &__sum {
+        font-family: Rubik;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 24px;
+        color: $textColor;
+    }
+    &__address {
+        font-family: Rubik;
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 9px;
+    }
 }

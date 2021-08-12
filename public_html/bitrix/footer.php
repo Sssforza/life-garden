@@ -22,19 +22,19 @@
                 <div class="footer__column">
                     <div class="footer__title">Компания</div>
                     <ul class="footer__ul">
-                        <li><a class="footer__point" href="#">О нас</a></li>
-                        <li><a class="footer__point" href="#">Новости</a></li>
+                        <li><a class="footer__point" href="/about/">О нас</a></li>
+                        <li><a class="footer__point" href="/news/">Новости</a></li>
                         <li><a class="footer__point" href="#">Блог огородника</a></li>
-                        <li><a class="footer__point" href="#">Семинар</a></li>
-                        <li><a class="footer__point" href="#">Контакты</a></li>
+                        <li><a class="footer__point" href="/master-class/">Семинар</a></li>
+                        <li><a class="footer__point" href="/contacts/">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer__column footer__column_margin">
                     <div class="footer__title">Покупателям</div>
                     <ul class="footer__ul">
                         <li><a class="footer__point" href="/club-card/">Клубная карта</a></li>
-                        <li><a class="footer__point" href="#">Акции</a></li>
-                        <li><a class="footer__point" href="#">Доставка и оплата</a></li>
+                        <li><a class="footer__point" href="/promotions/">Акции</a></li>
+                        <li><a class="footer__point" href="/delivery/">Доставка и оплата</a></li>
                     </ul>
                 </div>
                 <div class="footer__column footer__column_margin footerContacts">
@@ -99,7 +99,7 @@
                     </div>
                     <div class="footerEnd__policy">
                         <div>&copy; 2021 Живой сад</div>
-                        <a class="footerEnd__policyLine" href="#">Политика конфиденциальности</a>
+                        <a class="footerEnd__policyLine" href="/privacy/">Политика конфиденциальности</a>
                     </div>
                 </div>
 
