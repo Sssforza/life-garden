@@ -234,8 +234,16 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 					</aside>
 					<div class="catalog__cards catalogCards">
 						<div class="catalogCards__filters">
+							<div class="catalogCards__filter catalogCards__categories">
+								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/burger.svg'; ?>
+								<span>Категории</span>
+							</div>
+							<div class="catalogCards__filter catalogCards__strainer">
+								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/filter.svg'; ?>
+								<span>Фильтры</span>
+							</div>
 							<div class="catalogCards__popular catalogCardsPopular ">
-								<div class="catalogCardsPopular__link catalogCardsPopularLink_js">
+								<div class="catalogCardsPopular__link catalogCards__filter catalogCardsPopularLink_js">
 									<div class="catalogCardsPopular__linkText catalogCardsPopularLinkText_js">Сначала популярные</div>
 									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pop1.svg'; ?>
 								</div>
@@ -253,6 +261,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								</div>
 							</div>
 							<div class="catalogCards__alphabet catalogCardsAlphabet">
+								<div class="catalogCards__filter catalogCards__alpha">
+									<span>А</span>
+								</div>
 								<div class="catalogCardsAlphabet__link catalogCardsAlphabetLink_js"> <span>По алфавиту <span class="catalogCardsAlphabet__textChecked catalogCardsAlphabetTextChecked_js">все</span></span>
 
 									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/alphabet.svg'; ?></div>

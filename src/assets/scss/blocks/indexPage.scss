@@ -218,6 +218,9 @@
         @media (max-width: $xs) {
             width: 355px !important;
             height: 551px !important;
+            &:last-child {
+                margin-right: 20px;
+            }
         }
     }
     .cardProduct__img {
@@ -335,7 +338,7 @@
     }
     &__categories {
         display: none;
-        margin: 0 0 0 0;
+        margin: 0;
         padding: 0;
         @media (max-width: $xs) {
             display: flex;
@@ -350,6 +353,9 @@
             display: flex !important;
             align-items: center;
             flex: none;
+            &:last-child {
+                margin-right: 20px;
+            }
         }
         .specialSample__name {
         }

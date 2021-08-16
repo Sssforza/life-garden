@@ -823,7 +823,7 @@ body {
 
         &:last-child {
             @media (max-width: $xs) {
-                margin-right: 32px;
+                margin-right: 20px;
             }
         }
         @media (max-width: $xs) {
@@ -1198,7 +1198,7 @@ body {
         font: {
             family: Roboto;
             size: 22px;
-            weight: 500;
+            weight: 600;
             color: $textColor;
         }
         &_orders {

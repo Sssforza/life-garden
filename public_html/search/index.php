@@ -483,7 +483,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 						<li id="products" class="searchCategories__li searchCategories__li_js searchCategories_checked">Товары</li>
 						<li id="articles" class="searchCategories__li searchCategories__li_js">Статьи</li>
 						<li id="news" class="searchCategories__li searchCategories__li_js">Новости</li>
-						<li id="master" class="searchCategories__li searchCategories__li_js">Семинары и мастер-классы</li>
+						<li id="master" class="searchCategories__li searchCategories__li_js">Мастер-классы</li>
 					</ul>
 				</div>
 				<div id="products" class="searchFind__container searchFind__container_js">

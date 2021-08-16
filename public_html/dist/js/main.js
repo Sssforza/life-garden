@@ -18819,15 +18819,43 @@ function headerScroll() {
 function headerOpenClient() {
   var headerTopClient = document.querySelector(".client_js");
   var btnClient = document.querySelector(".clientClick_js");
+
+  function closeClient(e) {
+    if (headerTopClient && e.target !== headerTopClient && !headerTopClient.contains(e.target)) {
+      headerTopClient.classList.remove("headerTop__client_open");
+    }
+  }
+
   btnClient.addEventListener("click", function () {
+    if (!headerTopClient.classList.contains("headerTop__client_open")) {
+      document.removeEventListener("click", closeClient);
+    }
+
     headerTopClient.classList.toggle("headerTop__client_open");
+    setTimeout(function () {
+      document.addEventListener("click", closeClient);
+    }, 0);
   });
 }
 function headerOpenElse() {
   var menuElse = document.querySelector(".headerTop__menuHide_js");
   var btnElse = document.querySelector(".headerTop__menuElse_js");
+
+  function closeElse(e) {
+    if (menuElse && e.target !== menuElse && !menuElse.contains(e.target)) {
+      menuElse.classList.remove("headerTop__menuHide_open");
+    }
+  }
+
   btnElse.addEventListener("click", function () {
+    if (!menuElse.classList.contains("headerTop__menuHide_open")) {
+      document.removeEventListener("click", closeElse);
+    }
+
     menuElse.classList.toggle("headerTop__menuHide_open");
+    setTimeout(function () {
+      document.addEventListener("click", closeElse);
+    }, 0);
   });
 }
 function headerMenuMobile() {
@@ -18890,9 +18918,13 @@ function footerValidationEmail() {
     }
   }
 
-  footerInput.addEventListener("click", function () {
-    footerError.classList.add("hidden");
-  });
+  function closeError(e) {
+    if (footerError && e.target !== footerError && !footerError.contains(e.target)) {
+      footerError.classList.add("hidden");
+      document.removeEventListener("click", closeError);
+    }
+  }
+
   footerButtonEmail.addEventListener("click", function (event) {
     event.preventDefault();
 
@@ -18905,6 +18937,9 @@ function footerValidationEmail() {
       }, 0);
     } else {
       footerError.classList.remove("hidden");
+      setTimeout(function () {
+        document.addEventListener("click", closeError);
+      }, 0);
     }
   });
   footerPopapClose.addEventListener("click", function () {

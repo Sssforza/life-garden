@@ -16,6 +16,10 @@
         align-items: center;
         @media (max-width: $xs) {
             justify-content: start;
+            gap: 0;
+        }
+        @media (max-width: $lg) {
+            gap: 17px;
         }
     }
     &_padding {
@@ -310,6 +314,7 @@
     padding: 16px 0;
     border-bottom: 1px solid #c7d0d9;
     @media (max-width: $xs) {
+        padding-right: 0 !important;
     }
     &__search {
         display: flex;
@@ -804,6 +809,8 @@
         color: $lightGreen;
     }
     &__svg {
+        display: flex;
+        align-items: center;
         /*     & svg{
       transition: $transition;
       fill: $textColor;
