@@ -391,6 +391,13 @@
     &__logo {
         display: flex;
         align-items: flex-start;
+        & svg {
+            display: block;
+            @media (max-width: $xs) {
+                width: 119px;
+                height: 44px;
+            }
+        }
         & span {
             margin-top: 9px;
             margin-left: 16px;
@@ -402,10 +409,9 @@
             border-bottom: 1px solid $white;
             transition: $transition;
             @media (max-width: $xs) {
+                font-size: 12px;
                 display: block;
-                width: 77px;
-                border: none;
-                text-decoration: underline;
+                margin-left: 6px;
             }
         }
         &:hover {

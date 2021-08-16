@@ -66,6 +66,7 @@ body {
             line-height: 36px;
         }
         @media (max-width: $xs) {
+            display: block;
             font-size: 36px;
         }
         & span {
@@ -229,6 +230,9 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: $transition;
+    @media (max-width: $xs) {
+        height: 55px;
+    }
     &:hover {
         border-color: $textColor;
     }
@@ -389,6 +393,149 @@ body {
         }
     }
 }
+.catalogCards__container {
+    .cardProduct {
+        @media (max-width: $xs) {
+            width: 100%;
+            padding: 31px;
+            height: 430px;
+        }
+        &__img {
+            @media (max-width: $xs) {
+                width: 200px;
+            }
+        }
+        &__picture {
+            @media (max-width: $xs) {
+                border-radius: 10px;
+            }
+        }
+
+        &__info {
+            @media (max-width: $xs) {
+                margin-top: 24px;
+                padding: 0;
+                height: 137px;
+            }
+        }
+
+        &__a {
+            @media (max-width: $xs) {
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
+
+        &__elements {
+            .addBasket {
+                margin-left: 12px;
+                width: 105px;
+                height: 42px;
+                @media (max-width: $xs) {
+                    width: 165px;
+                    height: 58px;
+                    font-size: 20px;
+                    line-height: 24px;
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+    .availability {
+        @media (max-width: $xs) {
+            position: absolute;
+            top: 32px;
+            right: 96px;
+        }
+        &__text {
+            @media (max-width: $xs) {
+                font-size: 18px;
+                line-height: 13px;
+                &.has {
+                    &:before {
+                        width: 14px;
+                        height: 13px;
+                        background-size: cover;
+                    }
+                }
+                &.not {
+                    &:before {
+                        width: 14px;
+                        height: 14px;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+    }
+    .review {
+        @media (max-width: $xs) {
+            position: absolute;
+            top: 61px;
+            left: 255px;
+        }
+
+        &__how {
+            @media (max-width: $xs) {
+                font-size: 16px;
+            }
+        }
+    }
+    .cost {
+        @media (max-width: $xs) {
+            position: absolute;
+            top: 86px;
+            left: 255px;
+            flex-direction: column;
+        }
+        &__info {
+            @media (max-width: $xs) {
+                margin-top: 17px;
+                font-size: 14px;
+            }
+        }
+
+        &__totalPrice {
+            @media (max-width: $xs) {
+                font-size: 30px;
+            }
+        }
+        &__ruble {
+            @media (max-width: $xs) {
+                font-size: 28px;
+            }
+        }
+    }
+    .counter {
+        @media (max-width: $xs) {
+            width: 163px;
+            height: 52px;
+        }
+        &__minus,
+        &__plus {
+            @media (max-width: $xs) {
+                width: 52px;
+            }
+        }
+        &__input {
+            @media (max-width: $xs) {
+                width: 61px;
+                input {
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+            }
+        }
+    }
+    .likeProduct {
+        @media (max-width: $xs) {
+            & svg {
+                width: 38px;
+                height: 32px;
+            }
+        }
+    }
+}
 .cardProduct {
     position: relative;
     width: 335px;
@@ -399,17 +546,9 @@ body {
     @media (max-width: $lg) {
         width: 307px;
     }
-    @media (max-width: $xs) {
-        width: 100%;
-        padding: 31px;
-        height: 430px;
-    }
     &__img {
         width: 100%;
         height: 200px;
-        @media (max-width: $xs) {
-            width: 200px;
-        }
     }
     &__picture {
         position: relative;
@@ -422,9 +561,6 @@ body {
             size: cover;
             position: center;
             repeat: no-repeat;
-        }
-        @media (max-width: $xs) {
-            border-radius: 10px;
         }
         &:after {
             content: "";
@@ -462,11 +598,6 @@ body {
         flex-direction: column;
         justify-content: space-between;
         height: 285px;
-        @media (max-width: $xs) {
-            margin-top: 24px;
-            padding: 0;
-            height: 137px;
-        }
     }
     &__title {
         max-height: 72px;
@@ -482,18 +613,12 @@ body {
         &:hover {
             color: $green;
         }
-        @media (max-width: $xs) {
-            font-size: 20px;
-            line-height: 28px;
-        }
     }
     &__bottom {
         margin-top: 14px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @media (max-width: $xs) {
-        }
     }
     &__elements {
         display: flex;
@@ -502,13 +627,6 @@ body {
             margin-left: 12px;
             width: 105px;
             height: 42px;
-            @media (max-width: $xs) {
-                width: 165px;
-                height: 58px;
-                font-size: 20px;
-                line-height: 24px;
-                margin-left: 30px;
-            }
         }
     }
     &__new {
@@ -539,10 +657,16 @@ body {
     }
 }
 .cardArticle {
+    .cardArticle__btn {
+        @media (max-width: $xs) {
+            display: none;
+        }
+    }
     width: 335px;
     height: 485px;
     position: relative;
     overflow: hidden;
+    pointer-events: none;
     background: {
         image: linear-gradient(
                 180deg,
@@ -551,6 +675,7 @@ body {
             ),
             url($imgUrl + "/article.png");
         repeat: no-repeat;
+        size: cover;
     }
     display: flex;
     flex-direction: column;
@@ -558,6 +683,25 @@ body {
     padding: 18px 25px 0;
     border-radius: 10px;
     color: $white;
+    @media (max-width: $lg) {
+        width: 307px;
+    }
+    @media (max-width: $xs) {
+        width: 100%;
+        height: 243px;
+        padding-bottom: 31px;
+        background: {
+            image: linear-gradient(
+                    180deg,
+                    rgba(0, 0, 0, 0) 25.93%,
+                    rgba(0, 0, 0, 0.6) 55.56%
+                ),
+                url($imgUrl + "/article.png");
+            repeat: no-repeat;
+            size: cover;
+        }
+        pointer-events: visible;
+    }
     &__title {
         z-index: 1;
         font: {
@@ -576,6 +720,11 @@ body {
         justify-content: space-between;
         position: relative;
         cursor: pointer;
+        pointer-events: visible;
+
+        @media (max-width: $xs) {
+            height: 54px;
+        }
         &:before {
             content: "";
             position: absolute;
@@ -607,6 +756,11 @@ body {
                 size: 14px;
             }
             line-height: 20px;
+
+            @media (max-width: $xs) {
+                font-size: 18px;
+                line-height: 20px;
+            }
         }
         & svg {
             width: 25px;
@@ -623,9 +777,17 @@ body {
     padding: 54px 0 88px;
     position: relative;
     background-color: $lightGreen;
+    .container {
+        @media (max-width: $xs) {
+            padding: 0;
+        }
+    }
     &__head {
         display: flex;
         align-items: center;
+        @media (max-width: $xs) {
+            padding: 0 32px;
+        }
     }
     &__title {
         font: {
@@ -652,6 +814,89 @@ body {
         gap: 22px;
         margin-top: 35px;
     }
+    .helpfulCard {
+        &:first-child {
+            @media (max-width: $xs) {
+                margin-left: 32px;
+            }
+        }
+
+        &:last-child {
+            @media (max-width: $xs) {
+                margin-right: 32px;
+            }
+        }
+        @media (max-width: $xs) {
+            flex: none;
+            width: 355px;
+            height: 550px;
+        }
+        &__video {
+            position: absolute;
+            z-index: 10;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &__img {
+            @media (max-width: $xs) {
+                width: 100%;
+                height: 225px;
+            }
+        }
+        &__text {
+            @media (max-width: $xs) {
+                max-height: 230px;
+            }
+        }
+
+        &__title {
+            @media (max-width: $xs) {
+                font-size: 20px;
+                line-height: 26px;
+            }
+        }
+        &__description {
+            @media (max-width: $xs) {
+                font-size: 18px;
+                line-height: 26px;
+                margin-top: 8px;
+            }
+        }
+        &__btn {
+            position: absolute;
+            margin: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0 20px 0 24px;
+            color: $textColor;
+            transition: $transition;
+            @media (max-width: $xs) {
+                font-size: 18px;
+                line-height: 26px;
+                margin-top: 8px;
+            }
+            &:before {
+                border-top: 1px solid $border;
+            }
+            & svg {
+                path {
+                    transition: $transition;
+                    display: block;
+                    fill: $green;
+                }
+            }
+            &:hover {
+                color: $white;
+                & svg {
+                    path {
+                        fill: $white;
+                    }
+                }
+            }
+        }
+    }
 }
 .helpfulCard {
     width: 335px;
@@ -660,7 +905,10 @@ body {
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-
+    @media (max-width: $lg) {
+        width: 306px;
+        height: 477px;
+    }
     &__video {
         position: absolute;
         z-index: 10;
@@ -735,11 +983,7 @@ body {
 }
 .availability {
     margin-top: 11px;
-    @media (max-width: $xs) {
-        position: absolute;
-        top: 32px;
-        right: 96px;
-    }
+
     &__text {
         display: flex;
         align-items: center;
@@ -790,11 +1034,7 @@ body {
     margin-top: 8px;
     display: flex;
     align-items: baseline;
-    @media (max-width: $xs) {
-        position: absolute;
-        top: 61px;
-        left: 255px;
-    }
+
     &__list {
         display: flex;
         align-items: center;
@@ -828,12 +1068,7 @@ body {
     margin-top: 17px;
     display: flex;
     justify-content: space-between;
-    @media (max-width: $xs) {
-        position: absolute;
-        top: 86px;
-        left: 255px;
-        flex-direction: column;
-    }
+
     &__info {
         font-size: 12px;
         line-height: 9px;
@@ -1018,10 +1253,7 @@ body {
     border: 1px solid #c7d0d9;
     border-radius: 5px;
     overflow: hidden;
-    @media (max-width: $xs) {
-        width: 163px;
-        height: 52px;
-    }
+
     &__minus,
     &__plus {
         padding-top: 1px;
@@ -1033,9 +1265,7 @@ body {
         cursor: pointer;
         background: transparent;
         transition: $transition;
-        @media (max-width: $xs) {
-            width: 52px;
-        }
+
         svg {
             path {
                 transition: $transition;
@@ -1053,13 +1283,7 @@ body {
     }
     &__input {
         width: 40px;
-        @media (max-width: $xs) {
-            width: 61px;
-            input {
-                font-size: 18px;
-                line-height: 21px;
-            }
-        }
+
         input {
             padding-top: 2px;
             width: 100%;
@@ -1102,12 +1326,7 @@ body {
             margin-left: 14px;
         }
     }
-    @media (max-width: $xs) {
-        & svg {
-            width: 36px;
-            margin-left: 0px;
-        }
-    }
+
     &.active {
         svg {
             path {
@@ -1199,6 +1418,15 @@ body {
     font-size: 14px;
     line-height: 10px;
     color: $gray1;
+    @media (max-width: $xs) {
+        font-size: 18px;
+        line-height: 13px;
+    }
+    & span {
+        @media (max-width: $xs) {
+            display: none;
+        }
+    }
     &__ul {
         display: flex;
     }

@@ -217,13 +217,13 @@
     .cardProduct {
         @media (max-width: $xs) {
             width: 355px !important;
-            height: 551px;
+            height: 551px !important;
         }
     }
     .cardProduct__img {
         @media (max-width: $xs) {
-            width: 355px;
-            height: 231px;
+            width: 355px !important;
+            height: 231px !important;
         }
     }
     .cardProduct__info {
