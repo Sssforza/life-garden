@@ -32,6 +32,7 @@ import {
     checkNum,
     priceSlider,
     filters,
+    filtersMobile,
 } from "./blocks/catalog.js";
 
 //📁 /assets/js/blocks .js
@@ -79,7 +80,7 @@ import { mapAsideScroll } from "./blocks/scrollbar.js";
 import { checkClubCard } from "./blocks/clubCard.js";
 
 //📁 /assets/js/blocks  newspaper.js
-import { newspaperPopup} from "./blocks/newspaper.js";
+import { newspaperPopup } from "./blocks/newspaper.js";
 
 //📁 /assets/js/blocks  articles.js
 import { articles } from "./blocks/articles.js";
@@ -189,6 +190,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // //all filters
     filters();
+    // //all filters
+    filtersMobile();
 
     //check method delivery
     checkMethodDelivery();

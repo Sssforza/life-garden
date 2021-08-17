@@ -95,13 +95,30 @@
 
     &__li {
         font-size: 20px;
-        line-height: 42px;
+        line-height: 22px;
         cursor: pointer;
         transition: $transition;
-        &:hover {
-            border-bottom: 4px solid #1e7243;
-        }
+        padding-bottom: 16px;
+        position: relative;
         border-bottom: 4px solid $white;
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            right: 0;
+            height: 4px;
+            background: $green;
+            opacity: 0;
+            pointer-events: none;
+            transition: $transition;
+        }
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+        }
     }
     &_checked {
         border-bottom: 4px solid #1e7243;

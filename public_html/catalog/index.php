@@ -28,8 +28,16 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 					<span>180 товаров</span>
 				</div>
 				<div class="catalog__body">
-					<aside class="catalog__menu catalogMenu">
+					<aside class="catalog__menu catalogMenu catalogMenu_js">
 						<form action="">
+							<div class="catalogMenu__titleMobile">
+								<span>Фильтры</span>
+								<div class="hamburgerXs hamburgerXs--spring closeSearch closeFilters_js is-active">
+									<span class="hamburgerXs-box">
+										<span class="hamburgerXs-inner"></span>
+									</span>
+								</div>
+							</div>
 							<div class="catalogMenu__box">
 								<ul class="catalogMenu__links catalogMenuLinks_js">
 									<li><a class="catalogMenu__link catalogMenu__link_checked" href="#">Анис</a></li>
@@ -64,9 +72,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<span class="catalogMenu__title">Цена</span>
 								<div class="catalogMenuPrice__slider">
 									<div class="catalogMenuPrice__inputs">
-										<input class="catalogMenuPrice__input" id="input-0" min="1000" max="30000" placeholder="1000" type="number">
+										<input class="catalogMenuPrice__input" id="input-0" min="1000" max="30000" placeholder="1 000" type="number">
 										<span></span>
-										<input class="catalogMenuPrice__input" id="input-1" min="1000" max="30000" placeholder="30000" type="number">
+										<input class="catalogMenuPrice__input" id="input-1" min="1000" max="30000" placeholder="30 000" type="number">
 									</div>
 									<div id="slider"></div>
 									<div class="catalogMenuPrice__values">
@@ -155,6 +163,97 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 										<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShow.svg'; ?>
 									</div>
 								</div>
+
+
+								<div class="catalogMenuContainer catalogMenuContainer__mobile_js">
+									<div class="catalogMenu__titleMobile">
+										<div class="catalogMenuContainer__box ">
+											<div class="catalogMenuContainer__back_js">
+												<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/ArrowSort.svg'; ?>
+											</div>
+											<span>Сорт</span>
+										</div>
+										<div class="hamburgerXs hamburgerXs--spring closeSearch closeFilters_js is-active">
+											<span class="hamburgerXs-box">
+												<span class="hamburgerXs-inner"></span>
+											</span>
+										</div>
+									</div>
+									<div class="scrollGreen catalogMenu__items catalogMenuItems_js">
+										<div class="catalogLabel__container">
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Бонсай</span>
+											</label>
+										</div>
+									</div>
+								</div>
+
+
+
+
+
+
 							</div>
 							<div class="catalogMenu__stock">
 								<div class="catalogMenu__down catalogStockDown_js">
@@ -239,7 +338,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/burger.svg'; ?>
 								<span>Категории</span>
 							</div>
-							<div class="catalogCards__filter catalogCards__strainer">
+							<div class="catalogCards__filter catalogCards__strainer catalogCards__strainer_js">
 								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/filter.svg'; ?>
 								<span>Фильтры</span>
 							</div>
@@ -249,6 +348,194 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/pop1.svg'; ?>
 								</div>
 
+								<div class="catalogCardsPopular__popup catalogCardsAlpha catalogCardsAlphaPopup_js hidden">
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>А</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Б</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>В</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Г</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Д</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Е</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Ё</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Ж</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>З</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>И</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Й</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>К</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Л</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label">
+											<input class="radio" type="radio" name="color" checked>
+											<span>М</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Б</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Н</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>О</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>П</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Р</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>С</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Т</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>У</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Ф</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Х</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Ц</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Ч</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Ш</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Щ</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Э</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Ю</span>
+										</label>
+									</div>
+									<div class="catalogInput__container">
+										<label class="catalogMenu__label catalogMenu__alpha_js">
+											<input class="radio" type="radio" name="color" checked>
+											<span>Я</span>
+										</label>
+									</div>
+								</div>
 								<div class="catalogCardsPopular__popup catalogCardsPopularPopup_js hidden">
 									<div class="catalogCardsPopular__item catalogCardsPopularItem_js"> <input type="radio" id="contactChoice1" name="popular" checked>
 										<label class="catalogCardsPopular__label catalogCardsPopularLabel_js" for="contactChoice1">Сначала популярные</label>
@@ -262,7 +549,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								</div>
 							</div>
 							<div class="catalogCards__alphabet catalogCardsAlphabet">
-								<div class="catalogCards__filter catalogCards__alpha">
+								<div class="catalogCards__filter catalogCards__alpha catalogCards__alpha_js">
 									<span>А</span>
 								</div>
 								<div class="catalogCardsAlphabet__link catalogCardsAlphabetLink_js"> <span>По алфавиту <span class="catalogCardsAlphabet__textChecked catalogCardsAlphabetTextChecked_js">все</span></span>

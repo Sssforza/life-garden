@@ -11526,7 +11526,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["checkNum"])(); // //all filters
 
-  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["filters"])(); //check method delivery
+  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["filters"])(); // //all filters
+
+  Object(_blocks_catalog_js__WEBPACK_IMPORTED_MODULE_6__["filtersMobile"])(); //check method delivery
 
   Object(_blocks_lkProfile_js__WEBPACK_IMPORTED_MODULE_7__["checkMethodDelivery"])(); //open lists of shops in lk
 
@@ -18957,6 +18959,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "catalogPopups", function() { return catalogPopups; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkNum", function() { return checkNum; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "filters", function() { return filters; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "filtersMobile", function() { return filtersMobile; });
 function priceSlider() {
   if (document.getElementById("slider")) {
     var slider = document.getElementById("slider");
@@ -19105,111 +19108,171 @@ function checkNum() {
 }
 function filters() {
   if (document.querySelector(".arrowLink-open")) {
-    //функция изменения стрелки при открытии
-    var arrowOpen = function arrowOpen(open, close) {
-      open.classList.remove("hidden");
-      close.classList.add("hidden");
-    };
+    if (window.innerWidth >= 1024) {
+      //функция изменения стрелки при открытии
+      var arrowOpen = function arrowOpen(open, close) {
+        open.classList.remove("hidden");
+        close.classList.add("hidden");
+      };
 
-    var arrowClose = function arrowClose(open, close) {
-      open.classList.add("hidden");
-      close.classList.remove("hidden");
-    };
+      var arrowClose = function arrowClose(open, close) {
+        open.classList.add("hidden");
+        close.classList.remove("hidden");
+      };
 
-    var arrowLinkOpen = document.querySelector(".arrowLink-open");
-    var arrowLinkClose = document.querySelector(".arrowLink-close");
-    var arrowColorOpen = document.querySelector(".arrowColor-open");
-    var arrowColorClose = document.querySelector(".arrowColor-close");
-    var arrowSortOpen = document.querySelector(".arrowSort-open");
-    var arrowSortClose = document.querySelector(".arrowSort-close");
-    var arrowStockOpen = document.querySelector(".arrowStock-open");
-    var arrowStockClose = document.querySelector(".arrowStock-close");
-    var arrowShowOpen = document.querySelector(".arrowShow-open");
-    var arrowShowClose = document.querySelector(".arrowShow-close");
-    var link = document.querySelectorAll(".catalogMenu__link");
-    link.forEach(function (element) {
-      element.addEventListener("click", function () {
-        link.forEach(function (item) {
-          if (item.classList.contains("catalogMenu__link_checked")) {
-            item.classList.remove("catalogMenu__link_checked");
-          }
+      var arrowLinkOpen = document.querySelector(".arrowLink-open");
+      var arrowLinkClose = document.querySelector(".arrowLink-close");
+      var arrowColorOpen = document.querySelector(".arrowColor-open");
+      var arrowColorClose = document.querySelector(".arrowColor-close");
+      var arrowSortOpen = document.querySelector(".arrowSort-open");
+      var arrowSortClose = document.querySelector(".arrowSort-close");
+      var arrowStockOpen = document.querySelector(".arrowStock-open");
+      var arrowStockClose = document.querySelector(".arrowStock-close");
+      var arrowShowOpen = document.querySelector(".arrowShow-open");
+      var arrowShowClose = document.querySelector(".arrowShow-close");
+      var link = document.querySelectorAll(".catalogMenu__link");
+      link.forEach(function (element) {
+        element.addEventListener("click", function () {
+          link.forEach(function (item) {
+            if (item.classList.contains("catalogMenu__link_checked")) {
+              item.classList.remove("catalogMenu__link_checked");
+            }
+          });
+          element.classList.add("catalogMenu__link_checked");
         });
-        element.classList.add("catalogMenu__link_checked");
+      });
+      var showMore = document.querySelector(".catalogMenuShow_js");
+      var showMoreLinks = document.querySelector(".catalogMenuLinks_js");
+      var showMoreText = document.querySelector(".catalogMenuText_js");
+      showMore.addEventListener("click", function () {
+        showMoreLinks.classList.toggle("catalogMenu__links_open");
+
+        if (showMoreLinks.classList.contains("catalogMenu__links_open")) {
+          showMoreText.textContent = "Свернуть";
+          arrowOpen(arrowLinkOpen, arrowLinkClose);
+        } else {
+          showMoreText.textContent = "Показать еще";
+          arrowClose(arrowLinkOpen, arrowLinkClose);
+        }
+      });
+      var down = document.querySelector(".catalogMenuDown_js");
+      var container = document.querySelector(".catalogMenuContainer_js");
+      var stockDown = document.querySelector(".catalogStockDown_js");
+      var stockContainer = document.querySelector(".catalogStockContainer_js");
+      var colorDown = document.querySelector(".catalogColorDown_js");
+      var colorContainer = document.querySelector(".catalogColorContainer_js");
+      var showMoreSmall = document.querySelector(".catalogMenuSmall_js");
+      var showTextSmall = document.querySelector(".catalogMenuTextSmall_js");
+      var items = document.querySelector(".catalogMenuItems_js");
+      down.addEventListener("click", function () {
+        arrowClose(arrowStockOpen, arrowStockClose);
+        arrowClose(arrowColorOpen, arrowColorClose);
+        container.classList.toggle("catalogMenu__container_open");
+        stockContainer.classList.remove("catalogMenu__container_open");
+        colorContainer.classList.remove("catalogMenu__container_open");
+
+        if (container.classList.contains("catalogMenu__container_open")) {
+          arrowOpen(arrowSortOpen, arrowSortClose);
+        } else {
+          arrowClose(arrowSortOpen, arrowSortClose);
+        }
+      });
+      stockDown.addEventListener("click", function () {
+        arrowClose(arrowSortOpen, arrowSortClose);
+        arrowClose(arrowColorOpen, arrowColorClose);
+        stockContainer.classList.toggle("catalogMenu__container_open");
+        colorContainer.classList.remove("catalogMenu__container_open");
+        container.classList.remove("catalogMenu__container_open");
+
+        if (stockContainer.classList.contains("catalogMenu__container_open")) {
+          arrowOpen(arrowStockOpen, arrowStockClose);
+        } else {
+          arrowClose(arrowStockOpen, arrowStockClose);
+        }
+      });
+      colorDown.addEventListener("click", function () {
+        arrowClose(arrowStockOpen, arrowStockClose);
+        arrowClose(arrowSortOpen, arrowSortClose);
+        colorContainer.classList.toggle("catalogMenu__container_open");
+        container.classList.remove("catalogMenu__container_open");
+        stockContainer.classList.remove("catalogMenu__container_open");
+
+        if (colorContainer.classList.contains("catalogMenu__container_open")) {
+          arrowOpen(arrowColorOpen, arrowColorClose);
+        } else {
+          arrowClose(arrowColorOpen, arrowColorClose);
+        }
+      });
+      showMoreSmall.addEventListener("click", function () {
+        items.classList.toggle("catalogMenu__items_big");
+
+        if (items.classList.contains("catalogMenu__items_big")) {
+          showTextSmall.textContent = "Свернуть";
+          arrowOpen(arrowShowOpen, arrowShowClose);
+        } else {
+          showTextSmall.textContent = "Показать еще";
+          arrowClose(arrowShowOpen, arrowShowClose);
+        }
+      });
+    }
+  }
+}
+function filtersMobile() {
+  if (document.querySelector(".catalogCards__strainer_js")) {
+    var closePopapAlpha = function closePopapAlpha(e) {
+      if (windowAlpha && e.target !== windowAlpha && !windowAlpha.contains(e.target)) {
+        windowAlpha.classList.add("hidden");
+        document.removeEventListener("click", closePopapAlpha);
+      }
+    };
+
+    var btnFilters = document.querySelector(".catalogCards__strainer_js");
+    var closeFilters = document.querySelectorAll(".closeFilters_js");
+    var windowFilters = document.querySelector(".catalogMenu_js");
+
+    btnFilters.onclick = function () {
+      windowFilters.classList.add("catalogMenu_mobile");
+    };
+
+    closeFilters.forEach(function (item) {
+      item.onclick = function () {
+        windowFilters.classList.remove("catalogMenu_mobile");
+      };
+    });
+    var btnAlpha = document.querySelector(".catalogCards__alpha_js");
+    var windowAlpha = document.querySelector(".catalogCardsAlphaPopup_js");
+    var letteralpha = document.querySelectorAll(".catalogMenu__alpha_js");
+    letteralpha.forEach(function (item) {
+      item.addEventListener("click", function () {
+        setTimeout(function () {
+          windowAlpha.classList.toggle("hidden");
+          document.removeEventListener("click", closePopapAlpha);
+        }, 300);
       });
     });
-    var showMore = document.querySelector(".catalogMenuShow_js");
-    var showMoreLinks = document.querySelector(".catalogMenuLinks_js");
-    var showMoreText = document.querySelector(".catalogMenuText_js");
-    showMore.addEventListener("click", function () {
-      showMoreLinks.classList.toggle("catalogMenu__links_open");
-
-      if (showMoreLinks.classList.contains("catalogMenu__links_open")) {
-        showMoreText.textContent = "Свернуть";
-        arrowOpen(arrowLinkOpen, arrowLinkClose);
-      } else {
-        showMoreText.textContent = "Показать еще";
-        arrowClose(arrowLinkOpen, arrowLinkClose);
+    btnAlpha.addEventListener("click", function () {
+      if (windowAlpha.classList.contains("hidden")) {
+        document.removeEventListener("click", closePopapAlpha);
       }
+
+      windowAlpha.classList.toggle("hidden");
+      setTimeout(function () {
+        document.addEventListener("click", closePopapAlpha);
+      }, 0);
     });
+    var windowSort = document.querySelector(".catalogMenuContainer__mobile_js");
     var down = document.querySelector(".catalogMenuDown_js");
-    var container = document.querySelector(".catalogMenuContainer_js");
-    var stockDown = document.querySelector(".catalogStockDown_js");
-    var stockContainer = document.querySelector(".catalogStockContainer_js");
-    var colorDown = document.querySelector(".catalogColorDown_js");
-    var colorContainer = document.querySelector(".catalogColorContainer_js");
-    var showMoreSmall = document.querySelector(".catalogMenuSmall_js");
-    var showTextSmall = document.querySelector(".catalogMenuTextSmall_js");
-    var items = document.querySelector(".catalogMenuItems_js");
-    down.addEventListener("click", function () {
-      arrowClose(arrowStockOpen, arrowStockClose);
-      arrowClose(arrowColorOpen, arrowColorClose);
-      container.classList.toggle("catalogMenu__container_open");
-      stockContainer.classList.remove("catalogMenu__container_open");
-      colorContainer.classList.remove("catalogMenu__container_open");
+    var backDown = document.querySelector(".catalogMenuContainer__back_js");
 
-      if (container.classList.contains("catalogMenu__container_open")) {
-        arrowOpen(arrowSortOpen, arrowSortClose);
-      } else {
-        arrowClose(arrowSortOpen, arrowSortClose);
-      }
-    });
-    stockDown.addEventListener("click", function () {
-      arrowClose(arrowSortOpen, arrowSortClose);
-      arrowClose(arrowColorOpen, arrowColorClose);
-      stockContainer.classList.toggle("catalogMenu__container_open");
-      colorContainer.classList.remove("catalogMenu__container_open");
-      container.classList.remove("catalogMenu__container_open");
+    if (window.innerWidth < 1024) {
+      down.onclick = function () {
+        windowSort.classList.add("catalogMenuContainer__mobile");
+      };
 
-      if (stockContainer.classList.contains("catalogMenu__container_open")) {
-        arrowOpen(arrowStockOpen, arrowStockClose);
-      } else {
-        arrowClose(arrowStockOpen, arrowStockClose);
-      }
-    });
-    colorDown.addEventListener("click", function () {
-      arrowClose(arrowStockOpen, arrowStockClose);
-      arrowClose(arrowSortOpen, arrowSortClose);
-      colorContainer.classList.toggle("catalogMenu__container_open");
-      container.classList.remove("catalogMenu__container_open");
-      stockContainer.classList.remove("catalogMenu__container_open");
-
-      if (colorContainer.classList.contains("catalogMenu__container_open")) {
-        arrowOpen(arrowColorOpen, arrowColorClose);
-      } else {
-        arrowClose(arrowColorOpen, arrowColorClose);
-      }
-    });
-    showMoreSmall.addEventListener("click", function () {
-      items.classList.toggle("catalogMenu__items_big");
-
-      if (items.classList.contains("catalogMenu__items_big")) {
-        showTextSmall.textContent = "Свернуть";
-        arrowOpen(arrowShowOpen, arrowShowClose);
-      } else {
-        showTextSmall.textContent = "Показать еще";
-        arrowClose(arrowShowOpen, arrowShowClose);
-      }
-    });
+      backDown.onclick = function () {
+        windowSort.classList.remove("catalogMenuContainer__mobile");
+      };
+    }
   }
 }
 

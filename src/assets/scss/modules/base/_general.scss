@@ -786,7 +786,7 @@ body {
         display: flex;
         align-items: center;
         @media (max-width: $xs) {
-            padding: 0 32px;
+            padding: 0 20px;
         }
     }
     &__title {
@@ -817,7 +817,7 @@ body {
     .helpfulCard {
         &:first-child {
             @media (max-width: $xs) {
-                margin-left: 32px;
+                margin-left: 20px;
             }
         }
 
