@@ -207,7 +207,7 @@
                   </div>
                   <span class="iconSelected__count">0</span>
                 </div>
-                <div class="headerClick headerClickPreorder_js hidden">
+                <div class="headerClick headerClick__preorder headerClickPreorder_js hidden">
                   <div class="headerClick__top">
                     <div class="headerClick__title">Товары для предзаказа</div>
                     <div class="headerClick__clear">Очистить все</div>
@@ -367,7 +367,7 @@
                     <span>6570 р</span>
                   </div>
                 </div>
-                <div class="headerClick headerClickBasket_js hidden">
+                <div class="headerClick headerClick__basket headerClickBasket_js hidden">
                   <div class="headerClick__top">
                     <div class="headerClick__title">Корзина</div>
                     <div class="headerClick__clear">Очистить все</div>

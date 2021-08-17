@@ -1148,15 +1148,38 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     padding: 22px 30px 33px;
     color: $textColor;
-    &:after {
+
+    &:after,
+    &::before {
         content: "";
         position: absolute;
-        top: -13px;
+        background: $white;
         right: 50px;
-        border: 17px solid $white;
-        border-top: 17px solid $white;
-        box-shadow: -2px 3px 5px -3px rgba(0, 0, 0, 0.15);
-        transform: rotate(135deg);
+        top: -9px;
+        width: 20px;
+        height: 20px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+        z-index: -1;
+        transform: rotate(60deg) skew(30deg);
+        @media (max-width: $lg) {
+            right: 35px;
+        }
+    }
+    &__preorder {
+        right: -25%;
+        @media (max-width: $lg) {
+            right: -6%;
+        }
+    }
+    &__basket {
+        right: 30%;
+        @media (max-width: $lg) {
+            right: -35%;
+        }
+    }
+    &:before {
+        z-index: 1;
+        box-shadow: none;
     }
 
     &__top {

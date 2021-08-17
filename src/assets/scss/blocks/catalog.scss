@@ -384,6 +384,22 @@
     }
     @media (max-width: $xs) {
         display: none;
+        width: 540px;
+        height: 100%;
+    }
+    &_mobile {
+        padding: 20px;
+        position: fixed;
+        background-color: $white;
+        z-index: 500;
+        top: 0;
+        left: 0;
+        .catalogMenu__box {
+            display: none;
+        }
+        @media (max-width: $xs) {
+            display: flex;
+        }
     }
     &__title {
         font: {

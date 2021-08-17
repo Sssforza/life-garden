@@ -59,6 +59,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowLink.svg'; ?>
 								</div>
 							</div>
+
 							<div class="catalogMenu__price catalogMenuPrice">
 								<span class="catalogMenu__title">Цена</span>
 								<div class="catalogMenuPrice__slider">
