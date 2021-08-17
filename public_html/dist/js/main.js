@@ -11552,9 +11552,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Object(_blocks_clubCard_js__WEBPACK_IMPORTED_MODULE_17__["checkClubCard"])(); // newspaper popup
 
-  Object(_blocks_newspaper_js__WEBPACK_IMPORTED_MODULE_18__["newspaperPopup"])(); // pdf loader popup
-
-  Object(_blocks_newspaper_js__WEBPACK_IMPORTED_MODULE_18__["pdfLoader"])(); // articles
+  Object(_blocks_newspaper_js__WEBPACK_IMPORTED_MODULE_18__["newspaperPopup"])(); // articles
 
   Object(_blocks_articles_js__WEBPACK_IMPORTED_MODULE_19__["articles"])(); // check categories in news
 
@@ -20112,7 +20110,6 @@ function checkClubCard() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "newspaperPopup", function() { return newspaperPopup; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pdfLoader", function() { return pdfLoader; });
 function newspaperPopup() {
   if (document.querySelector(".newspaperHeader__last_js")) {
     var lastBtn = document.querySelector(".newspaperHeader__last_js");
@@ -20145,12 +20142,6 @@ function newspaperPopup() {
       };
     });
   }
-}
-function pdfLoader() {
-  $(".newspaperBody__pdf_js").flipBook({
-    pdfUrl: "/dist/pdf/newspaper.pdf",
-    lightBox: true
-  });
 }
 
 /***/ }),

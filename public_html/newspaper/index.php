@@ -3,6 +3,26 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 ?>
 <link rel='stylesheet' href="/dist/css/blocks/newspaper.css">
 <link rel='stylesheet' href="/dist/min/font-awesome.css">
+<script type="text/javascript">
+    $(document).ready(function () {
+		$(".newspaperBody__pdf_js").flipBook({
+			pdfUrl: "/dist/pdf/newspaper.pdf",
+			lightBox: true,
+		});
+        // <? if (!empty($arResult['MAIN'])): ?>
+        // $(".journalLink_jsMain").flipBook({
+        //     pdfUrl:"<?= CFile::GetPath($arResult['MAIN']['PROPERTIES']['JOURNAL_PDF']['VALUE']) ?>",
+        //     lightBox:true
+        // });
+        // <? endif ?>
+        // <? foreach ($arResult['ITEMS'] as $key => $item): ?>
+        // $(".journalLink_js<?= $key ?>").flipBook({
+        //     pdfUrl:"<?= CFile::GetPath($item['PROPERTIES']['JOURNAL_PDF']['VALUE']) ?>",
+        //     lightBox:true
+        // });
+        // <? endforeach ?>
+    });
+</script>
 <main class="page page_promo">
 	<section class="breadCrumbs container">
 		<ul class="breadCrumbs__ul">
