@@ -79,7 +79,7 @@ import { mapAsideScroll } from "./blocks/scrollbar.js";
 import { checkClubCard } from "./blocks/clubCard.js";
 
 //📁 /assets/js/blocks  newspaper.js
-import { newspaperPopup, pdfLoader } from "./blocks/newspaper.js";
+import { newspaperPopup} from "./blocks/newspaper.js";
 
 //📁 /assets/js/blocks  articles.js
 import { articles } from "./blocks/articles.js";
@@ -228,9 +228,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // newspaper popup
     newspaperPopup();
-
-    // pdf loader popup
-    pdfLoader();
 
     // articles
     articles();
