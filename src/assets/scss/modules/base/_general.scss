@@ -990,6 +990,9 @@ body {
         font-size: 14px;
         line-height: 10px;
         color: $gray1;
+        @media (max-width: $lg) {
+            font-size: 12px;
+        }
         @media (max-width: $xs) {
             font-size: 18px;
             line-height: 13px;
@@ -1059,6 +1062,9 @@ body {
         font-size: 14px;
         line-height: 10px;
         color: #5b6168;
+        @media (max-width: $lg) {
+            font-size: 12px;
+        }
         @media (max-width: $xs) {
             font-size: 16px;
         }
@@ -1253,7 +1259,9 @@ body {
     border: 1px solid #c7d0d9;
     border-radius: 5px;
     overflow: hidden;
-
+    @media (max-width: $lg) {
+        font-size: 14px;
+    }
     &__minus,
     &__plus {
         padding-top: 1px;
@@ -1373,6 +1381,13 @@ body {
         cursor: pointer;
         transition: $transition;
         fill: #919eab;
+        @media (max-width: $lg) {
+            right: 31px;
+            & svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
         &:hover {
             fill: $textColor;
         }
@@ -2040,6 +2055,9 @@ body {
     &__button {
         width: 160px;
         height: 46px;
+        @media (max-width: $lg) {
+            width: 135px;
+        }
     }
     &__like {
         margin-left: 15px;
@@ -2075,6 +2093,16 @@ body {
         border-radius: 30px;
         overflow: hidden;
         object-fit: cover;
+        @media (max-width: $lg) {
+            width: 447px;
+            height: 464px;
+            &_small {
+                max-width: 68px;
+                height: 68px;
+                border-radius: 5px;
+                margin: 0;
+            }
+        }
         &_small {
             cursor: pointer;
             max-width: 112px;
@@ -2091,6 +2119,9 @@ body {
     }
     &__info {
         margin-left: 60px;
+        @media (max-width: $lg) {
+            margin-left: 34px;
+        }
     }
     &__article {
         font-size: 14px;
@@ -2102,6 +2133,10 @@ body {
         font-weight: bold;
         font-size: 40px;
         line-height: 46px;
+        @media (max-width: $lg) {
+            font-size: 25px;
+            line-height: 28px;
+        }
     }
 
     &__review {
@@ -2123,10 +2158,16 @@ body {
         font-weight: 500;
         font-size: 16px;
         line-height: 20px;
+        @media (max-width: $lg) {
+            font-size: 14px;
+        }
         & span {
             font-weight: normal;
             font-size: 16px;
             line-height: 20px;
+            @media (max-width: $lg) {
+                font-size: 14px;
+            }
         }
     }
     &__cost {
@@ -2140,6 +2181,10 @@ body {
             line-height: 24px;
             &_ussual {
                 margin: 0;
+            }
+            @media (max-width: $lg) {
+                font-size: 25px;
+                margin-left: 4px;
             }
         }
         .cost__price {
@@ -2173,6 +2218,9 @@ body {
 
     &__colors {
         margin-top: 30px;
+        @media (max-width: $lg) {
+            margin-top: 24px;
+        }
     }
     &__method {
         margin-top: 41px;
@@ -2187,6 +2235,9 @@ body {
         font-weight: 500;
         font-size: 16px;
         line-height: 20px;
+        @media (max-width: $lg) {
+            font-size: 14px;
+        }
     }
     &__container {
         display: flex;
@@ -2207,6 +2258,11 @@ body {
         font-weight: normal;
         cursor: pointer;
         transition: $transition;
+        @media (max-width: $lg) {
+            width: 64px;
+            height: 40px;
+            font-size: 14px;
+        }
         &:hover {
             border: 1px solid #1e7243;
         }
@@ -2223,6 +2279,12 @@ body {
             font-size: 16px;
             line-height: 20px;
         }
+        @media (max-width: $lg) {
+            font-size: 14px;
+            & span {
+                font-size: 14px;
+            }
+        }
     }
     &__box {
         display: flex;
@@ -2234,6 +2296,14 @@ body {
         height: 38px;
         border-radius: 50%;
         cursor: pointer;
+        @media (max-width: $lg) {
+            width: 30px;
+            height: 30px;
+            &_big {
+                width: 35px;
+                height: 35px;
+            }
+        }
         &_big {
             width: 46px;
             height: 46px;

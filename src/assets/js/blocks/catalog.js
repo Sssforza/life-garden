@@ -325,14 +325,28 @@ export function filters() {
 export function filtersMobile() {
     if (document.querySelector(".catalogCards__strainer_js")) {
         const btnFilters = document.querySelector(".catalogCards__strainer_js");
+        const btnCategories = document.querySelector(
+            ".catalogCards__categories_js"
+        );
         const closeFilters = document.querySelectorAll(".closeFilters_js");
         const windowFilters = document.querySelector(".catalogMenu_js");
         btnFilters.onclick = () => {
-            windowFilters.classList.add("catalogMenu_mobile");
+            windowFilters.classList.add("catalogMenu_filters");
+            windowFilters.classList.remove("catalogMenu_categories");
+        };
+        btnCategories.onclick = () => {
+            windowFilters.classList.add("catalogMenu_categories");
+            windowFilters.classList.remove("catalogMenu_filters");
         };
         closeFilters.forEach((item) => {
             item.onclick = () => {
-                windowFilters.classList.remove("catalogMenu_mobile");
+                windowFilters.classList.remove("catalogMenu_filters");
+                windowFilters.classList.remove("catalogMenu_categories");
+                windowSort.classList.remove("catalogMenuContainer__mobile");
+                stockContainer.classList.remove("catalogMenuContainer__mobile");
+                colorContainer.classList.remove("catalogMenuContainer__mobile");
+                document.body.classList.remove("hiddenHeaderCatalog");
+                boxContainer.classList.remove("catalogMenuContainer__mobile");
             };
         });
 
@@ -372,17 +386,52 @@ export function filtersMobile() {
             ".catalogMenuContainer__mobile_js"
         );
         const down = document.querySelector(".catalogMenuDown_js");
-        const backDown = document.querySelector(
+        const backDown = document.querySelectorAll(
             ".catalogMenuContainer__back_js"
         );
-
+        const stockDown = document.querySelector(".catalogStockDown_js");
+        const stockContainer = document.querySelector(
+            ".catalogMenuStock__mobile_js"
+        );
+        const colorDown = document.querySelector(".catalogColorDown_js");
+        const colorContainer = document.querySelector(
+            ".catalogMenuColor__mobile_js"
+        );
+        const categoryContainer = document.querySelectorAll(
+            ".catalogMenu__categories_js"
+        );
+        const boxContainer = document.querySelector(".catalogMenu__box");
         if (window.innerWidth < 1024) {
             down.onclick = () => {
                 windowSort.classList.add("catalogMenuContainer__mobile");
             };
-            backDown.onclick = () => {
-                windowSort.classList.remove("catalogMenuContainer__mobile");
+            stockDown.onclick = () => {
+                stockContainer.classList.add("catalogMenuContainer__mobile");
             };
+            colorDown.onclick = () => {
+                colorContainer.classList.add("catalogMenuContainer__mobile");
+            };
+            categoryContainer.forEach((item) => {
+                item.onclick = () => {
+                    boxContainer.classList.add("catalogMenuContainer__mobile");
+                    document.body.classList.add("hiddenHeaderCatalog");
+                };
+            });
+            backDown.forEach((item) => {
+                item.onclick = () => {
+                    windowSort.classList.remove("catalogMenuContainer__mobile");
+                    stockContainer.classList.remove(
+                        "catalogMenuContainer__mobile"
+                    );
+                    colorContainer.classList.remove(
+                        "catalogMenuContainer__mobile"
+                    );
+                    boxContainer.classList.remove(
+                        "catalogMenuContainer__mobile"
+                    );
+                    document.body.classList.remove("hiddenHeaderCatalog");
+                };
+            });
         }
     }
 }

@@ -30,7 +30,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 				<div class="catalog__body">
 					<aside class="catalog__menu catalogMenu catalogMenu_js">
 						<form action="">
-							<div class="catalogMenu__titleMobile">
+							<div class="catalogMenu__titleMobile catalogMenu__titleFilters">
 								<span>Фильтры</span>
 								<div class="hamburgerXs hamburgerXs--spring closeSearch closeFilters_js is-active">
 									<span class="hamburgerXs-box">
@@ -38,7 +38,47 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 									</span>
 								</div>
 							</div>
+							<div class="catalogMenu__titleMobile catalogMenu__titleCategories">
+								<span>Семена</span>
+								<div class="hamburgerXs hamburgerXs--spring closeSearch closeFilters_js is-active">
+									<span class="hamburgerXs-box">
+										<span class="hamburgerXs-inner"></span>
+									</span>
+								</div>
+							</div>
+							<div class="catalogMenu__categories">
+								<div class="catalogMenu__down catalogMenu__categories_js">
+									<span class="catalogMenu__title">Семена овощей</span>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowStock.svg'; ?>
+								</div>
+								<div class="catalogMenu__down catalogMenu__categories_js">
+									<span class="catalogMenu__title">Пряные и лекарственные травы</span>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowStock.svg'; ?>
+								</div>
+								<div class="catalogMenu__down catalogMenu__categories_js">
+									<span class="catalogMenu__title">Семена цветов</span>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowStock.svg'; ?>
+								</div>
+								<div class="catalogMenu__down catalogMenu__categories_js">
+									<span class="catalogMenu__title">Семена экзотика</span>
+									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowStock.svg'; ?>
+								</div>
+							</div>
+
 							<div class="catalogMenu__box">
+								<div class="catalogMenu__titleMobile">
+									<div class="catalogMenuContainer__box ">
+										<div class="catalogMenuContainer__back_js">
+											<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/ArrowSort.svg'; ?>
+										</div>
+										<span>Пряные и лекарственные травы</span>
+									</div>
+									<div class="hamburgerXs hamburgerXs--spring closeSearch closeFilters_js is-active">
+										<span class="hamburgerXs-box">
+											<span class="hamburgerXs-inner"></span>
+										</span>
+									</div>
+								</div>
 								<ul class="catalogMenu__links catalogMenuLinks_js">
 									<li><a class="catalogMenu__link catalogMenu__link_checked" href="#">Анис</a></li>
 									<li><a class="catalogMenu__link" href="#">Базилик</a></li>
@@ -163,8 +203,6 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 										<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowShow.svg'; ?>
 									</div>
 								</div>
-
-
 								<div class="catalogMenuContainer catalogMenuContainer__mobile_js">
 									<div class="catalogMenu__titleMobile">
 										<div class="catalogMenuContainer__box ">
@@ -248,17 +286,42 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 										</div>
 									</div>
 								</div>
-
-
-
-
-
-
 							</div>
 							<div class="catalogMenu__stock">
 								<div class="catalogMenu__down catalogStockDown_js">
 									<span class="catalogMenu__title">В наличии</span>
 									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowStock.svg'; ?>
+								</div>
+
+								<div class="catalogMenuContainer catalogMenuStock__mobile_js">
+									<div class="catalogMenu__titleMobile">
+										<div class="catalogMenuContainer__box ">
+											<div class="catalogMenuContainer__back_js">
+												<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/ArrowSort.svg'; ?>
+											</div>
+											<span>В наличии</span>
+										</div>
+										<div class="hamburgerXs hamburgerXs--spring closeSearch closeFilters_js is-active">
+											<span class="hamburgerXs-box">
+												<span class="hamburgerXs-inner"></span>
+											</span>
+										</div>
+									</div>
+									<div class="scrollGreen catalogMenu__items catalogMenuItems_js">
+										<div class="catalogLabel__container">
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Да</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Нет</span>
+											</label>
+										</div>
+
+									</div>
 								</div>
 								<div class="catalogMenu__container catalogStockContainer_js">
 									<div class="catalogMenu__items">
@@ -281,6 +344,36 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 								<div class="catalogMenu__down catalogColorDown_js">
 									<span class="catalogMenu__title">Окрас хвои</span>
 									<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/arrowColor.svg'; ?>
+								</div>
+								<div class="catalogMenuContainer catalogMenuColor__mobile_js">
+									<div class="catalogMenu__titleMobile">
+										<div class="catalogMenuContainer__box ">
+											<div class="catalogMenuContainer__back_js">
+												<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/ArrowSort.svg'; ?>
+											</div>
+											<span>Окрас хвои</span>
+										</div>
+										<div class="hamburgerXs hamburgerXs--spring closeSearch closeFilters_js is-active">
+											<span class="hamburgerXs-box">
+												<span class="hamburgerXs-inner"></span>
+											</span>
+										</div>
+									</div>
+									<div class="scrollGreen catalogMenu__items catalogMenuItems_js">
+										<div class="catalogLabel__container">
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Желтая</span>
+											</label>
+										</div>
+										<div>
+											<label class="catalogMenu__label">
+												<input class="catalogMenu__check" type="checkbox" />
+												<span>Не желтая</span>
+											</label>
+										</div>
+
+									</div>
 								</div>
 								<div class="catalogMenu__container catalogColorContainer_js">
 									<div class="catalogMenu__items">
@@ -334,7 +427,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 					</aside>
 					<div class="catalog__cards catalogCards">
 						<div class="catalogCards__filters">
-							<div class="catalogCards__filter catalogCards__categories">
+							<div class="catalogCards__filter catalogCards__categories catalogCards__categories_js">
 								<? include $_SERVER['DOCUMENT_ROOT'] . '/dist/img/svg/burger.svg'; ?>
 								<span>Категории</span>
 							</div>

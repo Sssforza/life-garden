@@ -394,10 +394,19 @@
         & svg {
             display: block;
         }
+        & span {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            height: 36px;
+            margin-left: 15px;
+            text-overflow: ellipsis;
+            width: 393px;
+            white-space: nowrap;
+        }
     }
     &__mobile {
         @media (max-width: $xs) {
-            display: block;
+            display: block !important;
         }
         display: none;
         height: 100vh;
@@ -407,12 +416,40 @@
         background-color: $white;
         right: 0;
         left: 0;
-        .catalogMenuContainer__box {
+        .catalogMenu__link_checked {
+            color: $textColor;
+            font-weight: normal;
+        }
+        .catalogMenu__links {
+            padding: 0 20px;
+            max-height: calc(100vh - 160px);
+            overflow-x: hidden;
+            overflow-y: scroll;
+            & li {
+                margin: 0 !important;
+            }
+        }
+        .catalogMenu__link {
+            z-index: 1;
+            position: relative;
             display: flex;
-            align-items: center;
-            gap: 33px;
+            width: 100%;
+            font-family: Rubik;
+            font-size: 24px;
+            line-height: 42px;
+            padding: 15px 0;
+            border-bottom: 1px solid #cad4db;
+            color: $textColor;
+        }
+        .catalogMenu__show {
+            display: none;
+        }
+        .catalogMenuContainer__box {
             & svg {
                 transform: rotate(90deg) scale(1.5);
+                path {
+                    stroke: $textColor;
+                }
             }
         }
         .catalogMenu__items {
@@ -493,13 +530,72 @@
             display: flex;
         }
     }
-    &_mobile {
+    &__categories {
+        display: none;
+    }
+    &_categories {
         padding: 0 20px;
         position: fixed;
         background-color: $white;
         z-index: 500;
         top: 0;
         left: 0;
+        .catalogMenu__categories {
+            display: flex;
+            flex-direction: column;
+        }
+        .catalogMenu__titleCategories {
+            display: flex;
+        }
+        & form {
+            width: 100%;
+        }
+        @media (max-width: $xs) {
+            display: flex;
+        }
+        .catalogMenu__box,
+        .catalogMenuPrice,
+        .catalogMenu__titleFilters,
+        .catalogMenu__new,
+        .catalogMenu__discount,
+        .catalogMenu__sort,
+        .catalogMenu__color,
+        .catalogMenu__stock {
+            display: none;
+        }
+        .catalogMenu__title {
+            font-size: 24px;
+            line-height: 42px;
+            font-weight: normal;
+        }
+        .catalogMenu__down {
+            padding: 15px 0;
+            border-bottom: 1px solid #cad4db;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & svg {
+                transform: rotate(270deg) scale(1.5);
+                path {
+                    stroke: #c7d0d9;
+                }
+            }
+        }
+    }
+    &_filters {
+        padding: 0 20px;
+        position: fixed;
+        background-color: $white;
+        z-index: 500;
+        top: 0;
+        left: 0;
+        .catalogMenu__titleFilters {
+            display: flex;
+        }
+        .catalogMenu__titleCategories {
+            display: none;
+        }
         .catalogMenu__box {
             display: none;
         }
